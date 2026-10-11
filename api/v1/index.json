@@ -1,0 +1,11 @@
+{
+  "name": "trend-machine",
+  "version": "0.1.0",
+  "generated_at": "2026-10-11T22:15:03.634962+00:00",
+  "endpoints": {
+    "trends": "api/v1/trends.json",
+    "hashtags": "api/v1/hashtags.json",
+    "schema": "api/v1/schema/trend.json"
+  },
+  "usage": "GET api/v1/trends.json, sort by opportunity_score desc for the hottest plays."
+}

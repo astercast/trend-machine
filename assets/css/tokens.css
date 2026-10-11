@@ -1,0 +1,22 @@
+/* trend-machine design tokens — mission-control dark */
+:root {
+  --bg: #0a0c10;
+  --bg-soft: #0e1117;
+  --panel: #12151d;
+  --panel-2: #171b25;
+  --line: #232a38;
+  --line-soft: #1a202c;
+  --ink: #eef1f6;
+  --ink-dim: #a7b0c2;
+  --ink-faint: #6b7488;
+  --live: #41ff8a;      /* pulsing: fresh data */
+  --hot: #ff5468;       /* top opportunity */
+  --warm: #ffb224;      /* aging */
+  --dead: #5a6272;      /* stale */
+  --signal: #53e9ff;    /* links, CTAs */
+  --violet: #b48cff;    /* meme radar accent */
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  --r: 10px;
+  --max: 1280px;
+}

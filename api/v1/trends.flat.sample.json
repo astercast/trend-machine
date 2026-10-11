@@ -1,0 +1,694 @@
+{
+  "generated_at": "2026-10-11T22:15:05.267394+00:00",
+  "sample": true,
+  "source_count": 30,
+  "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
+  "trends": [
+    {
+      "id": "six-seven-meme",
+      "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "source": "LatestLY",
+      "url": "https://www.latestly.com/social-viral/67-meme-takes-over-schools-and-internet-from-tiktok-viral-hit-to-south-park-parody-how-a-random-number-became-the-defining-joke-of-gen-alphas-brainrot-culture-7166579.html",
+      "velocity": 92,
+      "opportunity_score": 92,
+      "hashtags": [
+        "#67",
+        "#sixseven",
+        "#brainrot"
+      ],
+      "detected_at": "2026-09-01T00:00:00-07:00",
+      "summary": "Born from Skrilla's viral TikTok song \"Doot Doot\" and LaMelo Ball edits, the phrase \"six-seveeeeen\" exploded across classrooms worldwide. South Park aired a parody episode on Oct 15. Random, meaningless, inescapable — the signature joke of Gen Alpha internet culture.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "sources": [
+        "LatestLY"
+      ]
+    },
+    {
+      "id": "gta6-robberies",
+      "title": "GTA 6: robberies and partner getaways detailed",
+      "source": "Game8",
+      "url": "https://game8.co/articles/latest/this-weeks-gaming-news-roundup-oct-4-to-oct-10",
+      "velocity": 91,
+      "opportunity_score": 91,
+      "hashtags": [
+        "#gta6",
+        "#rockstar"
+      ],
+      "detected_at": "2026-10-08T00:00:00-07:00",
+      "summary": "Rockstar gave a closer look at how GTA 6 wants players to plan crimes — robberies and partner getaways front and center. Every crumb of GTA 6 news moves the entire gaming internet.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "x"
+      ],
+      "sources": [
+        "Game8"
+      ]
+    },
+    {
+      "id": "seis-sete-dance",
+      "title": "\"Six Seven\" (Seis Sete) funk dance",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 90,
+      "opportunity_score": 90,
+      "hashtags": [
+        "#sixseven",
+        "#seissete",
+        "#dancechallenge"
+      ],
+      "detected_at": "2026-09-20T00:00:00-07:00",
+      "summary": "Brazilian funk track with finger-counting choreography and a shrug on the beat — the dominant dance challenge on TikTok right now, amplified by J-Hope (BTS) to 75M+ views. Crossed every demographic from Japanese high schoolers to WWE creators.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "Lightreel"
+      ]
+    },
+    {
+      "id": "trump-rally-nobel",
+      "title": "Trump roasts rally protester; Nobel Prize outrage",
+      "source": "RedWaveFeed",
+      "url": "https://www.redwavefeed.com/trending",
+      "velocity": 90,
+      "opportunity_score": 90,
+      "hashtags": [
+        "#trump",
+        "#nobelprize"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "October 11's top US political story: Trump roasting a rally protester on stage plus outrage over the Nobel Prize. Political clip content is the highest-velocity, highest-risk lane — massive views, massive comment wars.",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "RedWaveFeed"
+      ]
+    },
+    {
+      "id": "houthi-riyadh-strike",
+      "title": "Houthi missile strike on Riyadh airport",
+      "source": "NewsWatchmen",
+      "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+      "velocity": 88,
+      "opportunity_score": 88,
+      "hashtags": [
+        "#riyadh",
+        "#middleeast",
+        "#breaking"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "A Houthi missile strike on Riyadh's international airport reportedly killed at least 12 and injured hundreds — fears of major Middle East escalation. Breaking-news explainers always spike; maps and timelines win.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "NewsWatchmen"
+      ]
+    },
+    {
+      "id": "nba-tiktok-surge",
+      "title": "#nba explodes on TikTok (+493%)",
+      "source": "Revid",
+      "url": "https://www.revid.ai/tiktok-viral-trends-today",
+      "velocity": 86,
+      "opportunity_score": 86,
+      "hashtags": [
+        "#nba",
+        "#basketball"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Per Revid's tracking, #nba is the fastest-rising hashtag in popular TikTok posts this week — up 493% to 59 posts, with #roblox also climbing at +164%. Preseason storylines + highlight culture = the algorithm's favorite sport right now.",
+      "category": "sports",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "Revid"
+      ]
+    },
+    {
+      "id": "nana-patekar-tributes",
+      "title": "Nana Patekar dies at 75 — meme legend tributes",
+      "source": "Face of Malawi",
+      "url": "https://www.faceofmalawi.com/2026/10/09/nana-patekar-dies-at-75-the-viral-meme-legend-whose-hilarious-reactions-took-over-the-internet/",
+      "velocity": 85,
+      "opportunity_score": 85,
+      "hashtags": [
+        "#nanapatekar",
+        "#riplegend"
+      ],
+      "detected_at": "2026-10-08T00:00:00-07:00",
+      "summary": "Veteran Indian actor Nana Patekar died Oct 8 in Goa of a suspected cardiac arrest. Beyond three National Film Awards and the Padma Shri, he was the face of a thousand reaction memes — the drink-spit take, Uday Shetty's laugh. The internet is mourning and remixing his most iconic clips.",
+      "category": "meme",
+      "platforms": [
+        "x",
+        "instagram",
+        "youtube"
+      ],
+      "sources": [
+        "Face of Malawi"
+      ]
+    },
+    {
+      "id": "patient-zero-swift",
+      "title": "Taylor Swift \"Patient Zero\" reactions",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 82,
+      "opportunity_score": 82,
+      "hashtags": [
+        "#patientzero",
+        "#taylorswift"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "#patientzero is rising fast on TikTok — reaction wave around Taylor Swift's \"Patient Zero\". Music-reaction content is one of the lowest-effort, highest-reach formats when a Swift-adjacent moment hits.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "SocialPilot"
+      ]
+    },
+    {
+      "id": "hurricane-isaias",
+      "title": "Hurricane Isaias makes landfall",
+      "source": "NewsWatchmen",
+      "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+      "velocity": 81,
+      "opportunity_score": 81,
+      "hashtags": [
+        "#hurricaneisaias",
+        "#weather"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Hurricane Isaias killed at least four and knocked out power for hundreds of thousands after US landfall. Storm content — prep, survival, aftermath — reliably trends every landfall; safety-first framing wins trust.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "x"
+      ],
+      "sources": [
+        "NewsWatchmen"
+      ]
+    },
+    {
+      "id": "tiktok-sounds-week",
+      "title": "This week's breakout TikTok sounds",
+      "source": "Revid",
+      "url": "https://www.revid.ai/viral-tiktok-songs",
+      "velocity": 79,
+      "opportunity_score": 79,
+      "hashtags": [
+        "#tiktoksounds",
+        "#viralsounds"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Per Revid's sample of 5.4K popular posts: \"BLUE WATER CANDY\" by DJ Allanzinho JP is #1 steady (13M views on top posts), \"Strangers\" by SKARS is rising 2.3x, and Lucien Marceau's \"Courtly Elegance Boccherini\" is cooling. Catch a sound while it's climbing.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "Revid"
+      ]
+    },
+    {
+      "id": "pumpkin-head",
+      "title": "Pumpkin Head Illusion",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 76,
+      "opportunity_score": 76,
+      "hashtags": [
+        "#pumpkinhead",
+        "#spookyseason",
+        "#halloween2026"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Hold a real pumpkin up to the lens so it covers a friend's head, then let the body below do the acting — dancing, arm flares, full chaos. Set to a spooky \"hocus pocus\" remix. One prop, zero editing, pure Halloween wave-riding.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "Anijam"
+      ]
+    },
+    {
+      "id": "halloween-game-xbox",
+      "title": "\"Halloween: The Game\" storms the Xbox charts",
+      "source": "PureXbox",
+      "url": "https://www.purexbox.com/news/2026/10/lots-of-new-games-are-charting-surprisingly-high-on-xbox-to-begin-october",
+      "velocity": 75,
+      "opportunity_score": 75,
+      "hashtags": [
+        "#halloweenthegame",
+        "#xbox",
+        "#horrorgaming"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "The surprise of October: a Halloween horror game sitting at #6 on Xbox's Top Paid chart, surrounded by sports giants and Minecraft. Seasonal horror + genuine sales = the underdog story of the month.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "PureXbox"
+      ]
+    },
+    {
+      "id": "grr-mondays",
+      "title": "#GrrMondays",
+      "source": "NapoleonCat",
+      "url": "https://napoleoncat.com/blog/trending-memes/?ref=quuu&utm_content=buffer3986d&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer",
+      "velocity": 74,
+      "opportunity_score": 74,
+      "hashtags": [
+        "#grrmondays",
+        "#mondaymood"
+      ],
+      "detected_at": "2026-09-05T00:00:00-07:00",
+      "summary": "A throwaway line from Ted 2 (2015) dug up as the internet's shorthand for Monday. Post whatever your Monday actually looks like, stamp #GrrMondays on the image, done. One of the first clips passed 2.8M views in a fortnight; now redrawn as animations and fake weather forecasts.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "sources": [
+        "NapoleonCat"
+      ]
+    },
+    {
+      "id": "street-fighter-movie",
+      "title": "\"Street Fighter\" hits theaters Oct 16",
+      "source": "NewEngen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "velocity": 74,
+      "opportunity_score": 74,
+      "hashtags": [
+        "#streetfighter",
+        "#videogamemovies"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "The Street Fighter movie lands October 16 — video-game adaptations are officially Hollywood's favorite genre, and every release spawns the same content wave: expectations, lore checks, and opening-weekend verdicts.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "NewEngen"
+      ]
+    },
+    {
+      "id": "2xko-sett",
+      "title": "2XKO drops Sett as surprise champion",
+      "source": "Game8",
+      "url": "https://game8.co/articles/latest/this-weeks-gaming-news-roundup-oct-4-to-oct-10",
+      "velocity": 73,
+      "opportunity_score": 73,
+      "hashtags": [
+        "#2xko",
+        "#sett",
+        "#fightinggames"
+      ],
+      "detected_at": "2026-10-08T00:00:00-07:00",
+      "summary": "Riot's tag fighter gears up for its last content drop with an extra surprise: Sett joins the roster. Fighting-game roster drops always spike lab content, combo videos, and tier debates.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "sources": [
+        "Game8"
+      ]
+    },
+    {
+      "id": "aion2-launch",
+      "title": "AION 2 launches free-to-play",
+      "source": "DLCompare",
+      "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+      "velocity": 72,
+      "opportunity_score": 72,
+      "hashtags": [
+        "#aion2",
+        "#mmorpg",
+        "#f2p"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "The classic MMORPG returns as a free-to-play launch this week — a massive franchise revival moment. MMO launches are content goldmines: leveling races, first impressions, class guides.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch"
+      ],
+      "sources": [
+        "DLCompare"
+      ]
+    },
+    {
+      "id": "october-music-drops",
+      "title": "October's stacked release calendar",
+      "source": "NewEngen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "velocity": 71,
+      "opportunity_score": 71,
+      "hashtags": [
+        "#newmusic",
+        "#lisa",
+        "#pressplay"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "October 2 brought LISA's \"Press Play\", Miranda Lambert's \"Crisco\", and Victoria Monét's \"Frequency of Love\"; Oct 23 brings the Black Parade 20th anniversary. Plus Tom Cruise's Iñárritu film and Verity in theaters. Reaction and ranking season.",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "sources": [
+        "NewEngen"
+      ]
+    },
+    {
+      "id": "emily-thats-all",
+      "title": "\"And Emily… that's all\" audio",
+      "source": "SocialBee",
+      "url": "http://socialbee.com/blog/trending-instagram-memes-this-week/",
+      "velocity": 70,
+      "opportunity_score": 70,
+      "hashtags": [
+        "#devilwearsprada",
+        "#andemily"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "Miranda Priestly's ice-cold line riding renewed attention around The Devil Wears Prada 2. Creators pair the audio with unrelated videos — the clip lands at the end where one person gets singled out, ignored, or subtly embarrassed.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "sources": [
+        "SocialBee"
+      ]
+    },
+    {
+      "id": "dhurandhar2-grammy",
+      "title": "Dhurandhar 2 enters the Grammy race",
+      "source": "Sacnilk",
+      "url": "https://www.sacnilk.com/entertainmenttopbar/Trending_News",
+      "velocity": 69,
+      "opportunity_score": 69,
+      "hashtags": [
+        "#dhurandhar2",
+        "#grammys2027"
+      ],
+      "detected_at": "2026-10-10T00:00:00-07:00",
+      "summary": "Ranveer Singh and Aditya Dhar's Dhurandhar: The Revenge — after a massive box-office run — is seeking Grammy consideration in nine categories. Indian cinema chasing Western awards is a whole content genre unto itself.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "instagram"
+      ],
+      "sources": [
+        "Sacnilk"
+      ]
+    },
+    {
+      "id": "fruit-love-island",
+      "title": "AI \"Fruit Love Island\"",
+      "source": "USA Today",
+      "url": "https://www.usatoday.com/story/entertainment/internet-culture/2026/10/01/2026-halloween-costume-ideas-memes-viral-pop-culture/91889223007/",
+      "velocity": 68,
+      "opportunity_score": 68,
+      "hashtags": [
+        "#fruitloveisland",
+        "#ailoveisland"
+      ],
+      "detected_at": "2026-07-15T00:00:00-07:00",
+      "summary": "Over the summer, an AI-generated parody dating show with fruit contestants went viral — heartbreak and drama, all produce. Named by USA Today as one of 2026's defining viral moments and now a top Halloween costume idea (pineapple/watermelon fits).",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "sources": [
+        "USA Today"
+      ]
+    },
+    {
+      "id": "mahesh-babu-director",
+      "title": "Mahesh Babu's next director: Vanga vs Lokesh",
+      "source": "Sacnilk",
+      "url": "https://www.sacnilk.com/entertainmenttopbar/Trending_News",
+      "velocity": 66,
+      "opportunity_score": 66,
+      "hashtags": [
+        "#maheshbabu",
+        "#tollywood"
+      ],
+      "detected_at": "2026-10-10T00:00:00-07:00",
+      "summary": "With SS Rajamouli's \"Varanasi\" in production, the race is on for Mahesh Babu's NEXT film: Sandeep Reddy Vanga vs Lokesh Kanagaraj reportedly in contention. Director-race speculation drives endless Telugu cinema debate content.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "Sacnilk"
+      ]
+    },
+    {
+      "id": "spooky-season",
+      "title": "#spookyseason peaks — Halloween is a Saturday",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 93,
+      "opportunity_score": 60,
+      "hashtags": [
+        "#spookyseason",
+        "#halloweencostume",
+        "#31daysofhalloween",
+        "#octobermood"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Halloween lands on a Saturday this year, so costume content gets a full weekend to peak. #spookyseason, #octobermood, #halloweencostume, #31daysofhalloween are all peaking or rising. The single biggest seasonal content window of Q4 is WIDE open right now.",
+      "category": "culture",
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "sources": [
+        "SocialPilot",
+        "Anijam"
+      ]
+    },
+    {
+      "id": "two-fishes",
+      "title": "The \"Two Fishes\" deadpan audio",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 88,
+      "opportunity_score": 57,
+      "hashtags": [
+        "#twofishes",
+        "#corbingpt",
+        "#loveislandusa"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "A deadpan clip from Love Island USA Season 8 contestant Corbin Mims (nicknamed \"CorbinGPT\") explaining that having two fishes doesn't mean you have to put one back. Creators lip-sync it straight to camera to defend a take nobody asked them to defend — unreasonable idea, TED Talk patience.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "Anijam",
+        "Virlo"
+      ]
+    },
+    {
+      "id": "battlefield-6-gamepass",
+      "title": "Battlefield 6 hits Game Pass day one",
+      "source": "TrueAchievements",
+      "url": "https://www.trueachievements.com/news/new-xbox-games-october-12",
+      "velocity": 87,
+      "opportunity_score": 57,
+      "hashtags": [
+        "#battlefield6",
+        "#gamepass",
+        "#xbox"
+      ],
+      "detected_at": "2026-10-10T00:00:00-07:00",
+      "summary": "The biggest shooter of the fall lands via EA Play/Game Pass — EA's bid to drive the franchise forward after Battlefield 5's disappointment. Day-one Game Pass means the player flood (and the content flood) starts immediately.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "sources": [
+        "TrueAchievements",
+        "CapeTimes"
+      ]
+    },
+    {
+      "id": "mlb-playoffs",
+      "title": "MLB playoffs — World Series Oct 23",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 84,
+      "opportunity_score": 55,
+      "hashtags": [
+        "#mlbplayoffs",
+        "#worldseries"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "#mlbplayoffs is peaking on TikTok as the postseason rolls toward an Oct 23 World Series. Sports TikTok is loud all month — watch parties, picks, and one viral play away from a career-making clip.",
+      "category": "sports",
+      "platforms": [
+        "tiktok",
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "SocialPilot",
+        "NewEngen"
+      ]
+    },
+    {
+      "id": "ramalama-walk",
+      "title": "Ramalama Costume Walk",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 81,
+      "opportunity_score": 53,
+      "hashtags": [
+        "#halloweencostume",
+        "#ramalama",
+        "#spookyseason"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "The Halloween format back from last year: camera low on legs and shoes while you stalk toward it dragging a baseball bat, set to Róisín Murphy's \"Ramalama (Bang Bang)\". No text, no talking — then the camera pulls back and the full costume is revealed.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "sources": [
+        "Anijam",
+        "Virlo"
+      ]
+    },
+    {
+      "id": "valor-mortis",
+      "title": "Valor Mortis — the new soulslike to watch",
+      "source": "NEXTARCA",
+      "url": "https://nextarca.com/news/rpgs-this-week-october-12-to-18-2026",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#valormortis",
+        "#soulslike",
+        "#gamepass"
+      ],
+      "detected_at": "2026-10-09T00:00:00-07:00",
+      "summary": "From One More Level (Ghostrunner): a first-person soulslike where you play William, a Napoleonic soldier raised from the dead in plague-gripped Europe. Launches Oct 13 at $39.99, day one on Game Pass. No pre-orders — everyone's going in blind together.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch"
+      ],
+      "sources": [
+        "NEXTARCA",
+        "TrueAchievements"
+      ]
+    },
+    {
+      "id": "sw-galactic-racer",
+      "title": "STAR WARS: Galactic Racer",
+      "source": "DLCompare",
+      "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+      "velocity": 78,
+      "opportunity_score": 51,
+      "hashtags": [
+        "#starwars",
+        "#galacticracer"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "Star Wars goes full arcade racer — one of the two biggest launches of the week alongside Gears E-Day. Podracing energy meets the modern Star Wars machine.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "DLCompare",
+        "Game8"
+      ]
+    },
+    {
+      "id": "gears-eday",
+      "title": "Gears of War: E-Day launches",
+      "source": "DLCompare",
+      "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+      "velocity": 76,
+      "opportunity_score": 49,
+      "hashtags": [
+        "#gearsofwar",
+        "#edday",
+        "#xbox"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "The Coalition takes Gears back 14 years before the original — a young Marcus Fenix and Dom facing Emergence Day on Sera, rebuilt in Unreal Engine 5. Launched Oct 6 on Xbox Series X/S and PC with solo, split-screen co-op, and expanded Horde Siege.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "sources": [
+        "DLCompare",
+        "youtube-invidious"
+      ]
+    },
+    {
+      "id": "trump-energy-ceasefire",
+      "title": "Trump announces Russia-Ukraine energy ceasefire",
+      "source": "NewsWatchmen",
+      "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+      "velocity": 74,
+      "opportunity_score": 48,
+      "hashtags": [
+        "#ukraine",
+        "#ceasefire"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Trump announced an energy ceasefire between Russia and Ukraine — but gave few details and neither Moscow nor Kyiv confirmed. Unconfirmed huge claims are prime explainer territory: what's verified vs what's claimed.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "NewsWatchmen",
+        "gnews-top"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine topic",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "category",
+    "platforms",
+    "hashtags",
+    "velocity",
+    "opportunity_score",
+    "first_seen",
+    "last_seen",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hashtags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "velocity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "saturation": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "opportunity_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "first_seen": {
+      "type": "string"
+    },
+    "last_seen": {
+      "type": "string"
+    },
+    "stale": {
+      "type": "boolean"
+    },
+    "seeded": {
+      "type": "boolean"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ]
+      }
+    },
+    "angles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hooks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "who_to_watch": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "guide_links": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
