@@ -51,35 +51,36 @@ TOPIC_TMPL = """<!doctype html>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="head-inner">
-<a class="brand" href="../index.html"><span class="brand-mark">TM</span>Trend&nbsp;Machine</a>
+<a class="brand" href="../index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
 <span class="kicker">topic dossier</span>
 </div></header>
 <main id="main" class="wrap">
 <nav aria-label="Breadcrumb" style="margin:20px 0 0"><a href="../index.html" style="font-size:13px">&larr; all trends</a></nav>
-<article class="topic-hero">
+<article class="topic-hero {tier}">
 <p class="kicker">{kicker}</p>
 <h1>{title}</h1>
-<p style="max-width:62ch;color:var(--ink-dim);font-size:18px">{summary}</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:16px 0">
-<span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>detected {age}</span>
-<span class="score {scls}"><span class="score-bar"><i style="width:{opp}%"></i></span><span class="num">opportunity {opp}</span></span>
-<span class="score"><span class="score-bar"><i style="width:{vel}%"></i></span><span class="num">velocity {vel}</span></span>
+<p class="lede">{summary}</p>
+<div class="stat-grid" role="list" aria-label="Signal stats">
+<div class="stat" role="listitem"><div class="k">Detected</div><div class="v"><span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></div></div>
+<div class="stat" role="listitem"><div class="k">Opportunity</div><div class="v {ocls} num">{opp}</div></div>
+<div class="stat" role="listitem"><div class="k">Velocity</div><div class="v num">{vel}</div></div>
+<div class="stat" role="listitem"><div class="k">Platforms</div><div class="v num">{nplat}</div></div>
 </div>
-<div>{plats}{cats}{tags}</div>
+<div style="margin-bottom:4px">{plats}{cats}{tags}</div>
 {stale_note}
 </article>
-<section aria-labelledby="why"><div class="section-head"><h2 id="why">Why it's trending</h2></div>
-<p style="max-width:68ch">{summary_long}</p>
-<h3 style="font-size:15px;margin-top:18px">Sources</h3>
-<ul>{sources}</ul>
+<section aria-labelledby="why"><div class="section-head"><h2 id="why"><span class="sec-no">01</span>Why it's trending</h2></div>
+<p style="max-width:68ch;font-size:1.05rem">{summary_long}</p>
+<h3 style="font-size:15px;margin-top:22px">Sources</h3>
+<ul class="src-list">{sources}</ul>
 </section>
-<section aria-labelledby="angles"><div class="section-head"><h2 id="angles">Content angles <span class="kicker">topic in &rarr; video out</span></h2></div>
+<section aria-labelledby="angles"><div class="section-head"><h2 id="angles"><span class="sec-no">02</span>Content angles</h2><span class="kicker">topic in &rarr; video out</span></div>
 {angles}
 </section>
-<section aria-labelledby="hooks"><div class="section-head"><h2 id="hooks">Hook lines</h2></div>
+<section aria-labelledby="hooks"><div class="section-head"><h2 id="hooks"><span class="sec-no">03</span>Hook lines</h2></div>
 {hooks}
 </section>
-<section aria-labelledby="watch"><div class="section-head"><h2 id="watch">Who to watch</h2></div>
+<section aria-labelledby="watch"><div class="section-head"><h2 id="watch"><span class="sec-no">04</span>Who to watch</h2></div>
 <p style="color:var(--ink-dim)">{watch}</p>
 </section>
 <aside class="guide-cta" aria-labelledby="gcta">
@@ -90,7 +91,7 @@ TOPIC_TMPL = """<!doctype html>
 </aside>
 </main>
 <footer class="site-foot"><div class="wrap foot-grid">
-<div><strong style="color:var(--ink)">Trend Machine</strong><br>Live trending-topic intelligence.</div>
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
 <div class="num" style="font-size:12px">data: {ts}</div>
 </div></footer>
 </body>
@@ -114,15 +115,17 @@ def age_label(iso):
 def build_topic(t):
     age, fcls, pulse = age_label(t.get("last_seen", ""))
     opp, vel = t.get("opportunity_score", 0), t.get("velocity", 0)
-    scls = "hot" if opp >= 70 else ("warm" if opp >= 40 else "")
+    tier = "is-hot" if opp >= 70 else ("is-warm" if opp >= 40 else "")
+    ocls = "hot-v" if opp >= 70 else ("warm-v" if opp >= 40 else "live-v")
     plats = "".join(f'<span class="chip plat">{esc(p)}</span>' for p in t.get("platforms", []))
+    nplat = len(t.get("platforms", [])) or "—"
     cats = f'<span class="chip">{esc(t.get("category",""))}</span>'
     tags = "".join(f'<span class="tag">{esc(h)}</span>' for h in t.get("hashtags", [])[:10])
     sources = "".join(
         f'<li><a href="{esc(s.get("url",""))}">{esc(s.get("name","source"))}</a></li>'
         for s in t.get("sources", [])) or "<li>No public sources captured yet.</li>"
     angles = "".join(
-        f'<div class="angle"><h4>Angle {i+1}</h4><p>{esc(a)}</p></div>'
+        f'<div class="angle"><span class="idx num">{i+1:02d}</span><p>{esc(a)}</p></div>'
         for i, a in enumerate(t.get("angles", []))) or "<p>No angles yet — check back after the next refresh.</p>"
     hooks = "".join(f'<div class="hook">&ldquo;{esc(h)}&rdquo;</div>' for h in t.get("hooks", []))
     watch = esc(", ".join(t.get("who_to_watch", [])) or "—")
@@ -134,8 +137,8 @@ def build_topic(t):
     return TOPIC_TMPL.format(
         title=esc(t["title"]), desc=esc(t["summary"][:150]),
         kicker=esc(t.get("category", "trend")) + " · dossier",
-        summary=esc(t["summary"]), fcls=fcls, pulse=pulse, age=age,
-        scls=scls, opp=opp, vel=vel, plats=plats, cats=cats, tags=tags,
+        summary=esc(t["summary"]), tier=tier, fcls=fcls, pulse=pulse, age=age,
+        ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, cats=cats, tags=tags,
         stale_note=stale_note, summary_long=esc(t["summary"]),
         sources=sources, angles=angles, hooks=hooks, watch=watch,
         guide=guide, ts=esc(t.get("last_seen", "")))

@@ -58,9 +58,14 @@
   function renderTicker(topics) {
     var items = topics.slice(0, 12).map(function (t) {
       return "<b>▲ " + t.opportunity_score + "</b> " + esc(t.title);
-    }).join(" &nbsp;·&nbsp; ");
+    }).join('<span class="tk-sep">·</span>');
     var track = document.getElementById("ticker-track");
-    if (track) track.innerHTML = items + " &nbsp;·&nbsp; " + items;
+    if (track) track.innerHTML = items + '<span class="tk-sep">·</span>' + items;
+  }
+
+  function clearLoading(id) {
+    var el = document.getElementById(id);
+    if (el) { el.classList.remove("is-loading"); el.setAttribute("aria-busy", "false"); el.removeAttribute("aria-label"); }
   }
 
   function renderHot5(topics) {
@@ -68,13 +73,16 @@
     if (!el) return;
     var top = topics.slice().sort(function (a, b) { return b.opportunity_score - a.opportunity_score; }).slice(0, 5);
     el.innerHTML = top.map(function (t, i) {
-      return '<a class="hot-card" href="topics/' + t.id + '.html">' +
+      var leader = i === 0;
+      return '<a class="hot-card rise' + (leader ? " leader" : "") + '" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
+        (leader ? '<span class="badge-breaking">Breaking</span>' : "") +
         '<span class="rank num">0' + (i + 1) + "</span>" +
-        "<h3>" + esc(t.title) + "</h3>" +
-        "<p>" + esc(t.summary) + "</p>" +
-        '<div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">' +
+        "<div><h3>" + esc(t.title) + "</h3>" +
+        "<p>" + esc(t.summary) + "</p></div>" +
+        '<div class="card-foot">' +
         scoreHTML(t.opportunity_score, true) + freshHTML(t.last_seen) + "</div></a>";
     }).join("");
+    clearLoading("hot5");
   }
 
   function renderRadar(topics) {
@@ -82,13 +90,14 @@
     if (!el) return;
     var memes = topics.filter(function (t) { return t.category === "meme"; })
       .sort(function (a, b) { return b.velocity - a.velocity; }).slice(0, 10);
-    el.innerHTML = memes.map(function (t) {
-      return '<a class="meme-card" href="topics/' + t.id + '.html">' +
+    el.innerHTML = memes.map(function (t, i) {
+      return '<a class="meme-card rise" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
         '<div class="fmt num">◉ MEME · v' + t.velocity + "</div>" +
         "<h4>" + esc(t.title) + "</h4>" +
-        '<div style="font-size:12px;color:var(--ink-dim)">' + t.hashtags.slice(0, 3).map(esc).join(" ") + "</div>" +
-        '<div style="margin-top:8px">' + freshHTML(t.last_seen) + "</div></a>";
+        '<div class="mhash">' + t.hashtags.slice(0, 3).map(esc).join(" ") + "</div>" +
+        freshHTML(t.last_seen) + "</a>";
     }).join("");
+    clearLoading("radar-strip");
     var count = document.getElementById("radar-count");
     if (count) count.textContent = memes.length + " meme signals tracked";
   }
@@ -99,17 +108,34 @@
     var list = filtered();
     var meta = document.getElementById("table-meta");
     if (meta) meta.textContent = list.length + " of " + state.topics.length + " topics";
-    el.innerHTML = list.map(function (t) {
-      var stale = t.stale ? ' class="is-stale"' : "";
-      return "<tr" + stale + ">" +
-        '<td><a class="topic-link" href="topics/' + t.id + '.html">' + esc(t.title) + "</a>" +
+    el.innerHTML = list.map(function (t, i) {
+      var stale = t.stale ? ' class="is-stale rise"' : ' class="rise"';
+      return "<tr" + stale + ' style="--i:' + Math.min(i, 12) + '">' +
+        '<td data-label="Topic"><a class="topic-link" href="topics/' + t.id + '.html">' + esc(t.title) + "</a>" +
         (t.stale ? ' <span class="stale-badge">STALE</span>' : "") +
-        '<div style="font-size:12px;color:var(--ink-faint)">' + esc(t.category) + "</div></td>" +
-        "<td>" + chips(t.platforms, "plat") + "</td>" +
-        "<td>" + scoreHTML(t.opportunity_score) + "</td>" +
-        "<td>" + scoreHTML(t.velocity) + "</td>" +
-        "<td>" + freshHTML(t.last_seen) + "</td></tr>";
+        '<div class="topic-cat">' + esc(t.category) + "</div></td>" +
+        '<td data-label="Platforms">' + chips(t.platforms, "plat") + "</td>" +
+        '<td data-label="Opportunity">' + scoreHTML(t.opportunity_score) + "</td>" +
+        '<td data-label="Velocity">' + scoreHTML(t.velocity) + "</td>" +
+        '<td data-label="Detected">' + freshHTML(t.last_seen) + "</td></tr>";
     }).join("");
+    var tbl = document.getElementById("dtable");
+    if (tbl) tbl.setAttribute("aria-busy", "false");
+  }
+
+  function updateSortUI() {
+    document.querySelectorAll("[data-sort]").forEach(function (btn) {
+      var k = btn.getAttribute("data-sort");
+      var arr = btn.querySelector(".arr");
+      var th = btn.closest("th");
+      if (k === state.sort) {
+        if (arr) arr.textContent = state.dir === -1 ? "▼" : "▲";
+        if (th) th.setAttribute("aria-sort", state.dir === -1 ? "descending" : "ascending");
+      } else {
+        if (arr) arr.textContent = "";
+        if (th) th.removeAttribute("aria-sort");
+      }
+    });
   }
 
   function renderFilters(topics) {
@@ -168,8 +194,10 @@
       btn.addEventListener("click", function () {
         var k = btn.getAttribute("data-sort");
         if (state.sort === k) state.dir *= -1; else { state.sort = k; state.dir = -1; }
+        updateSortUI();
         renderTable();
       });
     });
+    updateSortUI();
   });
 })();

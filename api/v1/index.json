@@ -1,7 +1,7 @@
 {
   "name": "trend-machine",
   "version": "0.1.0",
-  "generated_at": "2026-10-11T22:43:31.306949+00:00",
+  "generated_at": "2026-10-11T22:55:13.545369+00:00",
   "endpoints": {
     "trends": "api/v1/trends.json",
     "hashtags": "api/v1/hashtags.json",

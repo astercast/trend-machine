@@ -13,7 +13,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="head-inner">
-    <a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true">TM</span>Trend&nbsp;Machine</a>
+    <a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
     <span class="kicker" id="data-ts">data: loading…</span>
     <div class="live-clock" aria-label="Live clock">
       <span class="dot pulse" aria-hidden="true"></span>
@@ -30,29 +30,29 @@
 
   <section aria-labelledby="hot-now" style="margin-top:28px">
     <div class="section-head">
-      <h2 id="hot-now">Hot right now</h2>
+      <h2 id="hot-now"><span class="sec-no">01</span>Hot right now</h2>
       <span class="kicker">top 5 by opportunity · updated live</span>
     </div>
-    <div class="hot5" id="hot5" role="list"></div>
+    <div class="hot5 is-loading" id="hot5" role="list" aria-busy="true" aria-label="Loading hottest topics"></div>
   </section>
 
   <section aria-labelledby="radar" style="margin-top:8px">
     <div class="radar">
-      <div class="section-head" style="margin-top:0">
-        <h2 id="radar">◉ Meme radar</h2>
+      <div class="section-head" style="margin-top:0;border-bottom:0;padding-bottom:0">
+        <h2 id="radar"><span class="sec-no">02</span>◉ Meme radar</h2>
         <span class="kicker" id="radar-count">scanning…</span>
       </div>
-      <p style="color:var(--ink-dim);font-size:14px;max-width:70ch">
+      <p>
         Viral formats, sounds, and brainrot as it happens — the fastest-moving lane on the internet.
         Memes die in days; the radar only shows what's breathing.
       </p>
-      <div class="radar-strip" id="radar-strip" role="list"></div>
+      <div class="radar-strip is-loading" id="radar-strip" role="list" aria-busy="true" aria-label="Loading meme radar"></div>
     </div>
   </section>
 
   <section aria-labelledby="all">
     <div class="section-head">
-      <h2 id="all">All signals</h2>
+      <h2 id="all"><span class="sec-no">03</span>All signals</h2>
       <span class="kicker" id="table-meta"></span>
     </div>
     <div class="controls" role="search" aria-label="Filter trends">
@@ -63,27 +63,32 @@
       <label for="f-category">Category</label>
       <select id="f-category"></select>
     </div>
-    <div style="overflow-x:auto">
-    <table class="dtable">
+    <div class="table-shell"><div class="table-scroll">
+    <table class="dtable" id="dtable" aria-busy="true">
       <thead><tr>
         <th scope="col">Topic</th>
         <th scope="col">Platforms</th>
-        <th scope="col"><button data-sort="opportunity" aria-label="Sort by opportunity">Opportunity ⇅</button></th>
-        <th scope="col"><button data-sort="velocity" aria-label="Sort by velocity">Velocity ⇅</button></th>
-        <th scope="col"><button data-sort="recency" aria-label="Sort by recency">Detected ⇅</button></th>
+        <th scope="col" aria-sort="descending"><button class="sortbtn" data-sort="opportunity">Opportunity <span class="arr" aria-hidden="true">▼</span></button></th>
+        <th scope="col"><button class="sortbtn" data-sort="velocity">Velocity <span class="arr" aria-hidden="true"></span></button></th>
+        <th scope="col"><button class="sortbtn" data-sort="recency">Detected <span class="arr" aria-hidden="true"></span></button></th>
       </tr></thead>
       <tbody id="dtable-body"></tbody>
     </table>
+    </div></div>
+    <div class="fresh-legend" aria-label="Freshness legend">
+      <span><span class="fresh f-live"><span class="dot" aria-hidden="true"></span>live</span> — seen &lt; 1h, still breathing</span>
+      <span><span class="fresh f-warm"><span class="dot" aria-hidden="true"></span>warming</span> — seen &lt; 24h</span>
+      <span><span class="fresh f-dead"><span class="dot" aria-hidden="true"></span>stale</span> — no corroboration 72h+, cooling</span>
     </div>
     <p style="font-size:12.5px;color:var(--ink-faint);margin-top:14px;max-width:80ch">
-      Opportunity = velocity × (1 − saturation penalty). Stale topics (&gt;72h without corroboration)
-      are dimmed and flagged — treat them as cooling. Every topic links to a dossier with content angles,
+      Opportunity = velocity × (1 − saturation penalty).
+      Every topic links to a dossier with content angles,
       hooks, and hashtags. Machine-readable feed: <a href="api/v1/trends.json">api/v1/trends.json</a>.
     </p>
   </section>
 
   <section aria-labelledby="how">
-    <div class="section-head"><h2 id="how">How the machine works</h2></div>
+    <div class="section-head"><h2 id="how"><span class="sec-no">04</span>How the machine works</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
       <div class="angle"><h4>1 · Fetch</h4><p>Pluggable fetchers hit Google Trends, Google News, Reddit, YouTube, and X (BYO key) every 15 minutes.</p></div>
       <div class="angle"><h4>2 · Normalize</h4><p>Hits are deduped, merged, and scored: velocity from corroboration + recency, opportunity from velocity ÷ saturation.</p></div>

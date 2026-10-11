@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T22:43:31.306949+00:00",
+  "generated_at": "2026-10-11T22:55:13.545369+00:00",
   "generator": "pipeline/normalize.py",
   "note": "Seed topics researched 2026-10-11. The refresh pipeline corroborates/expires these on each run.",
   "topics": [
@@ -1283,7 +1283,7 @@
       "saturation": "low",
       "opportunity_score": 51,
       "first_seen": "2026-10-11T22:12:32.759166+00:00",
-      "last_seen": "2026-10-11T22:43:23.077758+00:00",
+      "last_seen": "2026-10-11T22:55:08.068574+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1317,7 +1317,7 @@
       "saturation": "medium",
       "opportunity_score": 49,
       "first_seen": "2026-10-06T00:00:00-07:00",
-      "last_seen": "2026-10-11T22:43:14.091861+00:00",
+      "last_seen": "2026-10-11T22:54:59.903608+00:00",
       "seeded": true,
       "seed_note": "Researched 2026-10-11 via web search; corroborate on next pipeline refresh.",
       "sources": [
@@ -1366,7 +1366,7 @@
       "saturation": "low",
       "opportunity_score": 49,
       "first_seen": "2026-10-11T22:12:30.539604+00:00",
-      "last_seen": "2026-10-11T22:43:21.478931+00:00",
+      "last_seen": "2026-10-11T22:55:06.407556+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1398,7 +1398,7 @@
       "saturation": "low",
       "opportunity_score": 49,
       "first_seen": "2026-10-11T22:12:30.539754+00:00",
-      "last_seen": "2026-10-11T22:43:21.479055+00:00",
+      "last_seen": "2026-10-11T22:55:06.407702+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1430,7 +1430,7 @@
       "saturation": "medium",
       "opportunity_score": 48,
       "first_seen": "2026-10-11T00:00:00-07:00",
-      "last_seen": "2026-10-11T22:12:50.579923+00:00",
+      "last_seen": "2026-10-11T22:53:42.758244+00:00",
       "seeded": true,
       "seed_note": "Researched 2026-10-11 via web search; corroborate on next pipeline refresh.",
       "sources": [
@@ -1476,7 +1476,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313712+00:00",
-      "last_seen": "2026-10-11T22:43:12.712691+00:00",
+      "last_seen": "2026-10-11T22:54:57.949218+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1507,7 +1507,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313772+00:00",
-      "last_seen": "2026-10-11T22:43:12.712751+00:00",
+      "last_seen": "2026-10-11T22:54:57.949276+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1538,7 +1538,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313786+00:00",
-      "last_seen": "2026-10-11T22:43:12.712782+00:00",
+      "last_seen": "2026-10-11T22:54:57.949307+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1569,7 +1569,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313795+00:00",
-      "last_seen": "2026-10-11T22:43:12.712765+00:00",
+      "last_seen": "2026-10-11T22:54:57.949290+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1600,7 +1600,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313804+00:00",
-      "last_seen": "2026-10-11T22:43:12.712774+00:00",
+      "last_seen": "2026-10-11T22:54:57.949299+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1631,7 +1631,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313813+00:00",
-      "last_seen": "2026-10-11T22:43:12.712791+00:00",
+      "last_seen": "2026-10-11T22:54:57.949316+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1662,7 +1662,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313820+00:00",
-      "last_seen": "2026-10-11T22:43:12.712799+00:00",
+      "last_seen": "2026-10-11T22:54:57.949323+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1693,7 +1693,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313828+00:00",
-      "last_seen": "2026-10-11T22:43:12.712807+00:00",
+      "last_seen": "2026-10-11T22:54:57.949331+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1724,7 +1724,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313835+00:00",
-      "last_seen": "2026-10-11T22:43:12.712814+00:00",
+      "last_seen": "2026-10-11T22:54:57.949338+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1755,7 +1755,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313842+00:00",
-      "last_seen": "2026-10-11T22:43:12.712832+00:00",
+      "last_seen": "2026-10-11T22:54:57.949345+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1786,7 +1786,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313853+00:00",
-      "last_seen": "2026-10-11T22:43:12.712839+00:00",
+      "last_seen": "2026-10-11T22:54:57.949355+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1817,7 +1817,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313861+00:00",
-      "last_seen": "2026-10-11T22:43:12.712847+00:00",
+      "last_seen": "2026-10-11T22:54:57.949363+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1848,7 +1848,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313870+00:00",
-      "last_seen": "2026-10-11T22:43:12.712854+00:00",
+      "last_seen": "2026-10-11T22:54:57.949371+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1879,7 +1879,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.313878+00:00",
-      "last_seen": "2026-10-11T22:43:12.712862+00:00",
+      "last_seen": "2026-10-11T22:54:57.949378+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1910,7 +1910,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.315561+00:00",
-      "last_seen": "2026-10-11T22:43:12.712887+00:00",
+      "last_seen": "2026-10-11T22:54:57.949398+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1941,7 +1941,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.315570+00:00",
-      "last_seen": "2026-10-11T22:43:12.712894+00:00",
+      "last_seen": "2026-10-11T22:54:57.949406+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -1972,7 +1972,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.315579+00:00",
-      "last_seen": "2026-10-11T22:43:12.712914+00:00",
+      "last_seen": "2026-10-11T22:54:57.949413+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2003,7 +2003,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.315586+00:00",
-      "last_seen": "2026-10-11T22:43:12.712921+00:00",
+      "last_seen": "2026-10-11T22:54:57.949421+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2034,7 +2034,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:11:39.315594+00:00",
-      "last_seen": "2026-10-11T22:43:12.712929+00:00",
+      "last_seen": "2026-10-11T22:54:57.949429+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2065,7 +2065,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:12:30.539668+00:00",
-      "last_seen": "2026-10-11T22:43:21.478984+00:00",
+      "last_seen": "2026-10-11T22:55:06.407608+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2096,7 +2096,7 @@
       "saturation": "low",
       "opportunity_score": 47,
       "first_seen": "2026-10-11T22:12:30.539719+00:00",
-      "last_seen": "2026-10-11T22:43:21.479031+00:00",
+      "last_seen": "2026-10-11T22:55:06.407656+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2112,7 +2112,7 @@
       "guide_links": []
     },
     {
-      "id": "topic-2-3-4-5",
+      "id": "topic",
       "title": "#豊臣兄弟",
       "summary": "240 recent uses across the fediverse",
       "category": "culture",
@@ -2126,8 +2126,8 @@
       "velocity": 47,
       "saturation": "low",
       "opportunity_score": 47,
-      "first_seen": "2026-10-11T22:43:12.712879+00:00",
-      "last_seen": "2026-10-11T22:43:12.712879+00:00",
+      "first_seen": "2026-10-11T22:54:57.949390+00:00",
+      "last_seen": "2026-10-11T22:54:57.949390+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2157,7 +2157,7 @@
       "saturation": "medium",
       "opportunity_score": 46,
       "first_seen": "2026-10-11T22:12:32.759126+00:00",
-      "last_seen": "2026-10-11T22:43:23.077717+00:00",
+      "last_seen": "2026-10-11T22:54:20.235261+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2190,7 +2190,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:06:46.248344+00:00",
-      "last_seen": "2026-10-11T22:41:57.592886+00:00",
+      "last_seen": "2026-10-11T22:53:42.758315+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2219,7 +2219,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:06:46.248378+00:00",
-      "last_seen": "2026-10-11T22:41:57.592906+00:00",
+      "last_seen": "2026-10-11T22:53:42.758353+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2248,7 +2248,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:06:46.248413+00:00",
-      "last_seen": "2026-10-11T22:41:57.592927+00:00",
+      "last_seen": "2026-10-11T22:53:42.758374+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2277,7 +2277,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:06:46.248455+00:00",
-      "last_seen": "2026-10-11T22:41:57.592944+00:00",
+      "last_seen": "2026-10-11T22:53:42.758391+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2306,7 +2306,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:06:46.248481+00:00",
-      "last_seen": "2026-10-11T22:41:57.592961+00:00",
+      "last_seen": "2026-10-11T22:53:42.758408+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2335,7 +2335,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:14.205770+00:00",
-      "last_seen": "2026-10-11T22:41:51.135232+00:00",
+      "last_seen": "2026-10-11T22:53:33.146383+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2364,7 +2364,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:25.594286+00:00",
-      "last_seen": "2026-10-11T22:43:08.635373+00:00",
+      "last_seen": "2026-10-11T22:54:53.467058+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2393,7 +2393,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:26.491821+00:00",
-      "last_seen": "2026-10-11T22:42:37.364162+00:00",
+      "last_seen": "2026-10-11T22:54:26.089973+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2422,7 +2422,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:28.725788+00:00",
-      "last_seen": "2026-10-11T22:42:35.599542+00:00",
+      "last_seen": "2026-10-11T22:54:25.458482+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2451,7 +2451,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:31.050576+00:00",
-      "last_seen": "2026-10-11T22:42:37.938211+00:00",
+      "last_seen": "2026-10-11T22:54:27.251047+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2480,7 +2480,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:32.305060+00:00",
-      "last_seen": "2026-10-11T22:43:08.067740+00:00",
+      "last_seen": "2026-10-11T22:54:54.020998+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2509,7 +2509,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:33.230933+00:00",
-      "last_seen": "2026-10-11T22:43:07.495113+00:00",
+      "last_seen": "2026-10-11T22:54:52.749266+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2538,7 +2538,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:33.993482+00:00",
-      "last_seen": "2026-10-11T22:42:40.743734+00:00",
+      "last_seen": "2026-10-11T22:54:29.841087+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2567,7 +2567,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:35.144452+00:00",
-      "last_seen": "2026-10-11T22:42:39.205389+00:00",
+      "last_seen": "2026-10-11T22:54:28.376190+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2596,7 +2596,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:35.961451+00:00",
-      "last_seen": "2026-10-11T22:43:04.847884+00:00",
+      "last_seen": "2026-10-11T22:54:49.384131+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2625,7 +2625,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:39.246160+00:00",
-      "last_seen": "2026-10-11T22:42:46.289708+00:00",
+      "last_seen": "2026-10-11T22:54:35.061159+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2654,7 +2654,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:41.069302+00:00",
-      "last_seen": "2026-10-11T22:42:45.623008+00:00",
+      "last_seen": "2026-10-11T22:54:34.011197+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2683,7 +2683,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:42.169841+00:00",
-      "last_seen": "2026-10-11T22:42:43.618101+00:00",
+      "last_seen": "2026-10-11T22:54:32.039779+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2712,7 +2712,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:43.371204+00:00",
-      "last_seen": "2026-10-11T22:42:42.911150+00:00",
+      "last_seen": "2026-10-11T22:54:31.478959+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2741,7 +2741,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:44.232972+00:00",
-      "last_seen": "2026-10-11T22:43:02.947597+00:00",
+      "last_seen": "2026-10-11T22:54:46.941926+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2770,7 +2770,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:45.095250+00:00",
-      "last_seen": "2026-10-11T22:42:46.930853+00:00",
+      "last_seen": "2026-10-11T22:54:34.504793+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2799,7 +2799,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:46.443395+00:00",
-      "last_seen": "2026-10-11T22:42:47.634432+00:00",
+      "last_seen": "2026-10-11T22:54:36.723254+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2828,7 +2828,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:48.281413+00:00",
-      "last_seen": "2026-10-11T22:42:48.528815+00:00",
+      "last_seen": "2026-10-11T22:54:37.196927+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2857,7 +2857,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:50.297328+00:00",
-      "last_seen": "2026-10-11T22:42:49.911624+00:00",
+      "last_seen": "2026-10-11T22:54:36.225091+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2886,7 +2886,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:51.602673+00:00",
-      "last_seen": "2026-10-11T22:42:50.518778+00:00",
+      "last_seen": "2026-10-11T22:54:38.604677+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2915,7 +2915,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:52.546914+00:00",
-      "last_seen": "2026-10-11T22:42:49.045236+00:00",
+      "last_seen": "2026-10-11T22:54:37.676303+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2944,7 +2944,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:54.460559+00:00",
-      "last_seen": "2026-10-11T22:43:10.623442+00:00",
+      "last_seen": "2026-10-11T22:54:56.025365+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -2973,7 +2973,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:56.545931+00:00",
-      "last_seen": "2026-10-11T22:42:53.158217+00:00",
+      "last_seen": "2026-10-11T22:54:40.371438+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3002,7 +3002,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:58.347228+00:00",
-      "last_seen": "2026-10-11T22:42:54.444394+00:00",
+      "last_seen": "2026-10-11T22:54:41.119596+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3031,7 +3031,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:10:59.380023+00:00",
-      "last_seen": "2026-10-11T22:42:55.276118+00:00",
+      "last_seen": "2026-10-11T22:54:41.875819+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3060,7 +3060,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:00.951926+00:00",
-      "last_seen": "2026-10-11T22:42:56.410623+00:00",
+      "last_seen": "2026-10-11T22:54:42.596881+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3089,7 +3089,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:02.345356+00:00",
-      "last_seen": "2026-10-11T22:42:57.274365+00:00",
+      "last_seen": "2026-10-11T22:54:43.273720+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3118,7 +3118,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:04.360678+00:00",
-      "last_seen": "2026-10-11T22:42:57.803417+00:00",
+      "last_seen": "2026-10-11T22:54:43.895232+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3147,7 +3147,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:06.424807+00:00",
-      "last_seen": "2026-10-11T22:42:58.698760+00:00",
+      "last_seen": "2026-10-11T22:54:44.419896+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3176,7 +3176,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:07.735337+00:00",
-      "last_seen": "2026-10-11T22:43:00.295384+00:00",
+      "last_seen": "2026-10-11T22:54:45.061967+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3205,7 +3205,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:09.366498+00:00",
-      "last_seen": "2026-10-11T22:43:01.015348+00:00",
+      "last_seen": "2026-10-11T22:54:45.760633+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3234,7 +3234,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:10.522125+00:00",
-      "last_seen": "2026-10-11T22:43:01.814014+00:00",
+      "last_seen": "2026-10-11T22:54:46.353955+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3263,7 +3263,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:14.229713+00:00",
-      "last_seen": "2026-10-11T22:43:02.398059+00:00",
+      "last_seen": "2026-10-11T22:54:47.509985+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3292,7 +3292,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:17.327979+00:00",
-      "last_seen": "2026-10-11T22:43:03.566734+00:00",
+      "last_seen": "2026-10-11T22:54:48.198394+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3321,7 +3321,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:18.889073+00:00",
-      "last_seen": "2026-10-11T22:43:04.103055+00:00",
+      "last_seen": "2026-10-11T22:54:48.850618+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3350,7 +3350,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:20.567576+00:00",
-      "last_seen": "2026-10-11T22:43:05.449263+00:00",
+      "last_seen": "2026-10-11T22:54:49.868561+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3379,7 +3379,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:23.533210+00:00",
-      "last_seen": "2026-10-11T22:43:06.092616+00:00",
+      "last_seen": "2026-10-11T22:54:52.015747+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3408,7 +3408,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:24.739727+00:00",
-      "last_seen": "2026-10-11T22:43:06.952790+00:00",
+      "last_seen": "2026-10-11T22:54:51.357179+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3437,7 +3437,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:29.805231+00:00",
-      "last_seen": "2026-10-11T22:43:09.272336+00:00",
+      "last_seen": "2026-10-11T22:54:54.597773+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3466,7 +3466,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:31.874224+00:00",
-      "last_seen": "2026-10-11T22:43:09.855862+00:00",
+      "last_seen": "2026-10-11T22:54:55.249545+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3495,7 +3495,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:11:37.129865+00:00",
-      "last_seen": "2026-10-11T22:43:11.157075+00:00",
+      "last_seen": "2026-10-11T22:54:56.585622+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3503,35 +3503,6 @@
         {
           "name": "hackernews",
           "url": "https://www.thomas-huehn.com/knuth-reward-check/"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "saudi-arabia-vows-retaliation-against-houthis-afte",
-      "title": "Saudi Arabia vows retaliation against Houthis after airport strike kills at least 12",
-      "summary": "The Washington Post · Sun, 11 Oct 2026 18:45:41 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:56.513319+00:00",
-      "last_seen": "2026-10-11T22:41:57.592702+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-top",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPR094dC1TQTlURWVUOFpLQUc0a1kxa1cwM1h5aDQ3bmxzdk9jdk50VU9UaEVNbjFtVHpWNGZ5STNpeFB2RlJBUGxheVYza29vbnowUXMzYUh5VmVzTVR2WjhFQjU5M0RlZE9DWkI0UGtCZDEtMF9wUG9vcmtPalI1REsxYXNOYzhNNTJmaGh6Y2tVdVF6Z2F2WXdWMHEtbC11R1dXdnpyZmhkZmQtNWNpZFBvM2tkeS01WC1oRVVfRQ?oc=5"
         }
       ],
       "angles": [],
@@ -3553,7 +3524,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.997163+00:00",
-      "last_seen": "2026-10-11T22:41:48.685194+00:00",
+      "last_seen": "2026-10-11T22:53:30.018484+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3582,7 +3553,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.997248+00:00",
-      "last_seen": "2026-10-11T22:41:48.685264+00:00",
+      "last_seen": "2026-10-11T22:53:30.018566+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3611,7 +3582,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998601+00:00",
-      "last_seen": "2026-10-11T22:41:48.685291+00:00",
+      "last_seen": "2026-10-11T22:53:30.018594+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3640,7 +3611,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998639+00:00",
-      "last_seen": "2026-10-11T22:41:48.685310+00:00",
+      "last_seen": "2026-10-11T22:53:30.018613+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3669,7 +3640,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998657+00:00",
-      "last_seen": "2026-10-11T22:41:48.685326+00:00",
+      "last_seen": "2026-10-11T22:53:30.018630+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3698,7 +3669,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998677+00:00",
-      "last_seen": "2026-10-11T22:41:48.685344+00:00",
+      "last_seen": "2026-10-11T22:53:30.018649+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3727,7 +3698,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998693+00:00",
-      "last_seen": "2026-10-11T22:41:48.685360+00:00",
+      "last_seen": "2026-10-11T22:53:30.018665+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3756,7 +3727,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998710+00:00",
-      "last_seen": "2026-10-11T22:41:48.685377+00:00",
+      "last_seen": "2026-10-11T22:53:30.018681+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3785,7 +3756,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998735+00:00",
-      "last_seen": "2026-10-11T22:41:48.685415+00:00",
+      "last_seen": "2026-10-11T22:53:30.018718+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3814,7 +3785,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998755+00:00",
-      "last_seen": "2026-10-11T22:41:48.685398+00:00",
+      "last_seen": "2026-10-11T22:53:30.018701+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3843,7 +3814,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998788+00:00",
-      "last_seen": "2026-10-11T22:41:48.685430+00:00",
+      "last_seen": "2026-10-11T22:53:30.018749+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3872,7 +3843,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998805+00:00",
-      "last_seen": "2026-10-11T22:41:48.685448+00:00",
+      "last_seen": "2026-10-11T22:53:30.018766+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3901,7 +3872,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998821+00:00",
-      "last_seen": "2026-10-11T22:41:48.685465+00:00",
+      "last_seen": "2026-10-11T22:53:30.018782+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3930,7 +3901,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:58.998840+00:00",
-      "last_seen": "2026-10-11T22:41:48.685650+00:00",
+      "last_seen": "2026-10-11T22:53:30.018801+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3959,7 +3930,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967000+00:00",
-      "last_seen": "2026-10-11T22:41:51.135114+00:00",
+      "last_seen": "2026-10-11T22:53:33.146262+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3988,7 +3959,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967090+00:00",
-      "last_seen": "2026-10-11T22:41:51.135189+00:00",
+      "last_seen": "2026-10-11T22:53:33.146338+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -3996,35 +3967,6 @@
         {
           "name": "gnews-entertainment",
           "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNV2lpQThiWE9VSWtuQTFibTBIdkozSjJfWHZ3MlYxOUZaQ3U2RE5ON3Ywa1ZFNGgyNHNfS25wYkhSZjVCM1NoWElPT04tLVNCVDloZ3lMRkxFUDlUc3kwbGFFOUhLbkt1ak9YQ2wtV3FVSTQ2THN5YWp1Q016ek5JLVJPM1lBa18yT2paM3JGTnJUZUgybHc0T3Roc0ZFeWJHWVRPa21DdmdpYzhkaUk2Q3ZmbmNDeEdiRl9OOG9VYVV2RmMtNklTQU1nMHp5UdIB0wFBVV95cUxNTFk0Ykp0bU41cGJDMDFSalVfcDFDMWdLTDRtckt1WkhSRk40ZEtKcnFqTnhIVG5fLS1xakRHMTNpQVZ5eHd3UkZzaVBUUEhmWHJXVWh6TS1lNG9FbUkxVGJRMUVzNmhpUXh6LURReml6b3RpOGhBTDJLY2pLVzJJbkdHU1d4MlpxSVdZOGJ0TGtUbllfMWczdlJISkdaMEhfQWptWUY4M2YweVdLX3M5T005c3RLUWR5eEJVdEhJa3QyLUlBLXBEVElIR1FaYzMyQUd3?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "amanda-seyfried-says-meryl-streep-is-super-chill-t",
-      "title": "Amanda Seyfried says Meryl Streep is ‘super chill’ to work with — unless you do this one thing",
-      "summary": "Entertainment Weekly · Sat, 10 Oct 2026 22:10:50 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:13:01.967115+00:00",
-      "last_seen": "2026-10-11T22:41:51.135212+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-entertainment",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNZzhSU2tLTHZoR0F5WG1EdUd1aVJ6OGJGbmRVTDdYRjhPczI1LVhmUHJVTlJQM2pkN2lRSTR2cTRqeHFWQU1Lekl2SEdaYmZoY1dLbk5uN3ZUMldEVW9OSmdpdkVUVThSTlhfYmdTZ2tDMlo4alI0d19MT1U0QlFqbVRR?oc=5"
         }
       ],
       "angles": [],
@@ -4046,7 +3988,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967195+00:00",
-      "last_seen": "2026-10-11T22:41:51.135274+00:00",
+      "last_seen": "2026-10-11T22:53:33.146430+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4075,7 +4017,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967217+00:00",
-      "last_seen": "2026-10-11T22:41:51.135295+00:00",
+      "last_seen": "2026-10-11T22:53:33.146452+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4104,7 +4046,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967237+00:00",
-      "last_seen": "2026-10-11T22:41:51.135316+00:00",
+      "last_seen": "2026-10-11T22:53:33.146472+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4133,7 +4075,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967257+00:00",
-      "last_seen": "2026-10-11T22:41:51.135335+00:00",
+      "last_seen": "2026-10-11T22:53:33.146491+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4162,7 +4104,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967300+00:00",
-      "last_seen": "2026-10-11T22:41:51.135376+00:00",
+      "last_seen": "2026-10-11T22:53:33.151266+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4191,7 +4133,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967316+00:00",
-      "last_seen": "2026-10-11T22:41:51.135392+00:00",
+      "last_seen": "2026-10-11T22:53:33.151286+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4220,7 +4162,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967335+00:00",
-      "last_seen": "2026-10-11T22:41:51.135411+00:00",
+      "last_seen": "2026-10-11T22:53:33.151307+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4249,7 +4191,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:01.967369+00:00",
-      "last_seen": "2026-10-11T22:41:51.135427+00:00",
+      "last_seen": "2026-10-11T22:53:33.151324+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4278,7 +4220,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:04.694229+00:00",
-      "last_seen": "2026-10-11T22:41:53.461432+00:00",
+      "last_seen": "2026-10-11T22:53:36.665866+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4307,7 +4249,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:04.694368+00:00",
-      "last_seen": "2026-10-11T22:41:53.461740+00:00",
+      "last_seen": "2026-10-11T22:53:36.668148+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4336,7 +4278,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:04.694389+00:00",
-      "last_seen": "2026-10-11T22:41:53.461621+00:00",
+      "last_seen": "2026-10-11T22:53:36.666049+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4365,7 +4307,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:04.694405+00:00",
-      "last_seen": "2026-10-11T22:41:53.461598+00:00",
+      "last_seen": "2026-10-11T22:53:36.666027+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4373,93 +4315,6 @@
         {
           "name": "gnews-sports",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPV1ZjNEJVbTdlNkRpM3Z1ZXlyYkxYTzYxWXNpZFBLQi1wTTB0ZmxRRDJXbWZuYzk5dVlZZjI5bUg3UlZwZUY2RWFsUC10NVdtb3AwOERqZGZYMnRFMHZvV2lqN1djd2FkQjdac01kcHhFeEJOVl90VnB0N2Z6enhlbnUtMDY?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "tomorrow-s-top-25-today-georgia-takes-over-no-1-or",
-      "title": "Tomorrow's Top 25 Today: Georgia takes over No. 1, Oregon and Florida fall in new college football rankings",
-      "summary": "CBS Sports · Sun, 11 Oct 2026 04:02:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:13:04.694425+00:00",
-      "last_seen": "2026-10-11T22:41:53.461640+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-sports",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQWxqNEtFX29pSjFEWkhUaDlKX0d1ZEpkTE53M2l5U0FsSm1rVkdoUmI1Y3ZFNGs3NU1lSFMzZXZhQ0piNTJNZnlFUjhnVWlQYUE4X1I4WmYwLW1hM3N6X0dmOTFUTkpOS2NzZVJTQVg0VFA5ZnBRaHpka0RRNVYwMVZkZnZhOThBNGZxd0hKX3p4WWdTVzBOcTJsbVloazJ2SGJXbDJEODlCQ1ZlOWpYTWt5YmI2RnBrdTY2NDBlcXFta0xrUVBOTTN3?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "49ers-cut-matthew-judon-from-practice-squad",
-      "title": "49ers cut Matthew Judon from practice squad",
-      "summary": "NBC Sports · Sat, 10 Oct 2026 21:42:10 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:13:04.694441+00:00",
-      "last_seen": "2026-10-11T22:41:53.461656+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-sports",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUVZTVUVwY1p4MmhLUXZTdklHN2NHMzBXVGp2T1ktQ0t4OEpuWXp6bjR0ek92cEhYd2doZkF2U2lUajhOcTJJbWE0TlZCX05vU2xtS1FDeHgwa1FZMERrQXlsaUZ4Umgxai1LRGdzTHhaOXVuZ2xrRndMaHk0Y3l1QVNkVEhITFpGa0RvZ1pGY3RxLVpXY2JkWTgxQ1J6SENqQXZHTjVWOHo?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "2026-mlb-playoff-bracket-schedule-scores-as-dodger",
-      "title": "2026 MLB playoff bracket: Schedule, scores as Dodgers vs. Brewers NLCS kicks off on Sunday",
-      "summary": "CBS Sports · Sun, 11 Oct 2026 19:05:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:13:04.694462+00:00",
-      "last_seen": "2026-10-11T22:41:53.461756+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-sports",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOX3pxZzFTUmJrLVBBdUNvYzJQa1VTcUdac2NyN1l4d1hZcHAzRkFGbXdPR2NBUlladEZ1b2R5YzQ5dExlbUNJWlVONzhmZlpuc2x5UVJuQ2VrMFV5dHdjLVBwcVZoaUlYY3ZDbk92SjBoMmtrSTk2Vkh3U3VMMjU3ZWd2WXBORjdJVmVuYkF5UEpjY0lxQnZhaU1XU2xvdw?oc=5"
         }
       ],
       "angles": [],
@@ -4481,7 +4336,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:04.694490+00:00",
-      "last_seen": "2026-10-11T22:41:53.461794+00:00",
+      "last_seen": "2026-10-11T22:53:36.668186+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4510,7 +4365,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:04.694527+00:00",
-      "last_seen": "2026-10-11T22:41:53.461775+00:00",
+      "last_seen": "2026-10-11T22:53:36.668166+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4539,7 +4394,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482414+00:00",
-      "last_seen": "2026-10-11T22:42:04.277109+00:00",
+      "last_seen": "2026-10-11T22:53:51.478956+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4568,7 +4423,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482489+00:00",
-      "last_seen": "2026-10-11T22:42:04.277179+00:00",
+      "last_seen": "2026-10-11T22:53:51.479026+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4597,7 +4452,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482532+00:00",
-      "last_seen": "2026-10-11T22:42:04.277199+00:00",
+      "last_seen": "2026-10-11T22:53:51.479046+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4626,7 +4481,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482553+00:00",
-      "last_seen": "2026-10-11T22:42:04.277218+00:00",
+      "last_seen": "2026-10-11T22:53:51.479066+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4655,7 +4510,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482574+00:00",
-      "last_seen": "2026-10-11T22:42:04.277253+00:00",
+      "last_seen": "2026-10-11T22:53:51.479101+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4684,7 +4539,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482640+00:00",
-      "last_seen": "2026-10-11T22:42:04.277235+00:00",
+      "last_seen": "2026-10-11T22:53:51.479084+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4713,7 +4568,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482659+00:00",
-      "last_seen": "2026-10-11T22:42:04.277271+00:00",
+      "last_seen": "2026-10-11T22:53:51.479119+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4742,7 +4597,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482679+00:00",
-      "last_seen": "2026-10-11T22:42:04.277289+00:00",
+      "last_seen": "2026-10-11T22:53:51.479138+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4771,7 +4626,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482700+00:00",
-      "last_seen": "2026-10-11T22:42:04.277310+00:00",
+      "last_seen": "2026-10-11T22:53:51.479159+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4800,7 +4655,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482718+00:00",
-      "last_seen": "2026-10-11T22:42:04.277327+00:00",
+      "last_seen": "2026-10-11T22:53:51.479177+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4829,7 +4684,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.482752+00:00",
-      "last_seen": "2026-10-11T22:41:55.644167+00:00",
+      "last_seen": "2026-10-11T22:53:40.266138+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4858,7 +4713,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:07.485643+00:00",
-      "last_seen": "2026-10-11T22:41:55.644181+00:00",
+      "last_seen": "2026-10-11T22:53:40.266153+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4886,7 +4741,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666895+00:00",
-      "last_seen": "2026-10-11T22:43:14.091672+00:00",
+      "last_seen": "2026-10-11T22:54:59.903344+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4914,7 +4769,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666954+00:00",
-      "last_seen": "2026-10-11T22:43:14.091730+00:00",
+      "last_seen": "2026-10-11T22:54:59.903419+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4942,7 +4797,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666966+00:00",
-      "last_seen": "2026-10-11T22:43:14.091742+00:00",
+      "last_seen": "2026-10-11T22:54:59.903446+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4970,7 +4825,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666975+00:00",
-      "last_seen": "2026-10-11T22:43:14.091751+00:00",
+      "last_seen": "2026-10-11T22:54:59.903458+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -4998,7 +4853,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666983+00:00",
-      "last_seen": "2026-10-11T22:43:14.091758+00:00",
+      "last_seen": "2026-10-11T22:54:59.903466+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5026,7 +4881,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666991+00:00",
-      "last_seen": "2026-10-11T22:43:14.091765+00:00",
+      "last_seen": "2026-10-11T22:54:59.903477+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5054,7 +4909,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.666998+00:00",
-      "last_seen": "2026-10-11T22:43:14.091772+00:00",
+      "last_seen": "2026-10-11T22:54:59.903487+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5082,7 +4937,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667004+00:00",
-      "last_seen": "2026-10-11T22:43:14.091779+00:00",
+      "last_seen": "2026-10-11T22:54:59.903496+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5110,7 +4965,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667011+00:00",
-      "last_seen": "2026-10-11T22:43:14.091787+00:00",
+      "last_seen": "2026-10-11T22:54:59.903503+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5138,7 +4993,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667018+00:00",
-      "last_seen": "2026-10-11T22:43:14.091793+00:00",
+      "last_seen": "2026-10-11T22:54:59.903536+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5166,7 +5021,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667108+00:00",
-      "last_seen": "2026-10-11T22:43:19.785120+00:00",
+      "last_seen": "2026-10-11T22:55:04.759848+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5194,7 +5049,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667115+00:00",
-      "last_seen": "2026-10-11T22:43:14.091813+00:00",
+      "last_seen": "2026-10-11T22:54:59.903557+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5222,7 +5077,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667121+00:00",
-      "last_seen": "2026-10-11T22:43:14.091819+00:00",
+      "last_seen": "2026-10-11T22:54:59.903565+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5250,7 +5105,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667132+00:00",
-      "last_seen": "2026-10-11T22:43:14.091827+00:00",
+      "last_seen": "2026-10-11T22:54:59.903576+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5278,7 +5133,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667139+00:00",
-      "last_seen": "2026-10-11T22:43:14.091835+00:00",
+      "last_seen": "2026-10-11T22:54:59.903583+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5306,7 +5161,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667145+00:00",
-      "last_seen": "2026-10-11T22:43:14.091841+00:00",
+      "last_seen": "2026-10-11T22:54:59.903591+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5334,7 +5189,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667152+00:00",
-      "last_seen": "2026-10-11T22:43:14.091848+00:00",
+      "last_seen": "2026-10-11T22:54:59.903598+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5362,7 +5217,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667266+00:00",
-      "last_seen": "2026-10-11T22:43:14.091869+00:00",
+      "last_seen": "2026-10-11T22:54:59.903618+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5390,7 +5245,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667273+00:00",
-      "last_seen": "2026-10-11T22:43:14.091875+00:00",
+      "last_seen": "2026-10-11T22:54:59.903626+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5418,7 +5273,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667279+00:00",
-      "last_seen": "2026-10-11T22:43:14.091882+00:00",
+      "last_seen": "2026-10-11T22:54:59.903633+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5446,7 +5301,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667286+00:00",
-      "last_seen": "2026-10-11T22:43:14.091888+00:00",
+      "last_seen": "2026-10-11T22:54:59.903641+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5474,7 +5329,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667292+00:00",
-      "last_seen": "2026-10-11T22:43:14.091894+00:00",
+      "last_seen": "2026-10-11T22:54:59.903650+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5502,7 +5357,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:14:02.667298+00:00",
-      "last_seen": "2026-10-11T22:43:14.091901+00:00",
+      "last_seen": "2026-10-11T22:54:59.903657+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5530,7 +5385,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859125+00:00",
-      "last_seen": "2026-10-11T22:43:19.785051+00:00",
+      "last_seen": "2026-10-11T22:55:04.759783+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5558,7 +5413,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859204+00:00",
-      "last_seen": "2026-10-11T22:43:19.785134+00:00",
+      "last_seen": "2026-10-11T22:55:04.759861+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5586,7 +5441,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859214+00:00",
-      "last_seen": "2026-10-11T22:43:19.785144+00:00",
+      "last_seen": "2026-10-11T22:55:04.759870+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5614,7 +5469,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859230+00:00",
-      "last_seen": "2026-10-11T22:43:19.785160+00:00",
+      "last_seen": "2026-10-11T22:55:04.759890+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5642,7 +5497,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859239+00:00",
-      "last_seen": "2026-10-11T22:43:19.785169+00:00",
+      "last_seen": "2026-10-11T22:55:04.759898+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5670,7 +5525,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859255+00:00",
-      "last_seen": "2026-10-11T22:43:19.785192+00:00",
+      "last_seen": "2026-10-11T22:55:04.759909+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5698,7 +5553,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:26.859263+00:00",
-      "last_seen": "2026-10-11T22:43:19.785199+00:00",
+      "last_seen": "2026-10-11T22:55:04.759917+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5727,7 +5582,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:30.539684+00:00",
-      "last_seen": "2026-10-11T22:43:21.478999+00:00",
+      "last_seen": "2026-10-11T22:55:06.407624+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5756,7 +5611,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:30.539708+00:00",
-      "last_seen": "2026-10-11T22:43:21.479020+00:00",
+      "last_seen": "2026-10-11T22:55:06.407646+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5785,7 +5640,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:30.539744+00:00",
-      "last_seen": "2026-10-11T22:43:21.479044+00:00",
+      "last_seen": "2026-10-11T22:55:06.407693+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5814,7 +5669,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:30.539764+00:00",
-      "last_seen": "2026-10-11T22:43:21.479081+00:00",
+      "last_seen": "2026-10-11T22:55:06.407711+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5843,7 +5698,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:32.759055+00:00",
-      "last_seen": "2026-10-11T22:43:23.077645+00:00",
+      "last_seen": "2026-10-11T22:55:08.068432+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5872,7 +5727,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:32.759106+00:00",
-      "last_seen": "2026-10-11T22:43:23.077698+00:00",
+      "last_seen": "2026-10-11T22:55:08.068496+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5901,7 +5756,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:32.759118+00:00",
-      "last_seen": "2026-10-11T22:43:23.077709+00:00",
+      "last_seen": "2026-10-11T22:55:08.068526+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5930,7 +5785,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:32.759144+00:00",
-      "last_seen": "2026-10-11T22:43:23.077736+00:00",
+      "last_seen": "2026-10-11T22:55:08.068552+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5959,7 +5814,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:32.759152+00:00",
-      "last_seen": "2026-10-11T22:43:23.077744+00:00",
+      "last_seen": "2026-10-11T22:55:08.068560+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5988,7 +5843,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:32.759178+00:00",
-      "last_seen": "2026-10-11T22:43:23.077769+00:00",
+      "last_seen": "2026-10-11T22:55:08.068588+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -5996,180 +5851,6 @@
         {
           "name": "yt-rss:IGN",
           "url": "https://www.youtube.com/watch?v=tiYDuuZOipE"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "kentucky-football-is-a-fun-watch",
-      "title": "Kentucky Football is a FUN WATCH",
-      "summary": "ESPN · published 2026-10-11. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:35.068789+00:00",
-      "last_seen": "2026-10-11T22:43:24.679057+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/shorts/TnID3U1hBWg"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "pitt-panthers-vs-smu-mustangs-full-match-highlight",
-      "title": "Pitt Panthers vs. SMU Mustangs | Full Match Highlights | ESPN Volleyball",
-      "summary": "ESPN · published 2026-10-11. Watch the highlights as the No. 2 Pitt Panthers defeated the No. 6 SMU Mustangs in three sets (25-12, 25-21, 26-24).\n\n✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:35.068843+00:00",
-      "last_seen": "2026-10-11T22:43:24.679066+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/watch?v=iUhPN4BzSNw"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "boohalla-is-the-perfect-name-via-boohalla5-tt",
-      "title": "Boohalla is the perfect name 🎃 (via @boohalla5/TT)",
-      "summary": "ESPN · published 2026-10-11. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:35.068856+00:00",
-      "last_seen": "2026-10-11T22:43:24.679075+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/shorts/btKMQyyyPQs"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "stop-this-is-too-cute",
-      "title": "Stop this is too cute!",
-      "summary": "ESPN · published 2026-10-11. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:35.068865+00:00",
-      "last_seen": "2026-10-11T22:43:24.679688+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/shorts/QTzTqOoNob0"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "stanford-cardinal-vs-louisville-cardinals-full-mat",
-      "title": "Stanford Cardinal vs. Louisville Cardinals | Full Match Highlights | ESPN College Volleyball",
-      "summary": "ESPN · published 2026-10-11. Watch highlights as the No. 3 Louisville Cardinals defeat the No. 14 Stanford Cardinal in three sets (25-23, 25-18, 25-17).\n\n✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:35.068873+00:00",
-      "last_seen": "2026-10-11T22:43:24.679709+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/watch?v=qGrEcE89HOs"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "mesmerizing-oklahoma-s-identity-prevails-in-stunne",
-      "title": "‘MESMERIZING’: Oklahoma’s identity PREVAILS in stunner over Texas | SVPod",
-      "summary": "ESPN · published 2026-10-11. Scott Van Pelt and Stanford Steve react to the Oklahoma Sooners’ SHOCKING win over the Texas Longhorns in the Red River Rivalry. The guys discuss how this was a textbook Oklahoma win that we’ve seen o",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:35.068893+00:00",
-      "last_seen": "2026-10-11T22:43:24.679719+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/watch?v=Dd5VFma3Ciw"
         }
       ],
       "angles": [],
@@ -6191,7 +5872,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122161+00:00",
-      "last_seen": "2026-10-11T22:43:26.432047+00:00",
+      "last_seen": "2026-10-11T22:55:10.174284+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6220,7 +5901,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122216+00:00",
-      "last_seen": "2026-10-11T22:43:26.432107+00:00",
+      "last_seen": "2026-10-11T22:55:10.174340+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6249,7 +5930,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122228+00:00",
-      "last_seen": "2026-10-11T22:43:26.432118+00:00",
+      "last_seen": "2026-10-11T22:55:10.174352+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6278,7 +5959,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122239+00:00",
-      "last_seen": "2026-10-11T22:43:26.432129+00:00",
+      "last_seen": "2026-10-11T22:55:10.174392+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6307,7 +5988,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122250+00:00",
-      "last_seen": "2026-10-11T22:43:26.432140+00:00",
+      "last_seen": "2026-10-11T22:55:10.174403+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6336,7 +6017,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122261+00:00",
-      "last_seen": "2026-10-11T22:43:26.432149+00:00",
+      "last_seen": "2026-10-11T22:55:10.174413+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6365,7 +6046,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122288+00:00",
-      "last_seen": "2026-10-11T22:43:26.432171+00:00",
+      "last_seen": "2026-10-11T22:55:10.174425+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6394,7 +6075,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:37.122320+00:00",
-      "last_seen": "2026-10-11T22:43:26.432183+00:00",
+      "last_seen": "2026-10-11T22:55:10.174438+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6402,230 +6083,6 @@
         {
           "name": "yt-rss:VEVO",
           "url": "https://www.youtube.com/shorts/kVbqoy_dT3o"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "los-texmaniacs-tiny-desk-concert",
-      "title": "Los Texmaniacs: Tiny Desk Concert",
-      "summary": "NPRMusic · published 2026-10-08. From jazz and Tejano to norteño and ska, 'El Tiny' returns with a takeover from Sept. 15 to Oct. 15 for Latin Music Month.  \n\nFelix Contreras | October 8, 2026\nLos Texmaniacs' music is a living histor",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130357+00:00",
-      "last_seen": "2026-10-11T22:43:28.127288+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/watch?v=cysj4CNoIk4"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "tim-bernardes-tiny-desk-concert",
-      "title": "Tim Bernardes: Tiny Desk Concert",
-      "summary": "NPRMusic · published 2026-10-06. From jazz and Tejano to norteño and ska, 'El Tiny' returns with a takeover from Sept. 15 to Oct. 15 for Latin Music Month.  \n\nAnamaria Sayre | October 6, 2026\n\"I will no longer carry the weight a",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130422+00:00",
-      "last_seen": "2026-10-11T22:43:28.127363+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/watch?v=ey7ZHhcv1dE"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "pante-n-rococ-tiny-desk-concert",
-      "title": "Panteón Rococó: Tiny Desk Concert",
-      "summary": "NPRMusic · published 2026-10-01. From jazz and Tejano to norteño and ska, 'El Tiny' returns with a takeover from Sept. 15 to Oct. 15 for Latin Music Month.  \n\nFelix Contreras | October 1, 2026\nPanteón Rococó has been at the forefront",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130435+00:00",
-      "last_seen": "2026-10-11T22:43:28.127375+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/watch?v=AvSxPx25oLc"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "melissa-aldana-with-gonzalo-rubalcaba-tiny-desk-co",
-      "title": "Melissa Aldana with Gonzalo Rubalcaba: Tiny Desk Concert",
-      "summary": "NPRMusic · published 2026-09-29. From jazz and Tejano to norteño and ska, 'El Tiny' returns with a takeover from Sept. 15 to Oct. 15 for Latin Music Month.  \n\nFelix Contreras | September 29, 2026\nWhat tenor saxophonist Melissa Aldana",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130447+00:00",
-      "last_seen": "2026-10-11T22:43:28.127383+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/watch?v=3EWLwZh4HjU"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "tiny-desk-merch-latin-music-month",
-      "title": "Tiny Desk Merch: Latin Music Month",
-      "summary": "NPRMusic · published 2026-09-28. A message from NPR Marketing - POV: You're supposed to model new merch but you're just a podcast host. \n\nTees, totes, bucket hats and mugs, all with extra sazón, available here: shopnpr.org/LMM",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130455+00:00",
-      "last_seen": "2026-10-11T22:43:28.127391+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/shorts/jYRH2z3v-Ug"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "tori-kelly-explains-how-she-takes-on-different-per",
-      "title": "Tori Kelly explains how she takes on different personas while recording in the studio,",
-      "summary": "NPRMusic · published 2026-09-24. #tinytalk • Tori Kelly explains how she takes on different personas while recording in the studio, each with their own approach to the vocals, to achieve the sound she's going for.⁠\n\n#tinydesk #nprmus",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130465+00:00",
-      "last_seen": "2026-10-11T22:43:28.127400+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/shorts/IN5lC_T7yOA"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "alex-ferreira-tiny-desk-concert",
-      "title": "Alex Ferreira: Tiny Desk Concert",
-      "summary": "NPRMusic · published 2026-09-24. From jazz and Tejano to norteño and ska, 'El Tiny' returns with a takeover from Sept. 15 to Oct. 15 for Latin Music Month.  \n\nAnamaria Sayre | September 24, 2026\nAlex Ferreira's lyrics are a tide swis",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130472+00:00",
-      "last_seen": "2026-10-11T22:43:28.127408+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/watch?v=zw3iotteJz0"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "did-stella-lefty-really-steal-from-other-songs",
-      "title": "Did Stella Lefty really steal from other songs?",
-      "summary": "NPRMusic · published 2026-09-23. Did Stella Lefty really steal from other songs? NPR Music's Hazel Cills breaks down what \"interpolation\" is and how it's extremely common in popular music.⁠",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:12:39.130488+00:00",
-      "last_seen": "2026-10-11T22:43:28.127424+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:NPRMusic",
-          "url": "https://www.youtube.com/shorts/2rn94FAndBw"
         }
       ],
       "angles": [],
@@ -6646,7 +6103,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908835+00:00",
-      "last_seen": "2026-10-11T22:43:30.084496+00:00",
+      "last_seen": "2026-10-11T22:55:12.351706+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6674,7 +6131,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908905+00:00",
-      "last_seen": "2026-10-11T22:43:30.084587+00:00",
+      "last_seen": "2026-10-11T22:55:12.351771+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6702,7 +6159,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908919+00:00",
-      "last_seen": "2026-10-11T22:43:30.084605+00:00",
+      "last_seen": "2026-10-11T22:55:12.351784+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6730,7 +6187,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908931+00:00",
-      "last_seen": "2026-10-11T22:43:30.084613+00:00",
+      "last_seen": "2026-10-11T22:55:12.351793+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6758,7 +6215,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908939+00:00",
-      "last_seen": "2026-10-11T22:43:30.084622+00:00",
+      "last_seen": "2026-10-11T22:55:12.351801+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6786,7 +6243,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908949+00:00",
-      "last_seen": "2026-10-11T22:43:30.084630+00:00",
+      "last_seen": "2026-10-11T22:55:12.351808+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6814,7 +6271,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908957+00:00",
-      "last_seen": "2026-10-11T22:43:30.084638+00:00",
+      "last_seen": "2026-10-11T22:55:12.351816+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6842,7 +6299,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:41.908964+00:00",
-      "last_seen": "2026-10-11T22:43:30.084646+00:00",
+      "last_seen": "2026-10-11T22:55:12.351824+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6872,7 +6329,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.914856+00:00",
-      "last_seen": "2026-10-11T22:42:01.141605+00:00",
+      "last_seen": "2026-10-11T22:53:46.878284+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6902,7 +6359,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.914923+00:00",
-      "last_seen": "2026-10-11T22:42:01.141681+00:00",
+      "last_seen": "2026-10-11T22:53:46.878345+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6932,7 +6389,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.914947+00:00",
-      "last_seen": "2026-10-11T22:42:01.141706+00:00",
+      "last_seen": "2026-10-11T22:53:46.878370+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6962,7 +6419,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.914968+00:00",
-      "last_seen": "2026-10-11T22:42:01.141756+00:00",
+      "last_seen": "2026-10-11T22:53:46.878389+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -6992,7 +6449,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.914987+00:00",
-      "last_seen": "2026-10-11T22:42:01.141774+00:00",
+      "last_seen": "2026-10-11T22:53:46.878407+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7022,7 +6479,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.915013+00:00",
-      "last_seen": "2026-10-11T22:42:01.141810+00:00",
+      "last_seen": "2026-10-11T22:53:46.878432+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7052,7 +6509,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.915029+00:00",
-      "last_seen": "2026-10-11T22:42:01.141832+00:00",
+      "last_seen": "2026-10-11T22:53:46.878448+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7082,7 +6539,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.915046+00:00",
-      "last_seen": "2026-10-11T22:42:01.141880+00:00",
+      "last_seen": "2026-10-11T22:53:46.878464+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7112,7 +6569,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.915066+00:00",
-      "last_seen": "2026-10-11T22:42:01.141909+00:00",
+      "last_seen": "2026-10-11T22:53:46.878488+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7142,7 +6599,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:12:54.915089+00:00",
-      "last_seen": "2026-10-11T22:42:01.141929+00:00",
+      "last_seen": "2026-10-11T22:53:46.878520+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7172,7 +6629,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.587820+00:00",
-      "last_seen": "2026-10-11T22:42:07.797389+00:00",
+      "last_seen": "2026-10-11T22:53:56.074475+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7202,7 +6659,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.587899+00:00",
-      "last_seen": "2026-10-11T22:42:07.797447+00:00",
+      "last_seen": "2026-10-11T22:53:56.074569+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7232,7 +6689,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.587921+00:00",
-      "last_seen": "2026-10-11T22:42:07.797325+00:00",
+      "last_seen": "2026-10-11T22:53:56.074444+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7262,7 +6719,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.587947+00:00",
-      "last_seen": "2026-10-11T22:42:07.797413+00:00",
+      "last_seen": "2026-10-11T22:53:56.074535+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7292,7 +6749,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.587963+00:00",
-      "last_seen": "2026-10-11T22:42:07.797430+00:00",
+      "last_seen": "2026-10-11T22:53:56.074552+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7300,36 +6757,6 @@
         {
           "name": "gnews-q:video games",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVmhGUy1xbE15V212NS0wdTc1SENaMExGS01aaDkwdzN4ZkdxNnMtR09YNkh1bGd0dGxRWHNXX2ttVE9va1pyUVBWUlVCMVBCeTBnYXBBQnlkcnNLZXJxNllEaGRnY18tQnlXU21HQk9PRTdpSHp3QlpuY1dxdU5PUA?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "5-video-games-from-1985-that-changed-gaming-foreve",
-      "title": "5 Video Games From 1985 That Changed Gaming Forever",
-      "summary": "SVG · Sun, 11 Oct 2026 16:00:00 GMT",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch",
-        "tiktok"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:13:03.587980+00:00",
-      "last_seen": "2026-10-11T22:42:07.797463+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-q:video games",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBlT28wTkRSOTFvdk05OVZicHNlTU9HWlI5cFBWWExjZ2JDYVBCN2ZGQ0ZZZnl5R19wVXh3ZXYxYzNicTJhX1lVQ1lMamcweXg5X3RMX2dnTzVlNkZ1NTIwOGI5NlJYelVIb29VcmR2OWxCM1NWZ1NF?oc=5"
         }
       ],
       "angles": [],
@@ -7352,7 +6779,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.593043+00:00",
-      "last_seen": "2026-10-11T22:42:07.797158+00:00",
+      "last_seen": "2026-10-11T22:53:56.074310+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7382,7 +6809,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:03.593121+00:00",
-      "last_seen": "2026-10-11T22:42:07.797241+00:00",
+      "last_seen": "2026-10-11T22:53:56.074389+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7411,7 +6838,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253477+00:00",
-      "last_seen": "2026-10-11T22:42:11.047131+00:00",
+      "last_seen": "2026-10-11T22:54:00.298609+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7440,7 +6867,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253571+00:00",
-      "last_seen": "2026-10-11T22:42:11.047202+00:00",
+      "last_seen": "2026-10-11T22:54:00.298680+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7469,7 +6896,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253595+00:00",
-      "last_seen": "2026-10-11T22:42:11.047224+00:00",
+      "last_seen": "2026-10-11T22:54:00.298703+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7498,7 +6925,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253634+00:00",
-      "last_seen": "2026-10-11T22:42:11.047260+00:00",
+      "last_seen": "2026-10-11T22:54:00.298739+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7527,7 +6954,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253669+00:00",
-      "last_seen": "2026-10-11T22:42:11.047276+00:00",
+      "last_seen": "2026-10-11T22:54:00.298783+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7556,7 +6983,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253685+00:00",
-      "last_seen": "2026-10-11T22:42:11.047308+00:00",
+      "last_seen": "2026-10-11T22:54:00.298799+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7585,7 +7012,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:09.253704+00:00",
-      "last_seen": "2026-10-11T22:42:11.047344+00:00",
+      "last_seen": "2026-10-11T22:54:00.298834+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7614,7 +7041,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614190+00:00",
-      "last_seen": "2026-10-11T22:42:14.156680+00:00",
+      "last_seen": "2026-10-11T22:54:04.617987+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7643,7 +7070,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614230+00:00",
-      "last_seen": "2026-10-11T22:42:14.156775+00:00",
+      "last_seen": "2026-10-11T22:54:04.618031+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7672,7 +7099,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614253+00:00",
-      "last_seen": "2026-10-11T22:42:14.156797+00:00",
+      "last_seen": "2026-10-11T22:54:04.618050+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7680,35 +7107,6 @@
         {
           "name": "gnews-q:new music",
           "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRG9VX3VOTTJ4SWlNV2xTN2ZqTVJSMlRqMlhkOWs2VmRpSk00YmFoWWI0Q3JJZElXYThLX19YdHMwMVhIdEZBUVBNczhhdkl6TThuUFhzZmR6ZVBYd2pRNjlTMWd5RXZlMEVVSVpINklyT09PeUtvZkRBTU9obVBNWm01MTBEbmQtdzBSMDZ2aHZVWTBDdkNBQml1MWVuYXBkMXJGQWdycE5ZTFh6emxkb2ZVYnhLbC1SQUVYRzRWUXZYNXZ2RTRVSTN1UU5KR00?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "troye-sivan-remi-wolf-slayyyter-pitbull-new-music-",
-      "title": "Troye Sivan, Remi Wolf, Slayyyter & Pitbull: New Music Friday Guide",
-      "summary": "Billboard · Fri, 09 Oct 2026 19:10:10 GMT",
-      "category": "music",
-      "platforms": [
-        "tiktok",
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:13:14.614287+00:00",
-      "last_seen": "2026-10-11T22:42:14.156831+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-q:new music",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNbkoxV3p6NmNIeVd2VUh5MnlHY2RJU3liUldCdXg1VTFTU21Ib0RHbzFmTXc1NFpZajRqdE82eXhyV0FjMkVudWRLN3hrYnFjN3VTRjBVY1JGY3lrMHhRRVNfbHpZY2ctZzR4cmQzMEMwd0wyRlJmbnFGbkJxbjVxSm0zVGdKWXJYNnNNajJ5UEZETnhmOXJxa3lwSERmbU44T0oyUFdGN05LVmNpaFE?oc=5"
         }
       ],
       "angles": [],
@@ -7730,7 +7128,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614304+00:00",
-      "last_seen": "2026-10-11T22:42:14.156848+00:00",
+      "last_seen": "2026-10-11T22:54:04.618066+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7759,7 +7157,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614326+00:00",
-      "last_seen": "2026-10-11T22:42:14.156868+00:00",
+      "last_seen": "2026-10-11T22:54:04.618084+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7788,7 +7186,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614346+00:00",
-      "last_seen": "2026-10-11T22:42:14.156886+00:00",
+      "last_seen": "2026-10-11T22:54:04.618103+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7817,7 +7215,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614364+00:00",
-      "last_seen": "2026-10-11T22:42:14.156904+00:00",
+      "last_seen": "2026-10-11T22:54:04.618121+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7846,7 +7244,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:14.614383+00:00",
-      "last_seen": "2026-10-11T22:42:14.156923+00:00",
+      "last_seen": "2026-10-11T22:54:04.618139+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7875,7 +7273,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349036+00:00",
-      "last_seen": "2026-10-11T22:42:17.436084+00:00",
+      "last_seen": "2026-10-11T22:54:08.840252+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7904,7 +7302,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349148+00:00",
-      "last_seen": "2026-10-11T22:42:17.436173+00:00",
+      "last_seen": "2026-10-11T22:54:08.840339+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7933,7 +7331,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349170+00:00",
-      "last_seen": "2026-10-11T22:42:17.436148+00:00",
+      "last_seen": "2026-10-11T22:54:08.840314+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7962,7 +7360,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349194+00:00",
-      "last_seen": "2026-10-11T22:42:17.436198+00:00",
+      "last_seen": "2026-10-11T22:54:08.840363+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -7991,7 +7389,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349210+00:00",
-      "last_seen": "2026-10-11T22:42:17.436212+00:00",
+      "last_seen": "2026-10-11T22:54:08.840379+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8020,7 +7418,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349240+00:00",
-      "last_seen": "2026-10-11T22:42:17.436243+00:00",
+      "last_seen": "2026-10-11T22:54:08.840410+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8049,7 +7447,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349257+00:00",
-      "last_seen": "2026-10-11T22:42:17.436261+00:00",
+      "last_seen": "2026-10-11T22:54:08.840426+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8078,7 +7476,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349276+00:00",
-      "last_seen": "2026-10-11T22:42:17.436294+00:00",
+      "last_seen": "2026-10-11T22:54:08.840459+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8107,7 +7505,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:13:19.349299+00:00",
-      "last_seen": "2026-10-11T22:42:17.436317+00:00",
+      "last_seen": "2026-10-11T22:54:08.840483+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8115,64 +7513,6 @@
         {
           "name": "gnews-q:TikTok viral",
           "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNUHYxb3dfYkxfbURLMURmWl9rSnI4R3Vra3NmUVU1TDZ4ekd0TlZDZUxJM2k4Sm94d0g1LWFuenkxN3h2R1FPMVhHV0RMSG5WTnpDQzZOZ0xSSGlTd1Q3cl93MnZoeUdnNThNS2hIR1JRV1FRMWZwOW96X0lzTktfZ2dGa3ItREI5YUR3bWJreW0wNHlZdGlSSzJDVkg0Qlc3QnljUkZCc05IQ01yOUVmTW1tMVd4TXhQZnhZNmg3NlU4LUl5WjhWSmtlX1FIdmxCVlFUeDFDUUhWeXh3TmZORWNPMlJrS1Q0cVBMdUVqenRlTXhPRkg5dHdxcWw5R2pS0gGGAkFVX3lxTE9sVWk4R04yZnI3UHRBY2ZxazdDZ0tnYjR3TVVJd2RDbENuT3ZaZmJPdFZIR1I5OUNZajMwQzI3a29qR2xCeWpSdHBRVFNYTDJLV3JpUGNiUDBtb3JSdlROTTR1YnIzMnQzdGdZbnk5dWJ1VGVDUmdXNWFOdGRqZ3BudVlTcVljWEl0SzE5X2loRF9XX1FQaEpTWDhBa2p4M1Voc3lpeXJRdDM2cVo5MUtsV1ZJQTkwcl9BQ1llX01CRVpNQ1Vqb1BOR2VTVVdzUnppR3gwcmxoVGZBdjFlSWhTcXdtX2FTcHpFd2c3Tm1TRkFVMEZodURnTVZvVk9xTEdoWTZPenc?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "trump-says-ukraine-and-russia-have-agreed-energy-c",
-      "title": "Trump says Ukraine and Russia have agreed 'energy ceasefire'",
-      "summary": "BBC · Sun, 11 Oct 2026 20:15:36 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:46.337335+00:00",
-      "last_seen": "2026-10-11T22:41:57.592783+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-top",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE04QUtQbDZLV05uX0dPcEwxc3poa1BGZGVYdmVjM2NzQ3pUMkowOVd6ZzBMTGRZNG9KVlhUNHNqR3o1SG5sel96Rnd3YVJQMjEwZ09zRnoxSFcxQ2s?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "justice-department-investigating-major-tv-networks",
-      "title": "Justice Department investigating major TV networks over suspending pool coverage of Trump",
-      "summary": "NBC News · Sun, 11 Oct 2026 14:37:00 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:46.337362+00:00",
-      "last_seen": "2026-10-11T22:41:57.592808+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-top",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPSldFaXdvR2VuRkFmaWxnOThjM29peU5pcXZOV0ZRS2h0Z2lhT1FrMGNYYmM1bmV0aXRpLTYyczIxLTdpN05iNWx4TU5JdEI0SGRRZmk0YllhUkFQbXBubWtMbFpvRnZPdklMeTZpQjdLYk1wV0I1RWhtbWhjXzZsTzVKSmZZc2N4MDZfSDR0c1pFcTctbFBiZG1MNVRQQ3BXaVpnaWpaYlRqa3J1T2U2TVZoMzlmWUljWTdNNGdaU3JHN1kwQzAw?oc=5"
         }
       ],
       "angles": [],
@@ -8194,7 +7534,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:46.337389+00:00",
-      "last_seen": "2026-10-11T22:41:57.592846+00:00",
+      "last_seen": "2026-10-11T22:53:42.758275+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8202,64 +7542,6 @@
         {
           "name": "gnews-top",
           "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbXJNaVZnS3F0M1R5N1ZmM1RTTGg5X19Jb252amRSTFItOFJPZXpTY0ZrR0NWN0VHcGZYdGl4X0NTMDZGSnNyLXZJR0RjVTR6Tm5od0NiS2VFczlkRUVNUjl5U0t1MGprUlNiVWNOa09BRmQ4VlFMR2VYWHF4TjBoQ3NuekJlM09KR1QxbllLQTliTGNNaGphWnV4WTN1MXpRMThSUWlZUdIBrAFBVV95cUxQU2Y1Y3M1OF9OZXpUdXR4aUlYclBIa24tYXJRZnBvZnhQTUM2VEZjM0JFN1VBUlRzSlZIQzkwX1hPWG0yNHU2cHUxV0lXWjhjN2JOd2hKUERkM0YwQnRGUzJWT3hkNVhKNzBkRDJyMFNhTjZITFFZb3ZlYnFjdldmZFJXa0ZsVHhCdUFaRlpid0V2MklNTTk0QmFDRmdFYVBNRGxrU25BMzlob0hv?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "republicans-want-abdul-el-sayed-to-be-the-main-cha",
-      "title": "Republicans want Abdul El-Sayed to be the main character of the midterms. He's happy to oblige",
-      "summary": "AP News · Sun, 11 Oct 2026 11:25:00 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:46.337412+00:00",
-      "last_seen": "2026-10-11T22:41:57.592868+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-top",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb0VVc2t3RDJNUkJkWlBGejBNSlZNY1A0WGxobkFFaVRaZ0pQRTVyMzZmZWViWWx1YlBWR3BFUGF2T3gzbXFFTXJPVUJGd3ZKMlBZaEt1NDhBNW1SNlZtMFlUX1BZS3diTG5Vck1uNVNxbDBaZm1DYzdxc3J1QnA0YUtoR2x0UWdNYUZwM2tMTUl1YnBCSmpyZGdnNEtyYXczSktR?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "uk-pm-burnham-says-russia-interfered-in-2016-brexi",
-      "title": "UK PM Burnham says Russia interfered in 2016 Brexit vote",
-      "summary": "Reuters · Sun, 11 Oct 2026 16:57:34 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:46.337767+00:00",
-      "last_seen": "2026-10-11T22:41:46.337767+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-top",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWHJJdG9NWWZzeFA5ZlZ4ZU4tMVlOTzc1aGxiUHFlYkJkbUtpVDl3YzBJYXVfX2VCWUpUVnZfRnRXS1VzSHc0UDhpWVJ6X2dwZU9LRlU1Y1ZSM2FTS0FlVXRFcEZBWUh0VE1rdUt5UUdjZGgySU0xdFZWNXM5d1BYSWRmeHVRYXJqLXV3UEFNeU9MTVhKWHVJQ2dUOXJiNUE?oc=5"
         }
       ],
       "angles": [],
@@ -8281,7 +7563,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:46.337784+00:00",
-      "last_seen": "2026-10-11T22:41:46.337784+00:00",
+      "last_seen": "2026-10-11T22:53:27.549345+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8289,35 +7571,6 @@
         {
           "name": "gnews-top",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOGxqNnJoTC12VnZiQm1ZTUhITmQ0RjZyTWhIRDYwcGQxZm9ZMW9tbVl2NU9BNk05LUlhQ3ZDbXZjdjNJNVZQRnhsU3ZveXFjRFBrRTlmMkJKc0JVREZiVlNZbVRKM3Z2bWd5XzVyMHFDdzk2MEJyaHpRRWRmWTlxQVg4c2l4UnZIM002Szhfem9kWHJUTlZZWktDb1NQU0JOb0xaV2hxNjE?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "black-book-releases-2027-global-healthcare-technol",
-      "title": "Black Book Releases 2027 Global Healthcare Technology Outlook Covering 167 Countries and Markets",
-      "summary": "Newswire.com · Sun, 11 Oct 2026 13:30:00 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:48.685669+00:00",
-      "last_seen": "2026-10-11T22:41:48.685669+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-technology",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSFl1Q1EzWEtQemlKZVU5LXQxMk80ZmJraEgzNnQxMVJKanE4b0FjdVcxQnVEQXNSeGJFYTRhTTJUTjBHM2xyRUZld0lQMTFGNW1hVEc1TTRUMVhpV0JQNmRWMnhHMjdqYnhsNEc1MkQzV3pqM0djcmQ2aGFEaWFXeXprbVk1LUR1MFIyWTRyLWZla0RwbE45OGdKckFaUEh4eFFRdlJqZw?oc=5"
         }
       ],
       "angles": [],
@@ -8339,7 +7592,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:51.135255+00:00",
-      "last_seen": "2026-10-11T22:41:51.135255+00:00",
+      "last_seen": "2026-10-11T22:53:33.146410+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8368,7 +7621,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:51.135357+00:00",
-      "last_seen": "2026-10-11T22:41:51.135357+00:00",
+      "last_seen": "2026-10-11T22:53:33.151220+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8397,7 +7650,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:51.135445+00:00",
-      "last_seen": "2026-10-11T22:41:51.135445+00:00",
+      "last_seen": "2026-10-11T22:53:33.151344+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8405,93 +7658,6 @@
         {
           "name": "gnews-entertainment",
           "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeXNTa2dLMVhGajdPaEUyZXdKcVdFZE5GR1lKaUh6ZkFZeWVKNmFiNjhIa1VPeHhUamRIMUs5bUlrdUFJX3lPeWxYbS0teXNIcDNYTi12WUhSS25ra19SVFFLUW1vUVc0MGNycjB5c2ZST0gwUVpEb3M3TUNfTjdJUXA5c3gxV0IzUm1EdFlCWWRGQnNlT2FtcG5YRFNyY2xpOTlSRjFIN3lYdEZMSXp6ZlA1cGJDQ0hmNVVqZm9Ubk10Qnh5?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "jameson-williams-ends-td-drought-on-8-yard-goff-pa",
-      "title": "Jameson Williams Ends TD Drought on 8-Yard Goff Pass",
-      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:06:23 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:53.461503+00:00",
-      "last_seen": "2026-10-11T22:41:53.461503+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-sports",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLUMxdnA0MmdTeUhBdXR3MnVvZmlyanJ0UWdkT19PUnVIR2RaQlp4WThfeDhrckpVajBuRmM1LUViRktvcE1KMWlWY0dObDBaem9STGRrdGNWUjFNVlZKNmtfTlZGNTJWWk5ZV0EtV2JkLUM5QVlMTkNEYnVNLVc3ZWhuS016eHdy?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "cubs-predicted-to-trade-for-guardians-outfielder",
-      "title": "Cubs Predicted To Trade For Guardians Outfielder",
-      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:06:40 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:53.461565+00:00",
-      "last_seen": "2026-10-11T22:41:53.461565+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-sports",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUjVvZ2Nfd3dhOFJDRGdwd25LWmQwVjBYZmJBTmxGcWU0QlRGbXhZS2ZBUklQMlFxYTZyTldTVUFCbDdoMWwwMHdoQjlkbkV6TjM3R3EyNS10dGZlZ3BUdDU5NmtSQ0EtYU82TWNLUGNDUFBxOFU1b2ExLWs0VGxYOHRpbjdRRFBfaDl2cTYtRjl1TTcy?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "brewers-murphy-breaks-down-misiorowski-facing-tari",
-      "title": "Brewers' Murphy breaks down Misiorowski facing Tarik Skubal",
-      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:26:48 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:41:53.461581+00:00",
-      "last_seen": "2026-10-11T22:41:53.461581+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-sports",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRzhzaWtCQm9RSmgwVFpFOEdhTVVFQ3N3VGVUSTdTT0xXUXFuZ05wa2pIa3lONk5kTFotQzMxNzRSNzRsRFJWaW14VnJSTDZTM25RLUpBcEtQaWNGTVJ0bDBUMW1IT09ROHc3MnRYa01LdkpCZ29YakFxY0hvUkhFS1JQY2tTVzBfWjRsX0M0UUE?oc=5"
         }
       ],
       "angles": [],
@@ -8513,7 +7679,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:53.461690+00:00",
-      "last_seen": "2026-10-11T22:41:53.461690+00:00",
+      "last_seen": "2026-10-11T22:53:36.668082+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8542,7 +7708,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:53.461722+00:00",
-      "last_seen": "2026-10-11T22:41:53.461722+00:00",
+      "last_seen": "2026-10-11T22:53:36.668128+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8571,7 +7737,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:53.461809+00:00",
-      "last_seen": "2026-10-11T22:41:53.461809+00:00",
+      "last_seen": "2026-10-11T22:53:36.668202+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8600,7 +7766,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:55.644145+00:00",
-      "last_seen": "2026-10-11T22:41:55.644145+00:00",
+      "last_seen": "2026-10-11T22:53:40.266120+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8629,7 +7795,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:55.644197+00:00",
-      "last_seen": "2026-10-11T22:41:55.644197+00:00",
+      "last_seen": "2026-10-11T22:53:40.266168+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8658,7 +7824,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:41:55.644215+00:00",
-      "last_seen": "2026-10-11T22:41:55.644215+00:00",
+      "last_seen": "2026-10-11T22:53:40.266188+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8687,7 +7853,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:36.481284+00:00",
-      "last_seen": "2026-10-11T22:42:36.481284+00:00",
+      "last_seen": "2026-10-11T22:54:26.658069+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8716,7 +7882,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:42.098932+00:00",
-      "last_seen": "2026-10-11T22:42:42.098932+00:00",
+      "last_seen": "2026-10-11T22:54:30.947762+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8745,7 +7911,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:45.068701+00:00",
-      "last_seen": "2026-10-11T22:42:45.068701+00:00",
+      "last_seen": "2026-10-11T22:54:33.121128+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8753,35 +7919,6 @@
         {
           "name": "hackernews",
           "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "shape-sensing-sheet-digitally-tracks-its-own-movem",
-      "title": "Shape-sensing sheet digitally tracks its own movement as it bends and twists",
-      "summary": "20 points · 0 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:51.146506+00:00",
-      "last_seen": "2026-10-11T22:42:51.146506+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "hackernews",
-          "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008"
         }
       ],
       "angles": [],
@@ -8803,7 +7940,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.091799+00:00",
-      "last_seen": "2026-10-11T22:43:18.182441+00:00",
+      "last_seen": "2026-10-11T22:54:59.903542+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8832,7 +7969,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811106+00:00",
-      "last_seen": "2026-10-11T22:43:14.811106+00:00",
+      "last_seen": "2026-10-11T22:55:00.638627+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8861,7 +7998,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811163+00:00",
-      "last_seen": "2026-10-11T22:43:14.811163+00:00",
+      "last_seen": "2026-10-11T22:55:00.638692+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8890,7 +8027,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811178+00:00",
-      "last_seen": "2026-10-11T22:43:14.811178+00:00",
+      "last_seen": "2026-10-11T22:55:00.638711+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8919,7 +8056,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811187+00:00",
-      "last_seen": "2026-10-11T22:43:14.811187+00:00",
+      "last_seen": "2026-10-11T22:55:00.638721+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8948,7 +8085,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811199+00:00",
-      "last_seen": "2026-10-11T22:43:14.811199+00:00",
+      "last_seen": "2026-10-11T22:55:00.638729+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -8977,7 +8114,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811208+00:00",
-      "last_seen": "2026-10-11T22:43:14.811208+00:00",
+      "last_seen": "2026-10-11T22:55:00.638737+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9006,7 +8143,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811215+00:00",
-      "last_seen": "2026-10-11T22:43:14.811215+00:00",
+      "last_seen": "2026-10-11T22:55:00.638745+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9035,7 +8172,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:14.811223+00:00",
-      "last_seen": "2026-10-11T22:43:14.811223+00:00",
+      "last_seen": "2026-10-11T22:55:00.638753+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9063,7 +8200,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619022+00:00",
-      "last_seen": "2026-10-11T22:43:16.619022+00:00",
+      "last_seen": "2026-10-11T22:55:02.272319+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9091,7 +8228,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619110+00:00",
-      "last_seen": "2026-10-11T22:43:16.619110+00:00",
+      "last_seen": "2026-10-11T22:55:02.272371+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9119,7 +8256,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619144+00:00",
-      "last_seen": "2026-10-11T22:43:16.619144+00:00",
+      "last_seen": "2026-10-11T22:55:02.272391+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9147,7 +8284,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619176+00:00",
-      "last_seen": "2026-10-11T22:43:16.619176+00:00",
+      "last_seen": "2026-10-11T22:55:02.272437+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9175,7 +8312,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619189+00:00",
-      "last_seen": "2026-10-11T22:43:16.619189+00:00",
+      "last_seen": "2026-10-11T22:55:02.272447+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9203,7 +8340,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619200+00:00",
-      "last_seen": "2026-10-11T22:43:16.619200+00:00",
+      "last_seen": "2026-10-11T22:55:02.272456+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9231,7 +8368,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619211+00:00",
-      "last_seen": "2026-10-11T22:43:16.619211+00:00",
+      "last_seen": "2026-10-11T22:55:02.272463+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9259,7 +8396,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:43:16.619221+00:00",
-      "last_seen": "2026-10-11T22:43:16.619221+00:00",
+      "last_seen": "2026-10-11T22:55:02.272471+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9267,267 +8404,6 @@
         {
           "name": "yt-rss:pewdiepie",
           "url": "https://www.youtube.com/watch?v=WtxPV8kwW1o"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "xiaomi-18-fold-how-does-this-happen",
-      "title": "Xiaomi 18 Fold: How Does This Happen?",
-      "summary": "MKBHD · published 2026-10-02. This is not an iPhone Duo. Xiaomi is at it again.\n\nThe desk pad! https://mkbhd.com/products/overlay-deskpad\n\nShoutout to dbrand for helping to source the phone from China.\n\nPlaylist of MKBHD Intro mus",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.182501+00:00",
-      "last_seen": "2026-10-11T22:43:18.182501+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=3iRUwVzRDZQ"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "dear-youtube",
-      "title": "Dear YouTube!",
-      "summary": "MKBHD · published 2026-09-30. Let's talk about this new video A/B testing feature\n\nThe Waveform podcast: https://youtu.be/UD9X5WxZ5nE?si=OxzE_7V_D1xiy_hD&t=3870\n\nMKBHD Merch: http://shop.MKBHD.com\n\nPlaylist of MKBHD Intro musi",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.184778+00:00",
-      "last_seen": "2026-10-11T22:43:18.184778+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=e1q-TuHdc4Y"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "nothing-headphone-1-pro-they-copied-the-wrong-thin",
-      "title": "Nothing Headphone 1 Pro: They Copied the Wrong Thing!",
-      "summary": "MKBHD · published 2026-09-29. Nothing decided to join the $400+ ANC headphone ranks, and made just one bizarre mistake...\n\nMKBHD Merch: http://shop.MKBHD.com\n\nPlaylist of MKBHD Intro music: https://goo.gl/B3AWV5\n\nHeadphones provid",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.184819+00:00",
-      "last_seen": "2026-10-11T22:43:18.184819+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=rayrrXot17M"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "xiaomi-18-pro-max-they-ve-done-it-again",
-      "title": "Xiaomi 18 Pro Max: They've Done It Again!",
-      "summary": "MKBHD · published 2026-09-24. If one-upping the iPhone was a sport, Xiaomi would be Lebron James.\n\nMKBHD Merch: http://shop.MKBHD.com\n\nPlaylist of MKBHD Intro music: https://goo.gl/B3AWV5\n\nPhone provided by Xiaomi for review.\n\n~\nh",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.184851+00:00",
-      "last_seen": "2026-10-11T22:43:18.184851+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=DkUuOr21v4s"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "the-apple-watch-has-a-problem",
-      "title": "The Apple Watch Has a Problem",
-      "summary": "MKBHD · published 2026-09-22. Apple Watch series 12 has a new \"Audio Intelligence\" feature, let's talk about it\n\nApple vs the AI Race: https://youtu.be/eWKY0OnPByg\n\nMKBHD Merch: http://shop.MKBHD.com\n\nApple wearable stud",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.184867+00:00",
-      "last_seen": "2026-10-11T22:43:18.184867+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=pOX1l1edBME"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "iphone-18-pro-review-all-about-that-chip",
-      "title": "iPhone 18 Pro Review: All About that Chip",
-      "summary": "MKBHD · published 2026-09-16. iPhone 18 Pro is basically an S year upgrade. And one part of it is really impressive.\n\nProtect your new iPhone 18 with a case or screen protector at http://dbrand.com/shop/iphone-18\n\nThe scale of a t",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.184876+00:00",
-      "last_seen": "2026-10-11T22:43:18.184876+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=ohqxP8EEumo"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "iphone-duo-what-we-missed",
-      "title": "iPhone Duo: What We Missed!",
-      "summary": "MKBHD · published 2026-09-12. A few new thoughts from the days after the Duo unveil.\n\nThat shirt: http://shop.MKBHD.com\n\nThe full iPhone Duo Hands-on: https://youtu.be/Od6M0AXpcxQ\n\nPlaylist of MKBHD Intro music: https://goo.gl/B3A",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:18.184885+00:00",
-      "last_seen": "2026-10-11T22:43:18.184885+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:MKBHD",
-          "url": "https://www.youtube.com/watch?v=6D__H_DO2Xk"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "oklahoma-s-identity-prevailed-over-texas",
-      "title": "Oklahoma's identity prevailed over Texas",
-      "summary": "ESPN · published 2026-10-11. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:24.678989+00:00",
-      "last_seen": "2026-10-11T22:43:24.678989+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/shorts/pWFF6HIQLQg"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "there-s-a-path-ucla-football-could-be-in-store-for",
-      "title": "‘There’s a PATH’: UCLA Football could be in store for a BIG season | SVPod",
-      "summary": "ESPN · published 2026-10-11. Scott Van Pelt and Stanford Steve react to the UCLA Bruins’ stunning win in Eugene over the Oregon Ducks. UCLA remained undefeated with the win and kept their great young season going.\nSVP breaks down",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:43:24.679046+00:00",
-      "last_seen": "2026-10-11T22:43:24.679046+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "yt-rss:ESPN",
-          "url": "https://www.youtube.com/watch?v=krfcjG5IfWg"
         }
       ],
       "angles": [],
@@ -9550,7 +8426,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:07.797273+00:00",
-      "last_seen": "2026-10-11T22:42:07.797273+00:00",
+      "last_seen": "2026-10-11T22:53:56.074410+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9580,7 +8456,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:07.797300+00:00",
-      "last_seen": "2026-10-11T22:42:07.797300+00:00",
+      "last_seen": "2026-10-11T22:53:56.074428+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9609,7 +8485,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:11.047243+00:00",
-      "last_seen": "2026-10-11T22:42:11.047243+00:00",
+      "last_seen": "2026-10-11T22:54:00.298721+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9638,7 +8514,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:11.047292+00:00",
-      "last_seen": "2026-10-11T22:42:11.047292+00:00",
+      "last_seen": "2026-10-11T22:54:00.298757+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9667,7 +8543,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:11.047326+00:00",
-      "last_seen": "2026-10-11T22:42:11.047326+00:00",
+      "last_seen": "2026-10-11T22:54:00.298816+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9675,35 +8551,6 @@
         {
           "name": "gnews-q:movies",
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNYzVHVFdFMzBjOWtBaTFmNlZ2QnNCUUxpVDFiTzVFSklTeUxPNlowc1Q1MHFGbHVSTDRvTlB2Zjc3dzgwZi1PeWViYmFLLTVud2d2NGVGWThHUkFNOGNZcnhhZzJBSlB5VTlKYUhoRUJrNG1ndjJPelF1a1FDdFA3TlZxZng2SkgxSzQ0LWNOVUFWSDFfMjN3aS1hM2dLcHM3U0c2cGlOMm5MQ19WQlVjZHhHQUtaYmtuMnFRU0pBbkl3TnNQcVpoMEJoYnFqMUk5Y1JZ?oc=5"
-        }
-      ],
-      "angles": [],
-      "hooks": [],
-      "who_to_watch": [],
-      "guide_links": []
-    },
-    {
-      "id": "new-music-friday-release-radar-for-october-9-2026-",
-      "title": "New Music Friday release radar for October 9, 2026: top albums, song releases",
-      "summary": "DraftKings Network · Thu, 08 Oct 2026 16:49:41 GMT",
-      "category": "music",
-      "platforms": [
-        "tiktok",
-        "youtube"
-      ],
-      "hashtags": [],
-      "velocity": 45,
-      "saturation": "low",
-      "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:14.156941+00:00",
-      "last_seen": "2026-10-11T22:42:14.156941+00:00",
-      "seeded": false,
-      "stale": false,
-      "needs_angles": true,
-      "sources": [
-        {
-          "name": "gnews-q:new music",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLUNja2Q3dFN4SDRSLURNNWJycEJrYzNMSXpkR0FDRmNnc21MaEMwd2NpakQ3WUVRLTlrM2RfX2F2cThnRThmTjdIaW11V2dxSG9NMEhWZlVvRDBtanlHUGlGQXJUS21BbkJpRWRvUzN0RlJXMnBNZF9vMUNFdnRRTjhXQkludVNsMW83SlpQd1lxRDAtdFJMYTREMlRkYTRGaENPNVI2dTZ2a2NQMGtxVktERkI3NkhnNE9z?oc=5"
         }
       ],
       "angles": [],
@@ -9725,7 +8572,7 @@
       "saturation": "low",
       "opportunity_score": 45,
       "first_seen": "2026-10-11T22:42:17.436276+00:00",
-      "last_seen": "2026-10-11T22:42:17.436276+00:00",
+      "last_seen": "2026-10-11T22:54:08.840441+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
@@ -9741,26 +8588,26 @@
       "guide_links": []
     },
     {
-      "id": "youtube-wtf-is-this",
-      "title": "YouTube wtf is this...",
-      "summary": "u//u/sonicguylol · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "pachuca-necaxa",
+      "title": "pachuca - necaxa",
+      "summary": "~2000+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.226859+00:00",
-      "last_seen": "2026-10-11T22:42:30.226859+00:00",
+      "first_seen": "2026-10-11T22:53:25.069307+00:00",
+      "last_seen": "2026-10-11T22:53:25.069307+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3b2aj/youtube_wtf_is_this/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9769,26 +8616,26 @@
       "guide_links": []
     },
     {
-      "id": "this-japanese-tutorial-on-how-to-take-off-a-wetsui",
-      "title": "This Japanese tutorial on how to take off a wetsuit has 10 million views. Was everyone in Japan suddenly interested in surfing?",
-      "summary": "u//u/ryanyork92 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "columbus-day-2026",
+      "title": "columbus day 2026",
+      "summary": "~5000+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.226954+00:00",
-      "last_seen": "2026-10-11T22:42:30.226954+00:00",
+      "first_seen": "2026-10-11T22:53:25.069333+00:00",
+      "last_seen": "2026-10-11T22:53:25.069333+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x39hzn/this_japanese_tutorial_on_how_to_take_off_a/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9797,26 +8644,26 @@
       "guide_links": []
     },
     {
-      "id": "is-youtube-getting-vibe-coded",
-      "title": "Is YouTube getting vibe-coded?",
-      "summary": "u//u/Demon_Flower · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "hurricanes-vs-flyers",
+      "title": "hurricanes vs flyers",
+      "summary": "~2000+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.226977+00:00",
-      "last_seen": "2026-10-11T22:42:30.226977+00:00",
+      "first_seen": "2026-10-11T22:53:25.069351+00:00",
+      "last_seen": "2026-10-11T22:53:25.069351+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3ir6f/is_youtube_getting_vibecoded/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9825,26 +8672,26 @@
       "guide_links": []
     },
     {
-      "id": "the-algorithm-is-beyond-bad-its-utterly-awful",
-      "title": "The Algorithm is BEYOND Bad.. its utterly AWFUL!!",
-      "summary": "u//u/Terrible_General_685 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "san-luis-santos",
+      "title": "san luis - santos",
+      "summary": "~200+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.226995+00:00",
-      "last_seen": "2026-10-11T22:42:30.226995+00:00",
+      "first_seen": "2026-10-11T22:53:25.069367+00:00",
+      "last_seen": "2026-10-11T22:53:25.069367+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x337sy/the_algorithm_is_beyond_bad_its_utterly_awful/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9853,26 +8700,26 @@
       "guide_links": []
     },
     {
-      "id": "why-youtube-why",
-      "title": "Why Youtube why",
-      "summary": "u//u/ExpensiveCoat8912 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "denver",
+      "title": "denver",
+      "summary": "~500+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227010+00:00",
-      "last_seen": "2026-10-11T22:42:30.227010+00:00",
+      "first_seen": "2026-10-11T22:53:25.069384+00:00",
+      "last_seen": "2026-10-11T22:53:25.069384+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x39haf/why_youtube_why/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9881,26 +8728,26 @@
       "guide_links": []
     },
     {
-      "id": "what-the-fuck",
-      "title": "What the fuck",
-      "summary": "u//u/Pie_duck69 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "seahawks",
+      "title": "seahawks",
+      "summary": "~50000+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227025+00:00",
-      "last_seen": "2026-10-11T22:42:30.227025+00:00",
+      "first_seen": "2026-10-11T22:53:25.069400+00:00",
+      "last_seen": "2026-10-11T22:53:25.069400+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x31afa/what_the_fuck/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9909,26 +8756,26 @@
       "guide_links": []
     },
     {
-      "id": "why-are-youtube-ads-so-fucking-obnoxious",
-      "title": "Why are YouTube ads...so...fucking....OBNOXIOUS",
-      "summary": "u//u/TheDunnaMan · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "nascar-standings",
+      "title": "nascar standings",
+      "summary": "~2000+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227039+00:00",
-      "last_seen": "2026-10-11T22:42:30.227039+00:00",
+      "first_seen": "2026-10-11T22:53:25.069416+00:00",
+      "last_seen": "2026-10-11T22:53:25.069416+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3447h/why_are_youtube_adssofuckingobnoxious/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9937,26 +8784,26 @@
       "guide_links": []
     },
     {
-      "id": "i-hate-glider-guy-this-is-why-you-should-too",
-      "title": "i HATE glider guy. this is why you should too.",
-      "summary": "u//u/RaceKnown4231 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "keith-abney-ii",
+      "title": "keith abney ii",
+      "summary": "~200+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227056+00:00",
-      "last_seen": "2026-10-11T22:42:30.227056+00:00",
+      "first_seen": "2026-10-11T22:53:25.069431+00:00",
+      "last_seen": "2026-10-11T22:53:25.069431+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3eezp/i_hate_glider_guy_this_is_why_you_should_too/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9965,26 +8812,26 @@
       "guide_links": []
     },
     {
-      "id": "is-anyone-seeing-a-rise-in-political-ads-on-youtub",
-      "title": "is anyone seeing a rise in political ads on youtube?",
-      "summary": "u//u/Mega_octodad · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "dylan-garand",
+      "title": "dylan garand",
+      "summary": "~500+ searches.",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "google"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227074+00:00",
-      "last_seen": "2026-10-11T22:42:30.227074+00:00",
+      "first_seen": "2026-10-11T22:53:25.069446+00:00",
+      "last_seen": "2026-10-11T22:53:25.069446+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3jofg/is_anyone_seeing_a_rise_in_political_ads_on/"
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
         }
       ],
       "angles": [],
@@ -9993,26 +8840,27 @@
       "guide_links": []
     },
     {
-      "id": "why-is-there-a-gif",
-      "title": "Why is there a gif",
-      "summary": "u//u/wyattmadnessfan · r/YouTube · 2026-10-11",
-      "category": "entertainment",
+      "id": "saudi-arabia-s-riyadh-airport-hit-by-second-houthi",
+      "title": "Saudi Arabia's Riyadh airport hit by second Houthi strike in two days",
+      "summary": "BBC · Sun, 11 Oct 2026 21:30:11 GMT",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "youtube",
+        "x"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227089+00:00",
-      "last_seen": "2026-10-11T22:42:30.227089+00:00",
+      "first_seen": "2026-10-11T22:53:27.549009+00:00",
+      "last_seen": "2026-10-11T22:53:42.758171+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3lhzc/why_is_there_a_gif/"
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pTXNOa29VTU9DTUM2MFZOZko1TUs0cWRiOE1fUTIyYUUzcS1oTjNsLS1NMnhld2xFc1E3Y1Jac3VqOXEwUnRxTkpmNXF1dzM3WDlHTnlXVFh5M0k?oc=5"
         }
       ],
       "angles": [],
@@ -10021,26 +8869,27 @@
       "guide_links": []
     },
     {
-      "id": "how-does-one-manage-to-do-this",
-      "title": "How does one manage to do this",
-      "summary": "u//u/Th3Unh1ng3dy0yl1t3 · r/YouTube · 2026-10-10",
-      "category": "entertainment",
+      "id": "abdul-el-sayed-says-democrats-must-win-by-massive-",
+      "title": "Abdul El-Sayed says Democrats must ‘win by massive numbers’ to fend off GOP election denial",
+      "summary": "NBC News · Sun, 11 Oct 2026 13:00:40 GMT",
+      "category": "news",
       "platforms": [
-        "youtube"
+        "youtube",
+        "x"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227103+00:00",
-      "last_seen": "2026-10-11T22:42:30.227103+00:00",
+      "first_seen": "2026-10-11T22:53:27.549141+00:00",
+      "last_seen": "2026-10-11T22:53:42.758295+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x2p0d1/how_does_one_manage_to_do_this/"
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTkVxbTVEQ21rOTE1TkRBWnF3RFY2Z3A0U085M3ZRUTRvNTVqSENkWDZXQ1dDVGdkX21NZk9ESmdaY3FybEJXVTZDQWZRbVZHSThVLS1pQ0tUbWlUc0FMOU80RmdOU1dkTV91a2xSSHRjdS1pZWZTY2NwT1J3dlowZDlrQTFlOW9kNHdwNDVKckVmSmp5aXlQc2dDS3I3MXFNSFk3a0VBVEg?oc=5"
         }
       ],
       "angles": [],
@@ -10049,26 +8898,1188 @@
       "guide_links": []
     },
     {
-      "id": "yeah-gif-comments-are-funny-but-what-about-several",
-      "title": "Yeah, gif comments are funny, but what about several-minute-long unskippable ads?",
-      "summary": "u//u/BlackNig_ga · r/YouTube · 2026-10-11",
+      "id": "amelia-earhart-expedition-team-heads-to-island-of-",
+      "title": "Amelia Earhart expedition team heads to island of huge, hunting crabs",
+      "summary": "USA Today · Sun, 11 Oct 2026 10:00:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:27.549179+00:00",
+      "last_seen": "2026-10-11T22:53:42.758333+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdThhTHVUb0Q0ZklFSVYzeGJXRGxyY2FFVkx6LVBMVENJdldKWE9tZUc1Wi1MdVliTkhreXl1c2picl93bnhtQkt1Qy12bDlZNEJ1UE9qbVhBWXRtczhxci1uZTlCN1JMMm1uWUp5dlBxT2VDYzBUNTh6MnJVRnBma05WbGY0a2JLVHpUSEdxSFJBZjVDcDBvTTdTOERFS3MtZHR3LS1EYmg5aUZlWTBpY18zMzduZGlh?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "what-to-know-about-pope-leo-s-lung-surgery-for-an-",
+      "title": "What to know about Pope Leo’s lung surgery for an early-stage nodule",
+      "summary": "NBC News · Sun, 11 Oct 2026 16:47:18 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:27.549275+00:00",
+      "last_seen": "2026-10-11T22:53:27.549275+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQW16elhJbzIyeVV3LWVlWnprcEgzcHdnRmctOThCVXZKLWRHR0cyNEJ1Vi1Md0ZjTmtrRXA1RkJxa25LSXBSTnNwRkx5SkQ1ZDBCSXB6WlhIRkNpaWVwZ3EwLTY1NEpMd2Y2aW45MTk0QzlpQkxVVm9JVjlyVmZZN1lrUVFEaElndlVVWEpvWlhmZlBYcTNQMWVjcw?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "hurricane-simon-nears-mexico-with-155-mph-winds-an",
+      "title": "Hurricane Simon nears Mexico with 155 mph winds and flooding fears",
+      "summary": "NPR · Sun, 11 Oct 2026 12:10:54 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:27.549292+00:00",
+      "last_seen": "2026-10-11T22:53:27.549292+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWU9JQ0hsLS12cU9VMjlVR1h4M3phNFZ0WHluTndPVThON0RhdXJ5NDRuOXVycHYyczlhZE9qYVdlWktzU0xOdFRvQVFoLTk3VVFYNnZoTlpabDNqckJWRFRkVDV6OXFJSmloZlRlT05WYXc3QWp6dnlPaWVGV1V5ZTZ5UEs3RE1yQ3MyZ3JxakZ1elpRVHRNN1pLSU14Tzhwd0lUcg?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "man-dies-after-entering-tiger-habitat-at-british-z",
+      "title": "Man dies after entering tiger habitat at British zoo",
+      "summary": "USA Today · Sun, 11 Oct 2026 17:54:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:27.549310+00:00",
+      "last_seen": "2026-10-11T22:53:27.549310+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTXFCS1JwbXh2SFV6Y2k2SnJLVzBqUDZsa2V4YlRWdGJrOTJta3JUR1Y4TGk1V1kxX2NWcGFzYThmS1p5NEpOc0QwRlRwd3Q1ZjFIb21jVWtkWVprcFNEVWJ6d2RDVWdUN1hISTBPdzRWNFQ3UHZnOHlVZnI2T2xQRE5DYlktdFlYQnhQV0tXa2Uza0xuZll2ZzAwTWRsbDZmaHNFVkF1b3Y?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "uk-prime-minister-say-it-is-clear-russia-interfere",
+      "title": "UK prime minister say it is ‘clear’ Russia interfered in 2016 Brexit referendum",
+      "summary": "AP News · Sun, 11 Oct 2026 19:49:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:27.549329+00:00",
+      "last_seen": "2026-10-11T22:53:27.549329+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-top",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQXVCV01mX1Y3VmZHSzNEdmhpcFRSYVdCM2VVSEZCWDJCOXFpS3J2dkNldlpyWV9adHo2MHAwSml2RVlCdlhvQUE0MTdPNWxkTlpMTnlINjdmUXhSVGNocnZmMEtnTG8wM2VXMnR2N2tuREkwOV9YTUpBSE5aMnlaYjZCSmI1Y211NmluRU53NlJ4TWp4ZGpkM0Rn?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "technology-and-science-news-abc-news",
+      "title": "Technology and Science News - ABC News",
+      "summary": "Breaking News, Latest News and Videos · Fri, 09 Oct 2026 19:22:41 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:30.018733+00:00",
+      "last_seen": "2026-10-11T22:53:30.018733+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-technology",
+          "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1nNVJUeWZac09qQjV0emtENkdNODhfR1NRb24zZVFLU2JsYzQtaDVqTjNST2Q2aExqTENJY3dnSjlGZkU3?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "gwyneth-paltrow-officiates-star-studded-wedding-of",
+      "title": "Gwyneth Paltrow officiates star-studded wedding of Rob Lowe’s eldest son Matthew Lowe",
+      "summary": "Entertainment Weekly · Sun, 11 Oct 2026 18:48:03 GMT",
       "category": "entertainment",
       "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:33.146362+00:00",
+      "last_seen": "2026-10-11T22:53:33.146362+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-entertainment",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVjZ0OElfbzBDbXlEOWh4UElCRi1vd3JXWHdfby1sMnQ2Vks2X3VGNXRqbGZhaVp1MkZNX2VhU0tfOEtrOHBiaEVpNkd1UEhuWVF3ekhucFlHR3kwZGJRaHNwZjhrUm5Scks4U2tWZGlwQmFyYUlfSnp4R0JQYURyNml4dTNtdFN5MGk3Zg?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "college-football-winners-losers-in-week-6-ucla-s-t",
+      "title": "College football winners, losers in Week 6: UCLA's turnaround continues, while Texas stumbles",
+      "summary": "CBS Sports · Sun, 11 Oct 2026 04:12:11 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:36.665946+00:00",
+      "last_seen": "2026-10-11T22:53:36.665946+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-sports",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaER6SmlKZGg4dHhRTUIxaVlWcm9YSzJITFFjaGtYN1gyVktmVHl5aFhFMXNYcXVtZ25oN0o2Q1Ata3ppN0hUQUI4ZWlWNDVCUC1EU0tYTG10RUlYS1lSbTB3TVgzRXA0Xzhhdk9ic2lzQi01aTc2cGNIY28yQ0VrZUZvNlFlMzdkNy0tbWNkU0Q0Wm9sSHJteDV3b0stcnJ3Rzg1Vy1FNHUxME0?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "harold-fannin-jr-limited-to-single-reception",
+      "title": "Harold Fannin Jr. limited to single reception",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:09:30 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:36.665966+00:00",
+      "last_seen": "2026-10-11T22:53:36.665966+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-sports",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTUF2WHNtbV81aHAtT1MwYnJRMTJMOUYzWjloVTFCeXJhS1gxWXZxNjRxbThtUm02Q0tnUGU4RkxnXzFYWEozUFhkY2dfaXE1U2c0Um1RME9EaTJkNGxCdmtTc0p6MjZDSHowWDJ1dm5uaTJSeGViUzdRcTNuVjZYWmV3b1BleHc?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "will-titans-bench-cam-ward-after-embarrassing-texa",
+      "title": "Will Titans Bench Cam Ward After Embarrassing Texans Loss?",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:00:36 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:36.665983+00:00",
+      "last_seen": "2026-10-11T22:53:36.665983+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-sports",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTS1JQkRWdjRzRlgzU2lseVgxby1tR2NHWEctbDJRdU9CWkFhWDBCVU1MVlo4VFRtQU1TY2Mtdmh5UlowQlZiX25VZWZYNEtkMVNfY0VrZ3VuRm5JS1h4NUpPcGhnRGxJVFZ1TDRlLXVpRGdMd3pqTXdzYmYwZXFLYzd6bWVXZy1RaGhv?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "cleveland-guardians-pitching-was-simply-dominant-i",
+      "title": "Cleveland Guardians’ Pitching Was Simply Dominant in their ALDS Victory",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:10:15 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:36.666010+00:00",
+      "last_seen": "2026-10-11T22:53:36.666010+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-sports",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbURXOFhQOVhfNTVIMWFUNjFFLWFwUGhTbkU5cklCYWROMWFRNkFGMWlZRDdvMHVrSnVYdzVqUE12bURveWp3T25YNTFfSkY0NEQ3bENvZEtqZ3k5bklzLWMtZUNDTnY1SWd1Y2JURVEtVC12SHh6YklwZnFWOHBNRUxJT3lvU3hnMUVjSE4wZE94VlZFYmdHaw?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "vikings-touchdown-drought-isn-t-keeping-them-from-",
+      "title": "Vikings’ touchdown drought isn’t keeping them from winning",
+      "summary": "NBC Sports · Sun, 11 Oct 2026 14:26:25 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:36.666068+00:00",
+      "last_seen": "2026-10-11T22:53:36.666068+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-sports",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQ2tmczNJY3pXVlVWSGJEQl84aDJVOGlrOVdxQlA3RkJnM0p1d29XRTZOX2FrbFZEZ1ZQUnFYVVd6Mkx3VWVZRXVVdDBzQmVLaVRJTDhmeWttYjNRVnBMWUFjbWIzMFVWLTRFd2RDOTRCUU9uaWE4c0RENU5MaG1GaXRzVWtuRmdEUm94ZFhOSnNDUFhMTmNwY3hTVUtYWVNNSnNLdVVaaGo5TDR0elh6d0s5OGpyV3ZlNlE?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "woody-marks-posts-85-total-yards-in-week-5",
+      "title": "Woody Marks posts 85 total yards in Week 5",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 20:22:53 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:36.668217+00:00",
+      "last_seen": "2026-10-11T22:53:36.668217+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-sports",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMEZCcXlKVldFSEk1aEFSd18tYVJLVms2M2xqYlV6WXRMUS1TajFCcmt2WXF5ZThwckl6N0k1STR0akZ4M3FxOTg3UkZOUFI0TGZZLTJRVU1NUlNBZWFTaHpjM1oxSktMTW1KRS0zM3B5eVNTRExTYTh1eUpkTWNhUQ?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "sqlalchemy-2-1-0-released",
+      "title": "SQLAlchemy 2.1.0 Released",
+      "summary": "3 points · 0 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:35.751083+00:00",
+      "last_seen": "2026-10-11T22:54:35.751083+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "hackernews",
+          "url": "https://www.sqlalchemy.org/blog/2026/09/24/sqlalchemy-2.1.0-released/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "akhetonics-photonic-computing-1-000x-faster-cpus",
+      "title": "Akhetonics Photonic Computing: 1,000x Faster CPUs",
+      "summary": "52 points · 35 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:39.272413+00:00",
+      "last_seen": "2026-10-11T22:54:39.272413+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "hackernews",
+          "url": "https://medium.com/@timventura/akhetonics-photonic-computing-1-000x-faster-cpus-b9e91c470079"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "matthew-matpat-patrick-adapting-amanda-the-adventu",
+      "title": "Matthew “MatPat” Patrick Adapting ‘Amanda the Adventurer’ Video Game For Blumhouse",
+      "summary": "Deadline · Sat, 10 Oct 2026 00:16:00 GMT",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:53:56.074493+00:00",
+      "last_seen": "2026-10-11T22:53:56.074493+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-q:video games",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWC0zQUtad1JmSGNfZF9FU3lxYnVvNHl4MHRseEFtS0NNZ3NFVDZCcWlqendxQzU5ejVfNUFWTnpSQU1IOGkyZWR5ZkdfenlpTzMxWU9HOW1iYkUwUHhPSFhPcjB2R1c2WElTVjZUMTYzX1JNVDRzMHk3aUhPakxrUTRXVkZhTU1nUXJ5VjRGUlkxRVZtd0xfcEV5WFd3YlJTbHBVWVI1WQ?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "fans-choose-troye-sivan-s-she-s-the-best-as-this-w",
+      "title": "Fans Choose Troye Sivan’s ‘She’s the Best’ as This Week’s Favorite New Music",
+      "summary": "Billboard · Sun, 11 Oct 2026 22:42:38 GMT",
+      "category": "music",
+      "platforms": [
+        "tiktok",
         "youtube"
       ],
       "hashtags": [],
       "velocity": 45,
       "saturation": "low",
       "opportunity_score": 45,
-      "first_seen": "2026-10-11T22:42:30.227119+00:00",
-      "last_seen": "2026-10-11T22:42:30.227119+00:00",
+      "first_seen": "2026-10-11T22:54:04.617894+00:00",
+      "last_seen": "2026-10-11T22:54:04.617894+00:00",
       "seeded": false,
       "stale": false,
       "needs_angles": true,
       "sources": [
         {
-          "name": "reddit-rss:r/YouTube",
-          "url": "https://www.reddit.com/r/youtube/comments/1x3j52b/yeah_gif_comments_are_funny_but_what_about/"
+          "name": "gnews-q:new music",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdXJRWXR0UFU3WU12U2NxWlFIaXVLQ3lKc240Uk9Xek92dUVnY0t6X3hxTWk3cGV4d2ZESHlzY05FTXl5ZWtTdVZGLTBOY28yWGVCcnJQcVRlWDZKbHZ5RWp1NV9aN2xzbWZtZUdoNkdrNGdPU2pDY2tDbnE2SE81U3dSOHZrajMyUE9udTVZSDJKeVZZU0tyNFdVd3hSUTVhMFJHaldB?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "i-m-always-down-for-a-change-willow-smith-talks-ne",
+      "title": "\"I'm Always Down for a Change\": Willow Smith Talks New Music, Concert Glam, and Her Celestial Beauty Era",
+      "summary": "Who What Wear · Sat, 10 Oct 2026 11:00:00 GMT",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:04.618013+00:00",
+      "last_seen": "2026-10-11T22:54:04.618013+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "gnews-q:new music",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1CSUtuRk9jQ0pnX19tWVp3bVdwQ0VoY1hoU002QTVnZDBFMjgxYWRsak54WlQ4N19vcXZJWTFXbjEwQTd0YkxteDNGQkhqNEw5TUJUZTQ0T3lwUUxJbWlOSGNJSGR4SEZNelBsdmZVbm9ENGg1cEJtX0lpTQ?oc=5"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "breakfast-in-america-by-supertramp-the-rare-art-of",
+      "title": "Breakfast in America by Supertramp: The Rare Art of a Perfect Pop-Rock Album",
+      "summary": "u//u/Illustrious_Oil_3200 · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.712441+00:00",
+      "last_seen": "2026-10-11T22:54:16.712441+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x3l1e5/breakfast_in_america_by_supertramp_the_rare_art/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "phil-collin-s-appreciation-day-what-s-your-fav-son",
+      "title": "Phil Collin’s appreciation day… what’s your fav song of his or even Genesis?",
+      "summary": "u//u/Lazthedestroyer · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713586+00:00",
+      "last_seen": "2026-10-11T22:54:16.713586+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x3dffq/phil_collins_appreciation_day_whats_your_fav_song/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "50-cent-in-iraq-2004",
+      "title": "50 cent in Iraq 2004",
+      "summary": "u//u/iLatvian · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713728+00:00",
+      "last_seen": "2026-10-11T22:54:16.713728+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x2w8wd/50_cent_in_iraq_2004/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "taylor-swift-s-the-life-of-a-showgirl-the-encore-r",
+      "title": "Taylor Swift's The Life of a Showgirl: The Encore Ranks Dead Last Among 237 Albums Released in 2026 on Metacritic",
+      "summary": "u//u/no_longer_huhmann · r/Music · 2026-10-10",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713748+00:00",
+      "last_seen": "2026-10-11T22:54:16.713748+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x2pf43/taylor_swifts_the_life_of_a_showgirl_the_encore/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "local-h-bound-for-the-floor-grunge-1996",
+      "title": "Local H - Bound For the Floor [grunge] (1996)",
+      "summary": "u//u/ThrashMetallix · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713763+00:00",
+      "last_seen": "2026-10-11T22:54:16.713763+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x39epu/local_h_bound_for_the_floor_grunge_1996/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "olivia-rodrigo-pop",
+      "title": "Olivia Rodrigo pop",
+      "summary": "u//u/nivekreclems · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713785+00:00",
+      "last_seen": "2026-10-11T22:54:16.713785+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x32xqq/olivia_rodrigo_pop/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "sex-pistols-frank-carter-hits-out-at-male-concert-",
+      "title": "Sex Pistols' Frank Carter hits out at male concert-goer for invading women-only mosh pit",
+      "summary": "u//u/TheMirrorUS · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713864+00:00",
+      "last_seen": "2026-10-11T22:54:16.713864+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x34jfx/sex_pistols_frank_carter_hits_out_at_male/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "todd-huth-wrote-primus-early-guitar-parts-then-lef",
+      "title": "Todd Huth wrote Primus’ early guitar parts, then left them to Larry LaLonde",
+      "summary": "u//u/dalyllama35 · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713882+00:00",
+      "last_seen": "2026-10-11T22:54:16.713882+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x3eaxs/todd_huth_wrote_primus_early_guitar_parts_then/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "willie-nelson-yo-la-tengo-endorse-james-talarico",
+      "title": "Willie Nelson, Yo La Tengo Endorse James Talarico",
+      "summary": "u//u/FlaggFootball · r/Music · 2026-10-10",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713899+00:00",
+      "last_seen": "2026-10-11T22:54:16.713899+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x2ox74/willie_nelson_yo_la_tengo_endorse_james_talarico/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "lance-bass-says-nsync-got-35-a-day-at-height-of-90",
+      "title": "Lance Bass says NSYNC got $35 a day at height of ’90s fame: ‘After years of number one albums, sellout tours’",
+      "summary": "u//u/indig0sixalpha · r/Music · 2026-10-10",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713915+00:00",
+      "last_seen": "2026-10-11T22:54:16.713915+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x2lp9c/lance_bass_says_nsync_got_35_a_day_at_height_of/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "ozzy-osbourne-no-more-tears-rock",
+      "title": "Ozzy Osbourne - No More Tears [Rock]",
+      "summary": "u//u/Ok_Percentage8893 · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713931+00:00",
+      "last_seen": "2026-10-11T22:54:16.713931+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x3k6zc/ozzy_osbourne_no_more_tears_rock/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "on-this-day-50-years-ago-abba-released-the-album-a",
+      "title": "On this day 50 years ago, ABBA released the album Arrival featuring hits like ”Dancing Queen”, ”Money, Money, Money” and ”Knowing Me, Knowing You”.",
+      "summary": "u//u/Cosmos1985 · r/Music · 2026-10-11",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:16.713947+00:00",
+      "last_seen": "2026-10-11T22:54:16.713947+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1x3dnqz/on_this_day_50_years_ago_abba_released_the_album/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "ama-q-a-announcement-alex-gibney-monday-10-12-at-2",
+      "title": "AMA/Q&A Announcement - Alex Gibney - Monday 10/12 at 2 PM ET - Oscar-Winning Documentarian of 'Musk', 'Going Clear: Scientology & the Prison of Belief', 'Enron: The Smartest Guys i",
+      "summary": "u//u/BunyipPouch · r/movies · 2026-10-09",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.234993+00:00",
+      "last_seen": "2026-10-11T22:54:20.234993+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x1pcov/amaqa_announcement_alex_gibney_monday_1012_at_2/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "official-discussion-megathread-the-social-reckonin",
+      "title": "Official Discussion Megathread (The Social Reckoning / Other Mommy) plus throwbacks!",
+      "summary": "u//u/LiteraryBoner · r/movies · 2026-10-09",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235070+00:00",
+      "last_seen": "2026-10-11T22:54:20.235070+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x19nf1/official_discussion_megathread_the_social/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "weird-al-yankovic-reveals-a-sequel-to-his-biopic-w",
+      "title": "'Weird Al' Yankovic Reveals a Sequel to His Biopic ‘WEIRD’ is Written but is Struggling to Find a Studio; Daniel Radcliffe is Onboard to Return",
+      "summary": "u//u/MarvelsGrantMan136 · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235101+00:00",
+      "last_seen": "2026-10-11T22:54:20.235101+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x3jeen/weird_al_yankovic_reveals_a_sequel_to_his_biopic/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "musk-director-alex-gibney-confirms-universal-waver",
+      "title": "‘Musk’ Director Alex Gibney Confirms Universal Wavered in Planning Overseas Release, Says He Tried to Interview Elon Musk",
+      "summary": "u//u/yourfavchoom · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235121+00:00",
+      "last_seen": "2026-10-11T22:54:20.235121+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x3f09e/musk_director_alex_gibney_confirms_universal/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "just-watched-disclosure-day",
+      "title": "Just watched Disclosure Day",
+      "summary": "u//u/imeeme · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235137+00:00",
+      "last_seen": "2026-10-11T22:54:20.235137+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x3gqg0/just_watched_disclosure_day/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "master-and-commander-the-far-side-of-the-world-200",
+      "title": "Master and Commander: The Far Side of the World (2003) Directed by Peter Weir - \"Galápagos\"",
+      "summary": "u//u/WolfCine · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235167+00:00",
+      "last_seen": "2026-10-11T22:54:20.235167+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x344nf/master_and_commander_the_far_side_of_the_world/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "luca-guadagnino-s-artificial-review-thread",
+      "title": "Luca Guadagnino's 'Artificial' Review Thread",
+      "summary": "u//u/SanderSo47 · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235205+00:00",
+      "last_seen": "2026-10-11T22:54:20.235205+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x3dukm/luca_guadagninos_artificial_review_thread/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "godzilla-minus-zero-final-trailer",
+      "title": "GODZILLA MINUS ZERO | Final Trailer",
+      "summary": "u//u/MarvelsGrantMan136 · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235224+00:00",
+      "last_seen": "2026-10-11T22:54:20.235224+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x36gwk/godzilla_minus_zero_final_trailer/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "ama-q-a-announcement-noel-gugliemi-tuesday-10-13-a",
+      "title": "AMA/Q&A Announcement - Noel Gugliemi - Tuesday 10/13 at 3 PM ET - Actor in 'Training Day', 'The Fast and the Furious', 'Street Kings, 'Harsh Times', 'Time of Death', 'The Dark Knig",
+      "summary": "u//u/BunyipPouch · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235284+00:00",
+      "last_seen": "2026-10-11T22:54:20.235284+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x39w9u/amaqa_announcement_noel_gugliemi_tuesday_1013_at/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "the-ghost-and-the-darkness-at-30-revisiting-the-hi",
+      "title": "The Ghost and the Darkness at 30: Revisiting the Historical Adventure Thriller",
+      "summary": "u//u/JannTosh70 · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235300+00:00",
+      "last_seen": "2026-10-11T22:54:20.235300+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x3eb6w/the_ghost_and_the_darkness_at_30_revisiting_the/"
+        }
+      ],
+      "angles": [],
+      "hooks": [],
+      "who_to_watch": [],
+      "guide_links": []
+    },
+    {
+      "id": "keanu-reeves-hidari-looks-for-new-partner-after-u-",
+      "title": "Keanu Reeves’ ‘Hidari’ Looks for New Partner After U.S. Talks Stall",
+      "summary": "u//u/Task_Force-191 · r/movies · 2026-10-11",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [],
+      "velocity": 45,
+      "saturation": "low",
+      "opportunity_score": 45,
+      "first_seen": "2026-10-11T22:54:20.235316+00:00",
+      "last_seen": "2026-10-11T22:54:20.235316+00:00",
+      "seeded": false,
+      "stale": false,
+      "needs_angles": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1x34l38/keanu_reeves_hidari_looks_for_new_partner_after/"
         }
       ],
       "angles": [],
