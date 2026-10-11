@@ -3,7 +3,7 @@
     "title": "#SilentSunday",
     "url": "https://mastodon.social/tags/silentsunday",
     "source": "mastodon-trends",
-    "summary": "910 recent uses across the fediverse",
+    "summary": "916 recent uses across the fediverse",
     "hashtags": [
       "#SilentSunday"
     ],
@@ -12,7 +12,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949218+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838093+00:00"
   },
   {
     "title": "#FragrantPlaces",
@@ -27,13 +27,13 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949276+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838159+00:00"
   },
   {
     "title": "#nationalcomingoutday",
     "url": "https://mastodon.social/tags/nationalcomingoutday",
     "source": "mastodon-trends",
-    "summary": "37 recent uses across the fediverse",
+    "summary": "39 recent uses across the fediverse",
     "hashtags": [
       "#nationalcomingoutday"
     ],
@@ -42,13 +42,28 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949290+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838174+00:00"
+  },
+  {
+    "title": "#豊臣兄弟",
+    "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
+    "source": "mastodon-trends",
+    "summary": "242 recent uses across the fediverse",
+    "hashtags": [
+      "#豊臣兄弟"
+    ],
+    "category": "culture",
+    "platforms": [
+      "x",
+      "tiktok"
+    ],
+    "fetched_at": "2026-10-11T23:47:02.838187+00:00"
   },
   {
     "title": "#glucksmann",
     "url": "https://mastodon.social/tags/glucksmann",
     "source": "mastodon-trends",
-    "summary": "35 recent uses across the fediverse",
+    "summary": "36 recent uses across the fediverse",
     "hashtags": [
       "#glucksmann"
     ],
@@ -57,7 +72,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949299+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838196+00:00"
   },
   {
     "title": "#comingoutday",
@@ -72,13 +87,13 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949307+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838205+00:00"
   },
   {
     "title": "#nfl",
     "url": "https://mastodon.social/tags/nfl",
     "source": "mastodon-trends",
-    "summary": "951 recent uses across the fediverse",
+    "summary": "995 recent uses across the fediverse",
     "hashtags": [
       "#nfl"
     ],
@@ -87,7 +102,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949316+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838214+00:00"
   },
   {
     "title": "#comingout",
@@ -102,7 +117,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949323+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838222+00:00"
   },
   {
     "title": "#tatort",
@@ -117,13 +132,43 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949331+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838230+00:00"
+  },
+  {
+    "title": "#tusk",
+    "url": "https://mastodon.social/tags/tusk",
+    "source": "mastodon-trends",
+    "summary": "19 recent uses across the fediverse",
+    "hashtags": [
+      "#tusk"
+    ],
+    "category": "culture",
+    "platforms": [
+      "x",
+      "tiktok"
+    ],
+    "fetched_at": "2026-10-11T23:47:02.838237+00:00"
+  },
+  {
+    "title": "#rescue",
+    "url": "https://mastodon.social/tags/rescue",
+    "source": "mastodon-trends",
+    "summary": "60 recent uses across the fediverse",
+    "hashtags": [
+      "#rescue"
+    ],
+    "category": "culture",
+    "platforms": [
+      "x",
+      "tiktok"
+    ],
+    "fetched_at": "2026-10-11T23:47:02.838244+00:00"
   },
   {
     "title": "#jaguars",
     "url": "https://mastodon.social/tags/jaguars",
     "source": "mastodon-trends",
-    "summary": "64 recent uses across the fediverse",
+    "summary": "65 recent uses across the fediverse",
     "hashtags": [
       "#jaguars"
     ],
@@ -132,7 +177,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949338+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838447+00:00"
   },
   {
     "title": "#MyWeekCounted",
@@ -147,22 +192,22 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949345+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838457+00:00"
   },
   {
-    "title": "#rescue",
-    "url": "https://mastodon.social/tags/rescue",
+    "title": "#yandex",
+    "url": "https://mastodon.social/tags/yandex",
     "source": "mastodon-trends",
-    "summary": "58 recent uses across the fediverse",
+    "summary": "72 recent uses across the fediverse",
     "hashtags": [
-      "#rescue"
+      "#yandex"
     ],
     "category": "culture",
     "platforms": [
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949355+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838465+00:00"
   },
   {
     "title": "#livmci",
@@ -177,7 +222,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949363+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838604+00:00"
   },
   {
     "title": "#ListeningClub",
@@ -192,7 +237,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949371+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838615+00:00"
   },
   {
     "title": "#primaire",
@@ -207,28 +252,13 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949378+00:00"
-  },
-  {
-    "title": "#豊臣兄弟",
-    "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
-    "source": "mastodon-trends",
-    "summary": "240 recent uses across the fediverse",
-    "hashtags": [
-      "#豊臣兄弟"
-    ],
-    "category": "culture",
-    "platforms": [
-      "x",
-      "tiktok"
-    ],
-    "fetched_at": "2026-10-11T22:54:57.949390+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838623+00:00"
   },
   {
     "title": "#Caturday",
     "url": "https://mastodon.social/tags/caturday",
     "source": "mastodon-trends",
-    "summary": "749 recent uses across the fediverse",
+    "summary": "750 recent uses across the fediverse",
     "hashtags": [
       "#Caturday"
     ],
@@ -237,37 +267,7 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949398+00:00"
-  },
-  {
-    "title": "#tusk",
-    "url": "https://mastodon.social/tags/tusk",
-    "source": "mastodon-trends",
-    "summary": "16 recent uses across the fediverse",
-    "hashtags": [
-      "#tusk"
-    ],
-    "category": "culture",
-    "platforms": [
-      "x",
-      "tiktok"
-    ],
-    "fetched_at": "2026-10-11T22:54:57.949406+00:00"
-  },
-  {
-    "title": "#yandex",
-    "url": "https://mastodon.social/tags/yandex",
-    "source": "mastodon-trends",
-    "summary": "69 recent uses across the fediverse",
-    "hashtags": [
-      "#yandex"
-    ],
-    "category": "culture",
-    "platforms": [
-      "x",
-      "tiktok"
-    ],
-    "fetched_at": "2026-10-11T22:54:57.949413+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838631+00:00"
   },
   {
     "title": "#hochwasser",
@@ -282,13 +282,13 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949421+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838638+00:00"
   },
   {
     "title": "#lfc",
     "url": "https://mastodon.social/tags/lfc",
     "source": "mastodon-trends",
-    "summary": "228 recent uses across the fediverse",
+    "summary": "230 recent uses across the fediverse",
     "hashtags": [
       "#lfc"
     ],
@@ -297,6 +297,6 @@
       "x",
       "tiktok"
     ],
-    "fetched_at": "2026-10-11T22:54:57.949429+00:00"
+    "fetched_at": "2026-10-11T23:47:02.838646+00:00"
   }
 ]

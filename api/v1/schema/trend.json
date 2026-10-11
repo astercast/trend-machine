@@ -98,6 +98,12 @@
         "type": "string"
       }
     },
+    "format_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "guide_links": {
       "type": "array",
       "items": {

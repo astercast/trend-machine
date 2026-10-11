@@ -5,7 +5,7 @@
 set -u
 cd "$(dirname "$0")/.." || exit 1
 echo "=== refresh $(date -u +%FT%TZ) ==="
-for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_youtube fetch_youtube_rss fetch_x; do
+for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_youtube fetch_youtube_rss fetch_tiktok fetch_x; do
   python3 "pipeline/$f.py"
 done
 python3 pipeline/normalize.py

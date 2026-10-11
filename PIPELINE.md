@@ -27,6 +27,7 @@ Or use the included GitHub Actions workflow (`.github/workflows/refresh.yml`) �
 | `fetch_hn.py` | Hacker News top/best stories (public Firebase API) | No | Working |
 | `fetch_mastodon.py` | Mastodon fediverse trending hashtags | No | Working |
 | `fetch_youtube.py` | Invidious public API (`/api/v1/popular`, no key) → direct scrape fallback | No | Working via Invidious; set `YT_API_KEY` for the official Data API v3 path |
+| `fetch_tiktok.py` | **STUB — no reliable keyless source exists** (see "The TikTok lane" below) | N/A (wired in `refresh.sh`, logs a SKIP) | Stub; never fakes data |
 | `fetch_x.py` | X API v2 recent search | **Yes** (`X_BEARER_TOKEN`) | Full implementation; **skips silently with no key — X data is never faked** |
 
 Every fetcher writes `pipeline/out/<name>.json` and **never crashes the run** —
@@ -52,6 +53,49 @@ sources were live in each run via `pipeline/refresh.log`.
 1. Write `pipeline/fetch_<name>.py` emitting hits via `common.hit(...)`.
 2. Add it to the loop in `pipeline/refresh.sh`.
 3. Document its key requirements in the table above.
+
+## The TikTok lane (researched 2026-10-11 — wave 2)
+
+There is **no reliable keyless TikTok trend source**, verified by direct
+testing on 2026-10-11:
+
+- **TikTok Research API** (developers.tiktok.com): free, but access is
+  gated — non-profit academic affiliation + a formal research proposal
+  approved by TikTok's USDS division. An indie tracker doesn't qualify,
+  and granted data is contractually limited to the approved project.
+- **No official public trending endpoint exists.** TikTok's own hashtag
+  pages (`tiktok.com/tag/...`) are JS-rendered and pull data through signed
+  `www.tiktok.com/api/*` endpoints (msToken + signed params) not meant for
+  programmatic use — a server-side fetch returns no extractable content
+  (verified: page fetch returned nothing parseable).
+- **Scraping is off the table:** TikTok's Terms of Service bar automated
+  data collection without written approval. We don't scrape TikTok.
+- Third-party paid/keyed options (not wired): TrendsMCP (free key,
+  100 req/day), TikAPI.io (paid), Apify TikTok actors (paid, breakage-prone).
+
+`pipeline/fetch_tiktok.py` is a **stub** wired into `refresh.sh`: it logs a
+clear SKIP and emits nothing. When a vetted source appears, implement it
+there behind an env var (e.g. `TIKTOK_TRENDS_API_KEY`) following the
+`fetch_x.py` pattern. Until then the TikTok lane is covered by editorial
+seed topics + cross-platform corroboration (`r/tiktok` via the Reddit
+fetchers, TikTok hashtag trackers like Revid via seed research).
+**TikTok data is never faked.**
+
+## Velocity history + format detection (wave 2)
+
+- `normalize.py` snapshots every topic's `velocity` + `opportunity_score`
+  each run into `data/velocity_history.json` (hourly buckets, pruned past
+  14 days). Dossiers render an inline SVG sparkline from these snapshots,
+  honestly labeled "tracked since <date>" — with <2 snapshots the dossier
+  says so instead of drawing a fake line.
+- `normalize.py` also runs `detect_format()` (conservative regex signals:
+  `pov`, `challenge` (title/hashtags only), `sound`, `dance`, `meme`,
+  `duet`, `stitch`, `green-screen`, `template`, `trend`) and stores
+  `format_tags` on every topic; dossiers show a `format · <tag>` chip.
+  Category is never rewritten by this.
+- Dossiers have a "⧉ Remix this" button (`assets/js/remix-export.js`)
+  that copies angles + hook lines + hashtags as plain text (Clipboard API
+  with textarea fallback, keyboard accessible, copied-confirmation state).
 
 ## Scoring (`pipeline/normalize.py`)
 

@@ -50,6 +50,7 @@ def flat(t):
         "summary": (t.get("summary") or "")[:400],
         "category": t.get("category"),
         "platforms": t.get("platforms", []),
+        "format_tags": t.get("format_tags", []),
         "sources": [s.get("name") for s in srcs],
     }
 

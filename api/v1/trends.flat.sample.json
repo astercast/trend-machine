@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T22:55:14.647810+00:00",
+  "generated_at": "2026-10-11T23:47:17.251473+00:00",
   "sample": true,
   "source_count": 30,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
@@ -22,6 +22,9 @@
       "platforms": [
         "tiktok",
         "youtube"
+      ],
+      "format_tags": [
+        "meme"
       ],
       "sources": [
         "LatestLY"
@@ -46,6 +49,7 @@
         "tiktok",
         "x"
       ],
+      "format_tags": [],
       "sources": [
         "Game8"
       ]
@@ -67,6 +71,9 @@
       "category": "meme",
       "platforms": [
         "tiktok"
+      ],
+      "format_tags": [
+        "dance"
       ],
       "sources": [
         "Lightreel"
@@ -91,6 +98,7 @@
         "youtube",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "RedWaveFeed"
       ]
@@ -114,6 +122,7 @@
         "youtube",
         "x"
       ],
+      "format_tags": [],
       "sources": [
         "NewsWatchmen"
       ]
@@ -135,6 +144,7 @@
       "platforms": [
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "Revid"
       ]
@@ -158,6 +168,9 @@
         "instagram",
         "youtube"
       ],
+      "format_tags": [
+        "meme"
+      ],
       "sources": [
         "Face of Malawi"
       ]
@@ -179,6 +192,7 @@
       "platforms": [
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "SocialPilot"
       ]
@@ -202,6 +216,7 @@
         "tiktok",
         "x"
       ],
+      "format_tags": [],
       "sources": [
         "NewsWatchmen"
       ]
@@ -223,6 +238,7 @@
       "platforms": [
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "Revid"
       ]
@@ -245,6 +261,7 @@
       "platforms": [
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "Anijam"
       ]
@@ -268,6 +285,7 @@
         "youtube",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "PureXbox"
       ]
@@ -290,6 +308,7 @@
         "tiktok",
         "instagram"
       ],
+      "format_tags": [],
       "sources": [
         "NapoleonCat"
       ]
@@ -312,6 +331,7 @@
         "youtube",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "NewEngen"
       ]
@@ -336,6 +356,7 @@
         "twitch",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "Game8"
       ]
@@ -359,6 +380,7 @@
         "youtube",
         "twitch"
       ],
+      "format_tags": [],
       "sources": [
         "DLCompare"
       ]
@@ -382,6 +404,7 @@
         "tiktok",
         "youtube"
       ],
+      "format_tags": [],
       "sources": [
         "NewEngen"
       ]
@@ -404,6 +427,7 @@
         "tiktok",
         "instagram"
       ],
+      "format_tags": [],
       "sources": [
         "SocialBee"
       ]
@@ -426,6 +450,7 @@
         "youtube",
         "instagram"
       ],
+      "format_tags": [],
       "sources": [
         "Sacnilk"
       ]
@@ -448,6 +473,7 @@
         "tiktok",
         "youtube"
       ],
+      "format_tags": [],
       "sources": [
         "USA Today"
       ]
@@ -470,6 +496,7 @@
         "youtube",
         "x"
       ],
+      "format_tags": [],
       "sources": [
         "Sacnilk"
       ]
@@ -495,6 +522,7 @@
         "instagram",
         "youtube"
       ],
+      "format_tags": [],
       "sources": [
         "SocialPilot",
         "Anijam"
@@ -518,6 +546,7 @@
       "platforms": [
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "Anijam",
         "Virlo"
@@ -543,6 +572,7 @@
         "twitch",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "TrueAchievements",
         "CapeTimes"
@@ -567,6 +597,7 @@
         "youtube",
         "x"
       ],
+      "format_tags": [],
       "sources": [
         "SocialPilot",
         "NewEngen"
@@ -590,6 +621,7 @@
       "platforms": [
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "Anijam",
         "Virlo"
@@ -614,6 +646,7 @@
         "youtube",
         "twitch"
       ],
+      "format_tags": [],
       "sources": [
         "NEXTARCA",
         "TrueAchievements"
@@ -637,6 +670,7 @@
         "youtube",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "DLCompare",
         "Game8"
@@ -662,6 +696,7 @@
         "twitch",
         "tiktok"
       ],
+      "format_tags": [],
       "sources": [
         "DLCompare",
         "youtube-invidious"
@@ -685,6 +720,7 @@
         "youtube",
         "x"
       ],
+      "format_tags": [],
       "sources": [
         "NewsWatchmen",
         "gnews-top"

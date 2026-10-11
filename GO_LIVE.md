@@ -82,10 +82,16 @@ for consumer development only — never promote it to the live path.
 | X API v2 recent search (3 curated queries) | `pipeline/fetch_x.py` | `X_BEARER_TOKEN` — free tier works for low-volume search |
 | YouTube Data API v3 mostPopular | `pipeline/fetch_youtube.py` | `YT_API_KEY` — free 10k units/day |
 
-**NO FETCHER YET:** TikTok — official Research API requires institutional
-approval (not practical for an indie tracker); scraping = ToS risk. Until a
-proxy is wired, the TikTok lane is covered by editorial seed topics +
-cross-platform corroboration. Do NOT fake TikTok data.
+**TikTok lane:** `pipeline/fetch_tiktok.py` is an honest stub (wired into
+`refresh.sh`) — there is no reliable keyless TikTok trend source. The
+official Research API needs institutional approval (non-profit academic +
+approved proposal); TikTok's public tag pages are JS-rendered with signed
+APIs and return nothing to a server-side fetch (verified 2026-10-11); and
+TikTok's ToS bars unauthorized scraping, so we don't scrape TikTok. Full
+research in PIPELINE.md ("The TikTok lane"). The lane stays covered by
+editorial seed topics + cross-platform corroboration. Do NOT fake TikTok
+data — ever. When a vetted keyed source appears, implement it in the stub
+behind `TIKTOK_TRENDS_API_KEY`.
 
 **Wiring note (2026-10-11):** `fetch_youtube_rss`, `fetch_news_search`, and
 `fetch_reddit_rss` write `pipeline/out/*.json`, which `normalize.py` picks up
@@ -108,6 +114,7 @@ line in `pipeline/refresh.sh` (builder's file — their call).
 | HN fetcher | `pipeline/fetch_hn.py` | Hacker News Firebase API top+best stories, no key. |
 | Mastodon fetcher | `pipeline/fetch_mastodon.py` | mastodon.social trending hashtags, no key. |
 | Google Trends fetcher | `pipeline/fetch_gtrends.py` | `trends.google.com/trending/rss?geo=US`, no key. Probed 2026-10-11: `category=`/`hours=` params are accepted but don't change the item set — the base daily-trends RSS is the useful keyless endpoint. |
+| TikTok stub | `pipeline/fetch_tiktok.py` | No reliable keyless source exists (verified 2026-10-11 — see "TikTok lane" note above). Logs a SKIP, emits nothing. Keyed implementation goes here when one is vetted. Never fakes data. |
 | Aggregator | `pipeline/normalize.py` | Merges fetcher hits into `data/trends.json`: token-set Jaccard ≥0.55 dedup, corroborates seeded topics (refreshes `last_seen`), marks topics stale after 72h without corroboration, recomputes `velocity`/`opportunity_score`. |
 | Site builder | `scripts/build_site.py` | Renders `topics/*.html` dossiers, rich `api/v1/*`, `llms.txt`. Reads `GUIDE_BASE_URL` env (default `../creator-growth-empire/`). |
 | Contract publisher | `pipeline/aggregate.py` | Derives the flat consumer feed + JSONP twin + labeled sample from `data/trends.json`. Stale topics excluded from the live feed. |
