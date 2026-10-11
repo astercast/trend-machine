@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T22:15:05.237785+00:00",
+  "generated_at": "2026-10-11T22:43:32.409864+00:00",
   "sample": false,
   "source_count": 330,
   "trends": [
@@ -1156,27 +1156,6 @@
       ]
     },
     {
-      "id": "topic-2",
-      "title": "#豊臣兄弟",
-      "source": "mastodon-trends",
-      "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#豊臣兄弟"
-      ],
-      "detected_at": "2026-10-11T22:14:01.324420+00:00",
-      "summary": "240 recent uses across the fediverse",
-      "category": "culture",
-      "platforms": [
-        "x",
-        "tiktok"
-      ],
-      "sources": [
-        "mastodon-trends"
-      ]
-    },
-    {
       "id": "lagos-street-model-rachel-ojuromi-who-made-it-to-c",
       "title": "Lagos street model Rachel Ojuromi who made it to Chanel's Runway. #BBCNews",
       "source": "yt-rss:BBCNews",
@@ -1219,7 +1198,7 @@
       ]
     },
     {
-      "id": "topic-2-3",
+      "id": "topic-2-3-4-5",
       "title": "#豊臣兄弟",
       "source": "mastodon-trends",
       "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
@@ -1228,7 +1207,7 @@
       "hashtags": [
         "#豊臣兄弟"
       ],
-      "detected_at": "2026-10-11T22:14:01.324420+00:00",
+      "detected_at": "2026-10-11T22:43:12.712879+00:00",
       "summary": "240 recent uses across the fediverse",
       "category": "culture",
       "platforms": [
@@ -1237,89 +1216,6 @@
       ],
       "sources": [
         "mastodon-trends"
-      ]
-    },
-    {
-      "id": "topic",
-      "title": "#豊臣兄弟",
-      "source": "mastodon-trends",
-      "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#豊臣兄弟"
-      ],
-      "detected_at": "2026-10-11T22:14:01.324420+00:00",
-      "summary": "240 recent uses across the fediverse",
-      "category": "culture",
-      "platforms": [
-        "x",
-        "tiktok"
-      ],
-      "sources": [
-        "mastodon-trends"
-      ]
-    },
-    {
-      "id": "topic-2-3-4",
-      "title": "#豊臣兄弟",
-      "source": "mastodon-trends",
-      "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#豊臣兄弟"
-      ],
-      "detected_at": "2026-10-11T22:15:00.569421+00:00",
-      "summary": "240 recent uses across the fediverse",
-      "category": "culture",
-      "platforms": [
-        "x",
-        "tiktok"
-      ],
-      "sources": [
-        "mastodon-trends"
-      ]
-    },
-    {
-      "id": "box-office-the-social-reckoning-flops-with-5-5-mil",
-      "title": "Box Office: ‘The Social Reckoning’ Flops With $5.5 Million Debut, ‘Other Mommy’ Tops Box Office With $27.5 Million",
-      "source": "gnews-entertainment",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWm5PMk55QUlFa2JtWFNMSEhWVFZ2NXg3ZHp5OWJ3bnZiTFFPTk9zdG9FT0laekJfdGFTT3RQWkFpWXhHYTR5ZjR6WXFkOGl4YzRRY1R1eTZkRnlLX3pYVDUteGR6QUlrVURlX3IxSzU5REFNZ1dkZmY2Z0NhSW43Slg0c1lNLVB3TmdDOVRvMnM4OXV3bTBDN1FKbnJXX3A3NV9OMHF0bw?oc=5",
-      "velocity": 70,
-      "opportunity_score": 46,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:51.716230+00:00",
-      "summary": "Variety · Sun, 11 Oct 2026 15:14:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-entertainment",
-        "gnews-entertainment"
-      ]
-    },
-    {
-      "id": "musk-director-says-universal-wavered-in-planning-o",
-      "title": "'Musk' Director Says Universal Wavered in Planning Overseas Release",
-      "source": "gnews-entertainment",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSi10M083d1Z1dHh2M0RQNkRIYkhEc19rZmlHX09udXcyRnhZTDRsMWdPdEtfUHpxamFQLXRmQ3h1cFhTSkNfSktYZDhiZm83OGNMandISmtxR1NfRFZUejdjYUV5dTBocXFyc1Bfcjl6cXFiSkdhUHRZTWNLUUJHZ0xKdEhXYUgtbURPSE5nWm1yNXhsYlpfNlVJS1NSTjBnc0pZWFc5NXFldDhwYUE?oc=5",
-      "velocity": 70,
-      "opportunity_score": 46,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:51.716434+00:00",
-      "summary": "Variety · Sun, 11 Oct 2026 18:04:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "x",
-        "tiktok"
-      ],
-      "sources": [
-        "gnews-entertainment",
-        "reddit-rss:r/movies"
       ]
     },
     {
@@ -1341,116 +1237,6 @@
       "sources": [
         "yt-rss:IGN",
         "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "trevon-diggs",
-      "title": "trevon diggs",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:07:07.935989+00:00",
-      "summary": "~2000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "starlink",
-      "title": "starlink",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:07:07.936085+00:00",
-      "summary": "~5000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "george-holani",
-      "title": "george holani",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:07:07.936108+00:00",
-      "summary": "~2000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "iran-news",
-      "title": "iran news",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:07:07.936125+00:00",
-      "summary": "~2000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "amelia-earhart-expedition-team-heads-to-island-of-",
-      "title": "Amelia Earhart expedition team heads to island of huge, hunting crabs",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdThhTHVUb0Q0ZklFSVYzeGJXRGxyY2FFVkx6LVBMVENJdldKWE9tZUc1Wi1MdVliTkhreXl1c2picl93bnhtQkt1Qy12bDlZNEJ1UE9qbVhBWXRtczhxci1uZTlCN1JMMm1uWUp5dlBxT2VDYzBUNTh6MnJVRnBma05WbGY0a2JLVHpUSEdxSFJBZjVDcDBvTTdTOERFS3MtZHR3LS1EYmg5aUZlWTBpY18zMzduZGlh?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.248237+00:00",
-      "summary": "USA Today · Sun, 11 Oct 2026 10:00:00 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "abdul-el-sayed-says-democrats-must-win-by-massive-",
-      "title": "Abdul El-Sayed says Democrats must ‘win by massive numbers’ to fend off GOP election denial",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTkVxbTVEQ21rOTE1TkRBWnF3RFY2Z3A0U085M3ZRUTRvNTVqSENkWDZXQ1dDVGdkX21NZk9ESmdaY3FybEJXVTZDQWZRbVZHSThVLS1pQ0tUbWlUc0FMOU80RmdOU1dkTV91a2xSSHRjdS1pZWZTY2NwT1J3dlowZDlrQTFlOW9kNHdwNDVKckVmSmp5aXlQc2dDS3I3MXFNSFk3a0VBVEg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.248271+00:00",
-      "summary": "NBC News · Sun, 11 Oct 2026 13:00:40 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
       ]
     },
     {
@@ -1549,101 +1335,6 @@
       ]
     },
     {
-      "id": "what-to-know-about-pope-leo-s-lung-surgery-for-an-",
-      "title": "What to know about Pope Leo’s lung surgery for an early-stage nodule",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQW16elhJbzIyeVV3LWVlWnprcEgzcHdnRmctOThCVXZKLWRHR0cyNEJ1Vi1Md0ZjTmtrRXA1RkJxa25LSXBSTnNwRkx5SkQ1ZDBCSXB6WlhIRkNpaWVwZ3EwLTY1NEpMd2Y2aW45MTk0QzlpQkxVVm9JVjlyVmZZN1lrUVFEaElndlVVWEpvWlhmZlBYcTNQMWVjcw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.249799+00:00",
-      "summary": "NBC News · Sun, 11 Oct 2026 16:47:18 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "hurricane-simon-nears-mexico-with-155-mph-winds-an",
-      "title": "Hurricane Simon nears Mexico with 155 mph winds and flooding fears",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWU9JQ0hsLS12cU9VMjlVR1h4M3phNFZ0WHluTndPVThON0RhdXJ5NDRuOXVycHYyczlhZE9qYVdlWktzU0xOdFRvQVFoLTk3VVFYNnZoTlpabDNqckJWRFRkVDV6OXFJSmloZlRlT05WYXc3QWp6dnlPaWVGV1V5ZTZ5UEs3RE1yQ3MyZ3JxakZ1elpRVHRNN1pLSU14Tzhwd0lUcg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.249829+00:00",
-      "summary": "NPR · Sun, 11 Oct 2026 12:10:54 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "man-dies-after-entering-tiger-habitat-at-british-z",
-      "title": "Man dies after entering tiger habitat at British zoo",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTXFCS1JwbXh2SFV6Y2k2SnJLVzBqUDZsa2V4YlRWdGJrOTJta3JUR1Y4TGk1V1kxX2NWcGFzYThmS1p5NEpOc0QwRlRwd3Q1ZjFIb21jVWtkWVprcFNEVWJ6d2RDVWdUN1hISTBPdzRWNFQ3UHZnOHlVZnI2T2xQRE5DYlktdFlYQnhQV0tXa2Uza0xuZll2ZzAwTWRsbDZmaHNFVkF1b3Y?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.249848+00:00",
-      "summary": "USA Today · Sun, 11 Oct 2026 17:54:00 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "uk-prime-minister-say-it-is-clear-russia-interfere",
-      "title": "UK prime minister say it is ‘clear’ Russia interfered in 2016 Brexit referendum",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQXVCV01mX1Y3VmZHSzNEdmhpcFRSYVdCM2VVSEZCWDJCOXFpS3J2dkNldlpyWV9adHo2MHAwSml2RVlCdlhvQUE0MTdPNWxkTlpMTnlINjdmUXhSVGNocnZmMEtnTG8wM2VXMnR2N2tuREkwOV9YTUpBSE5aMnlaYjZCSmI1Y211NmluRU53NlJ4TWp4ZGpkM0Rn?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.249868+00:00",
-      "summary": "AP News · Sun, 11 Oct 2026 19:49:00 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "bond-yields-closely-track-diesel-prices-now-and-tr",
-      "title": "Bond yields closely track diesel prices now, and Trump's deal with Putin may be too little too late",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRUxVZWpGSjFIWGNIZVUxWGZaeHNlRHBOSjJRYUl6U2otcjZiNzNvUlBYVThsX0tUVjVxWVVzSjA2OElSM1lsYXNLZXkxNmlra2hmWDkteXlod0FnelhWUWtEckRtM1YzeWZ0MFlMYXBNNGZqOUJuc0haTzhkbUpRLTJJbkl5TUd4VzV0TW5vbnhEbDBVWXZTQ2xHLWJYWGF5MmVDLXUydHphdVVncFIydjdSd25rVWs?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.249896+00:00",
-      "summary": "Fortune · Sun, 11 Oct 2026 17:12:00 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
       "id": "holly-madison-weighs-in-on-jessica-biel-s-playboy-",
       "title": "Holly Madison Weighs in on Jessica Biel’s Playboy Movie After Crystal Harris Criticism",
       "source": "gnews-entertainment",
@@ -1710,25 +1401,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:10:28.725788+00:00",
       "summary": "94 points · 10 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "hackernews"
-      ]
-    },
-    {
-      "id": "do-you-have-pre-2012-onion-issues",
-      "title": "Do You Have Pre-2012 Onion Issues?",
-      "source": "hackernews",
-      "url": "https://theonion.com/archivehunt/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:10:30.014549+00:00",
-      "summary": "175 points · 18 comments",
       "category": "tech",
       "platforms": [
         "youtube",
@@ -1843,25 +1515,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:10:35.961451+00:00",
       "summary": "315 points · 268 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "hackernews"
-      ]
-    },
-    {
-      "id": "an-ai-agent-s-20-kalshi-account-with-an-exact-rewa",
-      "title": "An AI agent's $20 Kalshi account, with an exact reward model",
-      "source": "hackernews",
-      "url": "https://github.com/mirabilis-agent/lip-ledger",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:10:37.257951+00:00",
-      "summary": "3 points · 0 comments",
       "category": "tech",
       "platforms": [
         "youtube",
@@ -1995,25 +1648,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:10:46.443395+00:00",
       "summary": "130 points · 80 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "hackernews"
-      ]
-    },
-    {
-      "id": "akhetonics-photonic-computing-1-000x-faster-cpus",
-      "title": "Akhetonics Photonic Computing: 1,000x Faster CPUs",
-      "source": "hackernews",
-      "url": "https://medium.com/@timventura/akhetonics-photonic-computing-1-000x-faster-cpus-b9e91c470079",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:10:47.496735+00:00",
-      "summary": "49 points · 33 comments",
       "category": "tech",
       "platforms": [
         "youtube",
@@ -2480,114 +2114,6 @@
       ]
     },
     {
-      "id": "jameson-williams",
-      "title": "jameson williams",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:53.095083+00:00",
-      "summary": "~2000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "sam-laporta",
-      "title": "sam laporta",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:53.095155+00:00",
-      "summary": "~1000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "tax",
-      "title": "tax",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:53.095179+00:00",
-      "summary": "~1000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "zach-charbonnet",
-      "title": "zach charbonnet",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:53.095196+00:00",
-      "summary": "~500+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "gold",
-      "title": "gold",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:53.095214+00:00",
-      "summary": "~200+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
-      "id": "holani-seahawks",
-      "title": "holani seahawks",
-      "source": "google-trends",
-      "url": "https://trends.google.com/trending/rss?geo=US",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:53.095289+00:00",
-      "summary": "~1000+ searches.",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "sources": [
-        "google-trends"
-      ]
-    },
-    {
       "id": "saudi-arabia-vows-retaliation-against-houthis-afte",
       "title": "Saudi Arabia vows retaliation against Houthis after airport strike kills at least 12",
       "source": "gnews-top",
@@ -2597,25 +2123,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:12:56.513319+00:00",
       "summary": "The Washington Post · Sun, 11 Oct 2026 18:45:41 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "republicans-stay-bullish-on-texas-governor-s-race-",
-      "title": "Republicans stay bullish on Texas governor’s race, but two key groups present challenges",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNdUhHWTN0RmFEOXhER3VOTEhaSXJNc1dJRjVYb0pqR00zNVBYdERmOUdJNHFjYU1ldXd2cTFEd245Q1BnM2UxZlZlYmRBdWpjcjVZVUthdTdWN1hFUXlGTGVIc2prOUFZWW1LdmtHcmZFZTBCSVlEV1VKaDB0S3VDVGI4TUo1ano4QW5EYmhiMXY3RjhUc0VwcVRsdjlxdEVlalY5YS0wUXVSVmk3LWpWeHNMQURmY1BveHppX1pn?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:12:56.513489+00:00",
-      "summary": "NBC News · Sun, 11 Oct 2026 12:00:40 GMT",
       "category": "news",
       "platforms": [
         "youtube",
@@ -2816,25 +2323,6 @@
       ]
     },
     {
-      "id": "technology-and-science-news-abc-news",
-      "title": "Technology and Science News - ABC News",
-      "source": "gnews-technology",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1nNVJUeWZac09qQjV0emtENkdNODhfR1NRb24zZVFLU2JsYzQtaDVqTjNST2Q2aExqTENJY3dnSjlGZkU3?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:12:58.998771+00:00",
-      "summary": "Breaking News, Latest News and Videos · Fri, 09 Oct 2026 19:22:41 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-technology"
-      ]
-    },
-    {
       "id": "energy-technology-innovation-partnership-project",
       "title": "Energy Technology Innovation Partnership Project",
       "source": "gnews-technology",
@@ -2968,25 +2456,6 @@
       ]
     },
     {
-      "id": "mistr-national-prep-day-2026-full-celebrity-guest-",
-      "title": "MISTR National PrEP Day 2026: Full Celebrity Guest List Revealed |",
-      "source": "gnews-entertainment",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQS19rYS1iOEswOExvNGc3QUZSXzdFUVJwMFpNRkpycGhHTWUyUFRvWWFyVHFZY0FHVFFDb1RpdDJWQjlaNlVOOWtTRnEzTWZCZ1pLekF6dEVBT29WM3RSQjFETnBBaXRBRmlrR3BkVnI0dFJELVNmY3FPd1g2TDZMUmdjbFNYRXBmUkhpU3hwenRKOS11ZlJ3OA?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:01.967155+00:00",
-      "summary": "Just Jared · Sun, 11 Oct 2026 17:12:09 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-entertainment"
-      ]
-    },
-    {
       "id": "emma-slater-clarifies-odd-dwts-move-was-meant-to-a",
       "title": "Emma Slater Clarifies Odd ‘DWTS’ Move Was Meant to Avoid Carrie Ann Inaba ‘Docking a Point’",
       "source": "gnews-entertainment",
@@ -3053,25 +2522,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:13:01.967257+00:00",
       "summary": "Fox News · Sat, 10 Oct 2026 14:01:28 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-entertainment"
-      ]
-    },
-    {
-      "id": "ben-affleck-clears-up-gone-girl-shower-scene-rumor",
-      "title": "Ben Affleck clears up ‘Gone Girl’ shower scene rumor after years of speculation",
-      "source": "gnews-entertainment",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWmlCNmJNa1FmN1I1b0hSMkpqNF8ycHAzNzVsLTg0SVIyUGJuUktuaFRkWl9ua0Y1RE9HNlFTVFMzVmpxV2xaaXhmT1ZBeEJrZDhNOHdGMHU2VWYxbHVxQWZzR0VYdEM1QjdXdEdxX1JRbkxoNTlfNDFobTFxVVFRcG5abUxhTE0tS01kWkdBSTI1bU4yamt5OHlNUnItM2FrUFRuWXNn0gGrAUFVX3lxTE9BMldzRTZETUl3M29UaVlwSTNMUEhjb1RUYkJvaXg0YVlRNEJ2bDNMdWRzVWhUR1RrSGVNS3JGNExwTzJEWGprQlk0ZnQwd3lUbkY0VTBMUWZjOWtTUVRSWXNsREhlYTRZM1FkcmtVSFVxNmVnWGhQeU85aTd5Y2hVVkVyelI2eFdSVG1UMDNfRDNsQ1E2a0xOTzRHcWl1UVVXZWs5NHJRNU1fRQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:01.967279+00:00",
-      "summary": "Fox News · Sat, 10 Oct 2026 23:00:15 GMT",
       "category": "entertainment",
       "platforms": [
         "youtube",
@@ -3167,82 +2617,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:13:04.694229+00:00",
       "summary": "Yahoo Sports · Sun, 11 Oct 2026 03:58:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-sports"
-      ]
-    },
-    {
-      "id": "aaron-rodgers-surpasses-ben-roethlisberger-peyton-",
-      "title": "Aaron Rodgers surpasses Ben Roethlisberger, Peyton Manning in major achievements",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNN1pmRHh3SHdPZXRrekZQckJUeGxCaHlRYW5kX2R5VkNPNTJjX2wySEpUc0JMM2Y5bHFFNlFMZmY5LTE4QlNwWS1wUWNFMnZ4dUt4UXQ1cnlsb3k2Tm9QWURFWTJ0dnNocGVDeGFBQTZQd0o2RVByc0YwZ0Q4QXdnLWNOOEZxLTVjLWFSWF9IYWJwWHI1QVE?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:04.694296+00:00",
-      "summary": "Yahoo Sports · Sun, 11 Oct 2026 21:38:19 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-sports"
-      ]
-    },
-    {
-      "id": "rookie-david-bailey-gets-3-sacks-as-jets-defeat-br",
-      "title": "Rookie David Bailey gets 3 sacks as Jets defeat Browns",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQODFQQU44bENDblRkakVEVkNwRklucWZWN0EzTzN1a0NQU3RvT0NYSEotZXczb0hCSHhMRVdua1lLSlRYbS1MVl9YWWlyN21vLU11V29XRlowODN2eTZJYVRtLWNCOGVIZHBBRjByT2xNLXQzTEgtR3lqWUF0bmk5cA?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:04.694316+00:00",
-      "summary": "Yahoo Sports · Sun, 11 Oct 2026 21:38:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-sports"
-      ]
-    },
-    {
-      "id": "rams-welcome-back-aaron-donald-2-others-for-bills-",
-      "title": "Rams Welcome Back Aaron Donald, 2 Others for Bills Showdown",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOYVBCNklIQnp4bkxod01JUFpqSkR3VWV4ZEwxMTJCUWhFaW5HamRzbXN2T21xM0dfeW03dFNreFVjY0prRl9hM2EzRU9vLWQ4OEtBdmhoQUItVzk1bHlSSk82OEtteC1Cc0tDUDlXdU52S2NGbzc2SDhCMW01T1FlVjVGaTZHdw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:04.694333+00:00",
-      "summary": "Yahoo Sports · Sun, 11 Oct 2026 21:45:29 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-sports"
-      ]
-    },
-    {
-      "id": "how-to-watch-49ers-vs-seahawks-tv-channel-live-str",
-      "title": "How to Watch 49ers vs. Seahawks: TV Channel, Live Stream, Time",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQcG14RjBOaEFnV1pjcmpycnJoQVNPZjExV211dHJ5WDJqVVNzWDVVSmcyX1JDYm9ka3VDQzBhbXpxRGlnaXg1Y29TZ1dmVWREdFFpSmwyRDdwWE1PSjIwNlpIbTk0b3J6QV9kMEpTOWJDa2NCX0dzUHR6b0JOTWpteHVENUlhS0ZqV3h1NTBVOHk4STlpT0pGYjVLRXlDZFFSZTRPZ1JPMWNxdGk3?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:04.694350+00:00",
-      "summary": "FOX Sports · Sun, 11 Oct 2026 12:36:08 GMT",
       "category": "sports",
       "platforms": [
         "youtube",
@@ -3405,44 +2779,6 @@
       ]
     },
     {
-      "id": "broncos-vs-chargers-live-score-october-11-2026",
-      "title": "Broncos vs. Chargers - Live Score - October 11, 2026",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZGFSbC0yRTBpalNvQmtjMWtQT0laSUNMdndvaDBLSXpQNnEyS0ViY1J6SEdXQTU4MnU4LWR0ZlJxVXR3bFRpLS1QenVJSjE4RWZCa0hDS2lMTWkyN0FFdnRZV3V2Q2ljLThkbm8wMUIyNV9WLUVrLVpIRW85TEFaX2dBdkthcHZSZ1NBMzNOUDg5eXIyR3gwb3c2a05ad1FEVk5wT2p2LUtkdWs?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:04.694544+00:00",
-      "summary": "FOX Sports · Sun, 11 Oct 2026 21:07:30 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-sports"
-      ]
-    },
-    {
-      "id": "bills-joe-brady-has-em-pa-thetic-ear-in-rams-sean-",
-      "title": "Bills' Joe Brady has em­pa­thetic ear in Rams' Sean McVay, who also got his coaching start in his 30s",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQNG4zOE1mTm9JQlBRRHpQbEkxTDFWRGlJMG13TC1QRW5TeWMtekU5azVnVTdXNFlVZGlwOFV3Q3lTNEM3dVVveGVJS2NZcmJwY0hKa3pvZVRJd3pDNzFhX1pnRlZXcGRpY1hndE15V0w0dlAzQnR2VklscEllWEtYN0ZOek1FZU9NcWpzTVZVd1hselo0aVU2cEMxa29RdGFlT1huYnFxNFVyNDY0NVZKODlQQ29jejhNQVMyXzFMamdUVksxVjhVSmh5d09YX0xPb05OLS1iSzF2NGZzb1JtYXRLNll6MU02UUNGNkhkRzg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:04.694565+00:00",
-      "summary": "Spectrum News · Sun, 11 Oct 2026 19:31:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-sports"
-      ]
-    },
-    {
       "id": "trump-says-anyone-who-does-not-refer-to-ai-as-supe",
       "title": "Trump says anyone who does not refer to AI as ‘super intelligence’ is ‘THE ENEMY'",
       "source": "gnews-ai",
@@ -3538,25 +2874,6 @@
       ]
     },
     {
-      "id": "meet-the-only-ai-stock-i-d-buy-over-nvidia-in-octo",
-      "title": "Meet the Only AI Stock I'd Buy Over Nvidia in October",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcXktQWhYX2JSSlF3S19OYi0xYUMwSzRPT21tLTVjM3ppeG9uYVpuTjBYOG5fcnl5UE5HNmJIeV8tRllpQlRsOV96Wm40VzRoUEdHdnZkNjc4SnZGdnVYNHljZ1N0U3EyMzVKclZNSXg0d0hDaHZxMURQYnhxM1AwVmhLZjM5V01VRUNTZHRyOUx2ajR1OTktNg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:07.482623+00:00",
-      "summary": "The Motley Fool · Sun, 11 Oct 2026 11:17:00 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-ai"
-      ]
-    },
-    {
       "id": "using-ai-for-just-10-minutes-erodes-your-ability-t",
       "title": "Using AI for just 10 minutes erodes your ability to persist at hard things",
       "source": "gnews-ai",
@@ -3642,25 +2959,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:13:07.482718+00:00",
       "summary": "The New York Times · Sat, 10 Oct 2026 12:00:03 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "gnews-ai"
-      ]
-    },
-    {
-      "id": "as-they-supposedly-battle-ai-slop-major-publishers",
-      "title": "As They Supposedly Battle AI Slop, Major Publishers Reportedly Cover Their Books in It",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUk9OSkk1ZjRRajltdGJ6b1dWbS1mRUd6Y054RUthRlVURFI0MnFlOUxfMXFUaTl5ZzUyUHBFMFRwcElRUlU3Tl9IQ1M5NjJtTjZvUGJFeThQMEstcVhxamp5RF9yYmx2Wi1vNTQxTGROd0RTazRtdUtXR0pNdHVySC1Iai14dG9rYUdhOGRMdnJaUl9XdXZkM2ZnamdUREk5TzB1VkhnSTZZaC1laFJXSUJvV05seVk?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:07.482735+00:00",
-      "summary": "Gizmodo · Sat, 10 Oct 2026 18:26:47 GMT",
       "category": "tech",
       "platforms": [
         "youtube",
@@ -4553,44 +3851,6 @@
       ]
     },
     {
-      "id": "fun-to-watch-will-stein-has-kentucky-football-roll",
-      "title": "‘FUN TO WATCH!’: Will Stein has Kentucky Football ROLLING | SVPod",
-      "source": "yt-rss:ESPN",
-      "url": "https://www.youtube.com/watch?v=gxCrdxhtuAY",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:12:35.068902+00:00",
-      "summary": "ESPN · published 2026-10-11. Scott Van Pelt and Stanford Steve react to the Kentucky Wildcats’ upset win over Lane Kiffin and the LSU Tigers in Lexington. SVP explains how Kentucky looked like the better team throughout, and the",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "yt-rss:ESPN"
-      ]
-    },
-    {
-      "id": "greeny-really-went-there",
-      "title": "Greeny really went there 😭",
-      "source": "yt-rss:ESPN",
-      "url": "https://www.youtube.com/shorts/xruFQqL-yrQ",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:12:35.068910+00:00",
-      "summary": "ESPN · published 2026-10-11. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "sources": [
-        "yt-rss:ESPN"
-      ]
-    },
-    {
       "id": "ayra-starr-heaven-baby-ft-zayn",
       "title": "Ayra Starr - Heaven Baby ft. ZAYN",
       "source": "yt-rss:VEVO",
@@ -5351,26 +4611,6 @@
       ]
     },
     {
-      "id": "matthew-matpat-patrick-adapting-amanda-the-adventu",
-      "title": "Matthew “MatPat” Patrick Adapting ‘Amanda the Adventurer’ Video Game For Blumhouse",
-      "source": "gnews-q:video games",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWC0zQUtad1JmSGNfZF9FU3lxYnVvNHl4MHRseEFtS0NNZ3NFVDZCcWlqendxQzU5ejVfNUFWTnpSQU1IOGkyZWR5ZkdfenlpTzMxWU9HOW1iYkUwUHhPSFhPcjB2R1c2WElTVjZUMTYzX1JNVDRzMHk3aUhPakxrUTRXVkZhTU1nUXJ5VjRGUlkxRVZtd0xfcEV5WFd3YlJTbHBVWVI1WQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:03.587999+00:00",
-      "summary": "Deadline · Sat, 10 Oct 2026 00:16:00 GMT",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch",
-        "tiktok"
-      ],
-      "sources": [
-        "gnews-q:video games"
-      ]
-    },
-    {
       "id": "disney-s-star-wars-strategy-is-working-out-much-be",
       "title": "Disney’s ‘Star Wars’ Strategy Is Working Out Much Better for Video Games",
       "source": "gnews-q:video games",
@@ -5380,26 +4620,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:13:03.593043+00:00",
       "summary": "Bloomberg.com · Fri, 09 Oct 2026 17:00:01 GMT",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch",
-        "tiktok"
-      ],
-      "sources": [
-        "gnews-q:video games"
-      ]
-    },
-    {
-      "id": "the-weirdest-video-games-were-hacks",
-      "title": "The Weirdest Video Games Were Hacks",
-      "source": "gnews-q:video games",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBqdUswdF8zQUF6QmsycjVjclMzTUpxU3RqYkJYNURkekkwdmNsZWgweG1TR1ByNHFlaHdFa2k0RlZHRlZ6NWlLRU5Jd1lxcXVxcUV6cDEtbkU5eUpiWFhDWlhJMm5uRlNodXgtSEZRNXZnVlRiWkdv?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:03.593096+00:00",
-      "summary": "Hackaday · Sat, 10 Oct 2026 14:00:00 GMT",
       "category": "gaming",
       "platforms": [
         "youtube",
@@ -5488,25 +4708,6 @@
       ]
     },
     {
-      "id": "what-to-watch-this-weekend-new-shows-and-movies-to",
-      "title": "What To Watch This Weekend: New Shows And Movies To Stream On Netflix, Hulu, Prime Video, Apple TV And More",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZjNBWlpjNUVmTUJXZ3Vjd3ZzakJXVHU3NFR4TUM5TGo5MHMyTTBMczBrQVQ0VTh1VTVHaEp4VnNyOHN4WU40eUFUclppSVoxa2VFdDVyOVJ0U0RXTjA5UnVUMHRpS3dITTVpRWdrSHhPMk01WU1WcHU1RkhKUmZnN2J3WEI2WVRNdWhWenZOa005SFluSDBlNHNManRwbzBfTXpPSmlQUWNYUFVIckxYdXFKU3c2RzRwZTZUNmE3Tk1DUTg4ejhjSGpyUzdMc3BSeHduSWlqcnVDM29LVDZpQ1gzTzZ4a2Y3?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:09.253616+00:00",
-      "summary": "Forbes · Sun, 11 Oct 2026 16:53:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "gnews-q:movies"
-      ]
-    },
-    {
       "id": "cineplexity-when-your-partner-doesn-t-like-the-sam",
       "title": "Cineplexity: When your partner doesn't like the same movies you do",
       "source": "gnews-q:movies",
@@ -5516,25 +4717,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:13:09.253634+00:00",
       "summary": "NPR · Sun, 11 Oct 2026 21:16:34 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "gnews-q:movies"
-      ]
-    },
-    {
-      "id": "the-social-reckoning-box-office-aaron-sorkin-faceb",
-      "title": "'The Social Reckoning' box office – Aaron Sorkin Facebook film flops",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZGt6d0wyblRER29kMldvQngxUzRFNmtlSzdMamNGS21CQ09FazRSRGcwTUxydkVtMnBXU080QXBueVA3QldmNlZqRE1vRFFrT2JwZWc2ckI1SGpuN1NRMHhaVDdQZV9yeHFROW15MzUyWHlIcGNWdUtuTU1uMzB2ZWF3anAwc2NZczR5VW5DcE9RSklaV3UwZlhDeTFJaVMtTmRoa2g0QTVPUGJxQVIwSXA3TWdMVnJKaEJsX1VoUnpyZ2pU?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:09.253653+00:00",
-      "summary": "USA Today · Sun, 11 Oct 2026 18:32:38 GMT",
       "category": "entertainment",
       "platforms": [
         "youtube",
@@ -5599,44 +4781,6 @@
       ],
       "sources": [
         "gnews-q:movies"
-      ]
-    },
-    {
-      "id": "10-times-red-dwarf-beat-other-tv-shows-and-movies-",
-      "title": "10 times 'Red Dwarf' beat other TV shows and movies to brilliant sci-fi ideas",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMGtVNjZTRUNrMy16aVVvdVBkVkdGYWtadUJVNjBtalJ6VWJGb0NqdHFZNkc1NW9jUmxpMlQ0QWVJQ2VwOVRHUDdHZjhqamQ4bjZOU3k5T05MdEpETVhKYUlwQlRPaW5WbFZnSDZJVWlEU1RoOVpsR1EyOVg5ZFN4NHJrQ0NXOEQyRWVTVWFncmEyZWVac0xnU2x1VFVxM2tqbmtHV1JEVXdxN0J2Tkl0dmdsbVVFZWpnNkg5SDFNcW83RWp0dldTMy13?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:09.253722+00:00",
-      "summary": "Space · Sat, 10 Oct 2026 14:00:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "gnews-q:movies"
-      ]
-    },
-    {
-      "id": "i-m-always-down-for-a-change-willow-smith-talks-ne",
-      "title": "\"I'm Always Down for a Change\": Willow Smith Talks New Music, Concert Glam, and Her Celestial Beauty Era",
-      "source": "gnews-q:new music",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1CSUtuRk9jQ0pnX19tWVp3bVdwQ0VoY1hoU002QTVnZDBFMjgxYWRsak54WlQ4N19vcXZJWTFXbjEwQTd0YkxteDNGQkhqNEw5TUJUZTQ0T3lwUUxJbWlOSGNJSGR4SEZNelBsdmZVbm9ENGg1cEJtX0lpTQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:14.613449+00:00",
-      "summary": "Who What Wear · Sat, 10 Oct 2026 11:00:00 GMT",
-      "category": "music",
-      "platforms": [
-        "tiktok",
-        "youtube"
-      ],
-      "sources": [
-        "gnews-q:new music"
       ]
     },
     {
@@ -5982,15 +5126,1054 @@
       ]
     },
     {
-      "id": "i-tried-an-8-tiktok-viral-hair-dye-it-gave-me-sun-",
-      "title": "I Tried An $8 TikTok-Viral Hair Dye—It Gave Me Sun-Kissed Highlights in 30 Minutes",
-      "source": "gnews-q:TikTok viral",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1QaFZQU0hTUUJBQXpvdkpiV1FLZDU1bmljOEF3aVp2U0ZLT3VMbm1tZW1hN2RTMTJPdEZwSVRQWjZjRmlQUFRJZVdNX3VOMHl6RFRBVUI1bDM3TGRTaFFIZ3d5U2ViVjJ1VnNOSGNDdHdBZDg?oc=5",
+      "id": "trump-says-ukraine-and-russia-have-agreed-energy-c",
+      "title": "Trump says Ukraine and Russia have agreed 'energy ceasefire'",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE04QUtQbDZLV05uX0dPcEwxc3poa1BGZGVYdmVjM2NzQ3pUMkowOVd6ZzBMTGRZNG9KVlhUNHNqR3o1SG5sel96Rnd3YVJQMjEwZ09zRnoxSFcxQ2s?oc=5",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:19.349318+00:00",
-      "summary": "Who What Wear · Fri, 18 Sep 2026 07:00:00 GMT",
+      "detected_at": "2026-10-11T22:41:46.337335+00:00",
+      "summary": "BBC · Sun, 11 Oct 2026 20:15:36 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-top"
+      ]
+    },
+    {
+      "id": "justice-department-investigating-major-tv-networks",
+      "title": "Justice Department investigating major TV networks over suspending pool coverage of Trump",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPSldFaXdvR2VuRkFmaWxnOThjM29peU5pcXZOV0ZRS2h0Z2lhT1FrMGNYYmM1bmV0aXRpLTYyczIxLTdpN05iNWx4TU5JdEI0SGRRZmk0YllhUkFQbXBubWtMbFpvRnZPdklMeTZpQjdLYk1wV0I1RWhtbWhjXzZsTzVKSmZZc2N4MDZfSDR0c1pFcTctbFBiZG1MNVRQQ3BXaVpnaWpaYlRqa3J1T2U2TVZoMzlmWUljWTdNNGdaU3JHN1kwQzAw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:46.337362+00:00",
+      "summary": "NBC News · Sun, 11 Oct 2026 14:37:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-top"
+      ]
+    },
+    {
+      "id": "hurricane-isaias-devastating-aftermath-comes-into-",
+      "title": "Hurricane Isaias’ devastating aftermath comes into focus in striking images",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbXJNaVZnS3F0M1R5N1ZmM1RTTGg5X19Jb252amRSTFItOFJPZXpTY0ZrR0NWN0VHcGZYdGl4X0NTMDZGSnNyLXZJR0RjVTR6Tm5od0NiS2VFczlkRUVNUjl5U0t1MGprUlNiVWNOa09BRmQ4VlFMR2VYWHF4TjBoQ3NuekJlM09KR1QxbllLQTliTGNNaGphWnV4WTN1MXpRMThSUWlZUdIBrAFBVV95cUxQU2Y1Y3M1OF9OZXpUdXR4aUlYclBIa24tYXJRZnBvZnhQTUM2VEZjM0JFN1VBUlRzSlZIQzkwX1hPWG0yNHU2cHUxV0lXWjhjN2JOd2hKUERkM0YwQnRGUzJWT3hkNVhKNzBkRDJyMFNhTjZITFFZb3ZlYnFjdldmZFJXa0ZsVHhCdUFaRlpid0V2MklNTTk0QmFDRmdFYVBNRGxrU25BMzlob0hv?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:46.337389+00:00",
+      "summary": "Fox News · Sun, 11 Oct 2026 18:08:32 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-top"
+      ]
+    },
+    {
+      "id": "republicans-want-abdul-el-sayed-to-be-the-main-cha",
+      "title": "Republicans want Abdul El-Sayed to be the main character of the midterms. He's happy to oblige",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb0VVc2t3RDJNUkJkWlBGejBNSlZNY1A0WGxobkFFaVRaZ0pQRTVyMzZmZWViWWx1YlBWR3BFUGF2T3gzbXFFTXJPVUJGd3ZKMlBZaEt1NDhBNW1SNlZtMFlUX1BZS3diTG5Vck1uNVNxbDBaZm1DYzdxc3J1QnA0YUtoR2x0UWdNYUZwM2tMTUl1YnBCSmpyZGdnNEtyYXczSktR?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:46.337412+00:00",
+      "summary": "AP News · Sun, 11 Oct 2026 11:25:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-top"
+      ]
+    },
+    {
+      "id": "uk-pm-burnham-says-russia-interfered-in-2016-brexi",
+      "title": "UK PM Burnham says Russia interfered in 2016 Brexit vote",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWHJJdG9NWWZzeFA5ZlZ4ZU4tMVlOTzc1aGxiUHFlYkJkbUtpVDl3YzBJYXVfX2VCWUpUVnZfRnRXS1VzSHc0UDhpWVJ6X2dwZU9LRlU1Y1ZSM2FTS0FlVXRFcEZBWUh0VE1rdUt5UUdjZGgySU0xdFZWNXM5d1BYSWRmeHVRYXJqLXV3UEFNeU9MTVhKWHVJQ2dUOXJiNUE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:46.337767+00:00",
+      "summary": "Reuters · Sun, 11 Oct 2026 16:57:34 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-top"
+      ]
+    },
+    {
+      "id": "exclusive-amazon-in-talks-to-buy-ai-startup-decart",
+      "title": "Exclusive | Amazon in Talks to Buy AI Startup Decart for Around $7 Billion",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOGxqNnJoTC12VnZiQm1ZTUhITmQ0RjZyTWhIRDYwcGQxZm9ZMW9tbVl2NU9BNk05LUlhQ3ZDbXZjdjNJNVZQRnhsU3ZveXFjRFBrRTlmMkJKc0JVREZiVlNZbVRKM3Z2bWd5XzVyMHFDdzk2MEJyaHpRRWRmWTlxQVg4c2l4UnZIM002Szhfem9kWHJUTlZZWktDb1NQU0JOb0xaV2hxNjE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:46.337784+00:00",
+      "summary": "WSJ · Sun, 11 Oct 2026 20:26:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-top"
+      ]
+    },
+    {
+      "id": "black-book-releases-2027-global-healthcare-technol",
+      "title": "Black Book Releases 2027 Global Healthcare Technology Outlook Covering 167 Countries and Markets",
+      "source": "gnews-technology",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSFl1Q1EzWEtQemlKZVU5LXQxMk80ZmJraEgzNnQxMVJKanE4b0FjdVcxQnVEQXNSeGJFYTRhTTJUTjBHM2xyRUZld0lQMTFGNW1hVEc1TTRUMVhpV0JQNmRWMnhHMjdqYnhsNEc1MkQzV3pqM0djcmQ2aGFEaWFXeXprbVk1LUR1MFIyWTRyLWZla0RwbE45OGdKckFaUEh4eFFRdlJqZw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:48.685669+00:00",
+      "summary": "Newswire.com · Sun, 11 Oct 2026 13:30:00 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-technology"
+      ]
+    },
+    {
+      "id": "brooklyn-store-responds-to-kelly-clarkson-reveals-",
+      "title": "Brooklyn Store Responds to Kelly Clarkson, Reveals Item Wasn't for Sale",
+      "source": "gnews-entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdkZaQlJaYUdnNjFmSjBJS0ZGWXpiRkZtMG50RnlzclFOT1FITmVsUFl2N3BJT3AtdEpzZGR5THM4VDdIczE2b3dHUDA5eHhqbWdxcG1nbnhkZmVFZjkwRDVveE1LRXBEOVFQTjhLQXBVdUw0Z21PNU1BVjNyZDdtOHpyWEdPNUFtazFBUTBvNDdXZ0hNVGR6U2Nxd1VWWlU2N2tCSVFhUGI3cFk?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:51.135255+00:00",
+      "summary": "Just Jared · Sun, 11 Oct 2026 20:14:19 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-entertainment"
+      ]
+    },
+    {
+      "id": "country-star-drew-baldridge-lifts-curtain-on-jelly",
+      "title": "Country star Drew Baldridge lifts curtain on Jelly Roll's 'wild' entourage, Luke Bryan's 'country boy' life",
+      "source": "gnews-entertainment",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNSTFETlJtS1pSVWl1T1Q4NzIwOG5YTjMtdkMxN2NlYWpkVXBDaWFLaHE1Z2ZyMzh4aUFYWEdqRWFaSGR3RHMxYTR0UGwwWFZaWnFKVFNPTkU0Y1JFcjAwMlRoNl9lY2FGdk5vR21hUk5jeWdpRkZ6M0N6NEZtT3RHTTZtYkV1WGF3ZWV1eUtVay1HRkV4YlFXMlppWURtNU9WalpOTW9FMVBKSWctZnZpNUdmdFMwSVdfb0RwSHRBdGgyd3U1TEhiOVNDYzFjWlNq0gHWAUFVX3lxTFBhUDFyWkM4aF90engwLV82QzliN29rTEd1UXpuWS1BQ2FRTmp4YzN0SEk2MVFHX2VlbGtwaG5QWlhEajdwemp3WHg1UmQ2QldpNk10V016ei0yNE9WU1phOS0zbE5UOHdoWnM5YlhIU2ZGMkYxaTVMSDZkNGdReFZFNy1FM3NNSUxVdTFsbHBXLThFR0pmLVdDRGRzVmM5RG1Xb1kzbVFfOEdmc0xQVU1rcDd5ZXRRdm1UVUpYeExjcFlCdDhiM0ZLTC0zQzhxTXpWMzI1T0E?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:51.135357+00:00",
+      "summary": "Fox News · Sat, 10 Oct 2026 16:00:37 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-entertainment"
+      ]
+    },
+    {
+      "id": "kelly-clarkson-slams-brooklyn-shop-after-employee-",
+      "title": "Kelly Clarkson Slams Brooklyn Shop After Employee Assumed She Couldn’t Afford It",
+      "source": "gnews-entertainment",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeXNTa2dLMVhGajdPaEUyZXdKcVdFZE5GR1lKaUh6ZkFZeWVKNmFiNjhIa1VPeHhUamRIMUs5bUlrdUFJX3lPeWxYbS0teXNIcDNYTi12WUhSS25ra19SVFFLUW1vUVc0MGNycjB5c2ZST0gwUVpEb3M3TUNfTjdJUXA5c3gxV0IzUm1EdFlCWWRGQnNlT2FtcG5YRFNyY2xpOTlSRjFIN3lYdEZMSXp6ZlA1cGJDQ0hmNVVqZm9Ubk10Qnh5?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:51.135445+00:00",
+      "summary": "News Radio 1190 KEX · Sun, 11 Oct 2026 16:14:00 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-entertainment"
+      ]
+    },
+    {
+      "id": "jameson-williams-ends-td-drought-on-8-yard-goff-pa",
+      "title": "Jameson Williams Ends TD Drought on 8-Yard Goff Pass",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLUMxdnA0MmdTeUhBdXR3MnVvZmlyanJ0UWdkT19PUnVIR2RaQlp4WThfeDhrckpVajBuRmM1LUViRktvcE1KMWlWY0dObDBaem9STGRrdGNWUjFNVlZKNmtfTlZGNTJWWk5ZV0EtV2JkLUM5QVlMTkNEYnVNLVc3ZWhuS016eHdy?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:53.461503+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:06:23 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-sports"
+      ]
+    },
+    {
+      "id": "cubs-predicted-to-trade-for-guardians-outfielder",
+      "title": "Cubs Predicted To Trade For Guardians Outfielder",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUjVvZ2Nfd3dhOFJDRGdwd25LWmQwVjBYZmJBTmxGcWU0QlRGbXhZS2ZBUklQMlFxYTZyTldTVUFCbDdoMWwwMHdoQjlkbkV6TjM3R3EyNS10dGZlZ3BUdDU5NmtSQ0EtYU82TWNLUGNDUFBxOFU1b2ExLWs0VGxYOHRpbjdRRFBfaDl2cTYtRjl1TTcy?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:53.461565+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:06:40 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-sports"
+      ]
+    },
+    {
+      "id": "brewers-murphy-breaks-down-misiorowski-facing-tari",
+      "title": "Brewers' Murphy breaks down Misiorowski facing Tarik Skubal",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRzhzaWtCQm9RSmgwVFpFOEdhTVVFQ3N3VGVUSTdTT0xXUXFuZ05wa2pIa3lONk5kTFotQzMxNzRSNzRsRFJWaW14VnJSTDZTM25RLUpBcEtQaWNGTVJ0bDBUMW1IT09ROHc3MnRYa01LdkpCZ29YakFxY0hvUkhFS1JQY2tTVzBfWjRsX0M0UUE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:53.461581+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:26:48 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-sports"
+      ]
+    },
+    {
+      "id": "programming-updates-espn-college-sports-weather-im",
+      "title": "Programming updates: ESPN college sports & weather impacts",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcjVDMHFFU0FzYzZSSnNUUlg1Y0VIRERja2RrNndJN1c3NEEzZVNlYzBIN2g3ZDhNS2trNkNCMnYtUTZtZVBySXl2Yjh4cTZYX0Y4LXQxZ2hsUGJWVDFONnBXNWo1eFgtUC1FdWVwNkNHTHhsdHRpOTNBSFIyTk1YSVJmZGI5cTE2dDE4UlBtZTBWTElsLXJ0ajBYNFU?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:53.461690+00:00",
+      "summary": "ESPN Press Room · Sat, 10 Oct 2026 14:37:52 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-sports"
+      ]
+    },
+    {
+      "id": "inside-the-mind-and-roots-of-luka-don-i-the-new-fa",
+      "title": "Inside the Mind (and Roots) of Luka Dončić, the New Face of the Lakers",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdGlNQ1ZmMlN5N2JhZXZPeTJrNlJ0VDMxWC1mRkR3bmVyQlZSckdBQ0ZFSmRPM0FtX045REQ1bTB6R1hDc1FpNVhYOFRFZ0E4ejd6RU9UTHZjVjVxb1NFcHlPQWl0N0hDRXVNNHdQU1FFX3NON1RaaUx0MG9jVTV6VlN4ZUxGRjhsSDF1MmNLS20ySkJGMGdIXw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:53.461722+00:00",
+      "summary": "Sports Illustrated · Thu, 08 Oct 2026 12:00:01 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-sports"
+      ]
+    },
+    {
+      "id": "skyy-moore-will-not-return-in-week-5",
+      "title": "Skyy Moore will not return in Week 5",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPY2U0SHRXbkFUQzhRbVFsVUd0aEV2ZEg5VjQySlNzUFp2Qk9aYWV6ek9UQTRIUHk4LTE1U3FNZUVlZ3ZXVlNuWC1Hd0J2ZHd1ejRheE5NR0JnYWNVeExlWTdrcWlZTjBFVWQ4UG1OMDN3TnFUdUFNMmhDeW9rUk92aQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:53.461809+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 18:52:58 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-sports"
+      ]
+    },
+    {
+      "id": "ukraine-has-dealt-a-big-blow-to-russia-s-ai-and-cl",
+      "title": "Ukraine Has Dealt a Big Blow to Russia’s AI and Cloud Infrastructure",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSEx6RDA1YURLbldpaWlrcU1FLXVhaGY0emQycW1Zc0EyZWZXTTdtYTZITjA5ZWtScHNMV2tDeWZHUU9sWXlFdjNabG1mQ1NjcFJSeTZidS1xc0QtR2Vkb2loNmVFUGxQRElIRTFnd0hQamQwX3pVZ2tFdmRnUTR5TFhwYU5KcEE3MmstZnE1TDRnN3JSeV8tUFhZSkFkQ0k?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:55.644145+00:00",
+      "summary": "Gizmodo · Sun, 11 Oct 2026 17:55:07 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-ai"
+      ]
+    },
+    {
+      "id": "artificial-intelligence-abc-news",
+      "title": "Artificial Intelligence - ABC News",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBHQWNlSHQzMUlJUTg1elY2MnlhM0JMRDkyUlMtYUdwNDFYYmF2cktZZzg2X3pDMVluRVhBS01LY0VnRVI0bnk2eElyWkczd0dLdktiOFMybWl5STktVHc?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:55.644197+00:00",
+      "summary": "Breaking News, Latest News and Videos · Fri, 09 Oct 2026 20:15:59 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-ai"
+      ]
+    },
+    {
+      "id": "cu-denver-opens-ai-hub-to-expand-hands-on-artifici",
+      "title": "CU Denver Opens AI Hub To Expand Hands-On Artificial Intelligence Education",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMGRMbThYbG9hak1DQ2RTb28yaGZRRzFGUC1KWjdvUmxYQ1NNbndBOUlZVFN0aFlWcWpFbUxOQUIzX1AyU2VoZm1KNkJmNDQ0b29mVnBWeTM0cXFiOTN5V0ZvOE14amQ2dHZJOTY4bDVLNGRjSE83WnlZMzhlYTYwWE5qNG04RXJWZGdKSVhEUXI5QzBoSC1TdmdRRdIBoAFBVV95cUxPOGVCWllZb2cwT2VWeW85LUtWdnE2RUM5THprMUZhQWVPQ3RzS0FOdlpGc3RoN1FrREpUZko4TUtXN2R2aEhyMTZMS0wxZWwxaFhwZ3hSNFI0TUYydVBtcHVWWVZEcURSU2xHdHN3UWdkcVgzNU9OMy1rdnJRWlNfUC1oaWx5TmNnME9YWU14SHhUOUxvaEJCZGRfTmxPUHBN?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:41:55.644215+00:00",
+      "summary": "Pulse 2.0 · Sun, 11 Oct 2026 19:21:24 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "gnews-ai"
+      ]
+    },
+    {
+      "id": "so-you-d-like-to-sell-your-print-issues-of-the-oni",
+      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+      "source": "hackernews",
+      "url": "https://theonion.com/archivehunt/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:36.481284+00:00",
+      "summary": "197 points · 22 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "id": "i-guess-i-m-using-webp-now",
+      "title": "I guess I'm using WebP now?",
+      "source": "hackernews",
+      "url": "https://anderegg.ca/2026/10/08/i-guess-im-using-webp-now",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:42.098932+00:00",
+      "summary": "51 points · 48 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "id": "500b-tokens-later-letting-ai-agents-decompile-a-fi",
+      "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
+      "source": "hackernews",
+      "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:45.068701+00:00",
+      "summary": "127 points · 95 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "id": "shape-sensing-sheet-digitally-tracks-its-own-movem",
+      "title": "Shape-sensing sheet digitally tracks its own movement as it bends and twists",
+      "source": "hackernews",
+      "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:51.146506+00:00",
+      "summary": "20 points · 0 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "id": "wtf-is-a-googlebook",
+      "title": "WTF is a Googlebook?",
+      "source": "youtube-invidious",
+      "url": "https://www.youtube.com/watch?v=_0G4OG39XjI",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.091799+00:00",
+      "summary": "5,562,173 views · Marques Brownlee",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "youtube-invidious"
+      ]
+    },
+    {
+      "id": "giving-10-000-to-a-random-subscriber",
+      "title": "Giving $10,000 To A Random Subscriber",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/shorts/aNI2jv7lBPQ",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811106+00:00",
+      "summary": "MrBeast · published 2026-10-09.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "eat-everything-in-a-grocery-store-win-1-000-000",
+      "title": "Eat Everything In A Grocery Store, Win $1,000,000",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/watch?v=plN7JMbadRg",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811163+00:00",
+      "summary": "MrBeast · published 2026-10-03. I trapped 4 strangers in an entire supermarket and the only way out is eating everything inside\n\nThe guys wore Fitbit Air to track their health and fitness throughout their entire time in the store. S",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "what-s-inside-my-briefcase",
+      "title": "What’s Inside My Briefcase?",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/shorts/CEJXqm2eiJ0",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811178+00:00",
+      "summary": "MrBeast · published 2026-09-27.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "i-built-a-city-to-save-kids-from-illegal-labor",
+      "title": "I Built A City To Save Kids From Illegal Labor",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/watch?v=v9QtM6qnG50",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811187+00:00",
+      "summary": "MrBeast · published 2026-09-19. Huge thanks to the 1 Billion Followers Summit, Mohammed Bin Rashid Global Initiatives, and the Varkey Foundation; the partners who believed in this vision and helped make this village a reality.\n\nClic",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "can-we-build-an-entire-village",
+      "title": "Can We Build an Entire Village?",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/shorts/T_SMf9j50uc",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811199+00:00",
+      "summary": "MrBeast · published 2026-09-18.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "i-survived-the-most-extreme-places-on-earth",
+      "title": "I Survived The Most Extreme Places On Earth",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/watch?v=gTKS8SAwUzE",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811208+00:00",
+      "summary": "MrBeast · published 2026-09-05. We raced through some of the most extreme places on Earth to see who could make it to the finish line first!\n\nGemini helped us plan, problem-solve, and take on challenges along the way. Try Gemini her",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "world-s-largest-tennis-match",
+      "title": "World’s Largest Tennis Match",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/shorts/5mU6SRS2Bxo",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811215+00:00",
+      "summary": "MrBeast · published 2026-08-23.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "escape-100-cops-win-500-000",
+      "title": "Escape 100 Cops, Win $500,000",
+      "source": "yt-rss:MrBeast",
+      "url": "https://www.youtube.com/watch?v=Qtl8lJwbd4g",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:14.811223+00:00",
+      "summary": "MrBeast · published 2026-08-22. is it possible to escape 100 cops?\n\nSponsored by Call of Duty: Mobile\nDownload it for FREE today:https://codmatvi.onelink.me/jYL7/91xx2x6j\n\nCOD Point Rush Event Details: COD Point Rush runs through Se",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "yt-rss:MrBeast"
+      ]
+    },
+    {
+      "id": "i-seriously-should-not-be-dropping-this",
+      "title": "I seriously should NOT be dropping this.",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=ODDJXGY_1kQ",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619022+00:00",
+      "summary": "pewdiepie · published 2026-10-01. Click this link [https://www.boot.dev?promo=PEWDIEPIE] to get 25% off your first payment for Boot.dev’s coding courses. Thank you Boot.Dev for Sponsoring! \n\nDownload Ajax here: https://data.pewdiepie.",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "thank-you-and-goodbye",
+      "title": "Thank you and Goodbye.",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=H8g4B5ZN7LM",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619110+00:00",
+      "summary": "pewdiepie · published 2026-09-22. Get exclusive NordVPN deal here ➵ https://NordVPN.com/pewdiepie It’s risk free with Nord’s 30 day money-back guarantee!✌ #ad \n\nUse code pewdiepie at https://incogni.com/pewdiepie to get an exclusive 6",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "earthquake-by-mount-fuji",
+      "title": "Earthquake by Mount Fuji",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=cNYSOHWbkJU",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619144+00:00",
+      "summary": "pewdiepie · published 2026-07-30. 🌎Get an exclusive 15% discount on Saily data plans! Download the Saily app or go to https://saily.com/pewdiepie Use code pewdiepie at checkout ⛵\n\n🌏 Upgrade your online protection with an all-in-one se",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "meet-our-newest-family-member",
+      "title": "Meet our newest family member",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=upZTN2INpDc",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619176+00:00",
+      "summary": "pewdiepie · published 2026-07-02. Make something cool with http://shopify.com/pewdiepie  #ad\n\n📰 Get \"The Kjellberg Mail\" (family newsletter w Mertz): https://the-kjellberg-mail.beehiiv.com/p/july\n\n\nGet exclusive NordVPN deal",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "i-tried-to-make-a-manga",
+      "title": "I tried to make a Manga",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=iRRpvuMG7AM",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619189+00:00",
+      "summary": "pewdiepie · published 2026-06-22. 🌎 Get an exclusive 15% discount on Saily data plans! Use code pewdiepie at checkout. Download Saily app or go to https://saily.com/pewdiepie ⛵\n\nUse code PEWDIEPIE at the link below to get an exclusive",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "my-trillion-dollar-project-is-finally-out",
+      "title": "MY trillion $Dollar Project is finally OUT!",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=rAzT5lcezPs",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619200+00:00",
+      "summary": "pewdiepie · published 2026-05-31. Use code PEWDIEPIE at the link below to get an exclusive 60% off an annual Incogni plan: https://incogni.com/pewdiepie\n⛵ Check out Odysseus: https://github.com/odysseus-dev/odysseus ⛵ \n\n\n\n🌎 Get an exc",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "ending-the-vlogs",
+      "title": "Ending the vlogs.",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=ea0X-DWVOZo",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619211+00:00",
+      "summary": "pewdiepie · published 2026-05-23. Get exclusive NordVPN deal here ➵ https://NordVPN.com/pewdiepie It’s risk free with Nord’s 30 day money-back guarantee!✌\n\n🌎 Get an exclusive 15% discount on Saily data plans! Use code pewdiepie at che",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "never-been-this-disappointed",
+      "title": "Never been this disappointed..",
+      "source": "yt-rss:pewdiepie",
+      "url": "https://www.youtube.com/watch?v=WtxPV8kwW1o",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:16.619221+00:00",
+      "summary": "pewdiepie · published 2026-04-23. Get exclusive NordVPN deal here ➵ https://NordVPN.com/pewdiepie It’s risk free with Nord’s 30 day money-back guarantee!✌\n\n🌎 Get an exclusive 15% discount on Saily data plans! Use code pewdiepie at che",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "sources": [
+        "yt-rss:pewdiepie"
+      ]
+    },
+    {
+      "id": "xiaomi-18-fold-how-does-this-happen",
+      "title": "Xiaomi 18 Fold: How Does This Happen?",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=3iRUwVzRDZQ",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.182501+00:00",
+      "summary": "MKBHD · published 2026-10-02. This is not an iPhone Duo. Xiaomi is at it again.\n\nThe desk pad! https://mkbhd.com/products/overlay-deskpad\n\nShoutout to dbrand for helping to source the phone from China.\n\nPlaylist of MKBHD Intro mus",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "dear-youtube",
+      "title": "Dear YouTube!",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=e1q-TuHdc4Y",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.184778+00:00",
+      "summary": "MKBHD · published 2026-09-30. Let's talk about this new video A/B testing feature\n\nThe Waveform podcast: https://youtu.be/UD9X5WxZ5nE?si=OxzE_7V_D1xiy_hD&t=3870\n\nMKBHD Merch: http://shop.MKBHD.com\n\nPlaylist of MKBHD Intro musi",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "nothing-headphone-1-pro-they-copied-the-wrong-thin",
+      "title": "Nothing Headphone 1 Pro: They Copied the Wrong Thing!",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=rayrrXot17M",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.184819+00:00",
+      "summary": "MKBHD · published 2026-09-29. Nothing decided to join the $400+ ANC headphone ranks, and made just one bizarre mistake...\n\nMKBHD Merch: http://shop.MKBHD.com\n\nPlaylist of MKBHD Intro music: https://goo.gl/B3AWV5\n\nHeadphones provid",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "xiaomi-18-pro-max-they-ve-done-it-again",
+      "title": "Xiaomi 18 Pro Max: They've Done It Again!",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=DkUuOr21v4s",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.184851+00:00",
+      "summary": "MKBHD · published 2026-09-24. If one-upping the iPhone was a sport, Xiaomi would be Lebron James.\n\nMKBHD Merch: http://shop.MKBHD.com\n\nPlaylist of MKBHD Intro music: https://goo.gl/B3AWV5\n\nPhone provided by Xiaomi for review.\n\n~\nh",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "the-apple-watch-has-a-problem",
+      "title": "The Apple Watch Has a Problem",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=pOX1l1edBME",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.184867+00:00",
+      "summary": "MKBHD · published 2026-09-22. Apple Watch series 12 has a new \"Audio Intelligence\" feature, let's talk about it\n\nApple vs the AI Race: https://youtu.be/eWKY0OnPByg\n\nMKBHD Merch: http://shop.MKBHD.com\n\nApple wearable stud",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "iphone-18-pro-review-all-about-that-chip",
+      "title": "iPhone 18 Pro Review: All About that Chip",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=ohqxP8EEumo",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.184876+00:00",
+      "summary": "MKBHD · published 2026-09-16. iPhone 18 Pro is basically an S year upgrade. And one part of it is really impressive.\n\nProtect your new iPhone 18 with a case or screen protector at http://dbrand.com/shop/iphone-18\n\nThe scale of a t",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "iphone-duo-what-we-missed",
+      "title": "iPhone Duo: What We Missed!",
+      "source": "yt-rss:MKBHD",
+      "url": "https://www.youtube.com/watch?v=6D__H_DO2Xk",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:18.184885+00:00",
+      "summary": "MKBHD · published 2026-09-12. A few new thoughts from the days after the Duo unveil.\n\nThat shirt: http://shop.MKBHD.com\n\nThe full iPhone Duo Hands-on: https://youtu.be/Od6M0AXpcxQ\n\nPlaylist of MKBHD Intro music: https://goo.gl/B3A",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:MKBHD"
+      ]
+    },
+    {
+      "id": "oklahoma-s-identity-prevailed-over-texas",
+      "title": "Oklahoma's identity prevailed over Texas",
+      "source": "yt-rss:ESPN",
+      "url": "https://www.youtube.com/shorts/pWFF6HIQLQg",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:24.678989+00:00",
+      "summary": "ESPN · published 2026-10-11. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:ESPN"
+      ]
+    },
+    {
+      "id": "there-s-a-path-ucla-football-could-be-in-store-for",
+      "title": "‘There’s a PATH’: UCLA Football could be in store for a BIG season | SVPod",
+      "source": "yt-rss:ESPN",
+      "url": "https://www.youtube.com/watch?v=krfcjG5IfWg",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:43:24.679046+00:00",
+      "summary": "ESPN · published 2026-10-11. Scott Van Pelt and Stanford Steve react to the UCLA Bruins’ stunning win in Eugene over the Oregon Ducks. UCLA remained undefeated with the win and kept their great young season going.\nSVP breaks down",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "sources": [
+        "yt-rss:ESPN"
+      ]
+    },
+    {
+      "id": "video-games-singer-can-t-wait-to-play-new-video-ga",
+      "title": "“Video Games” Singer Can’t Wait To Play New Video Game GTA 6",
+      "source": "gnews-q:video games",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeUFKUS1lUGp6NHNkb3FNZTNUektKTDJiTHJUT1FCeTY3b3pCTlU1WU9mVWJnaEJaWVhzQnlzOHpDTVlKVVE3blBmSWhPYlYzWnlxa3JYZnlUZjQ5X1N0VVdXUk9QazBRRlpVcmhnMEFVX29xay1ORnhjQzR0eGt4eVZGYTVlRy1Ock5MRUxNUTAyT1VvLUx3?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:07.797273+00:00",
+      "summary": "GameSpot · Fri, 09 Oct 2026 13:15:08 GMT",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "sources": [
+        "gnews-q:video games"
+      ]
+    },
+    {
+      "id": "gta-6-gets-a-pass-for-nudity-that-indies-don-t-for",
+      "title": "GTA 6 gets a pass for nudity that indies don’t — for one weird reason",
+      "source": "gnews-q:video games",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JbWZxZVQ0WmFObTVBNy1zSEpMOTlSanBJbTl5bU0tUHlKOTRWdU9mNUtSeUd2ZncxOENybXZlakQzXzlQTDd5LTh6cjQ3UDVMQTVOdUo1aUVMS1AzSklwM3h1VTFKcWR1X1E?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:07.797300+00:00",
+      "summary": "Polygon.com · Sun, 11 Oct 2026 13:00:16 GMT",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "sources": [
+        "gnews-q:video games"
+      ]
+    },
+    {
+      "id": "every-new-hallmark-christmas-movie-in-2026-dates-c",
+      "title": "Every New Hallmark Christmas Movie in 2026: Dates, Casts and How to Stream",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWnE2TGxpcWJkWDNOZ0M2V08yTmZ1SmdtX1BMOGp2Qm5SbEhLTmVQV001cUxlTUh4cENwa1ZwS2R1MzRqN1lib29wWm5kUVdTcTdndGFucXBlc0pmUVd0eEpzOVNMX29yU0Joc1FVQ1E2YWc1cWEwR3ZCeDhuMGZOdmVIb3BUaEx4czZzM1hYWkNZRnN0aFRZUWZqRVY0T2tjM0lQcUFyLVI2azU1MktFOUlENTFBc1REaHdrUXFXOA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:11.047243+00:00",
+      "summary": "Forbes · Sat, 10 Oct 2026 12:00:00 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "gnews-q:movies"
+      ]
+    },
+    {
+      "id": "megalopolis-is-making-a-long-term-theatrical-comeb",
+      "title": "‘Megalopolis’ Is Making a Long-Term Theatrical Comeback",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVkRJR1Z1RVpPUnozZlBNc0JFN0d2RU53S0xWQmwtVW9Ick8yaXZjcmFzMUN6bmZ6WVd6LXEtMGk3dTZpcVdmNEVsRzlvYl92RmNFWkpzZWQ2aG5KVTRtNDRYMUVhQ0pnbkZ4dVloUEFYRUlIY3pQcGVFTnMxNkg5bXMzel9pRHNvY0JNTA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:11.047292+00:00",
+      "summary": "Gizmodo · Sun, 11 Oct 2026 20:15:08 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "gnews-q:movies"
+      ]
+    },
+    {
+      "id": "from-netflix-s-animals-to-disclosure-day-10-movies",
+      "title": "From Netflix's 'Animals' to 'Disclosure Day,' 10 movies to stream now",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNYzVHVFdFMzBjOWtBaTFmNlZ2QnNCUUxpVDFiTzVFSklTeUxPNlowc1Q1MHFGbHVSTDRvTlB2Zjc3dzgwZi1PeWViYmFLLTVud2d2NGVGWThHUkFNOGNZcnhhZzJBSlB5VTlKYUhoRUJrNG1ndjJPelF1a1FDdFA3TlZxZng2SkgxSzQ0LWNOVUFWSDFfMjN3aS1hM2dLcHM3U0c2cGlOMm5MQ19WQlVjZHhHQUtaYmtuMnFRU0pBbkl3TnNQcVpoMEJoYnFqMUk5Y1JZ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:11.047326+00:00",
+      "summary": "USA Today · Fri, 09 Oct 2026 23:55:00 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "sources": [
+        "gnews-q:movies"
+      ]
+    },
+    {
+      "id": "new-music-friday-release-radar-for-october-9-2026-",
+      "title": "New Music Friday release radar for October 9, 2026: top albums, song releases",
+      "source": "gnews-q:new music",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLUNja2Q3dFN4SDRSLURNNWJycEJrYzNMSXpkR0FDRmNnc21MaEMwd2NpakQ3WUVRLTlrM2RfX2F2cThnRThmTjdIaW11V2dxSG9NMEhWZlVvRDBtanlHUGlGQXJUS21BbkJpRWRvUzN0RlJXMnBNZF9vMUNFdnRRTjhXQkludVNsMW83SlpQd1lxRDAtdFJMYTREMlRkYTRGaENPNVI2dTZ2a2NQMGtxVktERkI3NkhnNE9z?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:14.156941+00:00",
+      "summary": "DraftKings Network · Thu, 08 Oct 2026 16:49:41 GMT",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "sources": [
+        "gnews-q:new music"
+      ]
+    },
+    {
+      "id": "these-tiktok-viral-bags-will-get-you-through-fall",
+      "title": "These TikTok-Viral Bags Will Get You Through Fall",
+      "source": "gnews-q:TikTok viral",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoZkxFS3hDWUpZN0NGSGE4ZC16MkU0eXlDcklHZExJbno3ZmNKNEdSSUNfZzJBUk9wYkd3RG5tTnFBWjdnUVZBNVd2bmxtUmphZlViYVZwR19LdXVkOEdyaFB5MDZhSnJjRGdwLWZ4cE8?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-11T22:42:17.436276+00:00",
+      "summary": "fashionista.com · Fri, 18 Sep 2026 07:00:00 GMT",
       "category": "meme",
       "platforms": [
         "tiktok",
@@ -6001,421 +6184,219 @@
       ]
     },
     {
-      "id": "what-are-you-watching-and-what-do-you-recommend-we",
-      "title": "What are you watching and what do you recommend? (Week of October 09, 2026)",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x1nmqi/what_are_you_watching_and_what_do_you_recommend/",
+      "id": "youtube-wtf-is-this",
+      "title": "YouTube wtf is this...",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3b2aj/youtube_wtf_is_this/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189767+00:00",
-      "summary": "u//u/AutoModerator · r/television · 2026-10-09",
+      "detected_at": "2026-10-11T22:42:30.226859+00:00",
+      "summary": "u//u/sonicguylol · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "artemis-fowl-animated-series-greenlit-at-disney-ch",
-      "title": "‘Artemis Fowl’ Animated Series Greenlit At Disney Channel, Disney+ With Author Eoin Colfer As EP",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x3ggz3/artemis_fowl_animated_series_greenlit_at_disney/",
+      "id": "this-japanese-tutorial-on-how-to-take-off-a-wetsui",
+      "title": "This Japanese tutorial on how to take off a wetsuit has 10 million views. Was everyone in Japan suddenly interested in surfing?",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x39hzn/this_japanese_tutorial_on_how_to_take_off_a/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189847+00:00",
-      "summary": "u//u/Zorkel567 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.226954+00:00",
+      "summary": "u//u/ryanyork92 · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "tony-gilroy-s-andor-incorporates-real-moments-or-a",
-      "title": "Tony Gilroy's Andor incorporates real moments or aspects from at least 10 different revolutions and uprisings from around the world over the course of its 2 seasons.",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x3f8fn/tony_gilroys_andor_incorporates_real_moments_or/",
+      "id": "is-youtube-getting-vibe-coded",
+      "title": "Is YouTube getting vibe-coded?",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3ir6f/is_youtube_getting_vibecoded/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189874+00:00",
-      "summary": "u//u/Novel-Initiative-900 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.226977+00:00",
+      "summary": "u//u/Demon_Flower · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "andor-2022-one-way-out-kino-loy-s-speech",
-      "title": "Andor (2022) \"One Way Out\" - Kino Loy's speech",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x38zuz/andor_2022_one_way_out_kino_loys_speech/",
+      "id": "the-algorithm-is-beyond-bad-its-utterly-awful",
+      "title": "The Algorithm is BEYOND Bad.. its utterly AWFUL!!",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x337sy/the_algorithm_is_beyond_bad_its_utterly_awful/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189903+00:00",
-      "summary": "u//u/-drunkmoses- · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.226995+00:00",
+      "summary": "u//u/Terrible_General_685 · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "nicolas-cage-says-he-s-probably-not-working-with-a",
-      "title": "Nicolas Cage Says He’s ‘Probably Not’ Working With Amazon Again After Refusing to Sign AI Waiver for ‘Spider-Noir’: ‘I’m Not an AI-Friendly Actor’",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x2k4q0/nicolas_cage_says_hes_probably_not_working_with/",
+      "id": "why-youtube-why",
+      "title": "Why Youtube why",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x39haf/why_youtube_why/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189924+00:00",
-      "summary": "u//u/yourfavchoom · r/television · 2026-10-10",
+      "detected_at": "2026-10-11T22:42:30.227010+00:00",
+      "summary": "u//u/ExpensiveCoat8912 · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "he-was-devastatingly-sexy-frasier-s-jane-leeves-an",
-      "title": "‘He was devastatingly sexy’: Frasier’s Jane Leeves and David Hyde Pierce on the love between Daphne and Niles",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x321rv/he_was_devastatingly_sexy_frasiers_jane_leeves/",
+      "id": "what-the-fuck",
+      "title": "What the fuck",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x31afa/what_the_fuck/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189943+00:00",
-      "summary": "u//u/LynnK0919 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.227025+00:00",
+      "summary": "u//u/Pie_duck69 · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "30-rock-is-officially-20-years-old",
-      "title": "30 rock is officially 20 years old",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x3ease/30_rock_is_officially_20_years_old/",
+      "id": "why-are-youtube-ads-so-fucking-obnoxious",
+      "title": "Why are YouTube ads...so...fucking....OBNOXIOUS",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3447h/why_are_youtube_adssofuckingobnoxious/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189958+00:00",
-      "summary": "u//u/Certain-Scratch5793 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.227039+00:00",
+      "summary": "u//u/TheDunnaMan · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "tcm-i-m-kind-of-impressed",
-      "title": "TCM - I'm kind of impressed",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x3g4k8/tcm_im_kind_of_impressed/",
+      "id": "i-hate-glider-guy-this-is-why-you-should-too",
+      "title": "i HATE glider guy. this is why you should too.",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3eezp/i_hate_glider_guy_this_is_why_you_should_too/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189974+00:00",
-      "summary": "u//u/FatDog69 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.227056+00:00",
+      "summary": "u//u/RaceKnown4231 · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "blade-runner-2099-nycc-trailer",
-      "title": "Blade Runner 2099 - NYCC Trailer",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x2tkyx/blade_runner_2099_nycc_trailer/",
+      "id": "is-anyone-seeing-a-rise-in-political-ads-on-youtub",
+      "title": "is anyone seeing a rise in political ads on youtube?",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3jofg/is_anyone_seeing_a_rise_in_political_ads_on/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.189989+00:00",
-      "summary": "u//u/GenButter · r/television · 2026-10-10",
+      "detected_at": "2026-10-11T22:42:30.227074+00:00",
+      "summary": "u//u/Mega_octodad · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "today-is-the-51st-anniversary-of-saturday-night-li",
-      "title": "Today is the 51st anniversary of Saturday Night Live, here's their first ever sketch from 1975",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x3kc3b/today_is_the_51st_anniversary_of_saturday_night/",
+      "id": "why-is-there-a-gif",
+      "title": "Why is there a gif",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3lhzc/why_is_there_a_gif/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.190005+00:00",
-      "summary": "u//u/preguntontas · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.227089+00:00",
+      "summary": "u//u/wyattmadnessfan · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "snl-weekend-update-the-mother-whose-babysitter-can",
-      "title": "SNL Weekend Update: The Mother Whose Babysitter Canceled; Ashley Padilla and Grace Reiter",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x3ju9n/snl_weekend_update_the_mother_whose_babysitter/",
+      "id": "how-does-one-manage-to-do-this",
+      "title": "How does one manage to do this",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x2p0d1/how_does_one_manage_to_do_this/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.190021+00:00",
-      "summary": "u//u/feedback37376363636 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.227103+00:00",
+      "summary": "u//u/Th3Unh1ng3dy0yl1t3 · r/YouTube · 2026-10-10",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
+        "reddit-rss:r/YouTube"
       ]
     },
     {
-      "id": "the-stormlight-archive-season-2-gets-exciting-upda",
-      "title": "The Stormlight Archive season 2 gets exciting update as Brandon Sanderson shares ambitious adaptation plan",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x2vdtt/the_stormlight_archive_season_2_gets_exciting/",
+      "id": "yeah-gif-comments-are-funny-but-what-about-several",
+      "title": "Yeah, gif comments are funny, but what about several-minute-long unskippable ads?",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3j52b/yeah_gif_comments_are_funny_but_what_about/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-11T22:13:24.190039+00:00",
-      "summary": "u//u/Top_Report_4895 · r/television · 2026-10-11",
+      "detected_at": "2026-10-11T22:42:30.227119+00:00",
+      "summary": "u//u/BlackNig_ga · r/YouTube · 2026-10-11",
       "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "sources": [
-        "reddit-rss:r/television"
-      ]
-    },
-    {
-      "id": "ama-q-a-announcement-alex-gibney-monday-10-12-at-2",
-      "title": "AMA/Q&A Announcement - Alex Gibney - Monday 10/12 at 2 PM ET - Oscar-Winning Documentarian of 'Musk', 'Going Clear: Scientology & the Prison of Belief', 'Enron: The Smartest Guys i",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x1pcov/amaqa_announcement_alex_gibney_monday_1012_at_2/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682451+00:00",
-      "summary": "u//u/BunyipPouch · r/movies · 2026-10-09",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "official-discussion-megathread-the-social-reckonin",
-      "title": "Official Discussion Megathread (The Social Reckoning / Other Mommy) plus throwbacks!",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x19nf1/official_discussion_megathread_the_social/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682544+00:00",
-      "summary": "u//u/LiteraryBoner · r/movies · 2026-10-09",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "weird-al-yankovic-reveals-a-sequel-to-his-biopic-w",
-      "title": "'Weird Al' Yankovic Reveals a Sequel to His Biopic ‘WEIRD’ is Written but is Struggling to Find a Studio; Daniel Radcliffe is Onboard to Return",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x3jeen/weird_al_yankovic_reveals_a_sequel_to_his_biopic/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682575+00:00",
-      "summary": "u//u/MarvelsGrantMan136 · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "just-watched-disclosure-day",
-      "title": "Just watched Disclosure Day",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x3gqg0/just_watched_disclosure_day/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682614+00:00",
-      "summary": "u//u/imeeme · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "master-and-commander-the-far-side-of-the-world-200",
-      "title": "Master and Commander: The Far Side of the World (2003) Directed by Peter Weir - \"Galápagos\"",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x344nf/master_and_commander_the_far_side_of_the_world/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682637+00:00",
-      "summary": "u//u/WolfCine · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "luca-guadagnino-s-artificial-review-thread",
-      "title": "Luca Guadagnino's 'Artificial' Review Thread",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x3dukm/luca_guadagninos_artificial_review_thread/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682672+00:00",
-      "summary": "u//u/SanderSo47 · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "godzilla-minus-zero-final-trailer",
-      "title": "GODZILLA MINUS ZERO | Final Trailer",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x36gwk/godzilla_minus_zero_final_trailer/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682691+00:00",
-      "summary": "u//u/MarvelsGrantMan136 · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "ama-q-a-announcement-noel-gugliemi-tuesday-10-13-a",
-      "title": "AMA/Q&A Announcement - Noel Gugliemi - Tuesday 10/13 at 3 PM ET - Actor in 'Training Day', 'The Fast and the Furious', 'Street Kings, 'Harsh Times', 'Time of Death', 'The Dark Knig",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x39w9u/amaqa_announcement_noel_gugliemi_tuesday_1013_at/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682752+00:00",
-      "summary": "u//u/BunyipPouch · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "the-ghost-and-the-darkness-at-30-revisiting-the-hi",
-      "title": "The Ghost and the Darkness at 30: Revisiting the Historical Adventure Thriller",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x3eb6w/the_ghost_and_the_darkness_at_30_revisiting_the/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682768+00:00",
-      "summary": "u//u/JannTosh70 · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "keanu-reeves-hidari-looks-for-new-partner-after-u-",
-      "title": "Keanu Reeves’ ‘Hidari’ Looks for New Partner After U.S. Talks Stall",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x34l38/keanu_reeves_hidari_looks_for_new_partner_after/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:32.682785+00:00",
-      "summary": "u//u/Task_Force-191 · r/movies · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "sources": [
-        "reddit-rss:r/movies"
+        "reddit-rss:r/YouTube"
       ]
     }
   ]

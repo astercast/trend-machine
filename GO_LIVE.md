@@ -152,7 +152,11 @@ to enable the keyed fetchers in CI. Manual runs via "Run workflow".
 > file therefore **cannot be pushed by automation here**; add it once via the
 > GitHub web UI (repo → Add file → paste the contents of
 > `.github/workflows/refresh.yml`) or from any checkout whose credential has
-> the `workflow` scope. Everything else pushes normally.
+> the `workflow` scope. Everything else pushes normally. Once the workflow
+> is live via the web UI, keep `.github/` untracked locally (it is now in
+> `.gitignore`): gh-push.py propagates deletions for base-tree paths that are
+> no longer tracked, so a future automated push must never see it as a
+> "stale remote file" to delete.
 
 ## 4. Keys needed
 

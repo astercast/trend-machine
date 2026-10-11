@@ -126,8 +126,8 @@ def main():
     data["generator"] = "pipeline/normalize.py"
     with open(DATA, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
-    live = sum(1 for t in topics.values() if not t.get("stale"))
-    print(f"[normalize] {len(topics)} topics ({live} live, {len(topics)-live} stale) -> {DATA}")
+    live = sum(1 for t in data["topics"] if not t.get("stale"))
+    print(f"[normalize] {len(data['topics'])} topics ({live} live, {len(data['topics'])-live} stale) -> {DATA}")
 
 if __name__ == "__main__":
     main()
