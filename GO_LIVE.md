@@ -145,6 +145,15 @@ things that should be committed.
 back. Add secrets `X_BEARER_TOKEN` / `YT_API_KEY` in repo Settings → Secrets
 to enable the keyed fetchers in CI. Manual runs via "Run workflow".
 
+> **Push-scope limitation (2026-10-11, verified):** the automation credential
+> used from this environment carries `repo` scope but NOT `workflow` scope,
+> and GitHub returns 404 for any `.github/workflows/*` write without it —
+> via both the git-database Trees API and the Contents API. The workflow
+> file therefore **cannot be pushed by automation here**; add it once via the
+> GitHub web UI (repo → Add file → paste the contents of
+> `.github/workflows/refresh.yml`) or from any checkout whose credential has
+> the `workflow` scope. Everything else pushes normally.
+
 ## 4. Keys needed
 
 | key | fetcher | tier / where | required? |
