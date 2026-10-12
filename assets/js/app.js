@@ -49,6 +49,11 @@
   }
 
   var state = { topics: [], velocity: {}, sort: "opportunity", dir: -1, platform: "all", category: "all", q: "" };
+  /* wave 12 · war-room: GET epoch (data run time) for the mission clock */
+  var getEpoch = null;
+  function lampTest(on) {
+    document.body.classList.toggle("tm-lamptest", !!on);
+  }
 
   function ageRank(t) { return minsSince(t.last_seen); }
 
@@ -117,8 +122,59 @@
         freshHTML(t.last_seen) + "</a>";
     }).join("");
     clearLoading("radar-strip");
+    renderScope(memes);
     var count = document.getElementById("radar-count");
     if (count) count.textContent = memes.length + " meme signals tracked";
+  }
+
+  /* wave 12 · radar scope: polar plot of the meme contacts.
+     Hotter opportunity = closer to center (priority contact closing in).
+     Static DOM + CSS sweep: reduced-motion users get a still scope. */
+  function renderScope(memes) {
+    var box = document.getElementById("radar-scope");
+    if (!box || !memes.length) return;
+    var CX = 100, CY = 100, R = 90;
+    function tierColor(t) {
+      if (t.opportunity_score >= 70) return "#ff5468";
+      if (t.opportunity_score >= 40) return "#ffb224";
+      return "#41ff8a";
+    }
+    var rings = [30, 55, 80].map(function (r) {
+      return '<circle cx="' + CX + '" cy="' + CY + '" r="' + r + '" fill="none" stroke="rgba(83,233,255,.16)" stroke-width="1"/>';
+    }).join("");
+    var ticks = "";
+    for (var d = 0; d < 12; d++) {
+      var a = d * Math.PI / 6, x1 = CX + 84 * Math.cos(a), y1 = CY + 84 * Math.sin(a);
+      var x2 = CX + 90 * Math.cos(a), y2 = CY + 90 * Math.sin(a);
+      ticks += '<line x1="' + x1.toFixed(1) + '" y1="' + y1.toFixed(1) + '" x2="' + x2.toFixed(1) +
+        '" y2="' + y2.toFixed(1) + '" stroke="rgba(139,147,167,.5)" stroke-width="1"/>';
+    }
+    var blips = memes.map(function (t, i) {
+      var ang = (i / memes.length) * Math.PI * 2 - Math.PI / 2;
+      var rad = R - (Math.max(0, Math.min(100, t.opportunity_score)) / 100) * (R - 18);
+      var x = (CX + rad * Math.cos(ang)).toFixed(1), y = (CY + rad * Math.sin(ang)).toFixed(1);
+      var c = tierColor(t);
+      return '<g class="blip"><circle class="blip-ring" cx="' + x + '" cy="' + y + '" r="5" fill="none" stroke="' +
+        c + '" stroke-width="1" style="animation-delay:' + (i * 0.24).toFixed(2) + 's"/>' +
+        '<circle cx="' + x + '" cy="' + y + '" r="3.4" fill="' + c + '">' +
+        '<title>' + esc(t.title) + " — opportunity " + t.opportunity_score + "</title></circle></g>";
+    }).join("");
+    box.innerHTML =
+      '<svg viewBox="0 0 200 200" role="img" aria-label="Radar scope: ' + memes.length +
+      " meme contacts tracked; closest: " + esc(memes[0].title) + '" focusable="false">' +
+      '<circle cx="' + CX + '" cy="' + CY + '" r="' + R + '" fill="none" stroke="rgba(83,233,255,.35)" stroke-width="1.5"/>' +
+      rings + ticks +
+      '<line x1="' + CX + '" y1="' + (CY - R) + '" x2="' + CX + '" y2="' + (CY + R) + '" stroke="rgba(83,233,255,.12)" stroke-width="1"/>' +
+      '<line x1="' + (CX - R) + '" y1="' + CY + '" x2="' + (CX + R) + '" y2="' + CY + '" stroke="rgba(83,233,255,.12)" stroke-width="1"/>' +
+      '<g class="radar-sweep"><path d="M100,100 L100,14 A86,86 0 0 1 143,22 Z" fill="url(#sweepGrad)" opacity=".55"/>' +
+      '<line x1="100" y1="100" x2="100" y2="14" stroke="#41ff8a" stroke-width="1.5" opacity=".9"/></g>' +
+      '<defs><linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">' +
+      '<stop offset="0" stop-color="#41ff8a" stop-opacity=".5"/>' +
+      '<stop offset="1" stop-color="#41ff8a" stop-opacity="0"/></linearGradient></defs>' +
+      blips + "</svg>" +
+      '<div class="scope-cap"><span class="tm-plate-label">SCOPE · MEME CONTACTS</span>' +
+      '<span class="led led-violet blink" aria-hidden="true"></span></div>';
+    box.hidden = false;
   }
 
   function renderTable() {
@@ -173,14 +229,58 @@
 
   function tickClock() {
     var el = document.getElementById("live-clock-time");
-    if (el) el.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    if (!el) return;
+    var lbl = document.getElementById("clock-label");
+    if (getEpoch) {
+      /* GET: ground elapsed time since the data run */
+      var s = Math.max(0, Math.floor((Date.now() - getEpoch) / 1000));
+      var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), ss = s % 60;
+      el.textContent = "T+" + (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (ss < 10 ? "0" + ss : ss);
+      if (lbl) lbl.textContent = "GET";
+    } else {
+      el.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      if (lbl) lbl.textContent = "LOCAL";
+    }
+  }
+
+  /* wave 12 · 1202 program alarm: shed non-essential loads, offer a retry.
+     Recovery prints GO. */
+  var wasAlarmed = false;
+  function raiseAlarm() {
+    wasAlarmed = true;
+    document.body.classList.add("tm-alarm-1202");
+    var err = document.getElementById("load-error");
+    if (err) {
+      err.hidden = false;
+      err.classList.remove("tm-go");
+      var code = document.getElementById("alarm-code");
+      if (code) code.textContent = "1202 · DATA LINK LOST";
+      var btn = document.getElementById("load-retry");
+      if (btn) btn.hidden = false;
+    }
+  }
+  function clearAlarm(go) {
+    document.body.classList.remove("tm-alarm-1202");
+    var err = document.getElementById("load-error");
+    if (!err) return;
+    if (go) {
+      err.classList.add("tm-go");
+      var code = document.getElementById("alarm-code");
+      if (code) code.textContent = "GO · LINK RESTORED";
+      var msg = document.getElementById("alarm-msg");
+      if (msg) msg.textContent = "The trend feed is back. All loads restored — the board is live.";
+      var btn = document.getElementById("load-retry");
+      if (btn) btn.hidden = true;
+      setTimeout(function () { err.hidden = true; }, 4000);
+    } else {
+      err.hidden = true;
+    }
   }
 
   function load(i) {
     i = i || 0;
     if (i >= DATA_URLS.length) {
-      var err = document.getElementById("load-error");
-      if (err) err.hidden = false;
+      raiseAlarm();
       return;
     }
     fetch(DATA_URLS[i]).then(function (r) {
@@ -191,8 +291,11 @@
       var gen = document.getElementById("data-ts");
       if (gen && data.generated_at) {
         var d = new Date(data.generated_at);
+        getEpoch = d.getTime();
         gen.innerHTML = 'data: <span class="num">' + d.toLocaleString() + "</span>";
       }
+      lampTest(false); /* V35E complete — board is live */
+      clearAlarm(wasAlarmed); wasAlarmed = false; /* GO only after an alarm */
       renderTicker(state.topics);
       renderHot5(state.topics);
       renderRadar(state.topics);
@@ -202,9 +305,18 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    lampTest(true); /* V35E lamp test: every lamp burns while data loads */
     load();
     loadVelocity();
     tickClock(); setInterval(tickClock, 1000);
+    var retry = document.getElementById("load-retry");
+    if (retry) retry.addEventListener("click", function () {
+      document.body.classList.remove("tm-alarm-1202");
+      var err = document.getElementById("load-error");
+      if (err) err.hidden = true;
+      lampTest(true);
+      load();
+    });
     var pf = document.getElementById("f-platform");
     var cf = document.getElementById("f-category");
     var q = document.getElementById("f-search");

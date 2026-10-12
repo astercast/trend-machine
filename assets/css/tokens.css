@@ -78,3 +78,25 @@
   --z-head: 50;
   --z-ticker: 40;
 }
+
+/* ---- wave 12 · war-room identity tokens (append-only) ---- */
+:root {
+  /* distinctive typography of its own — shared with no other fleet site:
+     Chakra Petch = engraved plates / display; Space Mono = data readouts */
+  --font-display: "Chakra Petch", "Arial Narrow", "Helvetica Neue Condensed", sans-serif;
+  --font-data: "Space Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --mono: "Space Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --display: "Chakra Petch", "Arial Narrow", sans-serif;
+
+  /* instrument-panel furniture */
+  --plate:        #0b0e14;   /* engraved plate surface */
+  --plate-ink:    #8b93a7;   /* engraved label ink (decorative only) */
+  --rivet:        #2b3345;   /* screw-head metal */
+  --rivet-slot:   #05070b;   /* screw slot */
+  --bezel-hi:     rgba(255, 255, 255, .07);
+  --scope-bg:     #04060a;   /* oscilloscope / radar glass */
+  --reticle:      rgba(83, 233, 255, .08);
+  --tape-bg:      #0a0d13;   /* ticker tape */
+  --alarm:        #ffb224;   /* 1202 alarm amber */
+  --alarm-deep:   #8a5a00;
+}

@@ -91,6 +91,8 @@ TOPIC_TMPL = """<!doctype html>
 <link rel="stylesheet" href="../assets/css/wave2.css">
 <link rel="stylesheet" href="../assets/css/wave3.css">
 <link rel="stylesheet" href="../assets/css/wave8.css">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/wave12.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

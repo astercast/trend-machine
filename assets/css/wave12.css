@@ -1,0 +1,629 @@
+/* ============================================================
+   TREND MACHINE — wave 12 · "WAR ROOM" identity rework, wave 1
+   Mission control with real instrument-panel energy: radar sweeps,
+   oscilloscope traces, ticker tape, blinking status lights, engraved
+   plates, riveted consoles. A war room, not cards on dark.
+
+   Layering: tokens.css (signal tiers + wave-12 type/furniture tokens)
+   → fonts.css → base → components → wave2/3/8/9/10 → THIS FILE.
+   Everything below is progressive enhancement: no-JS visitors get
+   the finished static state; every animation is gated behind
+   prefers-reduced-motion: no-preference.
+   ============================================================ */
+
+/* ---------- 01 · type voice ----------
+   Chakra Petch = engraved plates / display. Space Mono (--mono) =
+   data readouts. Both self-hosted, fleet-distinct. */
+h1, h2, h3,
+.brand,
+.oracle-hero h1,
+.hot-card h3, .hot-card .rank,
+.oracle-card .oc-title,
+.fmt-card h2,
+.sc-banner h2, .sc-count .num,
+.traj-arrow {
+  font-family: var(--font-display);
+  letter-spacing: .005em;
+}
+h1, h2 { font-weight: 700; }
+.oracle-hero h1, .hot-card.leader h3 { letter-spacing: 0; }
+
+/* engraved plate label: decorative microcopy (never sole carrier of meaning) */
+.tm-plate-label {
+  font-family: var(--font-data);
+  font-size: var(--fs-micro);
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--plate-ink);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .08), 0 -1px 1px rgba(0, 0, 0, .8);
+  white-space: nowrap;
+}
+.kicker { font-family: var(--font-data); }
+
+/* ---------- 02 · instrument furniture ----------
+   Rivets: 4 screw-heads on console corners (pseudo-element, no markup).
+   LEDs: status lights with bezels + tier glow. */
+
+/* shared rivet treatment — elements with a free ::after/::before */
+.hot-card::after,
+.fmt-card::before,
+.sc-count::before,
+.oracle-card::before,
+.meme-card::before,
+.sc-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, var(--rivet) 0 2.4px, var(--rivet-slot) 2.8px, transparent 3.4px),
+    radial-gradient(circle, var(--rivet) 0 2.4px, var(--rivet-slot) 2.8px, transparent 3.4px),
+    radial-gradient(circle, var(--rivet) 0 2.4px, var(--rivet-slot) 2.8px, transparent 3.4px),
+    radial-gradient(circle, var(--rivet) 0 2.4px, var(--rivet-slot) 2.8px, transparent 3.4px);
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position:
+    8px 8px,
+    calc(100% - 8px) 8px,
+    8px calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px);
+  opacity: .85;
+}
+.hot-card, .fmt-card, .sc-count, .oracle-card, .meme-card, .sc-banner {
+  position: relative;
+}
+/* inner bevel: machined-panel edge */
+.hot-card, .fmt-card, .sc-count, .oracle-card, .meme-card,
+.oracle-banner, .sc-banner {
+  box-shadow: inset 0 1px 0 var(--bezel-hi), inset 0 -1px 0 rgba(0, 0, 0, .5), var(--shadow-1);
+}
+
+.led {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex: none;
+  display: inline-block;
+  background: var(--live);
+  box-shadow:
+    0 0 0 2px #04060a,
+    0 0 0 3.5px var(--line-bright),
+    0 0 10px rgba(65, 255, 138, .55);
+}
+.led-hot   { background: var(--hot);   box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 10px rgba(255, 84, 104, .55); }
+.led-warm  { background: var(--warm);  box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 10px rgba(255, 178, 36, .55); }
+.led-dead  { background: var(--dead);  box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright); }
+.led-signal{ background: var(--signal);box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 10px rgba(83, 233, 255, .55); }
+.led-violet{ background: var(--violet);box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 10px rgba(180, 140, 255, .55); }
+
+@keyframes led-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .3; }
+}
+
+/* ---------- 03 · header console ----------
+   Sticky console rail: VU-meter brand mark, GET mission clock, ticker tape. */
+.site-head {
+  background: linear-gradient(180deg, #10141c 0%, #0b0e14 100%);
+  border-bottom: 2px solid #000;
+  box-shadow: 0 1px 0 var(--line-bright);
+}
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+/* brand mark → VU meter: tiered bars, still equalizer-pulsed */
+.brand-mark {
+  background: #04060a;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .8), 0 0 0 1px #000;
+}
+.brand-mark i:nth-child(1), .brand-mark i:nth-child(2) { background: var(--live); box-shadow: 0 0 6px rgba(65, 255, 138, .7); }
+.brand-mark i:nth-child(3) { background: var(--warm); box-shadow: 0 0 6px rgba(255, 178, 36, .7); }
+.brand-mark i:nth-child(4) { background: var(--hot);  box-shadow: 0 0 6px rgba(255, 84, 104, .7); }
+
+/* GET mission clock: ground elapsed time since the data run */
+.live-clock {
+  background: var(--scope-bg);
+  border: 1px solid var(--line-bright);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, .85), 0 0 0 1px #000;
+  padding: 6px 14px;
+  gap: 10px;
+}
+.live-clock .num {
+  color: var(--live);
+  font-size: 13px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(65, 255, 138, .45);
+}
+
+/* ticker tape: sprocket-hole perforations top + bottom, mono uppercase */
+.ticker {
+  position: relative;
+  background: var(--tape-bg);
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 var(--line);
+  padding: 5px 0;
+}
+.ticker::before, .ticker::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 7px;
+  z-index: 2;
+  background-image: radial-gradient(circle, #000 2.5px, transparent 3px);
+  background-size: 17px 7px;
+  background-repeat: repeat-x;
+  background-position: 9px center;
+  pointer-events: none;
+}
+.ticker::before { top: 1px; }
+.ticker::after  { bottom: 1px; }
+.ticker-track {
+  font-family: var(--font-data);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-size: 12px;
+  padding: 11px 0;
+}
+.ticker-track b { text-shadow: 0 0 8px rgba(65, 255, 138, .4); }
+
+/* ---------- 04 · radar scope ----------
+   Real radar instrument: range rings, crosshair, rotating sweep,
+   phosphor blips. The horizontal card strip survives as the contact
+   list beside it (progressive enhancement: no-JS = strip only). */
+.radar {
+  background: linear-gradient(180deg, #0c1017 0%, #080b10 100%);
+}
+.radar-grid {
+  display: grid;
+  gap: var(--s4);
+  margin-top: var(--s4);
+}
+@media (min-width: 940px) {
+  .radar-grid {
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    align-items: stretch;
+  }
+  .radar-scope { position: sticky; top: 120px; align-self: start; }
+}
+.radar-scope {
+  background: var(--scope-bg);
+  border: 1px solid var(--line-bright);
+  border-radius: var(--r-lg);
+  padding: var(--s4);
+  box-shadow: inset 0 0 46px rgba(0, 0, 0, .85), 0 0 0 1px #000;
+  position: relative;
+  overflow: hidden;
+}
+.radar-scope svg { display: block; width: 100%; height: auto; }
+.radar-scope .scope-cap {
+  margin-top: var(--s3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s2);
+}
+.radar-sweep { transform-origin: 100px 100px; }
+@keyframes radar-sweep { to { transform: rotate(360deg); } }
+.blip-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes blip-ping {
+  0%   { transform: scale(.35); opacity: .9; }
+  70%  { transform: scale(2.4); opacity: 0; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.radar-list { min-width: 0; }
+.radar-list .radar-strip { padding-bottom: var(--s2); }
+
+/* contact cards: console plates */
+.meme-card {
+  background: var(--plate);
+}
+.meme-card .fmt {
+  font-family: var(--font-data);
+  letter-spacing: .14em;
+}
+
+/* ---------- 05 · hot 5 → priority targets ----------
+   Target-acquisition cards: engraved channel plates, VU opportunity meters. */
+.hot-card {
+  background: linear-gradient(180deg, var(--panel-2) 0%, var(--panel) 100%);
+}
+.hot-card .rank {
+  color: var(--ink);
+  font-size: 26px;
+  font-weight: 700;
+  background: var(--plate);
+  border: 1px solid var(--line-bright);
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: inline-block;
+  align-self: flex-start;
+  box-shadow: inset 0 1px 0 var(--bezel-hi), inset 0 -2px 4px rgba(0, 0, 0, .6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .07), 0 -1px 1px rgba(0, 0, 0, .8);
+}
+.hot-card.leader .rank { font-size: clamp(2.6rem, 5vw, 3.8rem); padding: 8px 18px; }
+.badge-breaking {
+  font-family: var(--font-data) !important;
+  letter-spacing: .22em;
+}
+/* opportunity score → VU meter with tick marks */
+.score-bar {
+  background: #04060a !important;
+  border: 1px solid var(--line-bright);
+  border-radius: 4px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .8);
+  height: 10px !important;
+  overflow: hidden;
+  position: relative;
+}
+.score-bar i {
+  background: linear-gradient(90deg, var(--live) 0%, var(--live) 55%, var(--warm) 78%, var(--hot) 100%) !important;
+  box-shadow: none !important;
+  border-radius: 0 2px 2px 0;
+}
+.score .num { font-weight: 700; }
+
+/* ---------- 06 · oscilloscope sparklines ----------
+   Every velocity trace renders as a phosphor trace on scope glass:
+   reticle grid, bezel, glow. Static SVG — reduced-motion safe by design. */
+svg.spark, svg.spark-mini, svg.mini-spark {
+  background-color: var(--scope-bg);
+  background-image:
+    linear-gradient(var(--reticle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--reticle) 1px, transparent 1px);
+  background-size: 14px 14px;
+  background-position: center center;
+  border: 1px solid var(--line-bright);
+  border-radius: 6px;
+  padding: 4px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, .8), 0 0 0 1px #000;
+}
+svg.spark polyline, svg.spark-mini polyline, svg.mini-spark polyline {
+  stroke: var(--live);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 4px rgba(65, 255, 138, .65));
+}
+svg.spark circle, svg.spark-mini circle, svg.mini-spark circle {
+  fill: var(--live);
+  filter: drop-shadow(0 0 3px rgba(65, 255, 138, .8));
+}
+/* dossier hero trace: wider glass */
+.topic-hero svg.spark { width: 100%; max-width: 560px; height: 64px; display: block; margin: 6px 0 12px; }
+
+/* ---------- 07 · console push-plates (index banners) ---------- */
+.oracle-banner {
+  background: linear-gradient(180deg, #12161f 0%, #0b0e14 100%);
+  border: 1px solid var(--line-bright);
+  padding-left: 52px;
+  position: relative;
+}
+.oracle-banner > .led {
+  position: absolute;
+  left: 20px;
+  top: 26px;
+}
+.oracle-banner .kicker { color: var(--plate-ink); }
+.oracle-banner h2 { font-weight: 700; }
+.oracle-banner .btn {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  background: var(--scope-bg);
+  border: 1px solid var(--line-bright);
+  box-shadow: inset 0 1px 0 var(--bezel-hi), 0 2px 0 #000;
+  padding: 9px 18px;
+  border-radius: 8px;
+}
+.oracle-banner .btn:active { transform: translateY(1px); box-shadow: inset 0 1px 0 var(--bezel-hi); }
+
+/* ---------- 08 · oracle console cards ---------- */
+.oracle-card {
+  background: linear-gradient(180deg, var(--panel) 0%, var(--plate) 100%);
+  border-color: var(--line);
+}
+.oracle-card .traj-arrow { font-size: 1.5rem; }
+.oracle-card .oc-title { font-size: 1.05rem; font-weight: 600; }
+.oc-chip, .chip {
+  font-family: var(--font-data);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 11px;
+}
+.oracle-fallback {
+  border: 1px solid var(--alarm-deep) !important;
+  background: linear-gradient(180deg, #171106 0%, #0e0b06 100%) !important;
+}
+
+/* ---------- 09 · scorecard instruments (wave-9 lane, war-room skin) ---------- */
+.sc-banner {
+  background: linear-gradient(180deg, #11151d 0%, #0b0e14 100%);
+  border: 1px solid var(--line-bright);
+  border-radius: var(--r-lg);
+}
+.sc-banner h2 { font-weight: 700; }
+.sc-count {
+  background: var(--scope-bg);
+  border: 1px solid var(--line-bright);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, .8), 0 0 0 1px #000;
+}
+.sc-count .num {
+  font-weight: 700;
+  color: var(--live);
+  text-shadow: 0 0 14px rgba(65, 255, 138, .4);
+  font-variant-numeric: tabular-nums;
+}
+.sc-count strong {
+  font-family: var(--font-data);
+  letter-spacing: .22em;
+  color: var(--plate-ink);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .07);
+}
+.sc-table th {
+  font-family: var(--font-data);
+  letter-spacing: .2em;
+  color: var(--plate-ink);
+  font-weight: 700;
+}
+.sc-table td { font-family: var(--font-data); }
+.sc-bar-track {
+  background: #04060a !important;
+  border: 1px solid var(--line);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .8);
+}
+.sc-bar-fill { background: linear-gradient(90deg, var(--signal), var(--violet)) !important; }
+
+/* ---------- 10 · format channel strips (wave-9 lane, war-room skin) ---------- */
+.fmt-card {
+  background: linear-gradient(180deg, var(--panel) 0%, var(--plate) 100%);
+  border-left: 3px solid var(--signal);
+}
+.fmt-card h2 {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* status LED on the nameplate: signal default, green = verified,
+   amber = single-source — via :has(), no markup change */
+.fmt-card h2::before {
+  content: "";
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--signal);
+  box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 12px rgba(83, 233, 255, .6);
+}
+/* status LED on the nameplate: signal default, green = verified family,
+   amber = single-source family — scoped to the family-level badge in
+   .fmt-top (direct child), so single-source EXAMPLES don't recolor it */
+.fmt-card:has(.fmt-top > .fmt-verified) h2::before {
+  background: var(--live);
+  box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 12px rgba(65, 255, 138, .6);
+}
+.fmt-card:has(.fmt-top > .fmt-single) h2::before {
+  background: var(--warm);
+  box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 12px rgba(255, 178, 36, .6);
+}
+.fmt-card h3 {
+  font-family: var(--font-data);
+  letter-spacing: .24em;
+  color: var(--plate-ink);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .07);
+}
+
+/* ---------- 11 · readout tables, controls ---------- */
+.dtable thead th {
+  font-family: var(--font-data);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 11px;
+  color: var(--plate-ink);
+  font-weight: 700;
+  background: var(--plate);
+}
+.dtable tbody tr:hover { background: rgba(83, 233, 255, .04); }
+.dtable td { font-family: var(--font-data); }
+.dtable td[data-label="Topic"] { font-family: var(--sans); }
+.topic-link { font-weight: 600; }
+.controls label {
+  font-family: var(--font-data);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 11px;
+  color: var(--plate-ink);
+}
+.controls input, .controls select {
+  font-family: var(--font-data);
+  background: var(--scope-bg);
+  border: 1px solid var(--line-bright);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .7);
+  color: var(--ink);
+  border-radius: 8px;
+}
+.section-head .sec-no {
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: var(--plate);
+  border: 1px solid var(--line-bright);
+  border-radius: 6px;
+  padding: 2px 9px;
+  color: var(--signal);
+  text-shadow: 0 0 8px rgba(83, 233, 255, .4);
+  box-shadow: inset 0 1px 0 var(--bezel-hi);
+  margin-right: 10px;
+}
+.section-head h2 { font-weight: 700; }
+
+/* dossier hero: tier plate + stat readouts */
+.topic-hero .stat {
+  background: var(--scope-bg);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, .7);
+}
+.topic-hero .stat .k {
+  font-family: var(--font-data);
+  letter-spacing: .22em;
+  color: var(--plate-ink);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.topic-hero .stat .v { font-family: var(--font-data); }
+
+/* footer console rail */
+.site-foot {
+  border-top: 2px solid #000;
+  box-shadow: 0 -1px 0 var(--line);
+  background: #080b10;
+}
+
+/* ---------- 12 · V35E lamp test ----------
+   Apollo ritual: while data loads, EVERY lamp burns at full —
+   then the board goes live. Driven by body.tm-lamptest (app.js). */
+body.tm-lamptest .led,
+body.tm-lamptest .dot {
+  background: #fff !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 0 2px #04060a, 0 0 0 3.5px var(--line-bright), 0 0 16px #fff !important;
+}
+body.tm-lamptest .brand-mark i { animation-duration: .5s; }
+body.tm-lamptest .live-clock .num { color: #fff; text-shadow: 0 0 10px #fff; }
+
+/* ---------- 13 · 1202 program alarm (Bales protocol) ----------
+   Soft failure: the board raises a 1202-style alarm, visibly sheds
+   non-essential loads (ticker tape, radar sweep), keeps content
+   readable. Recovery prints GO. Driven by body.tm-alarm-1202. */
+#load-error {
+  border: 1px solid var(--alarm-deep);
+  background: linear-gradient(180deg, #181106 0%, #0d0a05 100%);
+  border-radius: var(--r-lg);
+  padding: var(--s5) var(--s6);
+  margin: var(--s5) 0;
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 rgba(255, 178, 36, .15), var(--shadow-2);
+  position: relative;
+}
+#load-error .tm-alarm-code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--alarm);
+  text-shadow: 0 0 14px rgba(255, 178, 36, .5);
+  letter-spacing: .04em;
+}
+#load-error p { font-family: var(--font-data); font-size: 13px; color: var(--ink-dim); margin: 8px 0 0; }
+#load-error .tm-retry {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  background: var(--alarm);
+  color: #140e00;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 var(--alarm-deep);
+}
+#load-error .tm-retry:active { transform: translateY(1px); box-shadow: none; }
+#load-error.tm-go { border-color: var(--live); background: linear-gradient(180deg, #0a140d 0%, #060a07 100%); }
+#load-error.tm-go .tm-alarm-code { color: var(--live); text-shadow: 0 0 14px rgba(65, 255, 138, .5); }
+
+body.tm-alarm-1202 .ticker { display: none; }
+body.tm-alarm-1202 .radar-sweep { animation: none; opacity: .12; }
+body.tm-alarm-1202 .brand-mark i { animation-play-state: paused; opacity: .4; }
+body.tm-alarm-1202 .blip-ring { animation: none; opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  body.tm-alarm-1202 #load-error { animation: alarm-edge 1.6s ease-in-out infinite; }
+}
+@keyframes alarm-edge {
+  0%, 100% { box-shadow: inset 0 1px 0 rgba(255, 178, 36, .15), var(--shadow-2); }
+  50%      { box-shadow: inset 0 1px 0 rgba(255, 178, 36, .15), 0 0 0 2px rgba(255, 178, 36, .45), var(--shadow-2); }
+}
+
+/* ---------- 14 · motion: everything gated ----------
+   Finished/static state is the default; motion layers on only for
+   users without a reduced-motion preference. */
+@media (prefers-reduced-motion: no-preference) {
+  .led.blink { animation: led-blink 1.8s ease-in-out infinite; }
+  .led.blink-fast { animation: led-blink .9s ease-in-out infinite; }
+  .radar-sweep { animation: radar-sweep 5.5s linear infinite; }
+  .blip-ring { animation: blip-ping 2.6s ease-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark i,
+  .dot.pulse,
+  .ticker-track,
+  .radar-sweep,
+  .blip-ring,
+  .led.blink, .led.blink-fast {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- 15 · small screens: war room collapses gracefully ---------- */
+@media (max-width: 560px) {
+  .oracle-banner { padding-left: var(--s5); }
+  .oracle-banner::before { display: none; }
+  .live-clock { padding: 5px 10px; }
+  .live-clock .tm-plate-label { display: none; }
+}
+
+/* ---------- 17 · wave-10 light-fallback repairs ----------
+   wave10.css used var(--card, #fff) / var(--chip-bg, #f1efff) — neither
+   token exists, so launch-planner surfaces rendered WHITE on the dark
+   theme. Re-skinned here as console plates (later layer wins). */
+.battle-opt {
+  background: linear-gradient(180deg, var(--panel-2) 0%, var(--panel) 100%);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 var(--bezel-hi);
+}
+.battle-opt:hover { border-color: var(--signal); }
+.battle-opt[aria-pressed="true"], .battle-opt.is-on {
+  border-color: var(--signal);
+  box-shadow: inset 0 1px 0 var(--bezel-hi), 0 0 14px rgba(83, 233, 255, .18);
+}
+.timing-context {
+  background: linear-gradient(180deg, #141007 0%, #0d0b06 100%);
+  border: 1px dashed var(--alarm-deep);
+  color: var(--ink);
+  position: relative;
+}
+.timing-context h2 { color: var(--warm); }
+.timing-context .provenance { color: var(--ink-dim); font-size: 13px; }
+.timing-context strong { color: var(--ink); }
+.saved-plan {
+  background: linear-gradient(180deg, var(--panel-2) 0%, var(--plate) 100%);
+  border: 1px solid var(--line-bright);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 var(--bezel-hi), var(--shadow-1);
+  position: relative;
+}
+.checkin-result {
+  background: var(--scope-bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, .7);
+}
+
+/* ---------- 16 · print: instruments become ink ---------- */
+@media print {
+  .ticker, .radar-scope, .live-clock, .brand-mark { display: none !important; }
+  .hot-card::after, .fmt-card::before, .sc-count::before,
+  .oracle-card::before, .meme-card::before, .sc-banner::before { display: none; }
+  body { background: #fff; }
+}

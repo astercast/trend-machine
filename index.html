@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="assets/css/wave2.css">
 <link rel="stylesheet" href="assets/css/wave3.css">
 <link rel="stylesheet" href="assets/css/wave8.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/wave12.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -18,8 +20,9 @@
   <div class="head-inner">
     <a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
     <span class="kicker" id="data-ts">data: loading…</span>
-    <div class="live-clock" aria-label="Live clock">
-      <span class="dot pulse" aria-hidden="true"></span>
+    <div class="live-clock" aria-label="Mission clock: ground elapsed time since the data run">
+      <span class="led led-live blink" aria-hidden="true"></span>
+      <span class="tm-plate-label" id="clock-label">GET</span>
       <span class="num" id="live-clock-time">--:--:--</span>
     </div>
   </div>
@@ -27,11 +30,14 @@
 </header>
 
 <main id="main" class="wrap">
-  <p id="load-error" hidden style="color:var(--hot);font-family:var(--mono);font-size:13px;margin:16px 0">
-    Could not load trend data (data/trends.json). Run pipeline/refresh.sh or check the connection.
-  </p>
+  <div id="load-error" role="alert" hidden>
+    <span class="tm-alarm-code" id="alarm-code">1202 · DATA LINK LOST</span>
+    <p id="alarm-msg">The trend feed failed to load. Non-essential loads shed — ticker tape and radar sweep secured. Content below remains readable.</p>
+    <button type="button" class="tm-retry" id="load-retry">Retry link</button>
+  </div>
 
   <a class="oracle-banner" href="oracle.html" aria-label="Open the Oracle: 48-hour trend forecasts and 7-day launch plans">
+    <span class="led led-violet" aria-hidden="true"></span>
     <span class="kicker">🔮 flagship</span>
     <h2>The Oracle — what's about to peak</h2>
     <p>48-hour peak forecasts from real velocity snapshots, plus a 7-day battle plan for any topic. Projections, never guarantees.</p>
@@ -42,6 +48,7 @@
   </a>
 
   <a class="oracle-banner" href="forecast-accuracy.html" aria-label="Open the Oracle accuracy scorecard: forecast-vs-actual record, per-horizon accuracy, calibration" style="margin-top:12px">
+    <span class="led led-violet" aria-hidden="true"></span>
     <span class="kicker">📊 new · wave 9</span>
     <h2>Forecast accuracy — the Oracle's own scorecard</h2>
     <p>Every forecast scored hit/miss against reality 48h later. Per-horizon accuracy, calibration, and the resolution timeline — honest "building history" until 10 forecasts resolve.</p>
@@ -52,6 +59,7 @@
   </a>
 
   <a class="oracle-banner" href="formats.html" aria-label="Open the meme format families: reusable templates to join, with current examples and evidence" style="margin-top:12px">
+    <span class="led led-violet" aria-hidden="true"></span>
     <span class="kicker">⧉ new · wave 9</span>
     <h2>Meme format families — templates to join</h2>
     <p>Costume walks, POV setups, dance hooks, call-out copy… the reusable containers behind the trends, each with current examples, evidence, and verification flags.</p>
@@ -62,6 +70,7 @@
   </a>
 
   <a class="oracle-banner" href="algorithms.html" aria-label="Open the algorithm mechanics reference: what each platform rewards right now, October 2026" style="margin-top:12px">
+    <span class="led led-violet" aria-hidden="true"></span>
     <span class="kicker">⚙️ reference · oct 2026</span>
     <h2>Algorithm mechanics — why trajectories move</h2>
     <p>What TikTok, YouTube Shorts, and Instagram Reels actually reward right now: signal hierarchies, the Oct 1 Shorts originality update, and the cross-platform breakout consensus. Sourced and dated.</p>
@@ -89,7 +98,17 @@
         Viral formats, sounds, and brainrot as it happens — the fastest-moving lane on the internet.
         Memes die in days; the radar only shows what's breathing.
       </p>
-      <div class="radar-strip is-loading" id="radar-strip" role="list" aria-busy="true" aria-label="Loading meme radar"></div>
+      <div class="radar-grid">
+        <div class="radar-scope" id="radar-scope" hidden>
+          <div class="scope-cap">
+            <span class="tm-plate-label">SCOPE · MEME CONTACTS</span>
+            <span class="led led-violet blink" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="radar-list">
+          <div class="radar-strip is-loading" id="radar-strip" role="list" aria-busy="true" aria-label="Loading meme radar"></div>
+        </div>
+      </div>
     </div>
   </section>
 
