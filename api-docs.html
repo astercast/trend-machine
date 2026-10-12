@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API docs — Trend Machine</title>
+<meta name="description" content="Trend Machine agent API: every endpoint, its schema, and an interactive console to try them.">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<style>
+  /* api-docs page styles: mobile-first, respects reduced motion */
+  .ep-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 0; }
+  .ep-table th, .ep-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line, #1b2230); vertical-align: top; }
+  .ep-table th { color: var(--ink-dim); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .ep-table code { font-size: 13px; }
+  .ep-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .console-card { background: var(--bg-soft, #0e1117); border: 1px solid var(--line, #1b2230); border-radius: 12px; padding: 18px; margin-top: 18px; }
+  .console-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+  .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .field label { font-size: 12px; color: var(--ink-dim); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .field select { font: inherit; color: var(--ink); background: var(--bg, #0a0c10); border: 1px solid var(--line, #1b2230); border-radius: 8px; padding: 10px 12px; max-width: 100%; }
+  .btn { font: inherit; cursor: pointer; }
+  .console-status { font-size: 13px; color: var(--ink-dim); min-height: 20px; margin: 12px 0 0; }
+  .console-status.is-error { color: #ff9d9d; }
+  .console-out { margin: 10px 0 0; max-height: 420px; overflow: auto; background: #06080c; border: 1px solid var(--line, #1b2230); border-radius: 8px; padding: 14px; font-size: 12.5px; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+  .console-out:empty { display: none; }
+  .trunc-note { font-size: 12px; color: var(--ink-faint); margin-top: 6px; }
+  .kbd-hint { font-size: 12px; color: var(--ink-faint); }
+  @media (min-width: 720px) {
+    .field select { min-width: 340px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="head-inner">
+<a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<span class="kicker">🤖 api docs</span>
+</div></header>
+
+<main id="main" class="wrap">
+<nav aria-label="Breadcrumb" style="margin:20px 0 0"><a href="index.html" style="font-size:13px">&larr; all trends</a></nav>
+
+<section aria-labelledby="api-title">
+<p class="kicker">for agents &amp; integrations</p>
+<h1 id="api-title">API docs</h1>
+<p style="max-width:68ch">Everything is static JSON under <code>api/v1/</code> — no auth, no keys, no rate limits.
+Start at the <a href="api/v1/index.json">manifest</a>: every endpoint with its description, schema URL,
+<code>updated</code> timestamp, and record counts. Schemas are draft-07 under
+<a href="api/v1/schema/">api/v1/schema/</a>. The full agent guide (workflows included) is
+<a href="AGENT.md">AGENT.md</a>; shared conventions are in <a href="API.md">API.md</a>.</p>
+
+<div class="ep-scroll">
+<table class="ep-table" aria-label="API endpoints">
+<thead><tr><th scope="col">Endpoint</th><th scope="col">What it is</th><th scope="col">Schema</th></tr></thead>
+<tbody id="ep-body">
+<tr><td><code>api/v1/trends.json</code></td><td>All topics, full dossiers — sort by <code>opportunity_score</code> desc for the hottest plays</td><td><code>api/v1/schema/trends.json</code></td></tr>
+<tr><td><code>api/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded</td><td><code>api/v1/schema/trends-flat.json</code></td></tr>
+<tr><td><code>api/v1/trends.flat.sample.json</code></td><td>Labeled <code>sample:true</code> twin — development only</td><td><code>api/v1/schema/trends-flat-sample.json</code></td></tr>
+<tr><td><code>api/v1/trends.flat.js</code></td><td>JSONP twin (<code>trendsCallback(...)</code>) — CORS-safe for pure static hosts</td><td>same as flat feed</td></tr>
+<tr><td><code>api/v1/hashtags.json</code></td><td>Tag → topic-id index</td><td><code>api/v1/schema/hashtags.json</code></td></tr>
+<tr><td><code>api/v1/velocity.json</code></td><td>Oracle input: hourly velocity snapshots per topic</td><td><code>api/v1/schema/velocity.json</code></td></tr>
+<tr><td><code>api/v1/forecasts.json</code></td><td>Oracle output: precomputed 48h trajectory forecasts — projections, never guarantees</td><td><code>api/v1/schema/forecasts.json</code></td></tr>
+<tr><td><code>api/v1/index.json</code></td><td>Self-describing manifest of all endpoints</td><td><code>api/v1/schema/index.json</code></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section aria-labelledby="console-title">
+<div class="console-card">
+<h2 id="console-title" style="margin-top:0">Try the API</h2>
+<p class="kbd-hint">Pick an endpoint and fetch it live from this page. Everything runs client-side;
+large payloads are pretty-printed and truncated for display.</p>
+<form id="api-console" action="#">
+<div class="console-row">
+<div class="field">
+<label for="ep-picker">Endpoint</label>
+<select id="ep-picker" name="endpoint">
+<option value="api/v1/index.json">index.json — manifest</option>
+<option value="api/v1/trends.json">trends.json — all dossiers</option>
+<option value="api/v1/trends.flat.json">trends.flat.json — flat feed</option>
+<option value="api/v1/trends.flat.sample.json">trends.flat.sample.json — labeled sample</option>
+<option value="api/v1/trends.flat.js">trends.flat.js — JSONP twin (text)</option>
+<option value="api/v1/hashtags.json">hashtags.json — tag index</option>
+<option value="api/v1/velocity.json">velocity.json — snapshots</option>
+<option value="api/v1/forecasts.json">forecasts.json — Oracle output</option>
+</select>
+</div>
+<div class="field">
+<button type="submit" class="btn" id="fetch-btn">Fetch</button>
+</div>
+</div>
+</form>
+<p class="console-status" id="console-status" role="status" aria-live="polite"></p>
+<pre class="console-out" id="console-out" tabindex="0" aria-label="API response output"></pre>
+<p class="trunc-note" id="trunc-note" hidden></p>
+<noscript><p class="console-status is-error">The console needs JavaScript. The endpoints above are plain files you can fetch with curl.</p></noscript>
+</div>
+</section>
+
+<section aria-labelledby="curl" style="margin-top:26px">
+<h2 id="curl">One query that matters</h2>
+<pre style="background:#06080c;border:1px solid var(--line,#1b2230);border-radius:8px;padding:14px;font-size:12.5px;overflow-x:auto"><code>curl -s https://&lt;host&gt;/api/v1/trends.json \
+ | python3 -c "
+import json,sys
+d = json.load(sys.stdin)
+for t in sorted(d['topics'], key=lambda t: t['opportunity_score'], reverse=True)[:5]:
+    if not t.get('stale'):
+        print(t['opportunity_score'], t['title'], '|', ' '.join(t['hashtags'][:3]))
+"</code></pre>
+</section>
+</main>
+
+<footer class="site-foot"><div class="wrap foot-grid">
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div style="font-size:13px">Agent entry points: <a href="AGENT.md">AGENT.md</a> · <a href="API.md">API.md</a> · <a href="llms.txt">llms.txt</a><br>
+<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+</div></footer>
+
+<script>
+(function () {
+  "use strict";
+  var form = document.getElementById("api-console");
+  var picker = document.getElementById("ep-picker");
+  var btn = document.getElementById("fetch-btn");
+  var status = document.getElementById("console-status");
+  var out = document.getElementById("console-out");
+  var trunc = document.getElementById("trunc-note");
+  var MAX_CHARS = 50000;
+
+  function setStatus(msg, isError) {
+    status.textContent = msg;
+    status.classList.toggle("is-error", !!isError);
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var url = picker.value;
+    btn.disabled = true;
+    out.textContent = "";
+    trunc.hidden = true;
+    setStatus("Fetching " + url + " …", false);
+    fetch(url, { cache: "no-store" }).then(function (res) {
+      if (!res.ok) {
+        throw new Error("HTTP " + res.status + " " + res.statusText);
+      }
+      return res.text().then(function (text) {
+        var shown = text;
+        try {
+          shown = JSON.stringify(JSON.parse(text), null, 2);
+        } catch (e) {
+          // not JSON (e.g. the JSONP twin) — show raw text instead
+        }
+        var total = shown.length;
+        if (total > MAX_CHARS) {
+          shown = shown.slice(0, MAX_CHARS);
+          trunc.textContent = "…truncated for display (" + total.toLocaleString() +
+            " chars total). Download the file for the full payload.";
+          trunc.hidden = false;
+        }
+        out.textContent = shown;
+        setStatus("OK — " + url + " (" + total.toLocaleString() + " chars).", false);
+      });
+    }).catch(function (err) {
+      var hint = "";
+      if (window.location.protocol === "file:") {
+        hint = " You're viewing this page from file:// — fetch() is blocked there. Serve the repo over HTTP (e.g. python3 -m http.server) or open the deployed site.";
+      }
+      setStatus("Couldn't fetch " + url + ": " + err.message + "." + hint, true);
+    }).finally(function () {
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

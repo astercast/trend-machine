@@ -11,4 +11,11 @@ done
 python3 pipeline/normalize.py
 python3 scripts/build_site.py
 python3 pipeline/aggregate.py
+# wave 5: precomputed Oracle forecasts (needs node; skips honestly without it —
+# the manifest only advertises forecasts.json when this step actually writes it)
+if command -v node >/dev/null 2>&1; then
+  node scripts/build_forecasts.js
+else
+  echo "[forecasts] node unavailable — skipping api/v1/forecasts.json"
+fi
 echo "=== done ==="

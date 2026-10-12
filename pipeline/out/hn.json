@@ -3,70 +3,161 @@
     "title": "Whatever became of holography? (2011)",
     "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
     "source": "hackernews",
-    "summary": "21 points · 5 comments",
+    "summary": "39 points · 8 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:26.391660+00:00"
+    "fetched_at": "2026-10-12T00:58:54.405039+00:00"
+  },
+  {
+    "title": "Governments are mishandling the affordability crisis",
+    "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
+    "source": "hackernews",
+    "summary": "36 points · 25 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:58:55.076652+00:00"
   },
   {
     "title": "Total Annihilation, rebuilt for modern computers",
     "url": "https://nanolathe.gg",
     "source": "hackernews",
-    "summary": "331 points · 143 comments",
+    "summary": "343 points · 146 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:27.113186+00:00"
+    "fetched_at": "2026-10-12T00:58:56.079747+00:00"
   },
   {
-    "title": "Cartographers of North Korea",
+    "title": "Cartographers of North Korea (2019)",
     "url": "https://cartographers-nk.wonyoung.so/",
     "source": "hackernews",
-    "summary": "164 points · 28 comments",
+    "summary": "171 points · 30 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:28.162560+00:00"
+    "fetched_at": "2026-10-12T00:58:56.934375+00:00"
+  },
+  {
+    "title": "Fingerprints Are the New Cookies",
+    "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+    "source": "hackernews",
+    "summary": "48 points · 18 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:58:57.817316+00:00"
   },
   {
     "title": "Recursive self-improvement through collective intelligence",
     "url": "https://pub.sakana.ai/mass/",
     "source": "hackernews",
-    "summary": "35 points · 9 comments",
+    "summary": "47 points · 17 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:29.562143+00:00"
+    "fetched_at": "2026-10-12T00:58:58.561731+00:00"
   },
   {
     "title": "Google Data Centers around the world",
     "url": "https://datacenters.google/locations/",
     "source": "hackernews",
-    "summary": "35 points · 28 comments",
+    "summary": "45 points · 39 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:30.966012+00:00"
+    "fetched_at": "2026-10-12T00:58:59.568230+00:00"
+  },
+  {
+    "title": "The gap in shared understanding of LLM capability is widening",
+    "url": "https://twitter.com/karpathy/status/2109361546505966046",
+    "source": "hackernews",
+    "summary": "218 points · 354 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:00.430241+00:00"
   },
   {
     "title": "Illustration Beyond Proof",
     "url": "https://terrytao.wordpress.com/2026/10/11/illustration-beyond-proof/",
+    "source": "hackernews",
+    "summary": "15 points · 0 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:01.199335+00:00"
+  },
+  {
+    "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+    "url": "https://theonion.com/archivehunt/",
+    "source": "hackernews",
+    "summary": "239 points · 32 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:02.004984+00:00"
+  },
+  {
+    "title": "Ask HN: Do you want a router that has DD-WRT pre-installed?",
+    "url": "https://news.ycombinator.com/item?id=50039291",
+    "source": "hackernews",
+    "summary": "15 points · 21 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:02.741271+00:00"
+  },
+  {
+    "title": "Terence Tao: Math 2.0 [pdf]",
+    "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
+    "source": "hackernews",
+    "summary": "310 points · 366 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:03.940224+00:00"
+  },
+  {
+    "title": "Local Indexing to reduce tool calling and token usage",
+    "url": "https://tedhaley.ca/pensieve/",
     "source": "hackernews",
     "summary": "7 points · 0 comments",
     "hashtags": [],
@@ -75,180 +166,115 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:32.147275+00:00"
-  },
-  {
-    "title": "The gap in shared understanding of LLM capability is widening",
-    "url": "https://twitter.com/karpathy/status/2109361546505966046",
-    "source": "hackernews",
-    "summary": "198 points · 324 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:33.001693+00:00"
-  },
-  {
-    "title": "Fingerprints Are the New Cookies",
-    "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
-    "source": "hackernews",
-    "summary": "34 points · 14 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:34.989792+00:00"
-  },
-  {
-    "title": "Governments are mishandling the affordability crisis",
-    "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
-    "source": "hackernews",
-    "summary": "10 points · 3 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:35.935449+00:00"
-  },
-  {
-    "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-    "url": "https://theonion.com/archivehunt/",
-    "source": "hackernews",
-    "summary": "229 points · 31 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:36.916377+00:00"
-  },
-  {
-    "title": "Terence Tao: Math 2.0 [pdf]",
-    "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
-    "source": "hackernews",
-    "summary": "304 points · 358 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:38.008289+00:00"
+    "fetched_at": "2026-10-12T00:59:04.558551+00:00"
   },
   {
     "title": "Chapter 1 of Ways of Seeing by John Berger",
     "url": "https://www.ways-of-seeing.com/ch1",
     "source": "hackernews",
-    "summary": "65 points · 11 comments",
+    "summary": "71 points · 11 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:39.711359+00:00"
-  },
-  {
-    "title": "Ask HN: Do you want a router that has DD-WRT pre-installed?",
-    "url": "https://news.ycombinator.com/item?id=50039291",
-    "source": "hackernews",
-    "summary": "12 points · 14 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:41.512868+00:00"
-  },
-  {
-    "title": "Local Indexing to reduce tool calling and token usage",
-    "url": "https://tedhaley.ca/pensieve/",
-    "source": "hackernews",
-    "summary": "3 points · 0 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:42.318576+00:00"
+    "fetched_at": "2026-10-12T00:59:05.368947+00:00"
   },
   {
     "title": "IRCv3",
     "url": "https://ircv3.net/",
     "source": "hackernews",
-    "summary": "342 points · 290 comments",
+    "summary": "346 points · 294 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:43.240291+00:00"
-  },
-  {
-    "title": "A Remote Employee Refused 160 Webcam Photos a Day. Her Employer Fired Her",
-    "url": "https://www.inc.com/chloe-rosenberg/a-remote-employee-refused-160-webcam-photos-a-day-her-employer-fired-her/91415963",
-    "source": "hackernews",
-    "summary": "124 points · 84 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:44.559100+00:00"
-  },
-  {
-    "title": "Passkeys are a trap. Do not use them",
-    "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-    "source": "hackernews",
-    "summary": "175 points · 86 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:45.390256+00:00"
-  },
-  {
-    "title": "NYC's \"Click to Cancel\" rule is now in effect",
-    "url": "https://www.nyc.gov/main/click-to-cancel",
-    "source": "hackernews",
-    "summary": "322 points · 157 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:46.234412+00:00"
+    "fetched_at": "2026-10-12T00:59:06.046525+00:00"
   },
   {
     "title": "Google is illegaly cutting forest to build data centers",
     "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
     "source": "hackernews",
-    "summary": "61 points · 6 comments",
+    "summary": "81 points · 8 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:46.990287+00:00"
+    "fetched_at": "2026-10-12T00:59:06.839484+00:00"
   },
   {
-    "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
-    "url": "https://github.com/plimsollmark/plimsoll",
+    "title": "NYC's \"Click to Cancel\" rule is now in effect",
+    "url": "https://www.nyc.gov/main/click-to-cancel",
+    "source": "hackernews",
+    "summary": "337 points · 167 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:07.930679+00:00"
+  },
+  {
+    "title": "Passkeys are a trap. Do not use them",
+    "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+    "source": "hackernews",
+    "summary": "216 points · 118 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:08.592487+00:00"
+  },
+  {
+    "title": "I guess I'm using WebP now?",
+    "url": "https://anderegg.ca/2026/10/08/i-guess-im-using-webp-now",
+    "source": "hackernews",
+    "summary": "65 points · 66 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:09.601248+00:00"
+  },
+  {
+    "title": "Safe SIMD in Rust, even on the inside",
+    "url": "https://shnatsel.github.io/safe-simd-in-rust-even-on-the-inside/",
+    "source": "hackernews",
+    "summary": "26 points · 1 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:10.181955+00:00"
+  },
+  {
+    "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
+    "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+    "source": "hackernews",
+    "summary": "148 points · 107 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T00:59:11.137150+00:00"
+  },
+  {
+    "title": "Programmable pigments: Photochromic nanoparticle inks for rewritable tattoos",
+    "url": "https://www.cell.com/matter-light/fulltext/S3117-5848(26)00119-5",
     "source": "hackernews",
     "summary": "4 points · 0 comments",
     "hashtags": [],
@@ -257,124 +283,98 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:48.025223+00:00"
-  },
-  {
-    "title": "I guess I'm using WebP now?",
-    "url": "https://anderegg.ca/2026/10/08/i-guess-im-using-webp-now",
-    "source": "hackernews",
-    "summary": "63 points · 65 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:49.341606+00:00"
+    "fetched_at": "2026-10-12T00:59:12.123166+00:00"
   },
   {
     "title": "The tilde in your PATH may not be your HOME",
     "url": "https://disconnect3d.pl//2026/10/02/dont-put-tilde-in-your-path/",
     "source": "hackernews",
-    "summary": "205 points · 140 comments",
+    "summary": "208 points · 140 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:50.387838+00:00"
+    "fetched_at": "2026-10-12T00:59:12.939046+00:00"
   },
   {
-    "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
-    "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+    "title": "A Remote Employee Refused 160 Webcam Photos a Day. Her Employer Fired Her",
+    "url": "https://www.inc.com/chloe-rosenberg/a-remote-employee-refused-160-webcam-photos-a-day-her-employer-fired-her/91415963",
     "source": "hackernews",
-    "summary": "142 points · 106 comments",
+    "summary": "134 points · 99 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:51.354741+00:00"
+    "fetched_at": "2026-10-12T00:59:13.618009+00:00"
   },
   {
-    "title": "Safe SIMD in Rust, even on the inside",
-    "url": "https://shnatsel.github.io/safe-simd-in-rust-even-on-the-inside/",
+    "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+    "url": "https://github.com/plimsollmark/plimsoll",
     "source": "hackernews",
-    "summary": "24 points · 1 comments",
+    "summary": "5 points · 2 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:52.489847+00:00"
-  },
-  {
-    "title": "FlowCE: Calculus on your TI-84 Plus CE",
-    "url": "https://tommyb3ll.github.io/FlowCE/",
-    "source": "hackernews",
-    "summary": "21 points · 7 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T00:28:53.805977+00:00"
+    "fetched_at": "2026-10-12T00:59:14.457312+00:00"
   },
   {
     "title": "REA Reverse – Engineer Anything",
     "url": "https://rea.tools/",
     "source": "hackernews",
-    "summary": "764 points · 325 comments",
+    "summary": "765 points · 326 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:55.524157+00:00"
+    "fetched_at": "2026-10-12T00:59:16.110691+00:00"
   },
   {
     "title": "Bot traffic from Yandex",
     "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
     "source": "hackernews",
-    "summary": "585 points · 236 comments",
+    "summary": "585 points · 238 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:56.236044+00:00"
+    "fetched_at": "2026-10-12T00:59:17.017076+00:00"
   },
   {
     "title": "The Lightbulb Computer",
     "url": "https://lightbulbcomputer.com/",
     "source": "hackernews",
-    "summary": "575 points · 94 comments",
+    "summary": "579 points · 94 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:57.312551+00:00"
+    "fetched_at": "2026-10-12T00:59:18.117907+00:00"
   },
   {
     "title": "3rd Yandex Cloud Data Center Was Hit",
     "url": "https://status.yandex.cloud/en/incidents/2136",
     "source": "hackernews",
-    "summary": "545 points · 666 comments",
+    "summary": "549 points · 667 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:58.603978+00:00"
+    "fetched_at": "2026-10-12T00:59:18.809471+00:00"
   },
   {
     "title": "A city-building game in which the city would prefer you didn't",
@@ -387,7 +387,7 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:28:59.636013+00:00"
+    "fetched_at": "2026-10-12T00:59:19.625734+00:00"
   },
   {
     "title": "Lobbying is corruption",
@@ -400,7 +400,7 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:00.807588+00:00"
+    "fetched_at": "2026-10-12T00:59:20.331772+00:00"
   },
   {
     "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
@@ -413,46 +413,46 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:01.869077+00:00"
+    "fetched_at": "2026-10-12T00:59:21.234946+00:00"
   },
   {
     "title": "Build your own decision model",
     "url": "https://nishtahir.com/build-your-own-decision-model/",
     "source": "hackernews",
-    "summary": "451 points · 102 comments",
+    "summary": "452 points · 102 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:02.690385+00:00"
+    "fetched_at": "2026-10-12T00:59:22.096679+00:00"
   },
   {
     "title": "Nitter: Update Oct 10th seeking funding and legal help",
     "url": "https://nitter.net",
     "source": "hackernews",
-    "summary": "413 points · 220 comments",
+    "summary": "416 points · 222 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:03.496819+00:00"
+    "fetched_at": "2026-10-12T00:59:22.973730+00:00"
   },
   {
     "title": "LineageOS 24",
     "url": "https://lineageos.org/Changelog-32/",
     "source": "hackernews",
-    "summary": "407 points · 164 comments",
+    "summary": "409 points · 164 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:04.554126+00:00"
+    "fetched_at": "2026-10-12T00:59:23.791689+00:00"
   },
   {
     "title": "`123456' password used in Danish CPR data breach",
@@ -465,85 +465,85 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:05.511024+00:00"
+    "fetched_at": "2026-10-12T00:59:24.354479+00:00"
   },
   {
     "title": "Bitwarden Dual License Model",
     "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
     "source": "hackernews",
-    "summary": "394 points · 299 comments",
+    "summary": "394 points · 300 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:06.988065+00:00"
+    "fetched_at": "2026-10-12T00:59:25.149036+00:00"
   },
   {
     "title": "Documents add to evidence in climate deception case against ExxonMobil",
     "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
     "source": "hackernews",
-    "summary": "382 points · 205 comments",
+    "summary": "384 points · 205 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:08.399064+00:00"
+    "fetched_at": "2026-10-12T00:59:26.206588+00:00"
   },
   {
     "title": "I paid people to try and follow my README",
     "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
     "source": "hackernews",
-    "summary": "363 points · 186 comments",
+    "summary": "365 points · 187 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:10.000294+00:00"
+    "fetched_at": "2026-10-12T00:59:27.488586+00:00"
   },
   {
     "title": "IRCv3",
     "url": "https://ircv3.net/",
     "source": "hackernews",
-    "summary": "342 points · 290 comments",
+    "summary": "346 points · 294 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:10.938526+00:00"
+    "fetched_at": "2026-10-12T00:59:28.246253+00:00"
   },
   {
     "title": "Total Annihilation, rebuilt for modern computers",
     "url": "https://nanolathe.gg",
     "source": "hackernews",
-    "summary": "331 points · 143 comments",
+    "summary": "344 points · 146 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:12.493965+00:00"
+    "fetched_at": "2026-10-12T00:59:29.097723+00:00"
   },
   {
     "title": "NYC's \"Click to Cancel\" rule is now in effect",
     "url": "https://www.nyc.gov/main/click-to-cancel",
     "source": "hackernews",
-    "summary": "322 points · 157 comments",
+    "summary": "337 points · 167 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:13.431701+00:00"
+    "fetched_at": "2026-10-12T00:59:29.775590+00:00"
   },
   {
     "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
@@ -556,33 +556,33 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:15.951862+00:00"
+    "fetched_at": "2026-10-12T00:59:30.569258+00:00"
   },
   {
     "title": "I'm sorry, but you still have to think",
     "url": "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/",
     "source": "hackernews",
-    "summary": "315 points · 142 comments",
+    "summary": "318 points · 142 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:17.070463+00:00"
+    "fetched_at": "2026-10-12T00:59:31.462286+00:00"
   },
   {
     "title": "Terence Tao: Math 2.0 [pdf]",
     "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
     "source": "hackernews",
-    "summary": "304 points · 359 comments",
+    "summary": "310 points · 366 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:18.026603+00:00"
+    "fetched_at": "2026-10-12T00:59:31.995184+00:00"
   },
   {
     "title": "Apple/macOS removed from official Unix registry",
@@ -595,58 +595,58 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:19.770333+00:00"
+    "fetched_at": "2026-10-12T00:59:32.590402+00:00"
   },
   {
     "title": "I would like the value of my home to rise, while my property taxes fall",
     "url": "https://conversableeconomist.com/2026/09/28/i-would-like-the-value-of-my-home-to-rise-while-my-property-taxes-fall/",
     "source": "hackernews",
-    "summary": "272 points · 674 comments",
+    "summary": "272 points · 675 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:21.241608+00:00"
+    "fetched_at": "2026-10-12T00:59:33.225697+00:00"
   },
   {
     "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement",
     "url": "https://wallhop.io/",
     "source": "hackernews",
-    "summary": "270 points · 118 comments",
+    "summary": "271 points · 118 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:22.218419+00:00"
+    "fetched_at": "2026-10-12T00:59:33.879410+00:00"
   },
   {
     "title": "The RAM shortage is bringing back DDR4",
     "url": "https://www.theverge.com/games/1009140/ram-shortage-intel-amd-ddr4-comeback",
     "source": "hackernews",
-    "summary": "267 points · 283 comments",
+    "summary": "268 points · 283 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:23.907810+00:00"
+    "fetched_at": "2026-10-12T00:59:34.653551+00:00"
   },
   {
     "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
     "url": "https://theonion.com/archivehunt/",
     "source": "hackernews",
-    "summary": "229 points · 31 comments",
+    "summary": "239 points · 32 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T00:29:24.850787+00:00"
+    "fetched_at": "2026-10-12T00:59:35.110146+00:00"
   }
 ]

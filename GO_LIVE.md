@@ -14,9 +14,14 @@ flat consumer feed, all fetchers exit 0 with zero keys set). Repo stays
 [scripts/build_site.py] --topic pages--> topics/*.html
                         --rich API-->   api/v1/trends.json  (full editorial schema)
                         --tag index-->  api/v1/hashtags.json
-                        --api index-->  api/v1/index.json
-                        --schema-->     api/v1/schema/trend.json
+                        --api index-->  api/v1/index.json  (v0.2.0: self-describing manifest)
+                        --schemas-->    api/v1/schema/*.json (draft-07, one per endpoint)
+                        --velocity-->   api/v1/velocity.json (Oracle input: hourly snapshots)
                         --llms-->       llms.txt / llms-full.txt
+      |
+[node scripts/build_forecasts.js] --Oracle output--> api/v1/forecasts.json
+      |              (uses assets/js/trajectory.js directly — same classifier as the dashboard;
+      |               patches api/v1/index.json to add the forecasts entry)
       |
 [pipeline/aggregate.py] --flat consumer feed--> api/v1/trends.flat.json
                                                api/v1/trends.flat.js (JSONP)
@@ -32,6 +37,8 @@ pre-rendered. There is no server, no database, no runtime dependency.
 | file | shape | use when |
 |---|---|---|
 | `api/v1/trends.json` | `{generated_at, count, topics:[...]}` — full dossiers (angles, hooks, guide_links, sources[], first_seen/last_seen, stale flag) | deep integration, topic pages |
+| `api/v1/velocity.json` | `{topic_id: [[iso_ts, velocity, opportunity], ...]}` — hourly Oracle input snapshots | agent trajectory classification |
+| `api/v1/forecasts.json` | `{generated_at, counts, peaking_48h[], rising_fast[], cooling_off[], steady[], projections{}}` — precomputed Oracle trajectories (projections, never guarantees) | "peaking in 48h" without running JS |
 | `api/v1/trends.flat.json` | `{generated_at, sample, source_count, trends:[{id,title,source,url,velocity,opportunity_score,hashtags[],detected_at}]}` | the flat contract — client-side fetch, opportunity-ranked list |
 
 **CORS situation (decided 2026-10-11):** pure static hosts like GitHub Pages

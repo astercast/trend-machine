@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine API manifest",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "generated_at",
+    "base",
+    "endpoints",
+    "deprecated",
+    "changelog",
+    "usage"
+  ],
+  "properties": {
+    "name": {
+      "const": "trend-machine"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "base": {
+      "type": "string"
+    },
+    "endpoints": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/endpoint"
+      }
+    },
+    "deprecated": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "changelog": {
+      "type": "string"
+    },
+    "usage": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "endpoint": {
+      "type": "object",
+      "required": [
+        "path",
+        "description",
+        "updated"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        },
+        "updated": {
+          "type": "string"
+        },
+        "records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine trends envelope",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "count",
+    "topics"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "$ref": "trend.json"
+      }
+    }
+  }
+}

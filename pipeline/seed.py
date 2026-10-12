@@ -42,7 +42,9 @@ T("six-seven-meme", "\"6-7\" — Gen Alpha's defining brainrot joke",
   "Born from Skrilla's viral TikTok song \"Doot Doot\" and LaMelo Ball edits, the phrase \"six-seveeeeen\" exploded across classrooms worldwide. South Park aired a parody episode on Oct 15. Random, meaningless, inescapable — the signature joke of Gen Alpha internet culture.",
   "meme", ["tiktok", "youtube"], ["#67", "#sixseven", "#brainrot"], 92, "medium",
   "2026-09-01T00:00:00-07:00",
-  [("LatestLY", "https://www.latestly.com/social-viral/67-meme-takes-over-schools-and-internet-from-tiktok-viral-hit-to-south-park-parody-how-a-random-number-became-the-defining-joke-of-gen-alphas-brainrot-culture-7166579.html")],
+  # 2026-10-11: the original LatestLY source 410'd (publisher removed the
+  # article) — replaced with the live Wikipedia overview. Never link dead.
+  [("Wikipedia", "https://en.wikipedia.org/wiki/6-7_(meme)")],
   ["Explain the meme to millennials/parents (reaction gold)",
    "Teacher/parent POV: surviving the 67 epidemic",
    "Rank every 67 variant from cringe to elite"],

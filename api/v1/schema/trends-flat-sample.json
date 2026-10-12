@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine flat feed sample",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "sample",
+    "source_count",
+    "note",
+    "trends"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "sample": {
+      "const": true
+    },
+    "source_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "note": {
+      "type": "string"
+    },
+    "trends": {
+      "type": "array",
+      "items": {
+        "$ref": "trends-flat.json#/definitions/flatTrend"
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 Live trending-topic intelligence: what to make content about TODAY.
 Machine-readable: api/v1/trends.json (sort by opportunity_score desc).
-Generated: 2026-10-12T00:29:45.490818+00:00 · 341 topics.
+Generated: 2026-10-12T01:06:54.006700+00:00 · 341 topics.
 
 ## Hottest right now
 - "6-7" — Gen Alpha's defining brainrot joke (opportunity 92, velocity 92) — topics/six-seven-meme.html
@@ -20,9 +20,14 @@ Generated: 2026-10-12T00:29:45.490818+00:00 · 341 topics.
 culture, entertainment, gaming, meme, music, news, sports, tech
 
 ## API
-- api/v1/trends.json — all topics
+- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts
+- api/v1/trends.json — all topics, full dossiers
+- api/v1/trends.flat.json — flat opportunity-ranked feed (stale excluded)
+- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)
+- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output)
 - api/v1/hashtags.json — tag index
-- api/v1/schema/trend.json — schema
+- api/v1/schema/ — draft-07 schemas for every endpoint
+- AGENT.md — how an agent uses this tracker (end-to-end workflows)
 
 ## Oracle (flagship)
 - oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic

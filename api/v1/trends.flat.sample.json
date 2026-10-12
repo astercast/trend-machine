@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T00:29:47.033116+00:00",
+  "generated_at": "2026-10-12T01:07:29.781190+00:00",
   "sample": true,
   "source_count": 41,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
@@ -7,8 +7,8 @@
     {
       "id": "six-seven-meme",
       "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
-      "source": "LatestLY",
-      "url": "https://www.latestly.com/social-viral/67-meme-takes-over-schools-and-internet-from-tiktok-viral-hit-to-south-park-parody-how-a-random-number-became-the-defining-joke-of-gen-alphas-brainrot-culture-7166579.html",
+      "source": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/6-7_(meme)",
       "velocity": 92,
       "opportunity_score": 92,
       "hashtags": [
@@ -27,7 +27,7 @@
         "meme"
       ],
       "sources": [
-        "LatestLY"
+        "Wikipedia"
       ]
     },
     {

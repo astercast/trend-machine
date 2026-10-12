@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine flat consumer feed",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "sample",
+    "source_count",
+    "trends"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "sample": {
+      "const": false,
+      "description": "false = live feed (the labeled sample twin uses trends-flat-sample.json)"
+    },
+    "source_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trends": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/flatTrend"
+      }
+    }
+  },
+  "definitions": {
+    "flatTrend": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "source",
+        "url",
+        "velocity",
+        "opportunity_score",
+        "hashtags",
+        "detected_at",
+        "summary",
+        "category",
+        "platforms",
+        "format_tags",
+        "sources"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "description": "First source name, or 'seed' for editorial seed topics."
+        },
+        "url": {
+          "type": "string"
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "opportunity_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "hashtags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "detected_at": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "format_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

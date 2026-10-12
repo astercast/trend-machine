@@ -23,7 +23,8 @@
       "type": "string"
     },
     "summary": {
-      "type": "string"
+      "type": "string",
+      "description": "Seeded topics may carry researched starting-point figures in the summary \u2014 treat as baselines, not live measurements."
     },
     "category": {
       "type": "string"
@@ -69,6 +70,9 @@
     },
     "seeded": {
       "type": "boolean"
+    },
+    "seed_note": {
+      "type": "string"
     },
     "sources": {
       "type": "array",

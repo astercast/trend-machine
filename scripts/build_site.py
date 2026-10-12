@@ -262,32 +262,42 @@ def main():
             tags.setdefault(h, []).append(t["id"])
     with open(os.path.join(api, "hashtags.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "tags": tags}, f, indent=2)
-    with open(os.path.join(api, "index.json"), "w") as f:
-        json.dump({"name": "trend-machine", "version": "0.1.0",
-                   "generated_at": data["generated_at"],
-                   "endpoints": {
-                       "trends": "api/v1/trends.json",
-                       "hashtags": "api/v1/hashtags.json",
-                       "schema": "api/v1/schema/trend.json"},
-                   "usage": "GET api/v1/trends.json, sort by opportunity_score desc for the hottest plays."},
-                  f, indent=2)
-    schema = {
-        "$schema": "http://json-schema.org/draft-07/schema#",
+    # api/v1/velocity.json — Oracle input: hourly velocity snapshots, the exact
+    # same shape as data/velocity_history.json ({topic_id: [[iso, vel, opp]]}).
+    # (data/velocity_history.json is the pipeline working copy; api/v1 is the
+    # public contract. Shape is identical so the dashboard math ports 1:1.)
+    with open(os.path.join(api, "velocity.json"), "w") as f:
+        json.dump(history, f, ensure_ascii=False)
+    print(f"[build] api/v1/velocity.json ({len(history)} topics)")
+
+    DRAFT = "http://json-schema.org/draft-07/schema#"
+
+    def schema_path(name):
+        return f"api/v1/schema/{name}.json"
+
+    TOPIC = {
+        "$schema": DRAFT,
         "title": "trend-machine topic",
         "type": "object",
         "required": ["id", "title", "summary", "category", "platforms",
                      "hashtags", "velocity", "opportunity_score",
                      "first_seen", "last_seen", "sources"],
         "properties": {
-            "id": {"type": "string"}, "title": {"type": "string"},
-            "summary": {"type": "string"}, "category": {"type": "string"},
+            "id": {"type": "string"},
+            "title": {"type": "string"},
+            "summary": {"type": "string",
+                       "description": "Seeded topics may carry researched starting-point figures in the summary — treat as baselines, not live measurements."},
+            "category": {"type": "string"},
             "platforms": {"type": "array", "items": {"type": "string"}},
             "hashtags": {"type": "array", "items": {"type": "string"}},
             "velocity": {"type": "integer", "minimum": 0, "maximum": 100},
             "saturation": {"type": "string", "enum": ["low", "medium", "high"]},
             "opportunity_score": {"type": "integer", "minimum": 0, "maximum": 100},
-            "first_seen": {"type": "string"}, "last_seen": {"type": "string"},
-            "stale": {"type": "boolean"}, "seeded": {"type": "boolean"},
+            "first_seen": {"type": "string"},
+            "last_seen": {"type": "string"},
+            "stale": {"type": "boolean"},
+            "seeded": {"type": "boolean"},
+            "seed_note": {"type": "string"},
             "sources": {"type": "array", "items": {"type": "object",
                 "required": ["name", "url"]}},
             "angles": {"type": "array", "items": {"type": "string"}},
@@ -297,8 +307,269 @@ def main():
             "guide_links": {"type": "array", "items": {"type": "string"}},
         },
     }
-    with open(os.path.join(api, "schema", "trend.json"), "w") as f:
-        json.dump(schema, f, indent=2)
+
+    FLAT_TREND = {
+        "type": "object",
+        "required": ["id", "title", "source", "url", "velocity",
+                     "opportunity_score", "hashtags", "detected_at",
+                     "summary", "category", "platforms", "format_tags",
+                     "sources"],
+        "properties": {
+            "id": {"type": "string"}, "title": {"type": "string"},
+            "source": {"type": "string",
+                       "description": "First source name, or 'seed' for editorial seed topics."},
+            "url": {"type": "string"},
+            "velocity": {"type": "integer", "minimum": 0, "maximum": 100},
+            "opportunity_score": {"type": "integer", "minimum": 0, "maximum": 100},
+            "hashtags": {"type": "array", "items": {"type": "string"}},
+            "detected_at": {"type": "string"},
+            "summary": {"type": "string"},
+            "category": {"type": "string"},
+            "platforms": {"type": "array", "items": {"type": "string"}},
+            "format_tags": {"type": "array", "items": {"type": "string"}},
+            "sources": {"type": "array", "items": {"type": "string"}},
+        },
+    }
+
+    FORECAST = {
+        "type": "object",
+        "required": ["id", "title", "state", "n_snapshots",
+                     "latest_velocity", "slope_per_hour", "accel",
+                     "peak_in_hours", "summary", "label"],
+        "properties": {
+            "id": {"type": "string"}, "title": {"type": "string"},
+            "state": {"type": "string", "enum": ["accelerating", "rising",
+                      "peaking", "fading", "steady", "insufficient"]},
+            "n_snapshots": {"type": "integer", "minimum": 0},
+            "latest_velocity": {"type": "integer"},
+            "slope_per_hour": {"type": "number"},
+            "accel": {"type": "number"},
+            "peak_in_hours": {"type": ["number", "null"],
+                              "description": "null when no peak is projected in the 48h window"},
+            "summary": {"type": "string"},
+            "label": {"type": "string",
+                      "description": "Honest human label: always 'projection from N snapshots — not a guarantee'."},
+        },
+    }
+
+    SCHEMAS = {
+        # canonical topic dossier record (one item of api/v1/trends.json)
+        "trend": TOPIC,
+        "trends": {
+            "$schema": DRAFT,
+            "title": "trend-machine trends envelope",
+            "type": "object",
+            "required": ["generated_at", "count", "topics"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "count": {"type": "integer", "minimum": 0},
+                "topics": {"type": "array", "items": {"$ref": "trend.json"}},
+            },
+        },
+        # flat consumer feed (live, opportunity-ranked)
+        "trends-flat": {
+            "$schema": DRAFT,
+            "title": "trend-machine flat consumer feed",
+            "type": "object",
+            "required": ["generated_at", "sample", "source_count", "trends"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "sample": {"const": False,
+                           "description": "false = live feed (the labeled sample twin uses trends-flat-sample.json)"},
+                "source_count": {"type": "integer", "minimum": 0},
+                "trends": {"type": "array",
+                           "items": {"$ref": "#/definitions/flatTrend"}},
+            },
+            "definitions": {"flatTrend": FLAT_TREND},
+        },
+        # labeled sample twin of the flat feed (development only)
+        "trends-flat-sample": {
+            "$schema": DRAFT,
+            "title": "trend-machine flat feed sample",
+            "type": "object",
+            "required": ["generated_at", "sample", "source_count", "note",
+                         "trends"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "sample": {"const": True},
+                "source_count": {"type": "integer", "minimum": 0},
+                "note": {"type": "string"},
+                "trends": {"type": "array",
+                           "items": {"$ref": "trends-flat.json#/definitions/flatTrend"}},
+            },
+        },
+        "hashtags": {
+            "$schema": DRAFT,
+            "title": "trend-machine hashtag index",
+            "type": "object",
+            "required": ["generated_at", "tags"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "tags": {"type": "object",
+                         "additionalProperties": {"type": "array",
+                                                  "items": {"type": "string"}}},
+            },
+        },
+        "velocity": {
+            "$schema": DRAFT,
+            "title": "trend-machine velocity snapshots",
+            "description": "Oracle input: per-topic hourly velocity/opportunity snapshots, ascending by timestamp. Points are [iso_ts, velocity, opportunity].",
+            "type": "object",
+            "additionalProperties": {
+                "type": "array",
+                "items": {"type": "array", "minItems": 3, "maxItems": 3,
+                          "items": [{"type": "string"},
+                                    {"type": "integer", "minimum": 0, "maximum": 100},
+                                    {"type": "integer", "minimum": 0, "maximum": 100}]},
+            },
+        },
+        # self-describing manifest itself
+        "index": {
+            "$schema": DRAFT,
+            "title": "trend-machine API manifest",
+            "type": "object",
+            "required": ["name", "version", "generated_at", "base",
+                         "endpoints", "deprecated", "changelog", "usage"],
+            "properties": {
+                "name": {"const": "trend-machine"},
+                "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+                "generated_at": {"type": "string"},
+                "base": {"type": "string"},
+                "endpoints": {
+                    "type": "object",
+                    "additionalProperties": {"$ref": "#/definitions/endpoint"},
+                },
+                "deprecated": {"type": "array", "items": {"type": "string"}},
+                "changelog": {"type": "string"},
+                "usage": {"type": "string"},
+            },
+            "definitions": {
+                "endpoint": {
+                    "type": "object",
+                    "required": ["path", "description", "updated"],
+                    "properties": {
+                        "path": {"type": "string"},
+                        "description": {"type": "string"},
+                        "schema": {"type": "string"},
+                        "updated": {"type": "string"},
+                        "records": {"type": "integer", "minimum": 0},
+                        "notes": {"type": "string"},
+                    },
+                },
+            },
+        },
+        "forecasts": {
+            "$schema": DRAFT,
+            "title": "trend-machine Oracle forecasts",
+            "description": ("Precomputed trajectory classifications from assets/js/trajectory.js "
+                            "(the same classifier as the Oracle dashboard). Every forecast is a "
+                            "projection from N snapshots — never a guarantee."),
+            "type": "object",
+            "required": ["generated_at", "method", "honesty", "counts",
+                         "peaking_48h", "rising_fast", "cooling_off",
+                         "steady", "projections"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "method": {"type": "string"},
+                "honesty": {"type": "string"},
+                "counts": {"type": "object",
+                           "properties": {
+                               "peaking_48h": {"type": "integer"},
+                               "rising_fast": {"type": "integer"},
+                               "cooling_off": {"type": "integer"},
+                               "steady": {"type": "integer"},
+                               "insufficient": {"type": "integer"}}},
+                "peaking_48h": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
+                "rising_fast": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
+                "cooling_off": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
+                "steady": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
+                "projections": {"type": "object",
+                                "additionalProperties": {"$ref": "#/definitions/forecast"}},
+            },
+            "definitions": {"forecast": FORECAST},
+        },
+    }
+
+    for sname, sdoc in SCHEMAS.items():
+        with open(os.path.join(api, "schema", sname + ".json"), "w") as f:
+            json.dump(sdoc, f, indent=2)
+    print(f"[build] {len(SCHEMAS)} endpoint schemas -> api/v1/schema/")
+
+    # ---- self-describing manifest (wave 5) ----
+    stamp = data["generated_at"]
+    live = [t for t in topics if not t.get("stale")]
+    seeded = [t for t in topics if t.get("seeded")]
+
+    def endpoint(path, description, schema=None, records=None, notes=None):
+        e = {"path": path, "description": description, "updated": stamp}
+        if schema:
+            e["schema"] = schema
+        if records is not None:
+            e["records"] = records
+        if notes:
+            e["notes"] = notes
+        return e
+
+    manifest = {
+        "name": "trend-machine",
+        "version": "0.2.0",
+        "generated_at": stamp,
+        "base": ("api/v1/ relative to the site root. Works on any static host; "
+                 "no auth, no keys, no rate limits."),
+        "endpoints": {
+            "trends": endpoint(
+                "api/v1/trends.json",
+                ("All topics, full editorial dossiers: angles, hooks, sources[], "
+                 "first_seen/last_seen, stale + seeded flags. The canonical record — "
+                 "sort by opportunity_score desc for the hottest plays."),
+                schema_path("trends"), len(topics),
+                ("Seeded topics (seeded:true) carry researched starting-point figures "
+                 "in their summaries — treat as baselines, not live measurements.")),
+            "trends_flat": endpoint(
+                "api/v1/trends.flat.json",
+                ("Flat consumer feed: opportunity-ranked, stale topics excluded. "
+                 "Lightweight 'what to make content about today' list."),
+                schema_path("trends-flat"), len(live)),
+            "trends_flat_sample": endpoint(
+                "api/v1/trends.flat.sample.json",
+                "Clearly-labeled SAMPLE (sample:true) derived from seeded topics — for consumer development only, never the live path.",
+                schema_path("trends-flat-sample"), len(seeded)),
+            "trends_flat_js": endpoint(
+                "api/v1/trends.flat.js",
+                ("JSONP twin of the flat feed — trendsCallback({...}). The CORS-safe "
+                 "fallback for pure static hosts that cannot send "
+                 "Access-Control-Allow-Origin headers."),
+                schema_path("trends-flat")),
+            "hashtags": endpoint(
+                "api/v1/hashtags.json",
+                "Tag -> topic-id index.",
+                schema_path("hashtags"), len(tags)),
+            "velocity": endpoint(
+                "api/v1/velocity.json",
+                ("Oracle input: hourly velocity/opportunity snapshots per topic, "
+                 "ascending by timestamp. Classify with assets/js/trajectory.js "
+                 "(UMD — loadable in node) or read the precomputed "
+                 "api/v1/forecasts.json."),
+                schema_path("velocity"), len(history),
+                "Snapshots are real pipeline observations; topics with <3 snapshots get no forecast."),
+            "schemas": endpoint(
+                "api/v1/schema/",
+                "JSON Schema (draft-07) for every endpoint.",
+                None, len(SCHEMAS)),
+        },
+        "deprecated": [],
+        "changelog": ("0.2.0 (2026-10-11): index.json endpoints are now objects "
+                      "{path, description, schema, updated, records, notes} (was plain "
+                      "path strings). Added flat-feed, JSONP, velocity entries; "
+                      "draft-07 schemas for every endpoint under api/v1/schema/. "
+                      "api/v1/forecasts.json is added by the post-build forecast step "
+                      "(scripts/build_forecasts.js) when present."),
+        "usage": ("GET api/v1/trends.json, sort by opportunity_score desc for the "
+                  "hottest plays. Start at api/v1/index.json for the full endpoint map."),
+    }
+    with open(os.path.join(api, "index.json"), "w") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[build] api/v1/index.json manifest v{manifest['version']}")
 
     # llms.txt
     lines = ["# Trend Machine", "",
@@ -310,8 +581,11 @@ def main():
         lines.append(f"- {t['title']} (opportunity {t['opportunity_score']}, velocity {t['velocity']}) — topics/{t['id']}.html")
     lines += ["", "## Categories",
               ", ".join(sorted({t['category'] for t in topics})), "",
-              "## API", "- api/v1/trends.json — all topics", "- api/v1/hashtags.json — tag index",
-              "- api/v1/schema/trend.json — schema", "",
+              "## API", "- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
+              "- api/v1/trends.json — all topics, full dossiers", "- api/v1/trends.flat.json — flat opportunity-ranked feed (stale excluded)",
+              "- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)", "- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output)",
+              "- api/v1/hashtags.json — tag index", "- api/v1/schema/ — draft-07 schemas for every endpoint",
+              "- AGENT.md — how an agent uses this tracker (end-to-end workflows)", "",
               "## Oracle (flagship)", "- oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
               "- launch-plan.html — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
               "## Algorithm mechanics (Oct 2026)", "- algorithms.html — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated", "",

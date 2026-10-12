@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine Oracle forecasts",
+  "description": "Precomputed trajectory classifications from assets/js/trajectory.js (the same classifier as the Oracle dashboard). Every forecast is a projection from N snapshots \u2014 never a guarantee.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "method",
+    "honesty",
+    "counts",
+    "peaking_48h",
+    "rising_fast",
+    "cooling_off",
+    "steady",
+    "projections"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "honesty": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "peaking_48h": {
+          "type": "integer"
+        },
+        "rising_fast": {
+          "type": "integer"
+        },
+        "cooling_off": {
+          "type": "integer"
+        },
+        "steady": {
+          "type": "integer"
+        },
+        "insufficient": {
+          "type": "integer"
+        }
+      }
+    },
+    "peaking_48h": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/forecast"
+      }
+    },
+    "rising_fast": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/forecast"
+      }
+    },
+    "cooling_off": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/forecast"
+      }
+    },
+    "steady": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/forecast"
+      }
+    },
+    "projections": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/forecast"
+      }
+    }
+  },
+  "definitions": {
+    "forecast": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "state",
+        "n_snapshots",
+        "latest_velocity",
+        "slope_per_hour",
+        "accel",
+        "peak_in_hours",
+        "summary",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "accelerating",
+            "rising",
+            "peaking",
+            "fading",
+            "steady",
+            "insufficient"
+          ]
+        },
+        "n_snapshots": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "latest_velocity": {
+          "type": "integer"
+        },
+        "slope_per_hour": {
+          "type": "number"
+        },
+        "accel": {
+          "type": "number"
+        },
+        "peak_in_hours": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "null when no peak is projected in the 48h window"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string",
+          "description": "Honest human label: always 'projection from N snapshots \u2014 not a guarantee'."
+        }
+      }
+    }
+  }
+}
