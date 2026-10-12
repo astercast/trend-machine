@@ -2890,6 +2890,28 @@
       "n_snapshots": 3,
       "confidence": "low",
       "resolved": null
+    },
+    {
+      "topic_id": "david-oyelowo-is-most-excited-to-share-his-movie-c",
+      "title": "David Oyelowo Is Most Excited to Share His Movie “Clarissa” with His 4 Kids For Its ‘Authentic’ Portrayal of Nigeria (Exclusive)",
+      "forecast_at": "2026-10-12T04:40:11.037Z",
+      "state": "accelerating",
+      "peak_in_hours": null,
+      "latest_velocity": 70,
+      "n_snapshots": 3,
+      "confidence": "low",
+      "resolved": null
+    },
+    {
+      "topic_id": "panama-declares-state-of-emergency-as-powerful-qua",
+      "title": "Panama declares state of emergency as powerful quake aftershocks rattle communities | 7.7 and 6.6 in magnitude",
+      "forecast_at": "2026-10-12T04:40:11.037Z",
+      "state": "peaking",
+      "peak_in_hours": 0.5,
+      "latest_velocity": 70,
+      "n_snapshots": 3,
+      "confidence": "low",
+      "resolved": null
     }
   ]
 }
