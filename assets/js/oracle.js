@@ -137,7 +137,9 @@
       '<span class="oc-nums num">v' + a.latestVelocity + " · " +
       (a.slopePerHour >= 0 ? "+" : "") + a.slopePerHour.toFixed(1) + "/hr</span></div>" +
       '<p class="oc-honest">' + esc(honest) + "</p>" +
-      '<div class="oc-actions"><a class="btn btn-sm" href="launch-plan.html?topic=' + esc(t.id) + '">🗓 7-day battle plan</a></div>' +
+      '<div class="oc-actions"><a class="btn btn-sm" href="launch-plan.html?topic=' + esc(t.id) + '">🗓 7-day battle plan</a> ' +
+      '<button type="button" class="btn btn-sm oc-remix" data-remix="' + esc(t.id) +
+      '" aria-label="Remix this topic: copy angles, hook lines, hashtags and best platforms as plain text">⧉ Remix</button></div>' +
       "</article>";
   }
 
@@ -266,6 +268,38 @@
         "signals that drove the call, and — where per-platform history " +
         "exists — a per-platform split. The scorecard above is the Oracle's " +
         "own forecast-vs-actual record.</p>";
+
+      // wave 17: one-click "Remix this" on every forecast card — the same
+      // pure text builder the dossier pages use (copies angles + hooks +
+      // hashtags + best platforms as plain text).
+      main.addEventListener("click", function (ev) {
+        var btn = ev.target && ev.target.closest
+          ? ev.target.closest(".oc-remix") : null;
+        if (!btn || btn.disabled) { return; }
+        var topic = byId[btn.getAttribute("data-remix")];
+        if (!topic || typeof TM_RemixText === "undefined" ||
+            typeof TMCopy === "undefined") { return; }
+        // The dossier export payload maps opportunity_score -> opportunity;
+        // do the same mapping here so the card export reads identically.
+        var payload = {
+          id: topic.id, title: topic.title, category: topic.category,
+          opportunity: topic.opportunity_score, velocity: topic.velocity,
+          angles: topic.angles, hooks: topic.hooks, hashtags: topic.hashtags,
+          platforms: topic.platforms, format_tags: topic.format_tags
+        };
+        var text = TM_RemixText.buildRemixText(payload);
+        btn.disabled = true;
+        TMCopy.copyText(text, function (ok) {
+          var n = (topic.angles || []).length + (topic.hooks || []).length;
+          btn.textContent = ok ? "✓ Copied " + n + " angles/hooks" : "Copy failed";
+          btn.classList.toggle("is-copied", ok);
+          setTimeout(function () {
+            btn.disabled = false;
+            btn.classList.remove("is-copied");
+            btn.textContent = "⧉ Remix";
+          }, 1800);
+        });
+      });
     }).catch(function () {
       statusEl.innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the data</h2>' +

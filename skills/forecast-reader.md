@@ -25,6 +25,13 @@ forecasts (`data/v1/forecasts.json`), or explaining why a trend is
   (forecast-vs-actual, 48h horizon). `status: "building history"` and
   `hit_rate: null` until 10+ forecasts resolve — quote that honestly,
   never invent a hit rate.
+- `data/v1/lifecycle.json` (wave 17): the ignition/burnout layer —
+  every topic's current lifecycle stage (`building`/`steady`/`warming`/
+  `igniting`/`peaking`/`cooling`/`burned-out`) from its real velocity
+  snapshots, per-topic stage ribbons, and the last-24h `ignitions` /
+  `burnouts` boards. Stages are readouts, never predictions: a topic
+  that is `igniting` crossed v≥70 while climbing; `burned-out` went
+  cold after a hot run. Same thresholds as the classifier — no drift.
 - Fallback: `data/v1/velocity.json` + `assets/js/trajectory.js`
   (`require()` it in node — same classifier the dashboard uses).
 

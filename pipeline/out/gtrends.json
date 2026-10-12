@@ -1,5 +1,101 @@
 [
   {
+    "title": "daniil medvedev",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742515+00:00"
+  },
+  {
+    "title": "nyt connections hints",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742589+00:00"
+  },
+  {
+    "title": "police",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742611+00:00"
+  },
+  {
+    "title": "mayor of kingstown season 5",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742631+00:00"
+  },
+  {
+    "title": "tommy paul",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742646+00:00"
+  },
+  {
+    "title": "sony playstation",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742663+00:00"
+  },
+  {
+    "title": "shane gillis snl monologue",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742680+00:00"
+  },
+  {
+    "title": "ej johnson",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T09:53:28.742695+00:00"
+  },
+  {
     "title": "maria sakkari",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
@@ -9,31 +105,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T09:12:16.455391+00:00"
-  },
-  {
-    "title": "ej johnson",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455466+00:00"
-  },
-  {
-    "title": "openai",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455488+00:00"
+    "fetched_at": "2026-10-12T09:53:28.742709+00:00"
   },
   {
     "title": "us cold weather forecast winter",
@@ -45,78 +117,6 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T09:12:16.455506+00:00"
-  },
-  {
-    "title": "reverse engineer anything",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455526+00:00"
-  },
-  {
-    "title": "kospi",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455542+00:00"
-  },
-  {
-    "title": "rockstar games",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455558+00:00"
-  },
-  {
-    "title": "daniel johnson storage unit burglary",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455574+00:00"
-  },
-  {
-    "title": "medal",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455589+00:00"
-  },
-  {
-    "title": "stefanos tsitsipas",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T09:12:16.455604+00:00"
+    "fetched_at": "2026-10-12T09:53:28.742724+00:00"
   }
 ]

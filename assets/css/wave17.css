@@ -1,0 +1,142 @@
+/* ============================================================
+   TREND MACHINE — wave17.css (wave 17 · Oracle layer 2)
+   Lifecycle board: ignition/burnout stages from real snapshots.
+   Stage palette stays in the mission-control phosphor family;
+   ribbons are static SVG (reduced-motion safe by design).
+   ============================================================ */
+
+/* ---------- lifecycle board ---------- */
+.lc-board {
+  border: 1px solid var(--line, #1e2b26);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 18px 0 8px;
+  background: rgba(8, 14, 12, 0.55);
+}
+.lc-census {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+.lc-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono, monospace);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-dim, #9fb3aa);
+  border: 1px solid var(--line, #1e2b26);
+  border-radius: 6px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.35);
+}
+.lc-count i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+}
+.lc-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .lc-cols { grid-template-columns: 1fr; }
+}
+.lc-coltitle {
+  font-family: var(--mono, monospace);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink, #d7e3dc);
+  margin: 0 0 8px;
+}
+.lc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--line, #1e2b26);
+  font-size: 13px;
+}
+.lc-row:last-child { border-bottom: 0; }
+.lc-row-main { min-width: 0; }
+.lc-row-main a {
+  color: var(--ink, #d7e3dc);
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lc-row-main a:hover { color: var(--phosphor, #39ff88); text-decoration: underline; }
+.lc-trans {
+  font-family: var(--mono, monospace);
+  font-size: 11px;
+  color: var(--ink-dim, #9fb3aa);
+}
+.lc-row-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.lc-ago {
+  font-size: 11px;
+  color: var(--ink-dim, #9fb3aa);
+  white-space: nowrap;
+}
+.lc-empty {
+  font-size: 13px;
+  color: var(--ink-dim, #9fb3aa);
+  font-style: italic;
+  margin: 6px 0;
+}
+
+/* ---------- stage chips + ribbons ---------- */
+.lc-chip {
+  display: inline-block;
+  font-family: var(--mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 2px 7px;
+  white-space: nowrap;
+}
+.lc-building  { color: #8a938f; }
+.lc-steady     { color: #5b8cc0; }
+.lc-warming    { color: #d8a03c; }
+.lc-igniting   { color: #ff7a1a; box-shadow: 0 0 8px rgba(255, 122, 26, 0.35); }
+.lc-peaking    { color: #39ff88; box-shadow: 0 0 8px rgba(57, 255, 136, 0.35); }
+.lc-cooling    { color: #4cc3ff; }
+.lc-burned-out { color: #a06868; }
+.lc-ribbon { display: inline-block; vertical-align: middle; }
+.wr-table .lc-cell { white-space: nowrap; }
+.wr-plan a {
+  font-size: 15px;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.wr-plan a:hover { background: rgba(57, 255, 136, 0.12); }
+
+/* visually-hidden text (screen-reader labels inside icon links) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

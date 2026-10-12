@@ -9,7 +9,7 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433330+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708597+00:00"
   },
   {
     "title": "Ukraine strikes Yandex data center",
@@ -21,7 +21,19 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433396+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708697+00:00"
+  },
+  {
+    "title": "Canadian Thanksgiving",
+    "url": "https://bsky.app/search?q=Canadian+Thanksgiving",
+    "source": "bluesky-trending",
+    "summary": "Canadians share holiday greetings, turkey dinner stories, and lists of what they are grateful for.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-12T09:56:20.708714+00:00"
   },
   {
     "title": "Resume gap interview meme",
@@ -33,43 +45,19 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433414+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708727+00:00"
   },
   {
-    "title": "Citroën revives the 2CV as electric",
-    "url": "https://bsky.app/search?q=Citro%C3%ABn+revives+the+2CV+as+electric",
+    "title": "Man dies in Yorkshire tiger attack",
+    "url": "https://bsky.app/search?q=Man+dies+in+Yorkshire+tiger+attack",
     "source": "bluesky-trending",
-    "summary": "Stellantis shows a new battery-powered version of the classic French car, nicknamed \"La deuche.\"",
+    "summary": "Police say a man was pronounced dead at the scene after a tiger enclosure incident near Doncaster.",
     "hashtags": [],
     "category": null,
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433474+00:00"
-  },
-  {
-    "title": "Hellraiser: Revival game launches",
-    "url": "https://bsky.app/search?q=Hellraiser%3A+Revival+game+launches",
-    "source": "bluesky-trending",
-    "summary": "Critics review Boss Team Games' survival horror adaptation of Clive Barker's franchise",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-12T09:13:57.433497+00:00"
-  },
-  {
-    "title": "Zelensky offers elections for ceasefire",
-    "url": "https://bsky.app/search?q=Zelensky+offers+elections+for+ceasefire",
-    "source": "bluesky-trending",
-    "summary": "Volodymyr Zelensky says Ukraine can vote if Russia agrees to a 60-day truce, answering Donald Trump.",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-12T09:13:57.433508+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708737+00:00"
   },
   {
     "title": "Trump strikes diesel deal with Russia",
@@ -81,19 +69,19 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433517+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708747+00:00"
   },
   {
-    "title": "Saudi airport strikes",
-    "url": "https://bsky.app/search?q=Saudi+airport+strikes",
+    "title": "Zelensky offers elections for ceasefire",
+    "url": "https://bsky.app/search?q=Zelensky+offers+elections+for+ceasefire",
     "source": "bluesky-trending",
-    "summary": "Early posts report blasts at airports in Riyadh and Abha; claims of Houthi role and deaths.",
+    "summary": "Volodymyr Zelensky says Ukraine can vote if Russia agrees to a 60-day truce, answering Donald Trump.",
     "hashtags": [],
     "category": null,
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433526+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708756+00:00"
   },
   {
     "title": "Parliament debates rejoining the EU",
@@ -105,18 +93,30 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433535+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708765+00:00"
   },
   {
-    "title": "UK ministers plan heat pump cuts",
-    "url": "https://bsky.app/search?q=UK+ministers+plan+heat+pump+cuts",
+    "title": "Green party Zionism vote row",
+    "url": "https://bsky.app/search?q=Green+party+Zionism+vote+row",
     "source": "bluesky-trending",
-    "summary": "Boiler upgrade scheme savings would help fund defense as the IFS warns of a £35bn budget hole.",
+    "summary": "Leader Zack Polanski signals a party overhaul and vows never to tolerate antisemitism.",
     "hashtags": [],
     "category": null,
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-12T09:13:57.433546+00:00"
+    "fetched_at": "2026-10-12T09:56:20.708773+00:00"
+  },
+  {
+    "title": "Bluesky \"immune to popularity\" meme",
+    "url": "https://bsky.app/search?q=Bluesky+%22immune+to+popularity%22+meme",
+    "source": "bluesky-trending",
+    "summary": "Users quote a viral post about Odyssey of the Mind and iO West to share their own nerdy pasts.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-12T09:56:20.708824+00:00"
   }
 ]

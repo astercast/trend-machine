@@ -30,11 +30,15 @@ const LEDGER_FILE = path.join(ROOT, "data", "forecast_ledger.json");
 const API = path.join(ROOT, "data", "v1");
 const OUT = path.join(API, "forecasts.json");
 const ACC_OUT = path.join(API, "forecast-accuracy.json");
+const LIFE_OUT = path.join(API, "lifecycle.json");
 const MANIFEST = path.join(API, "index.json");
 
 const T = require("../assets/js/trajectory.js");
 const R = require("./resolution-lib.js"); // wave 14: shared resolution rules
                                           // (hit/miss/unverifiable + evidence)
+const L = require("../assets/js/lifecycle-lib.js"); // wave 17: ignition/
+                                          // burnout lifecycle stages from
+                                          // the classifier's own thresholds
 
 // --- wave 6: forecast-accuracy log -----------------------------------------
 const HORIZON_H = 48;            // forecasts resolve after 48h
@@ -344,6 +348,30 @@ function main() {
               ", hits=" + accPayload.counts.hits + ", status=" + accPayload.status +
               " -> " + ACC_OUT);
 
+  // Wave 17: lifecycle layer — ignition/burnout stages from real snapshots.
+  const life = L.summarize(history, now.getTime());
+  const withTitles = function (rows) {
+    return rows.map(function (r) {
+      return { id: r.id, title: (topics[r.id] || {}).title || r.id,
+               from: r.from, to: r.to, ts: r.ts };
+    });
+  };
+  const lifePayload = {
+    generated_at: now.toISOString(),
+    method: "assets/js/lifecycle-lib.js summarize() — stage-per-snapshot classification using the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr)",
+    honesty: "Stages are readouts from recorded velocity snapshots, not predictions. " +
+             "Topics with fewer than 3 snapshots report 'building'. The ignitions/burnouts " +
+             "boards list stage transitions that actually happened in the last 24h.",
+    counts: life.counts,
+    ignitions: withTitles(life.ignitions),
+    burnouts: withTitles(life.burnouts),
+    topics: life.topics
+  };
+  writeJSON(LIFE_OUT, lifePayload);
+  console.log("[lifecycle] " + Object.keys(life.topics).length + " topics staged -> " +
+              LIFE_OUT + " (ignitions=" + life.ignitions.length +
+              ", burnouts=" + life.burnouts.length + ")");
+
   // Patch the manifest so index.json stays accurate: add the forecasts and
   // forecast-accuracy entries only when the files actually exist.
   try {
@@ -364,8 +392,22 @@ function main() {
       records: accPayload.counts.recorded,
       notes: "Started 2026-10-11 — first resolutions land 48h later. Nothing backfilled."
     };
+    manifest.endpoints.lifecycle = {
+      path: "data/v1/lifecycle.json",
+      description: "Ignition/burnout lifecycle layer: every topic's current lifecycle stage (building/steady/warming/igniting/peaking/cooling/burned-out) classified from its real velocity snapshots, per-topic stage ribbons, and the last-24h ignitions/burnouts boards. Stages use the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr) — readouts, not predictions.",
+      schema: "data/v1/schema/lifecycle.json",
+      updated: lifePayload.generated_at,
+      records: Object.keys(lifePayload.topics).length,
+      notes: "Stages are computed from the same snapshots as forecasts.json; the boards show transitions that actually happened in the last 24h."
+    };
+    // Wave 17: manifest v0.7.0 — idempotent: only bump once per schema era.
+    if (manifest.version !== "0.7.0") {
+      manifest.version = "0.7.0";
+      var entry = "0.7.0 (2026-10-12): Wave 17 — Oracle layer 2. New data/v1/lifecycle.json endpoint: every topic's ignition/burnout lifecycle stage (building/steady/warming/igniting/peaking/cooling/burned-out) classified from its real velocity snapshots with the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr) — readouts, not predictions; per-topic stage ribbons; last-24h ignitions/burnouts boards. Additive only, no shape changes. ";
+      manifest.changelog = entry + (manifest.changelog || "");
+    }
     writeJSON(MANIFEST, manifest);
-    console.log("[forecasts] data/v1/index.json patched with forecasts + forecast_accuracy endpoints");
+    console.log("[forecasts] data/v1/index.json patched with forecasts + forecast_accuracy + lifecycle endpoints");
   } catch (e) {
     console.log("[forecasts] WARNING: could not patch manifest: " + e.message);
   }

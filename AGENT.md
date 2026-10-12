@@ -142,7 +142,9 @@ Draft-07 for every endpoint: `trends.json`, `trends-flat.json`,
 `platform-velocity.json`, `forecast-accuracy.json`, `forecasts.json`,
 `meme-formats.json`, `trend.json` (one dossier), `seed-freshness.json` (wave 14:
 seed-staleness audit — verdicts healthy / stale-source / stale-untracked /
-flaky-warning per seeded topic), and `index.json` itself.
+flaky-warning per seeded topic), `lifecycle.json` (wave 17: ignition/burnout
+lifecycle stage per topic + last-24h ignitions/burnouts boards — readouts from
+real snapshots, never predictions), and `index.json` itself.
 
 ## End-to-end workflows
 

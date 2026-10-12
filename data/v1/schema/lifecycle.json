@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine Oracle lifecycle layer",
+  "description": "Wave 17: ignition/burnout lifecycle stages for every topic, classified from real velocity snapshots by assets/js/lifecycle-lib.js using the classifier's own thresholds (ignition line v=70, rise/fall \u00b11.5/hr). Stages are readouts, never predictions. Topics with fewer than 3 snapshots report 'building'.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "method",
+    "honesty",
+    "counts",
+    "ignitions",
+    "burnouts",
+    "topics"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "honesty": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "ignitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "from",
+          "to",
+          "ts"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string",
+            "enum": [
+              "building",
+              "steady",
+              "warming",
+              "igniting",
+              "peaking",
+              "cooling",
+              "burned-out"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "enum": [
+              "igniting",
+              "peaking"
+            ]
+          },
+          "ts": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "burnouts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "from",
+          "to",
+          "ts"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string",
+            "enum": [
+              "building",
+              "steady",
+              "warming",
+              "igniting",
+              "peaking",
+              "cooling",
+              "burned-out"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "enum": [
+              "cooling",
+              "burned-out"
+            ]
+          },
+          "ts": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "topics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "stage",
+          "since",
+          "ribbon"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": [
+              "building",
+              "steady",
+              "warming",
+              "igniting",
+              "peaking",
+              "cooling",
+              "burned-out"
+            ]
+          },
+          "since": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ribbon": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -23,11 +23,13 @@
   var FORECASTS_URL = "data/v1/forecasts.json";
   var HIST_URL = "data/velocity_history.json"; // same URL oracle.js uses
   var ACC_URL = "data/v1/forecast-accuracy.json";
+  var LIFE_URL = "data/v1/lifecycle.json"; // wave 17, best-effort
 
   var SWEEP_PERIOD_MS = 14000;
   var PING_STAGGER_MS = 130;
 
   var W = window.WarRoomLib;
+  var LC = window.LifecycleLib; // wave 17: stage classifier (client-side fallback)
 
   function getJSON(url) {
     return fetch(url).then(function (r) {
@@ -54,6 +56,43 @@
     if (state === "rising") { return "rising"; }
     if (state === "fading") { return "cooling"; }
     return state;
+  }
+
+  /* ---------- lifecycle helpers (wave 17) ---------- */
+
+  var STAGE_COLORS = {
+    "building": "#8a938f", "steady": "#5b8cc0", "warming": "#d8a03c",
+    "igniting": "#ff7a1a", "peaking": "#39ff88", "cooling": "#4cc3ff",
+    "burned-out": "#a06868"
+  };
+  function stageLabel(st) {
+    return st === "burned-out" ? "burned out" : String(st || "building");
+  }
+  function hoursAgo(ts) {
+    var ms = Date.parse(ts);
+    if (isNaN(ms)) { return ""; }
+    var h = Math.floor((Date.now() - ms) / 3600000);
+    if (h < 1) { return "minutes ago"; }
+    return h + "h ago";
+  }
+  // Static SVG ribbon: one block per snapshot, oldest → newest, colored
+  // by stage. Reduced-motion safe (no animation), screen-reader labeled.
+  function ribbonSVG(stages, id) {
+    stages = (stages || []).slice(-24);
+    if (!stages.length) { return ""; }
+    var w = 7, gap = 2, h = 14;
+    var rects = stages.map(function (st, i) {
+      return '<rect x="' + (i * (w + gap)) + '" y="0" width="' + w +
+        '" height="' + h + '" fill="' + (STAGE_COLORS[st] || "#888") + '"/>';
+    }).join("");
+    var aria = "Lifecycle stages, oldest to newest: " +
+      stages.map(stageLabel).join(", ");
+    return '<svg class="lc-ribbon" width="' + (stages.length * (w + gap)) +
+      '" height="' + h + '" role="img" focusable="false" aria-label="' +
+      esc(aria) + '">' + rects + "</svg>";
+  }
+  function stageChip(st) {
+    return '<span class="lc-chip lc-' + esc(st) + '">' + esc(stageLabel(st)) + "</span>";
   }
 
   /* ---------- theatre rendering ---------- */
@@ -266,12 +305,15 @@
       (counts.pending || 0) + " pending · " + (counts.resolved || 0) + " resolved</span>" +
       '<span class="wr-led wr-led-ok"><i></i>CONTACTS · ' +
       (counts.peaking || 0) + " peaking · " + (counts.rising || 0) + " rising · " +
-      (counts.cooling || 0) + " cooling</span></div>";
+      (counts.cooling || 0) + " cooling</span>" +
+      '<span class="wr-led wr-led-ok"><i></i>WIRE · ' +
+      (counts.topics || 0) + " topics · " + (counts.snapshots || 0) +
+      " snapshots</span></div>";
   }
 
   /* ---------- contacts table (the full content, always present) ---------- */
 
-  function contactsTable(contacts) {
+  function contactsTable(contacts, life) {
     var rows = contacts.map(function (c, i) {
       var peak = (c.state === "peaking")
         ? (c.peak_in_hours === 0 ? "now" : "~" + Math.round(c.peak_in_hours) + "h")
@@ -281,28 +323,89 @@
       var accel = (c.accel || 0);
       var accelTxt = (accel >= 0 ? "+" : "") + accel.toFixed(1) + "/hr²";
       var conf = c.confidence ? c.confidence.level : "—";
+      // wave 17: lifecycle stage + ribbon from the lifecycle layer
+      var lc = life && life.topics ? life.topics[c.id] : null;
+      var lcCell = lc
+        ? '<span class="lc-cell">' + stageChip(lc.stage) + " " +
+          ribbonSVG(lc.ribbon, c.id) + "</span>"
+        : '<span class="lc-cell">—</span>';
       return "<tr>" +
         '<td class="num">' + (i + 1) + "</td>" +
         '<th scope="row"><a href="topics/' + esc(c.id) + '.html">' + esc(c.title) + "</a></th>" +
         '<td><span class="wr-state ' + stateClass(c.state) + '">' +
         esc(stateLabel(c.state)) + "</span></td>" +
+        "<td>" + lcCell + "</td>" +
         '<td class="num">' + c.latest_velocity + "</td>" +
         '<td class="num">' + slopeTxt + "</td>" +
         '<td class="num">' + accelTxt + "</td>" +
         '<td class="num">' + peak + "</td>" +
         '<td>' + esc(conf) + "</td>" +
-        '<td class="num">' + c.n_snapshots + "</td></tr>";
+        '<td class="num">' + c.n_snapshots + "</td>" +
+        '<td class="wr-plan"><a href="launch-plan.html?topic=' + esc(c.id) +
+          '"><span aria-hidden="true">⚔</span><span class="sr-only">Build a ' +
+          "7-day battle plan for " + esc(c.title) + "</span></a></td></tr>";
     }).join("");
     return '<div class="wr-tablewrap"><table class="wr-table">' +
       "<caption>Every contact on the scope, with the real numbers behind it. " +
       "№ matches the numbered blip on the scope. Slope and accel come from " +
       "the fitted trajectory — accel explains why some curves bend hard. " +
-      "No velocity values are predicted.</caption>" +
+      "Lifecycle is the topic's current ignition/burnout stage from its " +
+      "recorded snapshots. No velocity values are predicted. " +
+      "⚔ opens a 7-day battle plan for the topic.</caption>" +
       "<thead><tr><th scope=\"col\">№</th><th scope=\"col\">Contact</th><th scope=\"col\">State</th>" +
+      "<th scope=\"col\">Lifecycle</th>" +
       "<th scope=\"col\">V now</th><th scope=\"col\">Slope</th>" +
       "<th scope=\"col\">Accel</th><th scope=\"col\">Peak in</th>" +
-      "<th scope=\"col\">Confidence</th><th scope=\"col\">Snapshots</th></tr></thead>" +
+      "<th scope=\"col\">Confidence</th><th scope=\"col\">Snapshots</th>" +
+      "<th scope=\"col\">Plan</th></tr></thead>" +
       "<tbody>" + rows + "</tbody></table></div>";
+  }
+
+  /* ---------- lifecycle board (wave 17) ---------- */
+
+  function boardColHTML(heading, rows, emptyNote, life) {
+    var body = rows.length
+      ? rows.slice(0, 12).map(function (r) {
+          var rib = (life.topics[r.id] || {}).ribbon || [];
+          return '<div class="lc-row"><div class="lc-row-main">' +
+            '<a href="topics/' + esc(r.id) + '.html">' + esc(r.title || r.id) + "</a>" +
+            '<span class="lc-trans">' + esc(stageLabel(r.from)) + " → " +
+            esc(stageLabel(r.to)) + "</span></div>" +
+            '<div class="lc-row-side">' + ribbonSVG(rib, r.id) +
+            '<span class="lc-ago num">' + esc(hoursAgo(r.ts)) + "</span></div></div>";
+        }).join("")
+      : '<p class="lc-empty">' + esc(emptyNote) + "</p>";
+    return '<div class="lc-col"><h4 class="lc-coltitle">' + esc(heading) +
+      "</h4>" + body + "</div>";
+  }
+
+  function lifecycleBoardHTML(life) {
+    if (!life || !life.counts) { return ""; }
+    var order = ["igniting", "peaking", "warming", "cooling",
+                 "burned-out", "steady", "building"];
+    var census = order.map(function (st) {
+      var n = life.counts[st] || 0;
+      return '<span class="lc-count lc-' + esc(st) + '"><i></i><span class="num">' +
+        n + "</span>&nbsp;" + esc(stageLabel(st)) + "</span>";
+    }).join("");
+    return '<h3 class="wr-sub">Lifecycle board</h3>' +
+      '<div class="lc-board" role="region" aria-label="Trend lifecycle board">' +
+      '<p class="kicker">ignition / burnout · last 24h</p>' +
+      '<div class="lc-census" role="status" aria-label="Topics per lifecycle stage">' +
+      census + "</div>" +
+      '<div class="lc-cols">' +
+      boardColHTML("▲ Ignitions", life.ignitions || [],
+        "No ignitions in the last 24h — the board lights up when a topic's " +
+        "velocity crosses the ignition line.", life) +
+      boardColHTML("▼ Burnouts", life.burnouts || [],
+        "No burnouts in the last 24h — nothing that ran hot has gone cold today.",
+        life) +
+      "</div>" +
+      '<p class="wr-honest">Lifecycle stages are readouts from recorded ' +
+      "velocity snapshots — what happened, not what's next. The ignition " +
+      "line is v≥70; climbing/falling is ±1.5/hr — the classifier's own " +
+      "thresholds. Ribbons show each recorded snapshot's stage, oldest to " +
+      "newest.</p></div>";
   }
 
   /* ---------- resolution queue ---------- */
@@ -346,9 +449,25 @@
     if (!root || !W) { return; }
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    Promise.all([getJSON(FORECASTS_URL), getJSON(HIST_URL), getJSON(ACC_URL)])
+    // wave 17: the lifecycle layer is best-effort — if the static file is
+    // missing (older deploy), compute the same stages client-side from the
+    // snapshot history. Same lib, same thresholds, no drift.
+    var lifeP = fetch(LIFE_URL).then(function (r) {
+      if (!r.ok) { throw new Error("http " + r.status); }
+      return r.json();
+    }).catch(function () {
+      return null;
+    });
+
+    Promise.all([getJSON(FORECASTS_URL), getJSON(HIST_URL), getJSON(ACC_URL), lifeP])
       .then(function (res) {
         var fc = res[0], hist = res[1] || {}, acc = res[2] || null;
+        var life = res[3];
+        if ((!life || !life.topics) && LC) {
+          var s = LC.summarize(hist, Date.now());
+          life = { generated_at: new Date().toISOString(), counts: s.counts,
+                   ignitions: s.ignitions, burnouts: s.burnouts, topics: s.topics };
+        }
         var contacts = (fc.peaking_48h || []).concat(fc.rising_fast || [], fc.cooling_off || []);
         if (!contacts.length) {
           root.innerHTML = '<div class="wr-quiet" role="note"><h2>Scope is quiet</h2>' +
@@ -369,7 +488,12 @@
           rising: (fc.rising_fast || []).length,
           cooling: (fc.cooling_off || []).length,
           pending: acc && acc.counts ? acc.counts.pending : 0,
-          resolved: acc && acc.counts ? acc.counts.resolved : 0
+          resolved: acc && acc.counts ? acc.counts.resolved : 0,
+          // wave 17: the wire's own health, straight from the snapshot store
+          topics: Object.keys(hist).length,
+          snapshots: Object.keys(hist).reduce(function (n, k) {
+            return n + ((hist[k] || []).length);
+          }, 0)
         };
 
         root.innerHTML =
@@ -396,7 +520,8 @@
           "pings are illustrative motion, not data — " +
           (reduced ? "motion is off for you, and nothing is hidden: " : "") +
           "the full numbers are in the table below.</p>" +
-          '<h3 class="wr-sub">Contacts on scope</h3>' + contactsTable(contacts) +
+          lifecycleBoardHTML(life) +
+          '<h3 class="wr-sub">Contacts on scope</h3>' + contactsTable(contacts, life) +
           '<h3 class="wr-sub">Resolution queue</h3>' + queueHTML(acc);
 
         missionClock(fc.generated_at || "");
