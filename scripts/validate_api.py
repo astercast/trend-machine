@@ -238,10 +238,24 @@ def main():
         print("[validate] forecast-accuracy.json absent (node step skipped) — not validated")
 
     # manifest self-consistency
+    # 2026-10-12: resolve vercel.json rewrites first — the manifest advertises
+    # public URLs (e.g. /api/v1/trends.flat.js), which may rewrite to a file
+    # living elsewhere (static/v1/trends.flat.js — no static .js under api/).
+    rewrites = {}
+    try:
+        vcfg = json.load(open(os.path.join(ROOT, "vercel.json")))
+        for r in vcfg.get("rewrites", []):
+            src, dst = r.get("source", ""), r.get("destination", "")
+            if src.startswith("/") and dst.startswith("/"):
+                rewrites[src.lstrip("/")] = dst.lstrip("/")
+    except (OSError, ValueError):
+        pass
     eps = manifest.get("endpoints", {})
     for key, e in eps.items():
-        p = os.path.join(ROOT, e.get("path", ""))
-        is_dir = e.get("path", "").endswith("/")
+        mpath = e.get("path", "")
+        mpath = rewrites.get(mpath, mpath)
+        p = os.path.join(ROOT, mpath)
+        is_dir = mpath.endswith("/")
         check(f"manifest[{key}].path exists",
               os.path.isdir(p) if is_dir else os.path.isfile(p), e.get("path", ""))
         s = e.get("schema")

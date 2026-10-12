@@ -24,7 +24,9 @@ flat consumer feed, all fetchers exit 0 with zero keys set). Repo stays
       |               patches api/v1/index.json to add the forecasts entry)
       |
 [pipeline/aggregate.py] --flat consumer feed--> api/v1/trends.flat.json
-                                               api/v1/trends.flat.js (JSONP)
+                                               static/v1/trends.flat.js (JSONP;
+                                                 public URL /api/v1/trends.flat.js
+                                                 via vercel.json rewrite)
                                                api/v1/trends.flat.sample.json
 ```
 
@@ -45,7 +47,10 @@ pre-rendered. There is no server, no database, no runtime dependency.
 cannot emit `Access-Control-Allow-Origin` headers, and the creator site is a
 *different origin*, so `fetch(api/v1/trends.flat.json)` from it would be
 blocked if the two sites live on different domains. Implemented solution:
-every refresh also writes **`api/v1/trends.flat.js`** — a JSONP twin:
+every refresh also writes the JSONP twin **`static/v1/trends.flat.js`**
+(file lives outside `api/` — Vercel deploys every `.js` under `api/` as a
+serverless function; the public URL stays `/api/v1/trends.flat.js` via a
+`vercel.json` rewrite):
 
 ```html
 <script>

@@ -172,6 +172,9 @@ except urllib.error.HTTPError as ex:
 # 8. static fallback present (the §3 coexistence gate — function AND static
 #    file both return 200 on the same deploy)
 chk "static fallback trends.flat.json" curl -sf --max-time 15 "$BASE/api/v1/trends.flat.json"
+# 2026-10-12: the JSONP twin lives at static/v1/ (no static .js under api/);
+# the public /api/v1 URL is preserved by the vercel.json rewrite.
+chk "static fallback trends.flat.js (rewrite)" curl -sf --max-time 15 "$BASE/api/v1/trends.flat.js"
 chk "static fallback forecasts.json" curl -sf --max-time 15 "$BASE/api/v1/forecasts.json"
 chk "static fallback velocity.json" curl -sf --max-time 15 "$BASE/api/v1/velocity.json"
 chk "static fallback envelope schema" curl -sf --max-time 15 "$BASE/api/v1/schema/envelope.json"
@@ -197,7 +200,7 @@ assert v['installCommand']==\"echo 'no dependencies'\"
 # api/v1/trends.flat.js (the static JSONP twin) as a serverless function
 fns=v['functions']
 assert set(fns)=={'api/health.js','api/trends.js','api/forecasts.js','api/velocity.js','api/cron/wire.js'}, fns
-assert all(f.get('runtime')=='nodejs22.x' for f in fns.values())
+assert all(f=={'maxDuration':10} for f in fns.values()), fns  # 2026-10-12: entries need >=1 valid property (maxDuration 10 = Hobby limit); runtime key must NEVER be set for Node
 assert v['cleanUrls'] is True and v['trailingSlash'] is False
 "
 

@@ -8,21 +8,27 @@
       "schedule": "0 13 * * *"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/api/v1/trends.flat.js",
+      "destination": "/static/v1/trends.flat.js"
+    }
+  ],
   "functions": {
     "api/health.js": {
-      "runtime": "nodejs22.x"
+      "maxDuration": 10
     },
     "api/trends.js": {
-      "runtime": "nodejs22.x"
+      "maxDuration": 10
     },
     "api/forecasts.js": {
-      "runtime": "nodejs22.x"
+      "maxDuration": 10
     },
     "api/velocity.js": {
-      "runtime": "nodejs22.x"
+      "maxDuration": 10
     },
     "api/cron/wire.js": {
-      "runtime": "nodejs22.x"
+      "maxDuration": 10
     }
   },
   "headers": [

@@ -1,484 +1,497 @@
 [
   {
-    "title": "Will Linux phones become a viable alternative to the Android/iOS duopoly?",
-    "url": "https://amosbbatto.wordpress.com/2026/10/05/linux-phones-alternative/",
-    "source": "hackernews",
-    "summary": "66 points · 44 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:54:41.267936+00:00"
-  },
-  {
     "title": "Type-safe HTML templating in Zig",
     "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
     "source": "hackernews",
-    "summary": "50 points · 21 comments",
+    "summary": "85 points · 38 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:43.087959+00:00"
+    "fetched_at": "2026-10-12T08:05:48.088889+00:00"
   },
   {
     "title": "Fingerprints are the new cookies",
     "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
     "source": "hackernews",
-    "summary": "274 points · 129 comments",
+    "summary": "332 points · 148 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:45.650260+00:00"
+    "fetched_at": "2026-10-12T08:05:49.244482+00:00"
+  },
+  {
+    "title": "Postgres isn't slow, your storage is",
+    "url": "https://clickhouse.com/blog/posette-talk-recap-postgres-isnt-slow-your-storage-is",
+    "source": "hackernews",
+    "summary": "17 points · 7 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:05:50.589843+00:00"
+  },
+  {
+    "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
+    "url": "https://github.com/SaarthurR/atticus-mac",
+    "source": "hackernews",
+    "summary": "18 points · 0 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:05:51.788226+00:00"
   },
   {
     "title": "Total Annihilation, rebuilt for modern computers",
     "url": "https://nanolathe.gg",
     "source": "hackernews",
-    "summary": "453 points · 189 comments",
+    "summary": "483 points · 191 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:47.338587+00:00"
+    "fetched_at": "2026-10-12T08:05:53.167076+00:00"
   },
   {
     "title": "Calculus with Julia",
     "url": "https://jverzani.github.io/CalculusWithJuliaNotes.jl/",
     "source": "hackernews",
-    "summary": "78 points · 1 comments",
+    "summary": "101 points · 5 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:49.253387+00:00"
+    "fetched_at": "2026-10-12T08:05:54.164293+00:00"
   },
   {
     "title": "Whatever became of holography? (2011)",
     "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
     "source": "hackernews",
-    "summary": "107 points · 52 comments",
+    "summary": "121 points · 57 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:51.328666+00:00"
+    "fetched_at": "2026-10-12T08:05:55.360066+00:00"
   },
   {
-    "title": "Cartographers of North Korea (2019)",
-    "url": "https://cartographers-nk.wonyoung.so/",
+    "title": "Will Linux phones become a viable alternative to the Android/iOS duopoly?",
+    "url": "https://amosbbatto.wordpress.com/2026/10/05/linux-phones-alternative/",
     "source": "hackernews",
-    "summary": "231 points · 41 comments",
+    "summary": "116 points · 113 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:54.506376+00:00"
+    "fetched_at": "2026-10-12T08:05:56.388080+00:00"
   },
   {
     "title": "No portable way to detect string-to-float conversion errors in standard C",
     "url": "https://sebsite.pw/w/20261009-strtod.html",
     "source": "hackernews",
-    "summary": "28 points · 19 comments",
+    "summary": "39 points · 33 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:54:57.192147+00:00"
+    "fetched_at": "2026-10-12T08:05:57.672768+00:00"
+  },
+  {
+    "title": "Cartographers of North Korea (2019)",
+    "url": "https://cartographers-nk.wonyoung.so/",
+    "source": "hackernews",
+    "summary": "246 points · 46 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:05:59.228568+00:00"
   },
   {
     "title": "Doory – Open-Source Canva",
     "url": "https://github.com/shaongitbd/doory",
     "source": "hackernews",
-    "summary": "80 points · 18 comments",
+    "summary": "94 points · 25 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:01.046028+00:00"
-  },
-  {
-    "title": "Every US Electrical Outlet Explained [video]",
-    "url": "https://www.youtube.com/watch?v=n_1wzYQwnts",
-    "source": "hackernews",
-    "summary": "13 points · 14 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:03.414907+00:00"
+    "fetched_at": "2026-10-12T08:06:00.529636+00:00"
   },
   {
     "title": "The gap in shared understanding of LLM capability is widening",
     "url": "https://twitter.com/karpathy/status/2109361546505966046",
     "source": "hackernews",
-    "summary": "403 points · 564 comments",
+    "summary": "433 points · 604 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:05.519169+00:00"
-  },
-  {
-    "title": "Google is illegaly cutting forest to build data centers",
-    "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
-    "source": "hackernews",
-    "summary": "374 points · 101 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:07.966128+00:00"
-  },
-  {
-    "title": "Illustration Beyond Proof",
-    "url": "https://terrytao.wordpress.com/2026/10/11/illustration-beyond-proof/",
-    "source": "hackernews",
-    "summary": "57 points · 0 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:09.882568+00:00"
-  },
-  {
-    "title": "Passkeys are a trap",
-    "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-    "source": "hackernews",
-    "summary": "499 points · 275 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:12.690812+00:00"
+    "fetched_at": "2026-10-12T08:06:02.617623+00:00"
   },
   {
     "title": "Local Indexing to reduce tool calling and token usage",
     "url": "https://tedhaley.ca/pensieve/",
     "source": "hackernews",
-    "summary": "61 points · 13 comments",
+    "summary": "69 points · 16 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:14.353084+00:00"
+    "fetched_at": "2026-10-12T08:06:03.819537+00:00"
   },
   {
-    "title": "Chapter 1 of \"Ways of Seeing\" by John Berger (1972)",
-    "url": "https://www.ways-of-seeing.com/ch1",
+    "title": "Illustration Beyond Proof",
+    "url": "https://terrytao.wordpress.com/2026/10/11/illustration-beyond-proof/",
     "source": "hackernews",
-    "summary": "101 points · 15 comments",
+    "summary": "61 points · 0 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:17.401122+00:00"
+    "fetched_at": "2026-10-12T08:06:05.010601+00:00"
   },
   {
-    "title": "Vectorized CLZ and CTZ",
-    "url": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/",
+    "title": "Every US Electrical Outlet Explained [video]",
+    "url": "https://www.youtube.com/watch?v=n_1wzYQwnts",
     "source": "hackernews",
-    "summary": "35 points · 5 comments",
+    "summary": "22 points · 19 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:19.586986+00:00"
-  },
-  {
-    "title": "Recursive self-improvement through collective intelligence",
-    "url": "https://pub.sakana.ai/mass/",
-    "source": "hackernews",
-    "summary": "101 points · 53 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:26.411672+00:00"
-  },
-  {
-    "title": "Programmable pigments: Photochromic nanoparticle inks for rewritable tattoos",
-    "url": "https://www.cell.com/matter-light/fulltext/S3117-5848(26)00119-5",
-    "source": "hackernews",
-    "summary": "42 points · 7 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:29.270034+00:00"
-  },
-  {
-    "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-    "url": "https://theonion.com/archivehunt/",
-    "source": "hackernews",
-    "summary": "302 points · 46 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:31.661055+00:00"
-  },
-  {
-    "title": "NYC's \"Click to Cancel\" rule is now in effect",
-    "url": "https://www.nyc.gov/main/click-to-cancel",
-    "source": "hackernews",
-    "summary": "433 points · 209 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:33.945424+00:00"
-  },
-  {
-    "title": "ClickHouse C – Talk to ClickHouse using its native binary protocol",
-    "url": "https://github.com/ClickHouse/clickhouse-c",
-    "source": "hackernews",
-    "summary": "32 points · 1 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:35.903313+00:00"
-  },
-  {
-    "title": "I guess I'm using WebP now?",
-    "url": "https://anderegg.ca/2026/10/08/i-guess-im-using-webp-now",
-    "source": "hackernews",
-    "summary": "97 points · 103 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:37.318552+00:00"
-  },
-  {
-    "title": "Crest – an Arc-inspired open-source browser for Mac",
-    "url": "https://crestbrowser.com/",
-    "source": "hackernews",
-    "summary": "6 points · 1 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:39.026042+00:00"
-  },
-  {
-    "title": "Tattoos you can turn on and off",
-    "url": "https://www.livescience.com/technology/cool-chemistry-trick-allows-new-tattoos-to-turn-on-and-off",
-    "source": "hackernews",
-    "summary": "50 points · 22 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:41.064204+00:00"
-  },
-  {
-    "title": "Bot traffic from Yandex",
-    "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
-    "source": "hackernews",
-    "summary": "609 points · 244 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:45.684559+00:00"
-  },
-  {
-    "title": "3rd Yandex Cloud Data Center Was Hit",
-    "url": "https://status.yandex.cloud/en/incidents/2136",
-    "source": "hackernews",
-    "summary": "574 points · 698 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:48.167113+00:00"
-  },
-  {
-    "title": "A city-building game in which the city would prefer you didn't",
-    "url": "https://housing.over.pizza/",
-    "source": "hackernews",
-    "summary": "531 points · 190 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:51.636831+00:00"
-  },
-  {
-    "title": "Lobbying is corruption",
-    "url": "https://carette.xyz/posts/lobbying_and_corruption/",
-    "source": "hackernews",
-    "summary": "516 points · 285 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:55:53.670687+00:00"
+    "fetched_at": "2026-10-12T08:06:06.530173+00:00"
   },
   {
     "title": "Passkeys are a trap",
     "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
     "source": "hackernews",
-    "summary": "499 points · 275 comments",
+    "summary": "557 points · 310 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:56.592128+00:00"
+    "fetched_at": "2026-10-12T08:06:07.910569+00:00"
   },
   {
-    "title": "Build your own decision model",
-    "url": "https://nishtahir.com/build-your-own-decision-model/",
+    "title": "Chapter 1 of \"Ways of Seeing\" by John Berger (1972)",
+    "url": "https://www.ways-of-seeing.com/ch1",
     "source": "hackernews",
-    "summary": "455 points · 102 comments",
+    "summary": "105 points · 16 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:55:58.509684+00:00"
+    "fetched_at": "2026-10-12T08:06:08.926115+00:00"
   },
   {
-    "title": "Total Annihilation, rebuilt for modern computers",
-    "url": "https://nanolathe.gg",
+    "title": "Running the unmodified Linux amdgpu driver on an iPad",
+    "url": "https://github.com/Geramy/LemonSeed-Studio",
     "source": "hackernews",
-    "summary": "454 points · 189 comments",
+    "summary": "3 points · 0 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:00.567122+00:00"
+    "fetched_at": "2026-10-12T08:06:10.127969+00:00"
   },
   {
-    "title": "Nitter: Update Oct 10th seeking funding and legal help",
-    "url": "https://nitter.net",
+    "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+    "url": "https://theonion.com/archivehunt/",
     "source": "hackernews",
-    "summary": "445 points · 232 comments",
+    "summary": "311 points · 46 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:03.451123+00:00"
+    "fetched_at": "2026-10-12T08:06:11.372012+00:00"
+  },
+  {
+    "title": "Draw by Pinging IPv6 Addresses",
+    "url": "https://pings.utwente.io/",
+    "source": "hackernews",
+    "summary": "7 points · 2 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:12.938039+00:00"
+  },
+  {
+    "title": "Crest – an Arc-inspired open-source browser for Mac",
+    "url": "https://crestbrowser.com/",
+    "source": "hackernews",
+    "summary": "12 points · 5 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:14.963828+00:00"
+  },
+  {
+    "title": "Vectorized CLZ and CTZ",
+    "url": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/",
+    "source": "hackernews",
+    "summary": "41 points · 5 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:15.892466+00:00"
   },
   {
     "title": "NYC's \"Click to Cancel\" rule is now in effect",
     "url": "https://www.nyc.gov/main/click-to-cancel",
     "source": "hackernews",
-    "summary": "434 points · 209 comments",
+    "summary": "453 points · 213 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:05.121694+00:00"
+    "fetched_at": "2026-10-12T08:06:17.255545+00:00"
   },
   {
-    "title": "LineageOS 24",
-    "url": "https://lineageos.org/Changelog-32/",
+    "title": "Recursive self-improvement through collective intelligence",
+    "url": "https://pub.sakana.ai/mass/",
     "source": "hackernews",
-    "summary": "421 points · 174 comments",
+    "summary": "109 points · 58 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:07.870080+00:00"
+    "fetched_at": "2026-10-12T08:06:18.569487+00:00"
   },
   {
-    "title": "`123456' password used in Danish CPR data breach",
-    "url": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
+    "title": "Programmable pigments: Photochromic nanoparticle inks for rewritable tattoos",
+    "url": "https://www.cell.com/matter-light/fulltext/S3117-5848(26)00119-5",
     "source": "hackernews",
-    "summary": "407 points · 216 comments",
+    "summary": "43 points · 7 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:09.602638+00:00"
+    "fetched_at": "2026-10-12T08:06:19.982183+00:00"
+  },
+  {
+    "title": "Bot traffic from Yandex",
+    "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
+    "source": "hackernews",
+    "summary": "621 points · 249 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:22.634326+00:00"
+  },
+  {
+    "title": "3rd Yandex Cloud Data Center Was Hit",
+    "url": "https://status.yandex.cloud/en/incidents/2136",
+    "source": "hackernews",
+    "summary": "580 points · 707 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:24.375593+00:00"
+  },
+  {
+    "title": "Passkeys are a trap",
+    "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+    "source": "hackernews",
+    "summary": "558 points · 310 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:25.725060+00:00"
+  },
+  {
+    "title": "A city-building game in which the city would prefer you didn't",
+    "url": "https://housing.over.pizza/",
+    "source": "hackernews",
+    "summary": "532 points · 191 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:27.065223+00:00"
+  },
+  {
+    "title": "Lobbying is corruption",
+    "url": "https://carette.xyz/posts/lobbying_and_corruption/",
+    "source": "hackernews",
+    "summary": "517 points · 286 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:28.149298+00:00"
+  },
+  {
+    "title": "Total Annihilation, rebuilt for modern computers",
+    "url": "https://nanolathe.gg",
+    "source": "hackernews",
+    "summary": "483 points · 191 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:29.141115+00:00"
+  },
+  {
+    "title": "Build your own decision model",
+    "url": "https://nishtahir.com/build-your-own-decision-model/",
+    "source": "hackernews",
+    "summary": "456 points · 102 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:30.321896+00:00"
+  },
+  {
+    "title": "NYC's \"Click to Cancel\" rule is now in effect",
+    "url": "https://www.nyc.gov/main/click-to-cancel",
+    "source": "hackernews",
+    "summary": "454 points · 213 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:31.221764+00:00"
+  },
+  {
+    "title": "Nitter: Update Oct 10th seeking funding and legal help",
+    "url": "https://nitter.net",
+    "source": "hackernews",
+    "summary": "451 points · 235 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:32.331249+00:00"
   },
   {
     "title": "The gap in shared understanding of LLM capability is widening",
     "url": "https://twitter.com/karpathy/status/2109361546505966046",
     "source": "hackernews",
-    "summary": "404 points · 564 comments",
+    "summary": "433 points · 605 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:11.242040+00:00"
+    "fetched_at": "2026-10-12T08:06:33.436861+00:00"
+  },
+  {
+    "title": "LineageOS 24",
+    "url": "https://lineageos.org/Changelog-32/",
+    "source": "hackernews",
+    "summary": "427 points · 174 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:34.450075+00:00"
+  },
+  {
+    "title": "Google told to halt work on datacentres in Finland over environmental concerns",
+    "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
+    "source": "hackernews",
+    "summary": "419 points · 123 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:35.235187+00:00"
+  },
+  {
+    "title": "`123456' password used in Danish CPR data breach",
+    "url": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
+    "source": "hackernews",
+    "summary": "407 points · 217 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:36.422863+00:00"
   },
   {
     "title": "Bitwarden Dual License Model",
@@ -491,111 +504,111 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:14.524049+00:00"
+    "fetched_at": "2026-10-12T08:06:37.452363+00:00"
   },
   {
     "title": "Documents add to evidence in climate deception case against ExxonMobil",
     "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
     "source": "hackernews",
-    "summary": "394 points · 214 comments",
+    "summary": "396 points · 214 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:17.118066+00:00"
+    "fetched_at": "2026-10-12T08:06:38.487954+00:00"
   },
   {
     "title": "I paid people to try and follow my README",
     "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
     "source": "hackernews",
-    "summary": "384 points · 191 comments",
+    "summary": "388 points · 191 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:22.482115+00:00"
+    "fetched_at": "2026-10-12T08:06:39.251856+00:00"
   },
   {
     "title": "Terence Tao: Math 2.0 [pdf]",
     "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
     "source": "hackernews",
-    "summary": "379 points · 410 comments",
+    "summary": "382 points · 418 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:24.430579+00:00"
-  },
-  {
-    "title": "Google is illegaly cutting forest to build data centers",
-    "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
-    "source": "hackernews",
-    "summary": "378 points · 101 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:56:27.265538+00:00"
+    "fetched_at": "2026-10-12T08:06:40.427577+00:00"
   },
   {
     "title": "IRCv3",
     "url": "https://ircv3.net/",
     "source": "hackernews",
-    "summary": "375 points · 311 comments",
+    "summary": "379 points · 311 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:29.370940+00:00"
+    "fetched_at": "2026-10-12T08:06:41.408097+00:00"
   },
   {
     "title": "I'm sorry, but you still have to think",
     "url": "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/",
     "source": "hackernews",
-    "summary": "360 points · 160 comments",
+    "summary": "370 points · 164 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:31.936873+00:00"
+    "fetched_at": "2026-10-12T08:06:42.288171+00:00"
+  },
+  {
+    "title": "Fingerprints are the new cookies",
+    "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+    "source": "hackernews",
+    "summary": "332 points · 148 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "youtube",
+      "x"
+    ],
+    "fetched_at": "2026-10-12T08:06:43.059162+00:00"
   },
   {
     "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
     "url": "https://github.com/rociiu/talorys",
     "source": "hackernews",
-    "summary": "323 points · 150 comments",
+    "summary": "323 points · 152 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:34.845559+00:00"
+    "fetched_at": "2026-10-12T08:06:43.828657+00:00"
   },
   {
     "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
     "url": "https://theonion.com/archivehunt/",
     "source": "hackernews",
-    "summary": "303 points · 46 comments",
+    "summary": "311 points · 47 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:36.969689+00:00"
+    "fetched_at": "2026-10-12T08:06:44.650424+00:00"
   },
   {
     "title": "Apple/macOS removed from official Unix registry",
@@ -608,33 +621,20 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:38.855112+00:00"
+    "fetched_at": "2026-10-12T08:06:46.104103+00:00"
   },
   {
     "title": "I would like the value of my home to rise, while my property taxes fall",
     "url": "https://conversableeconomist.com/2026/09/28/i-would-like-the-value-of-my-home-to-rise-while-my-property-taxes-fall/",
     "source": "hackernews",
-    "summary": "275 points · 688 comments",
+    "summary": "276 points · 689 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:40.513458+00:00"
-  },
-  {
-    "title": "Fingerprints are the new cookies",
-    "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
-    "source": "hackernews",
-    "summary": "275 points · 130 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "youtube",
-      "x"
-    ],
-    "fetched_at": "2026-10-12T06:56:42.945009+00:00"
+    "fetched_at": "2026-10-12T08:06:47.402774+00:00"
   },
   {
     "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement",
@@ -647,6 +647,6 @@
       "youtube",
       "x"
     ],
-    "fetched_at": "2026-10-12T06:56:47.762712+00:00"
+    "fetched_at": "2026-10-12T08:06:48.704888+00:00"
   }
 ]

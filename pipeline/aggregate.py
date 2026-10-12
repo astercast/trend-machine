@@ -13,6 +13,11 @@ shape client-side:
         sources[] } ] }
 
   api/v1/trends.flat.js   = JSONP twin: trendsCallback({...}) — the CORS-safe
+                              fallback for pure static hosts. NOTE (2026-10-12):
+                              Vercel deploys EVERY .js under api/ as a serverless
+                              function (the functions map is NOT an allowlist),
+                              so the twin lives at static/v1/trends.flat.js and
+                              vercel.json rewrites the public /api/v1 URL to it.
                             fallback for pure static hosts that cannot send
                             Access-Control-Allow-Origin headers (see GO_LIVE.md).
 
@@ -31,7 +36,10 @@ ROOT = os.path.join(HERE, "..")
 STORE = os.path.join(ROOT, "data", "trends.json")
 API = os.path.join(ROOT, "api", "v1")
 OUT_JSON = os.path.join(API, "trends.flat.json")
-OUT_JS = os.path.join(API, "trends.flat.js")
+# 2026-10-12: the JSONP twin lives OUTSIDE api/ — Vercel deploys every .js
+# under api/ as a serverless function (functions map is not an allowlist).
+# Public URL /api/v1/trends.flat.js is preserved via a vercel.json rewrite.
+OUT_JS = os.path.join(ROOT, "static", "v1", "trends.flat.js")
 OUT_SAMPLE = os.path.join(API, "trends.flat.sample.json")
 
 sys.path.insert(0, HERE)
@@ -74,6 +82,7 @@ def write(feed, json_path, with_js=False):
     with open(json_path, "w") as f:
         json.dump(feed, f, indent=2, ensure_ascii=False)
     if with_js:
+        os.makedirs(os.path.dirname(OUT_JS), exist_ok=True)
         with open(OUT_JS, "w") as f:
             f.write("trendsCallback(")
             json.dump(feed, f, ensure_ascii=False)

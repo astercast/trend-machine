@@ -2,7 +2,7 @@
 
 Live trending-topic intelligence: what to make content about TODAY.
 Machine-readable: api/v1/trends.json (sort by opportunity_score desc).
-Generated: 2026-10-12T06:59:52.393849+00:00 · 393 topics.
+Generated: 2026-10-12T08:07:17.645624+00:00 · 393 topics.
 
 ## Hottest right now
 - ["6-7" — Gen Alpha's defining brainrot joke](topics/six-seven-meme.html) (opportunity 92, velocity 92)
@@ -19,9 +19,9 @@ Generated: 2026-10-12T06:59:52.393849+00:00 · 393 topics.
 ## Categories
 culture, entertainment, gaming, meme, music, news, sports, tech
 
-## Trend types (wave 7): 41 formats, 1 format+topic, 
+## Trend types (wave 7): 42 formats, 1 format+topic, 
 ## Meme format families (wave 9): Costume walks (4 topics), POV setups (2 topics), Transition formats (2 topics), Deadpan debate audio (1 topics), Dance hooks (1 topics), Audio-driven skits (1 topics), Prop illusions (1 topics), Mood beds (1 topics), Carousel story reveals (1 topics), Call-out copy formats (1 topics), Chaos-caption dance (1 topics) — formats.html has every family with current examples, evidence, and verification flags.
-351 topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).
+350 topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).
 
 ## API
 - [api/v1/index.json](api/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts

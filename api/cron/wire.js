@@ -63,7 +63,9 @@ const ROOT = path.resolve(__dirname, "..", ".."); // servedRoot = repo root
 const FILES = {
   trends: "api/v1/trends.json",
   flat: "api/v1/trends.flat.json",
-  flatJs: "api/v1/trends.flat.js",
+  flatJs: "static/v1/trends.flat.js", // 2026-10-12: outside api/ — Vercel
+  // deploys every .js under api/ as a function (functions map is not an
+  // allowlist); public URL /api/v1/trends.flat.js preserved via rewrite
   forecasts: "api/v1/forecasts.json",
   velocity: "api/v1/velocity.json",
   platformVelocity: "api/v1/platform-velocity.json",
