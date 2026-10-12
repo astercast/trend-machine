@@ -1,0 +1,2021 @@
+{
+  "generated_at": "2026-10-12T06:04:15.237915+00:00",
+  "method": "Every seeded topic probed: source URL liveness (HTTP HEAD, GET fallback; only a GET 404/410 marks dead), store corroboration (last_seen <= 7d), velocity tracking (series present; a seed with <3 snapshots but a first snapshot <6h old is warming up, not stale). stale-source = dead URL (GET 404/410), never a timeout or HEAD rejection; timeouts are flaky-warning.",
+  "counts": {
+    "healthy": 87,
+    "stale-source": 0,
+    "stale-untracked": 0,
+    "flaky-warning": 6,
+    "seeds": 93
+  },
+  "stale": [],
+  "seeds": [
+    {
+      "id": "2xko-sett",
+      "title": "2XKO drops Sett as surprise champion",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Game8",
+          "url": "https://game8.co/articles/latest/this-weeks-gaming-news-roundup-oct-4-to-oct-10",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "31-days-of-halloween",
+      "title": "\"31 Days of Halloween\" numbered series",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "ai-misunderstanding",
+      "title": "AI misunderstanding scenarios — comedy skits",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "ai-roleplay-comedy",
+      "title": "AI roleplay comedy",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "aion2-launch",
+      "title": "AION 2 launches free-to-play",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "DLCompare",
+          "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "american-girl-possession",
+      "title": "American Girl Doll possession reveal",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "ancestor-photo-prank",
+      "title": "Ancestor Photo Prank",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "and-i-love-her",
+      "title": "Santo & Johnny \"And I Love Her\" — dreamy transition bed",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "battlefield-6-gamepass",
+      "title": "Battlefield 6 hits Game Pass day one",
+      "verification": "verified",
+      "verdict": "flaky-warning",
+      "reason": "1 source URL(s) timed out on probe — retry next sweep, not marked stale",
+      "sources": [
+        {
+          "name": "TrueAchievements",
+          "url": "https://www.trueachievements.com/news/new-xbox-games-october-12",
+          "status": "flaky",
+          "note": "HTTP 403 GET"
+        },
+        {
+          "name": "CapeTimes",
+          "url": "https://capetimes.co.za/technology/gaming/2026-10-10-xbox-game-pass-october-lineup-battlefield-6-new-day-one-drops--spooky-hits/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "be-ok",
+      "title": "\"Be OK\" — happy dance over chaos",
+      "verification": "unverified",
+      "verdict": "flaky-warning",
+      "reason": "2 source URL(s) timed out on probe — retry next sweep, not marked stale",
+      "sources": [
+        {
+          "name": "New Engen (source URL not found on 2026-10-11 re-check)",
+          "url": "",
+          "status": "flaky",
+          "note": "ValueError GET: unknown url type: ''"
+        },
+        {
+          "name": "Later (source URL not found on 2026-10-11 re-check)",
+          "url": "",
+          "status": "flaky",
+          "note": "ValueError GET: unknown url type: ''"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "best-for-you-kylie",
+      "title": "\"I Just Want the Best for You\" — Kylie Jenner advice audio",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "MediaNug",
+          "url": "https://www.medianug.com/tiktok-trending-report",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Vadbav",
+          "url": "https://vadbav.com/i-just-want-the-best-for-you-tiktok-trend",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "bow-bow-bow",
+      "title": "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Vadbav",
+          "url": "https://vadbav.com/bow-bow-bow-zeddy-will-tiktok-trend",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "boynextdoor-animal",
+      "title": "BOYNEXTDOOR \"ANIMAL\" challenge variations",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "breast-cancer-awareness",
+      "title": "#breastcancerawarenessmonth — October giveback",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "canadian-thanksgiving",
+      "title": "Canadian Thanksgiving (Oct 12)",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Bluesky trending",
+          "url": "https://bsky.app",
+          "status": "live",
+          "note": "200 GET"
+        },
+        {
+          "name": "bluesky-trending",
+          "url": "https://bsky.app/search?q=Canadian+Thanksgiving",
+          "status": "live",
+          "note": "200 GET"
+        }
+      ],
+      "last_seen": "2026-10-12T05:43:09.260563+00:00",
+      "last_seen_age_days": 0.01,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "cat-face-ten",
+      "title": "\"My face a 10\" cat photo carousel",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "ceiling-fan-wipe",
+      "title": "Ceiling-fan wipe transitions",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "citytastetest",
+      "title": "#CityTasteTest honest local review",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "cortis-redred",
+      "title": "CORTIS \"REDRED\" wiggle-ears challenge",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "thicket.sh",
+          "url": "https://trends.thicket.sh/cortis-redred-wiggle-ears-challenge-may-2026",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "cozy-fall-jazz",
+      "title": "Cozy-fall jazz beds",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-instagram",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "creepy-fact-storytime",
+      "title": "Creepy Fact Storytime",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "dhurandhar2-grammy",
+      "title": "Dhurandhar 2 enters the Grammy race",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Sacnilk",
+          "url": "https://www.sacnilk.com/entertainmenttopbar/Trending_News",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "did-i-win-this-trend",
+      "title": "\"Did I Win This Trend?\" Costume Reveal",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Vadbav",
+          "url": "https://vadbav.com/did-i-win-this-trend-tiktok-halloween-costume",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "digger-film",
+      "title": "Tom Cruise's \"Digger\" — Iñárritu climate satire splits viewers",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Bluesky trending",
+          "url": "https://bsky.app",
+          "status": "live",
+          "note": "200 GET"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "dip-on-em",
+      "title": "\"DIP ON EM\" — early-stage dance sound",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "emily-thats-all",
+      "title": "\"And Emily… that's all\" audio",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "http://socialbee.com/blog/trending-instagram-memes-this-week/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "fade-into-autumn",
+      "title": "\"Fade Into You\" + \"I just love autumn\" seasonal audio",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "fan-outfit-transition",
+      "title": "@dayannacomas fan-outfit transition",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "fruit-love-island",
+      "title": "AI \"Fruit Love Island\"",
+      "verification": "verified",
+      "verdict": "flaky-warning",
+      "reason": "1 source URL(s) timed out on probe — retry next sweep, not marked stale",
+      "sources": [
+        {
+          "name": "USA Today",
+          "url": "https://www.usatoday.com/story/entertainment/internet-culture/2026/10/01/2026-halloween-costume-ideas-memes-viral-pop-culture/91889223007/",
+          "status": "flaky",
+          "note": "HTTP 402 GET"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "gears-eday",
+      "title": "Gears of War: E-Day launches",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "DLCompare",
+          "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "youtube-invidious",
+          "url": "https://www.youtube.com/watch?v=ADQs87o5lWo",
+          "status": "live",
+          "note": "204 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-12T05:43:12.119810+00:00",
+      "last_seen_age_days": 0.01,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "grr-mondays",
+      "title": "#GrrMondays",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "NapoleonCat",
+          "url": "https://napoleoncat.com/blog/trending-memes/?ref=quuu&utm_content=buffer3986d&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "gta6-robberies",
+      "title": "GTA 6: robberies and partner getaways detailed",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Game8",
+          "url": "https://game8.co/articles/latest/this-weeks-gaming-news-roundup-oct-4-to-oct-10",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "halloween-game-xbox",
+      "title": "\"Halloween: The Game\" storms the Xbox charts",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "PureXbox",
+          "url": "https://www.purexbox.com/news/2026/10/lots-of-new-games-are-charting-surprisingly-high-on-xbox-to-begin-october",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "halloween-home-tour",
+      "title": "Halloween Home Tour",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Vadbav",
+          "url": "https://vadbav.com/halloween-home-decor-tiktok-trend-2026",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "hard-times-paramore",
+      "title": "Paramore \"Hard Times\" — relatable-struggle edits",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "hideaway-pilein",
+      "title": "Kiesza \"Hideaway\" group pile-in",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "hold-it-down",
+      "title": "\"Someone's gotta hold it down\" — ADÉLA \"Ain't In LA\"",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "EntertainmentNow",
+          "url": "https://entertainmentnow.com/music/demi-lovato-shares-cheeky-bikini-photos/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "homecoming-proposal",
+      "title": "Homecoming Proposal Reveal",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "houthi-riyadh-strike",
+      "title": "Houthi missile strike on Riyadh airport",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "NewsWatchmen",
+          "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "hurricane-isaias",
+      "title": "Hurricane Isaias makes landfall",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "NewsWatchmen",
+          "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "i-did-nothing",
+      "title": "\"I Did Nothing...\" — nothing-to-say skits",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "MediaNug",
+          "url": "https://www.medianug.com/tiktok-trending-report",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "insomniac-lofi",
+      "title": "\"Insomniac\" — Memo Boy's lo-fi bed",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "its-a-clock",
+      "title": "\"It's a clock\" — deadpan realization + sound drop",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "la-calabaza-pets",
+      "title": "La Calabaza pet performance",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "like-a-prayer-remix",
+      "title": "\"Like a Prayer\" house remix — emotional montage bed",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "mahesh-babu-director",
+      "title": "Mahesh Babu's next director: Vanga vs Lokesh",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Sacnilk",
+          "url": "https://www.sacnilk.com/entertainmenttopbar/Trending_News",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "mannequin-revival",
+      "title": "Mannequin Challenge revival (fit checks)",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "http://socialbee.com/blog/tiktok-trends-you-cant-miss/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "mini-dramas",
+      "title": "Mini-dramas — TikTok's fastest-growing NEW category",
+      "verification": "verified",
+      "verdict": "flaky-warning",
+      "reason": "1 source URL(s) timed out on probe — retry next sweep, not marked stale",
+      "sources": [
+        {
+          "name": "MediaPost",
+          "url": "https://www.Mediapost.Com/publications/article/413505/microdramas-drove-in-app-revenue-of-11b-worldwide.html",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/media-telecom/microdramas-boom-shrinking-hollywood-studios-chase-tiktok-audience-2026-08-18/",
+          "status": "flaky",
+          "note": "HTTP 401 GET"
+        },
+        {
+          "name": "TechNode",
+          "url": "https://technode.com/2026/03/25/tiktok-tests-short-drama-feed-plans-original-shows/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "mlb-playoffs",
+      "title": "MLB playoffs — World Series Oct 23",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "NewEngen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "my-name-is-reveal",
+      "title": "Eminem \"My Name Is\" five-second identity reveal",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "nana-patekar-tributes",
+      "title": "Nana Patekar dies at 75 — meme legend tributes",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Face of Malawi",
+          "url": "https://www.faceofmalawi.com/2026/10/09/nana-patekar-dies-at-75-the-viral-meme-legend-whose-hilarious-reactions-took-over-the-internet/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "national-coming-out-day",
+      "title": "National Coming Out Day (Oct 11)",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Bluesky trending",
+          "url": "https://bsky.app",
+          "status": "live",
+          "note": "200 GET"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "nba-tiktok-surge",
+      "title": "#nba explodes on TikTok (+493%)",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Revid",
+          "url": "https://www.revid.ai/tiktok-viral-trends-today",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "netflix-documentary",
+      "title": "\"Netflix documentary\" parody",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "HerCampus",
+          "url": "https://www.hercampus.com/culture/netflix-documentary-tiktok-trend-explainer/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "SocialBee",
+          "url": "http://socialbee.com/blog/tiktok-trends-you-cant-miss/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "nicole-kidman-adela",
+      "title": "ADÉLA \"Nicole Kidman\" car-window stare",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "october-calendar-memes",
+      "title": "October calendar memes",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "october-music-drops",
+      "title": "October's stacked release calendar",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "NewEngen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "oh-yeah-city-walk",
+      "title": "Steve Lacy \"Oh yeah?\" city walk",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "old-technology-dance",
+      "title": "Slayyyter \"Old Technology\" pose-and-sway dance",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "patient-zero-hub",
+      "title": "The Patient Zero TikTok Search Hub — launch as a game",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "TikTokNewsHub",
+          "url": "https://tiktoknewshub.com/music/patient-zero-tiktok-hub-taylor-swift/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "New Engen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "patient-zero-swift",
+      "title": "Taylor Swift \"Patient Zero\" wedding edits",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "TikTokNewsHub",
+          "url": "https://tiktoknewshub.com/music/patient-zero-tiktok-hub-taylor-swift/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "New Engen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "pingo-reactions",
+      "title": "Pingo's multilingual reaction creators",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "pour-it-up-duet",
+      "title": "\"Pour It Up\" still/switch duet",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "genznewz",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "pov-dating",
+      "title": "\"POV: you're dating…\"",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "http://socialbee.com/blog/tiktok-trends-you-cant-miss/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "pumpkin-head",
+      "title": "Pumpkin Head Illusion",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "New Engen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Tlinky",
+          "url": "https://tlinky.com/tiktok-halloween-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "pumpkin-patch-season",
+      "title": "Pumpkin patch season",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "ramalama-walk",
+      "title": "Ramalama Costume Walk",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "New Engen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Tlinky",
+          "url": "https://tlinky.com/tiktok-halloween-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Vadbav",
+          "url": "https://vadbav.com/did-i-win-this-trend-tiktok-halloween-costume",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "resume-gap-interview",
+      "title": "Resume gap interview meme",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Bluesky trending",
+          "url": "https://bsky.app",
+          "status": "live",
+          "note": "200 GET"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "scott-street-slowed",
+      "title": "\"Scott Street\" (Slowed) — Phoebe Bridgers nostalgic-letdown bed",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "seis-sete-dance",
+      "title": "\"Six Seven\" (Seis Sete) funk dance",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "shop-with-confidence",
+      "title": "#shopwithconfidence — TikTok Shop official hauls",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "shrinking-pine-cone",
+      "title": "SHRINKING PINE CONE — oddly-satisfying timelapse",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Revid",
+          "url": "https://www.revid.ai/tiktok-viral-trends-today",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "sidewalk-reactions",
+      "title": "Public-sidewalk event reactions",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "six-seven-meme",
+      "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/6-7_(meme)",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "some-place-not-like",
+      "title": "\"Some Place You're Not Going To Like...\"",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "MediaNug",
+          "url": "https://www.medianug.com/tiktok-trending-report",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "spooky-season",
+      "title": "#spookyseason peaks — Halloween is a Saturday",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "spooky-skeletons-remix",
+      "title": "\"Spooky, Scary Skeletons\" House VIP Remix",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "stop-the-wedding",
+      "title": "\"Stop the Wedding\" photo carousels",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "New Engen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "GenZNewZ",
+          "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "street-fighter-movie",
+      "title": "\"Street Fighter\" hits theaters Oct 16",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "NewEngen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "sw-galactic-racer",
+      "title": "STAR WARS: Galactic Racer",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "DLCompare",
+          "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Game8",
+          "url": "https://game8.co/articles/latest/this-weeks-gaming-news-roundup-oct-4-to-oct-10",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "text-from-a",
+      "title": "Text From \"-A\" — the Pretty Little Liars call-out",
+      "verification": "unverified",
+      "verdict": "flaky-warning",
+      "reason": "2 source URL(s) timed out on probe — retry next sweep, not marked stale",
+      "sources": [
+        {
+          "name": "MediaNug (source URL not found on 2026-10-11 re-check)",
+          "url": "",
+          "status": "flaky",
+          "note": "ValueError GET: unknown url type: ''"
+        },
+        {
+          "name": "Later (source URL not found on 2026-10-11 re-check)",
+          "url": "",
+          "status": "flaky",
+          "note": "ValueError GET: unknown url type: ''"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "there-she-goes",
+      "title": "\"There She Goes\" shimmy dance",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialBee",
+          "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "iHeartDogs",
+          "url": "https://iheartdogs.com/sea-lions-silly-shimmy-dance-is-the-mood-boost-we-all-need/?iid=BottomRelatedPosts",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "tiktok-sounds-week",
+      "title": "This week's breakout TikTok sounds",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Revid",
+          "url": "https://www.revid.ai/viral-tiktok-songs",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "trump-diesel-russia",
+      "title": "Trump diesel deal with Russia",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Bluesky trending",
+          "url": "https://bsky.app",
+          "status": "live",
+          "note": "200 GET"
+        },
+        {
+          "name": "bluesky-trending",
+          "url": "https://bsky.app/search?q=Trump+strikes+diesel+deal+with+Russia",
+          "status": "live",
+          "note": "200 GET"
+        }
+      ],
+      "last_seen": "2026-10-12T05:43:09.260459+00:00",
+      "last_seen_age_days": 0.01,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "trump-energy-ceasefire",
+      "title": "Trump announces Russia-Ukraine energy ceasefire",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "NewsWatchmen",
+          "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "reddit-rss:r/news",
+          "url": "https://www.reddit.com/r/news/comments/1x3jifm/russia_strikes_power_plant_in_ukraine_after_trump/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-12T05:41:13.031377+00:00",
+      "last_seen_age_days": 0.02,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "trump-rally-nobel",
+      "title": "Trump roasts rally protester; Nobel Prize outrage",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "RedWaveFeed",
+          "url": "https://www.redwavefeed.com/trending",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "turn-to-your-neighbor",
+      "title": "\"Turn To Your Neighbor and Say\" (Marvin Sapp sports-fail edits)",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, warming up (1 snapshots, first 0.3h ago)",
+      "sources": [
+        {
+          "name": "Know Your Meme",
+          "url": "https://knowyourmeme.com/memes/turn-to-your-neighbor-and-say",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "meme.com",
+          "url": "https://meme.com/memes",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 1,
+      "in_store": true
+    },
+    {
+      "id": "two-fishes",
+      "title": "The \"Two Fishes\" deadpan audio",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "New Engen",
+          "url": "https://newengen.com/insights/october-tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "Virlo",
+          "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "upside-down",
+      "title": "\"Upside Down\" before/after transitions",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Lightreel",
+          "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 6,
+      "in_store": true
+    },
+    {
+      "id": "valor-mortis",
+      "title": "Valor Mortis — the new soulslike to watch",
+      "verification": "verified",
+      "verdict": "flaky-warning",
+      "reason": "1 source URL(s) timed out on probe — retry next sweep, not marked stale",
+      "sources": [
+        {
+          "name": "NEXTARCA",
+          "url": "https://nextarca.com/news/rpgs-this-week-october-12-to-18-2026",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "TrueAchievements",
+          "url": "https://www.trueachievements.com/news/new-xbox-games-october-12",
+          "status": "flaky",
+          "note": "HTTP 403 GET"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 7,
+      "in_store": true
+    },
+    {
+      "id": "we-fell-in-love-in-october",
+      "title": "\"we fell in love in october\" — girl in red",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "SocialPilot",
+          "url": "https://www.socialpilot.co/blog/tiktok-trends",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 4,
+      "in_store": true
+    },
+    {
+      "id": "young-hearts-run-free",
+      "title": "Sped-up \"Young Hearts Run Free\" — prom & glow-up sound",
+      "verification": "single-source",
+      "verdict": "healthy",
+      "reason": "sources live, corroborated, tracked",
+      "sources": [
+        {
+          "name": "Anijam",
+          "url": "https://www.anijam.ai/blog/tiktok-trends/",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 3,
+      "in_store": true
+    },
+    {
+      "id": "zayn-sleeping-photo",
+      "title": "\"Why am I lowkey giving Zayn Malik sleeping photo?\"",
+      "verification": "verified",
+      "verdict": "healthy",
+      "reason": "sources live, warming up (1 snapshots, first 0.3h ago)",
+      "sources": [
+        {
+          "name": "Know Your Meme",
+          "url": "https://knowyourmeme.com/memes/zayn-malik-sleeping",
+          "status": "live",
+          "note": "200 HEAD"
+        },
+        {
+          "name": "meme.com",
+          "url": "https://meme.com/memes",
+          "status": "live",
+          "note": "200 HEAD"
+        }
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "last_seen_age_days": 0.15,
+      "velocity_snapshots": 1,
+      "in_store": true
+    }
+  ]
+}

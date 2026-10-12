@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine seed freshness sweep",
+  "description": "Wave 14: the seed-freshness audit. Every seeded topic is checked for staleness: source URL liveness (HTTP probe; dead = GET 404/410 only, never a timeout or HEAD rejection), store corroboration (last_seen <= 7 days), and velocity tracking (a seed with <3 snapshots but a first snapshot <6h old is warming up, not stale). Verdicts: healthy / stale-source / stale-untracked / flaky-warning (probe timeout \u2014 a warning, never marked stale).",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "method",
+    "counts",
+    "stale",
+    "seeds"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "healthy",
+        "stale-source",
+        "stale-untracked",
+        "flaky-warning",
+        "seeds"
+      ],
+      "properties": {
+        "healthy": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stale-source": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stale-untracked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "flaky-warning": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "seeds": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "stale": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "verdict",
+          "reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "stale-source",
+              "stale-untracked"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "verification",
+          "verdict",
+          "reason",
+          "sources",
+          "last_seen",
+          "last_seen_age_days",
+          "velocity_snapshots",
+          "in_store"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "healthy",
+              "stale-source",
+              "stale-untracked",
+              "flaky-warning"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "url",
+                "status",
+                "note"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "live",
+                    "dead",
+                    "flaky",
+                    "not-probed"
+                  ]
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "last_seen": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_seen_age_days": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "velocity_snapshots": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "in_store": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
