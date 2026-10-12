@@ -66,8 +66,16 @@ console.log(t.title, t.opportunity_score, t.angles);
 **2. Flat feed — `api/v1/trends.flat.json`**
 `{generated_at, sample:false, source_count, trends:[{id, title, source,
 url, velocity, opportunity_score, hashtags[], detected_at, summary,
-category, platforms[], format_tags[], trend_type, sources[]}]}` — opportunity-ranked,
-stale topics already excluded. The lightweight "what's hot today" list.
+category, platforms[], format_tags[], trend_type, sources[],
+velocity_trend}]}` — opportunity-ranked, stale topics already excluded.
+The lightweight "what's hot today" list. `velocity_trend` (wave 8):
+`{snapshots, state, since, first_velocity, latest_velocity, delta,
+sparkline_svg, per_platform}` — a ready-made inline SVG sparkline
+(`role="img"`, data-grounded `aria-label`, static — safe to embed) plus
+per-platform mini-summaries. `state` is `ready` (3+ real snapshots) or
+`building` (fewer than 3 — `sparkline_svg` is then `null`: no fake line).
+When you need the raw series, `api/v1/velocity.json` (all platforms) and
+`api/v1/platform-velocity.json` (per-platform) have every snapshot.
 
 **3. Hashtag index — `api/v1/hashtags.json`**
 `{generated_at, tags: {"#tag": [topic-id, ...]}}` — reverse lookup.

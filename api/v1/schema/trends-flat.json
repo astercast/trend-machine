@@ -44,7 +44,8 @@
         "platforms",
         "format_tags",
         "trend_type",
-        "sources"
+        "sources",
+        "velocity_trend"
       ],
       "properties": {
         "id": {
@@ -109,6 +110,98 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        },
+        "velocity_trend": {
+          "type": "object",
+          "required": [
+            "snapshots",
+            "state",
+            "since",
+            "first_velocity",
+            "latest_velocity",
+            "delta",
+            "sparkline_svg",
+            "per_platform"
+          ],
+          "properties": {
+            "snapshots": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of hourly velocity snapshots behind this trend."
+            },
+            "state": {
+              "type": "string",
+              "enum": [
+                "ready",
+                "building"
+              ],
+              "description": "ready = 3+ snapshots, sparkline drawn from real data; building = fewer than 3 snapshots, no line drawn (honest state)."
+            },
+            "since": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "'Oct 11, 2026'-style label of the first snapshot; null when no snapshots yet."
+            },
+            "first_velocity": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "latest_velocity": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "delta": {
+              "type": "integer",
+              "description": "latest_velocity - first_velocity."
+            },
+            "sparkline_svg": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Wave 8: pre-rendered inline SVG mini-sparkline (role=img, data-grounded aria-label, static/no animation) when state=ready; null when building."
+            },
+            "per_platform": {
+              "type": "object",
+              "description": "Per-platform mini-summaries {platform: {snapshots, latest_velocity, delta, sparkline_svg|null}} from real per-platform snapshot data.",
+              "additionalProperties": {
+                "type": "object",
+                "required": [
+                  "snapshots",
+                  "latest_velocity",
+                  "delta",
+                  "sparkline_svg"
+                ],
+                "properties": {
+                  "snapshots": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "latest_velocity": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "delta": {
+                    "type": "integer"
+                  },
+                  "sparkline_svg": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
           }
         }
       }

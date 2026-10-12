@@ -1,6 +1,6 @@
 [
   {
-    "title": "kevin stefanski",
+    "title": "garrett mitchell",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~1000+ searches.",
@@ -9,22 +9,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T02:15:37.204215+00:00"
+    "fetched_at": "2026-10-12T02:42:10.273989+00:00"
   },
   {
-    "title": "cupertino tv show",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T02:15:37.204285+00:00"
-  },
-  {
-    "title": "john abraham nfl",
+    "title": "aaron ashby",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~500+ searches.",
@@ -33,7 +21,31 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T02:15:37.204306+00:00"
+    "fetched_at": "2026-10-12T02:42:10.274067+00:00"
+  },
+  {
+    "title": "tornadoes north carolina",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T02:42:10.274090+00:00"
+  },
+  {
+    "title": "cupertino tv show",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T02:42:10.274109+00:00"
   },
   {
     "title": "cupertino",
@@ -45,7 +57,43 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T02:15:37.204340+00:00"
+    "fetched_at": "2026-10-12T02:42:10.274127+00:00"
+  },
+  {
+    "title": "uribe",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T02:42:10.274143+00:00"
+  },
+  {
+    "title": "kevin stefanski",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T02:42:10.274159+00:00"
+  },
+  {
+    "title": "john abraham nfl",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T02:42:10.274174+00:00"
   },
   {
     "title": "mike tomlin",
@@ -57,7 +105,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T02:15:37.204356+00:00"
+    "fetched_at": "2026-10-12T02:42:10.274189+00:00"
   },
   {
     "title": "césar huerta",
@@ -69,54 +117,6 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T02:15:37.204373+00:00"
-  },
-  {
-    "title": "indiana fever player sophie cunningham",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T02:15:37.204389+00:00"
-  },
-  {
-    "title": "justin hartley",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T02:15:37.204403+00:00"
-  },
-  {
-    "title": "nuggets",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~2000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T02:15:37.204419+00:00"
-  },
-  {
-    "title": "demar derozan",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T02:15:37.204434+00:00"
+    "fetched_at": "2026-10-12T02:42:10.274205+00:00"
   }
 ]

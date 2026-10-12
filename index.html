@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/wave2.css">
 <link rel="stylesheet" href="assets/css/wave3.css">
+<link rel="stylesheet" href="assets/css/wave8.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -92,6 +93,7 @@
         <th scope="col">Platforms</th>
         <th scope="col" aria-sort="descending"><button class="sortbtn" data-sort="opportunity">Opportunity <span class="arr" aria-hidden="true">▼</span></button></th>
         <th scope="col"><button class="sortbtn" data-sort="velocity">Velocity <span class="arr" aria-hidden="true"></span></button></th>
+        <th scope="col" id="th-trend">Trend <span class="hist-note" style="font-weight:400">· sparkline</span></th>
         <th scope="col"><button class="sortbtn" data-sort="recency">Detected <span class="arr" aria-hidden="true"></span></button></th>
       </tr></thead>
       <tbody id="dtable-body"></tbody>
@@ -128,6 +130,7 @@
   <span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
 </div></footer>
 
+<script src="assets/js/sparkline-lib.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

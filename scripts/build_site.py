@@ -5,6 +5,9 @@ Run directly or via pipeline/refresh.sh.
 """
 import json, os, re, html, datetime
 
+# wave 8: pure sparkline data prep + SVG builders (unit-tested, pinned fixtures)
+import sparkline_prep
+
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(ROOT, "data", "trends.json")
 GUIDE_BASE = os.environ.get("GUIDE_BASE_URL", "../creator-growth-empire/")
@@ -33,48 +36,16 @@ def load_history():
     except Exception:
         return {}
 
-def tracked_since_label(pts):
-    """Honest 'tracked since <date>' label from the first history point."""
-    try:
-        dt = datetime.datetime.fromisoformat(pts[0][0])
-        return dt.strftime("%b %d, %Y")
-    except Exception:
-        return "recently"
+def sparkline_html(pts, topic_id="", per_platform=None):
+    """Inline SVG velocity sparkline, wave 8.
 
-def sparkline_html(pts):
-    """Inline SVG velocity sparkline. Honest: only renders from real
-    snapshots; with <2 points it says so instead of drawing a fake line."""
-    if not pts or len(pts) < 2:
-        return ('<p class="hist-empty">Not enough history yet — '
-                'velocity tracking started with this wave; '
-                'check back after a few refresh cycles.</p>')
-    W, H, PAD = 260, 48, 5
-    vals = [p[1] for p in pts]
-    lo, hi = min(vals), max(vals)
-    span = max(1, hi - lo)
-    coords = []
-    for i, v in enumerate(vals):
-        x = PAD + (i * (W - 2 * PAD) / (len(vals) - 1))
-        y = H - PAD - ((v - lo) / span) * (H - 2 * PAD)
-        coords.append(f"{x:.1f},{y:.1f}")
-    first, last = pts[0], pts[-1]
-    since = tracked_since_label(pts)
-    aria = (f"Velocity trend: {first[1]} when tracking started ({since}), "
-            f"{last[1]} at the latest snapshot.")
-    svg = (
-        f'<svg class="spark" viewBox="0 0 {W} {H}" role="img" '
-        f'aria-label="{esc(aria)}" aria-hidden="false" focusable="false">'
-        f'<polyline points="{" ".join(coords)}" fill="none"/>'
-        f'<circle cx="{coords[-1].split(",")[0]}" cy="{coords[-1].split(",")[1]}" r="3.2"/>'
-        '</svg>')
-    delta = last[1] - first[1]
-    arrow = "▲" if delta > 0 else ("▼" if delta < 0 else "●")
-    caption = (f'<p class="hist-cap">Velocity tracked since {esc(since)} · '
-               f'{len(pts)} snapshot{"s" if len(pts) != 1 else ""} · '
-               f'<span class="num">{esc(arrow)} {abs(delta):+d}</span> since tracking started</p>')
-    return (f'<figure class="sig-hist"><figcaption class="hist-label">'
-            f'Signal history <span class="hist-note">· last 14 days max</span></figcaption>'
-            f'{svg}{caption}</figure>')
+    Delegates to scripts/sparkline_prep.py (pure, unit-tested). Honest:
+    <3 snapshots renders "history building" — never a fake line. Includes
+    per-platform mini-sparklines where platform trajectories exist and a
+    <details> data-table alternative for screen readers.
+    """
+    return sparkline_prep.sparkline_figure_html(
+        pts or [], topic_id or "topic", per_platform=per_platform)
 
 def export_payload_json(t):
     payload = {
@@ -116,6 +87,7 @@ TOPIC_TMPL = """<!doctype html>
 <link rel="stylesheet" href="../assets/css/components.css">
 <link rel="stylesheet" href="../assets/css/wave2.css">
 <link rel="stylesheet" href="../assets/css/wave3.css">
+<link rel="stylesheet" href="../assets/css/wave8.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -147,7 +119,7 @@ TOPIC_TMPL = """<!doctype html>
 </section>
 <section aria-labelledby="angles"><div class="section-head"><h2 id="angles"><span class="sec-no">02</span>Content angles</h2>
 <div class="angles-tools"><span class="kicker">topic in &rarr; video out</span>
-<button type="button" class="btn remix-btn" id="remix-btn" aria-describedby="remix-status" aria-label="Remix this topic: copy angles, hook lines and hashtags as plain text">⧉ Remix this</button>
+<button type="button" class="btn remix-btn" id="remix-btn" aria-describedby="remix-status" aria-label="Remix this topic: copy angles, hook lines, hashtags and best platforms as plain text">⧉ Remix this</button>
 <a class="btn" href="../launch-plan.html?topic={tid}">🗓 7-day battle plan</a>
 <span class="copy-status" id="remix-status" role="status" aria-live="polite"></span>
 </div></div>
@@ -172,6 +144,7 @@ TOPIC_TMPL = """<!doctype html>
 </div></footer>
 <script type="application/json" id="export-payload">{payload}</script>
 <script src="../assets/js/tm-copy.js"></script>
+<script src="../assets/js/remix-text.js"></script>
 <script src="../assets/js/remix-export.js"></script>
 </body>
 </html>
@@ -191,7 +164,7 @@ def age_label(iso):
         return f"{round(mins/60)}h ago", "f-warm", ""
     return f"{round(mins/1440)}d ago", "f-dead", ""
 
-def build_topic(t, history_pts=None):
+def build_topic(t, history_pts=None, plat_hist=None):
     age, fcls, pulse = age_label(t.get("last_seen", ""))
     opp, vel = t.get("opportunity_score", 0), t.get("velocity", 0)
     tier = "is-hot" if opp >= 70 else ("is-warm" if opp >= 40 else "")
@@ -208,7 +181,7 @@ def build_topic(t, history_pts=None):
         f'<span class="chip format" title="Detected meme-format signal">format · {esc(f)}</span>'
         for f in t.get("format_tags", []))
     tags = "".join(f'<span class="tag">{esc(h)}</span>' for h in t.get("hashtags", [])[:10])
-    spark = sparkline_html(history_pts or [])
+    spark = sparkline_html(history_pts or [], t.get("id", ""), plat_hist)
     payload = export_payload_json(t)
     def src_li(s):
         nm, url = esc(s.get("name", "source")), esc(s.get("url", ""))
@@ -244,6 +217,13 @@ def main():
         data = json.load(f)
     topics = data["topics"]
     history = load_history()  # wave 2: velocity snapshots for sparklines
+    # wave 8: per-platform velocity series for mini-sparklines on dossiers
+    plat_history = {}
+    try:
+        with open(os.path.join(ROOT, "data", "platform_velocity_history.json")) as f:
+            plat_history = json.load(f)
+    except Exception:
+        pass
 
     tdir = os.path.join(ROOT, "topics")
     os.makedirs(tdir, exist_ok=True)
@@ -251,7 +231,8 @@ def main():
     for t in topics:
         live_ids.add(t["id"])
         with open(os.path.join(tdir, t["id"] + ".html"), "w") as f:
-            f.write(build_topic(t, history.get(t["id"], [])))
+            f.write(build_topic(t, history.get(t["id"], []),
+                                plat_history.get(t["id"], {})))
     # remove orphaned pages from pruned topics
     orphans = 0
     for fn in os.listdir(tdir):
@@ -340,12 +321,43 @@ def main():
         },
     }
 
+    VELOCITY_TREND = {
+        "type": "object",
+        "required": ["snapshots", "state", "since", "first_velocity",
+                     "latest_velocity", "delta", "sparkline_svg", "per_platform"],
+        "properties": {
+            "snapshots": {"type": "integer", "minimum": 0,
+                          "description": "Number of hourly velocity snapshots behind this trend."},
+            "state": {"type": "string", "enum": ["ready", "building"],
+                      "description": "ready = 3+ snapshots, sparkline drawn from real data; building = fewer than 3 snapshots, no line drawn (honest state)."},
+            "since": {"type": ["string", "null"],
+                      "description": "'Oct 11, 2026'-style label of the first snapshot; null when no snapshots yet."},
+            "first_velocity": {"type": ["integer", "null"]},
+            "latest_velocity": {"type": ["integer", "null"]},
+            "delta": {"type": "integer",
+                      "description": "latest_velocity - first_velocity."},
+            "sparkline_svg": {"type": ["string", "null"],
+                              "description": "Wave 8: pre-rendered inline SVG mini-sparkline (role=img, data-grounded aria-label, static/no animation) when state=ready; null when building."},
+            "per_platform": {"type": "object",
+                             "description": "Per-platform mini-summaries {platform: {snapshots, latest_velocity, delta, sparkline_svg|null}} from real per-platform snapshot data.",
+                             "additionalProperties": {
+                                 "type": "object",
+                                 "required": ["snapshots", "latest_velocity", "delta", "sparkline_svg"],
+                                 "properties": {
+                                     "snapshots": {"type": "integer", "minimum": 0},
+                                     "latest_velocity": {"type": ["integer", "null"]},
+                                     "delta": {"type": "integer"},
+                                     "sparkline_svg": {"type": ["string", "null"]},
+                                 }}},
+        },
+    }
+
     FLAT_TREND = {
         "type": "object",
         "required": ["id", "title", "source", "url", "velocity",
                      "opportunity_score", "hashtags", "detected_at",
                      "summary", "category", "platforms", "format_tags",
-                     "trend_type", "sources"],
+                     "trend_type", "sources", "velocity_trend"],
         "properties": {
             "id": {"type": "string"}, "title": {"type": "string"},
             "source": {"type": "string",
@@ -361,6 +373,7 @@ def main():
             "format_tags": {"type": "array", "items": {"type": "string"}},
             "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"]},
             "sources": {"type": "array", "items": {"type": "string"}},
+            "velocity_trend": VELOCITY_TREND,
         },
     }
 
@@ -639,7 +652,7 @@ def main():
 
     manifest = {
         "name": "trend-machine",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "generated_at": stamp,
         "base": ("api/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
@@ -655,7 +668,10 @@ def main():
             "trends_flat": endpoint(
                 "api/v1/trends.flat.json",
                 ("Flat consumer feed: opportunity-ranked, stale topics excluded. "
-                 "Lightweight 'what to make content about today' list."),
+                 "Lightweight 'what to make content about today' list. Every item "
+                 "carries 'velocity_trend': snapshots/delta/since plus a ready-made "
+                 "inline SVG sparkline (wave 8) — honest 'building' state when fewer "
+                 "than 3 snapshots exist."),
                 schema_path("trends-flat"), len(live)),
             "trends_flat_sample": endpoint(
                 "api/v1/trends.flat.sample.json",
@@ -693,7 +709,18 @@ def main():
                 None, len(SCHEMAS)),
         },
         "deprecated": [],
-        "changelog": ("0.3.0 (2026-10-11): Wave 7 — Oct-2026 trend-drop refresh: 12 new "
+        "changelog": ("0.4.0 (2026-10-11): Wave 8 — velocity sparkline history UI + "
+                      "'Remix this' exporter polish. Every flat-feed item now carries "
+                      "'velocity_trend': snapshot count, first/latest velocity, delta, "
+                      "tracked-since label, a pre-rendered inline SVG sparkline, and "
+                      "per-platform mini-summaries — all from real snapshot data; "
+                      "topics with <3 snapshots report state 'building' with no fake "
+                      "line. Dossier pages gained per-platform mini-sparklines and a "
+                      "<details> snapshot data-table for screen readers; the dashboard "
+                      "table gained a sparkline column. The remix exporter is now a "
+                      "pure unit-tested function (pinned fixtures) and copies best "
+                      "platforms too. Additive only, no shape changes. "
+                      "0.3.0 (2026-10-11): Wave 7 — Oct-2026 trend-drop refresh: 12 new "
                       "topics (SocialPilot Sept 25–Oct 10 re-check: Did I Win This Trend?, "
                       "31 Days of Halloween, Halloween Home Tour, Creepy Fact Storytime, "
                       "DIP ON EM, #CityTasteTest, Homecoming Proposal Reveal, girl in red "

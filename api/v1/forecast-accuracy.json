@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T02:20:32.974Z",
+  "generated_at": "2026-10-12T02:46:58.898Z",
   "status": "building history",
   "method": "Each refresh records the Oracle's decisive forecasts (peaking / accelerating / rising / fading) in data/forecast_ledger.json. 48h later the forecast is compared with the actual velocity history and scored hit/miss. Nothing is backfilled — the log starts 2026-10-11, so the first resolutions land 48h after that.",
   "horizon_hours": 48,
@@ -9,8 +9,8 @@
     "fading": "hit if the actual velocity slope over the 48h window is <= -1.5/hr (the classifier's own falling threshold)"
   },
   "counts": {
-    "recorded": 219,
-    "pending": 219,
+    "recorded": 222,
+    "pending": 222,
     "resolved": 0,
     "hits": 0
   },

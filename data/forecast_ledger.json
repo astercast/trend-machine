@@ -2189,6 +2189,36 @@
       "latest_velocity": 78,
       "n_snapshots": 4,
       "resolved": null
+    },
+    {
+      "topic_id": "tiktok-sounds-week",
+      "title": "This week's breakout TikTok sounds",
+      "forecast_at": "2026-10-12T02:46:58.898Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 79,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "grr-mondays",
+      "title": "#GrrMondays",
+      "forecast_at": "2026-10-12T02:46:58.898Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 74,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "street-fighter-movie",
+      "title": "\"Street Fighter\" hits theaters Oct 16",
+      "forecast_at": "2026-10-12T02:46:58.898Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 74,
+      "n_snapshots": 4,
+      "resolved": null
     }
   ]
 }

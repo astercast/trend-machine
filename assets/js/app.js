@@ -2,6 +2,25 @@
 (function () {
   "use strict";
   var DATA_URLS = ["data/trends.json", "api/v1/trends.json"];
+  var VELOCITY_URLS = ["api/v1/velocity.json", "data/velocity_history.json"];
+
+  /* wave 8: velocity snapshots for the Trend sparkline column (best-effort) */
+  function loadVelocity(i) {
+    i = i || 0;
+    if (i >= VELOCITY_URLS.length) { renderTable(); return; }
+    fetch(VELOCITY_URLS[i]).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    }).then(function (data) {
+      state.velocity = data || {};
+      renderTable();
+    }).catch(function () { loadVelocity(i + 1); });
+  }
+  function trendCell(t) {
+    if (typeof TM_Sparkline === "undefined") { return ""; }
+    var pts = state.velocity[t.id] || [];
+    return TM_Sparkline.cellHTML(pts, t.id);
+  }
 
   function minsSince(iso) {
     var t = Date.parse(iso);
@@ -29,7 +48,7 @@
     return list.map(function (x) { return '<span class="chip' + (cls ? " " + cls : "") + '">' + esc(x) + "</span>"; }).join("");
   }
 
-  var state = { topics: [], sort: "opportunity", dir: -1, platform: "all", category: "all", q: "" };
+  var state = { topics: [], velocity: {}, sort: "opportunity", dir: -1, platform: "all", category: "all", q: "" };
 
   function ageRank(t) { return minsSince(t.last_seen); }
 
@@ -117,6 +136,7 @@
         '<td data-label="Platforms">' + chips(t.platforms, "plat") + "</td>" +
         '<td data-label="Opportunity">' + scoreHTML(t.opportunity_score) + "</td>" +
         '<td data-label="Velocity">' + scoreHTML(t.velocity) + "</td>" +
+        '<td data-label="Trend">' + trendCell(t) + "</td>" +
         '<td data-label="Detected">' + freshHTML(t.last_seen) + "</td></tr>";
     }).join("");
     var tbl = document.getElementById("dtable");
@@ -183,6 +203,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     load();
+    loadVelocity();
     tickClock(); setInterval(tickClock, 1000);
     var pf = document.getElementById("f-platform");
     var cf = document.getElementById("f-category");

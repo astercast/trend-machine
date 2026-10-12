@@ -37,6 +37,14 @@ OUT_SAMPLE = os.path.join(API, "trends.flat.sample.json")
 sys.path.insert(0, HERE)
 from common import now_iso
 
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from sparkline_prep import flat_velocity_trend
+
+# filled in main(): real snapshot data for the wave-8 velocity_trend field
+_HISTORY = {}
+_PHIST = {}
+
+
 def flat(t):
     srcs = t.get("sources", []) or []
     return {
@@ -54,6 +62,9 @@ def flat(t):
         "format_tags": t.get("format_tags", []),
         "sources": [s.get("name") for s in srcs],
         "trend_type": t.get("trend_type", "topic"),
+        # wave 8: per-topic velocity sparkline history from real snapshots
+        # (state 'building' + sparkline_svg null when <3 snapshots — no fake line)
+        "velocity_trend": flat_velocity_trend(t.get("id"), _HISTORY, _PHIST),
     }
 
 def write(feed, json_path, with_js=False):
@@ -75,6 +86,19 @@ def main():
     with open(STORE) as f:
         data = json.load(f)
     topics = data.get("topics", [])
+
+    # wave 8: load real snapshot data for the velocity_trend feed field
+    global _HISTORY, _PHIST
+    for name, target in (("velocity_history.json", "_HISTORY"),
+                         ("platform_velocity_history.json", "_PHIST")):
+        try:
+            with open(os.path.join(ROOT, "data", name)) as f:
+                if target == "_HISTORY":
+                    _HISTORY = json.load(f)
+                else:
+                    _PHIST = json.load(f)
+        except Exception as e:
+            print(f"[flat-feed] note: {name} unavailable ({e}) — velocity_trend will be 'building'")
 
     live = [flat(t) for t in topics if not t.get("stale")]
     live.sort(key=lambda t: (-t["opportunity_score"], -t["velocity"]))

@@ -80,6 +80,23 @@ def main():
     opps = [t["opportunity_score"] for t in flat.get("trends", [])]
     check("flat sorted by opportunity desc", opps == sorted(opps, reverse=True))
 
+    # wave 8: velocity_trend honesty contract — real data only, no fake lines
+    vt_bad = []
+    for t in flat.get("trends", []):
+        vt = t.get("velocity_trend") or {}
+        n, state, svg = vt.get("snapshots", -1), vt.get("state"), vt.get("sparkline_svg")
+        if state == "ready":
+            if not (n >= 3 and svg and "<svg" in svg and 'role="img"' in svg
+                    and "<animate" not in svg):
+                vt_bad.append(t["id"])
+        elif state == "building":
+            if not (n < 3 and svg is None):
+                vt_bad.append(t["id"])
+        else:
+            vt_bad.append(t["id"])
+    check("flat velocity_trend honest (ready>=3 w/ svg, building<3 w/o svg)",
+          not vt_bad, f"bad ids: {vt_bad[:5]}")
+
     sample = validate_doc("trends.flat.sample.json",
                           os.path.join(API, "trends.flat.sample.json"),
                           "trends-flat-sample.json")
