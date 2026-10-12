@@ -14,7 +14,7 @@ user "push"/"ship it" — never from wave-engine automation.
   forecasts.json, forecast-accuracy.json, velocity.json,
   platform-velocity.json, hashtags.json, meme-formats.json, seed-freshness.json,
   schema/, manifest index.json), `static/v1/trends.flat.js` (JSONP twin —
-  public URL `/data/v1/trends.flat.js` via `vercel.json` rewrite), `assets/`,
+  public URL `/api/v1/trends.flat.js` via `vercel.json` rewrite), `assets/`,
   `llms.txt`, `llms-full.txt`
 - **Vercel never serves static files under `api/`** — all static data lives
   in `data/v1/`; only real function handlers (`.js` with exported handlers)
@@ -25,7 +25,8 @@ user "push"/"ship it" — never from wave-engine automation.
   basename collisions (`x.js` + `x.json` in one dir) fail the build with
   "conflicting paths or names" (2026-10-12: this killed the
   trend-machine-live deploy).
-- Serverless functions (`nodejs20.x`, explicit paths in `vercel.json`):
+- Serverless functions (no `runtime` key anywhere — Vercel auto-detects
+  Node; explicit paths in `vercel.json`):
   1. `GET /api/health` — status + data-freshness SLA checks; never 5xx
   2. `GET /api/trends` — opportunity-ranked trends (?limit=, ?platform=)
   3. `GET /api/velocity` — per-topic 30-day snapshots (?topic_id=)

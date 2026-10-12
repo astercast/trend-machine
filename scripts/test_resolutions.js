@@ -123,6 +123,43 @@ check("resolveEntry stores resolved_at + verdict + evidence",
       typeof e13.resolved.window_end === "string" &&
       e13.resolved.n_actual_points === 5);
 
+// --- wave 18: coverage evidence -------------------------------------------------
+check("hit evidence carries window coverage",
+      c1.evidence.actual_first_ts === "2026-10-12T06:00:00.000Z" &&
+      c1.evidence.actual_last_ts === "2026-10-12T10:00:00.000Z" &&
+      c1.evidence.window_coverage_hours === 4,
+      JSON.stringify(c1.evidence));
+check("unverifiable evidence: coverage 0, first==last on 1 point",
+      c10.evidence.window_coverage_hours === 0 &&
+      c10.evidence.actual_first_ts === "2026-10-12T06:00:00.000Z" &&
+      c10.evidence.actual_last_ts === "2026-10-12T06:00:00.000Z");
+check("unverifiable evidence: no points -> null span",
+      c11.evidence.actual_first_ts === null &&
+      c11.evidence.actual_last_ts === null &&
+      c11.evidence.window_coverage_hours === 0);
+
+// --- wave 18: mergeHistory (live store + resolution archive) ---------------------
+var primary = { "t-live": [["2026-10-12T06:00:00.000Z", 50],
+                           ["2026-10-12T07:00:00.000Z", 55]] };
+var archive = { "t-live": [["2026-10-12T06:00:00.000Z", 99],
+                           ["2026-10-12T05:00:00.000Z", 40]],
+                "t-gone": [["2026-10-12T06:00:00.000Z", 70]] };
+var merged = R.mergeHistory(primary, archive);
+check("merge: archive-only topic restored",
+      merged["t-gone"].length === 1 && merged["t-gone"][0][1] === 70);
+check("merge: live store wins a shared hour bucket",
+      merged["t-live"].filter(function (p) { return p[0].indexOf("T06:") > -1; })[0][1] === 50);
+check("merge: archive fills buckets the store lost",
+      merged["t-live"].length === 3 && merged["t-live"][0][1] === 40);
+check("merge: inputs not mutated",
+      primary["t-live"].length === 2 && archive["t-live"].length === 2);
+var archFull = { "t-arch": series([90, 88, 86, 84, 82]) };
+var eM = entry("t-arch", "fading", 90);
+var cM = R.classifyResolution(eM, R.mergeHistory({}, archFull), NOW, TH);
+check("archived series grades decisively, not unverifiable",
+      cM.status === "resolved" && cM.verdict === "hit",
+      JSON.stringify(cM));
+
 // --- constants ----------------------------------------------------------------------
 check("HORIZON_H is 48", R.HORIZON_H === 48);
 check("PEAK_TOLERANCE is 2", R.PEAK_TOLERANCE === 2);

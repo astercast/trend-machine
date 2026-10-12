@@ -24,6 +24,9 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const HIST_FILE = path.join(ROOT, "data", "velocity_history.json");
+const ARCHIVE_FILE = path.join(ROOT, "data", "velocity_archive.json"); // wave 18:
+                                          // series of store-dropped topics,
+                                          // kept as resolution evidence
 const PHIST_FILE = path.join(ROOT, "data", "platform_velocity_history.json");
 const TRENDS_FILE = path.join(ROOT, "data", "trends.json");
 const LEDGER_FILE = path.join(ROOT, "data", "forecast_ledger.json");
@@ -120,7 +123,7 @@ function updateAccuracyLedger(now, history, analyses) {
   return { entries: entries, appended: appended };
 }
 
-function buildAccuracyPayload(now, entries) {
+function buildAccuracyPayload(now, entries, mergedHistory, liveIds) {
   // wave 14: "resolved" keeps its historical meaning — scored hit or miss
   // (the scorecard page's own words). Terminal-but-unscorable entries
   // (verdict "unverifiable": 48h passed, <2 actual snapshots) get their
@@ -142,12 +145,21 @@ function buildAccuracyPayload(now, entries) {
     .slice(0, 20)
     .map(e => ({
       topic_id: e.topic_id, title: e.title, forecast_at: e.forecast_at,
+      // wave 18: whether the topic is still on the board — the scorecard
+      // links a resolution to its dossier only when the dossier exists
+      topic_live: liveIds ? liveIds.has(e.topic_id) : true,
       state: e.state, peak_in_hours: e.peak_in_hours,
       verdict: e.resolved.verdict, reason: e.resolved.reason,
       actual_slope: e.resolved.actual_slope,
       actual_end_velocity: e.resolved.actual_end_velocity,
       actual_max_velocity: e.resolved.actual_max_velocity,
       n_actual_points: e.resolved.n_actual_points,
+      // wave 18: observed coverage of the 48h window (null on entries
+      // resolved before wave 18 — the field simply wasn't recorded)
+      actual_first_ts: e.resolved.actual_first_ts != null ? e.resolved.actual_first_ts : null,
+      actual_last_ts: e.resolved.actual_last_ts != null ? e.resolved.actual_last_ts : null,
+      window_coverage_hours: e.resolved.window_coverage_hours != null
+        ? e.resolved.window_coverage_hours : null,
       n_snapshots: e.n_snapshots
     }));
   // wave 9: resolution timeline — pending forecasts grouped by the day their
@@ -162,6 +174,23 @@ function buildAccuracyPayload(now, entries) {
   const upcoming_resolutions = Object.keys(byResDay).sort().map(day => ({
     date: day, pending: byResDay[day]
   }));
+  // wave 18: resolution-night readiness — exact next due time plus, for
+  // every pending forecast, whether its 48h window ALREADY holds the 2+
+  // actual snapshots a decisive verdict needs (live store + archive).
+  // A snapshot of the evidence position at build time, labeled as such:
+  // topics still in the store keep gaining points until their horizon.
+  let next_resolution_at = null;
+  const readiness = { pending: pending.length, with_sufficient_data: 0,
+                      awaiting_data: 0 };
+  pending.forEach(e => {
+    const dueMs = Date.parse(e.forecast_at) + HORIZON_H * 3600000;
+    if (next_resolution_at === null || dueMs < next_resolution_at) {
+      next_resolution_at = dueMs;
+    }
+    const n = mergedHistory ? R.actualsInWindow(e, mergedHistory).length : 0;
+    if (n >= 2) { readiness.with_sufficient_data++; }
+    else { readiness.awaiting_data++; }
+  });
   // wave 9: ledger activity — forecasts recorded per day (the Oracle's
   // own pulse, from real ledger timestamps).
   const byRecDay = {};
@@ -211,6 +240,9 @@ function buildAccuracyPayload(now, entries) {
               resolved: decisive.length, unverifiable: unverifiable.length,
               hits: hits.length },
     upcoming_resolutions: upcoming_resolutions,
+    next_resolution_at: next_resolution_at === null ? null
+      : new Date(next_resolution_at).toISOString(),
+    resolution_readiness: readiness,
     recorded_per_day: recorded_per_day,
     by_confidence: byConfidence,
     hit_rate: showRate ? Math.round((hits.length / decisive.length) * 1000) / 1000 : null,
@@ -340,8 +372,16 @@ function main() {
               " insufficient=" + insufficient + ")");
 
   // Wave 6: forecast-accuracy log — record today's forecasts, resolve old ones.
-  const acc = updateAccuracyLedger(now, history, ledgerInput);
-  const accPayload = buildAccuracyPayload(now, acc.entries);
+  // Wave 18: grading reads the merged history (live store + resolution
+  // archive) so a topic that churned out of the store still gets judged
+  // on the snapshots it actually left behind. Forecasts and lifecycle
+  // above keep reading the live store only — the public API stays
+  // store-scoped.
+  const archive = readJSON(ARCHIVE_FILE, {});
+  const mergedHistory = R.mergeHistory(history, archive);
+  const acc = updateAccuracyLedger(now, mergedHistory, ledgerInput);
+  const accPayload = buildAccuracyPayload(now, acc.entries, mergedHistory,
+                                          new Set(Object.keys(topics)));
   writeJSON(ACC_OUT, accPayload);
   console.log("[accuracy] ledger: " + acc.entries.length + " recorded (+" +
               acc.appended + " new), resolved=" + accPayload.counts.resolved +
@@ -386,7 +426,7 @@ function main() {
     };
     manifest.endpoints.forecast_accuracy = {
       path: "data/v1/forecast-accuracy.json",
-      description: "The Oracle's own scorecard: forecast-vs-actual ledger (hit/miss per forecast after a 48h horizon). Hit rate shown only after 10+ forecasts resolve; before that the status is 'building history'.",
+      description: "The Oracle's own scorecard: forecast-vs-actual ledger (hit/miss per forecast after a 48h horizon; unverifiable counted separately). Hit rate shown only after 10+ forecasts resolve; before that the status is 'building history'. Wave 18 adds next_resolution_at, resolution_readiness (pending forecasts whose 48h window already holds 2+ actual snapshots, live store + resolution archive), and per-resolution window-coverage evidence.",
       schema: "data/v1/schema/forecast-accuracy.json",
       updated: accPayload.generated_at,
       records: accPayload.counts.recorded,

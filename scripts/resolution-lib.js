@@ -20,7 +20,21 @@
    Entries not yet 48h old stay pending (with their due date).
 
    Every terminal resolution carries its evidence: window bounds,
-   number of actual points, slope, end/max velocity, thresholds used.
+   number of actual points, slope, end/max velocity, thresholds used,
+   and (wave 18) the observed coverage of the window — first/last
+   actual timestamps and the span between them — so a verdict graded
+   on a partially observed window says so on its face.
+
+   Wave 18: resolutions read a MERGED history — the live store
+   (data/velocity_history.json) plus the resolution archive
+   (data/velocity_archive.json), where pipeline/normalize.py moves the
+   series of topics that churn out of the store before their 48h
+   horizon lands. Without the archive, a dropped topic's real
+   snapshots were deleted with its store entry and its forecast could
+   only ever grade "unverifiable". mergeHistory() below is the one
+   merge rule both graders (build_forecasts.js, check_resolutions.js)
+   use: the live store wins per hour bucket, the archive fills the
+   buckets the store no longer holds.
    ============================================================ */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {
@@ -61,6 +75,29 @@
     });
   }
 
+  // mergeHistory(primary, archive) — the one merge rule for grading:
+  // union of both stores, one point per hour bucket (the pipeline's
+  // own bucketing), the primary (live) store winning any bucket both
+  // hold. Points keep their original recorded timestamps — merging
+  // never rewrites a timestamp. Inputs are not mutated.
+  function mergeHistory(primary, archive) {
+    var out = {};
+    function absorb(store, overwrite) {
+      Object.keys(store || {}).forEach(function (tid) {
+        var byHour = {};
+        (out[tid] || []).forEach(function (p) { byHour[p[0].slice(0, 13)] = p; });
+        (store[tid] || []).forEach(function (p) {
+          var k = p[0].slice(0, 13);
+          if (overwrite || !(k in byHour)) { byHour[k] = p; }
+        });
+        out[tid] = Object.keys(byHour).sort().map(function (k) { return byHour[k]; });
+      });
+    }
+    absorb(archive, false);   // archive first: fills gaps only
+    absorb(primary, true);    // live store wins shared buckets
+    return out;
+  }
+
   // classifyResolution(entry, history, nowMs, thresholds)
   //   thresholds: { rise: <T.RISE>, fall: <T.FALL> } — the classifier's own
   //   verdict returns:
@@ -82,7 +119,15 @@
     var evidence = {
       window_start: entry.forecast_at,
       window_end: new Date(w.endMs).toISOString(),
-      n_actual_points: pts.length
+      n_actual_points: pts.length,
+      // wave 18: observed coverage of the 48h window. A verdict graded
+      // on points spanning 9 of the 48 hours must say so — coverage is
+      // evidence, not a footnote.
+      actual_first_ts: pts.length ? pts[0][0] : null,
+      actual_last_ts: pts.length ? pts[pts.length - 1][0] : null,
+      window_coverage_hours: pts.length >= 2
+        ? Math.round(((Date.parse(pts[pts.length - 1][0]) - Date.parse(pts[0][0])) / 360000) ) / 10
+        : 0
     };
     if (pts.length < 2) {
       return { status: "resolved", verdict: "unverifiable",
@@ -144,6 +189,7 @@
     slopeOf: slopeOf,
     windowOf: windowOf,
     actualsInWindow: actualsInWindow,
+    mergeHistory: mergeHistory,
     classifyResolution: classifyResolution,
     resolveEntry: resolveEntry
   };

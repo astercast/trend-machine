@@ -122,7 +122,17 @@ the log starts 2026-10-11, nothing backfilled. Wave 9 adds
 horizon lands — a queue schedule, not a prediction), `recorded_per_day[]`
 (the ledger's own pulse), and `by_confidence` (hit rate by the confidence
 level claimed at forecast time; rows read "awaiting data" until that level
-has 10+ resolved). Human-readable at `forecast-accuracy.html`.
+has 10+ resolved). Wave 18 adds `next_resolution_at` (exact time the
+oldest pending forecast crosses its horizon), `resolution_readiness`
+(pending forecasts split by whether their window already holds the 2+
+actual snapshots a decisive verdict needs), and per-resolution coverage
+evidence on `recent[]` (`actual_first_ts` / `actual_last_ts` /
+`window_coverage_hours`, plus `topic_live` — false when the topic has
+left the board and its dossier is gone). Grading reads the live velocity
+store merged with `data/velocity_archive.json` — the series of topics
+that churned out of the store before their horizon (see PIPELINE.md);
+the public velocity/forecast payloads stay store-scoped. Human-readable
+at `forecast-accuracy.html`.
 
 **5d. Meme format families — `data/v1/meme-formats.json`** (wave 9)
 The tracked meme format families: hand-curated from Oct-2026 web research

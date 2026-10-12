@@ -158,6 +158,17 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   published as `data/v1/forecast-accuracy.json`. Status stays
   "building history" (hit_rate: null) until 10+ forecasts resolve —
   the log starts 2026-10-11, nothing is backfilled.
+- **Resolution archive (wave 18):** a topic can churn out of the store
+  hours after its forecast is recorded, long before the 48h horizon.
+  `normalize.py` now moves such a topic's velocity series into
+  `data/velocity_archive.json` instead of deleting it, and both graders
+  (`scripts/build_forecasts.js`, `scripts/check_resolutions.js`) judge
+  against live history + archive merged (`resolution-lib.js`
+  `mergeHistory` — live store wins per hour bucket). The archive prunes
+  with the ledger's own 7-day retention. Before wave 18 the series were
+  deleted outright; `scripts/recover_velocity_history.py` restored the
+  already-lost points from the repo's own git history (real recorded
+  timestamps only, provenance printed per topic).
 
 ## Scoring (`pipeline/normalize.py`)
 

@@ -23,9 +23,12 @@ var BUILDING = {
   resolution_rules: {
     rising_accelerating: "hit if slope >= +1.5/hr",
     peaking: "hit if max <= forecast +2",
-    fading: "hit if slope <= -1.5/hr"
+    fading: "hit if slope <= -1.5/hr",
+    unverifiable: "the 48h window holds fewer than 2 actual snapshots — counted separately, never a miss"
   },
-  counts: { recorded: 222, pending: 222, resolved: 0, hits: 0 },
+  counts: { recorded: 222, pending: 222, resolved: 0, hits: 0, unverifiable: 0 },
+  next_resolution_at: "2026-10-14T01:45:28.760Z",
+  resolution_readiness: { pending: 222, with_sufficient_data: 200, awaiting_data: 22 },
   hit_rate: null,
   hit_rate_note: "The Oracle shows its own hit rate once 10 forecasts have resolved; currently 0 resolved.",
   by_state: {
@@ -56,9 +59,12 @@ var LIVE = {
   resolution_rules: {
     rising_accelerating: "hit if slope >= +1.5/hr",
     peaking: "hit if max <= forecast +2",
-    fading: "hit if slope <= -1.5/hr"
+    fading: "hit if slope <= -1.5/hr",
+    unverifiable: "the 48h window holds fewer than 2 actual snapshots — counted separately, never a miss"
   },
-  counts: { recorded: 240, pending: 225, resolved: 15, hits: 9 },
+  counts: { recorded: 240, pending: 223, resolved: 15, hits: 9, unverifiable: 2 },
+  next_resolution_at: "2026-10-15T03:00:00.000Z",
+  resolution_readiness: { pending: 223, with_sufficient_data: 210, awaiting_data: 13 },
   hit_rate: 0.6,
   hit_rate_note: "Hit rate across 15 resolved forecasts.",
   by_state: {
@@ -81,7 +87,19 @@ var LIVE = {
   recent: [
     { topic_id: "bow-bow-bow", title: "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
       forecast_at: "2026-10-13T01:00:00.000Z", state: "peaking", peak_in_hours: 0,
-      verdict: "hit", actual_slope: -2.1, n_snapshots: 5 }
+      verdict: "hit", reason: "max velocity in window 91 vs forecast-time 90 (tolerance +2)",
+      actual_slope: -2.1, n_snapshots: 5, n_actual_points: 9,
+      actual_first_ts: "2026-10-13T02:00:00.000Z",
+      actual_last_ts: "2026-10-14T22:00:00.000Z",
+      window_coverage_hours: 44, topic_live: true },
+    { topic_id: "gone-topic", title: "One-day headline that left the board",
+      forecast_at: "2026-10-13T01:00:00.000Z", state: "fading", peak_in_hours: null,
+      verdict: "unverifiable",
+      reason: "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap. No honest comparison is possible.",
+      actual_slope: null, n_snapshots: 3, n_actual_points: 1,
+      actual_first_ts: "2026-10-13T02:00:00.000Z",
+      actual_last_ts: "2026-10-13T02:00:00.000Z",
+      window_coverage_hours: 0, topic_live: false }
   ]
 };
 
@@ -194,6 +212,57 @@ check("full page v2: timeline + activity + calibration present",
   page2.indexOf("Resolution timeline") > -1 &&
   page2.indexOf("Ledger activity") > -1 &&
   page2.indexOf("Calibration") > -1);
+
+// --- wave 18: Resolution Week -------------------------------------------------
+var counts18 = S.countsHTML(LIVE);
+check("counts: unverifiable card present with its number",
+  counts18.indexOf("Unverifiable") > -1 && counts18.indexOf(">2<") > -1);
+check("counts: unverifiable never folded into hits",
+  counts18.indexOf("never counted as misses") > -1);
+
+var banner18 = S.statusBannerHTML(LIVE);
+check("live banner: unverifiable excluded, named honestly",
+  banner18.indexOf("2 more came back unverifiable") > -1 &&
+  banner18.indexOf("not counted as misses") > -1);
+
+var recent18 = S.recentHTML(LIVE);
+check("recent: unverifiable gets its own class, never is-miss",
+  recent18.indexOf('class="is-unverifiable">unverifiable<') > -1);
+check("recent: unverifiable slope renders a dash, never null/undefined",
+  recent18.indexOf("null/hr") === -1 && recent18.indexOf("undefined") === -1);
+check("recent: hit evidence shows reason + coverage",
+  recent18.indexOf("max velocity in window 91") > -1 &&
+  recent18.indexOf("9 actual snapshots") > -1 &&
+  recent18.indexOf("spanning 44h of the 48h window") > -1);
+check("recent: off-board topic is plain text, not a dead link",
+  recent18.indexOf("topics/gone-topic.html") === -1 &&
+  recent18.indexOf("left the board") > -1);
+check("recent: live topic still links its dossier",
+  recent18.indexOf("topics/bow-bow-bow.html") > -1);
+
+var ready = S.readinessHTML(BUILDING, Date.parse("2026-10-12T22:00:00Z"));
+check("readiness: names the exact next due time",
+  ready.indexOf("Wed, 14 Oct 2026 01:45:28 UTC") > -1);
+check("readiness: relative countdown from the viewer's clock",
+  ready.indexOf("in about 28 hours") > -1);
+check("readiness: evidence bars carry both counts",
+  ready.indexOf("Ready to grade") > -1 && ready.indexOf("200") > -1 &&
+  ready.indexOf("Still short of data") > -1 && ready.indexOf("22") > -1);
+check("readiness: empty state is honest",
+  S.readinessHTML({ counts: { recorded: 0, pending: 0, resolved: 0, hits: 0 } })
+    .indexOf("No forecasts are waiting") > -1);
+check("readiness: past-due reads as due now",
+  S.readinessHTML(BUILDING, Date.parse("2026-10-15T00:00:00Z"))
+    .indexOf("due now") > -1);
+
+var method18 = S.methodHTML(LIVE);
+check("method: unverifiable rule row present",
+  method18.indexOf("Unverifiable") > -1 &&
+  method18.indexOf("counted separately, never a miss") > -1);
+
+var page18 = S.pageHTML(BUILDING, FORECASTS, Date.parse("2026-10-12T22:00:00Z"));
+check("full page v3: readiness section present",
+  page18.indexOf("Resolution readiness") > -1);
 
 if (FAILS.length) { console.log("\n" + FAILS.length + " FAILURES"); process.exit(1); }
 console.log("\nall checks passed");

@@ -763,7 +763,11 @@ def main():
                             "'unverifiable' verdict (48h passed, <2 actual snapshots "
                             "— counted separately, never in the hit rate). Status is "
                             "'building history' until 10+ forecasts resolve decisively; "
-                            "hit_rate is null before that."),
+                            "hit_rate is null before that. Wave 18: resolutions grade "
+                            "against live history plus the resolution archive (series "
+                            "of store-dropped topics), each verdict carries its "
+                            "observed window coverage, and the payload reports "
+                            "next_resolution_at + resolution_readiness."),
             "type": "object",
             "required": ["generated_at", "status", "method", "horizon_hours",
                          "resolution_rules", "counts", "hit_rate",
@@ -807,7 +811,21 @@ def main():
                             "actual_end_velocity": {"type": ["number", "null"]},
                             "actual_max_velocity": {"type": ["number", "null"]},
                             "n_actual_points": {"type": ["integer", "null"]},
+                            # wave 18: observed coverage of the 48h window
+                            "actual_first_ts": {"type": ["string", "null"]},
+                            "actual_last_ts": {"type": ["string", "null"]},
+                            "window_coverage_hours": {"type": ["number", "null"]},
+                            "topic_live": {"type": "boolean"},
                             "n_snapshots": {"type": "integer", "minimum": 0}}}},
+                # wave 18: resolution-night readiness (real ledger + snapshot evidence)
+                "next_resolution_at": {"type": ["string", "null"],
+                    "description": "Exact ISO time the oldest pending forecast crosses its 48h horizon; null when nothing is pending."},
+                "resolution_readiness": {"type": "object",
+                    "description": "Pending forecasts split by whether their 48h window already holds the 2+ actual snapshots a decisive verdict needs (live store + resolution archive), as of generated_at.",
+                    "properties": {
+                        "pending": {"type": "integer", "minimum": 0},
+                        "with_sufficient_data": {"type": "integer", "minimum": 0},
+                        "awaiting_data": {"type": "integer", "minimum": 0}}},
                 # wave 9: resolution timeline, ledger activity, calibration
                 "upcoming_resolutions": {"type": "array",
                     "description": "Pending forecasts grouped by the day their 48h horizon lands (real ledger dates).",

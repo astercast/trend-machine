@@ -15,6 +15,9 @@ import json, os, re, datetime, glob
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(ROOT, "data", "trends.json")
 HIST = os.path.join(ROOT, "data", "velocity_history.json")
+ARCHIVE = os.path.join(ROOT, "data", "velocity_archive.json")
+LEDGER = os.path.join(ROOT, "data", "forecast_ledger.json")
+LEDGER_MAX_DAYS = 7      # mirrors build_forecasts.js MAX_LEDGER_AGE_D
 OUT_DIR = os.path.join(ROOT, "pipeline", "out")
 STALE_HOURS = 72
 HIST_MAX_DAYS = 14       # history window for velocity sparklines
@@ -164,16 +167,67 @@ def snapshot_history(topics, hist):
                 continue
             latest[dt.strftime("%Y-%m-%dT%H")] = p
         hist[tid] = sorted(latest.values(), key=lambda p: p[0])
-    # drop topics that no longer exist
+    # wave 18: topics that leave the store keep their series — moved to
+    # the resolution archive, never deleted. A decisive forecast resolves
+    # 48h after it is recorded, but a churned-out news topic can leave
+    # the store within hours; deleting its snapshots with its store
+    # entry made its forecast ungradeable ("unverifiable") even though
+    # the data existed. The graders (build_forecasts.js,
+    # check_resolutions.js) read live history + archive merged
+    # (resolution-lib.js mergeHistory — the archive fills the hour
+    # buckets the live store no longer holds).
+    archive = load_store(ARCHIVE)
+    moved = 0
     for tid in list(hist):
         if tid not in topics:
-            del hist[tid]
+            by_hour = {p[0][:13]: p for p in archive.get(tid) or []}
+            for p in hist.pop(tid):
+                by_hour[p[0][:13]] = p
+            archive[tid] = sorted(by_hour.values(), key=lambda p: p[0])
+            moved += 1
+    # Archive pruning mirrors the ledger's own retention: points age out
+    # at HIST_MAX_DAYS like the live store, and a series is dropped once
+    # the ledger holds no entry for the topic inside its 7-day window
+    # (the verdict's evidence is recorded on the ledger entry itself).
+    # Ledger unreadable -> keep everything (fail-safe, never lose
+    # grading evidence on a guess).
+    ledger_ids = None
+    try:
+        with open(LEDGER) as f:
+            led = json.load(f)
+        led_cutoff = now - datetime.timedelta(days=LEDGER_MAX_DAYS)
+        ledger_ids = set()
+        for e in led.get("entries", []):
+            dt = parse_ts(e.get("forecast_at", ""))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=datetime.timezone.utc)
+            if dt >= led_cutoff:
+                ledger_ids.add(e.get("topic_id"))
+    except Exception:
+        ledger_ids = None
+    for tid in list(archive):
+        pts = []
+        for p in archive[tid]:
+            dt = parse_ts(p[0])
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=datetime.timezone.utc)
+            if dt >= cutoff:
+                pts.append(p)
+        if not pts or (ledger_ids is not None and tid not in ledger_ids):
+            del archive[tid]
+        else:
+            archive[tid] = pts
+    with open(ARCHIVE, "w") as f:
+        json.dump(archive, f, ensure_ascii=False, separators=(",", ":"))
     os.makedirs(os.path.dirname(HIST), exist_ok=True)
     with open(HIST, "w") as f:
         json.dump(hist, f, ensure_ascii=False, separators=(",", ":"))
     n_pts = sum(len(v) for v in hist.values())
+    a_pts = sum(len(v) for v in archive.values())
     print(f"[normalize] history: {len(hist)} topics, {n_pts} points "
           f"(window {HIST_MAX_DAYS}d, bucket {HIST_BUCKET_S}s) -> {HIST}")
+    print(f"[normalize] archive: {len(archive)} topics, {a_pts} points "
+          f"({moved} series moved this run) -> {ARCHIVE}")
 
 # --- wave 6: per-platform velocity history -----------------------------------
 # Same bucketing/pruning as the main history, but one series per platform

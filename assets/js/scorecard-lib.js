@@ -4,6 +4,12 @@
    ever shown comes from the ledger's resolved counts — with fewer than
    MIN_RESOLVED resolved the page says "building history" and hit_rate
    stays null. Nothing here invents accuracy.
+   Wave 18 (Resolution Week): the view is ready for the first verdicts —
+   unverifiable resolutions get their own count card and verdict styling
+   (never dressed as misses), every resolution shows its reason and the
+   observed coverage of its 48h window, the method table carries the
+   unverifiable rule, and a readiness panel shows the exact next due
+   time plus how many pending windows already hold enough actuals.
    Pure functions, no DOM — unit-tested with pinned fixtures
    (scripts/test_scorecard.js). Node-safe: exports when module exists. */
 var TM_Scorecard = (function () {
@@ -46,10 +52,13 @@ var TM_Scorecard = (function () {
     var v = verdict(acc);
     var c = (acc && acc.counts) || { recorded: 0, pending: 0, resolved: 0, hits: 0 };
     if (v.live) {
+      var unv = c.unverifiable || 0;
       return '<div class="sc-banner is-live" role="status">' +
         "<h2>📊 Live scorecard</h2>" +
         "<p>The Oracle's hit rate is <strong>" + pct(acc.hit_rate) + "</strong> " +
-        "across " + c.resolved + " resolved forecasts (" + c.hits + " hits). " +
+        "across " + c.resolved + " resolved forecasts (" + c.hits + " hits" +
+        (unv ? "; " + unv + " more came back unverifiable and are excluded, " +
+               "not counted as misses" : "") + "). " +
         "Each forecast is judged against the actual velocity 48h later — " +
         "nothing is backfilled, nothing is cherry-picked.</p></div>";
     }
@@ -69,12 +78,54 @@ var TM_Scorecard = (function () {
       ["Recorded", c.recorded, "forecasts the Oracle has logged"],
       ["Pending", c.pending, "awaiting their 48h horizon"],
       ["Resolved", c.resolved, "scored hit or miss"],
-      ["Hits", c.hits, "forecasts the actuals confirmed"]
+      ["Hits", c.hits, "forecasts the actuals confirmed"],
+      ["Unverifiable", c.unverifiable || 0,
+       "horizon passed with too little data to judge — never counted as misses"]
     ];
     return '<div class="sc-counts">' + cards.map(function (cd) {
       return '<div class="sc-count"><span class="num">' + cd[1] + "</span>" +
         "<strong>" + cd[0] + "</strong><span>" + cd[2] + "</span></div>";
     }).join("") + "</div>";
+  }
+
+  function readinessHTML(acc, nowMs) {
+    // Wave 18 — resolution-night readiness: the exact moment the next
+    // verdicts land and whether the pending windows already hold the
+    // 2+ actual snapshots a decisive verdict needs. Everything shown
+    // comes from the payload (next_resolution_at, resolution_readiness,
+    // both computed from the ledger + real snapshots at build time);
+    // the relative "in ~Nh" is arithmetic on the viewer's clock.
+    var next = acc && acc.next_resolution_at;
+    var r = (acc && acc.resolution_readiness) || null;
+    if (!next || !r || !r.pending) {
+      return '<section class="sc-section sc-readiness" aria-labelledby="sc-ready">' +
+        '<h2 id="sc-ready">Resolution readiness</h2>' +
+        '<p class="oracle-empty">No forecasts are waiting on a horizon right now.</p></section>';
+    }
+    var due = new Date(next);
+    var when = due.toUTCString().replace("GMT", "UTC");
+    var rel = "";
+    if (typeof nowMs === "number" && isFinite(nowMs)) {
+      var diffH = (due.getTime() - nowMs) / 3600000;
+      if (diffH > 1) { rel = " — in about " + Math.round(diffH) + " hours"; }
+      else if (diffH > 0) { rel = " — in under an hour"; }
+      else { rel = " — due now; verdicts land on the next pipeline run"; }
+    }
+    var max = Math.max(r.with_sufficient_data, r.awaiting_data, 1);
+    return '<section class="sc-section sc-readiness" aria-labelledby="sc-ready">' +
+      '<h2 id="sc-ready">Resolution readiness</h2>' +
+      '<p class="oc-honest">The next verdicts land <strong>' + esc(when) + "</strong>" +
+      esc(rel) + ", when the oldest pending forecasts cross their 48h horizon. " +
+      "A forecast can only be graded if its window holds 2 or more actual " +
+      "velocity snapshots; the bars below are the evidence position as of " +
+      "the ledger's last update — topics still on the board keep gaining " +
+      "snapshots until their horizon lands.</p>" +
+      '<div class="sc-bars" role="img" aria-label="Pending forecasts by evidence: ' +
+      r.with_sufficient_data + " already hold 2 or more snapshots in their window; " +
+      r.awaiting_data + ' are still short of data">' +
+      barRow("Ready to grade", r.with_sufficient_data, max, "pending") +
+      barRow("Still short of data", r.awaiting_data, max, "pending") +
+      "</div></section>";
   }
 
   function horizonTableHTML(acc) {
@@ -126,18 +177,44 @@ var TM_Scorecard = (function () {
         "<strong>Oct 14, 2026</strong>. This table fills itself in.</p>";
     } else {
       var rows = recent.map(function (r) {
-        var verdictClass = r.verdict === "hit" ? "is-hit" : "is-miss";
-        return '<tr><td><a href="topics/' + esc(r.topic_id) + '.html">' +
-          esc(r.title) + "</a></td><td>" + esc(stateLabel(r.state)) + "</td>" +
+        var verdictClass = r.verdict === "hit" ? "is-hit"
+          : r.verdict === "unverifiable" ? "is-unverifiable" : "is-miss";
+        // link the dossier only while it exists (payload carries the
+        // flag); a topic that left the board renders as plain text
+        var title = r.topic_live === false
+          ? esc(r.title) + ' <span class="sc-offboard">(left the board)</span>'
+          : '<a href="topics/' + esc(r.topic_id) + '.html">' + esc(r.title) + "</a>";
+        var slope = (r.actual_slope === null || r.actual_slope === undefined)
+          ? "—"
+          : (r.actual_slope >= 0 ? "+" : "") + esc(String(r.actual_slope)) + "/hr";
+        // the verdict's evidence, on its face: why it graded this way
+        // and how much of the 48h window was actually observed
+        var evidence = esc(r.reason || "");
+        if (r.n_actual_points !== null && r.n_actual_points !== undefined) {
+          evidence += (evidence ? " · " : "") + r.n_actual_points +
+            " actual snapshot" + (r.n_actual_points === 1 ? "" : "s");
+        }
+        if (r.window_coverage_hours !== null &&
+            r.window_coverage_hours !== undefined) {
+          evidence += " spanning " + esc(String(r.window_coverage_hours)) +
+            "h of the 48h window";
+        }
+        return "<tr><td>" + title + "</td><td>" + esc(stateLabel(r.state)) + "</td>" +
           '<td class="num">' + esc(r.n_snapshots) + "</td>" +
           '<td class="' + verdictClass + '">' + esc(r.verdict) + "</td>" +
-          '<td class="num">' + (r.actual_slope >= 0 ? "+" : "") +
-          esc(String(r.actual_slope)) + "/hr</td></tr>";
+          '<td class="num">' + slope + "</td></tr>" +
+          (evidence
+            ? '<tr class="sc-evidence"><td colspan="5">' + evidence + "</td></tr>"
+            : "");
       }).join("");
       body = '<table class="sc-table"><thead><tr><th scope="col">Topic</th>' +
         '<th scope="col">Forecast</th><th scope="col">Snapshots</th>' +
         '<th scope="col">Verdict</th><th scope="col">Actual slope</th>' +
-        "</tr></thead><tbody>" + rows + "</tbody></table>";
+        "</tr></thead><tbody>" + rows + "</tbody></table>" +
+        '<p class="oc-honest">Every verdict carries its evidence: the rule ' +
+        "that decided it, how many actual snapshots its window held, and " +
+        "how much of the 48 hours they span. A verdict graded on a " +
+        "partially observed window says so.</p>";
     }
     return '<section class="sc-section" aria-labelledby="sc-recent">' +
       '<h2 id="sc-recent">Recent resolutions</h2>' + body + "</section>";
@@ -182,7 +259,8 @@ var TM_Scorecard = (function () {
       ["Rising / accelerating",
        rules.rising_accelerating || "—"],
       ["Peaking", rules.peaking || "—"],
-      ["Fading", rules.fading || "—"]
+      ["Fading", rules.fading || "—"],
+      ["Unverifiable", rules.unverifiable || "—"]
     ].map(function (r) {
       return "<tr><td>" + r[0] + "</td><td>" + esc(r[1]) + "</td></tr>";
     }).join("");
@@ -274,8 +352,8 @@ var TM_Scorecard = (function () {
       "</tbody></table></section>";
   }
 
-  function pageHTML(acc, fc) {
-    return statusBannerHTML(acc) + countsHTML(acc) +
+  function pageHTML(acc, fc, nowMs) {
+    return statusBannerHTML(acc) + countsHTML(acc) + readinessHTML(acc, nowMs) +
       projectionsHTML(fc) + timelineHTML(acc) + activityHTML(acc) +
       horizonTableHTML(acc) + byCallHTML(acc) + calibrationHTML(acc) +
       recentHTML(acc) + methodHTML(acc);
@@ -289,6 +367,7 @@ var TM_Scorecard = (function () {
     horizonTableHTML: horizonTableHTML,
     byCallHTML: byCallHTML,
     recentHTML: recentHTML,
+    readinessHTML: readinessHTML,
     projectionsHTML: projectionsHTML,
     timelineHTML: timelineHTML,
     activityHTML: activityHTML,

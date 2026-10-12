@@ -5,8 +5,10 @@
      node scripts/check_resolutions.js [--dry-run]
 
    Re-checks every unresolved forecast in data/forecast_ledger.json
-   against current data/velocity_history.json and resolves honestly:
-   hit / miss / unverifiable (see scripts/resolution-lib.js for the
+   against the merged velocity history (data/velocity_history.json +
+   data/velocity_archive.json — wave 18: the archive holds series of
+   topics that left the store before their horizon) and resolves
+   honestly: hit / miss / unverifiable (see resolution-lib.js for the
    rules). Already-resolved and not-yet-due entries are never touched.
 
    Every resolution is recorded with its evidence in
@@ -14,6 +16,17 @@
    stdout so the wave log can cite exact numbers.
 
    --dry-run: classify only, write nothing.
+
+   Resolution-night rehearsal (wave 18):
+     node scripts/check_resolutions.js --dry-run --at <ISO time>
+       [--ledger <path>] [--history <path>] [--archive <path>]
+   --at classifies as if it were that moment, so the night can be
+   rehearsed before it happens. It REQUIRES --dry-run: a rehearsal
+   clock must never write a verdict (a run with --at and no --dry-run
+   exits with an error). Rehearsal verdicts are mechanics proof only —
+   the window's later snapshots don't exist yet at rehearsal time, so
+   real verdicts on the night can differ. Path overrides exist so a
+   rehearsal can run against copies in a scratch directory.
    ============================================================ */
 "use strict";
 
@@ -23,6 +36,7 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const LEDGER_FILE = path.join(ROOT, "data", "forecast_ledger.json");
 const HIST_FILE = path.join(ROOT, "data", "velocity_history.json");
+const ARCHIVE_FILE = path.join(ROOT, "data", "velocity_archive.json");
 
 const T = require("../assets/js/trajectory.js");
 const R = require("./resolution-lib.js");
@@ -32,16 +46,42 @@ function readJSON(p, fallback) {
   catch (e) { return fallback; }
 }
 
+function argValue(flag) {
+  const i = process.argv.indexOf(flag);
+  return i >= 0 && i + 1 < process.argv.length ? process.argv[i + 1] : null;
+}
+
 function main() {
   const dryRun = process.argv.indexOf("--dry-run") >= 0;
-  const raw = readJSON(LEDGER_FILE, null);
+  const atArg = argValue("--at");
+  let nowMs = Date.now();
+  if (atArg !== null) {
+    if (!dryRun) {
+      console.error("[check-resolutions] ERROR: --at is rehearsal-only and " +
+                    "requires --dry-run (a rehearsal clock never writes).");
+      return 1;
+    }
+    nowMs = Date.parse(atArg);
+    if (isNaN(nowMs)) {
+      console.error("[check-resolutions] ERROR: --at value is not a valid " +
+                    "timestamp: " + atArg);
+      return 1;
+    }
+    console.log("[check-resolutions] REHEARSAL clock: " +
+                new Date(nowMs).toISOString() +
+                " (dry-run; verdicts are mechanics proof, not results)");
+  }
+  const ledgerFile = argValue("--ledger") || LEDGER_FILE;
+  const histFile = argValue("--history") || HIST_FILE;
+  const archiveFile = argValue("--archive") || ARCHIVE_FILE;
+  const raw = readJSON(ledgerFile, null);
   if (!raw || !Array.isArray(raw.entries)) {
-    console.error("[check-resolutions] ERROR: ledger unreadable: " + LEDGER_FILE);
+    console.error("[check-resolutions] ERROR: ledger unreadable: " + ledgerFile);
     process.exit(1);
   }
-  const history = readJSON(HIST_FILE, {});
+  const history = R.mergeHistory(readJSON(histFile, {}),
+                                 readJSON(archiveFile, {}));
   const entries = raw.entries;
-  const nowMs = Date.now();
   const thresholds = { rise: T.RISE, fall: T.FALL };
 
   const counts = { checked: 0, hit: 0, miss: 0, unverifiable: 0,
@@ -68,7 +108,7 @@ function main() {
   });
 
   if (!dryRun) {
-    fs.writeFileSync(LEDGER_FILE, JSON.stringify({ entries: entries }, null, 2));
+    fs.writeFileSync(ledgerFile, JSON.stringify({ entries: entries }, null, 2));
   }
 
   // --- report: oldest unresolved first ---------------------------------
@@ -92,6 +132,7 @@ function main() {
                   " end=" + r.evidence.actual_end_velocity +
                   " max=" + r.evidence.actual_max_velocity +
                   " n=" + r.evidence.n_actual_points +
+                  " coverage=" + r.evidence.window_coverage_hours + "h" +
                   " window=" + r.evidence.window_start + ".." + r.evidence.window_end);
     });
   }
@@ -105,7 +146,7 @@ function main() {
     console.log("[check-resolutions] no unresolved entries remain.");
   }
   console.log("[check-resolutions] " + (dryRun ? "wrote nothing (--dry-run)" :
-              "ledger written: " + LEDGER_FILE));
+              "ledger written: " + ledgerFile));
   return 0;
 }
 

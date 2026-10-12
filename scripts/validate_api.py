@@ -234,6 +234,26 @@ def main():
                   and isinstance(r.get("n_actual_points"), int)
                   for r in fa.get("recent", [])),
               "recent entries must carry reason + n_actual_points")
+        # wave 18: readiness + coverage evidence, computed from real data
+        rd = fa.get("resolution_readiness", {})
+        check("resolution readiness sums to pending",
+              rd.get("pending", -1) == c.get("pending", -2)
+              and rd.get("with_sufficient_data", -1)
+              + rd.get("awaiting_data", -2) == rd.get("pending", -3),
+              f"readiness={rd} pending={c.get('pending')}")
+        check("next_resolution_at consistent with the queue",
+              (c.get("pending", 0) == 0 and fa.get("next_resolution_at") is None)
+              or (c.get("pending", 0) > 0
+                  and isinstance(fa.get("next_resolution_at"), str)
+                  and fa["next_resolution_at"][:10]
+                  == (fa.get("upcoming_resolutions") or [{}])[0].get("date")),
+              f"next={fa.get('next_resolution_at')} "
+              f"upcoming={fa.get('upcoming_resolutions')}")
+        check("resolution coverage evidence sane",
+              all(r.get("window_coverage_hours") is None
+                  or 0 <= r["window_coverage_hours"] <= 48
+                  for r in fa.get("recent", [])),
+              "coverage must be null (pre-wave-18) or within the 48h window")
     else:
         print("[validate] forecast-accuracy.json absent (node step skipped) — not validated")
 

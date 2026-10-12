@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="assets/css/wave9.css">
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/wave12.css">
+<link rel="stylesheet" href="assets/css/wave18.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -82,7 +83,7 @@ resolve, this page says "building history" — no accuracy is claimed.</p>
       // (web-craft: Baseline — but a transition is motion, so
       // reduced-motion users get the instant swap)
       var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var html = TM_Scorecard.pageHTML(acc, fc);
+      var html = TM_Scorecard.pageHTML(acc, fc, Date.now());
       if (!reduceMotion && document.startViewTransition) {
         document.startViewTransition(function () { main.innerHTML = html; });
       } else {
