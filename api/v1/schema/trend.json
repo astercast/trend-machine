@@ -118,6 +118,13 @@
       ],
       "description": "Wave 7: 'format' = a reusable template others can fill (dance, caption variant, sound, challenge); 'topic' = a subject/event to cover; 'format+topic' = an event-driven topic riding a meme template. Rule-derived from format_tags + category."
     },
+    "format_family": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Wave 9: id of the curated format family this topic belongs to (see api/v1/meme-formats.json) \u2014 matched from the topic's own text against the curated family keywords, re-computed every run; null when the topic matches no tracked family."
+    },
     "verification": {
       "type": "string",
       "enum": [

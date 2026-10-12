@@ -126,6 +126,9 @@ function updateAccuracyLedger(now, history, analyses) {
       peak_in_hours: a.peakInHours,
       latest_velocity: a.latestVelocity,
       n_snapshots: a.n,
+      // wave 9: confidence level at forecast time — powers the calibration
+      // view once forecasts resolve. null for entries recorded before wave 9.
+      confidence: a.confidence || null,
       resolved: null
     });
     appended++;
@@ -158,6 +161,39 @@ function buildAccuracyPayload(now, entries) {
       verdict: e.resolved.verdict, actual_slope: e.resolved.actual_slope,
       n_snapshots: e.n_snapshots
     }));
+  // wave 9: resolution timeline — pending forecasts grouped by the day their
+  // 48h horizon lands (real ledger dates, never projections of accuracy).
+  const pending = entries.filter(e => !e.resolved);
+  const byResDay = {};
+  pending.forEach(e => {
+    const day = new Date(Date.parse(e.forecast_at) + HORIZON_H * 3600000)
+      .toISOString().slice(0, 10);
+    byResDay[day] = (byResDay[day] || 0) + 1;
+  });
+  const upcoming_resolutions = Object.keys(byResDay).sort().map(day => ({
+    date: day, pending: byResDay[day]
+  }));
+  // wave 9: ledger activity — forecasts recorded per day (the Oracle's
+  // own pulse, from real ledger timestamps).
+  const byRecDay = {};
+  entries.forEach(e => {
+    const day = e.forecast_at.slice(0, 10);
+    byRecDay[day] = (byRecDay[day] || 0) + 1;
+  });
+  const recorded_per_day = Object.keys(byRecDay).sort().map(day => ({
+    date: day, recorded: byRecDay[day]
+  }));
+  // wave 9: calibration — hit rate by the confidence level the Oracle
+  // claimed at forecast time. Honest pre-resolution: rows read "awaiting
+  // data" until that confidence level has MIN_RESOLVED_FOR_RATE resolved.
+  const byConfidence = {};
+  ["high", "medium", "low"].forEach(level => {
+    const rs = resolved.filter(e => e.confidence === level);
+    byConfidence[level] = {
+      resolved: rs.length,
+      hits: rs.filter(e => e.resolved.verdict === "hit").length
+    };
+  });
   const showRate = resolved.length >= MIN_RESOLVED_FOR_RATE;
   return {
     generated_at: now.toISOString(),
@@ -179,6 +215,9 @@ function buildAccuracyPayload(now, entries) {
     counts: { recorded: entries.length,
               pending: entries.length - resolved.length,
               resolved: resolved.length, hits: hits.length },
+    upcoming_resolutions: upcoming_resolutions,
+    recorded_per_day: recorded_per_day,
+    by_confidence: byConfidence,
     hit_rate: showRate ? Math.round((hits.length / resolved.length) * 1000) / 1000 : null,
     hit_rate_note: showRate
       ? "Hit rate across " + resolved.length + " resolved forecasts."
@@ -265,7 +304,9 @@ function main() {
     ledgerInput[r.topic.id] = {
       state: e.analysis.state, title: r.topic.title,
       peakInHours: projections[r.topic.id].peak_in_hours,
-      latestVelocity: e.analysis.latestVelocity, n: e.analysis.n
+      latestVelocity: e.analysis.latestVelocity, n: e.analysis.n,
+      // wave 9: confidence level for the calibration view
+      confidence: e.confidence ? e.confidence.level : null
     };
   });
 

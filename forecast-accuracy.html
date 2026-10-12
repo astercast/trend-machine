@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forecast accuracy — the Oracle's own scorecard — Trend Machine</title>
+<meta name="description" content="The Oracle's forecast-vs-actual record: resolutions, hit/miss breakdown, per-horizon accuracy, current 48h projections. Honest by construction — no accuracy is claimed until forecasts actually resolve.">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/wave3.css">
+<link rel="stylesheet" href="assets/css/wave9.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="head-inner">
+<a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<span class="kicker">📊 the oracle's own scorecard</span>
+</div></header>
+
+<main id="main" class="wrap">
+<nav aria-label="Breadcrumb" style="margin:20px 0 0">
+<a href="index.html" style="font-size:13px">&larr; all trends</a> ·
+<a href="oracle.html" style="font-size:13px">the oracle</a>
+</nav>
+
+<section class="oracle-hero" aria-labelledby="sc-title">
+<p class="kicker">forecast accuracy · honest by construction</p>
+<h1 id="sc-title">📊 Forecast accuracy</h1>
+<p>
+  Does the Oracle's crystal ball actually work? This page is the Oracle's own
+  report card: every decisive forecast it makes (peaking, accelerating,
+  rising, cooling) is recorded in a ledger, then scored <strong>hit</strong> or
+  <strong>miss</strong> against the real velocity 48 hours later. The bar is the
+  classifier's own thresholds — the Oracle is graded against its own rules.
+</p>
+<p class="oc-honest">The ledger started 2026-10-11; nothing is backfilled.
+Each forecast's verdict needs 48h of actuals after it's recorded, so the first
+resolutions land around <strong>Oct 14, 2026</strong>. Until 10 forecasts
+resolve, this page says "building history" — no accuracy is claimed.</p>
+<p class="kicker" id="sc-stamp">Loading the ledger…</p>
+</section>
+
+<div id="sc-status" role="status" aria-live="polite"></div>
+<div id="sc-main"></div>
+</main>
+
+<footer class="site-foot"><div class="wrap foot-grid">
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+</div></footer>
+
+<script src="assets/js/scorecard-lib.js"></script>
+<script>
+(function () {
+  "use strict";
+  function getJSON(url, optional) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) { throw new Error(url); }
+      return r.json();
+    }).catch(function () {
+      if (optional) { return null; }
+      throw new Error(url);
+    });
+  }
+  function init() {
+    var statusEl = document.getElementById("sc-status");
+    var main = document.getElementById("sc-main");
+    var stampEl = document.getElementById("sc-stamp");
+    if (!statusEl || !main) { return; }
+    Promise.all([
+      getJSON("api/v1/forecast-accuracy.json"),
+      getJSON("api/v1/forecasts.json", true)
+    ]).then(function (res) {
+      var acc = res[0], fc = res[1];
+      statusEl.hidden = true;
+      // same-document view transition for the client-side render
+      // (web-craft: Baseline — but a transition is motion, so
+      // reduced-motion users get the instant swap)
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var html = TM_Scorecard.pageHTML(acc, fc);
+      if (!reduceMotion && document.startViewTransition) {
+        document.startViewTransition(function () { main.innerHTML = html; });
+      } else {
+        main.innerHTML = html;
+      }
+      if (stampEl) {
+        var c = (acc && acc.counts) || { recorded: 0, resolved: 0 };
+        stampEl.textContent = "Ledger: " + c.recorded + " recorded · " +
+          c.resolved + " resolved · updated " + (acc ? acc.generated_at : "unknown");
+      }
+    }).catch(function () {
+      statusEl.innerHTML =
+        '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the ledger</h2>' +
+        "<p>This page needs api/v1/forecast-accuracy.json (built by scripts/build_forecasts.js). " +
+        "Run pipeline/refresh.sh or check the connection.</p></div>";
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

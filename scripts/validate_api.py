@@ -118,6 +118,56 @@ def main():
           all(isinstance(p, list) and len(p) == 2 and isinstance(p[0], str)
               and isinstance(p[1], int) for p in flat_pts))
 
+    # wave 9: meme-formats.json — schema + consistency with topics
+    mf_path = os.path.join(API, "meme-formats.json")
+    if os.path.exists(mf_path):
+        mf = validate_doc("meme-formats.json", mf_path, "meme-formats.json")
+        mf_ids = {f["id"] for f in mf.get("families", [])}
+        # every topic's format_family must reference a real family (or be null)
+        bad_fam = [t["id"] for t in topics
+                   if t.get("format_family") not in (None, *mf_ids)]
+        check("topics' format_family references real families", not bad_fam,
+              f"bad ids: {bad_fam[:5]}")
+        # tracked_topics must be live topic ids that actually claim the family
+        fam_of = {t["id"]: t.get("format_family") for t in topics}
+        bad_link = []
+        for f in mf.get("families", []):
+            for tid in f.get("tracked_topics", []):
+                if tid not in topic_ids or fam_of.get(tid) != f["id"]:
+                    bad_link.append((f["id"], tid))
+        check("meme-formats tracked_topics consistent with topics",
+              not bad_link, f"bad links: {bad_link[:5]}")
+        # verification flags stay honest: only the two enum values
+        bad_ver = [f["id"] for f in mf.get("families", [])
+                   if f.get("verification") not in ("verified", "single-source")]
+        check("meme-formats verification flags honest", not bad_ver,
+              f"bad ids: {bad_ver[:5]}")
+        # flat feed carries format_family too
+        bad_flat_fam = [t["id"] for t in flat.get("trends", [])
+                        if t.get("format_family") != fam_of.get(t["id"])]
+        check("flat feed format_family matches dossiers", not bad_flat_fam,
+              f"bad ids: {bad_flat_fam[:5]}")
+    else:
+        print("[validate] meme-formats.json absent — not validated")
+
+    # wave 9: forecast-accuracy rich-dashboard fields (additive, honest)
+    fa_path2 = os.path.join(API, "forecast-accuracy.json")
+    if os.path.exists(fa_path2):
+        fa2 = load(fa_path2)
+        c2 = fa2.get("counts", {})
+        tl = fa2.get("upcoming_resolutions", [])
+        check("upcoming_resolutions sums to pending",
+              sum(r.get("pending", 0) for r in tl) == c2.get("pending", 0),
+              f"timeline={sum(r.get('pending', 0) for r in tl)} pending={c2.get('pending')}")
+        rp = fa2.get("recorded_per_day", [])
+        check("recorded_per_day sums to recorded",
+              sum(r.get("recorded", 0) for r in rp) == c2.get("recorded", 0),
+              f"activity={sum(r.get('recorded', 0) for r in rp)} recorded={c2.get('recorded')}")
+        bc = fa2.get("by_confidence", {})
+        check("by_confidence levels honest",
+              set(bc.keys()) <= {"high", "medium", "low"} and
+              all(set(v.keys()) == {"resolved", "hits"} for v in bc.values()))
+
     fc_path = os.path.join(API, "forecasts.json")
     if os.path.exists(fc_path):
         fc = validate_doc("forecasts.json", fc_path, "forecasts.json")

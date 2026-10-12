@@ -1,0 +1,143 @@
+/* trend-machine — wave 9 styles: Oracle scorecard + meme-format families.
+   Static, no animation; respects reduced-motion (nothing moves). */
+
+.sc-banner { border: 1px solid var(--line, #223); border-radius: 12px;
+  padding: 18px 20px; margin: 18px 0 24px; background: var(--card, #0d1117); }
+.sc-banner h2 { margin: 0 0 8px; font-size: 20px; }
+.sc-banner p { margin: 0; font-size: 15px; }
+.sc-banner.is-building { border-left: 4px solid #b8860b; }
+.sc-banner.is-live { border-left: 4px solid #3fb950; }
+
+.sc-counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px; margin: 18px 0; }
+.sc-count { border: 1px solid var(--line, #223); border-radius: 10px;
+  padding: 14px; display: flex; flex-direction: column; gap: 4px; }
+.sc-count .num { font-size: 30px; font-weight: 700; }
+.sc-table .num, .sc-count .num, .sc-bar-val {
+  font-variant-numeric: tabular-nums;
+}
+.sc-count strong { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
+.sc-count span:last-child { font-size: 12.5px; color: var(--ink-faint, #8b949e); }
+
+.sc-section { margin: 34px 0; }
+.sc-section h2 { font-size: 18px; margin: 0 0 10px; }
+
+.sc-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
+.sc-table th, .sc-table td { text-align: left; padding: 9px 12px;
+  border-bottom: 1px solid var(--line, #223); vertical-align: top; }
+.sc-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--ink-dim, #8b949e); }
+.sc-table .is-hit { color: #3fb950; font-weight: 600; }
+.sc-table .is-miss { color: #f85149; font-weight: 600; }
+
+.oc-honest { font-size: 13px; color: var(--ink-faint, #8b949e); max-width: 70ch; }
+
+/* --- format families ------------------------------------------------ */
+.fmt-lede { font-size: 15px; margin: 16px 0; }
+.fmt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px; margin: 22px 0; }
+.fmt-card { border: 1px solid var(--line, #223); border-radius: 12px;
+  padding: 18px; background: var(--card, #0d1117);
+  /* long listing stays cheap: skip offscreen rendering (web-craft angle 6) */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px; }
+.fmt-card h2 { margin: 0; font-size: 18px; }
+.fmt-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px; }
+.fmt-card h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--ink-dim, #8b949e); margin: 16px 0 8px; }
+.fmt-desc { margin: 0 0 8px; font-size: 14.5px; }
+.fmt-status-note { font-size: 13px; color: var(--ink-faint, #8b949e); margin: 0 0 8px; }
+.fmt-examples, .fmt-topics { margin: 0 0 8px; padding-left: 20px; font-size: 14px; }
+.fmt-examples li, .fmt-topics li { margin-bottom: 8px; }
+.fmt-sources { font-size: 12.5px; color: var(--ink-faint, #8b949e); }
+.fmt-flag-note { font-size: 12.5px; color: var(--ink-faint, #8b949e); margin: 4px 0 0;
+  width: 100%; }
+.chip.fmt-status { border-color: #1f6feb; }
+.chip.fmt-verify { font-size: 11.5px; }
+.chip.fmt-verified { border-color: #3fb950; }
+.chip.fmt-single { border-color: #b8860b; }
+.fmt-method { border: 1px dashed var(--line, #223); border-radius: 10px;
+  padding: 14px 16px; margin: 18px 0; }
+
+/* --- scorecard bars (wave 9) ------------------------------------------------ */
+.sc-bars { margin: 12px 0; max-width: 640px; }
+.sc-bar-row { display: grid; grid-template-columns: 110px 1fr 90px;
+  gap: 10px; align-items: center; margin: 6px 0; font-size: 13px; }
+.sc-bar-label { color: var(--ink-dim, #8b949e); }
+.sc-bar-track { display: block; height: 10px; border-radius: 5px;
+  background: var(--line, #223); overflow: hidden; }
+.sc-bar-fill { display: block; height: 100%; background: #1f6feb; border-radius: 5px; }
+.sc-bar-val { text-align: right; }
+
+/* --- web-craft findings, applied (wave 9) ---------------------------------
+   From research_notes/web-craft-20261011-2014/notes/02-new-css.md:
+   - Cross-document view transitions are Baseline (verified) — progressive
+     enhancement: smooth cross-links between dossiers, the scorecard, and
+     the formats page where supported; no-op elsewhere.
+   - Scroll-driven reveals: progressive enhancement (Chrome/Edge 115+,
+     Safari 26+); ALWAYS gated behind prefers-reduced-motion. One subtle
+     entrance per section/card, zero ambient loops.
+   - Container queries for component layout ("page layout = media queries;
+     component layout = container queries").
+   - text-wrap: balance on headings (Baseline 2024). */
+
+/* motion tokens (web-craft round 1, angle 3: 5 durations, named easings) */
+:root {
+  --tm-dur-fast: 120ms;
+  --tm-dur-base: 200ms;
+  --tm-dur-moderate: 320ms;
+  --tm-dur-slow: 480ms;
+  --tm-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --tm-ease-decelerate: cubic-bezier(0, 0, 0, 1);
+}
+
+/* cross-document view transitions: dossiers <-> scorecard <-> formats.
+   Round-2 correction: a view transition IS motion — gate the opt-in behind
+   prefers-reduced-motion (no-preference). Reduced-motion users get instant
+   navigation. Progressive enhancement: no-op where unsupported. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+/* typography craft: balanced headings on the new pages */
+#sc-title, #fmt-title,
+.sc-section h2, .fmt-card h2, .fmt-leaderboard h2 {
+  text-wrap: balance;
+}
+
+/* component layout via container queries: the section (not the grid
+   itself) is the query container — a grid cannot query its own width.
+   Grids respond to their section's width, not the viewport. */
+.sc-section, #fmt-main {
+  container-type: inline-size;
+}
+@container (max-width: 560px) {
+  .sc-counts { grid-template-columns: repeat(2, 1fr); }
+  .fmt-grid { grid-template-columns: 1fr; }
+}
+@container (min-width: 561px) {
+  .sc-counts { grid-template-columns: repeat(4, 1fr); }
+  .fmt-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+}
+
+/* scroll-driven entrance: subtle, one per element, motion-safe.
+   Progressive enhancement — without animation-timeline support the
+   content simply renders (no hidden state outside the @supports block). */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sc-section, .fmt-card, .fmt-leaderboard {
+      /* finished state is the default (opacity 1, no translate) — motion is
+         layered on top, so the failure mode is "no animation", never
+         invisible content (web-craft round 2 craft rule) */
+      animation: tm-enter var(--tm-dur-slow) var(--tm-ease-decelerate) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+@keyframes tm-enter {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}

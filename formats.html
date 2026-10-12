@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meme format families — reusable templates to join — Trend Machine</title>
+<meta name="description" content="The meme formats being tracked: curated format families (costume walks, POV setups, dance hooks…) with current examples, evidence, and verification flags — single-source families are flagged, never hidden.">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/wave8.css">
+<link rel="stylesheet" href="assets/css/wave9.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="head-inner">
+<a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<span class="kicker">⧉ format families</span>
+</div></header>
+
+<main id="main" class="wrap">
+<nav aria-label="Breadcrumb" style="margin:20px 0 0">
+<a href="index.html" style="font-size:13px">&larr; all trends</a> ·
+<a href="oracle.html" style="font-size:13px">the oracle</a>
+</nav>
+
+<section class="oracle-hero" aria-labelledby="fmt-title">
+<p class="kicker">meme formats · october 2026</p>
+<h1 id="fmt-title">⧉ Meme format families</h1>
+<p>
+  One-off trends are subjects to cover; <strong>formats are reusable templates
+  to join</strong>. This page tracks the format families — the containers that
+  keep re-filling with new examples (costume walks, POV setups, dance hooks,
+  call-out copy…). Each family is hand-curated from web research and carries
+  its evidence and verification flag in the open.
+</p>
+<p class="oc-honest"><strong>verified</strong> = 2+ independent sources agree ·
+<strong>⚠ single-source</strong> = one source or creator lore — flagged, confirm
+live before building on it. The pipeline links topics to families
+automatically by matching their text against the curated keywords; matches are
+re-computed every run, so links never go stale.</p>
+<p class="kicker" id="fmt-stamp">Loading format families…</p>
+</section>
+
+<div id="fmt-status" role="status" aria-live="polite"></div>
+<div id="fmt-main"></div>
+</main>
+
+<footer class="site-foot"><div class="wrap foot-grid">
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+</div></footer>
+
+<script src="assets/js/formats-lib.js"></script>
+<script>
+(function () {
+  "use strict";
+  function init() {
+    var statusEl = document.getElementById("fmt-status");
+    var main = document.getElementById("fmt-main");
+    var stampEl = document.getElementById("fmt-stamp");
+    if (!statusEl || !main) { return; }
+    fetch("api/v1/meme-formats.json").then(function (r) {
+      if (!r.ok) { throw new Error("meme-formats.json"); }
+      return r.json();
+    }).then(function (doc) {
+      // topic id -> title for the linked topics (from the trends feed)
+      return fetch("api/v1/trends.flat.json").then(function (r) {
+        return r.ok ? r.json() : null;
+      }).then(function (flat) {
+        var titles = {};
+        if (flat && flat.trends) {
+          flat.trends.forEach(function (t) { titles[t.id] = t.title; });
+        }
+        return { doc: doc, titles: titles, flat: flat };
+      });
+    }).then(function (both) {
+      statusEl.hidden = true;
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var html = TM_Formats.pageHTML(both.doc, both.titles,
+        (both.flat && both.flat.trends) || []);
+      if (!reduceMotion && document.startViewTransition) {
+        document.startViewTransition(function () { main.innerHTML = html; });
+      } else {
+        main.innerHTML = html;
+      }
+      if (stampEl) {
+        var n = (both.doc.families || []).length;
+        stampEl.textContent = n + " format families · curated " +
+          (both.doc.generated_at || "recently");
+      }
+    }).catch(function () {
+      statusEl.innerHTML =
+        '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the format families</h2>' +
+        "<p>This page needs api/v1/meme-formats.json. Run pipeline/refresh.sh " +
+        "or check the connection.</p></div>";
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

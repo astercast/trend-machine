@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T02:46:58.323954+00:00",
+  "generated_at": "2026-10-12T03:47:20.640645+00:00",
   "sample": true,
-  "source_count": 53,
+  "source_count": 91,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
   "trends": [
     {
@@ -30,14 +30,15 @@
         "Wikipedia"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 92,
         "latest_velocity": 92,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -65,14 +66,15 @@
         "Game8"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 91,
         "latest_velocity": 91,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 91 when tracking started (Oct 11, 2026), 91 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 91 when tracking started (Oct 11, 2026), 91 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -101,14 +103,15 @@
         "Lightreel"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 90,
         "latest_velocity": 90,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -136,14 +139,15 @@
         "RedWaveFeed"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 90,
         "latest_velocity": 90,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -171,14 +175,15 @@
         "NewsWatchmen"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 88,
         "latest_velocity": 88,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 88 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 88 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -204,14 +209,15 @@
         "Revid"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 86,
         "latest_velocity": 86,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 11, 2026), 86 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 11, 2026), 86 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -238,8 +244,9 @@
         "SocialPilot"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 86,
@@ -275,14 +282,15 @@
         "Face of Malawi"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 85,
         "latest_velocity": 85,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 85 when tracking started (Oct 11, 2026), 85 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 85 when tracking started (Oct 11, 2026), 85 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -310,8 +318,9 @@
         "SocialPilot"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 85,
@@ -344,8 +353,9 @@
         "SocialPilot"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 84,
@@ -377,12 +387,48 @@
         "SocialPilot"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 84,
         "latest_velocity": 84,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "shrinking-pine-cone",
+      "title": "SHRINKING PINE CONE — oddly-satisfying timelapse",
+      "source": "Revid",
+      "url": "https://www.revid.ai/tiktok-viral-trends-today",
+      "velocity": 83,
+      "opportunity_score": 83,
+      "hashtags": [
+        "#oddlysatisfying",
+        "#timelapse",
+        "#pinecone"
+      ],
+      "detected_at": "2026-10-08T00:00:00-07:00",
+      "summary": "The week's biggest 24h gainer on Revid's TikTok tracker: @majimero.1217's SHRINKING PINE CONE pulled +15M views in 24 hours (30M total, 3 days in). The oddly-satisfying timelapse lane is wide open — one object, one transformation, no narration needed.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Revid"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 83,
+        "latest_velocity": 83,
         "delta": 0,
         "sparkline_svg": null,
         "per_platform": {}
@@ -413,8 +459,9 @@
         "SocialPilot"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 82,
@@ -446,6 +493,44 @@
         "SocialPilot"
       ],
       "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 2,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 82,
+        "latest_velocity": 82,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "sidewalk-reactions",
+      "title": "Public-sidewalk event reactions",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 82,
+      "opportunity_score": 82,
+      "hashtags": [
+        "#sidewalk",
+        "#reactions",
+        "#metgala"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "The zero-credential press pass: @thatssosavannah filmed Met Gala arrivals from the public sidewalk with genuine reactions and went from 2,900 followers to 8.9M views. Anijam's Oct-8 trend check names it as the week's breakout-from-near-zero pattern — pick a culturally relevant moment, add authentic personality, keep the format simple. Proximity + personality beats production.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Anijam"
+      ],
+      "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
         "snapshots": 1,
         "state": "building",
@@ -481,14 +566,200 @@
         "NewsWatchmen"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 81,
         "latest_velocity": 81,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 81 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 81 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "cat-face-ten",
+      "title": "\"My face a 10\" cat photo carousel",
+      "source": "SocialBee",
+      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+      "velocity": 81,
+      "opportunity_score": 81,
+      "hashtags": [
+        "#catsoftiktok",
+        "#myfacea10",
+        "#catcarousel"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "The confident-lyrics cat carousel: \"My face a 10\" (a cute photo of your cat's face), \"My body tea\" (body shot, extra points if chubby), \"Everything natural, I'm petite\" (small-size highlight), \"And I got some pretty feet\" (paw close-up). SocialBee's Oct-7 songs roundup notes the pairing of cocky lyrics with cute cat photos is unexpectedly hilarious — a whole photo-dump format in four frames.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "SocialBee"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 81,
+        "latest_velocity": 81,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "hard-times-paramore",
+      "title": "Paramore \"Hard Times\" — relatable-struggle edits",
+      "source": "SocialBee",
+      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+      "velocity": 80,
+      "opportunity_score": 80,
+      "hashtags": [
+        "#hardtimes",
+        "#paramore",
+        "#relatable"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "Paramore's \"Hard Times\" is October's high-energy vent track: creators cut it to fast edits, dance bits, colorful transitions — and the breakout lane, carousels that open on a small relatable problem (\"Why does my back hurt?\") and flip through photographic evidence. SocialBee's Oct-7 roundup calls out the carousel format specifically.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance",
+        "format"
+      ],
+      "sources": [
+        "SocialBee"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 80,
+        "latest_velocity": 80,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "young-hearts-run-free",
+      "title": "Sped-up \"Young Hearts Run Free\" — prom & glow-up sound",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 79,
+      "opportunity_score": 79,
+      "hashtags": [
+        "#youngheartsrunfree",
+        "#glowup",
+        "#prom"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "Candi Staton's disco classic, sped up, is October's prom-and-glow-up bed: transformations, before/afters, and big-night reveals cut to the lifted tempo. Anijam's Oct-8 trend check names it alongside the \"Like a Prayer\" house remix as one of the two breakout legacy-song sounds this week.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Anijam"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 79,
+        "latest_velocity": 79,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "ai-misunderstanding",
+      "title": "AI misunderstanding scenarios — comedy skits",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 79,
+      "opportunity_score": 79,
+      "hashtags": [
+        "#aicomedy",
+        "#aimisunderstanding",
+        "#skit"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "AI that takes everything literally: comedy skits built on AI assistants catastrophically misunderstanding simple human requests. Anijam's Oct-8 trend check lists AI-misunderstanding scenarios among the week's strong comedy formats — distinct from AI roleplay (playing a character), this one is the machine as the straight man to human absurdity.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Anijam"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 79,
+        "latest_velocity": 79,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "nicole-kidman-adela",
+      "title": "ADÉLA \"Nicole Kidman\" car-window stare",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 79,
+      "opportunity_score": 79,
+      "hashtags": [
+        "#nicolekidman",
+        "#adela",
+        "#maincharacter"
+      ],
+      "detected_at": "2026-10-04T00:00:00-07:00",
+      "summary": "The month's it-girl sound gets its signature visual: Alix Earle's car-window version of ADÉLA's \"Nicole Kidman\" — all city lights and main-character stare. genznewz's October timeline says the Earle version \"sealed\" the sound. The format is a template: window, lights, stare, the song does the rest.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "format",
+        "template"
+      ],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 79,
+        "latest_velocity": 79,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -515,12 +786,157 @@
         "SocialPilot"
       ],
       "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 2,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 78,
+        "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "and-i-love-her",
+      "title": "Santo & Johnny \"And I Love Her\" — dreamy transition bed",
+      "source": "SocialBee",
+      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+      "velocity": 78,
+      "opportunity_score": 78,
+      "hashtags": [
+        "#andiloveher",
+        "#transitions",
+        "#couple"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "Santo & Johnny's instrumental \"And I Love Her\" went viral as October's smooth-transition bed: cute couple clips, outfit changes, room makeovers, and chill storytelling voiceovers. SocialBee's Oct-7 songs roundup notes its dreamy vibe makes transitions feel seamless — the sound does the editing work for you.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialBee"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
         "snapshots": 1,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "fade-into-autumn",
+      "title": "\"Fade Into You\" + \"I just love autumn\" seasonal audio",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 78,
+      "opportunity_score": 78,
+      "hashtags": [
+        "#fadeintoyou",
+        "#autumn",
+        "#falltransition"
+      ],
+      "detected_at": "2026-09-28T00:00:00-07:00",
+      "summary": "Mazzy Star's \"Fade Into You\" got tied to an \"I just love autumn\" movie line, giving seasonal-transition content a fixed audio for October. genznewz's October timeline names it as the pivot point: September's low-production formats met the calendar, and this pairing became the season's signature transition sound.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 78,
+        "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "like-a-prayer-remix",
+      "title": "\"Like a Prayer\" house remix — emotional montage bed",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 77,
+      "opportunity_score": 77,
+      "hashtags": [
+        "#likeaprayer",
+        "#emotional",
+        "#montage"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "A house remix of Madonna's \"Like a Prayer\" is scoring October's emotional montages — memory edits, friendship recaps, end-of-era goodbyes. Anijam's Oct-8 check pairs it with the sped-up \"Young Hearts Run Free\" as the week's two breakout legacy-song sounds; the remix gives a familiar vocal a fresh club pulse for montages.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Anijam"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 77,
+        "latest_velocity": 77,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "its-a-clock",
+      "title": "\"It's a clock\" — deadpan realization + sound drop",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 77,
+      "opportunity_score": 77,
+      "hashtags": [
+        "#itsaclock",
+        "#deadpan",
+        "#realization"
+      ],
+      "detected_at": "2026-09-26T00:00:00-07:00",
+      "summary": "The deadpan hook that ruled late September: a belated realization paired with a sound drop — \"it's a clock.\" genznewz's October timeline calls the deadpan hook the month-turn's defining comedy register, with one standout at 2.4M likes. The format is a template: mundane object, delayed understanding, drop.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format",
+        "template"
+      ],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 77,
+        "latest_velocity": 77,
         "delta": 0,
         "sparkline_svg": null,
         "per_platform": {}
@@ -551,6 +967,42 @@
         "SocialPilot"
       ],
       "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 2,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 76,
+        "latest_velocity": 76,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "scott-street-slowed",
+      "title": "\"Scott Street\" (Slowed) — Phoebe Bridgers nostalgic-letdown bed",
+      "source": "SocialBee",
+      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+      "velocity": 76,
+      "opportunity_score": 76,
+      "hashtags": [
+        "#scottstreet",
+        "#slowed",
+        "#nostalgic"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "The slowed version of Phoebe Bridgers' \"Scott Street\" is October's wistful bed for nostalgic montages — rainy-day routines, memory clips, making tea — with a comedy lane too: relatable letdowns (the coworker who won't gossip, the plan that fell through). SocialBee's Oct-7 songs roundup flags both the sincere and the self-deprecating uses.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialBee"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
         "snapshots": 1,
         "state": "building",
@@ -586,14 +1038,124 @@
         "PureXbox"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 75,
         "latest_velocity": 75,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 11, 2026), 75 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 11, 2026), 75 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "fan-outfit-transition",
+      "title": "@dayannacomas fan-outfit transition",
+      "source": "Virlo",
+      "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+      "velocity": 75,
+      "opportunity_score": 75,
+      "hashtags": [
+        "#outfittransition",
+        "#costume",
+        "#quickchange"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "The cleanest execution of October's costume-transition format: a quick-change edit that brands are already borrowing to introduce team roles and product rotations. Virlo's October trend check (via HeyOrca's Oct-2 guide) singles out @dayannacomas's fan-outfit transition as the one to study — small premise, any niche can copy it without a costume or a prop.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Virlo"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 75,
+        "latest_velocity": 75,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "shop-with-confidence",
+      "title": "#shopwithconfidence — TikTok Shop official hauls",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 75,
+      "opportunity_score": 75,
+      "hashtags": [
+        "#shopwithconfidence",
+        "#tiktokshop",
+        "#haul"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "TikTok's own shopping push is a trend: #shopwithconfidence marks official-shop hauls, and SocialPilot's October hashtag table lists it as Rising. The format is the trusted haul — sellers and shoppers filming official-store unboxings with the tag doing the credibility work.",
+      "category": "culture",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 75,
+        "latest_velocity": 75,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "ancestor-photo-prank",
+      "title": "Ancestor Photo Prank",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 75,
+      "opportunity_score": 75,
+      "hashtags": [
+        "#ancestorprank",
+        "#prank",
+        "#parents"
+      ],
+      "detected_at": "2026-09-28T00:00:00-07:00",
+      "summary": "Prank your parents with sepia-toned celebrity headshots passed off as real 1800s relatives — the deadpan delivery sells it. genznewz's October timeline flags the Ancestor Photo Prank as one of September's formats that kept coasting into October; the reveal (it's a celebrity) is the payoff beat.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 75,
+        "latest_velocity": 75,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -620,14 +1182,15 @@
         "NapoleonCat"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -654,14 +1217,15 @@
         "NewEngen"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -688,6 +1252,117 @@
         "SocialPilot"
       ],
       "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 2,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 74,
+        "latest_velocity": 74,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "hideaway-pilein",
+      "title": "Kiesza \"Hideaway\" group pile-in",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 74,
+      "opportunity_score": 74,
+      "hashtags": [
+        "#hideaway",
+        "#groupdance",
+        "#pilein"
+      ],
+      "detected_at": "2026-09-24T00:00:00-07:00",
+      "summary": "Late September's participation format rolling into October: friends crowd into frame for messy, joyful choreography to Kiesza's \"Hideaway\" — the pile-in IS the choreography. genznewz's October-on-TikTok timeline names it one of the month-turn formats with almost no production bar: get bodies in frame, hit the beat, done.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 74,
+        "latest_velocity": 74,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "boynextdoor-animal",
+      "title": "BOYNEXTDOOR \"ANIMAL\" challenge variations",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 74,
+      "opportunity_score": 74,
+      "hashtags": [
+        "#animal",
+        "#boynextdoor",
+        "#kpop"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Lightreel's October weekly flags BOYNEXTDOOR's rapid \"ANIMAL\" challenge variations as a growing campaign: the K-pop group is iterating the challenge fast enough that each variation becomes its own entry point. For creators, the play is picking up the newest variation early — the challenge rewards speed over polish.",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "challenge"
+      ],
+      "sources": [
+        "Lightreel"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 74,
+        "latest_velocity": 74,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "digger-film",
+      "title": "Tom Cruise's \"Digger\" — Iñárritu climate satire splits viewers",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 74,
+      "opportunity_score": 74,
+      "hashtags": [
+        "#digger",
+        "#tomcruise",
+        "#film"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): Alejandro G. Iñárritu's climate-crisis satire starring Tom Cruise is splitting viewers, with fans urging people to go see it. A divisive-prestige-film moment — the discourse itself is the content lane: hot takes, spoiler-free debates, and \"go see it\" advocacy.",
+      "category": "entertainment",
+      "platforms": [
+        "bluesky",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Bluesky trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
         "snapshots": 1,
         "state": "building",
@@ -724,14 +1399,89 @@
         "Game8"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 73,
         "latest_velocity": 73,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 11, 2026), 73 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 11, 2026), 73 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "pour-it-up-duet",
+      "title": "\"Pour It Up\" still/switch duet",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 73,
+      "opportunity_score": 73,
+      "hashtags": [
+        "#pouritup",
+        "#duet",
+        "#stillchallenge"
+      ],
+      "detected_at": "2026-09-24T00:00:00-07:00",
+      "summary": "The commitment duet: one person dances while the other stands completely still — then they trade. genznewz's October timeline flags the still/switch \"Pour It Up\" duet as a late-September participation format that kept its low production bar into October. The comedy is in who commits harder to stillness.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "duet",
+        "format"
+      ],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 73,
+        "latest_velocity": 73,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "breast-cancer-awareness",
+      "title": "#breastcancerawarenessmonth — October giveback",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 73,
+      "opportunity_score": 73,
+      "hashtags": [
+        "#breastcancerawarenessmonth",
+        "#giveback",
+        "#october"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "October's awareness lane: #breastcancerawarenessmonth is Rising on SocialPilot's October hashtag table, with health and beauty creators running awareness content and givebacks. A calendar-driven trend with a fixed window — the content peaks with the month.",
+      "category": "culture",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 73,
+        "latest_velocity": 73,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -759,14 +1509,87 @@
         "DLCompare"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 72,
         "latest_velocity": 72,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 11, 2026), 72 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 11, 2026), 72 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "mannequin-revival",
+      "title": "Mannequin Challenge revival (fit checks)",
+      "source": "SocialBee",
+      "url": "http://socialbee.com/blog/tiktok-trends-you-cant-miss/",
+      "velocity": 72,
+      "opportunity_score": 72,
+      "hashtags": [
+        "#mannequinchallenge",
+        "#fitcheck"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "The 2016 Mannequin Challenge is back — this time as fit checks: one person stands completely still while someone walks around them with the camera to capture every angle of the outfit. Cinematic feel, pure nostalgia; fashion/beauty/retail brands can rebuild it for new collections.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "challenge"
+      ],
+      "sources": [
+        "SocialBee"
+      ],
+      "trend_type": "format",
+      "format_family": "costume-walk",
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 72,
+        "latest_velocity": 72,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "some-place-not-like",
+      "title": "\"Some Place You're Not Going To Like...\"",
+      "source": "MediaNug",
+      "url": "https://www.medianug.com/tiktok-trending-report",
+      "velocity": 72,
+      "opportunity_score": 72,
+      "hashtags": [
+        "#someplace",
+        "#expectationvsreality",
+        "#relatable"
+      ],
+      "detected_at": "2026-09-29T00:00:00-07:00",
+      "summary": "Lip-sync the sound to describe something that ended up much worse than expected — the trend plays the gap between what you imagined and the reality. 13.5K videos (MediaNug, 10/1/26). Brands can use it for relatable customer pain points and things that are harder than they look.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "MediaNug"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 72,
+        "latest_velocity": 72,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -794,14 +1617,88 @@
         "NewEngen"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 71,
         "latest_velocity": 71,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 11, 2026), 71 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 11, 2026), 71 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "american-girl-possession",
+      "title": "American Girl Doll possession reveal",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 71,
+      "opportunity_score": 71,
+      "hashtags": [
+        "#americangirldoll",
+        "#possession",
+        "#nostalgia"
+      ],
+      "detected_at": "2026-09-20T00:00:00-07:00",
+      "summary": "A resurfaced 2009 clip keeps coasting: the doll \"possession\" reveal — dead-eyed American Girl Doll, horror-movie framing, played completely straight. genznewz's October timeline names it among September's formats that rolled into October on pure nostalgia + uncanny energy. Zero production; the doll does the acting.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "genznewz"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 71,
+        "latest_velocity": 71,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "pingo-reactions",
+      "title": "Pingo's multilingual reaction creators",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 71,
+      "opportunity_score": 71,
+      "hashtags": [
+        "#reactions",
+        "#multilingual",
+        "#pingo"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Lightreel's October weekly names Pingo's multilingual reaction creators as a growing campaign: reaction content that crosses language barriers, with creators reacting across languages. A watch-lane for the reaction format's next evolution — reactions that travel need no translation.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Lightreel"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 71,
+        "latest_velocity": 71,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -828,14 +1725,126 @@
         "SocialBee"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 70,
         "latest_velocity": 70,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 11, 2026), 70 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 11, 2026), 70 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "pov-dating",
+      "title": "\"POV: you're dating…\"",
+      "source": "SocialBee",
+      "url": "http://socialbee.com/blog/tiktok-trends-you-cant-miss/",
+      "velocity": 70,
+      "opportunity_score": 70,
+      "hashtags": [
+        "#pov",
+        "#dating"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "Imagine dating almost anything — a favorite brand, a fictional character, an athlete, even an inanimate object — then stitch funny, exaggerated clips of the quirks, habits, and stereotypes. Highly adaptable: brands can position their own product or mascot as the 'partner' and lean into inside jokes the audience already knows.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "pov",
+        "stitch"
+      ],
+      "sources": [
+        "SocialBee"
+      ],
+      "trend_type": "format",
+      "format_family": "pov-setup",
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "i-did-nothing",
+      "title": "\"I Did Nothing...\" — nothing-to-say skits",
+      "source": "MediaNug",
+      "url": "https://www.medianug.com/tiktok-trending-report",
+      "velocity": 70,
+      "opportunity_score": 70,
+      "hashtags": [
+        "#ididnothing",
+        "#awkward",
+        "#relatable"
+      ],
+      "detected_at": "2026-09-25T00:00:00-07:00",
+      "summary": "Creators pitch scenarios where they're talking to someone but have conspicuously nothing to contribute — the humor is how little there is to say. 5K videos (MediaNug, 9/25/26). A natural lane for relatable customer interactions, awkward industry small talk, and meetings that could have been a message.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "MediaNug"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "canadian-thanksgiving",
+      "title": "Canadian Thanksgiving (Oct 12)",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 70,
+      "opportunity_score": 70,
+      "hashtags": [
+        "#canadianthanksgiving",
+        "#thanksgiving",
+        "#grateful"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): Canadians sharing holiday greetings, turkey-dinner stories, and gratitude lists ahead of Thanksgiving Monday (Oct 12). A 24-hour content window — the greeting-and-gratitude format peaks the day before and the day of.",
+      "category": "culture",
+      "platforms": [
+        "bluesky",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Bluesky trending"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -862,14 +1871,15 @@
         "Sacnilk"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 69,
         "latest_velocity": 69,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 69 when tracking started (Oct 11, 2026), 69 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 69 when tracking started (Oct 11, 2026), 69 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -896,14 +1906,15 @@
         "USA Today"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 68,
         "latest_velocity": 68,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 11, 2026), 68 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 11, 2026), 68 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -931,14 +1942,15 @@
         "Lightreel"
       ],
       "trend_type": "format",
+      "format_family": "transition",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 68,
         "latest_velocity": 68,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 12, 2026), 68 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 12, 2026), 68 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -965,14 +1977,52 @@
         "Sacnilk"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 66,
         "latest_velocity": 66,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 11, 2026), 66 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 11, 2026), 66 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "la-calabaza-pets",
+      "title": "La Calabaza pet performance",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 66,
+      "opportunity_score": 66,
+      "hashtags": [
+        "#lacalabaza",
+        "#petsoftiktok",
+        "#petperformance"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Lightreel's week-ending-Oct-3 report lists the La Calabaza pet performance as promising-but-thin: pets performing to the \"La Calabaza\" audio, an early pet-format lane for October. Thin evidence so far — treat as an early watch, not a proven format; confirm live before building on it.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Lightreel"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 66,
+        "latest_velocity": 66,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -998,14 +2048,15 @@
         "Lightreel"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 64,
         "latest_velocity": 64,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 64 when tracking started (Oct 12, 2026), 64 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 64 when tracking started (Oct 12, 2026), 64 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1031,14 +2082,15 @@
         "Lightreel"
       ],
       "trend_type": "topic",
+      "format_family": "transition",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 62,
         "latest_velocity": 62,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 62 when tracking started (Oct 12, 2026), 62 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 62 when tracking started (Oct 12, 2026), 62 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1069,14 +2121,15 @@
         "Anijam"
       ],
       "trend_type": "topic",
+      "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 93,
         "latest_velocity": 93,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 93 when tracking started (Oct 11, 2026), 93 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 93 when tracking started (Oct 11, 2026), 93 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1108,8 +2161,9 @@
         "Vadbav"
       ],
       "trend_type": "format",
+      "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 92,
@@ -1144,14 +2198,15 @@
         "Lightreel"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 60,
         "latest_velocity": 60,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 60 when tracking started (Oct 12, 2026), 60 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 60 when tracking started (Oct 12, 2026), 60 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1179,14 +2234,15 @@
         "Virlo"
       ],
       "trend_type": "topic",
+      "format_family": "deadpan-debate",
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 88,
         "latest_velocity": 90,
         "delta": 2,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 90 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 90 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1217,14 +2273,15 @@
         "TechNode"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 90,
         "latest_velocity": 90,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 12, 2026), 90 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 12, 2026), 90 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1254,20 +2311,21 @@
         "youtube-invidious"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 76,
         "latest_velocity": 89,
         "delta": 13,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 89 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 89 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": null
+            "snapshots": 3,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -1298,14 +2356,15 @@
         "Vadbav"
       ],
       "trend_type": "format",
+      "format_family": "dance-hook",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 88,
         "latest_velocity": 88,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 12, 2026), 88 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 12, 2026), 88 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1335,14 +2394,54 @@
         "CapeTimes"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 87,
         "latest_velocity": 87,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 87 when tracking started (Oct 11, 2026), 87 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 87 when tracking started (Oct 11, 2026), 87 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "hold-it-down",
+      "title": "\"Someone's gotta hold it down\" — ADÉLA \"Ain't In LA\"",
+      "source": "Virlo",
+      "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+      "velocity": 86,
+      "opportunity_score": 56,
+      "hashtags": [
+        "#holditdown",
+        "#aintinla",
+        "#worktok"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "The one-take workplace flex: film the unglamorous shift that keeps running while everyone else is at the conference, the launch, or the party. The sound is ADÉLA's \"Ain't In LA\"; NapoleonCat's standout version — someone running their own iPhone business instead of a 9-to-5 — sits at 384,000 likes. Demi Lovato rode the same \"hold it down\" caption on her Bahamas post. No staging needed; the unpolish",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "caption"
+      ],
+      "sources": [
+        "Virlo",
+        "genznewz",
+        "EntertainmentNow"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 86,
+        "latest_velocity": 86,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -1371,14 +2470,54 @@
         "NewEngen"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 84,
         "latest_velocity": 84,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 11, 2026), 84 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 11, 2026), 84 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "old-technology-dance",
+      "title": "Slayyyter \"Old Technology\" pose-and-sway dance",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 84,
+      "opportunity_score": 55,
+      "hashtags": [
+        "#oldtechnology",
+        "#slayyyter",
+        "#dancechallenge"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "Not a footwork challenge — a posing one: rhythmic swaying and struck poses to Slayyyter's \"Old Technology\" (from WOR$T GIRL IN AMERICA). Lightreel's Oct FAQ names it one of the three top dance challenges right now and notes near-20%+ engagement rates across nearly every version — the format rewards attitude over precision, so anyone can post it.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance",
+        "format"
+      ],
+      "sources": [
+        "Anijam",
+        "Lightreel"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 84,
+        "latest_velocity": 84,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -1406,28 +2545,69 @@
         "reddit-rss:r/news"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 74,
         "latest_velocity": 83,
         "delta": 9,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 83 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 83 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "x": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
+            "snapshots": 3,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           },
           "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
+            "snapshots": 3,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
+      }
+    },
+    {
+      "id": "cortis-redred",
+      "title": "CORTIS \"REDRED\" wiggle-ears challenge",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 82,
+      "opportunity_score": 53,
+      "hashtags": [
+        "#redred",
+        "#redredchallenge",
+        "#cortis"
+      ],
+      "detected_at": "2026-04-20T00:00:00-07:00",
+      "summary": "K-pop's tutorial-proof dance: the \"flappy ears\"/wiggle-ears bridge of CORTIS's \"REDRED\" loops cleanly inside the 15–30s sweet spot, and slow-mirrored tutorials are doing 500K+ likes each. J-Hope's version passed 15M views within hours; TXT, ENHYPEN, and Jungkook (airport fan-cam) all joined. Still tutorial-hungry in October — slowed versions keep climbing.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "format_tags": [
+        "challenge",
+        "dance"
+      ],
+      "sources": [
+        "Anijam",
+        "thicket.sh"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 82,
+        "latest_velocity": 82,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
       }
     },
     {
@@ -1455,14 +2635,15 @@
         "TrueAchievements"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 11, 2026), 80 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 11, 2026), 80 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1492,8 +2673,9 @@
         "Vadbav"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 1,
+        "snapshots": 2,
         "state": "building",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
@@ -1526,6 +2708,83 @@
         "New Engen"
       ],
       "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 2,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 80,
+        "latest_velocity": 80,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "netflix-documentary",
+      "title": "\"Netflix documentary\" parody",
+      "source": "HerCampus",
+      "url": "https://www.hercampus.com/culture/netflix-documentary-tiktok-trend-explainer/",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#netflixdocumentary",
+        "#pov"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "Creators parody dramatic true-crime/celebrity documentary interviews: settle into an empty chair, look slightly off-camera at an imaginary producer, allude to something dramatic that happened. The tense strings music ('On A Mission' by Duomo) sells the contrast with the trivial subject — surviving a toxic workplace, exposing a chaotic friend group.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "pov"
+      ],
+      "sources": [
+        "HerCampus",
+        "SocialBee"
+      ],
+      "trend_type": "format",
+      "format_family": "pov-setup",
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 80,
+        "latest_velocity": 80,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "my-name-is-reveal",
+      "title": "Eminem \"My Name Is\" five-second identity reveal",
+      "source": "Anijam",
+      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#mynameis",
+        "#identityreveal",
+        "#relatable"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Studying-through-a-meme: creators use Eminem's \"My Name Is\" for five-second identity jokes — the drop lands the reveal of who they really are when the mask slips (procrastinator, overthinker, third-coffee gremlin). Anijam flags identity-reveal formats as one of October's strong performers; Lightreel's week-ending-Oct-3 report names the five-second identity joke as a winning container.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "meme"
+      ],
+      "sources": [
+        "Anijam",
+        "Lightreel"
+      ],
+      "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
         "snapshots": 1,
         "state": "building",
@@ -1562,14 +2821,15 @@
         "SocialPilot"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 79,
         "latest_velocity": 79,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 11, 2026), 79 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 11, 2026), 79 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1598,14 +2858,15 @@
         "Tlinky"
       ],
       "trend_type": "topic",
+      "format_family": "prop-illusion",
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 76,
         "latest_velocity": 78,
         "delta": 2,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 78 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,4.0 78.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 78 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1633,15 +2894,181 @@
         "Game8"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 11, 2026), 78 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 11, 2026), 78 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
+      }
+    },
+    {
+      "id": "best-for-you-kylie",
+      "title": "\"I Just Want the Best for You\" — Kylie Jenner advice audio",
+      "source": "MediaNug",
+      "url": "https://www.medianug.com/tiktok-trending-report",
+      "velocity": 78,
+      "opportunity_score": 51,
+      "hashtags": [
+        "#iwantthebestforyou",
+        "#kyliejenner",
+        "#advice"
+      ],
+      "detected_at": "2026-09-10T00:00:00-07:00",
+      "summary": "Kylie Jenner's Kardashians line — \"I just want the best for you\" — became September's flexible advice template: creators deliver genuine tips, playful recommendations, or deliberately absurd hot takes under the caring-but-dramatic audio. ~27.5K videos by mid-September (MediaNug; Vadbav). The contrast between the sincere wording and the ridiculous situation is the whole joke.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "template"
+      ],
+      "sources": [
+        "MediaNug",
+        "Vadbav"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 78,
+        "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "national-coming-out-day",
+      "title": "National Coming Out Day (Oct 11)",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 78,
+      "opportunity_score": 51,
+      "hashtags": [
+        "#nationalcomingoutday",
+        "#comingoutday"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics today, Oct 11: LGBTQ people and allies sharing stories, with the recurring reminder to come out only when safe and ready. A day-of social moment — stories and solidarity content peak with the date.",
+      "category": "culture",
+      "platforms": [
+        "bluesky",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Bluesky trending",
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 78,
+        "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "oh-yeah-city-walk",
+      "title": "Steve Lacy \"Oh yeah?\" city walk",
+      "source": "genznewz",
+      "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
+      "velocity": 76,
+      "opportunity_score": 49,
+      "hashtags": [
+        "#ohyeah",
+        "#citywalk",
+        "#maincharacter"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "The title-sequence morning: an ordinary city walk set to Steve Lacy's \"Oh yeah?\" turns the commute into main-character footage. genznewz's October timeline flags it among the month's winning containers — familiar subject (the walk), new container (the sound + the framing). NapoleonCat's Virlo FAQ adds a useful caution: business accounts often can't pull the licensed track, so check account type be",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "genznewz",
+        "Virlo"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 76,
+        "latest_velocity": 76,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "resume-gap-interview",
+      "title": "Resume gap interview meme",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 76,
+      "opportunity_score": 49,
+      "hashtags": [
+        "#resumegap",
+        "#interview",
+        "#meme"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): users imagine how different professions — and famous figures — would answer a job interviewer's question about the gap in their resume. A caption-first meme format: the gap is the setup, the profession is the punchline.",
+      "category": "meme",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [
+        "caption",
+        "format",
+        "meme"
+      ],
+      "sources": [
+        "Bluesky trending",
+        "bluesky-trending"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 76,
+        "latest_velocity": 76,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
       }
     },
     {
@@ -1668,15 +3095,59 @@
         "SocialPilot"
       ],
       "trend_type": "topic",
+      "format_family": "mood-bed",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
+      }
+    },
+    {
+      "id": "trump-diesel-russia",
+      "title": "Trump diesel deal with Russia",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 72,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#diesel",
+        "#russia",
+        "#energy"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): reports that Trump struck a diesel deal with Russia, framed as sending fuel to lower US prices — reversing years of pressure over Ukraine. A fast-moving news item; the tracker records the topic, not a position.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Bluesky trending",
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 72,
+        "latest_velocity": 72,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
       }
     },
     {
@@ -1704,14 +3175,15 @@
         "GenZNewZ"
       ],
       "trend_type": "format",
+      "format_family": "carousel-story",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 66,
         "latest_velocity": 66,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 66 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 66 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1738,14 +3210,15 @@
         "Later (source URL not found on 2026-10-11 re-check)"
       ],
       "trend_type": "topic",
+      "format_family": "callout-copy",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 72,
         "latest_velocity": 58,
         "delta": -14,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 58 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 58 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 41.3,4.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1774,14 +3247,15 @@
         "Later (source URL not found on 2026-10-11 re-check)"
       ],
       "trend_type": "format",
+      "format_family": "chaos-caption",
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 58,
         "delta": -16,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 58 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 58 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 41.3,4.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1810,14 +3284,15 @@
         "iHeartDogs"
       ],
       "trend_type": "format",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 3,
+        "snapshots": 4,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 66,
         "latest_velocity": 58,
         "delta": -8,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 58 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 58 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 41.3,4.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1851,14 +3326,15 @@
         "Vadbav"
       ],
       "trend_type": "format",
+      "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 81,
         "latest_velocity": 90,
         "delta": 9,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 90 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,4.0 78.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 90 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1888,14 +3364,15 @@
         "New Engen"
       ],
       "trend_type": "topic",
+      "format_family": null,
       "velocity_trend": {
-        "snapshots": 4,
+        "snapshots": 5,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 82,
         "latest_velocity": 84,
         "delta": 2,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 11, 2026), 84 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,4.0 78.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 11, 2026), 84 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     }

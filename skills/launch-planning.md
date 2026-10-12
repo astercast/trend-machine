@@ -1,6 +1,6 @@
 ---
 name: launch-planning
-description: Turn a trend-machine dossier into a printable 7-day content battle plan — day-by-day angles, hooks, hashtags, and platforms, paced by trend type and the Oracle's trajectory.
+description: Turn trend-machine dossiers into 7-day battle plans — single-trend plans or multi-trend battle plans, day-by-day angles, hooks, hashtags, platform timing tips from sourced algorithm research, exportable as text/markdown/JSON, with plan-vs-reality check-ins against the forecast ledger.
 ---
 
 # Build a 7-day battle plan from a dossier
@@ -75,3 +75,39 @@ Day 3  Duo reveal: let the comments judge who won                      + "Did I 
   confirm the trend is live before scheduling a week around it.
 - Building a plan from a `stale: true` dossier — cover only with a
   retrospective angle.
+
+## Battle mode (wave 10) — 2–5 trends, one week
+
+`LaunchPlanLib.buildBattlePlan(entries, ledgerEntries)` weaves 2–5
+trends into a single 7-day campaign. `entries` is `[{topic, trajectory}]`;
+`ledgerEntries` is `data/forecast_ledger.json`'s `entries[]` (optional —
+the page reads it; the lib never writes the ledger).
+
+Rules (all unit-tested in `scripts/test_launch_battle.js`):
+
+1. Each trend keeps its own pacing: the lead rotates through an
+   opportunity-desc order (no two adjacent days share a lead), and a
+   trend's k-th appearance runs its own 7-day plan's k-th day.
+2. 2–5 topics only — 1 is refused (use `buildPlan`), 6+ is refused
+   (cap keeps the week schedulable), and a topic with no angles is
+   named in the refusal.
+3. Every day carries `provenance` ("angle #k of N from the dossier ·
+   trajectory <state> (n snapshots)") and a `platformTip` when the
+   platform has sourced research (tiktok/youtube/instagram —
+   `LaunchPlanLib.platformTip()`; anything else returns `null`, never
+   an invented tip).
+
+## Exports + plan-vs-reality (wave 10)
+
+- `LaunchPlanLib.planToMarkdown(plan)` — shareable markdown with the
+  day-by-day calendar, timing tips with source attribution, provenance,
+  and the honesty footer.
+- `LaunchPlanLib.planSnapshot(plan)` — the tracking-hook object:
+  freezes each topic's `opportunity`, `velocity`, trajectory state, and
+  `ledger_ref` (the newest `data/forecast_ledger.json` record, found via
+  `LaunchPlanLib.findLedgerRef(entries, topicId)`) at plan time.
+- On launch-plan.html, "💾 Save this plan" stores the snapshot in
+  `localStorage` (`tm_plans_v1`, 12 most recent); "Check progress"
+  compares plan-time velocity against the live
+  `data/velocity_history.json` and links the topic's ledger record to
+  the forecast-accuracy scorecard.

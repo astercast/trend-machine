@@ -34,8 +34,12 @@ file, filter in memory.
 `{generated_at, count, topics:[{id, title, summary, category, platforms[],
 hashtags[], velocity 0-100, saturation, opportunity_score 0-100,
 first_seen, last_seen, stale, seeded, verification, trend_type,
-sources[{name,url}], angles[], hooks[], who_to_watch[], format_tags[],
-guide_links[]}]}`
+format_family, sources[{name,url}], angles[], hooks[], who_to_watch[],
+format_tags[], guide_links[]}]}`
+
+- `format_family` (wave 9): id of the curated format family this topic
+  belongs to (see `api/v1/meme-formats.json`), or `null`. Matched from the
+  topic's own text against the family's keywords — re-computed every run.
 
 - `trend_type` (wave 7): `format` = a reusable template to join (dance,
   caption variant, sound, challenge); `topic` = a subject to cover;
@@ -108,18 +112,35 @@ hourly velocity series. Starting points: series begin empty and build
 one snapshot per refresh; treat missing/thin series as "still building
 history", never a guess.
 
-**5c. Oracle scorecard — `api/v1/forecast-accuracy.json`** (wave 6)
+**5c. Oracle scorecard — `api/v1/forecast-accuracy.json`** (wave 6; wave 9: full dashboard page)
 The Oracle's own forecast-vs-actual log: decisive forecasts recorded in
 `data/forecast_ledger.json` and scored hit/miss after a 48h horizon
 (same ±1.5/hr thresholds the classifier uses). `status` stays
 `"building history"` with `hit_rate: null` until 10+ forecasts resolve —
-the log starts 2026-10-11, nothing backfilled.
+the log starts 2026-10-11, nothing backfilled. Wave 9 adds
+`upcoming_resolutions[]` (pending forecasts grouped by the day their 48h
+horizon lands — a queue schedule, not a prediction), `recorded_per_day[]`
+(the ledger's own pulse), and `by_confidence` (hit rate by the confidence
+level claimed at forecast time; rows read "awaiting data" until that level
+has 10+ resolved). Human-readable at `forecast-accuracy.html`.
+
+**5d. Meme format families — `api/v1/meme-formats.json`** (wave 9)
+The tracked meme format families: hand-curated from Oct-2026 web research
+(`verification`: `verified` = 2+ independent sources, `single-source` =
+one source or creator lore — flagged, never hidden; `status`: rising /
+peak / fading / established / evergreen). Each family carries `examples[]`
+with evidence + source URLs, `keywords`, and `tracked_topics[]` — the live
+topic ids whose text matches the family's curated keywords this run
+(re-computed every pipeline run by `pipeline/format_families.py`, so links
+are derived, never stale). Topics link back via their `format_family`
+field (null when unmatched). Human-readable at `formats.html`, which also
+ranks families by tracked-topic opportunity (the format leaderboard).
 
 **6. Schemas — `api/v1/schema/`**
 Draft-07 for every endpoint: `trends.json`, `trends-flat.json`,
 `trends-flat-sample.json`, `hashtags.json`, `velocity.json`,
 `platform-velocity.json`, `forecast-accuracy.json`, `forecasts.json`,
-`trend.json` (one dossier), and `index.json` itself.
+`meme-formats.json`, `trend.json` (one dossier), and `index.json` itself.
 
 ## End-to-end workflows
 
@@ -222,6 +243,32 @@ Goal: find every topic a hashtag touches.
    → topic ids.
 2. Join against `api/v1/trends.json` dossiers for titles, scores,
    and angles. Sort by `opportunity_score` desc.
+
+### Workflow 5 — Weave 2–5 trends into one battle week
+
+Goal: a single 7-day campaign across multiple trends, exportable and
+trackable against reality.
+
+1. Pick 2–5 dossier ids from `api/v1/trends.json` (or start at
+   `launch-plan.html?battle=id1,id2,id3`).
+2. `require('./assets/js/launch-plan-lib.js')` and call
+   `LaunchPlanLib.buildBattlePlan(entries, ledgerEntries)` where
+   `entries = [{topic, trajectory}]` and `ledgerEntries` comes from
+   `data/forecast_ledger.json`'s `entries[]`. Rules: lead rotates in
+   opportunity-desc order (no adjacent-day lead repeat), each trend's
+   k-th appearance runs its own plan's k-th day, 1 or 6+ topics refuse
+   honestly.
+3. Every day carries `provenance` (angle #, trajectory state, snapshot
+   count) and `platformTip` — a sourced execution note from the
+   algorithm research page (`algorithms.html#tt` / `#yt` / `#ig`),
+   never an invented posting time.
+4. Export: `LaunchPlanLib.planToMarkdown(plan)` for sharing,
+   `LaunchPlanLib.planSnapshot(plan)` for the JSON tracking hook —
+   it freezes opportunity, velocity, trajectory state, and the newest
+   forecast-ledger reference (`findLedgerRef`) at plan time.
+5. Later, compare `snapshot.topics[].velocity` against the current
+   `data/velocity_history.json` and the ledger record's outcome on
+   `forecast-accuracy.html` — that's the plan-vs-reality check-in.
 
 ## Rates, expectations, and honesty rules
 

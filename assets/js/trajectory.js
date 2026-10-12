@@ -273,6 +273,10 @@
     var xs = pts.map(function (p) { return (tsMillis(p) - t0) / 3600000; });
     var ys = pts.map(function (p) { return p[1]; });
     var s = slope(xs, ys);
+    // wave 9: kill floating-point noise — a flat series can yield
+    // s = -1e-14, which used to trip the "s < 0 && vel < 50" fading
+    // branch and mislabel steady topics as cooling off.
+    if (Math.abs(s) < 1e-9) { s = 0; }
 
     // Curvature: slope of the second half minus slope of the first half
     // (overlapping at the midpoint so short histories still work).

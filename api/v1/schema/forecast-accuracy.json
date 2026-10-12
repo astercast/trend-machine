@@ -132,6 +132,53 @@
           }
         }
       }
+    },
+    "upcoming_resolutions": {
+      "type": "array",
+      "description": "Pending forecasts grouped by the day their 48h horizon lands (real ledger dates).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "pending": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "recorded_per_day": {
+      "type": "array",
+      "description": "Forecasts recorded per day (the ledger's own pulse, from real timestamps).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "recorded": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "by_confidence": {
+      "type": "object",
+      "description": "Wave 9: hit rate by the confidence level claimed at forecast time. Rows are honest \u2014 no rate until that level has 10+ resolved.",
+      "properties": {
+        "high": {
+          "$ref": "#/properties/by_state/additionalProperties"
+        },
+        "medium": {
+          "$ref": "#/properties/by_state/additionalProperties"
+        },
+        "low": {
+          "$ref": "#/properties/by_state/additionalProperties"
+        }
+      }
     }
   }
 }

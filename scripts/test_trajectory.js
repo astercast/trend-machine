@@ -45,6 +45,13 @@ ok(a.peakInHours === 0, "crest behind us -> peakInHours 0", a.peakInHours);
 a = T.analyze(series([80, 75, 68, 60, 52]));
 ok(a.state === "fading", "decline -> fading", a.state);
 
+// 5b. wave 9: flat low-velocity series must NOT read as fading.
+// Regression: floating-point noise (-1e-14 slope) used to trip the
+// "s < 0 && vel < 50" branch and mislabel steady topics as cooling off.
+a = T.analyze(series([47, 47, 47, 47, 47]));
+ok(a.state === "steady", "flat 47s -> steady (not fading)", a.state);
+ok(a.slopePerHour === 0, "flat series slope snaps to exactly 0", a.slopePerHour);
+
 // 6. insufficient: fewer than 3 snapshots
 a = T.analyze(series([50, 55]));
 ok(a.state === "insufficient", "2 snapshots -> insufficient", a.state);

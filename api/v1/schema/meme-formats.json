@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine meme format families",
+  "description": "Wave 9: hand-curated meme format families (verified = 2+ independent sources; single-source = one source or creator lore \u2014 flagged, never hidden). tracked_topics are the live topic ids whose text matches the family's curated keywords this run; family matches are derived, never stale.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "version",
+    "method",
+    "families"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "method": {
+      "type": "string"
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "status",
+          "verification",
+          "curated",
+          "keywords",
+          "examples",
+          "tracked_topics"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "rising",
+              "peak",
+              "fading",
+              "established",
+              "evergreen"
+            ]
+          },
+          "status_note": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "single-source"
+            ]
+          },
+          "verification_note": {
+            "type": "string"
+          },
+          "curated": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "name",
+                      "url"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tracked_topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

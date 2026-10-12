@@ -106,6 +106,13 @@
             "format+topic"
           ]
         },
+        "format_family": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Wave 9: curated format-family id (see api/v1/meme-formats.json), or null."
+        },
         "sources": {
           "type": "array",
           "items": {

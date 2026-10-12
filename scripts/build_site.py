@@ -23,6 +23,9 @@ LINK_PREFIX = {
     "niche/": "phase-0", "audience/": "phase-4",
 }
 
+_FAMILY_NAMES = {}
+
+
 def esc(s):
     return html.escape(str(s or ""), quote=True)
 
@@ -180,6 +183,13 @@ def build_topic(t, history_pts=None, plat_hist=None):
     formats = "".join(
         f'<span class="chip format" title="Detected meme-format signal">format · {esc(f)}</span>'
         for f in t.get("format_tags", []))
+    # wave 9: format-family chip — links to the family's card on formats.html
+    fam_id = t.get("format_family")
+    fam_names = _FAMILY_NAMES
+    famchip = (f'<a class="chip family" href="../formats.html#family-{esc(fam_id)}" '
+               f'title="Wave 9: tracked format family — see its current examples and evidence">'
+               f'⧉ family: {esc(fam_names.get(fam_id, fam_id))}</a>'
+               if fam_id else "")
     tags = "".join(f'<span class="tag">{esc(h)}</span>' for h in t.get("hashtags", [])[:10])
     spark = sparkline_html(history_pts or [], t.get("id", ""), plat_hist)
     payload = export_payload_json(t)
@@ -206,7 +216,7 @@ def build_topic(t, history_pts=None, plat_hist=None):
         kicker=esc(t.get("category", "trend")) + " · dossier",
         summary=esc(t["summary"]), tier=tier, fcls=fcls, pulse=pulse, age=age,
         ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, tchip=tchip, cats=cats,
-        formats=formats, spark=spark, payload=payload,
+        formats=formats + famchip, spark=spark, payload=payload,
         tags=tags,
         stale_note=stale_note, summary_long=esc(t["summary"]),
         sources=sources, angles=angles, hooks=hooks, watch=watch,
@@ -216,6 +226,14 @@ def main():
     with open(DATA) as f:
         data = json.load(f)
     topics = data["topics"]
+    # wave 9: format-family display names for dossier chips
+    global _FAMILY_NAMES
+    try:
+        with open(os.path.join(ROOT, "data", "meme_formats.json")) as _ff:
+            _FAMILY_NAMES = {f.get("id"): f.get("name", f.get("id"))
+                             for f in json.load(_ff).get("families", [])}
+    except Exception:
+        _FAMILY_NAMES = {}
     history = load_history()  # wave 2: velocity snapshots for sparklines
     # wave 8: per-platform velocity series for mini-sparklines on dossiers
     plat_history = {}
@@ -274,6 +292,35 @@ def main():
     with open(os.path.join(api, "platform-velocity.json"), "w") as f:
         json.dump(phist, f, ensure_ascii=False)
     print(f"[build] api/v1/platform-velocity.json ({len(phist)} topics)")
+    # api/v1/meme-formats.json — wave 9: the curated format-family table
+    # (data/meme_formats.json) enriched with this run's derived topic links.
+    # tracked_topics are the live topic ids whose format_family matched.
+    families_path = os.path.join(ROOT, "data", "meme_formats.json")
+    mf_doc = {}
+    try:
+        with open(families_path) as f:
+            mf_doc = json.load(f)
+    except Exception:
+        mf_doc = {"families": []}
+    by_family = {}
+    for t in topics:
+        fam = t.get("format_family")
+        if fam:
+            by_family.setdefault(fam, []).append(t["id"])
+    mf_out = {
+        "generated_at": data["generated_at"],
+        "version": mf_doc.get("version", 1),
+        "method": mf_doc.get("method", ""),
+        "families": [],
+    }
+    for fam in mf_doc.get("families", []):
+        entry = dict(fam)
+        entry["tracked_topics"] = sorted(by_family.get(fam.get("id"), []))
+        mf_out["families"].append(entry)
+    with open(os.path.join(api, "meme-formats.json"), "w") as f:
+        json.dump(mf_out, f, ensure_ascii=False, indent=2)
+    print(f"[build] api/v1/meme-formats.json ({len(mf_out['families'])} families, "
+          f"{sum(len(f['tracked_topics']) for f in mf_out['families'])} topic links)")
 
     DRAFT = "http://json-schema.org/draft-07/schema#"
 
@@ -312,6 +359,8 @@ def main():
                 "description": "Wave 2: pattern-detected meme-format signals (pov/challenge/sound/dance/meme/duet/stitch/green-screen/template/trend)."},
             "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"],
                 "description": "Wave 7: 'format' = a reusable template others can fill (dance, caption variant, sound, challenge); 'topic' = a subject/event to cover; 'format+topic' = an event-driven topic riding a meme template. Rule-derived from format_tags + category."},
+            "format_family": {"type": ["string", "null"],
+                "description": "Wave 9: id of the curated format family this topic belongs to (see api/v1/meme-formats.json) — matched from the topic's own text against the curated family keywords, re-computed every run; null when the topic matches no tracked family."},
             "verification": {"type": "string", "enum": ["verified", "single-source", "unverified"],
                 "description": "Wave 7 (seeded topics): 'verified' = 2+ real sources; 'single-source' = one real source; 'unverified' = claimed sources not found on re-check — confirm live before building on it."},
             "guide_links": {"type": "array", "items": {"type": "string"}},
@@ -372,6 +421,8 @@ def main():
             "platforms": {"type": "array", "items": {"type": "string"}},
             "format_tags": {"type": "array", "items": {"type": "string"}},
             "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"]},
+            "format_family": {"type": ["string", "null"],
+                "description": "Wave 9: curated format-family id (see api/v1/meme-formats.json), or null."},
             "sources": {"type": "array", "items": {"type": "string"}},
             "velocity_trend": VELOCITY_TREND,
         },
@@ -484,6 +535,57 @@ def main():
                                                   "items": {"type": "string"}}},
             },
         },
+        "meme-formats": {
+            "$schema": DRAFT,
+            "title": "trend-machine meme format families",
+            "description": ("Wave 9: hand-curated meme format families (verified = 2+ independent "
+                            "sources; single-source = one source or creator lore — flagged, never "
+                            "hidden). tracked_topics are the live topic ids whose text matches the "
+                            "family's curated keywords this run; family matches are derived, "
+                            "never stale."),
+            "type": "object",
+            "required": ["generated_at", "version", "method", "families"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "version": {"type": "integer", "minimum": 1},
+                "method": {"type": "string"},
+                "families": {"type": "array",
+                    "items": {"type": "object",
+                        "required": ["id", "name", "description", "status",
+                                     "verification", "curated", "keywords",
+                                     "examples", "tracked_topics"],
+                        "properties": {
+                            "id": {"type": "string"},
+                            "name": {"type": "string"},
+                            "description": {"type": "string"},
+                            "status": {"type": "string",
+                                       "enum": ["rising", "peak", "fading",
+                                                "established", "evergreen"]},
+                            "status_note": {"type": "string"},
+                            "verification": {"type": "string",
+                                             "enum": ["verified", "single-source"]},
+                            "verification_note": {"type": "string"},
+                            "curated": {"type": "string"},
+                            "keywords": {"type": "array", "items": {"type": "string"}},
+                            "examples": {"type": "array",
+                                "items": {"type": "object",
+                                    "required": ["name"],
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "evidence": {"type": "string"},
+                                        "verification": {"type": "string"},
+                                        "sources": {"type": "array",
+                                            "items": {"type": "object",
+                                                "required": ["name", "url"],
+                                                "properties": {
+                                                    "name": {"type": "string"},
+                                                    "url": {"type": "string", "format": "uri"}}}}}}},
+                            "tracked_topics": {"type": "array",
+                                               "items": {"type": "string"}},
+                        }},
+                },
+            },
+        },
         "velocity": {
             "$schema": DRAFT,
             "title": "trend-machine velocity snapshots",
@@ -561,6 +663,25 @@ def main():
                             "verdict": {"type": "string", "enum": ["hit", "miss"]},
                             "actual_slope": {"type": "number"},
                             "n_snapshots": {"type": "integer", "minimum": 0}}}},
+                # wave 9: resolution timeline, ledger activity, calibration
+                "upcoming_resolutions": {"type": "array",
+                    "description": "Pending forecasts grouped by the day their 48h horizon lands (real ledger dates).",
+                    "items": {"type": "object",
+                        "properties": {
+                            "date": {"type": "string"},
+                            "pending": {"type": "integer", "minimum": 0}}}},
+                "recorded_per_day": {"type": "array",
+                    "description": "Forecasts recorded per day (the ledger's own pulse, from real timestamps).",
+                    "items": {"type": "object",
+                        "properties": {
+                            "date": {"type": "string"},
+                            "recorded": {"type": "integer", "minimum": 0}}}},
+                "by_confidence": {"type": "object",
+                    "description": "Wave 9: hit rate by the confidence level claimed at forecast time. Rows are honest — no rate until that level has 10+ resolved.",
+                    "properties": {
+                        "high": {"$ref": "#/properties/by_state/additionalProperties"},
+                        "medium": {"$ref": "#/properties/by_state/additionalProperties"},
+                        "low": {"$ref": "#/properties/by_state/additionalProperties"}}},
             },
         },
         # self-describing manifest itself
@@ -652,7 +773,7 @@ def main():
 
     manifest = {
         "name": "trend-machine",
-        "version": "0.4.0",
+        "version": "0.5.0",
         "generated_at": stamp,
         "base": ("api/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
@@ -703,13 +824,34 @@ def main():
                  "after 3+ per-platform snapshots."),
                 schema_path("platform-velocity"), len(phist),
                 "Empty/missing series mean 'still building history', never a guess."),
+            "meme_formats": endpoint(
+                "api/v1/meme-formats.json",
+                ("Wave 9: the tracked meme format families — hand-curated from "
+                 "Oct-2026 web research (verified = 2+ independent sources; "
+                 "single-source = one source or creator lore, flagged). Each "
+                 "family carries current examples with evidence URLs and the "
+                 "live topic ids whose text matches the family this run "
+                 "(tracked_topics — derived, never stale)."),
+                schema_path("meme-formats"), len(mf_out["families"]),
+                "Topics link back via their format_family field (null when unmatched)."),
             "schemas": endpoint(
                 "api/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
                 None, len(SCHEMAS)),
         },
         "deprecated": [],
-        "changelog": ("0.4.0 (2026-10-11): Wave 8 — velocity sparkline history UI + "
+        "changelog": ("0.5.0 (2026-10-11): Wave 9 — Oracle accuracy scorecard becomes a full page "
+                      "(forecast-accuracy.html): honest pre-resolution states, per-horizon accuracy table, "
+                      "by-call breakdown, recent resolutions, current 48h projections, and the resolution "
+                      "method — all rendered live from api/v1/forecast-accuracy.json, with the hit rate "
+                      "shown only after 10+ forecasts resolve. New meme-format family tracking: "
+                      "data/meme_formats.json curates 12 hand-researched Oct-2026 format families "
+                      "(verified/single-source flags kept honest), pipeline/format_families.py matches "
+                      "topics to families by conservative keyword rules (re-computed every run), every "
+                      "topic carries format_family, dossiers show a family chip linking to formats.html, "
+                      "and api/v1/meme-formats.json publishes the families with their live topic links. "
+                      "Additive only, no shape changes. "
+                      "0.4.0 (2026-10-11): Wave 8 — velocity sparkline history UI + "
                       "'Remix this' exporter polish. Every flat-feed item now carries "
                       "'velocity_trend': snapshot count, first/latest velocity, delta, "
                       "tracked-since label, a pre-rendered inline SVG sparkline, and "
@@ -759,22 +901,35 @@ def main():
              f"Generated: {data['generated_at']} · {len(topics)} topics.", "",
              "## Hottest right now"]
     for t in topics[:10]:
-        lines.append(f"- {t['title']} (opportunity {t['opportunity_score']}, velocity {t['velocity']}) — topics/{t['id']}.html")
+        lines.append(f"- [{t['title']}](topics/{t['id']}.html) (opportunity {t['opportunity_score']}, velocity {t['velocity']})")
     nfmt = sum(1 for t in topics if t.get("trend_type") == "format")
     nmix = sum(1 for t in topics if t.get("trend_type") == "format+topic")
+    nfam = {}
+    for t in topics:
+        _ff = t.get("format_family")
+        if _ff:
+            nfam[_ff] = nfam.get(_ff, 0) + 1
+    famline = ("## Meme format families (wave 9): " +
+               ", ".join(f"{_FAMILY_NAMES.get(_k, _k)} ({_v} topics)"
+                         for _k, _v in sorted(nfam.items(), key=lambda x: -x[1])) +
+               " — formats.html has every family with current examples, evidence, and verification flags.") if nfam else ""
     lines += ["", "## Categories",
               ", ".join(sorted({t['category'] for t in topics})), "",
-              f"## Trend types (wave 7): {nfmt} formats, {nmix} format+topic, "
+              f"## Trend types (wave 7): {nfmt} formats, {nmix} format+topic, ",
+              famline,
               f"{len(topics) - nfmt - nmix} topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).",
-              "", "## API", "- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
-              "- api/v1/trends.json — all topics, full dossiers", "- api/v1/trends.flat.json — flat opportunity-ranked feed (stale excluded)",
-              "- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)", "- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
-              "- api/v1/platform-velocity.json — per-platform hourly velocity series (per-platform trajectories input)", "- api/v1/forecast-accuracy.json — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)",
-              "- api/v1/hashtags.json — tag index", "- api/v1/schema/ — draft-07 schemas for every endpoint",
-              "- AGENT.md — how an agent uses this tracker (end-to-end workflows)", "",
-              "## Oracle (flagship)", "- oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
-              "- launch-plan.html — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
-              "## Algorithm mechanics (Oct 2026)", "- algorithms.html — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated", "",
+              "", "## API", "- [api/v1/index.json](api/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
+              "- [api/v1/trends.json](api/v1/trends.json) — all topics, full dossiers", "- [api/v1/trends.flat.json](api/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)",
+              "- [api/v1/velocity.json](api/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)", "- [api/v1/forecasts.json](api/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
+              "- [api/v1/platform-velocity.json](api/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [api/v1/forecast-accuracy.json](api/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)",
+              "- [api/v1/meme-formats.json](api/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
+              "- [api/v1/hashtags.json](api/v1/hashtags.json) — tag index", "- [api/v1/schema/](api/v1/schema/) — draft-07 schemas for every endpoint",
+              "- [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)", "",
+              "## Oracle (flagship)", "- [oracle.html](oracle.html) — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
+              "- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)",
+              "- [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join",
+              "- [launch-plan.html](launch-plan.html) — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
+              "## Algorithm mechanics (Oct 2026)", "- [algorithms.html](algorithms.html) — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated", "",
               "Freshness: every topic carries first_seen/last_seen; stale (>72h) topics are flagged."]
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")

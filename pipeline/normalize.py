@@ -87,6 +87,15 @@ _FORMAT_SIGNALS = {"challenge", "dance", "pov", "sound", "meme", "duet",
                    "format", "caption"}
 _EVENT_CATEGORIES = {"news", "sports", "gaming"}
 
+# --- wave 9: format-family link ------------------------------------------------
+# Deferred import: format_families.py is a standalone module so scripts can
+# test the matcher in isolation (scripts/test_format_families.py).
+try:
+    from format_families import match_family
+except ImportError:  # pragma: no cover — defensive for exotic layouts
+    def match_family(title, summary, hashtags):
+        return None
+
 def classify_trend_type(t):
     """Return 'format', 'topic', or 'format+topic' for one topic dict."""
     is_format = bool(set(t.get("format_tags") or []) & _FORMAT_SIGNALS)
@@ -322,6 +331,10 @@ def main():
                                          t.get("hashtags", []))
         # wave 7: format-vs-topic label (derived from format_tags + category)
         t["trend_type"] = classify_trend_type(t)
+        # wave 9: format-family link (derived, re-computed every run from the
+        # curated family table — None when the topic matches no family)
+        t["format_family"] = match_family(t.get("title", ""), t.get("summary", ""),
+                                        t.get("hashtags", []))
 
     data["topics"] = sorted(topics.values(),
                             key=lambda t: t["opportunity_score"], reverse=True)

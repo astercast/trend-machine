@@ -192,7 +192,9 @@
     return '<section class="oracle-accuracy" aria-labelledby="acc-title">' +
       '<h2 id="acc-title">📊 The Oracle&#39;s own scorecard</h2>' + body +
       '<p class="oc-honest">Recorded from 2026-10-11 — nothing backfilled. ' +
-      "The first resolutions land 48h after recording starts.</p></section>";
+      "The first resolutions land 48h after recording starts. " +
+      '<a href="forecast-accuracy.html">Open the full scorecard: per-horizon accuracy, ' +
+      "calibration, resolution timeline →</a></p></section>";
   }
 
   function init() {

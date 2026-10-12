@@ -62,6 +62,8 @@ def flat(t):
         "format_tags": t.get("format_tags", []),
         "sources": [s.get("name") for s in srcs],
         "trend_type": t.get("trend_type", "topic"),
+        # wave 9: curated format-family id (null when the topic matches none)
+        "format_family": t.get("format_family"),
         # wave 8: per-topic velocity sparkline history from real snapshots
         # (state 'building' + sparkline_svg null when <3 snapshots — no fake line)
         "velocity_trend": flat_velocity_trend(t.get("id"), _HISTORY, _PHIST),

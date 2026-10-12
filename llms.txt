@@ -2,42 +2,47 @@
 
 Live trending-topic intelligence: what to make content about TODAY.
 Machine-readable: api/v1/trends.json (sort by opportunity_score desc).
-Generated: 2026-10-12T02:46:50.019063+00:00 · 353 topics.
+Generated: 2026-10-12T03:47:17.344503+00:00 · 391 topics.
 
 ## Hottest right now
-- "6-7" — Gen Alpha's defining brainrot joke (opportunity 92, velocity 92) — topics/six-seven-meme.html
-- GTA 6: robberies and partner getaways detailed (opportunity 91, velocity 91) — topics/gta6-robberies.html
-- "Six Seven" (Seis Sete) funk dance (opportunity 90, velocity 90) — topics/seis-sete-dance.html
-- Trump roasts rally protester; Nobel Prize outrage (opportunity 90, velocity 90) — topics/trump-rally-nobel.html
-- Houthi missile strike on Riyadh airport (opportunity 88, velocity 88) — topics/houthi-riyadh-strike.html
-- #nba explodes on TikTok (+493%) (opportunity 86, velocity 86) — topics/nba-tiktok-surge.html
-- "we fell in love in october" — girl in red (opportunity 86, velocity 86) — topics/we-fell-in-love-in-october.html
-- Nana Patekar dies at 75 — meme legend tributes (opportunity 85, velocity 85) — topics/nana-patekar-tributes.html
-- "DIP ON EM" — early-stage dance sound (opportunity 85, velocity 85) — topics/dip-on-em.html
-- "Insomniac" — Memo Boy's lo-fi bed (opportunity 84, velocity 84) — topics/insomniac-lofi.html
+- ["6-7" — Gen Alpha's defining brainrot joke](topics/six-seven-meme.html) (opportunity 92, velocity 92)
+- [GTA 6: robberies and partner getaways detailed](topics/gta6-robberies.html) (opportunity 91, velocity 91)
+- ["Six Seven" (Seis Sete) funk dance](topics/seis-sete-dance.html) (opportunity 90, velocity 90)
+- [Trump roasts rally protester; Nobel Prize outrage](topics/trump-rally-nobel.html) (opportunity 90, velocity 90)
+- [Houthi missile strike on Riyadh airport](topics/houthi-riyadh-strike.html) (opportunity 88, velocity 88)
+- [#nba explodes on TikTok (+493%)](topics/nba-tiktok-surge.html) (opportunity 86, velocity 86)
+- ["we fell in love in october" — girl in red](topics/we-fell-in-love-in-october.html) (opportunity 86, velocity 86)
+- [Nana Patekar dies at 75 — meme legend tributes](topics/nana-patekar-tributes.html) (opportunity 85, velocity 85)
+- ["DIP ON EM" — early-stage dance sound](topics/dip-on-em.html) (opportunity 85, velocity 85)
+- ["Insomniac" — Memo Boy's lo-fi bed](topics/insomniac-lofi.html) (opportunity 84, velocity 84)
 
 ## Categories
 culture, entertainment, gaming, meme, music, news, sports, tech
 
-## Trend types (wave 7): 19 formats, 0 format+topic, 334 topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).
+## Trend types (wave 7): 40 formats, 0 format+topic, 
+## Meme format families (wave 9): Costume walks (4 topics), POV setups (2 topics), Transition formats (2 topics), Deadpan debate audio (1 topics), Dance hooks (1 topics), Prop illusions (1 topics), Mood beds (1 topics), Carousel story reveals (1 topics), Call-out copy formats (1 topics), Chaos-caption dance (1 topics) — formats.html has every family with current examples, evidence, and verification flags.
+351 topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).
 
 ## API
-- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts
-- api/v1/trends.json — all topics, full dossiers
-- api/v1/trends.flat.json — flat opportunity-ranked feed (stale excluded)
-- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)
-- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)
-- api/v1/platform-velocity.json — per-platform hourly velocity series (per-platform trajectories input)
-- api/v1/forecast-accuracy.json — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)
-- api/v1/hashtags.json — tag index
-- api/v1/schema/ — draft-07 schemas for every endpoint
-- AGENT.md — how an agent uses this tracker (end-to-end workflows)
+- [api/v1/index.json](api/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts
+- [api/v1/trends.json](api/v1/trends.json) — all topics, full dossiers
+- [api/v1/trends.flat.json](api/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)
+- [api/v1/velocity.json](api/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)
+- [api/v1/forecasts.json](api/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)
+- [api/v1/platform-velocity.json](api/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)
+- [api/v1/forecast-accuracy.json](api/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)
+- [api/v1/meme-formats.json](api/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links
+- [api/v1/hashtags.json](api/v1/hashtags.json) — tag index
+- [api/v1/schema/](api/v1/schema/) — draft-07 schemas for every endpoint
+- [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)
 
 ## Oracle (flagship)
-- oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic
-- launch-plan.html — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)
+- [oracle.html](oracle.html) — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic
+- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)
+- [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join
+- [launch-plan.html](launch-plan.html) — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)
 
 ## Algorithm mechanics (Oct 2026)
-- algorithms.html — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated
+- [algorithms.html](algorithms.html) — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated
 
 Freshness: every topic carries first_seen/last_seen; stale (>72h) topics are flagged.

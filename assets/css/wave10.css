@@ -1,0 +1,227 @@
+/* ============================================================
+   TREND MACHINE — wave10.css (launch planner flagship)
+   Craft applied from the web-craft research domain (reports
+   web-craft-20261011-2014 + web-craft-20261011-2025, both read in
+   full before finalizing):
+   - motion token system (r1 §3): --dur-* / --ease-* custom props,
+     entrances decelerate (ease-out, never ease-in), transform +
+     opacity only, stagger 40–60ms capped ~300ms total
+   - scroll-reveal failure-mode rule (r2 angle 1, verified): the
+     finished/revealed state is the CSS default; the hidden initial
+     state only applies under html.reveal-armed (set by JS right
+     before observing) — no-JS / no-IO visitors see content, not
+     blanks
+   - reduced motion is a variant, not a kill switch (r1 §3): under
+     prefers-reduced-motion the travel/parallax dies but the
+     opacity fade survives
+   - same-document view transitions for in-page state changes
+     (r1 §2 + r2 angle 1: Baseline since Oct 2025) — gated on
+     prefers-reduced-motion: no-preference, no fallback code
+   - calendar typography (r1 §4): tabular numerals on every
+     day/date/figure; text-wrap: balance on headlines; pretty on
+     body copy as progressive enhancement only
+   - container queries on the plan grid (r1 §2): cards adapt to
+     their container width, progressive enhancement
+   - step wayfinding + breadcrumb (planner-page architecture):
+     numbered steps, aria-current page, label-in-name buttons
+   - native-first semantics throughout (r1 §5); mobile-first single
+     column. Distinct site identity preserved — all colors/shapes
+     from the design tokens.
+   ============================================================ */
+
+/* ---------- motion tokens (web-craft r1 §3) ---------- */
+:root {
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-moderate: 320ms;
+  --dur-slow: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1); /* entrances: fast start, settle */
+}
+
+/* ---------- wayfinding: step indicator ---------- */
+.plan-steps {
+  display: flex; flex-wrap: wrap; gap: 8px 18px;
+  list-style: none; margin: 18px 0 0; padding: 0;
+  font-size: 13px; color: var(--ink-dim);
+}
+.plan-steps li { display: flex; align-items: center; gap: 8px; }
+.step-no {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent, #6c5ce7); color: #fff;
+  font-size: 12px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- mode tabs ---------- */
+.mode-tabs { display: flex; gap: 10px; margin: 20px 0 4px; flex-wrap: wrap; }
+.mode-tab.active { border-color: var(--accent, #6c5ce7); box-shadow: inset 0 0 0 1px var(--accent, #6c5ce7); }
+
+/* ---------- battle picker ---------- */
+.battle-pane { margin: 6px 0 4px; }
+.battle-pick {
+  display: grid; gap: 8px; margin: 12px 0;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .battle-pick { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .battle-pick { grid-template-columns: repeat(3, 1fr); }
+}
+.battle-opt {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 10px 12px; border: 1px solid var(--line, #e5e5e5);
+  border-radius: 10px; cursor: pointer; background: var(--card, #fff);
+  font-size: 13px; line-height: 1.4;
+}
+.battle-opt input { margin-top: 3px; accent-color: var(--accent, #6c5ce7); }
+.battle-opt:has(input:checked) { border-color: var(--accent, #6c5ce7); box-shadow: inset 0 0 0 1px var(--accent, #6c5ce7); }
+.battle-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+
+/* ---------- calendar typography (web-craft r1 §4) ---------- */
+.plan-head h2, .mc-angle {
+  font-variant-numeric: tabular-nums;
+  text-wrap: balance; /* Baseline 2024 */
+}
+@supports (text-wrap: pretty) {
+  /* pretty is progressive enhancement only (r2: Firefox status
+     unresolved — cite no version, gate with @supports) */
+  .mc-hook, .plan-tip, .timing-context li { text-wrap: pretty; }
+}
+.mc-day, .mc-date, .checkin-vel, .battle-count {
+  font-variant-numeric: tabular-nums; /* dates & figures never reflow */
+}
+.mc-date {
+  font-size: 12.5px; letter-spacing: 0.02em;
+  color: var(--ink-dim); text-transform: uppercase;
+}
+.battle-order { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.battle-topic-chip {
+  display: inline-block; padding: 4px 10px; border-radius: 999px;
+  background: var(--chip-bg, #f1efff); color: var(--ink);
+  font-size: 12.5px; font-weight: 600;
+}
+.battle-topic-chip a { color: inherit; }
+.mc-head .battle-topic-chip { margin-left: auto; font-size: 11.5px; }
+
+/* ---------- plan grid: container queries ---------- */
+.mission-grid { container-type: inline-size; container-name: plan-grid; }
+@supports (container-type: inline-size) {
+  @container plan-grid (min-width: 520px) {
+    .mission-card { padding: 20px 22px; }
+    .mc-angle { font-size: 1.08em; }
+  }
+  @container plan-grid (min-width: 760px) {
+    .mission-card {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px;
+    }
+    .mission-card .mc-head { grid-column: 1 / -1; }
+    .mission-card .mc-angle { grid-column: 1 / -1; }
+    .mission-card .plan-tip { grid-column: 1 / -1; }
+    .mission-card .mc-src { grid-column: 1 / -1; }
+  }
+}
+
+/* ---------- timing tips & provenance ---------- */
+.plan-tip {
+  border-left: 3px solid var(--accent, #6c5ce7);
+  padding: 8px 12px; margin: 10px 0; font-size: 13px;
+  background: var(--chip-bg, #f1efff); border-radius: 0 8px 8px 0;
+  line-height: 1.5;
+}
+.plan-tip-tag {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--accent, #6c5ce7); margin-right: 6px;
+}
+.provenance {
+  font-size: 12px; color: var(--ink-dim); line-height: 1.5;
+}
+.mc-src { margin-top: 8px; }
+.traj-chip {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  background: var(--chip-bg, #f1efff); font-size: 12.5px; font-weight: 700;
+}
+.plan-traj { margin: 8px 0; }
+.plan-ledger { margin: 6px 0; font-size: 13px; }
+
+/* ---------- timing context aside ---------- */
+.timing-context {
+  margin: 36px 0 8px; padding: 18px 20px;
+  border: 1px dashed var(--line, #e5e5e5); border-radius: 12px;
+  background: var(--card, #fff);
+}
+.timing-context h2 { font-size: 1.05rem; margin: 0 0 6px; }
+.timing-context ul { margin: 10px 0 0; padding-left: 20px; font-size: 13.5px; line-height: 1.6; }
+.timing-context li + li { margin-top: 8px; }
+
+/* ---------- saved plans ---------- */
+.saved-plans { margin: 28px 0 40px; }
+.saved-plans h2 { font-size: 1.15rem; }
+.saved-plan {
+  border: 1px solid var(--line, #e5e5e5); border-radius: 12px;
+  padding: 14px 16px; margin: 12px 0; background: var(--card, #fff);
+}
+.saved-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+.checkin-result { margin-top: 12px; padding: 12px 14px; border-radius: 10px; background: var(--chip-bg, #f1efff); }
+.checkin-row {
+  display: grid; gap: 2px 14px; padding: 8px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.checkin-row:first-of-type { border-top: 0; }
+.checkin-title { font-weight: 600; font-size: 13.5px; }
+.checkin-vel.up { color: #1a7f37; }
+.checkin-vel.down { color: #b42318; }
+.checkin-vel.flat { color: var(--ink-dim); }
+
+/* ---------- export buttons ---------- */
+.plan-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 18px 0 6px; }
+.btn-sm { padding: 6px 12px; font-size: 12.5px; }
+
+/* ---------- scroll-driven reveal (failure-mode safe) ---------- */
+/* Finished state is the default (visible). JS adds .reveal-armed to
+   <html> immediately before observing, so the hidden initial state
+   only exists when the reveal system is actually live (web-craft
+   r2 angle 1: failure mode = no animation, never invisible content).
+   Stagger: 50ms between siblings, capped ~300ms total. */
+html.reveal-armed [data-reveal] {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity var(--dur-moderate) var(--ease-decelerate),
+              transform var(--dur-moderate) var(--ease-decelerate);
+}
+html.reveal-armed [data-reveal].in { opacity: 1; transform: none; }
+html.reveal-armed .mission-grid [data-reveal]:nth-child(2) { transition-delay: 50ms; }
+html.reveal-armed .mission-grid [data-reveal]:nth-child(3) { transition-delay: 100ms; }
+html.reveal-armed .mission-grid [data-reveal]:nth-child(4) { transition-delay: 150ms; }
+html.reveal-armed .mission-grid [data-reveal]:nth-child(5) { transition-delay: 200ms; }
+html.reveal-armed .mission-grid [data-reveal]:nth-child(6) { transition-delay: 250ms; }
+html.reveal-armed .mission-grid [data-reveal]:nth-child(7) { transition-delay: 300ms; }
+/* Reduced motion is a variant, not a kill switch: kill the travel,
+   keep the opacity fade (web-craft r1 §3). */
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-armed [data-reveal] {
+    transform: none;
+    transition: opacity var(--dur-base) var(--ease-standard);
+  }
+  * { animation-duration: 0.01ms !important; }
+}
+/* Same-document view transitions: in-page plan renders crossfade
+   (Baseline since Oct 2025; gated on reduced-motion, no fallback). */
+@media (prefers-reduced-motion: no-preference) {
+  .mission-grid { view-transition-name: plan-grid; }
+  ::view-transition-old(plan-grid),
+  ::view-transition-new(plan-grid) {
+    animation-duration: var(--dur-moderate);
+    animation-timing-function: var(--ease-decelerate);
+  }
+}
+
+/* ---------- print ---------- */
+@media print {
+  .site-head, .site-foot, .mode-tabs, .plan-picker, .battle-pane,
+  .plan-actions, .timing-context, .saved-plans, .plan-steps, .crumbs { display: none !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+  .mission-card { break-inside: avoid; }
+}

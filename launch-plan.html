@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Launch planner — 7-day battle plan — Trend Machine</title>
-<meta name="description" content="Turn a trend into a printable 7-day content battle plan: day-by-day angles, hooks, hashtags, and platforms — scheduled from the topic's real dossier data.">
+<title>Launch planner — 7-day battle plans — Trend Machine</title>
+<meta name="description" content="Turn trends into printable 7-day battle plans: day-by-day angles, hooks, hashtags, and platforms from real dossier data, multi-trend battle plans, markdown/JSON export, and plan-vs-reality check-ins.">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/wave3.css">
+<link rel="stylesheet" href="assets/css/wave10.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -18,35 +19,91 @@
 </div></header>
 
 <main id="main" class="wrap">
-<nav aria-label="Breadcrumb" style="margin:20px 0 0">
+<nav aria-label="Breadcrumb" class="crumbs" style="margin:20px 0 0">
 <a href="index.html" style="font-size:13px">&larr; all trends</a>
 · <a href="oracle.html" style="font-size:13px">🔮 Oracle</a>
+· <span aria-current="page" style="font-size:13px">🗓 launch planner</span>
 </nav>
 
 <section aria-labelledby="planner-title" style="margin-top:24px">
-<p class="kicker">topic in &rarr; 7-day plan out</p>
+<p class="kicker">topics in &rarr; 7-day plan out</p>
 <h1 id="planner-title">🗓 Launch planner</h1>
 <p style="color:var(--ink-dim);max-width:76ch">
-  Turn a trend into a 7-day content battle plan. Angles rotate so no day
-  repeats, hooks and hashtags cycle from the topic's own dossier, and the
-  plan adapts its pacing when the Oracle has a trajectory for the topic.
-  <strong>Nothing is invented</strong> — every angle, hook, and hashtag comes
-  from the topic's dossier.
+  Turn trends into 7-day content battle plans. Angles rotate so no day
+  repeats, hooks and hashtags cycle from each topic's own dossier, and
+  pacing adapts to the Oracle's trajectory. Battle mode weaves up to
+  <strong>5 trends into one week</strong> — strongest opportunity opens.
+  <strong>Nothing is invented</strong> — every angle, hook, and hashtag
+  comes from the dossiers; every trajectory line says how many snapshots
+  it was projected from.
 </p>
-<div class="plan-picker" role="search" aria-label="Pick a topic">
+
+<ol class="plan-steps" aria-label="How the planner works">
+  <li><span class="step-no" aria-hidden="true">1</span> Pick a mode</li>
+  <li><span class="step-no" aria-hidden="true">2</span> Choose trends</li>
+  <li><span class="step-no" aria-hidden="true">3</span> Generate</li>
+  <li><span class="step-no" aria-hidden="true">4</span> Export or save</li>
+</ol>
+
+<div class="mode-tabs" role="group" aria-label="Planner mode">
+  <button type="button" class="btn mode-tab active" id="mode-single" aria-pressed="true">Single trend</button>
+  <button type="button" class="btn mode-tab" id="mode-battle" aria-pressed="false">⚔ Battle mode · up to 5</button>
+</div>
+
+<div id="single-pane" class="plan-picker" role="search" aria-label="Pick a topic">
   <div class="field">
     <label for="plan-topic">Topic</label>
     <select id="plan-topic"><option value="">— choose a topic —</option></select>
   </div>
   <button type="button" class="btn" id="plan-generate">Generate plan</button>
 </div>
+
+<div id="battle-pane" class="battle-pane" hidden>
+  <p class="kicker">pick 2–5 trends · strongest opportunity opens the week</p>
+  <div id="battle-pick" class="battle-pick" role="group" aria-label="Battle trends"></div>
+  <div class="battle-bar">
+    <button type="button" class="btn" id="battle-generate">⚔ Generate battle plan</button>
+    <span id="battle-count" class="provenance" role="status" aria-live="polite"></span>
+  </div>
+</div>
+
 <div id="plan-actions" class="plan-actions" hidden>
   <button type="button" class="btn" id="plan-copy" aria-describedby="plan-copy-status">⧉ Copy plan as text</button>
-  <span class="copy-status" id="plan-copy-status" role="status" aria-live="polite"></span>
+  <button type="button" class="btn" id="plan-md">⬇ .md</button>
+  <button type="button" class="btn" id="plan-json">⬇ .json</button>
   <button type="button" class="btn" id="plan-print" onclick="window.print()">🖨 Print mission cards</button>
+  <button type="button" class="btn" id="plan-save" aria-describedby="plan-save-status">💾 Save this plan</button>
+  <span class="copy-status" id="plan-copy-status" role="status" aria-live="polite"></span>
+  <span class="copy-status" id="plan-save-status" role="status" aria-live="polite"></span>
 </div>
 <div id="plan-status" role="status" aria-live="polite"></div>
 <div id="plan-host"></div>
+</section>
+
+<aside class="timing-context" aria-labelledby="timing-context-h">
+  <h2 id="timing-context-h">📅 This week's timing context</h2>
+  <p class="provenance">From the site's Oct 11 trend-sweep research — context for
+  <em>when</em> to launch, not content. Trajectories on the cards above are
+  still the per-trend truth.</p>
+  <ul>
+    <li><strong>October's macro-pattern is THE REVEAL</strong> — costume/room
+    reveals and creepy-fact twists dominate the month (verified, Oct 11
+    sweep). Halloween formats are in ramp phase now; the peak weekend is
+    Oct 31–Nov 1 and the window closes Nov 2.</li>
+    <li><strong>Rising now:</strong> "Two Fishes" audio — the week's defining
+    sound, with a 7–14 day opportunity window. <strong>Just starting:</strong>
+    the Street Fighter film (Oct 16) — gaming+film crossover seeds incoming
+    (single-source, Oct 11 sweep).</li>
+  </ul>
+</aside>
+
+<section class="saved-plans" aria-labelledby="saved-h">
+  <h2 id="saved-h">💾 Saved plans · plan-vs-reality</h2>
+  <p class="provenance">Saved plans freeze each trend's velocity, trajectory,
+  and forecast-ledger reference at plan time. Check back after the Oracle's
+  ~48h forecast window and hit <strong>Check progress</strong> to see whether
+  reality matched the projection.</p>
+  <div id="saved-host"></div>
 </section>
 </main>
 

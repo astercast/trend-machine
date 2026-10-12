@@ -28,6 +28,7 @@ Or use the included GitHub Actions workflow (`.github/workflows/refresh.yml`) �
 | `fetch_reddit_rss.py` | Reddit subreddit RSS feeds | No | Working |
 | `fetch_hn.py` | Hacker News top/best stories (public Firebase API) | No | Working |
 | `fetch_mastodon.py` | Mastodon fediverse trending hashtags | No | Working |
+| `fetch_bluesky.py` | Bluesky trending topics (`public.api.bsky.app` unauthenticated `getTrendingTopics`) | No | **New wave 11**: verified keyless 2026-10-11 (HTTP 200, real topics w/ descriptions); early-signal lane like Mastodon — 10 hits/run |
 | `fetch_youtube.py` | Invidious public API (`/api/v1/popular`, no key) → direct scrape fallback | No | Working via Invidious; set `YT_API_KEY` for the official Data API v3 path |
 | `fetch_youtube_rss.py` | YouTube channel RSS (`/feeds/videos.xml`) → channel `/videos` page fallback | No | **Repaired wave 6**: official RSS endpoint intermittently 404/500s on *valid* IDs (verified via control channels) — now retries 3× with backoff, then parses each channel's own `/videos` page (ytInitialData JSON, real titles/URLs). 10/10 feeds ok, 80 hits |
 | `fetch_tiktok.py` | **STUB — no reliable keyless source exists** (see "The TikTok lane" below) | N/A (wired in `refresh.sh`, logs a SKIP) | Stub; never fakes data |
@@ -114,6 +115,22 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   (formats repeat the template early then twist; topics cover fresh daily).
   with textarea fallback, keyboard accessible, copied-confirmation state).
 
+## Format families (wave 9)
+
+- `data/meme_formats.json` curates the tracked meme format families by hand
+  (Oct-2026 web research; `verified` = 2+ independent sources,
+  `single-source` = one source or creator lore — flagged, never hidden;
+  `status` = rising/peak/fading/established/evergreen).
+- `pipeline/format_families.py` matches topics to families with conservative
+  word-boundary keyword regexes (same recipe as `detect_format` — no ML);
+  `normalize.py` stores `format_family` (family id or null) on every topic,
+  re-computed every run, so links are derived, never stale.
+- `api/v1/meme-formats.json` publishes the families with `tracked_topics[]`
+  (live topic ids matched this run); dossiers show a `⧉ family:` chip
+  linking to `formats.html#family-<id>`; `formats.html` renders every family
+  with current examples, evidence, verification flags, a format leaderboard
+  (ranked by tracked-topic opportunity), and a join-the-format playbook.
+
 ## Per-platform velocity history + Oracle 2.0 (wave 6)
 
 - Every fetcher hit carries `platforms[]`; `normalize.py` records each
@@ -168,7 +185,11 @@ flagged `verification: "single-source"` and 2 (`text-from-a`, `be-ok`) as
 `"unverified"` (claimed sources not found — name-only sources, down-weighted,
 confirm-live note in dossiers); 12 new seeds came from SocialPilot's
 Sept 25–Oct 10 re-check (7 new Halloween-cycle formats, 2 early-stage sounds,
-the Patient Zero TikTok Search Hub mechanic, pumpkin patch season). 53 seeds
+the Patient Zero TikTok Search Hub mechanic, pumpkin patch season). Wave 9
+(2026-10-11) added 3 fresh meme-format seeds (56 total). Wave 11 (2026-10-11)
+added the biggest injection yet — 35 new seeds from fresh Oct-2026 research
+(Anijam, Lightreel, Virlo, SocialPilot, SocialBee, MediaNug, Revid, genznewz,
+NapoleonCat) plus 5 day-of topics from live Bluesky trending data. 91 seeds
 total. `verification` lives on every seeded topic (`verified`/`single-source`/
 `unverified`) and is documented in the trend schema. **seed.py upserts by id**
 (preserves non-seed topics — never rewrites the store from scratch). The refresh
