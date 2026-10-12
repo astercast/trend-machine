@@ -33,8 +33,17 @@ file, filter in memory.
 **1. Full dossiers — `api/v1/trends.json`**
 `{generated_at, count, topics:[{id, title, summary, category, platforms[],
 hashtags[], velocity 0-100, saturation, opportunity_score 0-100,
-first_seen, last_seen, stale, seeded, sources[{name,url}], angles[],
-hooks[], who_to_watch[], format_tags[], guide_links[]}]}`
+first_seen, last_seen, stale, seeded, verification, trend_type,
+sources[{name,url}], angles[], hooks[], who_to_watch[], format_tags[],
+guide_links[]}]}`
+
+- `trend_type` (wave 7): `format` = a reusable template to join (dance,
+  caption variant, sound, challenge); `topic` = a subject to cover;
+  `format+topic` = an event-driven topic riding a meme template.
+  Rule-derived from `format_tags` + category — filter client-side.
+- `verification` (wave 7, seeded topics): `verified` (2+ real sources),
+  `single-source` (one real source), `unverified` (claimed sources not
+  found on re-check — confirm the trend is live before building on it).
 
 ```bash
 # Hottest plays right now (opportunity = velocity minus saturation penalty)
@@ -57,7 +66,7 @@ console.log(t.title, t.opportunity_score, t.angles);
 **2. Flat feed — `api/v1/trends.flat.json`**
 `{generated_at, sample:false, source_count, trends:[{id, title, source,
 url, velocity, opportunity_score, hashtags[], detected_at, summary,
-category, platforms[], format_tags[], sources[]}]}` — opportunity-ranked,
+category, platforms[], format_tags[], trend_type, sources[]}]}` — opportunity-ranked,
 stale topics already excluded. The lightweight "what's hot today" list.
 
 **3. Hashtag index — `api/v1/hashtags.json`**
@@ -146,7 +155,10 @@ Goal: a week of posts from one trend, nothing invented.
    replicate its documented rule): 7 days, rotate angles so no angle
    airs two days in a row, cycle hooks independently so every day is a
    unique angle+hook pairing, keep the dossier's own hashtags and
-   platform throughout.
+   platform throughout. Then pace by `trend_type`: **format** — Days 1–3
+   run the canonical template, Days 4–7 add your twist; **format+topic** —
+   join the template Days 1–2, cover the subject with your own take after;
+   **topic** — cover fresh each day with rotating formats.
 3. Verify: every angle/hook/hashtag in your plan appears verbatim in
    the dossier — the planner only orders, rotates, and paces.
 
@@ -210,10 +222,15 @@ Goal: find every topic a hashtag touches.
   Freshness signal: if `generated_at` is older than ~6h, the refresh
   pipeline is behind — fall back to cache.
 - **Seeded velocities are starting points.** Topics with `seeded:true`
-  were hand-researched (Oct 2026 wave-fuel); their velocities and any
-  figures quoted in summaries (e.g. "430.7K videos") are researched
-  baselines, not live measurements. Corroboration on later refreshes
-  moves them. Never present a seed figure as a current measurement.
+  were hand-researched (Oct 2026 wave-fuel, re-verified wave 7); their
+  velocities and any figures quoted in summaries (e.g. "430.7K videos")
+  are researched baselines, not live measurements. Corroboration on later
+  refreshes moves them. Never present a seed figure as a current
+  measurement.
+- **Seeded verification flags are load-bearing.** `verification:
+  "unverified"` means the claimed sources couldn't be re-found — don't
+  build plans on that topic without a live-feed confirmation.
+  `"single-source"` = one real source, treat figures as provisional.
 - **Topic figures are reported ranges, not exacts.** Velocities and
   opportunity scores are 0–100 indices computed from corroboration
   count, recency decay, and hashtag breadth — directional, not precise.
@@ -228,9 +245,10 @@ Goal: find every topic a hashtag touches.
 
 ## For skill authors
 
-Five content skills ship in `skills/` (`trend-spotting`,
+Six content skills ship in `skills/` (`trend-spotting`,
 `velocity-reading`, `remix-ideation`, `angle-generation`,
-`hashtag-research`) plus `forecast-reader` (Oracle trajectories) —
-each a standalone playbook in the standard format. Pair them with
-the workflows above: workflow 1 → `remix-ideation`, workflow 3 →
-`forecast-reader`, workflow 2 → `angle-generation`.
+`hashtag-research`, `launch-planning`) plus `forecast-reader` (Oracle
+trajectories) — each a standalone playbook in the standard format. Pair
+them with the workflows above: workflow 1 → `remix-ideation`, workflow
+2 → `launch-planning` (and `angle-generation`), workflow 3 →
+`forecast-reader`, workflow 4 → `hashtag-research`.

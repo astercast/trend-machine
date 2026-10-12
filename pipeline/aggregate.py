@@ -9,7 +9,8 @@ shape client-side:
 
   api/v1/trends.flat.json = { generated_at, sample, source_count, trends: [
       { id, title, source, url, velocity, opportunity_score, hashtags[],
-        detected_at, summary, category, platforms, sources[] } ] }
+        detected_at, summary, category, platforms, format_tags[], trend_type,
+        sources[] } ] }
 
   api/v1/trends.flat.js   = JSONP twin: trendsCallback({...}) — the CORS-safe
                             fallback for pure static hosts that cannot send
@@ -52,6 +53,7 @@ def flat(t):
         "platforms": t.get("platforms", []),
         "format_tags": t.get("format_tags", []),
         "sources": [s.get("name") for s in srcs],
+        "trend_type": t.get("trend_type", "topic"),
     }
 
 def write(feed, json_path, with_js=False):

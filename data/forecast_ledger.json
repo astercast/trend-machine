@@ -1429,6 +1429,766 @@
       "latest_velocity": 45,
       "n_snapshots": 3,
       "resolved": null
+    },
+    {
+      "topic_id": "halloween-game-xbox",
+      "title": "\"Halloween: The Game\" storms the Xbox charts",
+      "forecast_at": "2026-10-12T02:11:34.070Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 75,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "trump-energy-ceasefire",
+      "title": "Trump announces Russia-Ukraine energy ceasefire",
+      "forecast_at": "2026-10-12T02:11:34.070Z",
+      "state": "accelerating",
+      "peak_in_hours": null,
+      "latest_velocity": 83,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "what-the-fuck",
+      "title": "What the fuck",
+      "forecast_at": "2026-10-12T02:11:34.070Z",
+      "state": "accelerating",
+      "peak_in_hours": null,
+      "latest_velocity": 95,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "there-she-goes",
+      "title": "\"There She Goes\" shimmy dance",
+      "forecast_at": "2026-10-12T02:11:34.070Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 58,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "be-ok",
+      "title": "\"Be OK\" — happy dance over chaos",
+      "forecast_at": "2026-10-12T02:11:34.070Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 58,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "text-from-a",
+      "title": "Text From \"-A\" — the Pretty Little Liars call-out",
+      "forecast_at": "2026-10-12T02:11:34.070Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 58,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "whatever-became-of-holography-2011",
+      "title": "Whatever became of holography? (2011)",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "xiaomi-18-fold-how-does-this-happen",
+      "title": "Xiaomi 18 Fold: How Does This Happen?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "dear-youtube",
+      "title": "Dear YouTube!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nothing-headphone-1-pro-they-copied-the-wrong-thin",
+      "title": "Nothing Headphone 1 Pro: They Copied the Wrong Thing!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "xiaomi-18-pro-max-they-ve-done-it-again",
+      "title": "Xiaomi 18 Pro Max: They've Done It Again!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-apple-watch-has-a-problem",
+      "title": "The Apple Watch Has a Problem",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "iphone-18-pro-review-all-about-that-chip",
+      "title": "iPhone 18 Pro Review: All About that Chip",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "iphone-duo-what-we-missed",
+      "title": "iPhone Duo: What We Missed!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "cyberleek-s-24-min-gta-6-leak-puts-focus-on-lucia-",
+      "title": "Cyberleek’s 24-Min GTA 6 Leak Puts Focus on Lucia [2026]",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "breakfast-in-america-by-supertramp-the-rare-art-of",
+      "title": "Breakfast in America by Supertramp: The Rare Art of a Perfect Pop-Rock Album",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "phil-collin-s-appreciation-day-what-s-your-fav-son",
+      "title": "Phil Collin’s appreciation day… what’s your fav song of his or even Genesis?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "50-cent-in-iraq-2004",
+      "title": "50 cent in Iraq 2004",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "local-h-bound-for-the-floor-grunge-1996",
+      "title": "Local H - Bound For the Floor [grunge] (1996)",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "taylor-swift-s-the-life-of-a-showgirl-the-encore-r",
+      "title": "Taylor Swift's The Life of a Showgirl: The Encore Ranks Dead Last Among 237 Albums Released in 2026 on Metacritic",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "olivia-rodrigo-pop",
+      "title": "Olivia Rodrigo pop",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "sex-pistols-frank-carter-hits-out-at-male-concert-",
+      "title": "Sex Pistols' Frank Carter hits out at male concert-goer for invading women-only mosh pit",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ozzy-osbourne-no-more-tears-rock",
+      "title": "Ozzy Osbourne - No More Tears [Rock]",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "electric-light-orchestra-time-pop",
+      "title": "Electric Light Orchestra - Time [Pop]",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "youtube-wtf-is-this",
+      "title": "YouTube wtf is this...",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "this-japanese-tutorial-on-how-to-take-off-a-wetsui",
+      "title": "This Japanese tutorial on how to take off a wetsuit has 10 million views. Was everyone in Japan suddenly interested in surfing?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "is-youtube-getting-vibe-coded",
+      "title": "Is YouTube getting vibe-coded?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "why-youtube-why",
+      "title": "Why Youtube why",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-algorithm-is-beyond-bad-its-utterly-awful",
+      "title": "The Algorithm is BEYOND Bad.. its utterly AWFUL!!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "why-is-there-a-gif",
+      "title": "Why is there a gif",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "is-anyone-seeing-a-rise-in-political-ads-on-youtub",
+      "title": "is anyone seeing a rise in political ads on youtube?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-hate-glider-guy-this-is-why-you-should-too",
+      "title": "i HATE glider guy. this is why you should too.",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "why-are-youtube-ads-so-fucking-obnoxious",
+      "title": "Why are YouTube ads...so...fucking....OBNOXIOUS",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "mini-dramas",
+      "title": "Mini-dramas — TikTok's fastest-growing NEW category",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 90,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "cozy-fall-jazz",
+      "title": "Cozy-fall jazz beds",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 74,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "illustration-beyond-proof",
+      "title": "Illustration Beyond Proof",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "governments-are-mishandling-the-affordability-cris",
+      "title": "Governments are mishandling the affordability crisis",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "local-indexing-to-reduce-tool-calling-and-token-us",
+      "title": "Local Indexing to reduce tool calling and token usage",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "we-want-to-keep-his-name-alive-power-trip-are-hono",
+      "title": "\"We want to keep his name alive.\" Power Trip are honouring fallen frontman Riley Gale with their first new songs in almost a decade",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "soul-coughing-super-bon-bon-alt-rock-live-1996",
+      "title": "Soul Coughing - Super Bon Bon [Alt Rock - live] (1996)",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "is-this-the-most-viewed-video-with-no-likes",
+      "title": "Is this the most viewed video with no likes?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "amazon-is-in-talks-to-buy-ai-startup-decart-wsj-re",
+      "title": "Amazon Is in Talks to Buy AI Startup Decart, WSJ Reports",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "programmable-pigments-photochromic-nanoparticle-in",
+      "title": "Programmable pigments: Photochromic nanoparticle inks for rewritable tattoos",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "wildwood-review-laika-s-epic-stop-motion-wonder-la",
+      "title": "‘Wildwood’ Review: Laika’s Epic Stop-Motion Wonder Lacks the Magic of the Studio’s Best Movies",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "from-cardi-b-to-an-eminem-collab-troye-sivan-which",
+      "title": "From Cardi B to an Eminem Collab & Troye Sivan, Which New Music Release Is Your Favorite This Week? Vote!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "hello-darling-pm-s-shock-appearance-stuns",
+      "title": "‘Hello darling’: PM’s shock appearance stuns",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "what-are-you-watching-and-what-do-you-recommend-we",
+      "title": "What are you watching and what do you recommend? (Week of October 09, 2026)",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "artemis-fowl-animated-series-greenlit-at-disney-ch",
+      "title": "‘Artemis Fowl’ Animated Series Greenlit At Disney Channel, Disney+ With Author Eoin Colfer As EP",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "tony-gilroy-s-andor-incorporates-real-moments-or-a",
+      "title": "Tony Gilroy's Andor incorporates real moments or aspects from at least 10 different revolutions and uprisings from around the world over the course of its 2 seasons.",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "today-is-the-51st-anniversary-of-saturday-night-li",
+      "title": "Today is the 51st anniversary of Saturday Night Live, here's their first ever sketch from 1975",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "andor-2022-one-way-out-kino-loy-s-speech",
+      "title": "Andor (2022) \"One Way Out\" - Kino Loy's speech",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "snl-weekend-update-the-mother-whose-babysitter-can",
+      "title": "SNL Weekend Update: The Mother Whose Babysitter Canceled; Ashley Padilla and Grace Reiter",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "he-was-devastatingly-sexy-frasier-s-jane-leeves-an",
+      "title": "‘He was devastatingly sexy’: Frasier’s Jane Leeves and David Hyde Pierce on the love between Daphne and Niles",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "tcm-i-m-kind-of-impressed",
+      "title": "TCM - I'm kind of impressed",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nicolas-cage-says-he-s-probably-not-working-with-a",
+      "title": "Nicolas Cage Says He’s ‘Probably Not’ Working With Amazon Again After Refusing to Sign AI Waiver for ‘Spider-Noir’: ‘I’m Not an AI-Friendly Actor’",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-rookie-season-9-spinoff-rookie-north-get-premi",
+      "title": "The rookie season 9 & spinoff rookie north get premiere dates",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "will-warner-bros-kill-skydance-or-will-david-ellis",
+      "title": "Will Warner Bros. kill Skydance — or will David Ellison kill Warner Bros?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "30-rock-is-officially-20-years-old",
+      "title": "30 rock is officially 20 years old",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "simple-questions-sunday",
+      "title": "Simple Questions Sunday!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "making-friends-monday-share-your-game-tags-here",
+      "title": "Making Friends Monday! Share your game tags here!",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "box-office-zach-cregger-s-resident-evil-becomes-hi",
+      "title": "Box Office: Zach Cregger's 'Resident Evil' Becomes Highest Grossing RE Movie Of All Time, Biggest Movie Of Cregger's Career After Surpassing $320 Million Worldwide",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "yujiro-hanma-face-in-manga-vs-tekken-8-bandai-namc",
+      "title": "Yujiro Hanma face in manga vs Tekken 8. Bandai Namco Studios & Arika did absolutely fantastic work to make this happen.",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "star-wars-galactic-racer-has-got-to-be-the-best-ar",
+      "title": "Star Wars: Galactic Racer has got to be the best Arcade Racer in about a decade, I would say the one of the best Racing Games out there.",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "what-s-the-game-you-absolutely-regret-buying-at-fu",
+      "title": "What's the game you absolutely regret buying at full price?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "just-completed-my-yearly-october-f-e-a-r-expansion",
+      "title": "Just completed my yearly October F.E.A.R + expansions playthrough",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "was-playing-the-witcher-3-remastered-and-this-tong",
+      "title": "Was playing the Witcher 3 remastered and this tongue in cheek book gave me a chuckle",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "these-were-good-times",
+      "title": "These were good times...",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "time-flies-when-you-are-dropping-penguins",
+      "title": "Time flies when you are dropping penguins",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "hades-zagreus-fanart-by-me",
+      "title": "Hades - Zagreus Fanart (by me)",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "blink-182-stay-together-for-the-kids-pop-punk",
+      "title": "blink-182 - Stay Together For The Kids [pop punk]",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "which-comedy-movie-can-you-watch-over-and-over-aga",
+      "title": "Which comedy movie can you watch over and over again without it getting old?",
+      "forecast_at": "2026-10-12T02:12:51.346Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "gta6-robberies",
+      "title": "GTA 6: robberies and partner getaways detailed",
+      "forecast_at": "2026-10-12T02:19:27.641Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 91,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "houthi-riyadh-strike",
+      "title": "Houthi missile strike on Riyadh airport",
+      "forecast_at": "2026-10-12T02:19:27.641Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 88,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "2xko-sett",
+      "title": "2XKO drops Sett as surprise champion",
+      "forecast_at": "2026-10-12T02:19:27.641Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 73,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "valor-mortis",
+      "title": "Valor Mortis — the new soulslike to watch",
+      "forecast_at": "2026-10-12T02:19:27.641Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 80,
+      "n_snapshots": 4,
+      "resolved": null
+    },
+    {
+      "topic_id": "sw-galactic-racer",
+      "title": "STAR WARS: Galactic Racer",
+      "forecast_at": "2026-10-12T02:19:27.641Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 78,
+      "n_snapshots": 4,
+      "resolved": null
     }
   ]
 }

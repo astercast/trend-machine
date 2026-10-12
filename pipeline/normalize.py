@@ -37,15 +37,28 @@ _FORMAT_TITLE_TAGS = {
 _FORMAT_FULL_TEXT = [
     ("pov",        [r"\bpov\b"]),
     ("sound",      [r"\bsound trend\b", r"\bviral sound\b", r"\btrending sound\b",
-                    r"\bsong is taking over\b", r"\baudio trend\b"]),
-    ("dance",      [r"\bdance challenge\b", r"\bdance trend\b", r"\bdance craze\b"]),
+                    r"\bsong is taking over\b", r"\baudio trend\b",
+                    # wave 7: TikTok jargon "original sound" = the meme audio
+                    r"\boriginal sound\b"]),
+    ("dance",      [r"\bdance challenge\b", r"\bdance trend\b", r"\bdance craze\b",
+                    # wave 7: a dance move/choreography is itself a format
+                    r"\bdance\b"]),
     ("meme",       [r"\bmeme\b", r"\bmemes\b", r"\bbrainrot\b", r"\bshitpost\b",
                     r"\bdank meme\b"]),
     ("duet",       [r"\bduet\b"]),
     ("stitch",     [r"\bstitch\b"]),
     ("green-screen", [r"\bgreen screen\b", r"\bgreenscreen\b"]),
-    ("template",   [r"\btemplate trend\b", r"\bcapcut template\b"]),
-    ("trend",      [r"\btrend on tiktok\b", r"\btrending format\b"]),
+    ("template",   [r"\btemplate trend\b", r"\bcapcut template\b",
+                    # wave 7: any template reference
+                    r"\btemplate\b"]),
+    ("trend",      [r"\btrend on tiktok\b", r"\btrending format\b",
+                    # wave 7: "this trend" is how caption-variant formats
+                    # name themselves ("Did I win this trend?")
+                    r"\bthis trend\b"]),
+    # wave 7: new signals — a "format" or "caption" is the reusable
+    # template itself ("carousel-native format", "'Did I win' caption")
+    ("format",     [r"\bformat\b"]),
+    ("caption",    [r"\bcaption\b"]),
 ]
 
 def detect_format(title, summary, hashtags):
@@ -60,6 +73,29 @@ def detect_format(title, summary, hashtags):
         if any(re.search(p, full) for p in pats):
             tags.add(tag)
     return sorted(tags)
+
+# --- wave 7: format-vs-topic labeling ------------------------------------------
+# Mandate: track which of the top trends are meme FORMATS (a reusable
+# template others can fill — a dance, a caption variant, a sound, a
+# challenge) vs TOPICS (a subject or event to cover — a game launch, a
+# news event, a release). "format+topic" is both: an event-driven topic
+# riding a meme template. Rule-based, conservative, re-computed on every
+# run from format_tags + category (like format_tags itself), so the label
+# is derived, never stale, and never invented by an LLM.
+_FORMAT_SIGNALS = {"challenge", "dance", "pov", "sound", "meme", "duet",
+                   "stitch", "template", "trend", "green-screen",
+                   "format", "caption"}
+_EVENT_CATEGORIES = {"news", "sports", "gaming"}
+
+def classify_trend_type(t):
+    """Return 'format', 'topic', or 'format+topic' for one topic dict."""
+    is_format = bool(set(t.get("format_tags") or []) & _FORMAT_SIGNALS)
+    is_event = (t.get("category") or "").lower() in _EVENT_CATEGORIES
+    if is_format and is_event:
+        return "format+topic"
+    if is_format:
+        return "format"
+    return "topic"
 
 def jaccard(a, b):
     if not a or not b: return 0.0
@@ -284,6 +320,8 @@ def main():
         # wave 2: meme-format signals (pattern-based, re-computed every run)
         t["format_tags"] = detect_format(t.get("title", ""), t.get("summary", ""),
                                          t.get("hashtags", []))
+        # wave 7: format-vs-topic label (derived from format_tags + category)
+        t["trend_type"] = classify_trend_type(t)
 
     data["topics"] = sorted(topics.values(),
                             key=lambda t: t["opportunity_score"], reverse=True)

@@ -106,7 +106,26 @@
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "description": "Wave 2: pattern-detected meme-format signals (pov/challenge/sound/dance/meme/duet/stitch/green-screen/template/trend)."
+    },
+    "trend_type": {
+      "type": "string",
+      "enum": [
+        "format",
+        "topic",
+        "format+topic"
+      ],
+      "description": "Wave 7: 'format' = a reusable template others can fill (dance, caption variant, sound, challenge); 'topic' = a subject/event to cover; 'format+topic' = an event-driven topic riding a meme template. Rule-derived from format_tags + category."
+    },
+    "verification": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "single-source",
+        "unverified"
+      ],
+      "description": "Wave 7 (seeded topics): 'verified' = 2+ real sources; 'single-source' = one real source; 'unverified' = claimed sources not found on re-check \u2014 confirm live before building on it."
     },
     "guide_links": {
       "type": "array",

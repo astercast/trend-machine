@@ -86,6 +86,7 @@ def export_payload_json(t):
         "hashtags": t.get("hashtags", []),
         "platforms": t.get("platforms", []),
         "format_tags": t.get("format_tags", []),
+        "trend_type": t.get("trend_type", "topic"),
     }
     return json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
 
@@ -134,7 +135,7 @@ TOPIC_TMPL = """<!doctype html>
 <div class="stat" role="listitem"><div class="k">Velocity</div><div class="v num">{vel}</div></div>
 <div class="stat" role="listitem"><div class="k">Platforms</div><div class="v num">{nplat}</div></div>
 </div>
-<div style="margin-bottom:4px">{plats}{cats}{formats}{tags}</div>
+<div style="margin-bottom:4px">{plats}{tchip}{cats}{formats}{tags}</div>
 {spark}
 {stale_note}
 <p style="margin:14px 0 0;font-size:14px"><a href="../oracle.html">🔮 See this topic's 48h forecast in the Oracle</a></p>
@@ -198,15 +199,24 @@ def build_topic(t, history_pts=None):
     plats = "".join(f'<span class="chip plat">{esc(p)}</span>' for p in t.get("platforms", []))
     nplat = len(t.get("platforms", [])) or "—"
     cats = f'<span class="chip">{esc(t.get("category",""))}</span>'
+    tt = esc(t.get("trend_type", "topic"))
+    ticon = {"format": "⧉", "topic": "◉", "format+topic": "⧉◉"}.get(t.get("trend_type", "topic"), "◉")
+    tchip = (f'<span class="chip type" title="Wave 7: format = a reusable template to join; '
+             f'topic = a subject to cover; format+topic = an event riding a meme template">'
+             f'{ticon} {tt}</span>')
     formats = "".join(
         f'<span class="chip format" title="Detected meme-format signal">format · {esc(f)}</span>'
         for f in t.get("format_tags", []))
     tags = "".join(f'<span class="tag">{esc(h)}</span>' for h in t.get("hashtags", [])[:10])
     spark = sparkline_html(history_pts or [])
     payload = export_payload_json(t)
-    sources = "".join(
-        f'<li><a href="{esc(s.get("url",""))}">{esc(s.get("name","source"))}</a></li>'
-        for s in t.get("sources", [])) or "<li>No public sources captured yet.</li>"
+    def src_li(s):
+        nm, url = esc(s.get("name", "source")), esc(s.get("url", ""))
+        # wave 7: name-only sources (unverified seeds) render as plain text
+        if url:
+            return f'<li><a href="{url}">{nm}</a></li>'
+        return f'<li><span class="src-name">{nm}</span> <em class="src-unverified">(unverified — confirm live)</em></li>'
+    sources = "".join(src_li(s) for s in t.get("sources", [])) or "<li>No public sources captured yet.</li>"
     angles = "".join(
         f'<div class="angle"><span class="idx num">{i+1:02d}</span><p>{esc(a)}</p></div>'
         for i, a in enumerate(t.get("angles", []))) or "<p>No angles yet — check back after the next refresh.</p>"
@@ -222,7 +232,7 @@ def build_topic(t, history_pts=None):
         tid=esc(t["id"]),
         kicker=esc(t.get("category", "trend")) + " · dossier",
         summary=esc(t["summary"]), tier=tier, fcls=fcls, pulse=pulse, age=age,
-        ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, cats=cats,
+        ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, tchip=tchip, cats=cats,
         formats=formats, spark=spark, payload=payload,
         tags=tags,
         stale_note=stale_note, summary_long=esc(t["summary"]),
@@ -317,7 +327,12 @@ def main():
             "angles": {"type": "array", "items": {"type": "string"}},
             "hooks": {"type": "array", "items": {"type": "string"}},
             "who_to_watch": {"type": "array", "items": {"type": "string"}},
-            "format_tags": {"type": "array", "items": {"type": "string"}},
+            "format_tags": {"type": "array", "items": {"type": "string"},
+                "description": "Wave 2: pattern-detected meme-format signals (pov/challenge/sound/dance/meme/duet/stitch/green-screen/template/trend)."},
+            "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"],
+                "description": "Wave 7: 'format' = a reusable template others can fill (dance, caption variant, sound, challenge); 'topic' = a subject/event to cover; 'format+topic' = an event-driven topic riding a meme template. Rule-derived from format_tags + category."},
+            "verification": {"type": "string", "enum": ["verified", "single-source", "unverified"],
+                "description": "Wave 7 (seeded topics): 'verified' = 2+ real sources; 'single-source' = one real source; 'unverified' = claimed sources not found on re-check — confirm live before building on it."},
             "guide_links": {"type": "array", "items": {"type": "string"}},
             "platform_hits": {"type": "object",
                 "description": "Wave 6: recent hit timestamps per platform (last 48h window). Powers the per-platform velocity history.",
@@ -330,7 +345,7 @@ def main():
         "required": ["id", "title", "source", "url", "velocity",
                      "opportunity_score", "hashtags", "detected_at",
                      "summary", "category", "platforms", "format_tags",
-                     "sources"],
+                     "trend_type", "sources"],
         "properties": {
             "id": {"type": "string"}, "title": {"type": "string"},
             "source": {"type": "string",
@@ -344,6 +359,7 @@ def main():
             "category": {"type": "string"},
             "platforms": {"type": "array", "items": {"type": "string"}},
             "format_tags": {"type": "array", "items": {"type": "string"}},
+            "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"]},
             "sources": {"type": "array", "items": {"type": "string"}},
         },
     }
@@ -623,7 +639,7 @@ def main():
 
     manifest = {
         "name": "trend-machine",
-        "version": "0.2.1",
+        "version": "0.3.0",
         "generated_at": stamp,
         "base": ("api/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
@@ -677,7 +693,18 @@ def main():
                 None, len(SCHEMAS)),
         },
         "deprecated": [],
-        "changelog": ("0.2.1 (2026-10-11): Oracle 2.0 — forecasts.json records now "
+        "changelog": ("0.3.0 (2026-10-11): Wave 7 — Oct-2026 trend-drop refresh: 12 new "
+                      "topics (SocialPilot Sept 25–Oct 10 re-check: Did I Win This Trend?, "
+                      "31 Days of Halloween, Halloween Home Tour, Creepy Fact Storytime, "
+                      "DIP ON EM, #CityTasteTest, Homecoming Proposal Reveal, girl in red "
+                      "'we fell in love in october', Memo Boy 'Insomniac', Spooky Scary "
+                      "Skeletons remix, Patient Zero TikTok Search Hub, pumpkin patch season); "
+                      "new 'trend_type' field on every topic (format/topic/format+topic, "
+                      "rule-derived from format_tags + category); seeded topics carry a "
+                      "'verification' flag (verified/single-source/unverified — unverified "
+                      "topics render name-only sources with a confirm-live note). "
+                      "Bow Bow Bow re-graded to Peak/saturation-high. Additive only, no "
+                      "shape changes. 0.2.1 (2026-10-11): Oracle 2.0 — forecasts.json records now "
                       "carry confidence basis (snapshot count + fit quality), signal "
                       "attribution (velocity delta, slope, accel, recency, "
                       "cross-platform spread, fired thresholds), and per-platform "
@@ -706,9 +733,13 @@ def main():
              "## Hottest right now"]
     for t in topics[:10]:
         lines.append(f"- {t['title']} (opportunity {t['opportunity_score']}, velocity {t['velocity']}) — topics/{t['id']}.html")
+    nfmt = sum(1 for t in topics if t.get("trend_type") == "format")
+    nmix = sum(1 for t in topics if t.get("trend_type") == "format+topic")
     lines += ["", "## Categories",
               ", ".join(sorted({t['category'] for t in topics})), "",
-              "## API", "- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
+              f"## Trend types (wave 7): {nfmt} formats, {nmix} format+topic, "
+              f"{len(topics) - nfmt - nmix} topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).",
+              "", "## API", "- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
               "- api/v1/trends.json — all topics, full dossiers", "- api/v1/trends.flat.json — flat opportunity-ranked feed (stale excluded)",
               "- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)", "- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
               "- api/v1/platform-velocity.json — per-platform hourly velocity series (per-platform trajectories input)", "- api/v1/forecast-accuracy.json — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)",

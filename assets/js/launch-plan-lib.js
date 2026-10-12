@@ -1,5 +1,5 @@
 /* ============================================================
-   TREND MACHINE — launch-plan-lib.js (wave 3 · "Oracle")
+   TREND MACHINE — launch-plan-lib.js (wave 3 · "Oracle", wave 7 trend-type pacing)
    Pure 7-day battle-plan generator. Takes a topic's dossier
    payload and schedules its angles/hooks/hashtags across 7
    days. NEVER invents angles, hooks, or hashtags — everything
@@ -69,6 +69,12 @@
     var hashtags = list(p.hashtags).filter(Boolean);
     var platforms = list(p.platforms).filter(Boolean);
     var formats = list(p.format_tags).filter(Boolean);
+    // Wave 7 fix: accept both the dossier's opportunity_score and the
+    // export payload's opportunity — the planner page passes raw dossiers,
+    // which only carry opportunity_score (previously scored every plan 0).
+    var opportunity = (p.opportunity != null ? p.opportunity :
+                       p.opportunity_score != null ? p.opportunity_score : 0);
+    var velocity = p.velocity || 0;
 
     if (!angles.length) {
       return {
@@ -119,14 +125,14 @@
       (platforms.length ? platforms[0] : "your main platform") +
       " — front-loading gives the trend the most runway."
     );
-    if (p.opportunity >= 70) {
+    if (opportunity >= 70) {
       rationale.push(
-        "Opportunity " + p.opportunity + "/100 is strike-now territory, " +
+        "Opportunity " + opportunity + "/100 is strike-now territory, " +
         "so this plan posts daily instead of pacing it out."
       );
     } else {
       rationale.push(
-        "Opportunity " + p.opportunity + "/100 says pace yourself: daily " +
+        "Opportunity " + opportunity + "/100 says pace yourself: daily " +
         "posts, but each day is a self-contained take, so dropping to " +
         "3 days/week still works."
       );
@@ -146,6 +152,28 @@
       rationale.push(
         "Format signals (" + formats.join(", ") + ") are baked into the " +
         "lead days — sounds and formats rot fastest, so they go first."
+      );
+    }
+    // Wave 7: trend-type-aware pacing — formats repeat, topics cover.
+    // A format trend is a reusable template: the plan runs the canonical
+    // version early, then adds your twist. A topic trend is a subject to
+    // cover fresh each day.
+    var tt = p.trend_type || "topic";
+    if (tt === "format") {
+      rationale.push(
+        "This is a format trend — the template itself is the play: Days 1–3 " +
+        "run the canonical format to catch the wave, Days 4–7 add your own twist."
+      );
+    } else if (tt === "format+topic") {
+      rationale.push(
+        "This is a format+topic trend — join the template early (Days 1–2), " +
+        "then use the back half of the week to cover the underlying subject " +
+        "with your own take."
+      );
+    } else {
+      rationale.push(
+        "This is a topic trend — cover the subject fresh each day; the rotating " +
+        "formats keep the week from feeling repeated."
       );
     }
     if (trajectory && trajectory.state && trajectory.state !== "insufficient") {
@@ -186,9 +214,10 @@
       meta: {
         title: p.title || "", id: p.id || "",
         category: p.category || "",
-        opportunity: p.opportunity || 0, velocity: p.velocity || 0,
+        opportunity: opportunity, velocity: velocity,
         angleCount: angles.length, hookCount: hooks.length,
-        platforms: platforms, formats: formats
+        platforms: platforms, formats: formats,
+        trend_type: p.trend_type || "topic"
       }
     };
   }
@@ -198,7 +227,8 @@
     var lines = [];
     lines.push("7-DAY BATTLE PLAN: " + plan.meta.title.toUpperCase());
     lines.push("OPPORTUNITY " + plan.meta.opportunity + "/100 · VELOCITY " +
-               plan.meta.velocity + "/100 · " + String(plan.meta.category).toUpperCase());
+               plan.meta.velocity + "/100 · " + String(plan.meta.category).toUpperCase() +
+               " · " + String(plan.meta.trend_type || "topic").toUpperCase());
     lines.push("");
     plan.days.forEach(function (d) {
       lines.push("DAY " + d.day + " — " + d.date.toUpperCase());

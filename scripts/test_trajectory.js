@@ -191,5 +191,38 @@ ok(en.analysis.state === "rising" && en.confidence.level && en.signals.velocity_
    "enrich returns analysis + confidence + signals", { state: en.analysis.state, conf: en.confidence.level, delta: en.signals.velocity_delta });
 ok(Object.keys(en.per_platform).length === 0, "no platform_points -> empty per_platform", en.per_platform);
 
+console.log("== wave 7: trend-type pacing in the launch planner ==");
+const baseP = {
+  title: "T", id: "t", category: "meme", opportunity: 92, velocity: 92,
+  angles: ["Angle A", "Angle B", "Angle C"],
+  hooks: ["Hook 1", "Hook 2"],
+  hashtags: ["#a", "#b"], format_tags: ["dance"],
+  platforms: ["tiktok"]
+};
+let fmtPlan = L.buildPlan(Object.assign({}, baseP, { trend_type: "format" }));
+ok(fmtPlan.ok && fmtPlan.meta.trend_type === "format", "format trend_type passes through to plan meta", fmtPlan.meta.trend_type);
+ok(fmtPlan.rationale.some(r => /format trend/.test(r) && /Days 1–3/.test(r)),
+   "format pacing: canonical format early, twist later", fmtPlan.rationale.length);
+let mixPlan = L.buildPlan(Object.assign({}, baseP, { trend_type: "format+topic" }));
+ok(mixPlan.rationale.some(r => /format\+topic trend/.test(r) && /Days 1–2/.test(r)),
+   "format+topic pacing: template early, subject coverage later", 1);
+let topPlan = L.buildPlan(Object.assign({}, baseP, { trend_type: "topic" }));
+ok(topPlan.rationale.some(r => /topic trend/.test(r) && /fresh each day/.test(r)),
+   "topic pacing: fresh coverage daily", 1);
+// missing trend_type -> defaults to topic pacing (never crashes)
+let defPlan = L.buildPlan(baseP);
+ok(defPlan.ok && defPlan.meta.trend_type === "topic" &&
+   defPlan.rationale.some(r => /topic trend/.test(r)),
+   "missing trend_type defaults to topic", defPlan.meta.trend_type);
+// wave 7 fix: raw dossiers carry opportunity_score, not opportunity —
+ // the planner must not score every plan 0
+let rawDossier = Object.assign({}, baseP, { opportunity_score: 85 });
+delete rawDossier.opportunity;
+let rawPlan = L.buildPlan(rawDossier);
+ok(rawPlan.ok && rawPlan.meta.opportunity === 85,
+   "raw dossier opportunity_score maps to plan opportunity", rawPlan.meta.opportunity);
+ok(rawPlan.rationale.some(r => /85\/100 is strike-now/.test(r)),
+   "strike-now pacing fires on opportunity_score >= 70", 1);
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T01:45:27.018987+00:00",
+  "generated_at": "2026-10-12T02:19:24.712804+00:00",
   "tags": {
     "#67": [
       "six-seven-meme"
@@ -22,6 +22,7 @@
     ],
     "#dancechallenge": [
       "seis-sete-dance",
+      "dip-on-em",
       "bow-bow-bow"
     ],
     "#trump": [
@@ -29,15 +30,6 @@
     ],
     "#nobelprize": [
       "trump-rally-nobel"
-    ],
-    "#minidrama": [
-      "mini-dramas"
-    ],
-    "#series": [
-      "mini-dramas"
-    ],
-    "#cliffhanger": [
-      "mini-dramas"
     ],
     "#riyadh": [
       "houthi-riyadh-strike"
@@ -48,17 +40,18 @@
     "#breaking": [
       "houthi-riyadh-strike"
     ],
-    "#bowbowbow": [
-      "bow-bow-bow"
-    ],
-    "#zeddywill": [
-      "bow-bow-bow"
-    ],
     "#nba": [
       "nba-tiktok-surge"
     ],
     "#basketball": [
       "nba-tiktok-surge"
+    ],
+    "#wefellinloveinoctober": [
+      "we-fell-in-love-in-october"
+    ],
+    "#octobermood": [
+      "we-fell-in-love-in-october",
+      "spooky-season"
     ],
     "#nanapatekar": [
       "nana-patekar-tributes"
@@ -66,25 +59,64 @@
     "#riplegend": [
       "nana-patekar-tributes"
     ],
+    "#diponem": [
+      "dip-on-em"
+    ],
+    "#insomniac": [
+      "insomniac-lofi"
+    ],
+    "#lofi": [
+      "insomniac-lofi"
+    ],
+    "#fallvibes": [
+      "insomniac-lofi",
+      "pumpkin-patch-season",
+      "cozy-fall-jazz"
+    ],
+    "#spookyseason": [
+      "spooky-skeletons-remix",
+      "31-days-of-halloween",
+      "spooky-season",
+      "halloween-home-tour",
+      "pumpkin-head",
+      "ramalama-walk"
+    ],
+    "#halloweendecor": [
+      "spooky-skeletons-remix",
+      "halloween-home-tour"
+    ],
+    "#31daysofhalloween": [
+      "31-days-of-halloween",
+      "spooky-season"
+    ],
+    "#citytastetest": [
+      "citytastetest"
+    ],
+    "#foodreview": [
+      "citytastetest"
+    ],
     "#hurricaneisaias": [
       "hurricane-isaias"
     ],
     "#weather": [
       "hurricane-isaias"
     ],
-    "#tiktoksounds": [
-      "tiktok-sounds-week"
+    "#creepyfacts": [
+      "creepy-fact-storytime"
     ],
-    "#viralsounds": [
-      "tiktok-sounds-week"
+    "#hocoproposal": [
+      "homecoming-proposal"
+    ],
+    "#hoco": [
+      "homecoming-proposal"
     ],
     "#halloweenthegame": [
       "halloween-game-xbox"
     ],
     "#xbox": [
       "halloween-game-xbox",
-      "battlefield-6-gamepass",
-      "gears-eday"
+      "gears-eday",
+      "battlefield-6-gamepass"
     ],
     "#horrorgaming": [
       "halloween-game-xbox"
@@ -101,14 +133,8 @@
     "#videogamemovies": [
       "street-fighter-movie"
     ],
-    "#cozyfall": [
-      "cozy-fall-jazz"
-    ],
-    "#fallvibes": [
-      "cozy-fall-jazz"
-    ],
-    "#morningroutine": [
-      "cozy-fall-jazz"
+    "#pumpkinpatch": [
+      "pumpkin-patch-season"
     ],
     "#2xko": [
       "2xko-sett"
@@ -155,23 +181,17 @@
     "#ailoveisland": [
       "fruit-love-island"
     ],
+    "#upsidedown": [
+      "upside-down"
+    ],
+    "#beforeandafter": [
+      "upside-down"
+    ],
     "#maheshbabu": [
       "mahesh-babu-director"
     ],
     "#tollywood": [
       "mahesh-babu-director"
-    ],
-    "#stopthewedding": [
-      "stop-the-wedding"
-    ],
-    "#weddingregret": [
-      "stop-the-wedding"
-    ],
-    "#thereshegoes": [
-      "there-she-goes"
-    ],
-    "#shimmydance": [
-      "there-she-goes"
     ],
     "#airoleplay": [
       "ai-roleplay-comedy"
@@ -185,20 +205,10 @@
     "#ceilingfan": [
       "ceiling-fan-wipe"
     ],
-    "#spookyseason": [
-      "spooky-season",
-      "ramalama-walk",
-      "pumpkin-head"
-    ],
     "#halloweencostume": [
       "spooky-season",
+      "did-i-win-this-trend",
       "ramalama-walk"
-    ],
-    "#31daysofhalloween": [
-      "spooky-season"
-    ],
-    "#octobermood": [
-      "spooky-season"
     ],
     "#october": [
       "october-calendar-memes"
@@ -206,7 +216,11 @@
     "#halloweencountdown": [
       "october-calendar-memes"
     ],
+    "#costumeideas": [
+      "did-i-win-this-trend"
+    ],
     "#ramalama": [
+      "did-i-win-this-trend",
       "ramalama-walk"
     ],
     "#twofishes": [
@@ -218,6 +232,21 @@
     "#loveislandusa": [
       "two-fishes"
     ],
+    "#gearsofwar": [
+      "gears-eday"
+    ],
+    "#edday": [
+      "gears-eday"
+    ],
+    "#minidrama": [
+      "mini-dramas"
+    ],
+    "#series": [
+      "mini-dramas"
+    ],
+    "#cliffhanger": [
+      "mini-dramas"
+    ],
     "#battlefield6": [
       "battlefield-6-gamepass"
     ],
@@ -225,14 +254,11 @@
       "battlefield-6-gamepass",
       "valor-mortis"
     ],
-    "#patientzero": [
-      "patient-zero-swift"
+    "#bowbowbow": [
+      "bow-bow-bow"
     ],
-    "#taylorswift": [
-      "patient-zero-swift"
-    ],
-    "#weddingtiktok": [
-      "patient-zero-swift"
+    "#zeddywill": [
+      "bow-bow-bow"
     ],
     "#mlbplayoffs": [
       "mlb-playoffs"
@@ -240,11 +266,24 @@
     "#worldseries": [
       "mlb-playoffs"
     ],
+    "#ukraine": [
+      "trump-energy-ceasefire"
+    ],
+    "#ceasefire": [
+      "trump-energy-ceasefire"
+    ],
     "#valormortis": [
       "valor-mortis"
     ],
     "#soulslike": [
       "valor-mortis"
+    ],
+    "#patientzero": [
+      "patient-zero-hub",
+      "patient-zero-swift"
+    ],
+    "#tiktokhub": [
+      "patient-zero-hub"
     ],
     "#pumpkinhead": [
       "pumpkin-head"
@@ -258,23 +297,38 @@
     "#galacticracer": [
       "sw-galactic-racer"
     ],
-    "#gearsofwar": [
-      "gears-eday"
+    "#tiktoksounds": [
+      "tiktok-sounds-week"
     ],
-    "#edday": [
-      "gears-eday"
+    "#viralsounds": [
+      "tiktok-sounds-week"
     ],
-    "#ukraine": [
-      "trump-energy-ceasefire"
+    "#nycc": [
+      "james-spader-agreed-to-return-as-ultron-before-rea"
     ],
-    "#ceasefire": [
-      "trump-energy-ceasefire"
+    "#mcu": [
+      "james-spader-agreed-to-return-as-ultron-before-rea"
     ],
-    "#beok": [
-      "be-ok"
+    "#visionquest": [
+      "james-spader-agreed-to-return-as-ultron-before-rea"
     ],
-    "#ingridmichaelson": [
-      "be-ok"
+    "#YorkshireWildlifePark": [
+      "wildlife-park-where-man-fatally-attacked-by-tiger-"
+    ],
+    "#BBCNews": [
+      "wildlife-park-where-man-fatally-attacked-by-tiger-",
+      "at-least-12-people-were-killed-in-saturday-s-attac",
+      "lagos-street-model-rachel-ojuromi-who-made-it-to-c",
+      "more-protests-in-delhi-as-freed-cockroach-group-s-"
+    ],
+    "#SaudiArabia": [
+      "at-least-12-people-were-killed-in-saturday-s-attac"
+    ],
+    "#cozyfall": [
+      "cozy-fall-jazz"
+    ],
+    "#morningroutine": [
+      "cozy-fall-jazz"
     ],
     "#SilentSunday": [
       "silentsunday"
@@ -318,12 +372,6 @@
     "#lfc": [
       "lfc"
     ],
-    "#textfroma": [
-      "text-from-a"
-    ],
-    "#prettylittleliars": [
-      "text-from-a"
-    ],
     "#ultraman": [
       "ultraman"
     ],
@@ -336,20 +384,44 @@
     "#Monsterdon": [
       "monsterdon"
     ],
-    "#\u8c4a\u81e3\u5144\u5f1f": [
-      "topic-2-3"
-    ],
     "#thebat": [
       "thebat"
     ],
     "#shorts": [
       "set-the-mood-with-chl-e-shorts"
     ],
-    "#upsidedown": [
-      "upside-down"
+    "#\u8c4a\u81e3\u5144\u5f1f": [
+      "topic-2-3-4"
     ],
-    "#beforeandafter": [
-      "upside-down"
+    "#stopthewedding": [
+      "stop-the-wedding"
+    ],
+    "#weddingregret": [
+      "stop-the-wedding"
+    ],
+    "#textfroma": [
+      "text-from-a"
+    ],
+    "#prettylittleliars": [
+      "text-from-a"
+    ],
+    "#beok": [
+      "be-ok"
+    ],
+    "#ingridmichaelson": [
+      "be-ok"
+    ],
+    "#thereshegoes": [
+      "there-she-goes"
+    ],
+    "#shimmydance": [
+      "there-she-goes"
+    ],
+    "#taylorswift": [
+      "patient-zero-swift"
+    ],
+    "#weddingtiktok": [
+      "patient-zero-swift"
     ]
   }
 }

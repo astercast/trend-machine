@@ -43,6 +43,7 @@
         "category",
         "platforms",
         "format_tags",
+        "trend_type",
         "sources"
       ],
       "properties": {
@@ -95,6 +96,14 @@
           "items": {
             "type": "string"
           }
+        },
+        "trend_type": {
+          "type": "string",
+          "enum": [
+            "format",
+            "topic",
+            "format+topic"
+          ]
         },
         "sources": {
           "type": "array",

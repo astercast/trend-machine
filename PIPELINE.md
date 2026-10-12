@@ -92,12 +92,26 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   honestly labeled "tracked since <date>" — with <2 snapshots the dossier
   says so instead of drawing a fake line.
 - `normalize.py` also runs `detect_format()` (conservative regex signals:
-  `pov`, `challenge` (title/hashtags only), `sound`, `dance`, `meme`,
-  `duet`, `stitch`, `green-screen`, `template`, `trend`) and stores
+  `pov`, `challenge` (title/hashtags only), `sound` (+ "original sound"),
+  `dance`, `meme`, `duet`, `stitch`, `green-screen`, `template`, `trend`
+  (+ "this trend"), plus wave-7's `format` and `caption`) and stores
   `format_tags` on every topic; dossiers show a `format · <tag>` chip.
   Category is never rewritten by this.
 - Dossiers have a "⧉ Remix this" button (`assets/js/remix-export.js`)
   that copies angles + hook lines + hashtags as plain text (Clipboard API
+
+## Format-vs-topic labeling (wave 7)
+
+- `normalize.py`'s `classify_trend_type()` labels every topic `format`
+  (a reusable template others can fill: dance, caption variant, sound,
+  challenge), `topic` (a subject/event to cover: launch, news event),
+  or `format+topic` (event-driven topic riding a meme template).
+- Rule-based and conservative: any `format_tags` hit makes it a format;
+  `news`/`sports`/`gaming` categories make it a topic; both together make
+  it `format+topic`. Re-computed on every run from `format_tags` +
+  category, so the label is derived, never stale. Dossiers show a
+  ⧉/◉/⧉◉ chip; the launch planner paces days differently per label
+  (formats repeat the template early then twist; topics cover fresh daily).
   with textarea fallback, keyboard accessible, copied-confirmation state).
 
 ## Per-platform velocity history + Oracle 2.0 (wave 6)
@@ -148,5 +162,14 @@ into the existing topic (new source appended, `last_seen` refreshed).
 2026-10-11 (news, TikTok trend trackers, gaming press). Wave 4 (2026-10-11)
 added 11 more seeds + refreshed 4 existing ones from the October-2026 wave-fuel
 research (SocialPilot Sept 25–Oct 5, New Engen, Virlo, Later, MediaNug, Lightreel —
-41 seeds total). Each traces to a source URL. The refresh pipeline corroborates
-or expires them like any other topic.
+41 seeds total). Wave 7 (2026-10-11) re-verified every wave-4 seed against fresh
+research: verified topics keep their figures with real source URLs; 5 seeds are
+flagged `verification: "single-source"` and 2 (`text-from-a`, `be-ok`) as
+`"unverified"` (claimed sources not found — name-only sources, down-weighted,
+confirm-live note in dossiers); 12 new seeds came from SocialPilot's
+Sept 25–Oct 10 re-check (7 new Halloween-cycle formats, 2 early-stage sounds,
+the Patient Zero TikTok Search Hub mechanic, pumpkin patch season). 53 seeds
+total. `verification` lives on every seeded topic (`verified`/`single-source`/
+`unverified`) and is documented in the trend schema. **seed.py upserts by id**
+(preserves non-seed topics — never rewrites the store from scratch). The refresh
+pipeline corroborates or expires seeds like any other topic.

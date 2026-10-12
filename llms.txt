@@ -2,22 +2,24 @@
 
 Live trending-topic intelligence: what to make content about TODAY.
 Machine-readable: api/v1/trends.json (sort by opportunity_score desc).
-Generated: 2026-10-12T01:45:27.018987+00:00 · 341 topics.
+Generated: 2026-10-12T02:19:24.712804+00:00 · 353 topics.
 
 ## Hottest right now
 - "6-7" — Gen Alpha's defining brainrot joke (opportunity 92, velocity 92) — topics/six-seven-meme.html
 - GTA 6: robberies and partner getaways detailed (opportunity 91, velocity 91) — topics/gta6-robberies.html
 - "Six Seven" (Seis Sete) funk dance (opportunity 90, velocity 90) — topics/seis-sete-dance.html
 - Trump roasts rally protester; Nobel Prize outrage (opportunity 90, velocity 90) — topics/trump-rally-nobel.html
-- Mini-dramas — TikTok's fastest-growing NEW category (opportunity 90, velocity 90) — topics/mini-dramas.html
 - Houthi missile strike on Riyadh airport (opportunity 88, velocity 88) — topics/houthi-riyadh-strike.html
-- "Bow Bow Bow" — Zeddy Will's bend-and-bounce (opportunity 88, velocity 88) — topics/bow-bow-bow.html
 - #nba explodes on TikTok (+493%) (opportunity 86, velocity 86) — topics/nba-tiktok-surge.html
+- "we fell in love in october" — girl in red (opportunity 86, velocity 86) — topics/we-fell-in-love-in-october.html
 - Nana Patekar dies at 75 — meme legend tributes (opportunity 85, velocity 85) — topics/nana-patekar-tributes.html
-- Hurricane Isaias makes landfall (opportunity 81, velocity 81) — topics/hurricane-isaias.html
+- "DIP ON EM" — early-stage dance sound (opportunity 85, velocity 85) — topics/dip-on-em.html
+- "Insomniac" — Memo Boy's lo-fi bed (opportunity 84, velocity 84) — topics/insomniac-lofi.html
 
 ## Categories
 culture, entertainment, gaming, meme, music, news, sports, tech
+
+## Trend types (wave 7): 19 formats, 0 format+topic, 334 topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).
 
 ## API
 - api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts

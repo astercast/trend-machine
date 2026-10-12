@@ -1,5 +1,5 @@
 /* ============================================================
-   TREND MACHINE — verify_agent_workflows.js (wave 5)
+   TREND MACHINE — verify_agent_workflows.js (wave 5, wave 7: passes trend_type)
    Executes the 3 end-to-end workflows from AGENT.md against the
    REAL local api/v1 JSON files and asserts they work.
 
@@ -44,7 +44,8 @@ const payload = {
   title: ramalama.title, id: ramalama.id, category: ramalama.category,
   opportunity: ramalama.opportunity_score, velocity: ramalama.velocity,
   angles: ramalama.angles, hooks: ramalama.hooks, hashtags: ramalama.hashtags,
-  platforms: ramalama.platforms, format_tags: ramalama.format_tags
+  platforms: ramalama.platforms, format_tags: ramalama.format_tags,
+  trend_type: ramalama.trend_type
 };
 const plan = L.buildPlan(payload, null);
 assert(plan.ok === true, "plan built", plan.reason);

@@ -1,20 +1,38 @@
 #!/usr/bin/env python3
 """Seed data/trends.json with real, researched trending topics (2026-10-11).
 
+Wave 7 (2026-10-11): every wave-4 Oct-2026 seed re-verified against fresh
+web research. Verified topics keep their figures with real source URLs;
+topics whose claimed sources could not be re-found are flagged
+verification="unverified" and down-weighted; 12 new topics from the
+Sept 25–Oct 10, 2026 SocialPilot re-check (7 new Halloween-cycle formats,
+2 early-stage sounds, the TikTok Patient Zero Search Hub mechanic).
+
 Every topic below traces to a source found via web research on 2026-10-11.
 Nothing here is invented. first_seen reflects when the trend emerged per
 sources; last_seen is the seed timestamp (all corroborated at seed time).
 Velocity (0-100) and saturation (low/med/high) are editorial estimates
 documented per topic; opportunity = round(velocity * (1 - saturation_penalty))
 with low=0.0, med=0.35, high=0.6. See PIPELINE.md for the formula.
+
+MERGE behavior (wave 7): this script upserts seed topics into the existing
+data/trends.json by id and preserves non-seed (auto) topics — it never
+rewrites the store from scratch. Run `pipeline/refresh.sh` afterwards for
+normalize.py to re-corroborate and rebuild dossiers/API.
 """
 import json, os, datetime
 
-SEED_TS = "2026-10-11T15:10:00-07:00"
+SEED_TS = "2026-10-11T19:30:00-07:00"
 OUT = os.path.join(os.path.dirname(__file__), "..", "data", "trends.json")
+DEFAULT_NOTE = ("Researched 2026-10-11 (waves 1+4), re-verified 2026-10-11 "
+                "(wave 7) via web search; corroborate on next pipeline refresh.")
+# verification: "verified" (2+ real sources), "single-source" (one real
+# source), "unverified" (claimed sources not found on re-check — name-only
+# sources, verify live before building on the topic).
 
 def T(id, title, summary, category, platforms, hashtags, velocity, saturation,
-      first_seen, sources, angles, hooks, who_to_watch, guide_links):
+      first_seen, sources, angles, hooks, who_to_watch, guide_links,
+      verification="verified", note=None):
     pen = {"low": 0.0, "medium": 0.35, "high": 0.6}[saturation]
     return {
         "id": id, "title": title, "summary": summary, "category": category,
@@ -22,7 +40,8 @@ def T(id, title, summary, category, platforms, hashtags, velocity, saturation,
         "velocity": velocity, "saturation": saturation,
         "opportunity_score": round(velocity * (1 - pen)),
         "first_seen": first_seen, "last_seen": SEED_TS,
-        "seeded": True, "seed_note": "Researched 2026-10-11 via web search; corroborate on next pipeline refresh.",
+        "seeded": True, "seed_note": note or DEFAULT_NOTE,
+        "verification": verification,
         "sources": [{"name": n, "url": u} for n, u in sources],
         "angles": angles, "hooks": hooks, "who_to_watch": who_to_watch,
         "guide_links": guide_links,
@@ -30,8 +49,8 @@ def T(id, title, summary, category, platforms, hashtags, velocity, saturation,
 
 topics = [
 T("two-fishes", "The \"Two Fishes\" deadpan audio",
-  "Creators defending a relatable take over Corbin Mims's Love Island USA audio — deadpan \"two fishes\" logic applied to your niche's most unreasonable opinion. (New Engen, Oct 2026.)",
-  "meme", ["tiktok"], ["#twofishes", "#corbingpt", "#loveislandusa"], 88, "low",
+  "Creators defending a relatable take over Corbin Mims's Love Island USA audio — deadpan \"two fishes\" logic applied to your niche's most unreasonable opinion. New Engen's #1 October trend (re-verified 2026-10-11, still rising): start with text setting up the take, lip-sync Corbin straight to camera, full debate-mode energy.",
+  "meme", ["tiktok"], ["#twofishes", "#corbingpt", "#loveislandusa"], 90, "low",
   "2026-10-05T00:00:00-07:00",
   [("New Engen", "https://newengen.com/insights/october-tiktok-trends/"), ("Virlo", "https://virlo.ai/blog/whats-trending-on-tiktok")],
   ["Defend your niche's most unreasonable take with total sincerity", "Brand version: defend an unpopular product opinion deadpan", "\"Me explaining to my parents...\" setup with your own twist"],
@@ -65,19 +84,19 @@ T("grr-mondays", "#GrrMondays",
   ["@thefattymythtesters (origin clip)"], ["content-engine/formats", "packaging/thumbnails"]),
 
 T("ramalama-walk", "Ramalama Costume Walk",
-  "Low-angle creepy walk zooming out to reveal a Halloween fit, set to Róisín Murphy's \"Ramalama (Bang Bang)\". Rising, 430.7K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026; also New Engen). No text, no talking — the walk IS the video.",
+  "Low-angle creepy walk zooming out to reveal a Halloween fit, set to Róisín Murphy's \"Ramalama (Bang Bang)\". Still Rising per SocialPilot's Oct-5 re-check (430.7K videos; biggest new videos Oct 3–4), and it spawned this cycle's #1 caption variant: 'Did I Win This Trend?'. Tlinky (Oct 2026) confirms the format is back from last Halloween and works for costume shops, salons, and venues. No text, no talking — the walk IS the video.",
   "meme", ["tiktok"], ["#halloweencostume", "#ramalama", "#spookyseason"], 90, "medium",
   "2026-10-01T00:00:00-07:00",
-  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("New Engen", "https://newengen.com/insights/october-tiktok-trends/")],
-  ["Costume reveal timed to the Ramalama drop", "Synchronized group stalk — everyone hits the beat", "Parody: mundane costume, maximum menace walk"],
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("New Engen", "https://newengen.com/insights/october-tiktok-trends/"), ("Tlinky", "https://tlinky.com/tiktok-halloween-trends/"), ("Vadbav", "https://vadbav.com/did-i-win-this-trend-tiktok-halloween-costume")],
+  ["Costume reveal timed to the Ramalama drop", "Synchronized group stalk — everyone hits the beat", "Parody: mundane costume, maximum menace walk", "'Did I win this trend?' caption variant on the drop"],
   ["Wait for the reveal", "430K videos deep and counting"],
   ["Halloween costume creators on TikTok"], ["packaging/hooks", "content-engine/shorts"]),
 
 T("pumpkin-head", "Pumpkin Head Illusion",
-  "Pumpkin held to the lens becomes a fake head — the body below does the dancing. Set to a groovy spooky remix of the \"it's just a bunch of hocus pocus\" line. Zero editing, one prop; doubles for fall-decorating content. (New Engen; Virlo, Oct 2026.)",
+  "Pumpkin held to the lens becomes a fake head — the body below does the dancing. Set to a groovy spooky remix of the \"it's just a bunch of hocus pocus\" line. Zero editing, one prop; Tlinky (Oct 2026) confirms the audio also works for fall decorating and cozy October routines, so non-costume brands can join. (New Engen; Virlo, Oct 2026.)",
   "meme", ["tiktok"], ["#pumpkinhead", "#spookyseason", "#halloween2026"], 78, "low",
   "2026-10-03T00:00:00-07:00",
-  [("New Engen", "https://newengen.com/insights/october-tiktok-trends/"), ("Virlo", "https://virlo.ai/blog/whats-trending-on-tiktok")],
+  [("New Engen", "https://newengen.com/insights/october-tiktok-trends/"), ("Virlo", "https://virlo.ai/blog/whats-trending-on-tiktok"), ("Tlinky", "https://tlinky.com/tiktok-halloween-trends/")],
   ["Friend-group chaos version tonight", "Pet version: pumpkin over the dog", "Fall-decorating pivot: same illusion, new captions"],
   ["One pumpkin. Zero editing. Infinite chaos", "The easiest Halloween video you'll make"],
   ["Halloween TikTok"], ["content-engine/formats"]),
@@ -227,19 +246,19 @@ T("2xko-sett", "2XKO drops Sett as surprise champion",
   ["FGC creators", "Riot Games"], ["niche/gaming"]),
 
 T("patient-zero-swift", "Taylor Swift \"Patient Zero\" wedding edits",
-  "Taylor Swift's \"Patient Zero\" (single out Sept 25) soundtracks wedding edits — plus \"leaving something behind\" audio for quitting jobs and ending habits. Rising, 149.3K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026; Virlo).",
+  "Taylor Swift's \"Patient Zero\" (single out Sept 25, on The Life of a Showgirl: The Encore) soundtracks wedding edits — plus \"leaving something behind\" audio for quitting jobs and ending habits. Still Rising per SocialPilot (149.3K videos; new videos daily, ~one more week of lift expected), and TikTok built a dedicated Search Hub for the release (Sept 30, 2026): fans earn a profile frame for posting/saving/streaming while behind-the-scenes clips unlock on a shared fan goal.",
   "music", ["tiktok"], ["#patientzero", "#taylorswift", "#weddingtiktok"], 84, "low",
   "2026-10-07T00:00:00-07:00",
-  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("Virlo", "https://virlo.ai/blog/whats-trending-on-tiktok")],
-  ["\"Leaving something behind\" version: quit a habit, drop a tool, end an era", "Wedding-edit structure breakdown for editors", "Lyric-quote edits with your niche's story"],
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("Virlo", "https://virlo.ai/blog/whats-trending-on-tiktok"), ("TikTokNewsHub", "https://tiktoknewshub.com/music/patient-zero-tiktok-hub-taylor-swift/"), ("New Engen", "https://newengen.com/insights/october-tiktok-trends/")],
+  ["\"Leaving something behind\" version: quit a habit, drop a tool, end an era", "Wedding-edit structure breakdown for editors", "Lyric-quote edits with your niche's story", "Recap the Search Hub gamification — the mechanic generalizes to any launch"],
   ["Taylor Swift just gave us a wedding-edit sound", "POV: leaving something behind"],
   ["Swiftie editors on TikTok"], ["niche/music", "packaging/hooks"]),
 
 T("tiktok-sounds-week", "This week's breakout TikTok sounds",
-  "Per Revid's sample of 5.4K popular posts: \"BLUE WATER CANDY\" by DJ Allanzinho JP is #1 steady (13M views on top posts), \"Strangers\" by SKARS is rising 2.3x, and Lucien Marceau's \"Courtly Elegance Boccherini\" is cooling. Catch a sound while it's climbing.",
+  "Per Revid's sample of 5.4K popular posts: \"BLUE WATER CANDY\" by DJ Allanzinho JP is #1 steady (13M views on top posts), \"Strangers\" by SKARS is rising 2.3x, and Lucien Marceau's \"Courtly Elegance Boccherini\" is cooling. Plus SocialPilot's two early-stage beds to grab now: SouthMemphisHypeman's \"DIP ON EM\" (49.3K, picked up by big dance creators this week) and Tomb Gazer's \"white rabbit's bells\" (13K, the creepy-fact-storytime bed). Catch a sound while it's climbing.",
   "music", ["tiktok"], ["#tiktoksounds", "#viralsounds"], 79, "low",
   "2026-10-11T00:00:00-07:00",
-  [("Revid", "https://www.revid.ai/viral-tiktok-songs")],
+  [("Revid", "https://www.revid.ai/viral-tiktok-songs"), ("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
   ["Make YOUR niche's video on \"Strangers\" before it peaks",
    "3 sounds climbing right now (use #2 today)",
    "Why \"BLUE WATER CANDY\" works: sound breakdown"],
@@ -368,76 +387,85 @@ T("hurricane-isaias", "Hurricane Isaias makes landfall",
   ["Weather channels"], ["niche/news"]),
 
 T("spooky-season", "#spookyseason peaks — Halloween is a Saturday",
-  "Halloween lands on a Saturday this year, so costume content gets a full weekend to peak. #spookyseason, #octobermood, #halloweencostume, #31daysofhalloween are all peaking or rising. The single biggest seasonal content window of Q4 is WIDE open right now.",
+  "Halloween lands on a Saturday this year, so costume content gets a full weekend to peak. SocialPilot's Oct-5 re-check: #spookyseason peaking, #halloweencostume peaking (costume reveals on the Ramalama drop), #31daysofhalloween and #halloweendecor rising. The content pattern this cycle is the reveal — costumes drop on a drum hit, homes get toured room by room, creepy facts end on a twist. Post all month; interest builds toward Oct 31.",
   "culture", ["tiktok", "instagram", "youtube"], ["#spookyseason", "#halloweencostume", "#31daysofhalloween", "#octobermood"], 93, "medium",
   "2026-10-01T00:00:00-07:00",
   [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("Anijam", "https://www.anijam.ai/blog/tiktok-trends/")],
   ["31 Days of Halloween series (start NOW, daily)",
    "Costume reveals on the Ramalama drop",
-   "Last-minute costume ideas under $20"],
+   "Last-minute costume ideas under $20",
+   "Creepy-fact storytime over 'white rabbit's bells'"],
   ["Halloween is on a Saturday this year",
    "31 days. 31 videos. Let's go."],
   ["Halloween creators"], ["content-engine/series", "packaging/hooks"]),
 
 T("bow-bow-bow", "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
-  "Zeddy Will's \"Bow Bow Bow\" with a bend-and-bounce move and a shouted \"BOW!\" hook — spreading from straight dance versions into fit checks and duo dances. At peak: 246K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026).",
-  "meme", ["tiktok"], ["#bowbowbow", "#zeddywill", "#dancechallenge"], 88, "medium",
+  "Zeddy Will's \"Bow Bow Bow\" with a bend-and-bounce move and a shouted \"BOW!\" hook — spreading from straight dance versions into fit checks, sticker edits, and duo dances. SocialPilot stage: PEAK (Sept 25–Oct 10, 2026; 246K videos on the sound) — participation still works, but a strong angle is non-negotiable; the fit-check container is this cycle's fresh lane. Vadbav (Oct 7, 2026) lists it among October's notable sounds.",
+  "meme", ["tiktok"], ["#bowbowbow", "#zeddywill", "#dancechallenge"], 88, "high",
   "2026-09-28T00:00:00-07:00",
-  [("name", "url")],
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("Vadbav", "https://vadbav.com/bow-bow-bow-zeddy-will-tiktok-trend")],
   ["Bend-and-bounce fit check: outfit lands on the BOW", "Duo version with a friend, synced shouts", "\"Your niche does the Bow\" — comedy edition"],
   ["BOW! — the dance taking over October", "POV: your whole FYP is one dance"],
   ["Zeddy Will clips circulating on TikTok"], ["content-engine/formats", "packaging/hooks"]),
 
 T("text-from-a", "Text From \"-A\" — the Pretty Little Liars call-out",
-  "Pretty Little Liars copy trend: creators call out something they're hiding — bad habits, guilty purchases, secret opinions — as if \"-A\" is watching and about to expose them. 53.5K videos (MediaNug, 10/1/26; Later, Oct 2, 2026).",
-  "meme", ["tiktok"], ["#textfroma", "#prettylittleliars"], 72, "low",
+  "Pretty Little Liars copy trend: creators call out something they're hiding — bad habits, guilty purchases, secret opinions — as if \"-A\" is watching and about to expose them. Claimed 53.5K videos (MediaNug, 10/1/26; Later, Oct 2, 2026), but neither source URL could be re-found on the 2026-10-11 re-check — treat as UNVERIFIED and confirm the trend is live before building on it.",
+  "meme", ["tiktok"], ["#textfroma", "#prettylittleliars"], 58, "low",
   "2026-10-01T00:00:00-07:00",
-  [("name", "url"), ("name", "url")],
+  [("MediaNug (source URL not found on 2026-10-11 re-check)", ""), ("Later (source URL not found on 2026-10-11 re-check)", "")],
   ["Confess your niche's guilty habit as -A watches", "\"-A knows\" — brand-safe version with a product secret", "Stitch the best -A call-outs with your take"],
   ["\"-A sees what you're doing\"", "POV: -A just got your browser history"],
-  ["Pretty Little Liars fan edits on TikTok"], ["packaging/hooks", "content-engine/formats"]),
+  ["Pretty Little Liars fan edits on TikTok"], ["packaging/hooks", "content-engine/formats"],
+  verification="unverified",
+  note="Seeded 2026-10-11, UNVERIFIED on wave-7 re-check: the MediaNug/Later source URLs behind the 53.5K-videos figure could not be re-found. Keep only with a live-feed confirmation."),
 
 T("be-ok", "\"Be OK\" — happy dance over chaos",
-  "Ingrid Michaelson's \"I Just Want to Be OK\" soundtracks happy-dance-over-chaos: an upbeat track clashing with chaotic captions about real life — inboxes, bills, deadlines. (New Engen, Oct 2026; Later, Oct 2, 2026.)",
-  "meme", ["tiktok"], ["#beok", "#ingridmichaelson"], 74, "low",
+  "Ingrid Michaelson's \"I Just Want to Be OK\" claimed as a happy-dance-over-chaos sound: an upbeat track clashing with chaotic captions about real life — inboxes, bills, deadlines. Claimed by New Engen (Oct 2026) and Later (Oct 2, 2026), but neither source URL could be re-found on the 2026-10-11 re-check — treat as UNVERIFIED and confirm the trend is live before building on it.",
+  "meme", ["tiktok"], ["#beok", "#ingridmichaelson"], 58, "low",
   "2026-10-02T00:00:00-07:00",
-  [("name", "url"), ("name", "url")],
+  [("New Engen (source URL not found on 2026-10-11 re-check)", ""), ("Later (source URL not found on 2026-10-11 re-check)", "")],
   ["Dance through your Monday chaos, caption the mess", "\"Everything's fine\" montage set to the chorus", "Your niche's chaos, smiling edition"],
   ["\"I just want to be OK\" — same", "POV: smiling through the group project"],
-  ["Chaos-caption creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+  ["Chaos-caption creators on TikTok"], ["content-engine/formats", "packaging/hooks"],
+  verification="unverified",
+  note="Seeded 2026-10-11, UNVERIFIED on wave-7 re-check: the New Engen/Later source URLs could not be re-found. Keep only with a live-feed confirmation."),
 
 T("stop-the-wedding", "\"Stop the Wedding\" photo carousels",
-  "Wedding-regret photo carousels set to Ashe's audio — creators post the wedding pics and let the captions do the talking. A carousel-native format riding the wedding-season long tail. (New Engen, Oct 2026.)",
+  "Wedding-regret photo carousels turning the movie objection moment into honest answers: creators post wedding-day photos captioned 'Stop the wedding, but...' — some petty and funny (a dress nobody liked), some real stories from marriages people wish they'd left sooner. A carousel-native format riding the wedding-season long tail, carried by Ashe's audio (New Engen October trends; GenZNewZ, Oct 2026).",
   "meme", ["tiktok"], ["#stopthewedding", "#weddingregret"], 66, "low",
   "2026-10-04T00:00:00-07:00",
-  [("name", "url")],
+  [("New Engen", "https://newengen.com/insights/october-tiktok-trends/"), ("GenZNewZ", "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed")],
   ["\"The one that got away\" carousel with your own photos", "Engagement-party version before it's too late", "Reaction carousel: rate the trend's best entries"],
   ["The wedding carousel everyone is arguing about", "POV: the photos say it all"],
   ["Wedding-content creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
 
 T("cozy-fall-jazz", "Cozy-fall jazz beds",
-  "Five of the top 10 sounds in Metricool's Oct 1, 2026 chart are jazz/piano/ambient instrumentals — the cozy-fall romanticize-your-routine wave. Plus original beds: \"My Day Is Good\" (unproductive-day confessions), \"Hey Y'all,\" \"After All Seasons Change\" (summer-to-fall transitions). (Virlo; Nuelink, Oct 2.)",
+  "Five of the top 10 sounds in Metricool's Oct 1, 2026 chart are jazz/piano/ambient instrumentals — the cozy-fall romanticize-your-routine wave (Virlo's October Instagram trends, 2026). Plus original beds: \"My Day Is Good\" (unproductive-day confessions), \"Hey Y'all,\" \"After All Seasons Change\" (summer-to-fall transitions). For this cycle's named beds with counts, see \"Insomniac\" (Memo Boy, 518.7K) and \"we fell in love in october\" (girl in red, 1.8M) — both on SocialPilot's Sept 25–Oct 10 chart.",
   "meme", ["tiktok"], ["#cozyfall", "#fallvibes", "#morningroutine"], 74, "low",
   "2026-10-01T00:00:00-07:00",
-  [("name", "url")],
+  [("Virlo", "https://virlo.ai/blog/whats-trending-on-instagram"), ("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
   ["Romanticize your unproductive day over a jazz bed", "\"My Day Is Good\" confession list — nothing accomplished, proudly", "Fall-transition montage to \"After All Seasons Change\""],
   ["Your routine, but make it a jazz record", "POV: romanticizing the season"],
-  ["Cozy-fall TikTok"], ["content-engine/formats", "niche/positioning"]),
+  ["Cozy-fall TikTok"], ["content-engine/formats", "niche/positioning"],
+  verification="single-source",
+  note="Seeded 2026-10-11 from Virlo's October Instagram trends (jazz/piano/ambient claim); Metricool chart referenced but not directly linked — single source, corroborate."),
 
 T("upside-down", "\"Upside Down\" before/after transitions",
-  "Before/after main-character transitions with hand gestures to an original sound — flip the phone and the scene changes. Emerging-fast containers in the same lane: ceiling-fan wipes, AI roleplay comedy, yellow-text relationship reposts, October calendar memes. (Later, Oct 2, 2026; Lightreel, week ending Oct 3.)",
+  "Before/after main-character transitions with hand gestures to an original sound — flip the phone and the scene changes. One of Lightreel's fastest-rising October containers (week ending Oct 3, 2026), alongside ceiling-fan wipes, AI roleplay comedy, and yellow-text relationship reposts.",
   "meme", ["tiktok"], ["#upsidedown", "#beforeandafter"], 68, "low",
   "2026-10-02T00:00:00-07:00",
-  [("name", "url"), ("name", "url")],
+  [("Lightreel", "https://lightreel.ai/blogs/whats-trending-on-tiktok")],
   ["One gesture, two realities — niche makeover flip", "Ceiling-fan wipe version for zero-effort transitions", "October-calendar meme entry"],
   ["Watch the flip", "Before you blink: the other version"],
-  ["Transition creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+  ["Transition creators on TikTok"], ["content-engine/formats", "packaging/hooks"],
+  verification="single-source",
+  note="Seeded 2026-10-11 from Lightreel's week-ending-Oct-3 report only — single source, corroborate on next refresh."),
 
 T("mini-dramas", "Mini-dramas — TikTok's fastest-growing NEW category",
-  "Mini dramas are the fastest-growing NEW category on TikTok since the platform began promoting episodic series in June 2026. Serialized micro-dramas with cliffhangers turn viewers into subscribers — the format rewards consistency, not one-off virality. (buytiktokaccount, Oct 2026.)",
+  "Serialized micro-dramas with cliffhangers turn viewers into subscribers — the format rewards consistency, not one-off virality. The macro picture is enormous: microdramas drove ~$11B in-app revenue worldwide last year (Sensor Tower via MediaPost), TikTok launched its dedicated PineDrama app in the US and Brazil (Jan 2026) and is testing a short-drama feed with originals (TechNode), and Issa Rae's TikTok microdrama 'Screen Time' pulled 500M views in a month (Reuters, Aug 2026).",
   "entertainment", ["tiktok"], ["#minidrama", "#series", "#cliffhanger"], 90, "low",
   "2026-06-01T00:00:00-07:00",
-  [("name", "url")],
+  [("MediaPost", "https://www.Mediapost.Com/publications/article/413505/microdramas-drove-in-app-revenue-of-11b-worldwide.html"), ("Reuters", "https://www.reuters.com/business/media-telecom/microdramas-boom-shrinking-hollywood-studios-chase-tiktok-audience-2026-08-18/"), ("TechNode", "https://technode.com/2026/03/25/tiktok-tests-short-drama-feed-plans-original-shows/")],
   ["Start a 10-episode micro-drama in your niche — one cliffhanger per episode", "Serial cliffhanger structure: hook in the first 3 seconds, cut at the twist", "Adapt one existing trend per episode to ride two waves at once"],
   ["Episode 1: the one that starts your series", "POV: you're three episodes deep and can't stop"],
   ["Mini-drama series creators on TikTok"], ["content-engine/series", "audience/community"]),
@@ -449,7 +477,9 @@ T("ceiling-fan-wipe", "Ceiling-fan wipe transitions",
   [("Lightreel", "https://lightreel.ai/blogs/whats-trending-on-tiktok")],
   ["Room-makeover wipe: mess to clean in one fan pass", "Outfit-change wipe for fit checks", "Your niche's before/after, fan-powered"],
   ["Watch the fan", "One wipe, new scene"],
-  ["Transition creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+  ["Transition creators on TikTok"], ["content-engine/formats", "packaging/hooks"],
+  verification="single-source",
+  note="Seeded 2026-10-11 from Lightreel's week-ending-Oct-3 report only — single source, corroborate on next refresh."),
 
 T("ai-roleplay-comedy", "AI roleplay comedy",
   "Creators roleplay as AI assistants — deadpan, literal, glitching on slang — for comedy sketches. An emerging-fast container (Lightreel, week ending Oct 3, 2026): the joke is the gap between human mess and machine logic.",
@@ -458,7 +488,9 @@ T("ai-roleplay-comedy", "AI roleplay comedy",
   [("Lightreel", "https://lightreel.ai/blogs/whats-trending-on-tiktok")],
   ["AI assistant tries your job for a day", "Glitch-on-slang: feed it your niche's jargon", "Duet: human vs AI roleplay"],
   ["POV: the AI took your shift", "Error 404: social skills not found"],
-  ["AI comedy creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+  ["AI comedy creators on TikTok"], ["content-engine/formats", "packaging/hooks"],
+  verification="single-source",
+  note="Seeded 2026-10-11 from Lightreel's week-ending-Oct-3 report only — single source, corroborate on next refresh."),
 
 T("october-calendar-memes", "October calendar memes",
   "The October calendar itself is the meme — circling the 31st, counting down days, treating the month like a loading bar for Halloween. An emerging-fast container (Lightreel, week ending Oct 3, 2026); calendar memes resurface every month with a new twist.",
@@ -467,25 +499,157 @@ T("october-calendar-memes", "October calendar memes",
   [("Lightreel", "https://lightreel.ai/blogs/whats-trending-on-tiktok")],
   ["Countdown calendar: X days until your costume reveal", "The month as a loading bar for your niche's big day", "Circle-the-date announcement format"],
   ["20 days left. Act accordingly", "POV: the calendar is the content"],
-  ["Meme pages on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+  ["Meme pages on TikTok"], ["content-engine/formats", "packaging/hooks"],
+  verification="single-source",
+  note="Seeded 2026-10-11 from Lightreel's week-ending-Oct-3 report only — single source, corroborate on next refresh."),
 
 T("there-she-goes", "\"There She Goes\" shimmy dance",
-  "Cyril Riley & MOONLGHT's \"There she goes\" soundtracking a shimmy dance — loose shoulders, walking forward, main-character energy. A climbing October sound (SocialBee, Oct 7, 2026), in the same lane as the \"Hard Times\" relatable-problem memes and slowed \"Scott Street\" nostalgic edits.",
-  "meme", ["tiktok"], ["#thereshegoes", "#shimmydance"], 66, "low",
+  "Cyril Riley & MOONLGHT's \"There she goes\" soundtracking a shimmy dance — loose shoulders, walking forward, main-character energy. Still on SocialBee's Oct-7 trending-songs list, but the trend began in April (iheartdogs) and has run for months: late-season steady, not climbing. Pets doing their own version is the resilient sub-lane.",
+  "meme", ["tiktok"], ["#thereshegoes", "#shimmydance"], 58, "low",
   "2026-10-07T00:00:00-07:00",
-  [("SocialBee", "https://socialbee.com/blog/trending-tiktok-songs/")],
-  ["Shimmy into your niche's hot take", "Walking-shimmy fit check", "Duet chain: keep the shimmy going"],
+  [("SocialBee", "https://socialbee.com/blog/trending-tiktok-songs/"), ("iHeartDogs", "https://iheartdogs.com/sea-lions-silly-shimmy-dance-is-the-mood-boost-we-all-need/?iid=BottomRelatedPosts")],
+  ["Shimmy into your niche's hot take", "Walking-shimmy fit check", "Duet chain: keep the shimmy going", "Pet-shimmy version"],
   ["There she goes", "POV: main character just entered"],
   ["Dance creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+
+# --- wave 7 additions (2026-10-11): Sept 25–Oct 10, 2026 re-check ---------
+T("did-i-win-this-trend", "\"Did I Win This Trend?\" Costume Reveal",
+  "SocialPilot's #1 format for the Sept 25–Oct 10, 2026 cycle: start in ordinary clothes, cut to the full costume on the drum drop of Róisín Murphy's \"Ramalama (Bang Bang)\", and caption it \"Did I win this trend?\" The question gets people arguing in the comments — the reveal is instant and the debate does the reach work (Vadbav, Oct 7, 2026).",
+  "meme", ["tiktok"], ["#halloweencostume", "#costumeideas", "#ramalama"], 92, "low",
+  "2026-10-05T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("Vadbav", "https://vadbav.com/did-i-win-this-trend-tiktok-halloween-costume")],
+  ["Costume-shop product reveal: list every product in the caption", "DIY costume vs pro makeup version, same format", "Duo reveal: let the comments judge who won"],
+  ["Did I win this trend?", "Normal clothes to full costume in one beat"],
+  ["Costume creators on TikTok"], ["packaging/hooks", "content-engine/formats"]),
+
+T("31-days-of-halloween", "\"31 Days of Halloween\" numbered series",
+  "Post one themed video every day in October and number it ('Day 4/31'). SocialPilot format #2 (Sept 25–Oct 10, 2026): a numbered series brings people back daily and turns viewers into followers — 31 spooky treats, 31 horror picks, 31 nail sets. #31daysofhalloween is Rising.",
+  "culture", ["tiktok", "instagram"], ["#31daysofhalloween", "#spookyseason"], 82, "low",
+  "2026-10-01T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Pick your niche's 31-day list and start TODAY", "Catch-up binge cut: Days 1–11 in one supercut", "Let followers vote on Day 31's finale"],
+  ["Day 4 of 31", "31 days. 31 videos. Let's go."],
+  ["Halloween series creators"], ["content-engine/series", "audience/community"]),
+
+T("halloween-home-tour", "Halloween Home Tour",
+  "Walk room by room through a fully decorated space and save the best room for last. SocialPilot format #3 (Sept 25–Oct 10, 2026): people save these for ideas and come back to copy them. Vadbav (Oct 2026) notes DIY time-lapse transformations and nighttime glowing-decor tours; business-safe beds are Memo Boy's \"Insomniac\" or \"Spooky, Scary Skeletons (House VIP Remix)\".",
+  "culture", ["tiktok", "instagram"], ["#halloweendecor", "#spookyseason"], 80, "low",
+  "2026-10-01T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends"), ("Vadbav", "https://vadbav.com/halloween-home-decor-tiktok-trend-2026")],
+  ["Time-lapse room transformation, plain to fully haunted", "Nighttime glowing-decor tour with one eerie bed", "Small-space Halloween: maximum effect, minimum room"],
+  ["Save this for your Halloween setup", "The best room is last"],
+  ["Home decor creators"], ["content-engine/formats", "niche/positioning"]),
+
+T("creepy-fact-storytime", "Creepy Fact Storytime",
+  "Put one unsettling fact on screen over a slow, eerie clip and end on a line that makes people rewatch. SocialPilot format #4 (Sept 25–Oct 10, 2026): short enough to read, and the twist keeps people watching to the end. The go-to bed is Tomb Gazer's music-box sound \"white rabbit's bells\" (13K videos, Early stage).",
+  "culture", ["tiktok"], ["#creepyfacts"], 78, "low",
+  "2026-10-05T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["One creepy fact about YOUR city or niche", "True-crime one-fact minis", "History's weirdest footnotes, storytime edition"],
+  ["This fact will make you rewatch", "Put this on screen and let it cook"],
+  ["Museums, history tours, local media"], ["content-engine/formats", "packaging/hooks"]),
+
+T("dip-on-em", "\"DIP ON EM\" — early-stage dance sound",
+  "EARLY-stage dance sound (49.3K videos): \"DIP ON EM\" by SouthMemphisHypeman — an easy one- or two-person bounce that big dance creators picked up this week. SocialPilot's call (Sept 25–Oct 10, 2026): film a clean one-take while it's still under 50K videos. The lowest-competition dance sound on the board.",
+  "meme", ["tiktok"], ["#diponem", "#dancechallenge"], 85, "low",
+  "2026-10-08T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Clean one-take before it blows up", "Two-person bounce version with a friend", "Your niche's uniform does the DIP ON EM"],
+  ["Under 50K videos. Get in early", "The dance your FYP doesn't know yet"],
+  ["Dance creators on TikTok"], ["content-engine/formats", "packaging/hooks"]),
+
+T("citytastetest", "#CityTasteTest honest local review",
+  "TikTok's own challenge: try a local food spot, give your honest verdict, tag the correct location — a chance at up to $500 in e-gift cards. SocialPilot: #CityTasteTest is Peaking, and a real food review stands out because most videos on the tag are off-topic clips using it for reach.",
+  "culture", ["tiktok"], ["#citytastetest", "#foodreview"], 82, "low",
+  "2026-10-05T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Honest verdict on the spot everyone hypes", "Staff blind taste test, tagged location", "The off-topic-tag callout: an actual review"],
+  ["Honest review. Real verdict.", "We tried it so you don't have to"],
+  ["Local food creators"], ["content-engine/formats", "niche/positioning"]),
+
+T("homecoming-proposal", "Homecoming Proposal Reveal",
+  "Film the hoco proposal poster, flowers, or prop — then the moment they say yes. SocialPilot format #7 (Sept 25–Oct 10, 2026): people keep watching for the answer, and every school has a hoco week. #hocoproposal is Rising.",
+  "culture", ["tiktok", "instagram"], ["#hocoproposal", "#hoco"], 76, "low",
+  "2026-10-06T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Florists/bakeries: show a proposal you built for a customer", "Best hoco asks of the week, ranked", "The 'no' compilation (gentle, funny)"],
+  ["Wait for the yes", "The poster. The flowers. The answer."],
+  ["School content creators"], ["content-engine/formats", "audience/community"]),
+
+T("we-fell-in-love-in-october", "\"we fell in love in october\" — girl in red",
+  "girl in red's \"we fell in love in october\" (1.8M videos) is back for its yearly October run — the soft guitar bed for pumpkin-patch dates, fall outfits, and cozy montages. Stage: Peak per SocialPilot (Sept 25–Oct 10, 2026): participation works, but a strong angle is non-negotiable.",
+  "meme", ["tiktok", "instagram"], ["#wefellinloveinoctober", "#octobermood"], 86, "medium",
+  "2026-10-01T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Pumpkin-patch date montage that isn't generic", "Fall outfit lookbook on the guitar bed", "Cozy montage subversion: mundane October, romantic cut"],
+  ["October's yearly anthem is back", "POV: it's October again"],
+  ["Cozy-fall creators"], ["content-engine/formats", "niche/positioning"]),
+
+T("insomniac-lofi", "\"Insomniac\" — Memo Boy's lo-fi bed",
+  "Memo Boy's \"Insomniac\" (518.7K videos): the dreamy lo-fi bed showing up across fall scenery, room makeovers, and slow Halloween decor pans. Stage: Peak — and it's business-approved, so brand accounts can use it straight from a business account (SocialPilot, Sept 25–Oct 10, 2026).",
+  "meme", ["tiktok"], ["#insomniac", "#lofi", "#fallvibes"], 84, "low",
+  "2026-10-01T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Slow Halloween decor pan on the Insomniac bed", "Fall scenery montage, business-safe", "Room makeover before/after with the lo-fi bed"],
+  ["The dreamiest sound on fall TikTok", "POV: golden hour but make it lo-fi"],
+  ["Cozy-fall creators"], ["content-engine/formats", "niche/positioning"]),
+
+T("spooky-skeletons-remix", "\"Spooky, Scary Skeletons\" House VIP Remix",
+  "Crystal Knives & Lex Allen's house remix of the Halloween classic (1.3M videos, Peak): the upbeat bed for countdowns, quick decor cuts, and spooky food reveals. Business-approved — bakeries, restaurants, and party stores can run their Halloween menu or aisle on it (SocialPilot, Sept 25–Oct 10, 2026).",
+  "meme", ["tiktok"], ["#spookyseason", "#halloweendecor"], 84, "medium",
+  "2026-10-01T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Halloween countdown with a beat", "Spooky food reveal on the drop", "Store-aisle run: Halloween section tour"],
+  ["The Halloween classic, remixed", "Countdown season starts now"],
+  ["Food and retail creators"], ["content-engine/formats", "packaging/hooks"]),
+
+T("patient-zero-hub", "The Patient Zero TikTok Search Hub — launch as a game",
+  "TikTok turned a single release into a team game: searching \"Taylor Swift\" or \"Patient Zero\" routes fans to a dedicated Search Hub (announced Sept 30, 2026), where they earn an exclusive profile frame by following, saving, posting, and streaming — and behind-the-scenes music-video clips unlock only when the whole fandom hits a shared goal. The mechanic generalizes to any launch: the September countdown proved anticipation is content; the hub proves the release itself can be playable (TikTokNewsHub, Oct 2026).",
+  "entertainment", ["tiktok"], ["#patientzero", "#tiktokhub"], 80, "low",
+  "2026-09-30T00:00:00-07:00",
+  [("TikTokNewsHub", "https://tiktoknewshub.com/music/patient-zero-tiktok-hub-taylor-swift/"), ("New Engen", "https://newengen.com/insights/october-tiktok-trends/")],
+  ["Break down the hub mechanic for launch marketers", "Design a search-hub-style unlock for YOUR release", "The profile-frame incentive: why completionism drives posting"],
+  ["TikTok just gamified a single release", "The release is the game now"],
+  ["Music marketers on TikTok"], ["niche/entertainment", "content-engine/formats"]),
+
+T("pumpkin-patch-season", "Pumpkin patch season",
+  "#pumpkinpatch is Rising on TikTok (SocialPilot, Sept 25–Oct 10, 2026): pumpkin-patch dates and fall outings — farms, cafes, florists, and knitwear/boot brands fit. Pair with the yearly \"we fell in love in october\" bed for the full cozy package.",
+  "culture", ["tiktok", "instagram"], ["#pumpkinpatch", "#fallvibes"], 74, "low",
+  "2026-10-01T00:00:00-07:00",
+  [("SocialPilot", "https://www.socialpilot.co/blog/tiktok-trends")],
+  ["Best pumpkin patch near you, ranked honestly", "Pumpkin-patch date vlog that skips the clichés", "Photo-spot guide: the patch's best angles"],
+  ["Pumpkin patch season is here", "The fall outing everyone posts"],
+  ["Local farms and cafes"], ["niche/positioning", "content-engine/formats"]),
 ]
 
-data = {
-    "generated_at": SEED_TS,
-    "generator": "pipeline/seed.py (wave 1 manual research seed)",
-    "note": "Seed topics researched 2026-10-11 (waves 1+4; wave 4 = Oct-2026 wave-fuel). The refresh pipeline corroborates/expires these on each run.",
-    "topics": topics,
-}
-os.makedirs(os.path.dirname(OUT), exist_ok=True)
-with open(OUT, "w") as f:
-    json.dump(data, f, indent=2, ensure_ascii=False)
-print(f"Wrote {len(topics)} topics to {OUT}")
+def main():
+    seed_ids = {t["id"] for t in topics}
+    dupes = [t["id"] for t in topics if [x["id"] for x in topics].count(t["id"]) > 1]
+    assert not dupes, f"duplicate seed ids: {sorted(set(dupes))}"
+    # wave 7: upsert — keep existing auto (non-seed) topics and any
+    # previously-seeded topics we no longer seed; replace seeded ones with
+    # the fresh definitions. Never rewrites the store from scratch.
+    kept = []
+    if os.path.exists(OUT):
+        try:
+            with open(OUT) as f:
+                kept = [t for t in json.load(f).get("topics", [])
+                        if t.get("id") not in seed_ids]
+        except Exception as e:
+            print(f"[seed] warning: could not read existing store: {e}")
+    merged = kept + topics
+    data = {
+        "generated_at": SEED_TS,
+        "generator": "pipeline/seed.py (wave 7: Oct-2026 seeds re-verified 2026-10-11, 53 seeds)",
+        "note": ("Seed topics researched 2026-10-11 (waves 1+4), re-verified "
+                 "2026-10-11 (wave 7). The refresh pipeline corroborates/expires "
+                 "these on each run."),
+        "topics": merged,
+    }
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    with open(OUT, "w") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"Wrote {len(topics)} seed topics ({len(kept)} non-seed topics kept) -> {OUT}")
+
+if __name__ == "__main__":
+    main()

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T01:45:28.513184+00:00",
+  "generated_at": "2026-10-12T02:20:32.800419+00:00",
   "sample": false,
-  "source_count": 341,
+  "source_count": 353,
   "trends": [
     {
       "id": "six-seven-meme",
@@ -27,7 +27,8 @@
       ],
       "sources": [
         "Wikipedia"
-      ]
+      ],
+      "trend_type": "format"
     },
     {
       "id": "gta6-robberies",
@@ -51,7 +52,8 @@
       "format_tags": [],
       "sources": [
         "Game8"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "seis-sete-dance",
@@ -76,7 +78,8 @@
       ],
       "sources": [
         "Lightreel"
-      ]
+      ],
+      "trend_type": "format"
     },
     {
       "id": "trump-rally-nobel",
@@ -100,30 +103,8 @@
       "format_tags": [],
       "sources": [
         "RedWaveFeed"
-      ]
-    },
-    {
-      "id": "mini-dramas",
-      "title": "Mini-dramas — TikTok's fastest-growing NEW category",
-      "source": "buytiktokaccount",
-      "url": "https://buytiktokaccount.com/top-10-best-tiktok-niches-usa-in-2026-to-grow-faster/",
-      "velocity": 90,
-      "opportunity_score": 90,
-      "hashtags": [
-        "#minidrama",
-        "#series",
-        "#cliffhanger"
       ],
-      "detected_at": "2026-06-01T00:00:00-07:00",
-      "summary": "Mini dramas are the fastest-growing NEW category on TikTok since the platform began promoting episodic series in June 2026. Serialized micro-dramas with cliffhangers turn viewers into subscribers — the format rewards consistency, not one-off virality. (buytiktokaccount, Oct 2026.)",
-      "category": "entertainment",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "buytiktokaccount"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "houthi-riyadh-strike",
@@ -147,30 +128,8 @@
       "format_tags": [],
       "sources": [
         "NewsWatchmen"
-      ]
-    },
-    {
-      "id": "bow-bow-bow",
-      "title": "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
-      "source": "SocialPilot",
-      "url": "https://www.socialpilot.co/blog/tiktok-trends",
-      "velocity": 88,
-      "opportunity_score": 88,
-      "hashtags": [
-        "#bowbowbow",
-        "#zeddywill",
-        "#dancechallenge"
       ],
-      "detected_at": "2026-09-28T00:00:00-07:00",
-      "summary": "Zeddy Will's \"Bow Bow Bow\" with a bend-and-bounce move and a shouted \"BOW!\" hook — spreading from straight dance versions into fit checks and duo dances. At peak: 246K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026).",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "SocialPilot"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "nba-tiktok-surge",
@@ -192,7 +151,32 @@
       "format_tags": [],
       "sources": [
         "Revid"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "we-fell-in-love-in-october",
+      "title": "\"we fell in love in october\" — girl in red",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 86,
+      "opportunity_score": 86,
+      "hashtags": [
+        "#wefellinloveinoctober",
+        "#octobermood"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "girl in red's \"we fell in love in october\" (1.8M videos) is back for its yearly October run — the soft guitar bed for pumpkin-patch dates, fall outfits, and cozy montages. Stage: Peak per SocialPilot (Sept 25–Oct 10, 2026): participation works, but a strong angle is non-negotiable.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nana-patekar-tributes",
@@ -218,7 +202,129 @@
       ],
       "sources": [
         "Face of Malawi"
-      ]
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "dip-on-em",
+      "title": "\"DIP ON EM\" — early-stage dance sound",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 85,
+      "opportunity_score": 85,
+      "hashtags": [
+        "#diponem",
+        "#dancechallenge"
+      ],
+      "detected_at": "2026-10-08T00:00:00-07:00",
+      "summary": "EARLY-stage dance sound (49.3K videos): \"DIP ON EM\" by SouthMemphisHypeman — an easy one- or two-person bounce that big dance creators picked up this week. SocialPilot's call (Sept 25–Oct 10, 2026): film a clean one-take while it's still under 50K videos. The lowest-competition dance sound on the board.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance"
+      ],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "insomniac-lofi",
+      "title": "\"Insomniac\" — Memo Boy's lo-fi bed",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 84,
+      "opportunity_score": 84,
+      "hashtags": [
+        "#insomniac",
+        "#lofi",
+        "#fallvibes"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Memo Boy's \"Insomniac\" (518.7K videos): the dreamy lo-fi bed showing up across fall scenery, room makeovers, and slow Halloween decor pans. Stage: Peak — and it's business-approved, so brand accounts can use it straight from a business account (SocialPilot, Sept 25–Oct 10, 2026).",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "spooky-skeletons-remix",
+      "title": "\"Spooky, Scary Skeletons\" House VIP Remix",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 84,
+      "opportunity_score": 84,
+      "hashtags": [
+        "#spookyseason",
+        "#halloweendecor"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Crystal Knives & Lex Allen's house remix of the Halloween classic (1.3M videos, Peak): the upbeat bed for countdowns, quick decor cuts, and spooky food reveals. Business-approved — bakeries, restaurants, and party stores can run their Halloween menu or aisle on it (SocialPilot, Sept 25–Oct 10, 2026).",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "31-days-of-halloween",
+      "title": "\"31 Days of Halloween\" numbered series",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 82,
+      "opportunity_score": 82,
+      "hashtags": [
+        "#31daysofhalloween",
+        "#spookyseason"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Post one themed video every day in October and number it ('Day 4/31'). SocialPilot format #2 (Sept 25–Oct 10, 2026): a numbered series brings people back daily and turns viewers into followers — 31 spooky treats, 31 horror picks, 31 nail sets. #31daysofhalloween is Rising.",
+      "category": "culture",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "citytastetest",
+      "title": "#CityTasteTest honest local review",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 82,
+      "opportunity_score": 82,
+      "hashtags": [
+        "#citytastetest",
+        "#foodreview"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "TikTok's own challenge: try a local food spot, give your honest verdict, tag the correct location — a chance at up to $500 in e-gift cards. SocialPilot: #CityTasteTest is Peaking, and a real food review stands out because most videos on the tag are off-topic clips using it for reach.",
+      "category": "culture",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "hurricane-isaias",
@@ -242,29 +348,58 @@
       "format_tags": [],
       "sources": [
         "NewsWatchmen"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
-      "id": "tiktok-sounds-week",
-      "title": "This week's breakout TikTok sounds",
-      "source": "Revid",
-      "url": "https://www.revid.ai/viral-tiktok-songs",
-      "velocity": 79,
-      "opportunity_score": 79,
+      "id": "creepy-fact-storytime",
+      "title": "Creepy Fact Storytime",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 78,
+      "opportunity_score": 78,
       "hashtags": [
-        "#tiktoksounds",
-        "#viralsounds"
+        "#creepyfacts"
       ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Per Revid's sample of 5.4K popular posts: \"BLUE WATER CANDY\" by DJ Allanzinho JP is #1 steady (13M views on top posts), \"Strangers\" by SKARS is rising 2.3x, and Lucien Marceau's \"Courtly Elegance Boccherini\" is cooling. Catch a sound while it's climbing.",
-      "category": "music",
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "Put one unsettling fact on screen over a slow, eerie clip and end on a line that makes people rewatch. SocialPilot format #4 (Sept 25–Oct 10, 2026): short enough to read, and the twist keeps people watching to the end. The go-to bed is Tomb Gazer's music-box sound \"white rabbit's bells\" (13K videos, Early stage).",
+      "category": "culture",
       "platforms": [
         "tiktok"
       ],
-      "format_tags": [],
+      "format_tags": [
+        "format"
+      ],
       "sources": [
-        "Revid"
-      ]
+        "SocialPilot"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "homecoming-proposal",
+      "title": "Homecoming Proposal Reveal",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 76,
+      "opportunity_score": 76,
+      "hashtags": [
+        "#hocoproposal",
+        "#hoco"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "Film the hoco proposal poster, flowers, or prop — then the moment they say yes. SocialPilot format #7 (Sept 25–Oct 10, 2026): people keep watching for the answer, and every school has a hoco week. #hocoproposal is Rising.",
+      "category": "culture",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "SocialPilot"
+      ],
+      "trend_type": "format"
     },
     {
       "id": "halloween-game-xbox",
@@ -288,7 +423,8 @@
       "format_tags": [],
       "sources": [
         "PureXbox"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "grr-mondays",
@@ -311,7 +447,8 @@
       "format_tags": [],
       "sources": [
         "NapoleonCat"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "street-fighter-movie",
@@ -334,30 +471,32 @@
       "format_tags": [],
       "sources": [
         "NewEngen"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
-      "id": "cozy-fall-jazz",
-      "title": "Cozy-fall jazz beds",
-      "source": "Virlo",
-      "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+      "id": "pumpkin-patch-season",
+      "title": "Pumpkin patch season",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 74,
       "opportunity_score": 74,
       "hashtags": [
-        "#cozyfall",
-        "#fallvibes",
-        "#morningroutine"
+        "#pumpkinpatch",
+        "#fallvibes"
       ],
       "detected_at": "2026-10-01T00:00:00-07:00",
-      "summary": "Five of the top 10 sounds in Metricool's Oct 1, 2026 chart are jazz/piano/ambient instrumentals — the cozy-fall romanticize-your-routine wave. Plus original beds: \"My Day Is Good\" (unproductive-day confessions), \"Hey Y'all,\" \"After All Seasons Change\" (summer-to-fall transitions). (Virlo; Nuelink, Oct 2.)",
-      "category": "meme",
+      "summary": "#pumpkinpatch is Rising on TikTok (SocialPilot, Sept 25–Oct 10, 2026): pumpkin-patch dates and fall outings — farms, cafes, florists, and knitwear/boot brands fit. Pair with the yearly \"we fell in love in october\" bed for the full cozy package.",
+      "category": "culture",
       "platforms": [
-        "tiktok"
+        "tiktok",
+        "instagram"
       ],
       "format_tags": [],
       "sources": [
-        "Virlo"
-      ]
+        "SocialPilot"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "2xko-sett",
@@ -382,7 +521,8 @@
       "format_tags": [],
       "sources": [
         "Game8"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "aion2-launch",
@@ -406,7 +546,8 @@
       "format_tags": [],
       "sources": [
         "DLCompare"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "october-music-drops",
@@ -430,7 +571,8 @@
       "format_tags": [],
       "sources": [
         "NewEngen"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "emily-thats-all",
@@ -453,7 +595,8 @@
       "format_tags": [],
       "sources": [
         "SocialBee"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "dhurandhar2-grammy",
@@ -476,7 +619,8 @@
       "format_tags": [],
       "sources": [
         "Sacnilk"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "fruit-love-island",
@@ -499,7 +643,33 @@
       "format_tags": [],
       "sources": [
         "USA Today"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "upside-down",
+      "title": "\"Upside Down\" before/after transitions",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 68,
+      "opportunity_score": 68,
+      "hashtags": [
+        "#upsidedown",
+        "#beforeandafter"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "Before/after main-character transitions with hand gestures to an original sound — flip the phone and the scene changes. One of Lightreel's fastest-rising October containers (week ending Oct 3, 2026), alongside ceiling-fan wipes, AI roleplay comedy, and yellow-text relationship reposts.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "sound"
+      ],
+      "sources": [
+        "Lightreel"
+      ],
+      "trend_type": "format"
     },
     {
       "id": "mahesh-babu-director",
@@ -522,53 +692,8 @@
       "format_tags": [],
       "sources": [
         "Sacnilk"
-      ]
-    },
-    {
-      "id": "stop-the-wedding",
-      "title": "\"Stop the Wedding\" photo carousels",
-      "source": "New Engen",
-      "url": "https://newengen.com/insights/october-tiktok-trends/",
-      "velocity": 66,
-      "opportunity_score": 66,
-      "hashtags": [
-        "#stopthewedding",
-        "#weddingregret"
       ],
-      "detected_at": "2026-10-04T00:00:00-07:00",
-      "summary": "Wedding-regret photo carousels set to Ashe's audio — creators post the wedding pics and let the captions do the talking. A carousel-native format riding the wedding-season long tail. (New Engen, Oct 2026.)",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "New Engen"
-      ]
-    },
-    {
-      "id": "there-she-goes",
-      "title": "\"There She Goes\" shimmy dance",
-      "source": "SocialBee",
-      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
-      "velocity": 66,
-      "opportunity_score": 66,
-      "hashtags": [
-        "#thereshegoes",
-        "#shimmydance"
-      ],
-      "detected_at": "2026-10-07T00:00:00-07:00",
-      "summary": "Cyril Riley & MOONLGHT's \"There she goes\" soundtracking a shimmy dance — loose shoulders, walking forward, main-character energy. A climbing October sound (SocialBee, Oct 7, 2026), in the same lane as the \"Hard Times\" relatable-problem memes and slowed \"Scott Street\" nostalgic edits.",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [
-        "meme"
-      ],
-      "sources": [
-        "SocialBee"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "ai-roleplay-comedy",
@@ -590,7 +715,8 @@
       "format_tags": [],
       "sources": [
         "Lightreel"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ceiling-fan-wipe",
@@ -612,7 +738,8 @@
       "format_tags": [],
       "sources": [
         "Lightreel"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "spooky-season",
@@ -628,7 +755,7 @@
         "#octobermood"
       ],
       "detected_at": "2026-10-01T00:00:00-07:00",
-      "summary": "Halloween lands on a Saturday this year, so costume content gets a full weekend to peak. #spookyseason, #octobermood, #halloweencostume, #31daysofhalloween are all peaking or rising. The single biggest seasonal content window of Q4 is WIDE open right now.",
+      "summary": "Halloween lands on a Saturday this year, so costume content gets a full weekend to peak. SocialPilot's Oct-5 re-check: #spookyseason peaking, #halloweencostume peaking (costume reveals on the Ramalama drop), #31daysofhalloween and #halloweendecor rising. The content pattern this cycle is the reveal — costumes drop on a drum hit, homes get toured room by room, creepy facts end on a twist. Post all ",
       "category": "culture",
       "platforms": [
         "tiktok",
@@ -639,7 +766,37 @@
       "sources": [
         "SocialPilot",
         "Anijam"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "did-i-win-this-trend",
+      "title": "\"Did I Win This Trend?\" Costume Reveal",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 92,
+      "opportunity_score": 60,
+      "hashtags": [
+        "#halloweencostume",
+        "#costumeideas",
+        "#ramalama"
+      ],
+      "detected_at": "2026-10-05T00:00:00-07:00",
+      "summary": "SocialPilot's #1 format for the Sept 25–Oct 10, 2026 cycle: start in ordinary clothes, cut to the full costume on the drum drop of Róisín Murphy's \"Ramalama (Bang Bang)\", and caption it \"Did I win this trend?\" The question gets people arguing in the comments — the reveal is instant and the debate does the reach work (Vadbav, Oct 7, 2026).",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "caption",
+        "format",
+        "trend"
+      ],
+      "sources": [
+        "SocialPilot",
+        "Vadbav"
+      ],
+      "trend_type": "format"
     },
     {
       "id": "october-calendar-memes",
@@ -664,46 +821,23 @@
       ],
       "sources": [
         "Lightreel"
-      ]
-    },
-    {
-      "id": "ramalama-walk",
-      "title": "Ramalama Costume Walk",
-      "source": "SocialPilot",
-      "url": "https://www.socialpilot.co/blog/tiktok-trends",
-      "velocity": 90,
-      "opportunity_score": 58,
-      "hashtags": [
-        "#halloweencostume",
-        "#ramalama",
-        "#spookyseason"
       ],
-      "detected_at": "2026-10-01T00:00:00-07:00",
-      "summary": "Low-angle creepy walk zooming out to reveal a Halloween fit, set to Róisín Murphy's \"Ramalama (Bang Bang)\". Rising, 430.7K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026; also New Engen). No text, no talking — the walk IS the video.",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "SocialPilot",
-        "New Engen"
-      ]
+      "trend_type": "format"
     },
     {
       "id": "two-fishes",
       "title": "The \"Two Fishes\" deadpan audio",
       "source": "New Engen",
       "url": "https://newengen.com/insights/october-tiktok-trends/",
-      "velocity": 88,
-      "opportunity_score": 57,
+      "velocity": 90,
+      "opportunity_score": 58,
       "hashtags": [
         "#twofishes",
         "#corbingpt",
         "#loveislandusa"
       ],
       "detected_at": "2026-10-05T00:00:00-07:00",
-      "summary": "Creators defending a relatable take over Corbin Mims's Love Island USA audio — deadpan \"two fishes\" logic applied to your niche's most unreasonable opinion. (New Engen, Oct 2026.)",
+      "summary": "Creators defending a relatable take over Corbin Mims's Love Island USA audio — deadpan \"two fishes\" logic applied to your niche's most unreasonable opinion. New Engen's #1 October trend (re-verified 2026-10-11, still rising): start with text setting up the take, lip-sync Corbin straight to camera, full debate-mode energy.",
       "category": "meme",
       "platforms": [
         "tiktok"
@@ -712,7 +846,90 @@
       "sources": [
         "New Engen",
         "Virlo"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "mini-dramas",
+      "title": "Mini-dramas — TikTok's fastest-growing NEW category",
+      "source": "MediaPost",
+      "url": "https://www.Mediapost.Com/publications/article/413505/microdramas-drove-in-app-revenue-of-11b-worldwide.html",
+      "velocity": 90,
+      "opportunity_score": 58,
+      "hashtags": [
+        "#minidrama",
+        "#series",
+        "#cliffhanger"
+      ],
+      "detected_at": "2026-06-01T00:00:00-07:00",
+      "summary": "Serialized micro-dramas with cliffhangers turn viewers into subscribers — the format rewards consistency, not one-off virality. The macro picture is enormous: microdramas drove ~$11B in-app revenue worldwide last year (Sensor Tower via MediaPost), TikTok launched its dedicated PineDrama app in the US and Brazil (Jan 2026) and is testing a short-drama feed with originals (TechNode), and Issa Rae's ",
+      "category": "entertainment",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "MediaPost",
+        "Reuters",
+        "TechNode"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "gears-eday",
+      "title": "Gears of War: E-Day launches",
+      "source": "DLCompare",
+      "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
+      "velocity": 89,
+      "opportunity_score": 58,
+      "hashtags": [
+        "#gearsofwar",
+        "#edday",
+        "#xbox"
+      ],
+      "detected_at": "2026-10-06T00:00:00-07:00",
+      "summary": "The Coalition takes Gears back 14 years before the original — a young Marcus Fenix and Dom facing Emergence Day on Sera, rebuilt in Unreal Engine 5. Launched Oct 6 on Xbox Series X/S and PC with solo, split-screen co-op, and expanded Horde Siege.",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "DLCompare",
+        "youtube-invidious"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "bow-bow-bow",
+      "title": "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 88,
+      "opportunity_score": 57,
+      "hashtags": [
+        "#bowbowbow",
+        "#zeddywill",
+        "#dancechallenge"
+      ],
+      "detected_at": "2026-09-28T00:00:00-07:00",
+      "summary": "Zeddy Will's \"Bow Bow Bow\" with a bend-and-bounce move and a shouted \"BOW!\" hook — spreading from straight dance versions into fit checks, sticker edits, and duo dances. SocialPilot stage: PEAK (Sept 25–Oct 10, 2026; 246K videos on the sound) — participation still works, but a strong angle is non-negotiable; the fit-check container is this cycle's fresh lane. Vadbav (Oct 7, 2026) lists it among Oc",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance"
+      ],
+      "sources": [
+        "SocialPilot",
+        "Vadbav"
+      ],
+      "trend_type": "format"
     },
     {
       "id": "battlefield-6-gamepass",
@@ -738,31 +955,8 @@
       "sources": [
         "TrueAchievements",
         "CapeTimes"
-      ]
-    },
-    {
-      "id": "patient-zero-swift",
-      "title": "Taylor Swift \"Patient Zero\" wedding edits",
-      "source": "SocialPilot",
-      "url": "https://www.socialpilot.co/blog/tiktok-trends",
-      "velocity": 84,
-      "opportunity_score": 55,
-      "hashtags": [
-        "#patientzero",
-        "#taylorswift",
-        "#weddingtiktok"
       ],
-      "detected_at": "2026-10-07T00:00:00-07:00",
-      "summary": "Taylor Swift's \"Patient Zero\" (single out Sept 25) soundtracks wedding edits — plus \"leaving something behind\" audio for quitting jobs and ending habits. Rising, 149.3K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026; Virlo).",
-      "category": "music",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "SocialPilot",
-        "Virlo"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "mlb-playoffs",
@@ -787,7 +981,33 @@
       "sources": [
         "SocialPilot",
         "NewEngen"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "trump-energy-ceasefire",
+      "title": "Trump announces Russia-Ukraine energy ceasefire",
+      "source": "NewsWatchmen",
+      "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
+      "velocity": 83,
+      "opportunity_score": 54,
+      "hashtags": [
+        "#ukraine",
+        "#ceasefire"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Trump announced an energy ceasefire between Russia and Ukraine — but gave few details and neither Moscow nor Kyiv confirmed. Unconfirmed huge claims are prime explainer territory: what's verified vs what's claimed.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "NewsWatchmen",
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "valor-mortis",
@@ -812,7 +1032,85 @@
       "sources": [
         "NEXTARCA",
         "TrueAchievements"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "halloween-home-tour",
+      "title": "Halloween Home Tour",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#halloweendecor",
+        "#spookyseason"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Walk room by room through a fully decorated space and save the best room for last. SocialPilot format #3 (Sept 25–Oct 10, 2026): people save these for ideas and come back to copy them. Vadbav (Oct 2026) notes DIY time-lapse transformations and nighttime glowing-decor tours; business-safe beds are Memo Boy's \"Insomniac\" or \"Spooky, Scary Skeletons (House VIP Remix)\".",
+      "category": "culture",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "SocialPilot",
+        "Vadbav"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "patient-zero-hub",
+      "title": "The Patient Zero TikTok Search Hub — launch as a game",
+      "source": "TikTokNewsHub",
+      "url": "https://tiktoknewshub.com/music/patient-zero-tiktok-hub-taylor-swift/",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#patientzero",
+        "#tiktokhub"
+      ],
+      "detected_at": "2026-09-30T00:00:00-07:00",
+      "summary": "TikTok turned a single release into a team game: searching \"Taylor Swift\" or \"Patient Zero\" routes fans to a dedicated Search Hub (announced Sept 30, 2026), where they earn an exclusive profile frame by following, saving, posting, and streaming — and behind-the-scenes music-video clips unlock only when the whole fandom hits a shared goal. The mechanic generalizes to any launch: the September count",
+      "category": "entertainment",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "TikTokNewsHub",
+        "New Engen"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "tiktok-sounds-week",
+      "title": "This week's breakout TikTok sounds",
+      "source": "Revid",
+      "url": "https://www.revid.ai/viral-tiktok-songs",
+      "velocity": 79,
+      "opportunity_score": 51,
+      "hashtags": [
+        "#tiktoksounds",
+        "#viralsounds"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Per Revid's sample of 5.4K popular posts: \"BLUE WATER CANDY\" by DJ Allanzinho JP is #1 steady (13M views on top posts), \"Strangers\" by SKARS is rising 2.3x, and Lucien Marceau's \"Courtly Elegance Boccherini\" is cooling. Plus SocialPilot's two early-stage beds to grab now: SouthMemphisHypeman's \"DIP ON EM\" (49.3K, picked up by big dance creators this week) and Tomb Gazer's \"white rabbit's bells\" (1",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance"
+      ],
+      "sources": [
+        "Revid",
+        "SocialPilot"
+      ],
+      "trend_type": "format"
     },
     {
       "id": "pumpkin-head",
@@ -827,7 +1125,7 @@
         "#halloween2026"
       ],
       "detected_at": "2026-10-03T00:00:00-07:00",
-      "summary": "Pumpkin held to the lens becomes a fake head — the body below does the dancing. Set to a groovy spooky remix of the \"it's just a bunch of hocus pocus\" line. Zero editing, one prop; doubles for fall-decorating content. (New Engen; Virlo, Oct 2026.)",
+      "summary": "Pumpkin held to the lens becomes a fake head — the body below does the dancing. Set to a groovy spooky remix of the \"it's just a bunch of hocus pocus\" line. Zero editing, one prop; Tlinky (Oct 2026) confirms the audio also works for fall decorating and cozy October routines, so non-costume brands can join. (New Engen; Virlo, Oct 2026.)",
       "category": "meme",
       "platforms": [
         "tiktok"
@@ -835,8 +1133,10 @@
       "format_tags": [],
       "sources": [
         "New Engen",
-        "Virlo"
-      ]
+        "Virlo",
+        "Tlinky"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "sw-galactic-racer",
@@ -860,47 +1160,47 @@
       "sources": [
         "DLCompare",
         "Game8"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
-      "id": "gears-eday",
-      "title": "Gears of War: E-Day launches",
-      "source": "DLCompare",
-      "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-october-2026-week-41",
-      "velocity": 76,
-      "opportunity_score": 49,
+      "id": "james-spader-agreed-to-return-as-ultron-before-rea",
+      "title": "James Spader agreed to return as Ultron before reading a VisionQuest script. #nycc #mcu #visionquest",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/shorts/jx6tjJkqQoo",
+      "velocity": 51,
+      "opportunity_score": 51,
       "hashtags": [
-        "#gearsofwar",
-        "#edday",
-        "#xbox"
+        "#nycc",
+        "#mcu",
+        "#visionquest"
       ],
-      "detected_at": "2026-10-06T00:00:00-07:00",
-      "summary": "The Coalition takes Gears back 14 years before the original — a young Marcus Fenix and Dom facing Emergence Day on Sera, rebuilt in Unreal Engine 5. Launched Oct 6 on Xbox Series X/S and PC with solo, split-screen co-op, and expanded Horde Siege.",
+      "detected_at": "2026-10-12T02:18:26.380221+00:00",
+      "summary": "IGN · published 2026-10-10. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
       "category": "gaming",
       "platforms": [
         "youtube",
-        "twitch",
-        "tiktok"
+        "twitch"
       ],
       "format_tags": [],
       "sources": [
-        "DLCompare",
-        "youtube-invidious"
-      ]
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic"
     },
     {
-      "id": "trump-energy-ceasefire",
-      "title": "Trump announces Russia-Ukraine energy ceasefire",
-      "source": "NewsWatchmen",
-      "url": "https://newswatchmen.com/2026/10/11/news-watchman-daily-news-brief-sunday-october-11-2026/",
-      "velocity": 74,
-      "opportunity_score": 48,
+      "id": "wildlife-park-where-man-fatally-attacked-by-tiger-",
+      "title": "Wildlife park where man fatally attacked by tiger gives update. #YorkshireWildlifePark #BBCNews",
+      "source": "yt-rss:BBCNews",
+      "url": "https://www.youtube.com/shorts/sV-YH_WifwU",
+      "velocity": 49,
+      "opportunity_score": 49,
       "hashtags": [
-        "#ukraine",
-        "#ceasefire"
+        "#YorkshireWildlifePark",
+        "#BBCNews"
       ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Trump announced an energy ceasefire between Russia and Ukraine — but gave few details and neither Moscow nor Kyiv confirmed. Unconfirmed huge claims are prime explainer territory: what's verified vs what's claimed.",
+      "detected_at": "2026-10-12T02:18:21.160625+00:00",
+      "summary": "BBCNews · published 2026-10-11.",
       "category": "news",
       "platforms": [
         "youtube",
@@ -908,56 +1208,58 @@
       ],
       "format_tags": [],
       "sources": [
-        "NewsWatchmen",
-        "gnews-top",
-        "reddit-rss:r/news"
-      ]
+        "yt-rss:BBCNews"
+      ],
+      "trend_type": "topic"
     },
     {
-      "id": "be-ok",
-      "title": "\"Be OK\" — happy dance over chaos",
-      "source": "New Engen",
-      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "id": "at-least-12-people-were-killed-in-saturday-s-attac",
+      "title": "At least 12 people were killed in Saturday's attack on the airport in Riyadh. #SaudiArabia#BBCNews",
+      "source": "yt-rss:BBCNews",
+      "url": "https://www.youtube.com/shorts/5yFfBwFndu4",
+      "velocity": 49,
+      "opportunity_score": 49,
+      "hashtags": [
+        "#SaudiArabia",
+        "#BBCNews"
+      ],
+      "detected_at": "2026-10-12T02:18:21.160748+00:00",
+      "summary": "BBCNews · published 2026-10-11.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:BBCNews"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "cozy-fall-jazz",
+      "title": "Cozy-fall jazz beds",
+      "source": "Virlo",
+      "url": "https://virlo.ai/blog/whats-trending-on-instagram",
       "velocity": 74,
       "opportunity_score": 48,
       "hashtags": [
-        "#beok",
-        "#ingridmichaelson"
-      ],
-      "detected_at": "2026-10-02T00:00:00-07:00",
-      "summary": "Ingrid Michaelson's \"I Just Want to Be OK\" soundtracks happy-dance-over-chaos: an upbeat track clashing with chaotic captions about real life — inboxes, bills, deadlines. (New Engen, Oct 2026; Later, Oct 2, 2026.)",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "New Engen",
-        "Later"
-      ]
-    },
-    {
-      "id": "text-from-a",
-      "title": "Text From \"-A\" — the Pretty Little Liars call-out",
-      "source": "MediaNug",
-      "url": "https://www.medianug.com/tiktok-trending-report",
-      "velocity": 72,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#textfroma",
-        "#prettylittleliars"
+        "#cozyfall",
+        "#fallvibes",
+        "#morningroutine"
       ],
       "detected_at": "2026-10-01T00:00:00-07:00",
-      "summary": "Pretty Little Liars copy trend: creators call out something they're hiding — bad habits, guilty purchases, secret opinions — as if \"-A\" is watching and about to expose them. 53.5K videos (MediaNug, 10/1/26; Later, Oct 2, 2026).",
+      "summary": "Five of the top 10 sounds in Metricool's Oct 1, 2026 chart are jazz/piano/ambient instrumentals — the cozy-fall romanticize-your-routine wave (Virlo's October Instagram trends, 2026). Plus original beds: \"My Day Is Good\" (unproductive-day confessions), \"Hey Y'all,\" \"After All Seasons Change\" (summer-to-fall transitions). For this cycle's named beds with counts, see \"Insomniac\" (Memo Boy, 518.7K) a",
       "category": "meme",
       "platforms": [
         "tiktok"
       ],
       "format_tags": [],
       "sources": [
-        "MediaNug",
-        "Later"
-      ]
+        "Virlo",
+        "SocialPilot"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "silentsunday",
@@ -979,7 +1281,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "fragrantplaces",
@@ -1001,7 +1304,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "comingoutday",
@@ -1023,7 +1327,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nationalcomingoutday",
@@ -1045,7 +1350,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "glucksmann",
@@ -1067,7 +1373,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nfl",
@@ -1089,7 +1396,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "comingout",
@@ -1111,7 +1419,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "tatort",
@@ -1133,7 +1442,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "jaguars",
@@ -1155,7 +1465,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "myweekcounted",
@@ -1177,7 +1488,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "rescue",
@@ -1199,7 +1511,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "tusk",
@@ -1221,7 +1534,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "yandex",
@@ -1243,7 +1557,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "lfc",
@@ -1265,7 +1580,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ultraman",
@@ -1287,7 +1603,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "dontaskasong",
@@ -1309,7 +1626,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "thebat1959",
@@ -1331,7 +1649,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "monsterdon",
@@ -1353,29 +1672,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
-    },
-    {
-      "id": "topic-2-3",
-      "title": "#豊臣兄弟",
-      "source": "mastodon-trends",
-      "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#豊臣兄弟"
       ],
-      "detected_at": "2026-10-12T01:42:44.066992+00:00",
-      "summary": "245 recent uses across the fediverse",
-      "category": "culture",
-      "platforms": [
-        "x",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "mastodon-trends"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "thebat",
@@ -1397,7 +1695,8 @@
       "format_tags": [],
       "sources": [
         "mastodon-trends"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "set-the-mood-with-chl-e-shorts",
@@ -1419,7 +1718,77 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "topic-2-3-4",
+      "title": "#豊臣兄弟",
+      "source": "mastodon-trends",
+      "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
+      "velocity": 47,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#豊臣兄弟"
+      ],
+      "detected_at": "2026-10-12T02:17:11.406685+00:00",
+      "summary": "245 recent uses across the fediverse",
+      "category": "culture",
+      "platforms": [
+        "x",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "mastodon-trends"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "lagos-street-model-rachel-ojuromi-who-made-it-to-c",
+      "title": "Lagos street model Rachel Ojuromi who made it to Chanel's Runway. #BBCNews",
+      "source": "yt-rss:BBCNews",
+      "url": "https://www.youtube.com/shorts/voLQPbqENu8",
+      "velocity": 47,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#BBCNews"
+      ],
+      "detected_at": "2026-10-12T02:18:21.160676+00:00",
+      "summary": "BBCNews · published 2026-10-11.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:BBCNews"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "more-protests-in-delhi-as-freed-cockroach-group-s-",
+      "title": "More protests in Delhi as freed ‘cockroach’ group’s leaders vow to fight on. #BBCNews",
+      "source": "yt-rss:BBCNews",
+      "url": "https://www.youtube.com/shorts/qVH9BzPEbsY",
+      "velocity": 47,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#BBCNews"
+      ],
+      "detected_at": "2026-10-12T02:18:21.160724+00:00",
+      "summary": "BBCNews · published 2026-10-11.",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:BBCNews"
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "wildwood-review",
@@ -1441,27 +1810,8 @@
       "sources": [
         "yt-rss:IGN",
         "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "what-the-fuck",
-      "title": "What the fuck",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x31afa/what_the_fuck/",
-      "velocity": 70,
-      "opportunity_score": 46,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584360+00:00",
-      "summary": "u//u/Pie_duck69 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube",
-        "reddit-rss:r/YouTube"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "wildwood-stuns-critics-laika-s-oscar-front-runner-",
@@ -1482,7 +1832,8 @@
       "sources": [
         "gnews-q:movies",
         "gnews-q:movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "transcript-shyam-sankar-chief-technology-officer-o",
@@ -1503,7 +1854,8 @@
       "sources": [
         "gnews-technology",
         "gnews-top"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "los-texmaniacs-tiny-desk-concert",
@@ -1523,27 +1875,8 @@
       "sources": [
         "yt-rss:NPRMusic",
         "yt-rss:NPRMusic"
-      ]
-    },
-    {
-      "id": "rachel-downgraded-from-tropical-storm-but-strong-w",
-      "title": "Rachel downgraded from 'tropical' storm, but strong winds, rain and flooding hit Southern California",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMXhVNkFsS0c5ckVWRlVQQkZMWmFSY0dKRWJNQ0twM3pDalpsSzQzUks0Z25DZlVWemZjNThBQ2RuYVFxRXowSjlGb2RIejNXM0syckY3ODdZaTQyVGYwUlNMRi1TUW1IVkJjaXRZb191bEU3cVg4Z2NzMC05RU1RVkFna3dOZ0pTQzRsRTBIV2twQQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:06:46.248344+00:00",
-      "summary": "Los Angeles Times · Sun, 11 Oct 2026 19:30:29 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
       ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "mullin-says-livestreaming-hasan-execution-is-part-",
@@ -1563,7 +1896,8 @@
       "format_tags": [],
       "sources": [
         "gnews-top"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "total-annihilation-rebuilt-for-modern-computers",
@@ -1583,7 +1917,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-gap-in-shared-understanding-of-llm-capability-",
@@ -1603,7 +1938,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "cartographers-of-north-korea",
@@ -1623,7 +1959,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "chapter-1-of-ways-of-seeing-by-john-berger",
@@ -1643,7 +1980,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "terence-tao-math-2-0-pdf",
@@ -1663,7 +2001,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nyc-s-click-to-cancel-rule-is-now-in-effect",
@@ -1683,7 +2022,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ircv3",
@@ -1703,7 +2043,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-tilde-in-your-path-may-not-be-your-home",
@@ -1723,7 +2064,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "lineageos-24-0",
@@ -1743,7 +2085,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "safe-simd-in-rust-even-on-the-inside",
@@ -1763,7 +2106,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-ram-shortage-is-bringing-back-ddr4",
@@ -1783,7 +2127,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "bot-traffic-from-yandex",
@@ -1803,7 +2148,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-lightbulb-computer",
@@ -1823,7 +2169,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "3rd-yandex-cloud-data-center-was-hit",
@@ -1843,7 +2190,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "a-city-building-game-in-which-the-city-would-prefe",
@@ -1863,7 +2211,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "lobbying-is-corruption",
@@ -1883,7 +2232,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "telegram-desktop-vulnerability-allowed-any-user-s-",
@@ -1903,7 +2253,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "build-your-own-decision-model",
@@ -1923,7 +2274,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nitter-update-oct-10th-seeking-funding-and-legal-h",
@@ -1943,7 +2295,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "123456-password-used-in-danish-cpr-data-breach",
@@ -1963,7 +2316,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "bitwarden-dual-license-model",
@@ -1983,7 +2337,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "documents-add-to-evidence-in-climate-deception-cas",
@@ -2003,7 +2358,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-paid-people-to-try-and-follow-my-readme",
@@ -2023,7 +2379,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "talorys-a-self-hosted-personal-ai-agent-on-cloudfl",
@@ -2043,7 +2400,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "apple-macos-removed-from-official-unix-registry",
@@ -2063,7 +2421,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-m-sorry-but-you-still-have-to-think",
@@ -2083,7 +2442,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-would-like-the-value-of-my-home-to-rise-while-my",
@@ -2103,7 +2463,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "show-hn-wallhop-12ft-io-is-gone-so-i-built-a-repla",
@@ -2123,7 +2484,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "trump-says-anyone-who-does-not-refer-to-ai-as-supe",
@@ -2143,7 +2505,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "here-are-10-terms-you-need-to-know-to-understand-a",
@@ -2163,7 +2526,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ai-has-a-god-problem-stretching-from-the-vatican-t",
@@ -2183,7 +2547,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "using-ai-for-just-10-minutes-erodes-your-ability-t",
@@ -2203,7 +2568,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "trump-really-wants-to-make-super-intelligence-happ",
@@ -2223,7 +2589,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "silicon-valley-is-falling-in-line-with-trump-s-att",
@@ -2243,7 +2610,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "trump-warns-call-ai-super-intelligence-or-face-ene",
@@ -2263,7 +2631,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "what-s-dragging-down-a-i-efficiency-the-verificati",
@@ -2283,7 +2652,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "is-local-ai-as-private-as-you-think-techlore-offic",
@@ -2302,7 +2672,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "he-might-leak-the-entire-game",
@@ -2321,7 +2692,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ddr3-rides-again-ft-wendell-of-level1-techs",
@@ -2340,7 +2712,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "farmers-to-aoc-on-data-centers-there-could-be-noth",
@@ -2359,7 +2732,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "mini-liebschti-narrates-what-it-s-like-to-use-an-h",
@@ -2378,7 +2752,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "adobe-suite-on-linux-twice-flathub-says-yes-to-ai-",
@@ -2397,7 +2772,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-science-that-finally-explains-the-dyatlov-pass",
@@ -2416,7 +2792,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "what-is-edge-dislocation",
@@ -2435,7 +2812,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "my-thoughts-on-other-mommy",
@@ -2454,7 +2832,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "finishing-what-we-started-seven-years-ago",
@@ -2473,7 +2852,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ai-keeps-pissing-off-mathematicians",
@@ -2492,7 +2872,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "which-is-better-buying-or-renting-a-home-ella-feld",
@@ -2511,7 +2892,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "we-finally-know-more-about-humanity-s-first-civili",
@@ -2530,7 +2912,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "this-is-dumb",
@@ -2549,7 +2932,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-biggest-hug",
@@ -2568,7 +2952,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "a-6-3-billion-open-weight-model-just-got-embarrass",
@@ -2587,7 +2972,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-strangest-place-on-the-internet",
@@ -2606,7 +2992,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "below-rusted-gods",
@@ -2625,7 +3012,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-logistics-of-nyc-waste-management",
@@ -2644,7 +3032,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-hidden-engineering-of-pressure-regulators",
@@ -2663,7 +3052,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-miserable-failure-of-disney-s-mp3-player",
@@ -2682,7 +3072,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "in-this-arcade-you-drop-metal-balls-on-rich-people",
@@ -2701,7 +3092,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "jeremiyah-love-trending-well-to-play-despite-ankle",
@@ -2722,7 +3114,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "buffalo-bills-trending-up-trending-down-who-bills-",
@@ -2743,7 +3136,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "texas-says-insurance-rates-are-trending-down-state",
@@ -2764,7 +3158,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "on-alert-for-wind-and-rain-saturday-sunday-trendin",
@@ -2785,7 +3180,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "alabama-stock-report-3-players-trending-up-after-l",
@@ -2806,7 +3202,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "marvin-harrison-jr-trade-market-on-kalshi-continue",
@@ -2827,7 +3224,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "which-cardinals-are-trending-up-4-games-in-who-nee",
@@ -2848,28 +3246,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
-    },
-    {
-      "id": "wizards-practice-notebook-keefe-says-sarr-is-trend",
-      "title": "Wizards Practice Notebook: Keefe says Sarr is ‘trending toward’ returning Saturday",
-      "source": "gnews-q:trending",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSUxZME56eDBPRy1xaDdKMlU2WHpfNjRfemk4SFNPbnN5bVZ1NjJkU0EwV2V5NlpqTHdXUFFSTHZhaGEwZVpTSkhhOFZQSXI0VDNJd2V1dVVzaXROMWJ3amZzYWNqNWVqWjdUS1h2d3pwb1pKV21GSjkxSUhvSHFBZEhIQkhfUzFkbUh3NWhjZHVaLXVhQXkxRzByb0xhbFhqRmNYYzFyYmQzOGpNRGpHNWxjT0V0WndwTGlLYTJxZHE5RnZtT3NyWU8xdHpUWXUxVFR2UjU3NA?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:12:54.915066+00:00",
-      "summary": "Bullets Forever · Fri, 09 Oct 2026 17:46:21 GMT",
-      "category": "news",
-      "platforms": [
-        "x",
-        "tiktok",
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:trending"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "two-steam-games-generated-560-000-across-135-000-s",
@@ -2890,7 +3268,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "squadron-42-video-game-release-nears-as-cloud-impe",
@@ -2911,7 +3290,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-made-terrible-games-with-google-s-ai-playground",
@@ -2932,7 +3312,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "alien-isolation-2-this-highly-anticipated-sequel-h",
@@ -2953,7 +3334,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "group-threatens-to-leak-full-gta-6-build-if-physic",
@@ -2974,7 +3356,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "wildwood-review-laika-s-pleasingly-old-fashioned-s",
@@ -2994,27 +3377,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:movies"
-      ]
-    },
-    {
-      "id": "cineplexity-when-your-partner-doesn-t-like-the-sam",
-      "title": "Cineplexity: When your partner doesn't like the same movies you do",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSWtHOVNwb05BX1hqc25CYWpTYWloNnIzZ1haODJIaGVMRjlkVjIzc1RzdmlfMm9sSVkwNmZvcjZPNmY3dmZzMzNseGszQ1dHbFhjU2xRSnJmRjZiRVVDVDFFa2w3eGV4QXBGcHF6MWpWa1hVeHltdnZJbDZFbVJna1F4dmNldWpQeF9aTnN5cWxKNGNJN0ZfZDYzSVVCajk3ZWJmRXdPZWl3ZWdtRnc?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:09.253634+00:00",
-      "summary": "NPR · Sun, 11 Oct 2026 21:16:34 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
       ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "7-new-movies-our-critics-are-talking-about-this-we",
@@ -3034,7 +3398,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "mj-lenderman-debuts-new-music-at-good-moon-festiva",
@@ -3054,7 +3419,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "new-music-video-mozhesh-da-nye-chotshesh",
@@ -3074,7 +3440,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "rihanna-reveals-just-how-many-unreleased-songs-she",
@@ -3094,7 +3461,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "listen-power-trip-drops-first-new-music-since-2020",
@@ -3114,7 +3482,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-ve-learned-to-trust-myself-victoria-justice-is-e",
@@ -3134,7 +3503,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-best-october-prime-day-owala-deals-the-tiktok-",
@@ -3154,7 +3524,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "full-video-apoorva-mukhija-viral-video-link-on-tik",
@@ -3174,7 +3545,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "verdict-in-trial-over-viral-racist-tiktok-rant-add",
@@ -3194,7 +3566,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "people-don-t-have-the-right-worrell-touts-orange-c",
@@ -3214,7 +3587,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "viral-tiktok-hacks-do-they-actually-work",
@@ -3234,7 +3608,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "how-to-make-pizza-beans-the-saucy-cheesy-dish-taki",
@@ -3254,7 +3629,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "17-tiktok-viral-amazon-products-on-sale-ahead-of-p",
@@ -3274,7 +3650,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
@@ -3294,7 +3671,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "so-you-d-like-to-sell-your-print-issues-of-the-oni",
@@ -3314,7 +3692,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-guess-i-m-using-webp-now",
@@ -3334,7 +3713,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "500b-tokens-later-letting-ai-agents-decompile-a-fi",
@@ -3354,7 +3734,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "wtf-is-a-googlebook",
@@ -3374,7 +3755,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "every-new-hallmark-christmas-movie-in-2026-dates-c",
@@ -3394,27 +3776,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:movies"
-      ]
-    },
-    {
-      "id": "from-netflix-s-animals-to-disclosure-day-10-movies",
-      "title": "From Netflix's 'Animals' to 'Disclosure Day,' 10 movies to stream now",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNYzVHVFdFMzBjOWtBaTFmNlZ2QnNCUUxpVDFiTzVFSklTeUxPNlowc1Q1MHFGbHVSTDRvTlB2Zjc3dzgwZi1PeWViYmFLLTVud2d2NGVGWThHUkFNOGNZcnhhZzJBSlB5VTlKYUhoRUJrNG1ndjJPelF1a1FDdFA3TlZxZng2SkgxSzQ0LWNOVUFWSDFfMjN3aS1hM2dLcHM3U0c2cGlOMm5MQ19WQlVjZHhHQUtaYmtuMnFRU0pBbkl3TnNQcVpoMEJoYnFqMUk5Y1JZ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:42:11.047326+00:00",
-      "summary": "USA Today · Fri, 09 Oct 2026 23:55:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
       ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "these-tiktok-viral-bags-will-get-you-through-fall",
@@ -3434,7 +3797,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "matthew-matpat-patrick-adapting-amanda-the-adventu",
@@ -3455,7 +3819,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ama-q-a-announcement-alex-gibney-monday-10-12-at-2",
@@ -3475,7 +3840,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "official-discussion-megathread-the-social-reckonin",
@@ -3495,7 +3861,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "weird-al-yankovic-reveals-a-sequel-to-his-biopic-w",
@@ -3515,7 +3882,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "musk-director-alex-gibney-confirms-universal-waver",
@@ -3535,7 +3903,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "just-watched-disclosure-day",
@@ -3555,7 +3924,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "master-and-commander-the-far-side-of-the-world-200",
@@ -3575,7 +3945,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "luca-guadagnino-s-artificial-review-thread",
@@ -3595,7 +3966,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "godzilla-minus-zero-final-trailer",
@@ -3615,7 +3987,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ama-q-a-announcement-noel-gugliemi-tuesday-10-13-a",
@@ -3635,7 +4008,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-ghost-and-the-darkness-at-30-revisiting-the-hi",
@@ -3655,7 +4029,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "recursive-self-improvement-through-collective-inte",
@@ -3675,7 +4050,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "fingerprints-are-the-new-cookies",
@@ -3695,7 +4071,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "google-is-illegaly-cutting-forest-to-build-data-ce",
@@ -3715,7 +4092,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "flip-a-coin-i-guess-exam-studygram-studying",
@@ -3734,28 +4112,8 @@
       "format_tags": [],
       "sources": [
         "youtube-invidious"
-      ]
-    },
-    {
-      "id": "5-video-games-from-1985-that-changed-gaming-foreve",
-      "title": "5 Video Games From 1985 That Changed Gaming Forever",
-      "source": "gnews-q:video games",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBlT28wTkRSOTFvdk05OVZicHNlTU9HWlI5cFBWWExjZ2JDYVBCN2ZGQ0ZZZnl5R19wVXh3ZXYxYzNicTJhX1lVQ1lMamcweXg5X3RMX2dnTzVlNkZ1NTIwOGI5NlJYelVIb29VcmR2OWxCM1NWZ1NF?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T23:45:43.845311+00:00",
-      "summary": "SVG · Sun, 11 Oct 2026 16:00:00 GMT",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch",
-        "tiktok"
       ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:video games"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "azealia-banks-confirms-move-to-israel-says-she-s-w",
@@ -3775,7 +4133,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "whatever-became-of-holography-2011",
@@ -3795,27 +4154,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
-    },
-    {
-      "id": "ask-hn-do-you-want-a-router-that-has-dd-wrt-pre-in",
-      "title": "Ask HN: Do you want a router that has DD-WRT pre-installed?",
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=50039291",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:20.634276+00:00",
-      "summary": "8 points · 3 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
       ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "xiaomi-18-fold-how-does-this-happen",
@@ -3835,7 +4175,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "dear-youtube",
@@ -3855,7 +4196,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nothing-headphone-1-pro-they-copied-the-wrong-thin",
@@ -3875,7 +4217,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "xiaomi-18-pro-max-they-ve-done-it-again",
@@ -3895,7 +4238,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-apple-watch-has-a-problem",
@@ -3915,7 +4259,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "iphone-18-pro-review-all-about-that-chip",
@@ -3935,7 +4280,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "iphone-duo-what-we-missed",
@@ -3955,7 +4301,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:MKBHD"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "cyberleek-s-24-min-gta-6-leak-puts-focus-on-lucia-",
@@ -3976,7 +4323,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "breakfast-in-america-by-supertramp-the-rare-art-of",
@@ -3996,7 +4344,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "phil-collin-s-appreciation-day-what-s-your-fav-son",
@@ -4016,7 +4365,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "50-cent-in-iraq-2004",
@@ -4036,7 +4386,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "local-h-bound-for-the-floor-grunge-1996",
@@ -4056,7 +4407,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "taylor-swift-s-the-life-of-a-showgirl-the-encore-r",
@@ -4076,7 +4428,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "olivia-rodrigo-pop",
@@ -4096,7 +4449,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "sex-pistols-frank-carter-hits-out-at-male-concert-",
@@ -4116,7 +4470,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ozzy-osbourne-no-more-tears-rock",
@@ -4136,7 +4491,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "electric-light-orchestra-time-pop",
@@ -4156,178 +4512,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
-    },
-    {
-      "id": "youtube-wtf-is-this",
-      "title": "YouTube wtf is this...",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3b2aj/youtube_wtf_is_this/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584051+00:00",
-      "summary": "u//u/sonicguylol · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "this-japanese-tutorial-on-how-to-take-off-a-wetsui",
-      "title": "This Japanese tutorial on how to take off a wetsuit has 10 million views. Was everyone in Japan suddenly interested in surfing?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x39hzn/this_japanese_tutorial_on_how_to_take_off_a/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584145+00:00",
-      "summary": "u//u/ryanyork92 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "is-youtube-getting-vibe-coded",
-      "title": "Is YouTube getting vibe-coded?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3ir6f/is_youtube_getting_vibecoded/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584202+00:00",
-      "summary": "u//u/Demon_Flower · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "why-youtube-why",
-      "title": "Why Youtube why",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x39haf/why_youtube_why/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584227+00:00",
-      "summary": "u//u/ExpensiveCoat8912 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "the-algorithm-is-beyond-bad-its-utterly-awful",
-      "title": "The Algorithm is BEYOND Bad.. its utterly AWFUL!!",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x337sy/the_algorithm_is_beyond_bad_its_utterly_awful/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584261+00:00",
-      "summary": "u//u/Terrible_General_685 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "why-is-there-a-gif",
-      "title": "Why is there a gif",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3lhzc/why_is_there_a_gif/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584283+00:00",
-      "summary": "u//u/wyattmadnessfan · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "is-anyone-seeing-a-rise-in-political-ads-on-youtub",
-      "title": "is anyone seeing a rise in political ads on youtube?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3jofg/is_anyone_seeing_a_rise_in_political_ads_on/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584312+00:00",
-      "summary": "u//u/Mega_octodad · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "i-hate-glider-guy-this-is-why-you-should-too",
-      "title": "i HATE glider guy. this is why you should too.",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3eezp/i_hate_glider_guy_this_is_why_you_should_too/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584338+00:00",
-      "summary": "u//u/RaceKnown4231 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "why-are-youtube-ads-so-fucking-obnoxious",
-      "title": "Why are YouTube ads...so...fucking....OBNOXIOUS",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3447h/why_are_youtube_adssofuckingobnoxious/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:03:05.584382+00:00",
-      "summary": "u//u/TheDunnaMan · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "illustration-beyond-proof",
@@ -4347,7 +4533,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "governments-are-mishandling-the-affordability-cris",
@@ -4367,7 +4554,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "local-indexing-to-reduce-tool-calling-and-token-us",
@@ -4387,47 +4575,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
-    },
-    {
-      "id": "show-hn-plimsoll-a-self-hosted-sandbox-for-code-yo",
-      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
-      "source": "hackernews",
-      "url": "https://github.com/plimsollmark/plimsoll",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:48.025223+00:00",
-      "summary": "4 points · 0 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
       ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ]
-    },
-    {
-      "id": "matthew-lillard-recalls-thinking-post-scream-night",
-      "title": "Matthew Lillard recalls thinking post-“Scream” night shoot that movie was ‘lame’ and he’d become a TV star",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMnQ2dnRLZkhBUDR6SnV6X1M2TG9VbmhOMWVzZU4wUFdUZzkxaDRGYUlqWkdSREktZzM5OXdqdHEzMDZOdXJqZ1hDQW1pbzVzMFdJdVlvXy05R2hBZVhNZGRNSkRXZFJ2WnJpaHlLdjg5Z08xRUM0OEZURVpGUUVXdEdNWkdOaWZmWDBlSTZHV0piRXFOZXVGNms1NUVBM245YUpaYnh0MA?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:27:47.234394+00:00",
-      "summary": "Yahoo · Sat, 10 Oct 2026 17:58:46 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "we-want-to-keep-his-name-alive-power-trip-are-hono",
@@ -4447,187 +4596,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
-    },
-    {
-      "id": "wildlife-park-confirms-tiger-will-not-be-euthanise",
-      "title": "Wildlife park confirms tiger will not be euthanised after man mauled to death | Yorkshire",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x38vsn/wildlife_park_confirms_tiger_will_not_be/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959769+00:00",
-      "summary": "u//u/CharlieKonR · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "pope-leo-says-he-will-undergo-surgery-to-remove-a-",
-      "title": "Pope Leo says he will undergo surgery to remove a nodule on his lung",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x352me/pope_leo_says_he_will_undergo_surgery_to_remove_a/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959881+00:00",
-      "summary": "u//u/JustLightChop · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "panama-declares-state-of-emergency-as-powerful-qua",
-      "title": "Panama declares state of emergency as powerful quake aftershocks rattle communities | 7.7 and 6.6 in magnitude",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x39ggv/panama_declares_state_of_emergency_as_powerful/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959898+00:00",
-      "summary": "u//u/krvnslyn · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "man-hospitalized-after-being-struck-by-vehicle-dri",
-      "title": "Man hospitalized after being struck by vehicle driven by ICE agent during chase",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x2t7al/man_hospitalized_after_being_struck_by_vehicle/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959913+00:00",
-      "summary": "u//u/Elixibren · r/news · 2026-10-10",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "justice-department-investigating-television-networ",
-      "title": "Justice Department investigating television networks over Trump pool coverage",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x380tq/justice_department_investigating_television/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959928+00:00",
-      "summary": "u//u/IncomeRoyal9209 · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "at-least-12-killed-and-hundreds-injured-in-saudi-a",
-      "title": "At least 12 killed and hundreds injured in Saudi Arabia airport missile strikes",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x2rjra/at_least_12_killed_and_hundreds_injured_in_saudi/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959942+00:00",
-      "summary": "u//u/Tye3636 · r/news · 2026-10-10",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "ai-surveillance-startup-flock-to-cut-several-hundr",
-      "title": "AI surveillance startup Flock to cut several hundred jobs amid backlash, sources say",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x2yle4/ai_surveillance_startup_flock_to_cut_several/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959956+00:00",
-      "summary": "u//u/averagebaldwhiteguy · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "drone-strike-by-sudan-paramilitary-kills-41-near-e",
-      "title": "Drone strike by Sudan paramilitary kills 41 near Ethiopian border, rights group says",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x35b6a/drone_strike_by_sudan_paramilitary_kills_41_near/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959970+00:00",
-      "summary": "u//u/Secure_Ant1085 · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "halloween-candy-prices-rise-as-americans-prepare-t",
-      "title": "Halloween candy prices rise as Americans prepare to spend $13.5 billion this season",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x36sl3/halloween_candy_prices_rise_as_americans_prepare/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:07.959983+00:00",
-      "summary": "u//u/Tall_Job_8568 · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "soul-coughing-super-bon-bon-alt-rock-live-1996",
@@ -4647,66 +4617,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
-    },
-    {
-      "id": "is-this-the-most-viewed-video-with-no-likes",
-      "title": "Is this the most viewed video with no likes?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3mmsr/is_this_the_most_viewed_video_with_no_likes/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:28:22.345303+00:00",
-      "summary": "u//u/Frequent_Pin_3525 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ]
-    },
-    {
-      "id": "mojtaba-khamenei-defies-malicious-attacks-as-us-ar",
-      "title": "Mojtaba Khamenei defies ‘malicious’ attacks as US Army zeroes in on Iran’s 350,000 troops",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeEpUYXVFNWlYeno0Z19ubU9GWmlULV9tVzY2RS05VjEwUlJ2YjFxdE9fTHZvUGdYMkhuRERlZkhvVlRPYlMtRjVBRHlyNzJwbU1xOWNkaGFnZWFDU0xCRVFBNHJXSC1CeXNhVkluTkFUTzNVcGw3NmNJMWM0cUlvM2xjN09QSGlxMzc2X1ozeHczNmplZlY3aWlKaVVXZWlfUHdKMlVIdWFQQdIBrwFBVV95cUxQcXVSZ052dVlSRjEzYkVFX2FRVlpnS1J0c2w5d3FkeDV4Yng3aHdDM3Z6eVlHbXh5QjZIZVZoLTBzbFd4bnExR3JTNGJYUXBJSmk5dGR6aDJEZFRWMDhrX25uRVNpWDU3aVBDbDQ0NzZtMmpjNUtLSmh1NEE4NUt1eFZkVV9CMlRPZWl0SUdhVEJIcHl6Y3pON2lOckJxdk56aFkzTzAxTkptc1lSXzBz?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:57:46.228378+00:00",
-      "summary": "Fox News · Sun, 11 Oct 2026 20:34:39 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "trump-s-zelensky-attack-russia-diesel-deal-draw-cr",
-      "title": "Trump’s Zelensky attack, Russia diesel deal draw criticism in U.S. and abroad",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRDJoSExmM24xR3N0eW5LRy1rYUJyV3BTbURWenNJTlcwWlRsNUxJV2NyN0VzM2JYSFlOODJqdmdXekhFanJkRWE5NzJ4eVVDT1c4RFM2d2RHNzJtcGV3YkJzZmZqYVhISXBRWkt3bHRyQlJHdlY0OFJRT21zTUpxZk83akZZSmh3X2pKRlcwU1VzSjhvVFc2bk10MWdPclo3bXQtdGMzTFRFcFZNNERhVVdiTjRRUQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:57:46.228417+00:00",
-      "summary": "The Washington Post · Mon, 12 Oct 2026 00:49:21 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "amazon-is-in-talks-to-buy-ai-startup-decart-wsj-re",
@@ -4726,7 +4638,8 @@
       "format_tags": [],
       "sources": [
         "gnews-ai"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "programmable-pigments-photochromic-nanoparticle-in",
@@ -4746,7 +4659,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "wildwood-review-laika-s-epic-stop-motion-wonder-la",
@@ -4766,7 +4680,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "from-cardi-b-to-an-eminem-collab-troye-sivan-which",
@@ -4786,7 +4701,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "hello-darling-pm-s-shock-appearance-stuns",
@@ -4806,27 +4722,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:TikTok viral"
-      ]
-    },
-    {
-      "id": "polish-police-arrest-a-man-suspected-of-planning-t",
-      "title": "Polish police arrest a man suspected of planning to attack Prime Minister Donald Tusk",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x3c8gt/polish_police_arrest_a_man_suspected_of_planning/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:58:30.485603+00:00",
-      "summary": "u//u/AudibleNod · r/news · 2026-10-11",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "what-are-you-watching-and-what-do-you-recommend-we",
@@ -4846,7 +4743,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "artemis-fowl-animated-series-greenlit-at-disney-ch",
@@ -4866,7 +4764,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "tony-gilroy-s-andor-incorporates-real-moments-or-a",
@@ -4886,7 +4785,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "today-is-the-51st-anniversary-of-saturday-night-li",
@@ -4906,7 +4806,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "andor-2022-one-way-out-kino-loy-s-speech",
@@ -4926,7 +4827,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "snl-weekend-update-the-mother-whose-babysitter-can",
@@ -4946,7 +4848,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "he-was-devastatingly-sexy-frasier-s-jane-leeves-an",
@@ -4966,7 +4869,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "tcm-i-m-kind-of-impressed",
@@ -4986,7 +4890,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "nicolas-cage-says-he-s-probably-not-working-with-a",
@@ -5006,7 +4911,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-rookie-season-9-spinoff-rookie-north-get-premi",
@@ -5026,7 +4932,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "will-warner-bros-kill-skydance-or-will-david-ellis",
@@ -5046,7 +4953,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "30-rock-is-officially-20-years-old",
@@ -5066,7 +4974,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/television"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "simple-questions-sunday",
@@ -5086,7 +4995,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "making-friends-monday-share-your-game-tags-here",
@@ -5106,7 +5016,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "box-office-zach-cregger-s-resident-evil-becomes-hi",
@@ -5126,7 +5037,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "yujiro-hanma-face-in-manga-vs-tekken-8-bandai-namc",
@@ -5146,7 +5058,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "star-wars-galactic-racer-has-got-to-be-the-best-ar",
@@ -5166,7 +5079,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "what-s-the-game-you-absolutely-regret-buying-at-fu",
@@ -5186,7 +5100,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "just-completed-my-yearly-october-f-e-a-r-expansion",
@@ -5206,7 +5121,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "was-playing-the-witcher-3-remastered-and-this-tong",
@@ -5226,7 +5142,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "these-were-good-times",
@@ -5246,7 +5163,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "time-flies-when-you-are-dropping-penguins",
@@ -5266,7 +5184,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "hades-zagreus-fanart-by-me",
@@ -5286,7 +5205,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/gaming"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "blink-182-stay-together-for-the-kids-pop-punk",
@@ -5306,7 +5226,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "which-comedy-movie-can-you-watch-over-and-over-aga",
@@ -5326,47 +5247,8 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/movies"
-      ]
-    },
-    {
-      "id": "hurricane-isaias-in-video-and-pictures",
-      "title": "Hurricane Isaias in Video and Pictures",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNX01WdllNYXZrbWp6YTBmU0JrZkg2LVphOW9fQ242dGtZdjRQTXI2eGp6NGVoM3pYX2NidkFKVDIyOU9aQUdncFhtd3ZwaUE3c25DOU5nX1J6RUQxcDFiN2pqUGsyUDFLbF9rYWhJOG9tRnd0SnpDTHNzN0RDLUNoai05dk1xdw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:40:22.292286+00:00",
-      "summary": "The New York Times · Sun, 11 Oct 2026 21:14:12 GMT",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
       ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ]
-    },
-    {
-      "id": "bill-gates-warns-cyberattacks-most-imminent-ai-thr",
-      "title": "Bill Gates warns cyberattacks most imminent AI threat",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQlk1MEkxSmlfblJNdU1oY1l1NlFCMWQ1VTN5RHRkQkgyclF4aV9WcGJHODdZTTJSTldVcDdtd0xfX0pHcDJyZkZxaEU4aW1hY2FFb2JpNDJFd2dRcUJVek9OUVVJWF81U1hEY09iNlQyd0l3RHdfV0JfMzFRMkNjQnhPSjFvTUJDeWVrZUFMX3JWNldJbFpqMg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:40:32.419334+00:00",
-      "summary": "Yahoo · Sun, 11 Oct 2026 15:51:29 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "hashicorp-archives-the-boundary-open-source-repo",
@@ -5386,7 +5268,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "qt-an-e2ee-post-quantum-messenger-core-in-rust-10k",
@@ -5406,7 +5289,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "passkeys-are-a-trap",
@@ -5426,167 +5310,8 @@
       "format_tags": [],
       "sources": [
         "hackernews"
-      ]
-    },
-    {
-      "id": "eat-everything-in-a-grocery-store-win-1-000-000",
-      "title": "Eat Everything In A Grocery Store, Win $1,000,000",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=plN7JMbadRg",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080828+00:00",
-      "summary": "MrBeast · 234 million views · 8 days ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
       ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "i-built-a-city-to-save-kids-from-illegal-labor",
-      "title": "I Built A City To Save Kids From Illegal Labor",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=v9QtM6qnG50",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080900+00:00",
-      "summary": "MrBeast · 98 million views · 3 weeks ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "i-survived-the-most-extreme-places-on-earth",
-      "title": "I Survived The Most Extreme Places On Earth",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=gTKS8SAwUzE",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080912+00:00",
-      "summary": "MrBeast · 125 million views · 1 month ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "escape-100-cops-win-500-000",
-      "title": "Escape 100 Cops, Win $500,000",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=Qtl8lJwbd4g",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080921+00:00",
-      "summary": "MrBeast · 118 million views · 1 month ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "last-to-leave-mansion-keeps-it",
-      "title": "Last To Leave Mansion, Keeps It",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=Af6i6ChAVTw",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080928+00:00",
-      "summary": "MrBeast · 126 million views · 2 months ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "i-granted-100-kids-their-biggest-wish",
-      "title": "I Granted 100 Kids Their Biggest Wish!",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=lVylRtlPOIE",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080935+00:00",
-      "summary": "MrBeast · 68 million views · 2 months ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "survive-30-days-chained-to-a-stranger-win-250-000",
-      "title": "Survive 30 Days Chained To A Stranger, Win $250,000",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=iYlODtkyw_I",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080942+00:00",
-      "summary": "MrBeast · 101 million views · 3 months ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
-    },
-    {
-      "id": "50-youtube-legends-fight-for-1-000-000",
-      "title": "50 YouTube Legends Fight For $1,000,000",
-      "source": "yt-rss:MrBeast",
-      "url": "https://www.youtube.com/watch?v=__fmDj0ZJ1Q",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:43:04.080949+00:00",
-      "summary": "MrBeast · 90 million views · 3 months ago",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:MrBeast"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "i-seriously-should-not-be-dropping-this",
@@ -5605,7 +5330,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "thank-you-and-goodbye",
@@ -5624,7 +5350,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "earthquake-by-mount-fuji",
@@ -5643,7 +5370,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "meet-our-newest-family-member",
@@ -5662,7 +5390,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-tried-to-make-a-manga",
@@ -5681,7 +5410,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "my-trillion-dollar-project-is-finally-out",
@@ -5700,7 +5430,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "ending-the-vlogs",
@@ -5719,7 +5450,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "never-been-this-disappointed",
@@ -5738,7 +5470,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:pewdiepie"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "pros-try-fake-ai-photoshop",
@@ -5757,7 +5490,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-all-costco-gaming-setup",
@@ -5776,7 +5510,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-ve-wanted-this-robot-for-10-years",
@@ -5795,7 +5530,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "don-t-buy-a-pro-controller-do-this-instead",
@@ -5814,7 +5550,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-have-strong-feelings-about-air-conditioning-in-t",
@@ -5833,7 +5570,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "i-found-these-computers-in-a-ditch",
@@ -5852,7 +5590,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "what-s-the-worst-tech-linus-still-uses",
@@ -5871,7 +5610,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:LinusTechTips"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "zelensky-says-ukraine-supports-energy-ceasefire-an",
@@ -5891,7 +5631,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:BBCNews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "why-is-trump-calling-for-zelensky-to-go-bbc-newsca",
@@ -5911,7 +5652,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:BBCNews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "why-is-this-historic-ship-going-electric-bbc-news",
@@ -5931,7 +5673,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:BBCNews"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "inside-the-pok-mon-world-championships-bbc-news",
@@ -5951,87 +5694,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:BBCNews"
-      ]
-    },
-    {
-      "id": "ukraine-s-new-weapon-that-could-change-the-war-wit",
-      "title": "Ukraine’s new weapon that could change the war with Russia | The Security Brief",
-      "source": "yt-rss:BBCNews",
-      "url": "https://www.youtube.com/watch?v=053o-0z5tPs",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:44:00.661049+00:00",
-      "summary": "BBCNews · 219 thousand views · 10 hours ago",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
       ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:BBCNews"
-      ]
-    },
-    {
-      "id": "how-prosthetics-tech-is-training-robots-bbc-news",
-      "title": "How prosthetics tech is training robots | BBC News",
-      "source": "yt-rss:BBCNews",
-      "url": "https://www.youtube.com/watch?v=k_Hn5k1KMtg",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:44:00.661056+00:00",
-      "summary": "BBCNews · 80 thousand views · 13 hours ago",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:BBCNews"
-      ]
-    },
-    {
-      "id": "hurricane-simon-strengthens-to-category-4-off-mexi",
-      "title": "Hurricane Simon strengthens to Category 4 off Mexico coast | BBC News",
-      "source": "yt-rss:BBCNews",
-      "url": "https://www.youtube.com/watch?v=MYuZPC7NSeY",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:44:00.661064+00:00",
-      "summary": "BBCNews · 37 thousand views · 13 hours ago",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:BBCNews"
-      ]
-    },
-    {
-      "id": "why-did-trump-just-call-for-a-new-president-of-ukr",
-      "title": "Why did Trump just call for a 'new president of Ukraine'? | BBC News",
-      "source": "yt-rss:BBCNews",
-      "url": "https://www.youtube.com/watch?v=BPy6_rAtB80",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:44:00.661070+00:00",
-      "summary": "BBCNews · 160 thousand views · 14 hours ago",
-      "category": "news",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:BBCNews"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "avatar-creators-explain-what-you-need-to-know-for-",
@@ -6051,7 +5715,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:IGN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "invincible-vs-official-agent-spider-reveal-trailer",
@@ -6071,7 +5736,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:IGN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "how-gta-5-took-over-the-world",
@@ -6091,7 +5757,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:IGN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "marvel-tokon-fighting-souls-official-thor-jane-fos",
@@ -6111,7 +5778,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:IGN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "tekken-8-official-roger-jr-gameplay-trailer-ft-yuj",
@@ -6131,7 +5799,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:IGN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-witcher-3-remastered-pc-performance-review",
@@ -6151,27 +5820,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:IGN"
-      ]
-    },
-    {
-      "id": "squadron-42-official-wishlist-trailer",
-      "title": "Squadron 42 - Official Wishlist Trailer",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/watch?v=pTHEkEZhMgM",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:44:18.042331+00:00",
-      "summary": "IGN · 638 thousand views · 1 day ago",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch"
       ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "tcu-horned-frogs-vs-arizona-state-sun-devils-full-",
@@ -6191,7 +5841,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "there-s-a-path-ucla-football-could-be-in-store-for",
@@ -6211,7 +5862,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "pitt-panthers-vs-smu-mustangs-full-match-highlight",
@@ -6231,7 +5883,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "stanford-cardinal-vs-louisville-cardinals-full-mat",
@@ -6251,7 +5904,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "mesmerizing-oklahoma-s-identity-prevails-in-stunne",
@@ -6271,7 +5925,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "fun-to-watch-will-stein-has-kentucky-football-roll",
@@ -6291,7 +5946,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "something-or-nothing-reacting-to-aaron-rodgers-hea",
@@ -6311,7 +5967,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "number-1-team-in-the-country-svp-reacts-to-georgia",
@@ -6331,7 +5988,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:ESPN"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "dscvr-artists-to-watch-2026",
@@ -6351,7 +6009,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "chet-and-drew-aka-somethingoutwest-s-go-to-emojis-",
@@ -6371,7 +6030,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "theweeknd-cry-for-me",
@@ -6391,7 +6051,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "sierra-spirit-the-story-behind-bleed-you",
@@ -6411,7 +6072,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "thuy-makes-some-tough-decisions-in-iykyk",
@@ -6431,7 +6093,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "bradley-simpson-s-play-skip-repeat",
@@ -6451,7 +6114,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "vevo-pop-video-weekly-this-week-s-biggest-hits-ep-",
@@ -6471,7 +6135,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:VEVO"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "tim-bernardes-tiny-desk-concert",
@@ -6490,7 +6155,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:NPRMusic"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "pante-n-rococ-tiny-desk-concert",
@@ -6509,7 +6175,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:NPRMusic"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "melissa-aldana-with-gonzalo-rubalcaba-tiny-desk-co",
@@ -6528,7 +6195,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:NPRMusic"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "alex-ferreira-tiny-desk-concert",
@@ -6547,45 +6215,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:NPRMusic"
-      ]
-    },
-    {
-      "id": "ye-dry-tiny-desk-concert",
-      "title": "YEИDRY: Tiny Desk Concert",
-      "source": "yt-rss:NPRMusic",
-      "url": "https://www.youtube.com/watch?v=lPbzlEj3A0U",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:45:09.825770+00:00",
-      "summary": "NPRMusic · NPR Music · and YEИDRY · 343 thousand views · 2 weeks ago",
-      "category": "music",
-      "platforms": [
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:NPRMusic"
-      ]
-    },
-    {
-      "id": "mon-laferte-tiny-desk-concert",
-      "title": "Mon Laferte: Tiny Desk Concert",
-      "source": "yt-rss:NPRMusic",
-      "url": "https://www.youtube.com/watch?v=vIvmDxrTjP4",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:45:09.825783+00:00",
-      "summary": "NPRMusic · NPR Music · and Mon Laferte · 3.9 million views · 3 weeks ago",
-      "category": "music",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:NPRMusic"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "how-caregiving-makes-you-a-better-leader-gevonna-f",
@@ -6604,7 +6235,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "why-the-best-managers-play-dungeons-dragons-jeff-r",
@@ -6623,7 +6255,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "advice-for-adults-who-are-winging-it-scott-cramer-",
@@ -6642,7 +6275,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "girl-math-and-the-path-to-success-janet-lam-tedxta",
@@ -6661,7 +6295,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "how-to-thrive-amidst-uncertainty-and-chaos-mark-st",
@@ -6680,7 +6315,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "no-boundaries-only-limits-ciena-adams-tedxstgeorge",
@@ -6699,7 +6335,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "are-you-truly-living-nathan-barkocy-tedxstgeorge",
@@ -6718,7 +6355,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "the-leadership-intelligence-gap-dr-krystylle-richa",
@@ -6737,7 +6375,8 @@
       "format_tags": [],
       "sources": [
         "yt-rss:TEDx"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "fibermaxxing-is-trending-here-s-what-the-science-s",
@@ -6758,7 +6397,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "what-s-trending-on-streaming-october-4-october-10-",
@@ -6779,7 +6419,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:trending"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "disney-s-star-wars-strategy-is-working-out-much-be",
@@ -6800,7 +6441,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "gta-6-gets-a-pass-for-nudity-that-indies-don-t-for",
@@ -6821,7 +6463,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:video games"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "10-most-successful-movies-of-all-time",
@@ -6841,7 +6484,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "r-l-stine-s-the-babysitter-adaptation-coming-to-tu",
@@ -6861,7 +6505,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:movies"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "new-music-friday-release-radar-for-october-9-2026-",
@@ -6881,7 +6526,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
       "id": "best-new-music-this-week-cardi-b-drops-don-t-chart",
@@ -6901,47 +6547,8 @@
       "format_tags": [],
       "sources": [
         "gnews-q:new music"
-      ]
-    },
-    {
-      "id": "physicians-group-calls-for-ban-on-raw-milk-as-it-s",
-      "title": "Physicians’ group calls for ban on raw milk – as it’s becoming increasingly popular in the US | Food safety",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x3ol3t/physicians_group_calls_for_ban_on_raw_milk_as_its/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:41:13.434830+00:00",
-      "summary": "u//u/CharlieKonR · r/news · 2026-10-12",
-      "category": "news",
-      "platforms": [
-        "x",
-        "youtube"
       ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/news"
-      ]
-    },
-    {
-      "id": "do-i-buy-three-stoves-or-a-ps5-pro",
-      "title": "Do I buy three stoves or a PS5 Pro?",
-      "source": "reddit-rss:r/gaming",
-      "url": "https://www.reddit.com/r/gaming/comments/1x3o9cy/do_i_buy_three_stoves_or_a_ps5_pro/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:41:23.343977+00:00",
-      "summary": "u//u/SleepyGamer1992 · r/gaming · 2026-10-12",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/gaming"
-      ]
+      "trend_type": "topic"
     },
     {
       "id": "queen-a-night-at-the-opera",
@@ -6961,32 +6568,1114 @@
       "format_tags": [],
       "sources": [
         "reddit-rss:r/Music"
-      ]
+      ],
+      "trend_type": "topic"
     },
     {
-      "id": "upside-down",
-      "title": "\"Upside Down\" before/after transitions",
-      "source": "Later",
-      "url": "https://later.com/blog/tiktok-trends/",
-      "velocity": 68,
-      "opportunity_score": 44,
-      "hashtags": [
-        "#upsidedown",
-        "#beforeandafter"
+      "id": "federal-judge-orders-pro-trump-tv-ads-funded-by-ta",
+      "title": "Federal judge orders pro-Trump TV ads funded by taxpayers off air immediately",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxON1pBMERGUjZ4cG5DX0EyQlZWVG1KMGx5NWFCcHUtRnJac28wMmx4ME9kdmpRN1dqRDQxTTRSU1UzOEhNRHRnMUNkVEdSdDNRaTRUSkhSVDRWaHhDUnFTNmY5elA0Zm5UMXlZZHF2aGZGRUNuSmJLTlpSV2hwNDBuaTVOQWRublJOSU9EaVhrZGVVU2l0Wk5mYjhTOUVDSkVxckRWT3VVNG5iM1dFZC1xbzkxXzVGS3AzY2Vsc3o2TzJmZFpIQjJlaTRNMA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:05.384019+00:00",
+      "summary": "NBC News · Mon, 12 Oct 2026 00:48:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
       ],
-      "detected_at": "2026-10-02T00:00:00-07:00",
-      "summary": "Before/after main-character transitions with hand gestures to an original sound — flip the phone and the scene changes. Emerging-fast containers in the same lane: ceiling-fan wipes, AI roleplay comedy, yellow-text relationship reposts, October calendar memes. (Later, Oct 2, 2026; Lightreel, week ending Oct 3.)",
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "trump-faces-growing-backlash-over-plans-to-import-",
+      "title": "Trump faces growing backlash over plans to import diesel from Russia",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JLTdMMUNzbXZyUlFqRnlfNHdiazhVZnp6V1FOQWxBQ3VFRDAyZTZMb0hnU2dveFVNNmc2Ti1yUm00RVBUclg4cjZOclFfcVVnQzRMU2tUX3FEWUk?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:05.384086+00:00",
+      "summary": "BBC · Sun, 11 Oct 2026 23:18:45 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "artificial-intelligence-abc-news",
+      "title": "Artificial Intelligence - ABC News",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBHQWNlSHQzMUlJUTg1elY2MnlhM0JMRDkyUlMtYUdwNDFYYmF2cktZZzg2X3pDMVluRVhBS01LY0VnRVI0bnk2eElyWkczd0dLdktiOFMybWl5STktVHc?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:09.871570+00:00",
+      "summary": "Breaking News, Latest News and Videos · Fri, 09 Oct 2026 22:13:22 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "grounded-reasoning-and-artificial-intelligence-for",
+      "title": "Grounded Reasoning and Artificial Intelligence for National Security (GRAINS) Workshop",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeHpadkNSRlN0czliVkQxQ2NPOWtwVUZaV21WVlIzY2tzUXM0bDhmbEVJa3lEaVhCTkNBRzlRT1JnZ0w2N1EtQWE4N0JMU0h0Rlg3akZKNHJlTS1fblUtSFJpSlBXVUk5S3N1Tm5RT1pFeUdrR01uWFZINnN4QU5xN0dYYnNMeXU2QlJZcDMwaFc2ZW54NWlrYVVDaGdoR3BrYnJj?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:09.871590+00:00",
+      "summary": "Idaho National Laboratory (.gov) · Fri, 09 Oct 2026 19:35:44 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "delay-the-deployment-of-artificial-intelligence-op",
+      "title": "Delay the deployment of Artificial Intelligence | Opinion letters",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQW56bGREZFY1M3dxT09fVXhtTWhUZ0RRTWdoVWJkNHJVNDNPV3VRN0dFaEY3MmZTd0pyY19adlpDb2U1NWNkVTNBYXdzdDN6cXNfdloySVRNQ2dGT3ZSWHd6QjlfdHVNU3A5bkNQaE9Qc0Z6WEM2bGhjenVpdkEwTlNvcl9ZcklMZEQzWVNlSWUxN2lYRkNHVEJIS3FqU3dCRFlvanMzcElyZUtDQkpvWEpaMFpkSUdBYWJranVYVkJoR285RWFR?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:09.871607+00:00",
+      "summary": "The News-Press · Sun, 11 Oct 2026 10:02:00 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "vectorized-clz-and-ctz",
+      "title": "Vectorized CLZ and CTZ",
+      "source": "hackernews",
+      "url": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:08:20.387129+00:00",
+      "summary": "4 points · 0 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "apsw-another-python-sqlite-wrapper",
+      "title": "apsw: Another Python SQLite Wrapper",
+      "source": "hackernews",
+      "url": "https://github.com/rogerbinns/apsw",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:08:26.979605+00:00",
+      "summary": "68 points · 15 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "tiny-desk-merch-latin-music-month",
+      "title": "Tiny Desk Merch: Latin Music Month",
+      "source": "yt-rss:NPRMusic",
+      "url": "https://www.youtube.com/shorts/jYRH2z3v-Ug",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:11:11.819023+00:00",
+      "summary": "NPRMusic · published 2026-09-28. A message from NPR Marketing - POV: You're supposed to model new merch but you're just a podcast host. \n\nTees, totes, bucket hats and mugs, all with extra sazón, available here: shopnpr.org/LMM",
+      "category": "music",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [
+        "pov"
+      ],
+      "sources": [
+        "yt-rss:NPRMusic"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "tori-kelly-explains-how-she-takes-on-different-per",
+      "title": "Tori Kelly explains how she takes on different personas while recording in the studio,",
+      "source": "yt-rss:NPRMusic",
+      "url": "https://www.youtube.com/shorts/IN5lC_T7yOA",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:11:11.819034+00:00",
+      "summary": "NPRMusic · published 2026-09-24. #tinytalk • Tori Kelly explains how she takes on different personas while recording in the studio, each with their own approach to the vocals, to achieve the sound she's going for.⁠\n\n#tinydesk #nprmus",
+      "category": "music",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:NPRMusic"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "did-stella-lefty-really-steal-from-other-songs",
+      "title": "Did Stella Lefty really steal from other songs?",
+      "source": "yt-rss:NPRMusic",
+      "url": "https://www.youtube.com/shorts/2rn94FAndBw",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:11:11.819058+00:00",
+      "summary": "NPRMusic · published 2026-09-23. Did Stella Lefty really steal from other songs? NPR Music's Hazel Cills breaks down what \"interpolation\" is and how it's extremely common in popular music.⁠",
+      "category": "music",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:NPRMusic"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "the-3-best-movies-to-watch-on-prime-video-this-wee",
+      "title": "The 3 Best Movies to Watch on Prime Video This Week",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORF9LcUdMaFVISk9xRWtiYXN0QWZzWGxYLTZUd0ZNTHAwTl84eHlkSkRZejhULWJZUVNHc3FNYVRzV3BIOFlHMFc2d3dQdDFEM00wREVqenZ0bVY2QmJndExVQVRzT2lHMmxIYmotVTdoQ2pxUXE5cWRtcGVReWV0UWRxQXgxbjkzYlpNSEtqOEtLWmR1S21QLTNZYTc1Njg?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:21.259605+00:00",
+      "summary": "TheWrap · Sun, 11 Oct 2026 20:00:00 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "david-oyelowo-is-most-excited-to-share-his-movie-c",
+      "title": "David Oyelowo Is Most Excited to Share His Movie “Clarissa” with His 4 Kids For Its ‘Authentic’ Portrayal of Nigeria (Exclusive)",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONVZxUmR2LTY0cmZNeEhMaGJiV3JXVVZrU3dodlEtTkVFY2xSSW9wck9VaU4yU0xKb0JuaEF6a29KTlR2V01SMEx1Y3BKdzNMM0dXVmdEcDFGTnREQVV6YnpLb1ZuVXNNNjBjXzBLemZLYmoxQnkydFNFaTQ0WjZSdU5hTnVoRDhjc1I0TE8zUmlLTFdfMFo1cmc5NXY2aTYx?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:21.259625+00:00",
+      "summary": "Yahoo · Mon, 12 Oct 2026 02:00:00 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "haunted-mansion-movies-when-freeform-airs-both-and",
+      "title": "Haunted Mansion movies: when Freeform airs both and where to stream",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1lVkE5WTlETHlpbVpWOE41V2J5V3daUVVxUHo5a245NzgwcUdpNkllb2VOekxlM19DaGVjdHBDRG84cjBnWW9aSWRXQWxpSTJ2U2kxVXMwZ3RvZW5FZ3BjWnh0MGVONE0?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:21.259642+00:00",
+      "summary": "IMDb · Mon, 12 Oct 2026 01:48:11 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "right-after-being-bought-by-saudia-arabia-ea-is-al",
+      "title": "Right after being bought by saudia arabia, EA is already being accused of defaulting on $1.5b of its $20b debt that it owes",
+      "source": "reddit-rss:r/gaming",
+      "url": "https://www.reddit.com/r/gaming/comments/1x2u8zg/right_after_being_bought_by_saudia_arabia_ea_is/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:07:41.906174+00:00",
+      "summary": "u//u/Iggy_Slayer · r/gaming · 2026-10-11",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/gaming"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "saudi-arabia-s-riyadh-airport-hit-by-second-houthi",
+      "title": "Saudi Arabia's Riyadh airport hit by second Houthi strike in two days",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pTXNOa29VTU9DTUM2MFZOZko1TUs0cWRiOE1fUTIyYUUzcS1oTjNsLS1NMnhld2xFc1E3Y1Jac3VqOXEwUnRxTkpmNXF1dzM3WDlHTnlXVFh5M0k?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:38.510923+00:00",
+      "summary": "BBC · Sun, 11 Oct 2026 22:45:58 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "trump-declares-energy-ceasefire-between-russia-and",
+      "title": "Trump declares 'energy ceasefire' between Russia and Ukraine; Zelenskyy is waiting for details",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSFhUNWlxY0VWSjhteUoxY1JNYnIxR2RJLXV4NE02eWxKd1lsRU1JNHB2aUVmeDNDZzBWaWVPM0JxUlBIcEZCMkRnQkJ3dlBPYjBxcko3TGlaSEY4ZndpN05FVDk0NFowU1J6bmhxUkpzRGN6STdQbnNyS0Z6X0t6dmhVcVFTQkZWQ2NGY9IBkgFBVV95cUxQYTAxSjdOUGkwUWxZNmwwbUNkckYxTnM5cUFXakhSLVg2LXp5R0lIYVliZnl5SmlvelFnVXdjR3FMRWxscnlBZFdQVXM2blJBV3VLMWFPOXlSeUxubW90RkZKMm5BeWRNc1VSX1N1T1lqczNHZVVxeVAwUnpaNklKVXNCZ1V5alIzX19SVFF2Z3dvdw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:38.511001+00:00",
+      "summary": "CNBC · Sun, 11 Oct 2026 19:32:40 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "trump-considering-firing-kimberly-guilfoyle-after-",
+      "title": "Trump considering firing Kimberly Guilfoyle after reports of misconduct, source says",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMnlVREtIY0l2LXNpcUxaZVl1TkNGMTZTY0lTT3lJYWllckpxeE1iYzVzbUpQZTZ0YUFKMlZpQWV0YlpLblMzb1Z4RTN6Y0xzcmVQMkxmbmczME8yZ0hncGdZN0hveFdGeUltWjI4bmxaeXZOclRaZzNSc2NNRU5NMXNPeWtNNkZQcEF2aGl3Y1BRMWx3dXRuVkRkOA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:38.511029+00:00",
+      "summary": "CNN · Sun, 11 Oct 2026 22:17:01 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "hurricane-isaias-in-video-and-pictures",
+      "title": "Hurricane Isaias in Video and Pictures",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNX01WdllNYXZrbWp6YTBmU0JrZkg2LVphOW9fQ242dGtZdjRQTXI2eGp6NGVoM3pYX2NidkFKVDIyOU9aQUdncFhtd3ZwaUE3c25DOU5nX1J6RUQxcDFiN2pqUGsyUDFLbF9rYWhJOG9tRnd0SnpDTHNzN0RDLUNoai05dk1xdw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:38.511069+00:00",
+      "summary": "The New York Times · Sun, 11 Oct 2026 21:14:12 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "las-vegas-on-the-verge-of-all-time-rainfall-record",
+      "title": "Las Vegas on the verge of all-time rainfall record as Rachel’s storms surge",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdXlXZmIwdElzeWxaeEMySFNMNFR1T3V5clJ3dVFyZU5pYzZDRVZySjFaMVd6Smx3UGlqa1g1NHpIb0tkZ0xwM0x2UU9rR0tZOG81NXF5U2JlUGlOaGpKZ29yRkliY0s0QWJ5QjVYUk16UmhSWFRTNV9hUi1rS3JORUJ1c1ZWZlBTZUh6QThRclFKcXplTExTWk9RZzc?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:38.511094+00:00",
+      "summary": "Las Vegas Review-Journal · Sun, 11 Oct 2026 22:17:55 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "newsom-typically-relishes-battling-trump-on-lettin",
+      "title": "Newsom typically relishes battling Trump. On letting undocumented college students work, not so much.",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObk1wS3RySllnbGEwYm15dkJzbmxMZTlOdnZtY01ua2xNam9FdUhEXzk0ZC1JblVuNl9tWmM1b2VKVm83TVNnSEw5OW1MODJhNms1TDFDb2hhZFNQMXd1NlVVSHZnal9LMm9rOEpUOTRhSGcxNVI1NHhGQ3drLW1WMGNPR2RlX2M?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:38.511129+00:00",
+      "summary": "Politico · Sun, 11 Oct 2026 18:00:00 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "uk-to-strengthen-cyber-defences-as-minister-calls-",
+      "title": "UK to strengthen cyber defences as minister calls for AI firms to increase safety efforts",
+      "source": "gnews-technology",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMFpoZ1QxOWVmSkdqblhxbndMUjAyZUtFbWpIcHFnU0Q0SHNJMms1UkVLOVhmUHVDUXpIQmhmSVpoRWE5TTNHRFFXNkNSbmVhTXpFaEk3ZkU2TTk3VWt1Wk1xZE9iVkZiT0JzNDlkRXlUZEI0U0I5ZXl3aUpJWDBXN1RmaUcwYTJiZ2hNb3U0bFBoaHhvR2Z4eTI5LWNYYTRTYXJPQU56QQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:39.671304+00:00",
+      "summary": "The Guardian · Sun, 11 Oct 2026 23:01:00 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-technology"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "roob-s-observations-as-eagles-suffer-unimaginable-",
+      "title": "Roob's Observations as Eagles suffer unimaginable London loss to Jaguars",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWVUtN09HdFVKMVNfY3U3ZEwtVzdaZ2E2eUtUdjRtR0M1eGk4cllGZUpSTDVPaENRNGg0NERaZUtSVWRFSld5UHhYNElHaGs4dXdnUHM3Y3RlRlB2VnRaeGYxMjFrZ1lTbnhyY05ZTFZpX0VyaFFjdTZjZENLdUc2UU1ZVlBibmtJZFN4QThRTDlCVTNFa0ZzNHdOWVNHaTVQcUlZdDNvYzhyODJpVmZ3V24ySFZZMkJEbWNnUkNmd3liNFRyNUs1Y1l6YnJnak9fM3lsbUo1VG7SAeABQVVfeXFMTXlMWXJHbDlqRjlpNTdwY2NkRF9YMFZUVkFiWVhabkxVMU9lcHRPLW9taERaUmYwMVR6TTBXQTk0WC13b3hHZUpfdGp3UmozdXZvRUdjSjlZdnhaWHN5QWtkUjZFXzZLdjdZR1FPUjBNSnlIZ1pjejFJV1BQdVM5X1JtMC0tX2dlZHg2bkpud3J2ZXJJZk5FT3FpZllKc2l2aHA4bjY1dlp6bmZ2QnZaMjVpcTcwTlpHVlZzSjROSjhsSTNlVzg1em93MldadVk5aWNhWV9KcnB5MXdIeTdVYmE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266880+00:00",
+      "summary": "NBC Sports Philadelphia · Sun, 11 Oct 2026 17:28:03 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "vikings-touchdown-drought-isn-t-keeping-them-from-",
+      "title": "Vikings’ touchdown drought isn’t keeping them from winning",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQ2tmczNJY3pXVlVWSGJEQl84aDJVOGlrOVdxQlA3RkJnM0p1d29XRTZOX2FrbFZEZ1ZQUnFYVVd6Mkx3VWVZRXVVdDBzQmVLaVRJTDhmeWttYjNRVnBMWUFjbWIzMFVWLTRFd2RDOTRCUU9uaWE4c0RENU5MaG1GaXRzVWtuRmdEUm94ZFhOSnNDUFhMTmNwY3hTVUtYWVNNSnNLdVVaaGo5TDR0elh6d0s5OGpyV3ZlNlE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266900+00:00",
+      "summary": "NBC Sports · Sun, 11 Oct 2026 14:26:25 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "greeny-remembers-mike-ditka-he-was-the-biggest-sta",
+      "title": "Greeny remembers Mike Ditka: He was the 'biggest star in Chicago sports'",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA0cW9YcWhBOGtWMlZTajRwTFhJaS1Gbzk1TFlRdGgxTHdiX3Z1b2pTS09ob3M3T2lXMVJIUFBYNXlaOEV4ZmRkdnF4SW1KSEhPTi1mS3g3eHU?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266915+00:00",
+      "summary": "ESPN · Fri, 09 Oct 2026 18:30:23 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "matthew-golden-surpasses-100-yard-mark",
+      "title": "Matthew Golden surpasses 100-yard mark",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObEtMZDBrTGdCMXNiNTkwcmRFa2RWRnoxN1JDZFZmYWt2bGp1V3NwTUdMUlJZaWZfVHc4akdVVUUzNVNnLXJESHhTd0VxdERHa28zdms5dEFSbExRcmdGcTF0WFBZeEF6cGgwbmNRaDNiMlJDa282aGpDcE96clRVckRZZ0taRlZJUEE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266931+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 23:42:19 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "2026-mlb-playoff-bracket-schedule-scores-as-dodger",
+      "title": "2026 MLB playoff bracket: Schedule, scores as Dodgers vs. Brewers NLCS kicks off on Sunday",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOX3pxZzFTUmJrLVBBdUNvYzJQa1VTcUdac2NyN1l4d1hZcHAzRkFGbXdPR2NBUlladEZ1b2R5YzQ5dExlbUNJWlVONzhmZlpuc2x5UVJuQ2VrMFV5dHdjLVBwcVZoaUlYY3ZDbk92SjBoMmtrSTk2Vkh3U3VMMjU3ZWd2WXBORjdJVmVuYkF5UEpjY0lxQnZhaU1XU2xvdw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266948+00:00",
+      "summary": "CBS Sports · Sun, 11 Oct 2026 19:05:00 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "high-school-sports-roundup-for-oct-9-10-2026",
+      "title": "High school sports roundup for Oct. 9-10, 2026",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaWJUaVpvUGh2LVI4RFM5ZFlheEd3UlZJejNLQXRNY1VLTXkweDB6X2pCeHdMekJhcGI1aUVic3I5QmRRbXhqY0RRU2htQVIyY2ttc0JXNjF2YjI5ZlktbFAyYW93WWRhOG1YdThPWTdibUpVYUt1NFZyOEtqaWhBUkJvWWd6dw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266965+00:00",
+      "summary": "My Edmonds News · Sun, 11 Oct 2026 18:56:20 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "colston-loveland-held-in-check-against-gb",
+      "title": "Colston Loveland held in check against GB",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYm9iRGQ4LTJnNFBPaTRBOEZVSWVNQzJBYVBXWDFWWVA3Mjh4RktlVWw3UXdqV085WDdQMGFfVEJCVFVPb2x2QkxmSTdWVUlMZ2ZtNVlhQW8wMHRpMGhJMnVNdUs4TWJlbDg1NEZpeDQtZElYTkwxcUp0LWVtd1VEZXBrZXdka1duaTdxMA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266980+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:33:07 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "cleveland-guardians-pitching-was-simply-dominant-i",
+      "title": "Cleveland Guardians’ Pitching Was Simply Dominant in their ALDS Victory",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbURXOFhQOVhfNTVIMWFUNjFFLWFwUGhTbkU5cklCYWROMWFRNkFGMWlZRDdvMHVrSnVYdzVqUE12bURveWp3T25YNTFfSkY0NEQ3bENvZEtqZ3k5bklzLWMtZUNDTnY1SWd1Y2JURVEtVC12SHh6YklwZnFWOHBNRUxJT3lvU3hnMUVjSE4wZE94VlZFYmdHaw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:43.266998+00:00",
+      "summary": "Yahoo Sports · Sun, 11 Oct 2026 22:10:15 GMT",
+      "category": "sports",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "bill-gates-warns-cyberattacks-most-imminent-ai-thr",
+      "title": "Bill Gates warns cyberattacks most imminent AI threat",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQlk1MEkxSmlfblJNdU1oY1l1NlFCMWQ1VTN5RHRkQkgyclF4aV9WcGJHODdZTTJSTldVcDdtd0xfX0pHcDJyZkZxaEU4aW1hY2FFb2JpNDJFd2dRcUJVek9OUVVJWF81U1hEY09iNlQyd0l3RHdfV0JfMzFRMkNjQnhPSjFvTUJDeWVrZUFMX3JWNldJbFpqMg?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:44.671776+00:00",
+      "summary": "Yahoo · Sun, 11 Oct 2026 15:51:29 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "ukraine-has-dealt-a-big-blow-to-russia-s-ai-and-cl",
+      "title": "Ukraine Has Dealt a Big Blow to Russia’s AI and Cloud Infrastructure",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSEx6RDA1YURLbldpaWlrcU1FLXVhaGY0emQycW1Zc0EyZWZXTTdtYTZITjA5ZWtScHNMV2tDeWZHUU9sWXlFdjNabG1mQ1NjcFJSeTZidS1xc0QtR2Vkb2loNmVFUGxQRElIRTFnd0hQamQwX3pVZ2tFdmRnUTR5TFhwYU5KcEE3MmstZnE1TDRnN3JSeV8tUFhZSkFkQ0k?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:44.671794+00:00",
+      "summary": "Gizmodo · Sun, 11 Oct 2026 17:55:07 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "tattoos-you-can-turn-on-and-off",
+      "title": "Tattoos you can turn on and off",
+      "source": "hackernews",
+      "url": "https://www.livescience.com/technology/cool-chemistry-trick-allows-new-tattoos-to-turn-on-and-off",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:43.843513+00:00",
+      "summary": "4 points · 0 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "wizards-practice-notebook-keefe-says-sarr-is-trend",
+      "title": "Wizards Practice Notebook: Keefe says Sarr is ‘trending toward’ returning Saturday",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSUxZME56eDBPRy1xaDdKMlU2WHpfNjRfemk4SFNPbnN5bVZ1NjJkU0EwV2V5NlpqTHdXUFFSTHZhaGEwZVpTSkhhOFZQSXI0VDNJd2V1dVVzaXROMWJ3amZzYWNqNWVqWjdUS1h2d3pwb1pKV21GSjkxSUhvSHFBZEhIQkhfUzFkbUh3NWhjZHVaLXVhQXkxRzByb0xhbFhqRmNYYzFyYmQzOGpNRGpHNWxjT0V0WndwTGlLYTJxZHE5RnZtT3NyWU8xdHpUWXUxVFR2UjU3NA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:48.270568+00:00",
+      "summary": "Bullets Forever · Fri, 09 Oct 2026 17:46:21 GMT",
+      "category": "news",
+      "platforms": [
+        "x",
+        "tiktok",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "5-best-pc-strategy-games-of-all-time-ranked",
+      "title": "5 Best PC Strategy Games Of All Time, Ranked",
+      "source": "gnews-q:video games",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11T05qSm1qYjBFYnNmb184QnJwb0dsV1pmeVBEVEh1MkluRUV6SVlfVGJCemlKZmdNSzZ2TEEzUDFHZXhwaHRiSXNzaEE5NktYX0UtWXB5UWxUM1ZwbDAtajBJVm5KQ0NzVVE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:15:53.101110+00:00",
+      "summary": "SVG · Sun, 11 Oct 2026 20:00:00 GMT",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:video games"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "wildlife-park-confirms-tiger-will-not-be-euthanise",
+      "title": "Wildlife park confirms tiger will not be euthanised after man mauled to death | Yorkshire",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x38vsn/wildlife_park_confirms_tiger_will_not_be/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836712+00:00",
+      "summary": "u//u/CharlieKonR · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "pope-leo-says-he-will-undergo-surgery-to-remove-a-",
+      "title": "Pope Leo says he will undergo surgery to remove a nodule on his lung",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x352me/pope_leo_says_he_will_undergo_surgery_to_remove_a/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836804+00:00",
+      "summary": "u//u/JustLightChop · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "panama-declares-state-of-emergency-as-powerful-qua",
+      "title": "Panama declares state of emergency as powerful quake aftershocks rattle communities | 7.7 and 6.6 in magnitude",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x39ggv/panama_declares_state_of_emergency_as_powerful/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836821+00:00",
+      "summary": "u//u/krvnslyn · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "justice-department-investigating-television-networ",
+      "title": "Justice Department investigating television networks over Trump pool coverage",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x380tq/justice_department_investigating_television/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836836+00:00",
+      "summary": "u//u/IncomeRoyal9209 · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "man-hospitalized-after-being-struck-by-vehicle-dri",
+      "title": "Man hospitalized after being struck by vehicle driven by ICE agent during chase",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x2t7al/man_hospitalized_after_being_struck_by_vehicle/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836851+00:00",
+      "summary": "u//u/Elixibren · r/news · 2026-10-10",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "at-least-12-killed-and-hundreds-injured-in-saudi-a",
+      "title": "At least 12 killed and hundreds injured in Saudi Arabia airport missile strikes",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x2rjra/at_least_12_killed_and_hundreds_injured_in_saudi/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836884+00:00",
+      "summary": "u//u/Tye3636 · r/news · 2026-10-10",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "ai-surveillance-startup-flock-to-cut-several-hundr",
+      "title": "AI surveillance startup Flock to cut several hundred jobs amid backlash, sources say",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x2yle4/ai_surveillance_startup_flock_to_cut_several/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836897+00:00",
+      "summary": "u//u/averagebaldwhiteguy · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "drone-strike-by-sudan-paramilitary-kills-41-near-e",
+      "title": "Drone strike by Sudan paramilitary kills 41 near Ethiopian border, rights group says",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x35b6a/drone_strike_by_sudan_paramilitary_kills_41_near/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836911+00:00",
+      "summary": "u//u/Secure_Ant1085 · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "halloween-candy-prices-rise-as-americans-prepare-t",
+      "title": "Halloween candy prices rise as Americans prepare to spend $13.5 billion this season",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x36sl3/halloween_candy_prices_rise_as_americans_prepare/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836924+00:00",
+      "summary": "u//u/Tall_Job_8568 · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "polish-police-arrest-a-man-suspected-of-planning-t",
+      "title": "Polish police arrest a man suspected of planning to attack Prime Minister Donald Tusk",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x3c8gt/polish_police_arrest_a_man_suspected_of_planning/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836937+00:00",
+      "summary": "u//u/AudibleNod · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "man-and-his-nephew-jailed-for-child-sex-offences",
+      "title": "Man and his nephew jailed for child sex offences",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x2z2ot/man_and_his_nephew_jailed_for_child_sex_offences/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T02:16:09.836951+00:00",
+      "summary": "u//u/Ultimate_Sigma_Boy67 · r/news · 2026-10-11",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "stop-the-wedding",
+      "title": "\"Stop the Wedding\" photo carousels",
+      "source": "New Engen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "velocity": 66,
+      "opportunity_score": 43,
+      "hashtags": [
+        "#stopthewedding",
+        "#weddingregret"
+      ],
+      "detected_at": "2026-10-04T00:00:00-07:00",
+      "summary": "Wedding-regret photo carousels turning the movie objection moment into honest answers: creators post wedding-day photos captioned 'Stop the wedding, but...' — some petty and funny (a dress nobody liked), some real stories from marriages people wish they'd left sooner. A carousel-native format riding the wedding-season long tail, carried by Ashe's audio (New Engen October trends; GenZNewZ, Oct 2026",
       "category": "meme",
       "platforms": [
         "tiktok"
       ],
       "format_tags": [
-        "meme"
+        "format"
       ],
       "sources": [
-        "Later",
-        "Lightreel"
-      ]
+        "New Engen",
+        "GenZNewZ"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "text-from-a",
+      "title": "Text From \"-A\" — the Pretty Little Liars call-out",
+      "source": "MediaNug (source URL not found on 2026-10-11 re-check)",
+      "url": "",
+      "velocity": 58,
+      "opportunity_score": 38,
+      "hashtags": [
+        "#textfroma",
+        "#prettylittleliars"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Pretty Little Liars copy trend: creators call out something they're hiding — bad habits, guilty purchases, secret opinions — as if \"-A\" is watching and about to expose them. Claimed 53.5K videos (MediaNug, 10/1/26; Later, Oct 2, 2026), but neither source URL could be re-found on the 2026-10-11 re-check — treat as UNVERIFIED and confirm the trend is live before building on it.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "MediaNug (source URL not found on 2026-10-11 re-check)",
+        "Later (source URL not found on 2026-10-11 re-check)"
+      ],
+      "trend_type": "topic"
+    },
+    {
+      "id": "be-ok",
+      "title": "\"Be OK\" — happy dance over chaos",
+      "source": "New Engen (source URL not found on 2026-10-11 re-check)",
+      "url": "",
+      "velocity": 58,
+      "opportunity_score": 38,
+      "hashtags": [
+        "#beok",
+        "#ingridmichaelson"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "Ingrid Michaelson's \"I Just Want to Be OK\" claimed as a happy-dance-over-chaos sound: an upbeat track clashing with chaotic captions about real life — inboxes, bills, deadlines. Claimed by New Engen (Oct 2026) and Later (Oct 2, 2026), but neither source URL could be re-found on the 2026-10-11 re-check — treat as UNVERIFIED and confirm the trend is live before building on it.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance"
+      ],
+      "sources": [
+        "New Engen (source URL not found on 2026-10-11 re-check)",
+        "Later (source URL not found on 2026-10-11 re-check)"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "there-she-goes",
+      "title": "\"There She Goes\" shimmy dance",
+      "source": "SocialBee",
+      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+      "velocity": 58,
+      "opportunity_score": 38,
+      "hashtags": [
+        "#thereshegoes",
+        "#shimmydance"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "Cyril Riley & MOONLGHT's \"There she goes\" soundtracking a shimmy dance — loose shoulders, walking forward, main-character energy. Still on SocialBee's Oct-7 trending-songs list, but the trend began in April (iheartdogs) and has run for months: late-season steady, not climbing. Pets doing their own version is the resilient sub-lane.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "dance"
+      ],
+      "sources": [
+        "SocialBee",
+        "iHeartDogs"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "ramalama-walk",
+      "title": "Ramalama Costume Walk",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 90,
+      "opportunity_score": 36,
+      "hashtags": [
+        "#halloweencostume",
+        "#ramalama",
+        "#spookyseason"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Low-angle creepy walk zooming out to reveal a Halloween fit, set to Róisín Murphy's \"Ramalama (Bang Bang)\". Still Rising per SocialPilot's Oct-5 re-check (430.7K videos; biggest new videos Oct 3–4), and it spawned this cycle's #1 caption variant: 'Did I Win This Trend?'. Tlinky (Oct 2026) confirms the format is back from last Halloween and works for costume shops, salons, and venues. No text, no t",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "caption",
+        "format",
+        "trend"
+      ],
+      "sources": [
+        "SocialPilot",
+        "New Engen",
+        "Tlinky",
+        "Vadbav"
+      ],
+      "trend_type": "format"
+    },
+    {
+      "id": "patient-zero-swift",
+      "title": "Taylor Swift \"Patient Zero\" wedding edits",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 84,
+      "opportunity_score": 34,
+      "hashtags": [
+        "#patientzero",
+        "#taylorswift",
+        "#weddingtiktok"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "Taylor Swift's \"Patient Zero\" (single out Sept 25, on The Life of a Showgirl: The Encore) soundtracks wedding edits — plus \"leaving something behind\" audio for quitting jobs and ending habits. Still Rising per SocialPilot (149.3K videos; new videos daily, ~one more week of lift expected), and TikTok built a dedicated Search Hub for the release (Sept 30, 2026): fans earn a profile frame for posting",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot",
+        "Virlo",
+        "TikTokNewsHub",
+        "New Engen"
+      ],
+      "trend_type": "topic"
     }
   ]
 }

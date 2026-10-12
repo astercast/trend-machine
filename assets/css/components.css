@@ -136,6 +136,10 @@
   transition: border-color var(--dur-1) var(--ease-out), color var(--dur-1) var(--ease-out);
 }
 .chip.plat { border-color: #2b3a55; color: var(--signal); background: var(--signal-dim); }
+/* wave 7: format-vs-topic chip — distinct from platform chips */
+.chip.type { border-color: var(--warm); color: var(--warm); background: rgba(255, 178, 36, .08); }
+.src-name { color: var(--ink-dim); }
+.src-unverified { color: var(--warm); font-size: 12px; font-style: italic; }
 .tag {
   display: inline-block; font-family: var(--mono); font-size: var(--fs-tiny);
   color: var(--signal); margin: 0 10px 6px 0; font-weight: 600;

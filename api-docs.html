@@ -58,8 +58,8 @@ Start at the <a href="api/v1/index.json">manifest</a>: every endpoint with its d
 <table class="ep-table" aria-label="API endpoints">
 <thead><tr><th scope="col">Endpoint</th><th scope="col">What it is</th><th scope="col">Schema</th></tr></thead>
 <tbody id="ep-body">
-<tr><td><code>api/v1/trends.json</code></td><td>All topics, full dossiers — sort by <code>opportunity_score</code> desc for the hottest plays</td><td><code>api/v1/schema/trends.json</code></td></tr>
-<tr><td><code>api/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded</td><td><code>api/v1/schema/trends-flat.json</code></td></tr>
+<tr><td><code>api/v1/trends.json</code></td><td>All topics, full dossiers — sort by <code>opportunity_score</code> desc for the hottest plays; each topic now carries <code>trend_type</code> (format/topic/format+topic) and seeded <code>verification</code> flags</td><td><code>api/v1/schema/trends.json</code></td></tr>
+<tr><td><code>api/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded; includes <code>trend_type</code></td><td><code>api/v1/schema/trends-flat.json</code></td></tr>
 <tr><td><code>api/v1/trends.flat.sample.json</code></td><td>Labeled <code>sample:true</code> twin — development only</td><td><code>api/v1/schema/trends-flat-sample.json</code></td></tr>
 <tr><td><code>api/v1/trends.flat.js</code></td><td>JSONP twin (<code>trendsCallback(...)</code>) — CORS-safe for pure static hosts</td><td>same as flat feed</td></tr>
 <tr><td><code>api/v1/hashtags.json</code></td><td>Tag → topic-id index</td><td><code>api/v1/schema/hashtags.json</code></td></tr>
