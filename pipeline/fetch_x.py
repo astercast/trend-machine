@@ -19,9 +19,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 from common import hit, save_hits, USER_AGENT, extract_hashtags
 
 QUERIES = [
-    ("min_faves:1000 lang:en -is:retweet", "meme", ["x", "tiktok"]),
-    ("#gaming min_faves:500 lang:en -is:retweet", "gaming", ["x", "youtube"]),
-    ("#newmusic min_faves:500 lang:en -is:retweet", "music", ["x", "tiktok"]),
+    ("min_faves:1000 lang:en -is:retweet", "meme", ["x"]),
+    ("#gaming min_faves:500 lang:en -is:retweet", "gaming", ["x"]),
+    ("#newmusic min_faves:500 lang:en -is:retweet", "music", ["x"]),
 ]
 
 def main():

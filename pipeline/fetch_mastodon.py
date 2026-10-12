@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Mastodon trends fetcher (public API, no key, no signup).
 
-https://mastodon.social/data/v1/trends — trending hashtags of the fediverse.
-Hashtags here often surface 12–48h before they hit mainstream TikTok.
+https://mastodon.social/api/v1/trends/tags — trending hashtags of the
+fediverse. Hashtags here often surface 12–48h before they hit mainstream
+TikTok. (The path is /api/v1/trends/tags; /data/v1/trends 404s — that typo
+kept this lane dark until wave 20.)
 """
 import sys
 sys.path.insert(0, __import__("os").path.dirname(__file__))
@@ -10,7 +12,7 @@ from common import fetch_json, hit, save_hits
 
 def main():
     try:
-        tags = fetch_json("https://mastodon.social/data/v1/trends?limit=20")
+        tags = fetch_json("https://mastodon.social/api/v1/trends/tags?limit=20")
     except Exception as e:
         print(f"[mastodon] SKIP: {e}")
         return

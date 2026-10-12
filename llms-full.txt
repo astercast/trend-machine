@@ -1,5 +1,5 @@
 # Trend Machine — full briefing
-Generated 2026-10-12T22:48:58.833299+00:00
+Generated 2026-10-12T23:29:49.820021+00:00
 
 ## "6-7" — Gen Alpha's defining brainrot joke
 Category: meme | Platforms: tiktok, youtube | Opportunity 92 | Velocity 92 | Last seen 2026-10-11T19:30:00-07:00
@@ -582,7 +582,7 @@ Hook: "Watch the fan"
 Hook: "One wipe, new scene"
 
 ## RJ Mitte, actor best known for playing Walter White Jr. on ‘Breaking Bad,’ dies at 34
-Category: news | Platforms: youtube, x | Opportunity 62 | Velocity 95 | Last seen 2026-10-12T22:46:45.819494+00:00
+Category: news | Platforms: youtube, x, google, reddit | Opportunity 62 | Velocity 95 | Last seen 2026-10-12T23:27:00.505161+00:00
 NBC News · Mon, 12 Oct 2026 21:41:13 GMT
 
 ## #spookyseason peaks — Halloween is a Saturday
@@ -828,7 +828,7 @@ Hook: "I just want the best for you (absolutely not)"
 Hook: "Advice, but make it dramatic"
 
 ## Fridges and freezers in French supermarkets hit by cyber attack. #France #CyberAttack #BBCNews
-Category: news | Platforms: youtube, x | Opportunity 51 | Velocity 51 | Last seen 2026-10-12T22:48:45.170129+00:00
+Category: news | Platforms: youtube, x | Opportunity 51 | Velocity 51 | Last seen 2026-10-12T23:29:25.319538+00:00
 BBCNews · published 2026-10-12.
 Hashtags: #France #CyberAttack #BBCNews
 
@@ -853,7 +853,7 @@ Hook: "Ordinary morning, title-sequence energy"
 Hook: "The walk is the video"
 
 ## BBC on front line in Yemen's desert war. #MiddleEast #BBCNews
-Category: news | Platforms: youtube, x | Opportunity 49 | Velocity 49 | Last seen 2026-10-12T22:48:45.170018+00:00
+Category: news | Platforms: youtube, x | Opportunity 49 | Velocity 49 | Last seen 2026-10-12T23:29:25.319490+00:00
 BBCNews · published 2026-10-12.
 Hashtags: #MiddleEast #BBCNews
 
@@ -868,7 +868,7 @@ Hook: "Your routine, but make it a jazz record"
 Hook: "POV: romanticizing the season"
 
 ## Trump diesel deal with Russia
-Category: news | Platforms: bluesky | Opportunity 47 | Velocity 72 | Last seen 2026-10-12T22:48:19.727253+00:00
+Category: news | Platforms: bluesky | Opportunity 47 | Velocity 72 | Last seen 2026-10-12T23:28:55.232714+00:00
 Live on Bluesky's trending topics (Oct 11): reports that Trump struck a diesel deal with Russia, framed as sending fuel to lower US prices — reversing years of pressure over Ukraine. A fast-moving news item; the tracker records the topic, not a position.
 Hashtags: #diesel #russia #energy
 Angle 1: What the deal reportedly covers
@@ -877,23 +877,128 @@ Angle 3: Fast-moving story: verify before amplifying
 Hook: "Developing story"
 Hook: "Verify before amplifying"
 
+## US actress Selma Blair arrested after allegedly attacking attendants on flight. #BBCNews
+Category: news | Platforms: youtube, x | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:29:25.319421+00:00
+BBCNews · published 2026-10-12.
+Hashtags: #BBCNews
+
+## #バーガータワー
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089836+00:00
+275 recent uses across the fediverse
+Hashtags: #バーガータワー
+
+## #bas
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089892+00:00
+110 recent uses across the fediverse
+Hashtags: #bas
+
+## #ilhanomar
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089907+00:00
+72 recent uses across the fediverse
+Hashtags: #ilhanomar
+
+## #DontAskASong
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089916+00:00
+233 recent uses across the fediverse
+Hashtags: #DontAskASong
+
+## #MonochromeMonday
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089925+00:00
+98 recent uses across the fediverse
+Hashtags: #MonochromeMonday
+
+## #BärbelBas
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089935+00:00
+50 recent uses across the fediverse
+Hashtags: #BärbelBas
+
+## #thebat1959
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089943+00:00
+663 recent uses across the fediverse
+Hashtags: #thebat1959
+
+## #indigenouspeoplesday
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089955+00:00
+129 recent uses across the fediverse
+Hashtags: #indigenouspeoplesday
+
+## #toss
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089963+00:00
+31 recent uses across the fediverse
+Hashtags: #toss
+
+## #SilentSunday
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089971+00:00
+974 recent uses across the fediverse
+Hashtags: #SilentSunday
+
+## #breakingbad
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089979+00:00
+32 recent uses across the fediverse
+Hashtags: #breakingbad
+
+## #Monsterdon
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089987+00:00
+3081 recent uses across the fediverse
+Hashtags: #Monsterdon
+
+## #rjmitte
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.089995+00:00
+30 recent uses across the fediverse
+Hashtags: #rjmitte
+
+## #mastobada
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.090005+00:00
+193 recent uses across the fediverse
+Hashtags: #mastobada
+
+## #MondayMotivation
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.090012+00:00
+44 recent uses across the fediverse
+Hashtags: #MondayMotivation
+
+## #Fotomontag
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.090020+00:00
+58 recent uses across the fediverse
+Hashtags: #Fotomontag
+
+## #mondog
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.090027+00:00
+25 recent uses across the fediverse
+Hashtags: #mondog
+
+## #mondayrandom10
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.092327+00:00
+20 recent uses across the fediverse
+Hashtags: #mondayrandom10
+
+## #theplaylistsuggestion
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.092368+00:00
+23 recent uses across the fediverse
+Hashtags: #theplaylistsuggestion
+
+## #columbusday
+Category: culture | Platforms: mastodon | Opportunity 47 | Velocity 47 | Last seen 2026-10-12T23:28:53.092380+00:00
+69 recent uses across the fediverse
+Hashtags: #columbusday
+
 ## Los Texmaniacs: Tiny Desk Concert
-Category: music | Platforms: youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:48:55.539260+00:00
+Category: music | Platforms: youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:29:43.992077+00:00
 NPRMusic · NPR Music · and Los Texmaniacs · 176 thousand views · 3 days ago
 
 ## Finishing What we Started Seven Years Ago
-Category: entertainment | Platforms: youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:48:42.578544+00:00
+Category: entertainment | Platforms: youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:29:19.873201+00:00
 1,377,283 views · Linus Tech Tips
 
 ## The All COSTCO Gaming Setup
-Category: tech | Platforms: youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:48:42.578554+00:00
+Category: tech | Platforms: youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:29:19.873212+00:00
 LinusTechTips · published 2026-10-06. Thanks to UGREEN for sponsoring this video! Check out their MagFlow Pro lineup below!
 
 UGREEN MagFlow Pro Magnetic Power Bank(US, 27% OFF): https://amzn.to/3Sv8XWv
 UGREEN MagFlow Pro Magnetic Power Ba
 
 ## Canadian Thanksgiving (Oct 12)
-Category: culture | Platforms: bluesky, instagram | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:14:25.586371+00:00
+Category: culture | Platforms: bluesky, instagram | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:28:55.232754+00:00
 Live on Bluesky's trending topics (Oct 11): Canadians sharing holiday greetings, turkey-dinner stories, and gratitude lists ahead of Thanksgiving Monday (Oct 12). A 24-hour content window — the greeting-and-gratitude format peaks the day before and the day of.
 Hashtags: #canadianthanksgiving #thanksgiving #grateful
 Angle 1: Gratitude lists, Canadian edition
@@ -903,83 +1008,71 @@ Hook: "Thankful, eh?"
 Hook: "The 24-hour gratitude window"
 
 ## Making Friends Monday! Share your game tags here!
-Category: gaming | Platforms: youtube, twitch | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:57.443490+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:27:06.942006+00:00
 u//u/AutoModerator · r/gaming · 2026-09-07
 
 ## Nurses are taking on TikTok’s viral health myths — here’s how they’re fighting back
-Category: meme | Platforms: tiktok, instagram | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:35.191182+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:26:51.661099+00:00
 AOL.com · Tue, 06 Oct 2026 20:55:28 GMT
 
 ## Archbishop of the US military says Catholic soldiers should not serve on firing squad
-Category: news | Platforms: youtube, x | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:45.819258+00:00
+Category: news | Platforms: youtube, x, google | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:26:36.452708+00:00
 Politico · Mon, 12 Oct 2026 18:57:00 GMT
 
 ## Mamdani orders review of NYPD's use-of-force policies as progressives call for greater change
-Category: news | Platforms: youtube, x | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:45.819303+00:00
+Category: news | Platforms: youtube, x, reddit | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:27:00.505143+00:00
 AP News · Mon, 12 Oct 2026 17:46:00 GMT
 
-## Breaking Bad Star RJ Mitte Dies Aged 34
-Category: news | Platforms: x, youtube, tiktok | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:54.099346+00:00
-u//u/ReyisME · r/news · 2026-10-12
-
-## Trump 'not happy' with Kimberly Guilfoyle, weighs firing her
-Category: news | Platforms: youtube, x, bluesky | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:48:19.727144+00:00
-CNBC · Mon, 12 Oct 2026 21:15:23 GMT
-
-## Beyond Backrooms: 10 Scariest Movies on Netflix for Obsessive Horror Fans
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:25.542494+00:00
-IMDb · Mon, 12 Oct 2026 21:20:23 GMT
-
 ## Federal agents searched Rep. Ilhan Omar’s home as part of criminal investigation, AP sources say
-Category: news | Platforms: x, youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:45.819285+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:27:00.505120+00:00
 u//u/sleepDeprivedHuman · r/news · 2026-10-12
 
 ## Selma Blair arrested after alleged altercation on Delta flight
-Category: news | Platforms: x, youtube | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T22:46:45.819507+00:00
+Category: news | Platforms: x, youtube, google, reddit | Opportunity 46 | Velocity 70 | Last seen 2026-10-12T23:27:00.505254+00:00
 u//u/judgyjudgersen · r/news · 2026-10-12
 
 ## MJ Lenderman Debuts New Music At Good Moon Festival
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664328+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166537+00:00
 Stereogum · Sun, 11 Oct 2026 14:23:00 GMT
 
 ## New Music Video: ‘Mozhesh Da Nye Chotshesh!’
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664400+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166603+00:00
 Anash.org · Sun, 11 Oct 2026 13:12:53 GMT
 
 ## Rihanna Reveals Just How Many Unreleased Songs She Is Sitting On as Fans Eagerly Await New Music
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664443+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166647+00:00
 Just Jared · Sat, 10 Oct 2026 22:51:12 GMT
 
 ## “I’ve Learned To Trust Myself”: Victoria Justice Is Entering A New Era Of Music — And She’s Doing It On Her Own Terms
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664479+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166684+00:00
 BuzzFeed · Fri, 09 Oct 2026 14:03:02 GMT
 
 ## The best October Prime Day Owala deals: The TikTok-viral Owala FreeSip water bottle is on sale
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191056+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661003+00:00
 Mashable · Sat, 10 Oct 2026 17:52:39 GMT
 
 ## How to Make Pizza Beans, the Saucy, Cheesy Dish Taking Over Social Media
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191087+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661035+00:00
 Food & Wine · Fri, 25 Sep 2026 07:00:00 GMT
 
 ## 17 TikTok-Viral Amazon Products on Sale Ahead of Prime Day
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191107+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661135+00:00
 Good Housekeeping · Mon, 28 Sep 2026 07:00:00 GMT
 
 ## So, You’d Like To Sell Your Print Issues Of The Onion?
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:14.746370+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:42.747173+00:00
 197 points · 22 comments
 
 ## WTF is a Googlebook?
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.488896+00:00
+Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.907911+00:00
 5,562,173 views · Marques Brownlee
 
 ## These TikTok-Viral Bags Will Get You Through Fall
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191123+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661151+00:00
 fashionista.com · Fri, 18 Sep 2026 07:00:00 GMT
 
 ## Xiaomi 18 Fold: How Does This Happen?
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490706+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.907970+00:00
 MKBHD · published 2026-10-02. This is not an iPhone Duo. Xiaomi is at it again.
 
 The desk pad! https://mkbhd.com/products/overlay-deskpad
@@ -989,7 +1082,7 @@ Shoutout to dbrand for helping to source the phone from China.
 Playlist of MKBHD Intro mus
 
 ## Dear YouTube!
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490759+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.907994+00:00
 MKBHD · published 2026-09-30. Let's talk about this new video A/B testing feature
 
 The Waveform podcast: https://youtu.be/UD9X5WxZ5nE?si=OxzE_7V_D1xiy_hD&t=3870
@@ -999,7 +1092,7 @@ MKBHD Merch: http://shop.MKBHD.com
 Playlist of MKBHD Intro musi
 
 ## Nothing Headphone 1 Pro: They Copied the Wrong Thing!
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490772+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.908004+00:00
 MKBHD · published 2026-09-29. Nothing decided to join the $400+ ANC headphone ranks, and made just one bizarre mistake...
 
 MKBHD Merch: http://shop.MKBHD.com
@@ -1009,7 +1102,7 @@ Playlist of MKBHD Intro music: https://goo.gl/B3AWV5
 Headphones provid
 
 ## Xiaomi 18 Pro Max: They've Done It Again!
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490799+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.908021+00:00
 MKBHD · published 2026-09-24. If one-upping the iPhone was a sport, Xiaomi would be Lebron James.
 
 MKBHD Merch: http://shop.MKBHD.com
@@ -1022,7 +1115,7 @@ Phone provided by Xiaomi for review.
 h
 
 ## The Apple Watch Has a Problem
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490814+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.908034+00:00
 MKBHD · published 2026-09-22. Apple Watch series 12 has a new "Audio Intelligence" feature, let's talk about it
 
 Apple vs the AI Race: https://youtu.be/eWKY0OnPByg
@@ -1032,7 +1125,7 @@ MKBHD Merch: http://shop.MKBHD.com
 Apple wearable stud
 
 ## iPhone 18 Pro Review: All About that Chip
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490823+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.908043+00:00
 MKBHD · published 2026-09-16. iPhone 18 Pro is basically an S year upgrade. And one part of it is really impressive.
 
 Protect your new iPhone 18 with a case or screen protector at http://dbrand.com/shop/iphone-18
@@ -1040,7 +1133,7 @@ Protect your new iPhone 18 with a case or screen protector at http://dbrand.com/
 The scale of a t
 
 ## iPhone Duo: What We Missed!
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:40.490831+00:00
+Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:17.908050+00:00
 MKBHD · published 2026-09-12. A few new thoughts from the days after the Duo unveil.
 
 That shirt: http://shop.MKBHD.com
@@ -1049,62 +1142,54 @@ The full iPhone Duo Hands-on: https://youtu.be/Od6M0AXpcxQ
 
 Playlist of MKBHD Intro music: https://goo.gl/B3A
 
-## Cyberleek’s 24-Min GTA 6 Leak Puts Focus on Lucia [2026]
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409613+00:00
-https://tech-insider.org/ · Sun, 11 Oct 2026 21:50:28 GMT
-
-## "We want to keep his name alive." Power Trip are honouring fallen frontman Riley Gale with their first new songs in almost a decade
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664497+00:00
-Louder · Fri, 09 Oct 2026 18:04:55 GMT
-
 ## What are you watching and what do you recommend? (Week of October 09, 2026)
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099211+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773030+00:00
 u//u/AutoModerator · r/television · 2026-10-09
 
 ## Yujiro Hanma face in manga vs Tekken 8. Bandai Namco Studios & Arika did absolutely fantastic work to make this happen.
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.447360+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942224+00:00
 u//u/Youngstown_WuTang · r/gaming · 2026-10-11
 
 ## I seriously should NOT be dropping this.
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707386+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.819964+00:00
 pewdiepie · 2.9 million views · 10 days ago
 
 ## Thank you and Goodbye.
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707436+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.820010+00:00
 pewdiepie · 12 million views · 2 weeks ago
 
 ## Earthquake by Mount Fuji
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707456+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.820036+00:00
 pewdiepie · 1.5 million views · 2 months ago
 
 ## Meet our newest family member
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707481+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.820061+00:00
 pewdiepie · 2.6 million views · 3 months ago
 
 ## I tried to make a Manga
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707490+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.820072+00:00
 pewdiepie · 2 million views · 3 months ago
 
 ## MY trillion $Dollar Project is finally OUT!
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707499+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.820081+00:00
 pewdiepie · 3.8 million views · 4 months ago
 
 ## Ending the vlogs.
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707507+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.820089+00:00
 pewdiepie · 2 million views · 4 months ago
 
 ## Never been this disappointed..
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:38.707515+00:00
+Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:15.821974+00:00
 pewdiepie · 1.8 million views · 5 months ago
 
 ## Pros Try Fake AI Photoshop
-Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:42.578524+00:00
+Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:19.873181+00:00
 LinusTechTips · published 2026-10-10. Secure your business with ThreatLocker today and sign up for Zero Trust World here: https://www.ztw.com and get $200 off with code ZTWLTT27 
 
 You can also learn more about how ThreatLocker can help yo
 
 ## I’ve Wanted This Robot for 10 Years
-Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:42.578562+00:00
+Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:19.873221+00:00
 LinusTechTips · published 2026-10-04. Get 20% off DeleteMe US consumer plans when you go to http://joindeleteme.com/LTT20 and use promo code LTT20 at checkout.
 
 DeleteMe International Plans: https://international.joindeleteme.com/
@@ -1112,522 +1197,442 @@ DeleteMe International Plans: https://international.joindeleteme.com/
 Ten ye
 
 ## Don’t Buy a "Pro" Controller. Do This Instead
-Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:42.578577+00:00
+Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:19.873236+00:00
 LinusTechTips · published 2026-10-03. Start building your website today! Visit https://squarespace.syuh.net/LTT and use offer code LTT for 10% off
 
 First-party Xbox and PlayStation controllers are built to last, but they’re often missing
 
 ## Tim Bernardes: Tiny Desk Concert
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539320+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992141+00:00
 NPRMusic · NPR Music · and Tim Bernardes · 599 thousand views · 5 days ago
 
 ## Panteón Rococó: Tiny Desk Concert
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539333+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992154+00:00
 NPRMusic · NPR Music · and Panteón Rococó Oficial · 3.5 million views · 10 days ago
 
 ## Melissa Aldana with Gonzalo Rubalcaba: Tiny Desk Concert
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539342+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992164+00:00
 NPRMusic · NPR Music · and 2 more · 281 thousand views · 12 days ago
 
 ## Alex Ferreira: Tiny Desk Concert
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539368+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992190+00:00
 NPRMusic · NPR Music · and Alex Ferreira · 342 thousand views · 2 weeks ago
 
 ## Eat Everything In A Grocery Store, Win $1,000,000
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658785+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756203+00:00
 MrBeast · 235 million views · 8 days ago
 
 ## I Built A City To Save Kids From Illegal Labor
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658810+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756228+00:00
 MrBeast · 98 million views · 3 weeks ago
 
 ## I Survived The Most Extreme Places On Earth
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658827+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756245+00:00
 MrBeast · 125 million views · 1 month ago
 
 ## Escape 100 Cops, Win $500,000
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658843+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756261+00:00
 MrBeast · 118 million views · 1 month ago
 
-## The Decemberists Share New Song From Movie Adaptation Of Colin Meloy's 'Wildwood'
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664594+00:00
-Stereogum · Fri, 09 Oct 2026 18:50:00 GMT
-
 ## Fingerprints are the new cookies
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:50.095152+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:09.867914+00:00
 174 points · 80 comments
 
 ## Total Annihilation, rebuilt for modern computers
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:51.952007+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:12.529885+00:00
 419 points · 179 comments
 
 ## Cartographers of North Korea (2019)
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:17.589931+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:49.681863+00:00
 210 points · 38 comments
 
 ## The gap in shared understanding of LLM capability is widening
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:50.755154+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:11.401952+00:00
 329 points · 499 comments
 
 ## Terence Tao: Math 2.0 [pdf]
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:56.802995+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:18.454980+00:00
 349 points · 396 comments
 
 ## Passkeys are a trap
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:49.035855+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:08.988668+00:00
 400 points · 223 comments
 
 ## NYC's "Click to Cancel" rule is now in effect
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:55.223929+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:16.200324+00:00
 398 points · 197 comments
 
 ## Bot traffic from Yandex
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:53.163817+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:14.168810+00:00
 594 points · 239 comments
 
 ## 3rd Yandex Cloud Data Center Was Hit
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:54.491290+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:14.959027+00:00
 562 points · 685 comments
 
 ## Build your own decision model
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:58.728161+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:28.824038+00:00
 454 points · 102 comments
 
 ## Nitter: Update Oct 10th seeking funding and legal help
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:59.911476+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:31.241277+00:00
 426 points · 229 comments
 
 ## LineageOS 24
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:00.979519+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:32.848061+00:00
 414 points · 170 comments
 
 ## Documents add to evidence in climate deception case against ExxonMobil
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:10.435234+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:39.001903+00:00
 392 points · 213 comments
 
 ## I paid people to try and follow my README
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:08.945056+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:35.621903+00:00
 379 points · 190 comments
 
 ## IRCv3
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:09.633418+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:36.898023+00:00
 368 points · 309 comments
 
 ## I'm sorry, but you still have to think
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:08.212976+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:34.814369+00:00
 339 points · 155 comments
 
 ## TikTok’s Viral Mascara Is Just £9 In The Amazon Prime Day Sale
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191146+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661169+00:00
 British Vogue · Wed, 07 Oct 2026 11:43:38 GMT
 
 ## Breakfast in America by Supertramp: The Rare Art of a Perfect Pop-Rock Album
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634818+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678841+00:00
 u//u/Illustrious_Oil_3200 · r/Music · 2026-10-11
 
-## AMA/Q&A Announcement - Alex Gibney - Monday 10/12 at 2 PM ET - Oscar-Winning Documentarian of 'Musk', 'Going Clear: Scientology & the Prison of Belief', 'Enron: The Smartest Guys i
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681735+00:00
-u//u/BunyipPouch · r/movies · 2026-10-09
-
 ## Official Discussion Megathread (The Social Reckoning / Other Mommy) plus throwbacks!
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681829+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969518+00:00
 u//u/LiteraryBoner · r/movies · 2026-10-09
 
 ## 'Weird Al' Yankovic Reveals a Sequel to His Biopic ‘WEIRD’ is Written but is Struggling to Find a Studio; Daniel Radcliffe is Onboard to Return
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.682085+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969712+00:00
 u//u/MarvelsGrantMan136 · r/movies · 2026-10-11
 
-## Musk (2026, Alex Gibney)
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.682340+00:00
-u//u/welcometravelers · r/movies · 2026-10-12
-
 ## YouTube Ruined It!
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195838+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937103+00:00
 u//u/Unlikely_Affect2264 · r/YouTube · 2026-10-12
 
 ## PSA - DO NOT send links unless you remove the tracker, YouTube is showing the account you are using
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195907+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937169+00:00
 u//u/kittyidiot · r/YouTube · 2026-10-12
 
 ## Can we talk about the Kirby icon in this subreddit?
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634804+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678810+00:00
 u//u/Maleficent_Ninja778 · r/Music · 2026-10-12
 
 ## Carly Rae Jepsen Adds Eight More Songs To Her New Double Album Day And Night
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664619+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166720+00:00
 Stereogum · Fri, 09 Oct 2026 14:58:00 GMT
 
 ## Doom 2016 Composer Mick Gordon Says He'd Return to the Doom Series "In a Heartbeat"
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446582+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942128+00:00
 u//u/RenatsMC · r/gaming · 2026-10-12
 
 ## Giving $10,000 To A Random Subscriber
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658719+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756146+00:00
 MrBeast · published 2026-10-09.
 
 ## What’s Inside My Briefcase?
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658800+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756218+00:00
 MrBeast · published 2026-09-27.
 
 ## Can We Build an Entire Village?
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658819+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756237+00:00
 MrBeast · published 2026-09-18.
 
 ## World’s Largest Tennis Match
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:36.658835+00:00
+Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:13.756253+00:00
 MrBeast · published 2026-08-23.
 
 ## Ayra Starr - Heaven Baby ft. ZAYN
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628792+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551887+00:00
 VEVO · published 2026-10-09. @ayrastarr's dream came true with this @ZAYN collab. Check out "Heaven Baby," the latest Global Video of the Week.
 
 ## Mario - The Story Behind "Let Me Love You"
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628805+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551900+00:00
 VEVO · published 2026-10-09.
 
 ## Will Orville Peck Ever Ditch The Mask?
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628814+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551908+00:00
 VEVO · published 2026-10-08. #orvillepeck
 
 ## BINI - Blush | Live from Vevo Studios
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628825+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551919+00:00
 VEVO · published 2026-10-08. In the middle of a world tour, Filipino girl group BINI made a pit stop at our studio for a performance of "Blush."  #BINI
 
 ## Huddy “Somebody To Hate” | Live from Vevo Studios
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628835+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551929+00:00
 VEVO · published 2026-10-06. @Huddy shows off his new sound with a performance of “Somebody To Hate” — the title track of his new album!
 
 ## Master Peace - IYKYK
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628851+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551939+00:00
 VEVO · published 2026-10-06. We threw Master Peace some curveballs in our IYKYK! 😂
 Find out what he had to say about his all-time favourites!
 
 ## I Tried An $8 TikTok-Viral Hair Dye—It Gave Me Sun-Kissed Highlights in 30 Minutes
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191164+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661185+00:00
 Who What Wear · Fri, 18 Sep 2026 07:00:00 GMT
 
 ## Google told to halt work on datacentres in Finland over environmental concerns
-Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:01.965634+00:00
+Category: tech | Platforms: youtube, x, hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:33.590385+00:00
 419 points · 123 comments
 
 ## I Have Strong Feelings About Air Conditioning in the Tech House
-Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:42.578585+00:00
+Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:19.873245+00:00
 LinusTechTips · published 2026-10-01. Get a free 15-day trial of Odoo’s all-in-one business solution and see how it can make your life easier! Check it out at https://www.odoo.com/ltt
 
 It is HOT in the Tech House, and we're tired of sweat
 
 ## Tiny Desk Merch: Latin Music Month
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539350+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992172+00:00
 NPRMusic · published 2026-09-28. A message from NPR Marketing - POV: You're supposed to model new merch but you're just a podcast host. 
 
 Tees, totes, bucket hats and mugs, all with extra sazón, available here: shopnpr.org/LMM
 
 ## Tori Kelly explains how she takes on different personas while recording in the studio,
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539360+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992182+00:00
 NPRMusic · published 2026-09-24. #tinytalk • Tori Kelly explains how she takes on different personas while recording in the studio, each with their own approach to the vocals, to achieve the sound she's going for.⁠
 
 #tinydesk #nprmus
 
 ## Did Stella Lefty really steal from other songs?
-Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:55.539383+00:00
+Category: music | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:43.992205+00:00
 NPRMusic · published 2026-09-23. Did Stella Lefty really steal from other songs? NPR Music's Hazel Cills breaks down what "interpolation" is and how it's extremely common in popular music.⁠
 
-## Sydney Sweeney doubles down with topless sports betting ad weeks after backlash: ‘I’m flattered’
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814219+00:00
-Fox News · Sun, 11 Oct 2026 19:59:17 GMT
-
-## Connections: Sports Edition today: Hints and answers for Oct. 12, 2026, puzzle No. 749 - The Athletic
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814179+00:00
-The New York Times · Mon, 12 Oct 2026 04:00:00 GMT
-
-## Rapid reactions: Cardinals fall to Lions, their fourth straight loss
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814014+00:00
-Arizona Sports · Mon, 12 Oct 2026 00:56:53 GMT
-
 ## Show HN: PS2 games statically recompiled to WebAssembly
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:41.730550+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:56.628841+00:00
 11 points · 0 comments
 
-## Arizona is trending for one of the nation's best safeties closing in on a decision
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.259546+00:00
-On3 · Mon, 12 Oct 2026 02:05:40 GMT
-
 ## Jeremiyah Love 'trending well' to play despite ankle reinjury
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.259580+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031805+00:00
 ESPN · Fri, 09 Oct 2026 19:31:00 GMT
 
 ## Buffalo Bills trending up, trending down: Who Bills need on Monday Night Football in Los Angeles
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.265066+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031843+00:00
 Buffalo Rumblings · Sat, 10 Oct 2026 14:00:00 GMT
 
 ## On alert for wind and rain Saturday, Sunday trending drier
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.265109+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031882+00:00
 WFIE | 14 News · Fri, 09 Oct 2026 21:16:00 GMT
 
 ## Texas says insurance rates are trending down. State records show a more complicated picture.
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.265089+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031864+00:00
 ABC13 Houston · Fri, 09 Oct 2026 21:30:21 GMT
 
 ## Rihanna reveals she has over 170 songs in her music vault waiting to be released
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634756+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678758+00:00
 u//u/dailymail · r/Music · 2026-10-12
 
 ## S*x bots are now using GIFs in comment sections
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195857+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937122+00:00
 u//u/robbie678554 · r/YouTube · 2026-10-12
 
 ## My yt account of 9 years with no content whatsoever was banned today.
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195888+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937153+00:00
 u//u/HargaCult · r/YouTube · 2026-10-12
 
 ## Are These Real Shows and Movies or Fake Ones From 30 Rock ? A Quiz.
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542572+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433693+00:00
 Slate · Mon, 12 Oct 2026 09:45:00 GMT
 
 ## Power Trip Share First New Music Since Death Of Riley Gale: Listen
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664635+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166701+00:00
 Stereogum · Fri, 09 Oct 2026 13:51:00 GMT
 
 ## Nine Inch Nails - Closer [Industrial]
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634836+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678854+00:00
 u//u/I-am-reality-1 · r/Music · 2026-10-12
 
 ## Gaza Doc 'NAZA' Surpasses $500K Without Distributor After Sparking Protests
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681977+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969618+00:00
 u//u/lulzxdxdxd · r/movies · 2026-10-12
 
-## ‘Furious’ judge halts tree removal, demands answers on Trump’s D.C. golf plan
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078276+00:00
-The Washington Post · Mon, 12 Oct 2026 19:19:30 GMT
-
-## How much rain fell from this storm? See rainfall totals in San Diego County
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078301+00:00
-NBC 7 San Diego · Mon, 12 Oct 2026 13:46:50 GMT
-
-## Big Brother’s Amber Siyavus Dies at 46, Milania Giudice Shares Public Apology and More Top Us Stories
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992281+00:00
-Us Weekly · Mon, 12 Oct 2026 20:46:22 GMT
-
-## Michael Douglas confirms Charlie Sheen put ‘c---’ sign on Sean Young during “Wall Street” shoot
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992320+00:00
-Yahoo · Sun, 11 Oct 2026 13:30:00 GMT
-
-## Test your pop culture: From Hollywood to the Heartland
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992361+00:00
-Fox News · Sat, 10 Oct 2026 15:30:41 GMT
-
-## Kelly Clarkson fires back at Brooklyn novelty shop, escalating feud over animatronic bird
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.990824+00:00
-Entertainment Weekly · Mon, 12 Oct 2026 02:18:52 GMT
-
-## Entertainment News: October 12, 2026
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992398+00:00
-FOX 17 West Michigan News · Mon, 12 Oct 2026 15:37:15 GMT
-
-## Hailee Steinfeld, Rashida Jones star in new 'Hexed' trailer
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992491+00:00
-Hometown News Now · Mon, 12 Oct 2026 19:56:23 GMT
-
-## James Madison to exit Sun Belt, join American Conference
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814160+00:00
-ESPN · Mon, 12 Oct 2026 14:53:00 GMT
-
 ## 2026 NFL Defense Rankings: Team Pass and Rush Stats
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814261+00:00
+Category: sports | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:34.538673+00:00
 FOX Sports · Mon, 12 Oct 2026 12:38:00 GMT
 
 ## Excitement Builds For Men’s Basketball At Winter Sports Media Day - University of Colorado Athletics
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814281+00:00
+Category: sports | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:34.538693+00:00
 University of Colorado Athletics · Mon, 12 Oct 2026 20:23:04 GMT
 
 ## 'I was blessed to be her mom': Cheyenne woman starts youth sports league in honor of daughter
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814126+00:00
+Category: sports | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:34.538713+00:00
 Cap City News · Mon, 12 Oct 2026 20:06:41 GMT
 
 ## As sports betting is normalized, college players become targets of angry bettors
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814300+00:00
+Category: sports | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:34.538731+00:00
 Maryland Matters · Mon, 12 Oct 2026 18:03:53 GMT
 
 ## Weekly Rankings Announced for Fall Sports (Oct. 12)
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814316+00:00
+Category: sports | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:34.538747+00:00
 CHSAA · Mon, 12 Oct 2026 14:32:09 GMT
 
 ## An overlooked sci-fi movie shows how disruption by AI could be positive for society
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822147+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.137261+00:00
 The Conversation · Mon, 12 Oct 2026 15:00:40 GMT
 
 ## “Consensus Truth” in the Age of AI
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822226+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141663+00:00
 City Journal · Fri, 09 Oct 2026 16:34:43 GMT
 
 ## Microsoft president urges global AI regulation, warns of safety gaps
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822275+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141713+00:00
 Fox News · Mon, 12 Oct 2026 20:13:13 GMT
 
 ## OpenAI's latest blow to mathematicians: 'They have annihilated my field of research'
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822293+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141758+00:00
 Le Monde.fr · Mon, 12 Oct 2026 13:30:07 GMT
 
 ## IMF says AI investment keeps global growth around 3% but brings massive disruption
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822362+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141831+00:00
 Reuters · Mon, 12 Oct 2026 03:50:00 GMT
 
 ## Cyber-attack similar to OpenAI Medicare breach seems likely in UK, says minister
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822327+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141795+00:00
 The Guardian · Mon, 12 Oct 2026 16:23:00 GMT
 
 ## Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822347+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141814+00:00
 CNBC · Mon, 12 Oct 2026 08:27:52 GMT
 
-## Is ‘Attention’ the Essence of Intelligence?
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822379+00:00
-Quanta Magazine · Mon, 12 Oct 2026 14:20:29 GMT
-
 ## UC Santa Barbara taking a ‘base camp’ approach to artificial intelligence
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:12.545602+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:35.447102+00:00
 UC Santa Barbara · Mon, 12 Oct 2026 17:52:40 GMT
 
 ## UA Little Rock students explore the future through new artificial intelligence degree
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:12.545619+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:35.447125+00:00
 UA Little Rock · Mon, 12 Oct 2026 17:06:03 GMT
 
 ## How Artificial Intelligence Can Help With Critical Thinking
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:12.545636+00:00
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:35.447225+00:00
 Greater Good: The Science of a Meaningful Life · Mon, 12 Oct 2026 19:16:19 GMT
 
-## Artificial Dichotomy: Beyond the All or Nothing Approach to Regulating Artificial Intelligence
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:12.545692+00:00
-Pelican Institute · Mon, 12 Oct 2026 16:22:10 GMT
-
-## Army turning to AI in its fight against biological threats
-Category: tech | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:12.545709+00:00
-DefenseScoop · Mon, 12 Oct 2026 21:09:17 GMT
-
 ## AI Is a Tool. Using It Well Takes Skill.
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:20.308515+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:28.245236+00:00
 50 points · 24 comments
 
 ## GLM-Legal
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:13.558320+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:41.665962+00:00
 370 points · 210 comments
 
 ## A Modern Web App in C
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:17.007896+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:48.511743+00:00
 323 points · 134 comments
 
 ## Writing a Demoscene Intro for the ZX Spectrum
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:26.039830+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:40.533626+00:00
 41 points · 4 comments
 
 ## Phreak.ing – Internet Phone Switch
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:24.322107+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:39.342486+00:00
 13 points · 0 comments
 
 ## Hackers activate automatic defrosting in supermarket fridges across Europe
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:16.457967+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:44.239258+00:00
 326 points · 553 comments
 
 ## Codex CLI installs a persistent, self-updating background daemon by default
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:11.339366+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:37.926746+00:00
 370 points · 207 comments
 
 ## Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:29.579786+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:44.062993+00:00
 74 points · 50 comments
 
 ## Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:32.274472+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:44.986454+00:00
 216 points · 54 comments
 
 ## Citroen revives the 2CV for an electric age
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:34.488492+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:46.681620+00:00
 230 points · 270 comments
 
 ## Making big downloads resumable in Firefox
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:30.825563+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:42.758102+00:00
 20 points · 0 comments
 
 ## Muse Wonder
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:57.587545+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:19.301664+00:00
 457 points · 244 comments
 
 ## The Making Of Super Mario 64 – full Giles Goddard interview (2001)
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:36.252461+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:48.797831+00:00
 203 points · 76 comments
 
 ## Secret of Orange Cats Revealed After 60-Year Search
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:38.458118+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:50.447414+00:00
 211 points · 169 comments
 
 ## AI coding agents generate more code, but not more software
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:39.115170+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:59.072121+00:00
 269 points · 223 comments
 
 ## Kevin Kelly's 2016 AI Predictions, 10 Years Later
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:40.052920+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:53.215375+00:00
 105 points · 30 comments
 
 ## Thinking will become a hobby
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:42.842577+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:58.262095+00:00
 178 points · 234 comments
 
 ## 'AI' Is Not a Tool by Rich Hickey
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:45.476099+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:00.048837+00:00
 118 points · 54 comments
 
 ## Solar panels that plug into your wall
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:40.978898+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:54.031201+00:00
 71 points · 66 comments
 
 ## Publishers Killed the Paperback, Then Blamed Readers
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:44.477142+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:06.117906+00:00
 81 points · 61 comments
 
 ## Show HN: Brickbrag – A multiplayer brick-building world in the browser
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:37.500593+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:55.607127+00:00
 4 points · 0 comments
 
 ## Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:46.870620+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:01.359527+00:00
 43 points · 5 comments
 
-## America's Longest Highway Tunnel (2025)
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:43.633328+00:00
-3 points · 1 comments
-
 ## Deloitte falsified documents to evade tax on Abramovich's wealth
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:56.069854+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:17.133058+00:00
 577 points · 193 comments
 
 ## QGIS enacts moratorium on AI contributions
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:15.773332+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:46.962913+00:00
 354 points · 390 comments
 
 ## Zip Tie Tuning vs Linus Tech Tips
-Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:42.578460+00:00
+Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:19.873113+00:00
 LinusTechTips · published 2026-10-12. We put Zip Tie Tuning and Linus Tech Tips head to head. Who knows more tech acronyms?
 
 ## This is an Official Sony Product
-Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:42.578511+00:00
+Category: tech | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:19.873167+00:00
 LinusTechTips · published 2026-10-12. Get a free 15-day trial of Odoo’s all-in-one business solution and see how it can make your life easier! Check it out at https://www.odoo.com/ltt
 
 Sony really made an official Linux kit for the PlaySt
 
 ## What we know about Houthi attacks on Saudi Arabia airports | BBC News
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:45.170094+00:00
+Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:25.319500+00:00
 BBCNews · published 2026-10-12. Saudi Arabia’s energy minister has threatened a 'serious' response to the deadly Houthi attacks on Riyadh's international airport. Flights remain suspended and are expected to remain so for days. 
  
 T
 
 ## John Simpson on the pivotal moments that shaped the world as we know it | The Global Story
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:45.170108+00:00
+Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:25.319509+00:00
 BBCNews · published 2026-10-12. Politicians and commentators keep telling us we’re living through unprecedented times. But how unusual is the world we’re living in, really? 
 
 John Simpson has spent 60 years reporting for the BBC, wi
 
 ## Trump says you ‘can’t fight’ data centres - but many are | BBC News
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:45.170118+00:00
+Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:25.319517+00:00
 BBCNews · published 2026-10-12. AI data centres are becoming a major US political issue.
 
 Candidates and lawmakers in both parties are challenging their growth, but Donald Trump supports them - calling critics “backwards”.
@@ -1635,50 +1640,38 @@ Candidates and lawmakers in both parties are challenging their growth, but Donal
 With the
 
 ## How Ukraine has transformed modern warfare | The Security Brief LIVE
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:45.172863+00:00
+Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:25.319547+00:00
 BBCNews · published 2026-10-12. The war in Ukraine has changed warfare forever. Drones, AI and rapidly evolving tactics are being implemented by both sides. What has the world learnt and where does the war go next?
 
 For the first ti
 
-## Does President Trump's 'energy ceasefire' actually exist? | BBC Newscast
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:45.172905+00:00
-BBCNews · published 2026-10-12. Does the energy ceasefire President Trump announced between Russia and Ukraine actually exist? 
-
-Over the weekend Trump said a truce had been reached. But whilst Ukrainian President Zelensky said he w
-
-## Saudia Arabia vows 'serious response' to Houthi attacks and other stories | Global News Podcast
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:45.172923+00:00
-BBCNews · published 2026-10-12. The Iran-backed Houthis in Yemen have continued to fire missiles towards Saudi Arabia, after a number of deadly attacks on Riyadh's main international airport. 
-
-Almost all flights to and from the air
-
 ## The new Miami Vice starring Michael B. Jordan and Austin Butler is coming in 2028
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290684+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617483+00:00
 IGN · published 2026-10-12. Subscribe to IGN for more!
 http://www.youtube.com/user/IGNentertainment?sub_confirmation=1
 
 #IGN
 
 ## A mix of personal and professional issues turned Ben Affleck off from making his Batman movie
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290694+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617494+00:00
 IGN · published 2026-10-12. Subscribe to IGN for more!
 http://www.youtube.com/user/IGNentertainment?sub_confirmation=1
 
 #IGN
 
 ## Bill Murray is back as a Ghostbuster
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290702+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617503+00:00
 IGN · published 2026-10-12. Subscribe to IGN for more!
 http://www.youtube.com/user/IGNentertainment?sub_confirmation=1
 
 #IGN
 
 ## Shadow of the Road - Official Anime Opening Trailer | IGN Fall Fan Fest 2026
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290720+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617522+00:00
 IGN · published 2026-10-12. Shadow of the Road is a tactical RPG set in an alternative version of 19th-century Japan. The new trailer reimagines the game as a shounen anime, complete with an epic soundtrack. The "anime open
 
 ## Cozy After Dark 2026 | Cozy Games With a Dark Side
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290730+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617531+00:00
 IGN · published 2026-10-12. Welcome to the first-ever Cozy After Dark Showcase!
 
 Cozy on the surface. Creepy underneath.
@@ -1687,15 +1680,15 @@ Cozy After Dark Steam Event:
 https://store.steampowered.com/curator/45664741/sale/TheCozyAfterDarkShowcase
 
 ## Up Close with the Avengers: Doomsday Costumes | NYCC 2026
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290737+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617544+00:00
 IGN · published 2026-10-12. Doomsday is coming! With the release of Avengers: Doomsday getting ever closer, we got to take a closer look at the Costumes from the upcoming film, from the floor of NYCC 2026! With the costumes for
 
 ## Blind Descent - Official Release Date Trailer | IGN Fall Fan Fest 2026
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290745+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617552+00:00
 IGN · published 2026-10-12. Get a look at the Release Date Trailer for Blind Descent, an open-world survival adventure game developed by Pokuch. Players will explore the great mysteries of Mars alone or with friends in co-op. Cr
 
 ## Dissecting the Mike Evans & Trevon Diggs TRASH TALK in the 49ers-Seahawks game 😬 | Big Day
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592501+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740735+00:00
 ESPN · published 2026-10-12. Dan Orlovsky, Mina Kimes and Steve Smith Sr. join Big Day with Peter Schrager to recap some of the top NFL Week 5 action, including:
 
 0:00 49ers improve to 5-0
@@ -1703,13 +1696,13 @@ ESPN · published 2026-10-12. Dan Orlovsky, Mina Kimes and Steve Smith Sr. join 
 11:46 Jaguars
 
 ## Kyrie and Cade hoops?
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592554+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740750+00:00
 ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/
 
 #ESPN
 
 ## ‘THEY DON’T WANT TO WIN’ 😳 Perk says the Knicks MUST give KAT his extension | NBA on ESPN
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592568+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740760+00:00
 ESPN · published 2026-10-12. Kendrick Perkins, Bobby Marks and Vincent Goodwill join Jorge Sedano on NBA Today to discuss:
 
 0:00 Brandin Podziemski signs extension with Warriors
@@ -1717,472 +1710,492 @@ ESPN · published 2026-10-12. Kendrick Perkins, Bobby Marks and Vincent Goodwill
 1:11 Will Karl-Anthony
 
 ## The Valkyries Secret Weapon Has Been Crucial To Finals Run
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592577+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740768+00:00
 ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/
 
 #ESPN
 
 ## What are your expectations for Marvin Harrison Jr. in Houston?
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592584+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740777+00:00
 ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/
 
 #ESPN
 
 ## Swagu couldn't believe it 🤣
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592592+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740785+00:00
 ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/
 
 #ESPN
 
 ## Rich still got it 😂🎙️
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592599+00:00
-ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/
-
-#ESPN
-
-## The Added Element That Has Made Angel Reese SCARY Good
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:51.592607+00:00
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740792+00:00
 ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/
 
 #ESPN
 
 ## The Story Behind "AND WON'T"
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628735+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551821+00:00
 VEVO · published 2026-10-12. #ti #summerwalker #andwont
 
 ## Tyla - A*POP | Vevo Official Live Performance
-Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:53.628775+00:00
+Category: music | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:41.551870+00:00
 VEVO · published 2026-10-12. #tyla #apop #vevo
 
 ## How to protect your identity from AI deepfakes | Melissa Hutchins | TEDxUofW
-Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:57.407878+00:00
+Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:46.602186+00:00
 TEDx · published 2026-10-12. What would you do if a malicious actor used AI to hijack your face, your voice, and your life? After surviving a harrowing five-year federal cyberstalking campaign, digital safety advocate Melissa Hut
 
 ## Why new medicines take so long | Alex Epstein | TEDxBoston Salon
-Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:57.407933+00:00
+Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:46.602312+00:00
 TEDx · published 2026-10-12. AI could accelerate the discovery of new medicines, but how quickly will those discoveries reach patients? Drawing on his grandfather’s experience with Parkinson’s disease, Alex Epstein explores the g
 
 ## Can Money Buy a Cure for Cancer? | Kat Kajderowicz | TEDxBoston Salon
-Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:57.407944+00:00
+Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:46.603305+00:00
 TEDx · published 2026-10-12. What does wealth actually buy when someone has cancer? Drawing on her father’s illness and her experience helping a family with extensive resources, Kat Kajderowicz explores why medical information an
 
 ## The Cost of Being Seen: Why Visibility Isn't Everything | Jsky . | TEDxNorthern Quarter
-Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:57.407956+00:00
+Category: culture | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:46.603319+00:00
 TEDx · published 2026-10-12. Social media visibility can feel like success, but what does it do to identity and self-worth? 
 
 This talk explores algorithms, online metrics and attention, examining how the pursuit of likes, views
 
 ## COTALAND water park, restaurant news: 6 trending Austin-area stories | Bastrop - Cedar Creek
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.259462+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031723+00:00
 Community Impact · Sat, 10 Oct 2026 01:05:44 GMT
 
-## Blackhawks star Connor Bedard 'trending toward' season debut Tuesday
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.259525+00:00
-Reuters · Mon, 12 Oct 2026 20:53:49 GMT
-
 ## Trending stocks this week as investors weigh Fed outlook, AI concerns
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.259564+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031784+00:00
 Seeking Alpha · Sun, 11 Oct 2026 14:22:41 GMT
 
 ## The 2026 All About the Jersey Top 25 Under 25: Trending Upwards From 15th to 11th
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.265008+00:00
+Category: news | Platforms: x, tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031825+00:00
 All About The Jersey · Sat, 10 Oct 2026 17:10:38 GMT
 
 ## Artificial Intelligence (AI) is watching us, and ‘knows’ Pope Leo has noticed
-Category: tech | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822257+00:00
+Category: tech | Platforms: x, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:35.447144+00:00
 Crux | Taking the Catholic Pulse · Mon, 12 Oct 2026 22:07:05 GMT
 
 ## Meta Says New AI Model Is State-of-the-Art, Will Make Muse Agent Smarter
-Category: tech | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:19.822310+00:00
+Category: tech | Platforms: x, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141739+00:00
 WSJ · Mon, 12 Oct 2026 20:10:00 GMT
 
 ## 5 PS2 Video Games That Are Worth A Fortune Today
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409550+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.526947+00:00
 SVG · Mon, 12 Oct 2026 16:00:00 GMT
 
 ## Epic Games Delays Disney Project, Asks Developers to Use More AI
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409445+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.526971+00:00
 Bloomberg.com · Mon, 12 Oct 2026 18:24:41 GMT
 
-## Cyberleek drops more NSFW Lucia videos, threatens to release 'GTA 6' in full
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409596+00:00
-Mashable · Mon, 12 Oct 2026 17:55:37 GMT
-
 ## ‘GTA 6’ Leaker Fully Reveals Lucia, The Game Build Size And Leak Roadmap
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409579+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.527066+00:00
 Forbes · Mon, 12 Oct 2026 13:08:52 GMT
 
 ## My friends and I found this obscure Swedish golf video game on the Internet. Now we’re addicted
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409632+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.527047+00:00
 Golf Digest · Mon, 12 Oct 2026 12:59:26 GMT
 
 ## Aream & Co: Games industry M&A generates $57.8 bn in Q3, including EA's $55bn leveraged buyout
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409707+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.527135+00:00
 GamesIndustry.biz · Mon, 12 Oct 2026 16:00:00 GMT
 
 ## Pokémon Pokopia Version 2.0.0 Adds New Quality of Life Improvements
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409662+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.527093+00:00
 Pokemon.com · Mon, 12 Oct 2026 16:03:44 GMT
 
 ## ‘The Beatles’ Biopics Producer Says Releasing All Four Movies at Once in 2028 Will Have a ‘Cumulative Power That’s Greater Than the Sum of Its Parts’
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542334+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433482+00:00
 Variety · Mon, 12 Oct 2026 15:39:00 GMT
 
 ## Mort à la révolution! Why UK film loves a failed rebellion
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542512+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433630+00:00
 The Guardian · Mon, 12 Oct 2026 15:24:00 GMT
 
 ## 5 Horror Movie Locations to Get You in the Halloween Spirit
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542424+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433663+00:00
 The New York Times · Mon, 12 Oct 2026 09:01:25 GMT
 
 ## The 18 best Halloween movies on Netflix
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542441+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433678+00:00
 Entertainment Weekly · Sun, 11 Oct 2026 20:00:00 GMT
 
 ## Fans Choose Troye Sivan’s ‘She’s the Best’ as This Week’s Favorite New Music
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664422+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166626+00:00
 Billboard · Sun, 11 Oct 2026 22:42:38 GMT
 
 ## New Music From The Dryes: “Mud Room”
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:28.664460+00:00
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166665+00:00
 WKRN News 2 · Mon, 12 Oct 2026 15:57:57 GMT
 
 ## Agawam flower stand goes viral on TikTok
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.190986+00:00
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.660946+00:00
 WWLP · Mon, 12 Oct 2026 22:03:11 GMT
 
 ## Judge warns jurors as Russell Brand prepares for rape trial in London
-Category: news | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:45.819419+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.505178+00:00
 u//u/AudibleNod · r/news · 2026-10-12
 
 ## Teen accused of mixing toxic chemicals in cafeteria faces attempted murder, terrorism charges
-Category: news | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:45.819435+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.505194+00:00
 u//u/dt7cv · r/news · 2026-10-12
 
 ## Air strikes kill at least 200 at gold mine near Sudan-Egypt border, survivors say
-Category: news | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:45.819449+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.505224+00:00
 u//u/usefsaeed · r/news · 2026-10-12
 
 ## French supermarkets suffer refrigerator shutdown after 'unprecedented' cyberattack
-Category: news | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:45.819464+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.505240+00:00
 u//u/templeofsyrinx1 · r/news · 2026-10-12
 
 ## A sixth measles-related death is reported in Pennsylvania
-Category: news | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:45.819521+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.505267+00:00
 u//u/AudibleNod · r/news · 2026-10-12
 
 ## Dan Levy Slams Shane Gillis’ ‘SNL’ Monologue: “Speechless That Something Like That Can Exist On Live National Television”
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099377+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773122+00:00
 u//u/SanderSo47 · r/television · 2026-10-12
 
 ## Amanda Seyfried Rejects Sex Scenes and Turned Down a TV Series Where ‘I’d Have to Have Sex All the Time’: I Don’t Want to Be ‘Naked With a Stranger’
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099397+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773142+00:00
 u//u/MarvelsGrantMan136 · r/television · 2026-10-12
 
 ## A massive Cartoon Network leak exposes decades of behind-the-scenes animation files
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099414+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773158+00:00
 u//u/Morgan-Moonscar · r/television · 2026-10-12
 
 ## Common Side Effects | Season 2 Teaser | January 24 | adult swim
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099447+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773261+00:00
 u//u/DemiFiendRSA · r/television · 2026-10-12
 
 ## Collin Gosselin discusses alleged abuse by mom Kate Gosselin ahead of memoir release
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099462+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773247+00:00
 u//u/AudibleNod · r/television · 2026-10-12
 
 ## Here's What Happened Inside the Weirdly Stealth ‘30 Rock’ Reunion
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099483+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773533+00:00
 u//u/outremer_empire · r/television · 2026-10-12
 
 ## ‘The Lowdown’ Season 2 Review: Betty Gilpin & Tommy Lee Jones Bring Romance & Family Weight To Ethan Hawke’s Shaggy Noir
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099517+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773569+00:00
 u//u/Sisiwakanamaru · r/television · 2026-10-12
 
-## rewatching SATC in 2026 makes me understand Samantha so much more
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099534+00:00
-u//u/Worldly_Ship4470 · r/television · 2026-10-12
-
-## Your Pretty Face is Going to Hell was one of the best tv comedies of the last decade
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099549+00:00
-u//u/Certain-Scratch5793 · r/television · 2026-10-12
-
 ## ‘Breaking Bad’ Star RJ Mitte’s Heartbreaking Performance as Walter White Jr. Was a Breakthrough for Disability Representation
-Category: entertainment | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:54.099432+00:00
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773177+00:00
 u//u/ChiefLeef22 · r/television · 2026-10-12
 
 ## [Bloomberg] Epic Games has delayed an unannounced shooter game featuring Star Wars & Marvel characters. Developers on the game have now been told to only use AI to write the code —
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446482+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942057+00:00
 u//u/ChiefLeef22 · r/gaming · 2026-10-12
 
 ## Geralt - We're at a Funeral...
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446526+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942075+00:00
 u//u/HaiderLad · r/gaming · 2026-10-12
 
 ## Vice City Blimp Is Upon Us
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446542+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942091+00:00
 u//u/Halkenguard · r/gaming · 2026-10-12
 
 ## Game Industry Asks U.S. to Flag Denuvo Cracker ‘voices38’ as Notorious Piracy Threat
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446560+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942108+00:00
 u//u/Ywaina · r/gaming · 2026-10-12
 
 ## Playing Fallout 3, having a blast!!!
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446613+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942158+00:00
 u//u/WrytXander · r/gaming · 2026-10-12
 
 ## Uhhh Yenn?! I Think You Forgot Something...
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.446597+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942143+00:00
 u//u/cycling_sender · r/gaming · 2026-10-12
 
 ## Was there a classic game that had a genuinely obtuse unlock or secret
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.447339+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942206+00:00
 u//u/ah-screw-it · r/gaming · 2026-10-12
 
 ## Super Mario 64 running on the Atari Jaguar
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:57.447296+00:00
+Category: gaming | Platforms: youtube, twitch, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:06.942183+00:00
 u//u/LilMoWithTheGimpyLeg · r/gaming · 2026-10-12
 
 ## Diddy Rushed Out of Prison After Medical Emergency
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634601+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.677201+00:00
 u//u/MarvelsGrantMan136 · r/Music · 2026-10-12
 
 ## Harry Styles uses Madison Square Garden show to honor man shot by ICE
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634691+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.677265+00:00
 u//u/ebradio · r/Music · 2026-10-12
 
 ## Furnace Fest merch, seemingly designed by AI, looks like AI stickers were placed on top of Kid Rock's Rock The Country mugs and sold for $50!!!
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634710+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678703+00:00
 u//u/imatmydesknow · r/Music · 2026-10-12
 
 ## James Hetfield at Sphere: "Metallica Is Not Here... To Influence You with Their Bullsh*t"
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634741+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678742+00:00
 u//u/NatashaRomanova7 · r/Music · 2026-10-12
 
 ## Foo Fighters - Everlong [alt rock]
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634769+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678773+00:00
 u//u/ConstructorWin · r/Music · 2026-10-12
 
 ## Strange Fruit Meaning: The Powerful Story Behind Billie Holiday’s Most Haunting Song
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.634788+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678794+00:00
 u//u/Illustrious_Oil_3200 · r/Music · 2026-10-12
 
 ## Church of the Cosmic Skull - Evil in your Eye [Progressive Rock]
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.635013+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678867+00:00
 u//u/GearBrain · r/Music · 2026-10-12
 
 ## 'Breaking Bad' Star RJ Mitte Dead at 34; His Film Roles Included 'Who's Driving Doug', 'Time Share', 'The Oak Room', and 'Triumph'
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681859+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969539+00:00
 u//u/MarvelsGrantMan136 · r/movies · 2026-10-12
 
 ## Official Poster for Greta Gerwig's 'Narnia: The Magician's Nephew'
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681883+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969555+00:00
 u//u/MarvelsGrantMan136 · r/movies · 2026-10-12
 
 ## Hello Reddit! I’m Oscar-winning director Alex Gibney. I spent years doing a deep dive into the life and mind of Elon Musk for my new film MUSK and I’m here to tell you all about it
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681931+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969587+00:00
 u//u/Alex-Gibney · r/movies · 2026-10-12
 
 ## First Images of Michael B. Jordan and Austin Butler in Joseph Kosinski's 'Miami Vice '85'
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.681954+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969603+00:00
 u//u/MarvelsGrantMan136 · r/movies · 2026-10-12
 
 ## Russia’s top-grossing movie in September was ‘Twilight.’ Yes, the one from 2008.
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.682003+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969636+00:00
 u//u/ubcstaffer123 · r/movies · 2026-10-12
 
 ## First poster for River.
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.682029+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969653+00:00
 u//u/Comic_Book_Reader · r/movies · 2026-10-12
 
 ## Derek Cianfrance to Adapt Gary Paulsen’s Survival Book 'Hatchet' for Netflix
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:08.682055+00:00
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969688+00:00
 u//u/EThorns · r/movies · 2026-10-12
 
 ## Hate those vids sooo much.
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195775+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937015+00:00
 u//u/ApprehensiveRoll5655 · r/YouTube · 2026-10-12
 
 ## WAIT THEY DID!?!
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195872+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937138+00:00
 u//u/Formal-Cicada8309 · r/YouTube · 2026-10-12
 
 ## Anyone else noticed how so many "non AI channels" are using AI to polish their scripts
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195936+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.937198+00:00
 u//u/NovaTheoretically · r/YouTube · 2026-10-12
 
 ## Is the "fix bedrock Mojang" really that bad to make people this mad?🥀🥀
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195978+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.941379+00:00
 u//u/Ok-Confusion-5923 · r/YouTube · 2026-10-12
 
 ## I got 50 subscribers by doing nothing exept commenting a GIF, I don't know how to feel about it
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.196010+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.945313+00:00
 u//u/Foxfirepro · r/YouTube · 2026-10-12
 
 ## Can we stop with the obvious clickbait titles?
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.195994+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.941435+00:00
 u//u/EntrepreneurMuch621 · r/YouTube · 2026-10-12
 
 ## Zelensky links strikes to fewer bots
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727270+00:00
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232724+00:00
 Volodymyr Zelensky says social media grew calmer after Ukraine hit Russia's Yandex data centers.
 
-## Death of RJ Mitte reported
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727183+00:00
-TMZ says the actor who played Walter White Jr. on "Breaking Bad" has died at age 34.
-
 ## Ilhan Omar home search reports
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727261+00:00
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232733+00:00
 Posts discuss unconfirmed reports of a federal search at Rep. Ilhan Omar's DC residence.
 
-## Epic Games delays Disney shooter
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727161+00:00
-The unannounced Star Wars and Marvel game is moving to AI-generated code and art, staff were told.
-
-## Dan Levy criticizes Shane Gillis monologue
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727173+00:00
-The "Schitt's Creek" star says more men should speak up about the comedian's "Saturday Night Live" jokes.
-
-## Kyiv says Russia hits energy targets despite Trump ceasefire announcement
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078126+00:00
-Reuters · Mon, 12 Oct 2026 21:55:43 GMT
-
 ## Republican attempts to trip up James Talarico keep backfiring
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078156+00:00
+Category: news | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452644+00:00
 NBC News · Mon, 12 Oct 2026 21:04:10 GMT
 
-## Iran War Updates: Deadly Houthi attacks keep Saudi airport closed as Trump considers U.S. strikes in Yemen
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078177+00:00
-CBS News · Mon, 12 Oct 2026 20:02:00 GMT
-
-## Trump defends Russia diesel deal after bipartisan pushback: 'I made the right choice'
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078197+00:00
-CNBC · Mon, 12 Oct 2026 15:55:38 GMT
-
-## Nato’s supreme commander warns Moscow against attacks in Europe
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078219+00:00
-Financial Times · Mon, 12 Oct 2026 13:34:54 GMT
-
 ## Trump says he's "looking at" firing Kimberly Guilfoyle: "We're not happy"
-Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:14.078256+00:00
+Category: news | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452725+00:00
 CBS News · Mon, 12 Oct 2026 21:24:00 GMT
 
-## MISTR National PrEP Day 2026: Full Celebrity Guest List Revealed |
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.990842+00:00
-Just Jared · Sun, 11 Oct 2026 17:12:09 GMT
-
-## Ben Affleck has blunt response to teenage son's Lamborghini request after infamous mishap
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992344+00:00
-Fox News · Mon, 12 Oct 2026 12:43:44 GMT
-
-## Selma Blair arrested after allegedly biting and punching flight attendants during ‘medical emergency’
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992381+00:00
-Entertainment Weekly · Mon, 12 Oct 2026 19:09:11 GMT
-
-## RJ Mitte, 'Breaking Bad' actor and disability rights champion, dies at 34
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992436+00:00
-Audacy · Mon, 12 Oct 2026 22:15:00 GMT
-
-## 'I Was Trying To Be Beautiful Like You' — Debbie Allen And Phylicia Rashad's Emotional Conversation On Colorism Is Resonating With Black Women
-Category: entertainment | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:08.992470+00:00
-MadameNoire · Fri, 09 Oct 2026 20:09:09 GMT
-
-## What will Skydance do with the industry’s most complex sports rights portfolio?
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814082+00:00
-Awful Announcing · Mon, 12 Oct 2026 12:08:32 GMT
-
-## Pettine returns to NFL coaching with the Dallas Cowboys
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814104+00:00
-Yahoo Sports · Mon, 12 Oct 2026 22:06:25 GMT
-
-## Steelers' Mike McCarthy has a huge offensive decision to make
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814143+00:00
-Yahoo Sports · Mon, 12 Oct 2026 22:22:48 GMT
-
-## Dan Quinn remains employed for now, somehow
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814195+00:00
-NBC Sports · Mon, 12 Oct 2026 16:55:50 GMT
-
-## Marvin Harrison Jr. trade grades: Cardinals extract near-max value from Texans for former top-5 pick WR
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814236+00:00
-CBS Sports · Sun, 11 Oct 2026 21:37:00 GMT
-
-## 2026 MLB playoff bracket: Schedule, scores for Brewers vs. Dodgers and Rays vs. Guardians
-Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:10.814333+00:00
-CBS Sports · Mon, 12 Oct 2026 20:06:00 GMT
-
 ## Who Is Vfmaddrnd231pd?
-Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:25.037371+00:00
+Category: tech | Platforms: hackernews | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:36.555917+00:00
 25 points · 0 comments
 
 ## IGN Fan Fest 2026: Fall Edition Livestream – Dragon Ball, VisionQuest, Whalefall, and More!
-Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:49.290613+00:00
+Category: gaming | Platforms: youtube, twitch | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:31.617430+00:00
 IGN · published 2026-10-12. IGN Fan Fest 2026: Fall Edition is here! The showcase kicks off at 10am PT / 1pm ET for exclusive reveals from TV series including Cyberpunk: Edgrunners, Blue Eye Samurai, IT: VisionQuest, The Walking
 
-## From Dallas Yell Club to spooky Oak Cliff display: What's trending
-Category: news | Platforms: x, tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:17.259600+00:00
-NBC 5 Dallas-Fort Worth · Mon, 12 Oct 2026 20:51:24 GMT
-
 ## Epic Reportedly Delays Its Disney Video Game So It Can Be Made Using More AI
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409507+00:00
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.526990+00:00
 Engadget · Mon, 12 Oct 2026 20:48:19 GMT
 
-## I Made Terrible Games With Google’s AI Playground
-Category: gaming | Platforms: youtube, twitch, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:22.409533+00:00
-WIRED · Sun, 11 Oct 2026 11:30:00 GMT
-
 ## Top 50 Classic Horror Movies
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542403+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433646+00:00
 Deadline · Mon, 12 Oct 2026 14:00:00 GMT
 
 ## Why ‘Social Reckoning’ Went Silent as More Tech Movies Face Box Office Test
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542462+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433571+00:00
 The Hollywood Reporter · Mon, 12 Oct 2026 22:37:06 GMT
 
 ## 10 New Movies to Watch This Weekend on Netflix, Prime Video and Disney (October 9-11)
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542478+00:00
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433595+00:00
 IMDb · Mon, 12 Oct 2026 22:27:28 GMT
 
-## 2027 Oscars power rankings: These are the top 10 best picture contenders right now
-Category: entertainment | Platforms: youtube, tiktok | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:25.542530+00:00
-Los Angeles Times · Mon, 12 Oct 2026 10:01:00 GMT
-
-## At 59, I Went Viral On TikTok. I Was Afraid Of The Comments — But I Never Expected This.
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191203+00:00
-HuffPost · Tue, 11 Aug 2026 07:00:00 GMT
-
-## Mom normalizes messes & chaos for stay-at-home moms in emotional TikTok
-Category: meme | Platforms: tiktok, instagram | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:35.191223+00:00
-Motherly · Tue, 21 Jul 2026 20:55:48 GMT
-
 ## Visitor dies after accident on Goliath at Six Flags Over Georgia
-Category: news | Platforms: x, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:46:45.819477+00:00
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.505047+00:00
 u//u/Bloated_Hamster · r/news · 2026-10-12
 
 ## The Sugarcubes - Birthday [DreamPop]
-Category: music | Platforms: tiktok, youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:04.635031+00:00
+Category: music | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:10.678824+00:00
 u//u/MorchellaAmericana · r/Music · 2026-10-12
 
 ## Anyone randomly got this?
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.196032+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.945365+00:00
 u//u/BeReady23 · r/YouTube · 2026-10-12
 
 ## We can't be doing this YouTube 😭
-Category: entertainment | Platforms: youtube | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:47:12.196048+00:00
+Category: entertainment | Platforms: youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:23.945391+00:00
 u//u/AccomplishedMany2138 · r/YouTube · 2026-10-12
 
-## Greene breaks with Trump
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727084+00:00
-Replying to his email, former congresswoman calls him "America last" and regrets backing him.
-
-## Taxpayer-funded Trump ads case
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727193+00:00
-Court case over pro-Trump TV commercials paid with public money, heard by Judge Jennifer Rochon
-
 ## Ken Paxton's Texas Senate campaign
-Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T22:48:19.727242+00:00
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232704+00:00
 Texas Attorney General Ken Paxton faces James Talarico in a race with strong religious themes.
+
+## US immigration authorities raid home of Democratic Trump critic Ilhan Omar
+Category: news | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452600+00:00
+Reuters · Mon, 12 Oct 2026 21:50:36 GMT
+
+## Trump's Russia deal leaves GOP candidates with a Putin problem
+Category: news | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452624+00:00
+Axios · Mon, 12 Oct 2026 17:33:38 GMT
+
+## Emergency help was delayed by confusion after failed execution of Christa Pike, 911 calls reveal
+Category: news | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452742+00:00
+CNN · Mon, 12 Oct 2026 21:19:00 GMT
+
+## Mike Vrabel: There’s a chance A.J. Brown returns this week
+Category: sports | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:34.538657+00:00
+NBC Sports · Mon, 12 Oct 2026 16:14:37 GMT
+
+## Viral report on McDonald s AI pricing raises concerns as Las Vegas tourism slumps
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141693+00:00
+KSNV · Mon, 12 Oct 2026 22:59:05 GMT
+
+## Warren Buffett Bought This Magnificent Artificial Intelligence (AI) Stock a Year Ago. Here's Why It's Still a Buy Today.
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:41.141778+00:00
+Yahoo Finance · Mon, 12 Oct 2026 18:20:00 GMT
+
+## Deploy decision models with llama.cpp on Amazon SageMaker AI
+Category: tech | Platforms: youtube, x, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:35.447242+00:00
+Amazon Web Services (AWS) · Mon, 12 Oct 2026 15:51:46 GMT
+
+## Yemen frontline: fighting the Houthi rebels targeting Saudi Arabia | BBC News
+Category: news | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:25.319476+00:00
+BBCNews · published 2026-10-12. Heavy fighting has been taking place in Yemen, as pro-government forces take on the country’s Houthi rebels, whose recent attacks on neighbouring Saudi Arabia have seized the world’s attention.
+
+Yemen
+
+## Kyren Williams joins MNC to discuss season and his emergence to stardom 🤩 | Monday Night Countdown
+Category: sports | Platforms: youtube, x | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:29:33.740668+00:00
+ESPN · published 2026-10-12. Los Angeles Rams running back Kyren Williams joins Pat McAfee and Jason McCourty on Monday Night Countdown to discuss his role with the team, the team's season outlook, his duo with Blake Corum and mo
+
+## The latest game from the creator of Dragon Quest was made in ‘about 30 minutes’ with AI
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.526878+00:00
+Video Games Chronicle · Mon, 12 Oct 2026 09:33:47 GMT
+
+## Epic Games Delays Marvel and Star Wars Crossover Game Amid Generative AI Push
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.527009+00:00
+Polygon.com · Mon, 12 Oct 2026 20:58:33 GMT
+
+## 'GTA 6' is sold out on Amazon despite being a digital-only game
+Category: gaming | Platforms: youtube, twitch, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:43.527025+00:00
+Mashable · Mon, 12 Oct 2026 21:03:44 GMT
+
+## ‘Other Mommy’ Is a Bad Movie Already Making Big Bucks
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433547+00:00
+Gizmodo · Mon, 12 Oct 2026 13:15:14 GMT
+
+## Other Mommy's Box Office Success Proves One Thing About Horror Movies
+Category: entertainment | Platforms: youtube, tiktok, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:46.433611+00:00
+IMDb · Mon, 12 Oct 2026 22:27:40 GMT
+
+## Country music trio The Castellows hint at something big with new unreleased song preview
+Category: music | Platforms: tiktok, youtube, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166738+00:00
+Fox News · Mon, 05 Oct 2026 13:40:05 GMT
+
+## Councillor’s nightmarish TikTok update goes viral
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661117+00:00
+Yahoo · Fri, 09 Oct 2026 14:56:42 GMT
+
+## full,,video! Apoorva Mukhija Viral Video link on TikTok, Telegram and X
+Category: meme | Platforms: tiktok, instagram, google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:51.661206+00:00
+Hong Kong International Airport · Sun, 11 Oct 2026 22:48:04 GMT
+
+## Pennsylvania mass shooter was family patriarch, father of toddler killed says
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.512346+00:00
+u//u/One-Emu-1103 · r/news · 2026-10-12
+
+## French police arrest 14-year-old after two teaching staff shot and wounded by hunting rifle
+Category: news | Platforms: x, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:00.512395+00:00
+u//u/tonic613 · r/news · 2026-10-12
+
+## The Muppets Turn 50 This Year But They Nearly Didn’t Get Made at All: ‘It Was a Real Study in Perseverance’
+Category: entertainment | Platforms: tiktok, youtube, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773588+00:00
+u//u/saucey_dawg0023 · r/television · 2026-10-12
+
+## AMA/Q&A Announcement - Noel Gugliemi - Tuesday 10/13 at 3 PM ET - Actor in 'Training Day', 'The Fast and the Furious', 'Street Kings, 'Harsh Times', 'Time of Death', 'The Dark Knig
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969444+00:00
+u//u/BunyipPouch · r/movies · 2026-10-11
+
+## Antonio Banderas To Star As Spanish Conquistador Hernán Cortés In Historical-Epic Feature
+Category: entertainment | Platforms: youtube, tiktok, reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:16.969671+00:00
+u//u/BunyipPouch · r/movies · 2026-10-12
+
+## Palantir CTO says AI researchers smoke
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232550+00:00
+Shyam Sankar told CBS's "Face the Nation" that researchers take up cigarettes believing AI will cure cancer.
+
+## Why users stay on Twitter
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232613+00:00
+Bluesky users debate longtime X accounts relying on blocks and mutes despite Elon Musk and Grok.
+
+## TNA deletes Max Caster clips
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232630+00:00
+Caster's Bound For Glory entrance rap included a line about bombs and Riyadh.
+
+## Melania, Musk denaturalization calls
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232683+00:00
+Users compare the Ilhan Omar paperwork probe to Melania Trump's Einstein visa and Elon Musk's student visa.
+
+## Christopher Columbus's legacy
+Category: news | Platforms: bluesky | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:28:55.232746+00:00
+Around Indigenous Peoples Day, people discuss the explorer's role in colonization and genocide in the Americas.
+
+## Former San Francisco police deputy chief killed by husband in Marin County shooting
+Category: news | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452663+00:00
+San Francisco Chronicle · Mon, 12 Oct 2026 18:10:10 GMT
+
+## Person dies at Six Flags Over Georgia; video shows Goliath ride being evacuated in Austell
+Category: news | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452689+00:00
+ABC7 Los Angeles · Mon, 12 Oct 2026 22:12:05 GMT
+
+## California beaches, homes slammed by waves from Tropical Storm Rachel
+Category: news | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:36.452759+00:00
+The Washington Post · Mon, 12 Oct 2026 23:13:09 GMT
+
+## Wizards Practice Notebook: Keefe says Sarr is ‘trending toward’ returning Saturday
+Category: news | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031908+00:00
+Bullets Forever · Fri, 09 Oct 2026 17:46:21 GMT
+
+## Fibermaxxing is trending. Here’s what the science says
+Category: news | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031925+00:00
+Straight Arrow · Fri, 09 Oct 2026 17:00:00 GMT
+
+## Trending on KALB.com 10-12-26
+Category: news | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:39.031942+00:00
+KALB | News Channel 5 · Mon, 12 Oct 2026 17:22:00 GMT
+
+## Apple opens Apple Music Hall, a state-of-the-art live music venue in London
+Category: music | Platforms: google | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:26:49.166755+00:00
+Apple · Mon, 21 Sep 2026 07:00:00 GMT
+
+## Your Pretty Face is Going to Hell was one of the best tv comedies of the last decade
+Category: entertainment | Platforms: reddit | Opportunity 45 | Velocity 45 | Last seen 2026-10-12T23:27:03.773604+00:00
+u//u/Certain-Scratch5793 · r/television · 2026-10-12
 
 ## "Stop the Wedding" photo carousels
 Category: meme | Platforms: tiktok | Opportunity 43 | Velocity 66 | Last seen 2026-10-11T19:30:00-07:00
@@ -2193,6 +2206,10 @@ Angle 2: Engagement-party version before it's too late
 Angle 3: Reaction carousel: rate the trend's best entries
 Hook: "The wedding carousel everyone is arguing about"
 Hook: "POV: the photos say it all"
+
+## Breaking Bad Star RJ Mitte Dies Aged 34
+Category: news | Platforms: x, youtube, tiktok, hackernews, google, reddit | Opportunity 38 | Velocity 95 | Last seen 2026-10-12T23:27:03.773091+00:00
+u//u/ReyisME · r/news · 2026-10-12
 
 ## Text From "-A" — the Pretty Little Liars call-out
 Category: meme | Platforms: tiktok | Opportunity 38 | Velocity 58 | Last seen 2026-10-11T19:30:00-07:00
@@ -2226,7 +2243,7 @@ Hook: "There she goes"
 Hook: "POV: main character just entered"
 
 ## Η γεωπολιτική της κλιματικής κρίσης | Μαρία Γαβουνέλη | TEDxPlaka
-Category: culture | Platforms: youtube | Opportunity 38 | Velocity 95 | Last seen 2026-10-12T22:48:57.407988+00:00
+Category: culture | Platforms: youtube | Opportunity 38 | Velocity 95 | Last seen 2026-10-12T23:29:46.603356+00:00
 TEDx · published 2026-10-12. Αναδεικνύεται η νομική και θεσμική διάσταση της κλιματικής κρίσης, η οποία ως ανθρωπογενές φαινόμενο απαιτεί συλλογική δράση και ρύθμιση της ανθρώπινης συμπεριφοράς. Αναλύεται πώς οι διεθνείς δικαστικ
 
 ## Ramalama Costume Walk

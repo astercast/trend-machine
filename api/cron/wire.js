@@ -230,7 +230,7 @@ async function srcHn() {
     if (!d || d.type !== "story") continue;
     hits.push(hit(d.title || "", d.url || ("https://news.ycombinator.com/item?id=" + d.id),
       "hackernews", (d.score || 0) + " points · " + (d.descendants || 0) + " comments",
-      extractHashtags(d.title || ""), "tech", ["youtube", "x"]));
+      extractHashtags(d.title || ""), "tech", ["youtube"]));
   }
   if (!hits.length) throw new Error("no stories parsed");
   return hits;
@@ -253,7 +253,7 @@ async function srcBluesky() {
 }
 
 async function srcMastodon() {
-  const r = await fetchTimeout("https://mastodon.social/data/v1/trends?limit=20",
+  const r = await fetchTimeout("https://mastodon.social/api/v1/trends/tags?limit=20",
     { timeoutMs: FETCH_TIMEOUT_MS, userAgent: UA });
   if (!r.ok) throw new Error(r.error || ("http " + r.status));
   const tags = JSON.parse(r.text).slice(0, 12);
@@ -263,7 +263,7 @@ async function srcMastodon() {
       .reduce((n, h) => n + (parseInt(h.uses, 10) || 0), 0);
     return hit("#" + t.name, t.url || ("https://mastodon.social/tags/" + t.name),
       "mastodon-trends", uses + " recent uses across the fediverse",
-      ["#" + t.name], "culture", ["x", "tiktok"]);
+      ["#" + t.name], "culture", ["mastodon"]);
   });
 }
 
@@ -282,7 +282,7 @@ async function srcNews() {
     }
     return hit(title, it.link, "gnews-top",
       outlet ? (outlet + " · " + it.pubDate) : it.pubDate,
-      extractHashtags(title), "news", ["youtube", "x"]);
+      extractHashtags(title), "news", ["google"]);
   });
 }
 
@@ -300,17 +300,17 @@ async function srcRedditProxy() {
     if (!m) continue;
     hits.push(hit(m[1], m[2], "reddit-proxy",
       m[4] + " upvotes · " + m[5] + " comments · r/" + m[3],
-      extractHashtags(m[1]), "tech", ["x", "tiktok"]));
+      extractHashtags(m[1]), "tech", ["reddit"]));
   }
   if (!hits.length) throw new Error("no table rows parsed");
   return hits;
 }
 
 const YT_CHANNELS = [
-  ["UCX6OQ3DkcsbYNE6H8uQQuVA", "MrBeast", "entertainment", ["youtube", "tiktok"]],
-  ["UCBJycsmduvYEL83R_U4JriQ", "MKBHD", "tech", ["youtube", "x"]],
-  ["UCKy1dAqELo0zrOtPkf0eTMw", "IGN", "gaming", ["youtube", "twitch"]],
-  ["UC16niRr50-MSBwiO3YDb3RA", "BBCNews", "news", ["youtube", "x"]],
+  ["UCX6OQ3DkcsbYNE6H8uQQuVA", "MrBeast", "entertainment", ["youtube"]],
+  ["UCBJycsmduvYEL83R_U4JriQ", "MKBHD", "tech", ["youtube"]],
+  ["UCKy1dAqELo0zrOtPkf0eTMw", "IGN", "gaming", ["youtube"]],
+  ["UC16niRr50-MSBwiO3YDb3RA", "BBCNews", "news", ["youtube"]],
 ];
 async function srcYoutube() {
   const feeds = await Promise.all(YT_CHANNELS.map(([id, label, cat, plats]) =>

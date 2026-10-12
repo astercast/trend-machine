@@ -9,12 +9,16 @@ import sys, time
 sys.path.insert(0, __import__("os").path.dirname(__file__))
 from common import fetch_json, hit, save_hits, extract_hashtags
 
+# Platforms label the source the signal was actually observed on — a post
+# seen on Reddit is a Reddit signal, never a guessed X/TikTok one (the
+# wave-16 attribution rule; the old cross-platform guesses were removed in
+# wave 20).
 SUBS = {
-    "r/popular": ("news", ["x", "tiktok"]),
-    "r/memes": ("meme", ["tiktok", "instagram"]),
-    "r/gaming": ("gaming", ["youtube", "twitch"]),
-    "r/Music": ("music", ["tiktok", "youtube"]),
-    "r/tiktok": ("meme", ["tiktok"]),
+    "r/popular": ("news", ["reddit"]),
+    "r/memes": ("meme", ["reddit"]),
+    "r/gaming": ("gaming", ["reddit"]),
+    "r/Music": ("music", ["reddit"]),
+    "r/tiktok": ("meme", ["reddit"]),
 }
 
 def main():

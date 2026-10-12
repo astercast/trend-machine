@@ -27,7 +27,7 @@ Or use the included GitHub Actions workflow (`.github/workflows/refresh.yml`) �
 | `fetch_reddit.py` | Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok) | No | Often 403 from datacenters — skips gracefully |
 | `fetch_reddit_rss.py` | Reddit subreddit RSS feeds | No | Working |
 | `fetch_hn.py` | Hacker News top/best stories (public Firebase API) | No | Working |
-| `fetch_mastodon.py` | Mastodon fediverse trending hashtags | No | Working |
+| `fetch_mastodon.py` | Mastodon fediverse trending hashtags | No | Working — **repaired wave 20**: the URL was `/data/v1/trends` (404 on every run; the lane was dark while this table said "Working"); the real endpoint is `/api/v1/trends/tags`. Same typo fixed in `api/cron/wire.js`. Verified live 2026-10-12: 20 hits/run, wire source `mastodon-trends` ok |
 | `fetch_bluesky.py` | Bluesky trending topics (`public.api.bsky.app` unauthenticated `getTrendingTopics`) | No | **New wave 11**: verified keyless 2026-10-11 (HTTP 200, real topics w/ descriptions); early-signal lane like Mastodon — 10 hits/run |
 | `fetch_youtube.py` | Invidious public API (`/data/v1/popular`, no key) → direct scrape fallback | No | Working via Invidious; set `YT_API_KEY` for the official Data API v3 path |
 | `fetch_youtube_rss.py` | YouTube channel RSS (`/feeds/videos.xml`) → channel `/videos` page fallback | No | **Repaired wave 6**: official RSS endpoint intermittently 404/500s on *valid* IDs (verified via control channels) — now retries 3× with backoff, then parses each channel's own `/videos` page (ytInitialData JSON, real titles/URLs). 10/10 feeds ok, 80 hits |
@@ -37,6 +37,18 @@ Or use the included GitHub Actions workflow (`.github/workflows/refresh.yml`) �
 Every fetcher writes `pipeline/out/<name>.json` and **never crashes the run** —
 failures print `[name] SKIP: <reason>` and the pipeline continues. Shared helpers
 live in `pipeline/common.py`.
+
+**Attribution rule (wave 16, completed wave 20):** a hit's `platforms` label
+names only the source the signal was actually observed on — a story seen on
+Google News is `["google"]`, a post seen on Reddit is `["reddit"]`, a
+Mastodon hashtag is `["mastodon"]`, a YouTube video is `["youtube"]`. The
+old per-source tables that guessed cross-platform homes (Reddit → X/TikTok,
+Google News → YouTube/X, Mastodon → X/TikTok) are gone from every fetcher
+and from `api/cron/wire.js`; wave 16 fixed Hacker News and Mastodon's labels,
+wave 20 finished Reddit (both fetchers), Google News (both fetchers), the
+YouTube channel tables, and the X stub. Curated seed topics keep their
+editorial platform lists — those are claims a human made, not fetcher
+guesses.
 
 ### API key setup
 

@@ -26,16 +26,16 @@ import re, sys, time, json, urllib.parse
 sys.path.insert(0, __import__("os").path.dirname(__file__))
 from common import fetch_text, hit, save_hits, extract_hashtags, clean
 
-# (channel_id, label, category, platforms)
+# (channel_id, label, category, platforms) - observed source only: youtube (wave-20)
 CHANNELS = [
-    ("UCX6OQ3DkcsbYNE6H8uQQuVA", "MrBeast",      "entertainment", ["youtube", "tiktok"]),
+    ("UCX6OQ3DkcsbYNE6H8uQQuVA", "MrBeast",      "entertainment", ["youtube"]),
     ("UC-lHJZR3Gqxm24_Vd_AJ5Yw", "pewdiepie",    "entertainment", ["youtube"]),
-    ("UCBJycsmduvYEL83R_U4JriQ", "MKBHD",        "tech",          ["youtube", "x"]),
+    ("UCBJycsmduvYEL83R_U4JriQ", "MKBHD",        "tech",          ["youtube"]),
     ("UCXuqSBlHAE6Xw-yeJA0Tunw", "LinusTechTips","tech",          ["youtube"]),
-    ("UC16niRr50-MSBwiO3YDb3RA", "BBCNews",      "news",          ["youtube", "x"]),
-    ("UCKy1dAqELo0zrOtPkf0eTMw", "IGN",          "gaming",        ["youtube", "twitch"]),
-    ("UCiWLfSweyRNmLpgEHekhoAg", "ESPN",         "sports",        ["youtube", "x"]),
-    ("UC2pmfLm7iq6Ov1UwYrWYkZA", "VEVO",         "music",         ["youtube", "tiktok"]),
+    ("UC16niRr50-MSBwiO3YDb3RA", "BBCNews",      "news",          ["youtube"]),
+    ("UCKy1dAqELo0zrOtPkf0eTMw", "IGN",          "gaming",        ["youtube"]),
+    ("UCiWLfSweyRNmLpgEHekhoAg", "ESPN",         "sports",        ["youtube"]),
+    ("UC2pmfLm7iq6Ov1UwYrWYkZA", "VEVO",         "music",         ["youtube"]),
     ("UC4eYXhJI4-7wSWc8UNRwD4A", "NPRMusic",     "music",         ["youtube"]),
     ("UCsT0YIqwnpJCM-mx7-gSA4Q", "TEDx",         "culture",       ["youtube"]),
 ]

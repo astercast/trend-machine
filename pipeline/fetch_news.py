@@ -40,7 +40,8 @@ def main():
                 hashtags=extract_hashtags(title),
                 category={"technology": "tech", "entertainment": "entertainment",
                           "sports": "sports", "ai": "tech"}.get(cat, "news"),
-                platforms=["youtube", "x"]))
+                # observed on Google News only - never a guessed platform home
+                platforms=["google"]))
     save_hits("news", hits)
 
 if __name__ == "__main__":

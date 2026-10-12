@@ -14,14 +14,16 @@ import re, sys, time
 sys.path.insert(0, __import__("os").path.dirname(__file__))
 from common import fetch_text, hit, save_hits, extract_hashtags, clean
 
-# (subreddit, category, platforms)
+# (subreddit, category, platforms) — platforms names the source actually
+# observed (Reddit), never a guessed cross-platform home (wave-16 rule;
+# old guesses removed in wave 20).
 SUBS = [
-    ("news", "news", ["x", "youtube"]),
-    ("television", "entertainment", ["tiktok", "youtube"]),
-    ("gaming", "gaming", ["youtube", "twitch"]),
-    ("Music", "music", ["tiktok", "youtube"]),
-    ("movies", "entertainment", ["youtube", "tiktok"]),
-    ("YouTube", "entertainment", ["youtube"]),
+    ("news", "news", ["reddit"]),
+    ("television", "entertainment", ["reddit"]),
+    ("gaming", "gaming", ["reddit"]),
+    ("Music", "music", ["reddit"]),
+    ("movies", "entertainment", ["reddit"]),
+    ("YouTube", "entertainment", ["reddit"]),
 ]
 
 PER_SUB = 12

@@ -36,6 +36,14 @@ on the record, never folded into the hit rate. Readiness moves only
 one way from here: snapshots keep landing in open windows until each
 window closes at its horizon.
 
+*Wave-20 re-verification (2026-10-12 23:30 UTC, after two more
+refreshes): readiness improved to **268/286 (93.7%)** — one short window
+gained its second point. The early-grading gate was re-tested live
+(`--run` refused, exit 2, ledger untouched), the write path re-ran
+end-to-end in a sandbox copy (verdicts written, scorecard flipped to
+"live", counts reconciled), and the scorecard page was screenshot-
+verified in its "building history" state with zero console errors.*
+
 ## 2. The sequence
 
 One command runs the whole night:

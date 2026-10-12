@@ -12,14 +12,16 @@ import re, sys, time, urllib.parse
 sys.path.insert(0, __import__("os").path.dirname(__file__))
 from common import fetch_text, hit, save_hits, extract_hashtags, clean
 
-# (query, category, platforms)
+# (query, category, platforms) - platforms names the observed source
+# (Google News) only; the query text is a search term, not evidence the
+# story trends on the platform it names (wave-16/20 attribution rule).
 QUERIES = [
-    ("trending", "news", ["x", "tiktok", "youtube"]),
-    ("artificial intelligence", "tech", ["x", "youtube"]),
-    ("video games", "gaming", ["youtube", "twitch", "tiktok"]),
-    ("movies", "entertainment", ["youtube", "tiktok"]),
-    ("new music", "music", ["tiktok", "youtube"]),
-    ("TikTok viral", "meme", ["tiktok", "instagram"]),
+    ("trending", "news", ["google"]),
+    ("artificial intelligence", "tech", ["google"]),
+    ("video games", "gaming", ["google"]),
+    ("movies", "entertainment", ["google"]),
+    ("new music", "music", ["google"]),
+    ("TikTok viral", "meme", ["google"]),
 ]
 
 BASE = "https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
@@ -47,7 +49,7 @@ def parse(xml, source, cat, plats):
 
 def main():
     hits = []
-    feeds = [("gnews-top", TOP, "news", ["youtube", "x"])] + [
+    feeds = [("gnews-top", TOP, "news", ["google"])] + [
         (f"gnews-q:{q}", BASE.format(q=urllib.parse.quote(q)), cat, plats)
         for q, cat, plats in QUERIES
     ]
