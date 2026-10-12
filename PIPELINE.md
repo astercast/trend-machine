@@ -169,6 +169,15 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   deleted outright; `scripts/recover_velocity_history.py` restored the
   already-lost points from the repo's own git history (real recorded
   timestamps only, provenance printed per topic).
+- **Resolution night (wave 19):** the first verdicts resolve
+  2026-10-14 in nine drops (01:45:28.760Z → 06:59:57.558Z). The full
+  procedure — sequence, expected numbers, failure playbook — is
+  `RESOLUTION_NIGHT.md`; its executable half is
+  `scripts/resolution_night.sh` (`--preview` any time, `--run` gated
+  to refuse before the due time). Batch-2 integrity is audited by
+  `scripts/audit_batch2.js` (no homeless pending topic, readiness
+  cross-check, archive retention) with the prune rules pinned by
+  `scripts/test_archive_prune.py`.
 
 ## Scoring (`pipeline/normalize.py`)
 

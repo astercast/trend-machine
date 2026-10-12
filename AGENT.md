@@ -132,7 +132,9 @@ left the board and its dossier is gone). Grading reads the live velocity
 store merged with `data/velocity_archive.json` — the series of topics
 that churned out of the store before their horizon (see PIPELINE.md);
 the public velocity/forecast payloads stay store-scoped. Human-readable
-at `forecast-accuracy.html`.
+at `forecast-accuracy.html`. Resolution procedure: `RESOLUTION_NIGHT.md`
+(runner `scripts/resolution_night.sh` — `--run` refuses before
+`next_resolution_at`; never grade a forecast before its 48h horizon).
 
 **5d. Meme format families — `data/v1/meme-formats.json`** (wave 9)
 The tracked meme format families: hand-curated from Oct-2026 web research

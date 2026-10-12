@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-12T22:15:36.650Z",
+  "generated_at": "2026-10-12T22:49:04.147Z",
   "method": "assets/js/lifecycle-lib.js summarize() — stage-per-snapshot classification using the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr)",
   "honesty": "Stages are readouts from recorded velocity snapshots, not predictions. Topics with fewer than 3 snapshots report 'building'. The ignitions/burnouts boards list stage transitions that actually happened in the last 24h.",
   "counts": {
     "peaking": 85,
-    "steady": 99,
+    "steady": 96,
     "igniting": 1,
-    "building": 208
+    "building": 211
   },
   "ignitions": [
     {
@@ -14,7 +14,7 @@
       "title": "Nurses are taking on TikTok’s viral health myths — here’s how they’re fighting back",
       "from": "steady",
       "to": "igniting",
-      "ts": "2026-10-12T22:15:27.996580+00:00"
+      "ts": "2026-10-12T22:49:01.408645+00:00"
     },
     {
       "id": "making-friends-monday-share-your-game-tags-here",
@@ -708,23 +708,6 @@
         "steady"
       ]
     },
-    "full-video-apoorva-mukhija-viral-video-link-on-tik": {
-      "stage": "steady",
-      "since": "2026-10-11T23:47:16.629612+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
     "how-to-make-pizza-beans-the-saucy-cheesy-dish-taki": {
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
@@ -761,7 +744,7 @@
     },
     "nurses-are-taking-on-tiktok-s-viral-health-myths-h": {
       "stage": "igniting",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "steady",
         "steady",
@@ -1674,20 +1657,6 @@
         "steady"
       ]
     },
-    "pennsylvania-mass-shooter-was-family-patriarch-fat": {
-      "stage": "steady",
-      "since": "2026-10-12T02:46:54.868540+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
     "shrinking-pine-cone": {
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
@@ -2411,18 +2380,6 @@
         "steady"
       ]
     },
-    "the-main-version-of-alien-ant-farm-s-smooth-crimin": {
-      "stage": "steady",
-      "since": "2026-10-12T04:40:07.691290+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
     "ama-q-a-announcement-alex-gibney-monday-10-12-at-2": {
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
@@ -2801,14 +2758,6 @@
         "building"
       ]
     },
-    "is-trending-stock-comcast-corporation-cmcsa-a-buy-": {
-      "stage": "building",
-      "since": "2026-10-12T09:57:06.712891+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
     "are-these-real-shows-and-movies-or-fake-ones-from-": {
       "stage": "building",
       "since": "2026-10-12T09:57:06.712891+00:00",
@@ -2843,1337 +2792,1365 @@
     },
     "fridges-and-freezers-in-french-supermarkets-hit-by": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "immigration-agents-searched-the-home-of-minnesota-": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "rj-mitte-actor-best-known-for-playing-walter-white": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "archbishop-of-the-us-military-says-catholic-soldie": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "mamdani-orders-review-of-nypd-s-use-of-force-polic": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "breaking-bad-star-rj-mitte-dies-aged-34": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "us-immigration-authorities-raid-home-of-democratic": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "zelenskyy-says-russia-strikes-energy-facilities-de": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "furious-judge-halts-tree-removal-demands-answers-o": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "after-russian-diesel-deal-trump-faces-new-crisis-o": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "gop-ad-buyer-mixes-up-portlands-spends-money-meant": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "trump-not-happy-with-kimberly-guilfoyle-weighs-fir": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "how-much-rain-fell-from-this-storm-see-rainfall-to": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "big-brother-s-amber-siyavus-dies-at-46-milania-giu": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "kelly-clarkson-s-15-000-bird-revelation-forces-bro": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "michael-douglas-confirms-charlie-sheen-put-c-sign-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "test-your-pop-culture-from-hollywood-to-the-heartl": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "kelly-clarkson-fires-back-at-brooklyn-novelty-shop": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "gwyneth-paltrow-officiates-star-studded-wedding-of": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "entertainment-news-october-12-2026": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "actor-selma-blair-taken-into-custody-by-police-res": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "experts-update-bills-vs-rams-prediction-as-allen-s": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "hailee-steinfeld-rashida-jones-star-in-new-hexed-t": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "georgia-takes-top-spot-over-miami-notre-dame-in-co": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "penguins-trade-acquire-lefty-d-man-for-caleb-jones": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "rasmus-dahlin-injury-update-is-bad-news-for-sabres": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "penguins-notebook-andrei-kuzmenko-nears-return-to-": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "james-madison-to-exit-sun-belt-join-american-confe": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "don-t-bet-against-the-sports-bets": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "rhule-rundown-recapping-indiana-previewing-oregon": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "2026-nfl-defense-rankings-team-pass-and-rush-stats": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "excitement-builds-for-men-s-basketball-at-winter-s": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "i-was-blessed-to-be-her-mom-cheyenne-woman-starts-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "as-sports-betting-is-normalized-college-players-be": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "weekly-rankings-announced-for-fall-sports-oct-12": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "an-overlooked-sci-fi-movie-shows-how-disruption-by": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "consensus-truth-in-the-age-of-ai": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "anthropic-ai-model-made-false-tip-in-unsolved-phil": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "microsoft-president-urges-global-ai-regulation-war": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "openai-s-latest-blow-to-mathematicians-they-have-a": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "meta-says-new-muse-model-reaches-ai-frontier-after": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "imf-says-ai-investment-keeps-global-growth-around--2": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "cyber-attack-similar-to-openai-medicare-breach-see": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "intel-broadcom-ceos-warn-capital-crunch-could-beco": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "is-attention-the-essence-of-intelligence": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "uc-santa-barbara-taking-a-base-camp-approach-to-ar": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "ua-little-rock-students-explore-the-future-through": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "how-artificial-intelligence-can-help-with-critical": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "artificial-dichotomy-beyond-the-all-or-nothing-app": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "army-turning-to-ai-in-its-fight-against-biological": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "ai-is-a-tool-using-it-well-takes-skill": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "glm-legal": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "a-modern-web-app-in-c": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "writing-a-demoscene-intro-for-the-zx-spectrum": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "phreak-ing-internet-phone-switch": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "hackers-activate-automatic-defrosting-in-supermark": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "codex-cli-installs-a-persistent-self-updating-back": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "launch-hn-agent37-yc-f26-low-cost-agent-sandboxes-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "turn-a-wifi-7-router-into-a-320msps-software-defin": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "citroen-revives-the-2cv-for-an-electric-age": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "making-big-downloads-resumable-in-firefox": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "muse-wonder": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-making-of-super-mario-64-full-giles-goddard-in": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "secret-of-orange-cats-revealed-after-60-year-searc": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "ai-coding-agents-generate-more-code-but-not-more-s": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "kevin-kelly-s-2016-ai-predictions-10-years-later": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "thinking-will-become-a-hobby": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "ai-is-not-a-tool-by-rich-hickey": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "epic-games-tells-employees-to-use-ai-to-get-disney": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "solar-panels-that-plug-into-your-wall": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "publishers-killed-the-paperback-then-blamed-reader": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "show-hn-brickbrag-a-multiplayer-brick-building-wor": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "show-hn-atticus-hold-to-talk-voice-assistant-for-m": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "america-s-longest-highway-tunnel-2025": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "deloitte-falsified-documents-to-evade-tax-on-abram": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "qgis-enacts-moratorium-on-ai-contributions": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "zip-tie-tuning-vs-linus-tech-tips": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "this-is-an-official-sony-product": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "what-we-know-about-houthi-attacks-on-saudi-arabia-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "john-simpson-on-the-pivotal-moments-that-shaped-th": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "trump-says-you-can-t-fight-data-centres-but-many-a": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "how-ukraine-has-transformed-modern-warfare-the-sec": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "does-president-trump-s-energy-ceasefire-actually-e": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "saudia-arabia-vows-serious-response-to-houthi-atta": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-new-miami-vice-starring-michael-b-jordan-and-a": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "a-mix-of-personal-and-professional-issues-turned-b": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "bill-murray-is-back-as-a-ghostbuster": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "shadow-of-the-road-official-anime-opening-trailer-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "cozy-after-dark-2026-cozy-games-with-a-dark-side": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "up-close-with-the-avengers-doomsday-costumes-nycc-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "blind-descent-official-release-date-trailer-ign-fa": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "station-58-official-announce-trailer": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "dissecting-the-mike-evans-trevon-diggs-trash-talk-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "kyrie-and-cade-hoops": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "they-don-t-want-to-win-perk-says-the-knicks-must-g": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-valkyries-secret-weapon-has-been-crucial-to-fi": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "what-are-your-expectations-for-marvin-harrison-jr-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "swagu-couldn-t-believe-it": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "rich-still-got-it": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-added-element-that-has-made-angel-reese-scary-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-story-behind-and-won-t": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "tyla-a-pop-vevo-official-live-performance": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "how-to-protect-your-identity-from-ai-deepfakes-mel": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "why-new-medicines-take-so-long-alex-epstein-tedxbo": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "can-money-buy-a-cure-for-cancer-kat-kajderowicz-te": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-cost-of-being-seen-why-visibility-isn-t-everyt": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "cotaland-water-park-restaurant-news-6-trending-aus": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "blackhawks-star-connor-bedard-trending-toward-seas": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "trending-stocks-this-week-as-investors-weigh-fed-o": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-2026-all-about-the-jersey-top-25-under-25-tren": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "artificial-intelligence-ai-is-watching-us-and-know": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "meta-says-new-ai-model-is-state-of-the-art-will-ma": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "5-ps2-video-games-that-are-worth-a-fortune-today": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "the-latest-game-from-the-creator-of-dragon-quest-w": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "epic-games-delays-disney-project-asks-developers-t": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "cyberleek-drops-more-nsfw-lucia-videos-threatens-t": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "gta-6-leaker-fully-reveals-lucia-the-game-build-si": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "my-friends-and-i-found-this-obscure-swedish-golf-v": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "aream-co-games-industry-m-a-generates-57-8-bn-in-q": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "pok-mon-pokopia-version-2-0-0-adds-new-quality-of-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "playing-for-the-win-meet-the-philly-orchestra-devo": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-beatles-biopics-producer-says-releasing-all-fo": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "beatles-films-release-details-a-mega-month-of-movi": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "detective-movie-filmed-in-alabama-has-release-date": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "your-mother-your-mother-your-mother-review-faith-a": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "beyond-backrooms-10-scariest-movies-on-netflix-for": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "mort-la-r-volution-why-uk-film-loves-a-failed-rebe": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "5-horror-movie-locations-to-get-you-in-the-hallowe": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "the-montgomery-county-connection-to-one-of-the-mos": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-18-best-halloween-movies-on-netflix": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "fans-choose-troye-sivan-s-she-s-the-best-as-this-w": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "new-music-from-the-dryes-mud-room": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "agawam-flower-stand-goes-viral-on-tiktok": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "councillor-s-nightmarish-tiktok-update-goes-viral": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "federal-agents-searched-rep-ilhan-omar-s-home-as-p": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "judge-warns-jurors-as-russell-brand-prepares-for-r": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "teen-accused-of-mixing-toxic-chemicals-in-cafeteri": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "air-strikes-kill-at-least-200-at-gold-mine-near-su": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "french-supermarkets-suffer-refrigerator-shutdown-a": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "selma-blair-arrested-after-alleged-altercation-on-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "a-sixth-measles-related-death-is-reported-in-penns": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "french-police-arrest-14-year-old-after-two-teachin": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "dan-levy-slams-shane-gillis-snl-monologue-speechle": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "amanda-seyfried-rejects-sex-scenes-and-turned-down": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "a-massive-cartoon-network-leak-exposes-decades-of-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "common-side-effects-season-2-teaser-january-24-adu": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "collin-gosselin-discusses-alleged-abuse-by-mom-kat": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "here-s-what-happened-inside-the-weirdly-stealth-30": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "the-lowdown-season-2-review-betty-gilpin-tommy-lee": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "rewatching-satc-in-2026-makes-me-understand-samant": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "your-pretty-face-is-going-to-hell-was-one-of-the-b": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "breaking-bad-star-rj-mitte-s-heartbreaking-perform": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "bloomberg-epic-games-has-delayed-an-unannounced-sh": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "geralt-we-re-at-a-funeral": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "vice-city-blimp-is-upon-us": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "game-industry-asks-u-s-to-flag-denuvo-cracker-voic": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "playing-fallout-3-having-a-blast": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "uhhh-yenn-i-think-you-forgot-something": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "was-there-a-classic-game-that-had-a-genuinely-obtu": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "super-mario-64-running-on-the-atari-jaguar": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "diddy-rushed-out-of-prison-after-medical-emergency": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "harry-styles-uses-madison-square-garden-show-to-ho": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "furnace-fest-merch-seemingly-designed-by-ai-looks-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "james-hetfield-at-sphere-metallica-is-not-here-to-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "foo-fighters-everlong-alt-rock": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "strange-fruit-meaning-the-powerful-story-behind-bi": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "church-of-the-cosmic-skull-evil-in-your-eye-progre": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "breaking-bad-star-rj-mitte-dead-at-34-his-film-rol": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "official-poster-for-greta-gerwig-s-narnia-the-magi": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "hello-reddit-i-m-oscar-winning-director-alex-gibne": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "first-images-of-michael-b-jordan-and-austin-butler": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "russia-s-top-grossing-movie-in-september-was-twili": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "first-poster-for-river": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "derek-cianfrance-to-adapt-gary-paulsen-s-survival-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "hate-those-vids-sooo-much": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "wait-they-did": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "anyone-else-noticed-how-so-many-non-ai-channels-ar": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "is-the-fix-bedrock-mojang-really-that-bad-to-make-": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "i-got-50-subscribers-by-doing-nothing-exept-commen": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "can-we-stop-with-the-obvious-clickbait-titles": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "bad-news-cj-sparxx-s-main-youtube-channel-has-been": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "political-solicitation": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "cozy-after-dark-showcase-goes-live": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "zelensky-links-strikes-to-fewer-bots": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "christopher-columbus-s-legacy": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "death-of-rj-mitte-reported": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "ilhan-omar-home-search-reports": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "gop-pac-targets-oregon-in-maine-race": {
-      "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "epic-games-delays-disney-shooter": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "dan-levy-criticizes-shane-gillis-monologue": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
     },
     "tedxplaka": {
       "stage": "building",
-      "since": "2026-10-12T22:15:27.996580+00:00",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "bbc-on-front-line-in-yemen-s-desert-war-middleeast": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "kyiv-says-russia-hits-energy-targets-despite-trump": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "republican-attempts-to-trip-up-james-talarico-keep": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "iran-war-updates-deadly-houthi-attacks-keep-saudi-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "trump-defends-russia-diesel-deal-after-bipartisan-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "nato-s-supreme-commander-warns-moscow-against-atta": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "trump-says-he-s-looking-at-firing-kimberly-guilfoy": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "mistr-national-prep-day-2026-full-celebrity-guest-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "ben-affleck-has-blunt-response-to-teenage-son-s-la": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "selma-blair-arrested-after-allegedly-biting-and-pu": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "rj-mitte-breaking-bad-actor-and-disability-rights-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "i-was-trying-to-be-beautiful-like-you-debbie-allen": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "what-will-skydance-do-with-the-industry-s-most-com": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "pettine-returns-to-nfl-coaching-with-the-dallas-co": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "steelers-mike-mccarthy-has-a-huge-offensive-decisi": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "dan-quinn-remains-employed-for-now-somehow": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "marvin-harrison-jr-trade-grades-cardinals-extract-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "2026-mlb-playoff-bracket-schedule-scores-for-brewe": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "who-is-vfmaddrnd231pd": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "ign-fan-fest-2026-fall-edition-livestream-dragon-b": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "from-dallas-yell-club-to-spooky-oak-cliff-display-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "epic-reportedly-delays-its-disney-video-game-so-it": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "i-made-terrible-games-with-google-s-ai-playground": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "top-50-classic-horror-movies": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "why-social-reckoning-went-silent-as-more-tech-movi": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "10-new-movies-to-watch-this-weekend-on-netflix-pri": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "2027-oscars-power-rankings-these-are-the-top-10-be": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "at-59-i-went-viral-on-tiktok-i-was-afraid-of-the-c": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "mom-normalizes-messes-chaos-for-stay-at-home-moms-": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "visitor-dies-after-accident-on-goliath-at-six-flag": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "the-sugarcubes-birthday-dreampop": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "anyone-randomly-got-this": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "we-can-t-be-doing-this-youtube": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "greene-breaks-with-trump": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "taxpayer-funded-trump-ads-case": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "ken-paxton-s-texas-senate-campaign": {
+      "stage": "building",
+      "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
         "building"
       ]
