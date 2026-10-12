@@ -1,0 +1,210 @@
+/* ============================================================
+   TREND MACHINE — wave 3 additions ("Oracle" flagship)
+   Forecasting view, mission cards, print stylesheet.
+   Tokens come from tokens.css ("mission control" system).
+   Mobile-first; motion respects prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- 01 · dashboard Oracle banner (above the fold) ---------- */
+.oracle-banner {
+  display: block;
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid var(--violet-deep);
+  border-radius: 14px;
+  background: var(--violet-dim);
+  box-shadow: var(--violet-glow);
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color .18s ease-out, box-shadow .18s ease-out;
+}
+.oracle-banner:hover, .oracle-banner:focus-visible {
+  border-color: var(--violet);
+  box-shadow: 0 0 30px rgba(180, 140, 255, .45);
+  outline: none;
+}
+.oracle-banner:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+.oracle-banner h2 { margin: 0 0 6px; font-size: 1.25rem; }
+.oracle-banner p { margin: 0; color: var(--ink-dim); font-size: .95rem; max-width: 72ch; }
+.oracle-banner .cta-row { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.oracle-banner .kicker { color: var(--violet); }
+
+/* ---------- 02 · Oracle page ---------- */
+.oracle-hero { margin-top: 28px; }
+.oracle-hero p { color: var(--ink-dim); max-width: 76ch; }
+.oracle-fallback {
+  margin: 24px 0;
+  padding: 22px 24px;
+  border: 1px dashed var(--line-bright);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  max-width: 72ch;
+}
+.oracle-fallback h2 { margin-top: 0; font-size: 1.2rem; }
+.oracle-empty { color: var(--ink-faint); font-size: .95rem; }
+.oc-honest {
+  font-size: .8rem;
+  color: var(--ink-faint);
+  margin: 8px 0 0;
+}
+.oracle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 16px 0 8px;
+}
+.oracle-card {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.oracle-card .oc-top { display: flex; gap: 10px; align-items: baseline; }
+.traj-arrow {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.t-acc .traj-arrow { color: var(--live); }
+.t-rise .traj-arrow { color: var(--signal); }
+.t-peak .traj-arrow { color: var(--warm); }
+.t-fade .traj-arrow { color: var(--dead); }
+.oc-title { margin: 0; font-size: 1rem; line-height: 1.35; }
+.oc-title a { color: var(--ink); text-decoration: none; }
+.oc-title a:hover { text-decoration: underline; }
+.oc-sum { color: var(--ink-dim); font-size: .9rem; margin: 8px 0; }
+.oc-spark-row { display: flex; align-items: center; gap: 12px; }
+.mini-spark { width: 120px; height: 34px; flex-shrink: 0; }
+.mini-spark polyline {
+  stroke: var(--signal);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.oc-nums { font-size: .8rem; color: var(--ink-faint); }
+.oc-actions { margin-top: 10px; }
+.btn-sm { padding: 6px 14px; font-size: .8rem; }
+.oracle-method {
+  font-size: .85rem;
+  color: var(--ink-faint);
+  max-width: 88ch;
+  margin: 28px 0 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+
+/* ---------- 03 · launch planner / mission cards ---------- */
+.plan-picker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 20px 0;
+}
+.plan-picker .field { display: flex; flex-direction: column; gap: 6px; }
+.plan-picker label { font-size: .8rem; color: var(--ink-dim); }
+.plan-picker select {
+  background: var(--panel-2);
+  color: var(--ink);
+  border: 1px solid var(--line-bright);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: .95rem;
+  max-width: min(70vw, 420px);
+}
+.plan-head h2 { margin: 4px 0 10px; }
+.plan-traj { max-width: 76ch; }
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 18px 0 8px;
+}
+.mission-card {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-left: 4px solid var(--signal);
+  border-radius: 12px;
+  padding: 16px 18px;
+  break-inside: avoid;
+}
+.mc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.mc-day {
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--signal);
+}
+.mc-date { color: var(--ink-faint); font-size: .85rem; }
+.mc-angle { margin: 0 0 6px; font-size: 1.05rem; line-height: 1.4; }
+.mc-hook { color: var(--ink-dim); font-style: italic; margin: 0 0 10px; }
+.mc-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.mc-meta div { margin: 0; }
+.mc-meta dt {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--ink-faint);
+}
+.mc-meta dd { margin: 2px 0 0; font-size: .9rem; }
+.mc-src {
+  margin: 10px 0 0;
+  font-size: .75rem;
+  color: var(--ink-faint);
+}
+.plan-why { margin: 26px 0 8px; max-width: 78ch; }
+.plan-why ol { padding-left: 20px; color: var(--ink-dim); }
+.plan-why li { margin: 6px 0; }
+.plan-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 24px; }
+.copy-status { font-size: .85rem; color: var(--ink-faint); align-self: center; }
+
+/* ---------- 04 · larger screens ---------- */
+@media (min-width: 720px) {
+  .oracle-grid { grid-template-columns: repeat(2, 1fr); }
+  .mission-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1100px) {
+  .oracle-grid { grid-template-columns: repeat(3, 1fr); }
+  .mission-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- 05 · reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .oracle-banner, .btn { transition: none; }
+}
+
+/* ---------- 06 · print (mission cards) ---------- */
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff; color: #111; }
+  .site-head, .site-foot, .skip, .plan-picker, .plan-actions,
+  .oc-actions, .oracle-banner { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  .plan-head h2 { font-size: 18pt; }
+  .plan-head h2 a { color: #111; text-decoration: none; }
+  .mission-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mission-card {
+    border: 1px solid #333;
+    border-left: 4px solid #333;
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+  .mc-day { color: #111; }
+  .mc-date, .mc-meta dt, .mc-src, .oc-honest, .plan-traj { color: #444; }
+  .plan-why { margin-top: 16px; }
+  .plan-why ol { color: #222; font-size: 10pt; }
+}

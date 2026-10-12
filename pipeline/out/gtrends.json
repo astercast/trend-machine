@@ -1,5 +1,29 @@
 [
   {
+    "title": "afc west",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~10000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:02:20.801623+00:00"
+  },
+  {
+    "title": "nfl undefeated teams",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:02:20.801696+00:00"
+  },
+  {
     "title": "49ers",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
@@ -9,19 +33,67 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-11T23:45:10.117351+00:00"
+    "fetched_at": "2026-10-12T00:02:20.801718+00:00"
   },
   {
     "title": "detroit pistons",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~5000+ searches.",
+    "summary": "~2000+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-11T23:45:10.117421+00:00"
+    "fetched_at": "2026-10-12T00:02:20.801735+00:00"
+  },
+  {
+    "title": "kasie whitener",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:02:20.801751+00:00"
+  },
+  {
+    "title": "san francisco 49ers schedule",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:02:20.801766+00:00"
+  },
+  {
+    "title": "zaire franklin",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~20000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:02:20.801782+00:00"
+  },
+  {
+    "title": "rashod bateman",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:02:20.801797+00:00"
   },
   {
     "title": "rashid shaheed",
@@ -33,7 +105,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-11T23:45:10.117445+00:00"
+    "fetched_at": "2026-10-12T00:02:20.801812+00:00"
   },
   {
     "title": "lucero",
@@ -45,78 +117,6 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-11T23:45:10.117463+00:00"
-  },
-  {
-    "title": "jason myers",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-11T23:45:10.117479+00:00"
-  },
-  {
-    "title": "mark andrews",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-11T23:45:10.117494+00:00"
-  },
-  {
-    "title": "chargers game today",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~2000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-11T23:45:10.117526+00:00"
-  },
-  {
-    "title": "randy moss",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-11T23:45:10.117539+00:00"
-  },
-  {
-    "title": "cusco - alianza lima",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-11T23:45:10.117555+00:00"
-  },
-  {
-    "title": "josh jobe",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-11T23:45:10.117571+00:00"
+    "fetched_at": "2026-10-12T00:02:20.801828+00:00"
   }
 ]

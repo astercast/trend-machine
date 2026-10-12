@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch planner — 7-day battle plan — Trend Machine</title>
+<meta name="description" content="Turn a trend into a printable 7-day content battle plan: day-by-day angles, hooks, hashtags, and platforms — scheduled from the topic's real dossier data.">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/wave3.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="head-inner">
+<a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<span class="kicker">🗓 launch planner</span>
+</div></header>
+
+<main id="main" class="wrap">
+<nav aria-label="Breadcrumb" style="margin:20px 0 0">
+<a href="index.html" style="font-size:13px">&larr; all trends</a>
+· <a href="oracle.html" style="font-size:13px">🔮 Oracle</a>
+</nav>
+
+<section aria-labelledby="planner-title" style="margin-top:24px">
+<p class="kicker">topic in &rarr; 7-day plan out</p>
+<h1 id="planner-title">🗓 Launch planner</h1>
+<p style="color:var(--ink-dim);max-width:76ch">
+  Turn a trend into a 7-day content battle plan. Angles rotate so no day
+  repeats, hooks and hashtags cycle from the topic's own dossier, and the
+  plan adapts its pacing when the Oracle has a trajectory for the topic.
+  <strong>Nothing is invented</strong> — every angle, hook, and hashtag comes
+  from the topic's dossier.
+</p>
+<div class="plan-picker" role="search" aria-label="Pick a topic">
+  <div class="field">
+    <label for="plan-topic">Topic</label>
+    <select id="plan-topic"><option value="">— choose a topic —</option></select>
+  </div>
+  <button type="button" class="btn" id="plan-generate">Generate plan</button>
+</div>
+<div id="plan-actions" class="plan-actions" hidden>
+  <button type="button" class="btn" id="plan-copy" aria-describedby="plan-copy-status">⧉ Copy plan as text</button>
+  <span class="copy-status" id="plan-copy-status" role="status" aria-live="polite"></span>
+  <button type="button" class="btn" id="plan-print" onclick="window.print()">🖨 Print mission cards</button>
+</div>
+<div id="plan-status" role="status" aria-live="polite"></div>
+<div id="plan-host"></div>
+</section>
+</main>
+
+<footer class="site-foot"><div class="wrap foot-grid">
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+</div></footer>
+
+<script src="assets/js/trajectory.js"></script>
+<script src="assets/js/launch-plan-lib.js"></script>
+<script src="assets/js/tm-copy.js"></script>
+<script src="assets/js/launch-plan.js"></script>
+</body>
+</html>

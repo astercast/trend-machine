@@ -84,6 +84,7 @@ def export_payload_json(t):
         "velocity": t.get("velocity", 0),
         "angles": t.get("angles", []), "hooks": t.get("hooks", []),
         "hashtags": t.get("hashtags", []),
+        "platforms": t.get("platforms", []),
         "format_tags": t.get("format_tags", []),
     }
     return json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
@@ -113,6 +114,7 @@ TOPIC_TMPL = """<!doctype html>
 <link rel="stylesheet" href="../assets/css/base.css">
 <link rel="stylesheet" href="../assets/css/components.css">
 <link rel="stylesheet" href="../assets/css/wave2.css">
+<link rel="stylesheet" href="../assets/css/wave3.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -135,6 +137,7 @@ TOPIC_TMPL = """<!doctype html>
 <div style="margin-bottom:4px">{plats}{cats}{formats}{tags}</div>
 {spark}
 {stale_note}
+<p style="margin:14px 0 0;font-size:14px"><a href="../oracle.html">🔮 See this topic's 48h forecast in the Oracle</a></p>
 </article>
 <section aria-labelledby="why"><div class="section-head"><h2 id="why"><span class="sec-no">01</span>Why it's trending</h2></div>
 <p style="max-width:68ch;font-size:1.05rem">{summary_long}</p>
@@ -144,6 +147,7 @@ TOPIC_TMPL = """<!doctype html>
 <section aria-labelledby="angles"><div class="section-head"><h2 id="angles"><span class="sec-no">02</span>Content angles</h2>
 <div class="angles-tools"><span class="kicker">topic in &rarr; video out</span>
 <button type="button" class="btn remix-btn" id="remix-btn" aria-describedby="remix-status" aria-label="Remix this topic: copy angles, hook lines and hashtags as plain text">⧉ Remix this</button>
+<a class="btn" href="../launch-plan.html?topic={tid}">🗓 7-day battle plan</a>
 <span class="copy-status" id="remix-status" role="status" aria-live="polite"></span>
 </div></div>
 {angles}
@@ -166,6 +170,7 @@ TOPIC_TMPL = """<!doctype html>
 <div class="num" style="font-size:12px">data: {ts}</div>
 </div></footer>
 <script type="application/json" id="export-payload">{payload}</script>
+<script src="../assets/js/tm-copy.js"></script>
 <script src="../assets/js/remix-export.js"></script>
 </body>
 </html>
@@ -214,6 +219,7 @@ def build_topic(t, history_pts=None):
                   if t.get("stale") else "")
     return TOPIC_TMPL.format(
         title=esc(t["title"]), desc=esc(t["summary"][:150]),
+        tid=esc(t["id"]),
         kicker=esc(t.get("category", "trend")) + " · dossier",
         summary=esc(t["summary"]), tier=tier, fcls=fcls, pulse=pulse, age=age,
         ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, cats=cats,
@@ -306,6 +312,8 @@ def main():
               ", ".join(sorted({t['category'] for t in topics})), "",
               "## API", "- api/v1/trends.json — all topics", "- api/v1/hashtags.json — tag index",
               "- api/v1/schema/trend.json — schema", "",
+              "## Oracle (flagship)", "- oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
+              "- launch-plan.html — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
               "Freshness: every topic carries first_seen/last_seen; stale (>72h) topics are flagged."]
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
