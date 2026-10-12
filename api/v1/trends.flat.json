@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T05:09:21.056878+00:00",
+  "generated_at": "2026-10-12T05:46:28.951224+00:00",
   "sample": false,
-  "source_count": 391,
+  "source_count": 393,
   "trends": [
     {
       "id": "six-seven-meme",
@@ -869,6 +869,48 @@
       }
     },
     {
+      "id": "national-coming-out-day",
+      "title": "National Coming Out Day (Oct 11)",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 78,
+      "opportunity_score": 78,
+      "hashtags": [
+        "#nationalcomingoutday",
+        "#comingoutday"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics today, Oct 11: LGBTQ people and allies sharing stories, with the recurring reminder to come out only when safe and ready. A day-of social moment — stories and solidarity content peak with the date.",
+      "category": "culture",
+      "platforms": [
+        "bluesky",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Bluesky trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 3,
+        "state": "ready",
+        "since": "Oct 12, 2026",
+        "first_velocity": 78,
+        "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 3,
+            "latest_velocity": 70,
+            "delta": 25,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
+          }
+        }
+      }
+    },
+    {
       "id": "like-a-prayer-remix",
       "title": "\"Like a Prayer\" house remix — emotional montage bed",
       "source": "Anijam",
@@ -1011,6 +1053,52 @@
         "delta": 0,
         "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
+      }
+    },
+    {
+      "id": "resume-gap-interview",
+      "title": "Resume gap interview meme",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 76,
+      "opportunity_score": 76,
+      "hashtags": [
+        "#resumegap",
+        "#interview",
+        "#meme"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): users imagine how different professions — and famous figures — would answer a job interviewer's question about the gap in their resume. A caption-first meme format: the gap is the setup, the profession is the punchline.",
+      "category": "meme",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [
+        "caption",
+        "format",
+        "meme"
+      ],
+      "sources": [
+        "Bluesky trending"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 3,
+        "state": "ready",
+        "since": "Oct 12, 2026",
+        "first_velocity": 76,
+        "latest_velocity": 76,
+        "delta": 0,
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 3,
+            "latest_velocity": 95,
+            "delta": 50,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+          }
+        }
       }
     },
     {
@@ -1810,44 +1898,6 @@
       }
     },
     {
-      "id": "canadian-thanksgiving",
-      "title": "Canadian Thanksgiving (Oct 12)",
-      "source": "Bluesky trending",
-      "url": "https://bsky.app",
-      "velocity": 70,
-      "opportunity_score": 70,
-      "hashtags": [
-        "#canadianthanksgiving",
-        "#thanksgiving",
-        "#grateful"
-      ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Live on Bluesky's trending topics (Oct 11): Canadians sharing holiday greetings, turkey-dinner stories, and gratitude lists ahead of Thanksgiving Monday (Oct 12). A 24-hour content window — the greeting-and-gratitude format peaks the day before and the day of.",
-      "category": "culture",
-      "platforms": [
-        "bluesky",
-        "instagram"
-      ],
-      "format_tags": [
-        "format"
-      ],
-      "sources": [
-        "Bluesky trending"
-      ],
-      "trend_type": "format",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 70,
-        "latest_velocity": 70,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {}
-      }
-    },
-    {
       "id": "dhurandhar2-grammy",
       "title": "Dhurandhar 2 enters the Grammy race",
       "source": "Sacnilk",
@@ -2322,9 +2372,9 @@
         "per_platform": {
           "youtube": {
             "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,14.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -2556,15 +2606,15 @@
         "per_platform": {
           "x": {
             "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,14.0 60.0,24.0 88.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           },
           "youtube": {
             "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,14.0 60.0,24.0 88.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -2606,6 +2656,43 @@
         "latest_velocity": 82,
         "delta": 0,
         "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "turn-to-your-neighbor",
+      "title": "\"Turn To Your Neighbor and Say\" (Marvin Sapp sports-fail edits)",
+      "source": "Know Your Meme",
+      "url": "https://knowyourmeme.com/memes/turn-to-your-neighbor-and-say",
+      "velocity": 82,
+      "opportunity_score": 53,
+      "hashtags": [
+        "#turntoyourneighbor",
+        "#sportsfail",
+        "#edit"
+      ],
+      "detected_at": "2026-09-20T00:00:00-07:00",
+      "summary": "Marvin Sapp's 2017 gospel song \"Listen\" — the \"Turn to your neighbor and say (neighbor)\" hook — became one of fall 2026's dominant fail-edit audios: comedy skits, lip dubs, and video edits set over sports fail videos and lowlights. Sometimes paired with a looped Cash Nasty arm-run clip mocking FlightReacts' basketball form (a 2020 moment revived). Popularized across TikTok and Instagram Reels thro",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Know Your Meme",
+        "meme.com"
+      ],
+      "trend_type": "topic",
+      "format_family": "audio-skit",
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 82,
+        "latest_velocity": 82,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -2796,6 +2883,45 @@
       }
     },
     {
+      "id": "zayn-sleeping-photo",
+      "title": "\"Why am I lowkey giving Zayn Malik sleeping photo?\"",
+      "source": "Know Your Meme",
+      "url": "https://knowyourmeme.com/memes/zayn-malik-sleeping",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#zaynmalik",
+        "#zaynmaliksleepingphoto",
+        "#fyp"
+      ],
+      "detected_at": "2026-09-04T00:00:00-07:00",
+      "summary": "A shirtless sleeping photo of Zayn Malik — circulating online since 2013 (59K Tumblr notes over 13 years) — became one of fall 2026's breakout TikTok comparison memes. The format: post the Zayn photo, then a photo of yourself or your partner sleeping in a similar — or comedically dissimilar — way, captioned \"Why am I lowkey giving Zayn Malik sleeping photo?\" Origin: @timmy.thick47 (Sept 4, 2026, 1",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format",
+        "meme"
+      ],
+      "sources": [
+        "Know Your Meme",
+        "meme.com"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 80,
+        "latest_velocity": 80,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
       "id": "tiktok-sounds-week",
       "title": "This week's breakout TikTok sounds",
       "source": "Revid",
@@ -2944,44 +3070,50 @@
       }
     },
     {
-      "id": "national-coming-out-day",
-      "title": "National Coming Out Day (Oct 11)",
-      "source": "Bluesky trending",
-      "url": "https://bsky.app",
-      "velocity": 78,
+      "id": "james-spader-agreed-to-return-as-ultron-before-rea",
+      "title": "James Spader agreed to return as Ultron before reading a VisionQuest script. #nycc #mcu #visionquest",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/shorts/jx6tjJkqQoo",
+      "velocity": 51,
       "opportunity_score": 51,
       "hashtags": [
-        "#nationalcomingoutday",
-        "#comingoutday"
+        "#nycc",
+        "#mcu",
+        "#visionquest"
       ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Live on Bluesky's trending topics today, Oct 11: LGBTQ people and allies sharing stories, with the recurring reminder to come out only when safe and ready. A day-of social moment — stories and solidarity content peak with the date.",
-      "category": "culture",
+      "detected_at": "2026-10-12T05:44:51.325738+00:00",
+      "summary": "IGN · published 2026-10-10. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
+      "category": "gaming",
       "platforms": [
-        "bluesky",
-        "instagram"
+        "youtube",
+        "twitch"
       ],
       "format_tags": [],
       "sources": [
-        "Bluesky trending",
-        "bluesky-trending"
+        "yt-rss:IGN"
       ],
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
+        "snapshots": 1,
+        "state": "building",
         "since": "Oct 12, 2026",
-        "first_velocity": 78,
-        "latest_velocity": 78,
+        "first_velocity": 51,
+        "latest_velocity": 51,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": null,
         "per_platform": {
-          "bluesky": {
-            "snapshots": 3,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
+          "twitch": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
           }
         }
       }
@@ -3021,53 +3153,6 @@
         "delta": 0,
         "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
-      }
-    },
-    {
-      "id": "resume-gap-interview",
-      "title": "Resume gap interview meme",
-      "source": "Bluesky trending",
-      "url": "https://bsky.app",
-      "velocity": 76,
-      "opportunity_score": 49,
-      "hashtags": [
-        "#resumegap",
-        "#interview",
-        "#meme"
-      ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Live on Bluesky's trending topics (Oct 11): users imagine how different professions — and famous figures — would answer a job interviewer's question about the gap in their resume. A caption-first meme format: the gap is the setup, the profession is the punchline.",
-      "category": "meme",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [
-        "caption",
-        "format",
-        "meme"
-      ],
-      "sources": [
-        "Bluesky trending",
-        "bluesky-trending"
-      ],
-      "trend_type": "format",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 76,
-        "latest_velocity": 76,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
       }
     },
     {
@@ -3142,9 +3227,9 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -4090,7 +4175,7 @@
       }
     },
     {
-      "id": "topic",
+      "id": "topic-2",
       "title": "#豊臣兄弟",
       "source": "mastodon-trends",
       "url": "https://mastodon.social/tags/%E8%B1%8A%E8%87%A3%E5%85%84%E5%BC%9F",
@@ -4099,7 +4184,7 @@
       "hashtags": [
         "#豊臣兄弟"
       ],
-      "detected_at": "2026-10-12T05:05:41.727974+00:00",
+      "detected_at": "2026-10-12T05:43:06.369366+00:00",
       "summary": "247 recent uses across the fediverse",
       "category": "culture",
       "platforms": [
@@ -4440,6 +4525,52 @@
             "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 95 when tracking started (Oct 12, 2026), 95 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>"
+          }
+        }
+      }
+    },
+    {
+      "id": "canadian-thanksgiving",
+      "title": "Canadian Thanksgiving (Oct 12)",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 70,
+      "opportunity_score": 46,
+      "hashtags": [
+        "#canadianthanksgiving",
+        "#thanksgiving",
+        "#grateful"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): Canadians sharing holiday greetings, turkey-dinner stories, and gratitude lists ahead of Thanksgiving Monday (Oct 12). A 24-hour content window — the greeting-and-gratitude format peaks the day before and the day of.",
+      "category": "culture",
+      "platforms": [
+        "bluesky",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Bluesky trending",
+        "bluesky-trending"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 3,
+        "state": "ready",
+        "since": "Oct 12, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
           }
         }
       }
@@ -6090,51 +6221,6 @@
       "hashtags": [],
       "detected_at": "2026-10-11T22:13:19.349170+00:00",
       "summary": "WESH · Wed, 07 Oct 2026 20:49:00 GMT",
-      "category": "meme",
-      "platforms": [
-        "tiktok",
-        "instagram"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:TikTok viral"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 7,
-        "state": "ready",
-        "since": "Oct 11, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 11, 2026), 45 at the latest snapshot (7 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 22.7,24.0 41.3,24.0 60.0,24.0 78.7,24.0 97.3,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "instagram": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"instagram velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "tiktok": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"tiktok velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "people-don-t-have-the-right-worrell-touts-orange-c",
-      "title": "‘People don’t have the right’: Worrell touts Orange County conviction in viral TikTok assault",
-      "source": "gnews-q:TikTok viral",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVE04bXNPNkpZdW1jNjFhTjRqYktGNlVoNUZKbngwTG9qbUR0WEFLMVJ3Wjh5TGlHc0pDVFVRUG5NVWoxQ0tEdkN3WUtqcVV3N3hzTDRTaElIdXRERTYxNlVYRW9vUjZIeDJQc2xQaXJrUWNxaEdRM2p1amFYQ19FbmhwRGxkYktkSFVOTzdzNjRoV1JpamVSaW9hN1dnX0MtbXZid0txaHotMzBiZUlSTFlUbGwtdGJF?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-11T22:13:19.349194+00:00",
-      "summary": "WKMG · Wed, 07 Oct 2026 14:43:18 GMT",
       "category": "meme",
       "platforms": [
         "tiktok",
@@ -7859,51 +7945,6 @@
       "hashtags": [],
       "detected_at": "2026-10-12T00:58:39.166105+00:00",
       "summary": "u//u/AlexGlezS · r/gaming · 2026-10-11",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/gaming"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 6,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,24.0 48.8,24.0 71.2,24.0 93.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "twitch": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"twitch velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "time-flies-when-you-are-dropping-penguins",
-      "title": "Time flies when you are dropping penguins",
-      "source": "reddit-rss:r/gaming",
-      "url": "https://www.reddit.com/r/gaming/comments/1x3c084/time_flies_when_you_are_dropping_penguins/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T00:58:39.166120+00:00",
-      "summary": "u//u/oeuvre · r/gaming · 2026-10-11",
       "category": "gaming",
       "platforms": [
         "youtube",
@@ -10147,141 +10188,6 @@
       }
     },
     {
-      "id": "10-most-successful-movies-of-all-time",
-      "title": "10 most successful movies of all time",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1cxWXVSRkNuanJzeTVjUk5rUzhHUUR3N2hHcVk2WE1PcE1pcmZYR1c4a1BmN0NsQU5TMHZmTnhuZlFVTm5GMWN3a1RZT2c2dzVVM0NRZlhfdHpKWmNKMTJaUC10VnBrSXYwelB6X2dSWG1pR3dMSVFndTZfR2FuQWhXSjlidHBfMzVj?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:40:48.681711+00:00",
-      "summary": "DW.com · Fri, 09 Oct 2026 07:00:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 5,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "tiktok": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"tiktok velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "r-l-stine-s-the-babysitter-adaptation-coming-to-tu",
-      "title": "R.L. Stine’s ‘The Babysitter’ Adaptation Coming to Tubi in 2027 (Exclusive)",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSGhXNTNOaXNrb2FGTVd2NHphU0xKbXhWSmJZOVJYaXFqaUQwZ2dUZTVBSWlNcTZCY0Q2RGhGV0pjWkpmdU5ZRGs4LWNWTF9sakxGMThhQTJIN2hUQ24wellNUXRWbHBZaXRfTzBub2JieVlEd2xjb3hHT3UzV1lVYjFCUFZQdHBzYjlCX21zVUlOdmFNVFloUEJTVDFLWnVpWG5XWV9Tbw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:40:48.681748+00:00",
-      "summary": "The Hollywood Reporter · Sun, 11 Oct 2026 15:22:57 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 5,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "tiktok": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"tiktok velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "new-music-friday-release-radar-for-october-9-2026-",
-      "title": "New Music Friday release radar for October 9, 2026: top albums, song releases",
-      "source": "gnews-q:new music",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLUNja2Q3dFN4SDRSLURNNWJycEJrYzNMSXpkR0FDRmNnc21MaEMwd2NpakQ3WUVRLTlrM2RfX2F2cThnRThmTjdIaW11V2dxSG9NMEhWZlVvRDBtanlHUGlGQXJUS21BbkJpRWRvUzN0RlJXMnBNZF9vMUNFdnRRTjhXQkludVNsMW83SlpQd1lxRDAtdFJMYTREMlRkYTRGaENPNVI2dTZ2a2NQMGtxVktERkI3NkhnNE9z?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T01:40:51.489841+00:00",
-      "summary": "DraftKings Network · Thu, 08 Oct 2026 16:49:41 GMT",
-      "category": "music",
-      "platforms": [
-        "tiktok",
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:new music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 5,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "tiktok": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"tiktok velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "best-new-music-this-week-cardi-b-drops-don-t-chart",
       "title": "Best New Music This Week: Cardi B Drops “Don’t Chart” Off GTA VI Soundtrack, Gunna Releases “Pop It,” Vince Staples, And More",
       "source": "gnews-q:new music",
@@ -11227,51 +11133,6 @@
       }
     },
     {
-      "id": "squadron-42-official-wishlist-trailer",
-      "title": "Squadron 42 - Official Wishlist Trailer",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/watch?v=pTHEkEZhMgM",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T03:30:44.020169+00:00",
-      "summary": "IGN · 649 thousand views · 1 day ago",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "twitch": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 0,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"twitch velocity trend: 95 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 0,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 95 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "ye-dry-tiny-desk-concert",
       "title": "YEИDRY: Tiny Desk Concert",
       "source": "yt-rss:NPRMusic",
@@ -11732,51 +11593,6 @@
       }
     },
     {
-      "id": "ukraine-has-dealt-a-big-blow-to-russia-s-ai-and-cl",
-      "title": "Ukraine Has Dealt a Big Blow to Russia’s AI and Cloud Infrastructure",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSEx6RDA1YURLbldpaWlrcU1FLXVhaGY0emQycW1Zc0EyZWZXTTdtYTZITjA5ZWtScHNMV2tDeWZHUU9sWXlFdjNabG1mQ1NjcFJSeTZidS1xc0QtR2Vkb2loNmVFUGxQRElIRTFnd0hQamQwX3pVZ2tFdmRnUTR5TFhwYU5KcEE3MmstZnE1TDRnN3JSeV8tUFhZSkFkQ0k?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T03:35:28.747610+00:00",
-      "summary": "Gizmodo · Sun, 11 Oct 2026 17:55:07 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "x": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "texas-says-insurance-rates-are-trending-down-state",
       "title": "Texas says insurance rates are trending down. State records show a more complicated picture.",
       "source": "gnews-q:trending",
@@ -11978,51 +11794,6 @@
       }
     },
     {
-      "id": "maggie-goodlander-says-safety-fairness-must-guide-",
-      "title": "Maggie Goodlander says safety, fairness must guide new A.I. regulations | CloseUp",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZ0MxWHdwQVVhRUx6MEJ5SkJrOHpKZnRxSmRNcnBvYmRFZEVtTVRWQmdhQVRjWXRVTFhaVlhOTE9hNGxqTURIUk9ZLUdUbWNHaXJIam1EcC1Ua1Bpd2s1UTUwR2owNGxIT2d4cVFDZTlaaHdfUlMxTUFvb0ZtcHd6bUkwRmo?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T04:33:20.219023+00:00",
-      "summary": "WMUR · Mon, 12 Oct 2026 03:31:00 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "x": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
       "id": "amazon-is-in-talks-to-buy-ai-startup-decart-wsj-re",
       "title": "Amazon Is in Talks to Buy AI Startup Decart, WSJ Reports",
       "source": "gnews-ai",
@@ -12099,14 +11870,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12189,14 +11960,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12234,14 +12005,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12279,14 +12050,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12324,14 +12095,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12369,14 +12140,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12414,14 +12185,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12504,14 +12275,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12594,14 +12365,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12729,14 +12500,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12774,14 +12545,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12819,14 +12590,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12864,14 +12635,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12954,14 +12725,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -12999,14 +12770,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13044,59 +12815,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "the-lightbulb-computer",
-      "title": "The Lightbulb Computer",
-      "source": "hackernews",
-      "url": "https://lightbulbcomputer.com/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T04:34:49.369877+00:00",
-      "summary": "581 points · 95 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "x": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13134,14 +12860,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13179,14 +12905,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13224,14 +12950,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13269,14 +12995,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13314,14 +13040,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13359,14 +13085,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13404,14 +13130,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13449,14 +13175,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13494,14 +13220,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13539,14 +13265,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13584,14 +13310,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13629,14 +13355,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13674,14 +13400,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13719,14 +13445,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13764,14 +13490,14 @@
         "per_platform": {
           "x": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13809,14 +13535,14 @@
         "per_platform": {
           "instagram": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13854,14 +13580,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13899,14 +13625,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13944,14 +13670,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -13989,14 +13715,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14034,14 +13760,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14079,14 +13805,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14124,14 +13850,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14169,14 +13895,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14214,14 +13940,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14259,14 +13985,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14304,14 +14030,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14349,14 +14075,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14394,14 +14120,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14439,14 +14165,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14484,14 +14210,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14529,14 +14255,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14574,14 +14300,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14619,14 +14345,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14664,14 +14390,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14709,14 +14435,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14754,14 +14480,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14799,14 +14525,14 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14843,8 +14569,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14881,8 +14607,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14919,8 +14645,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14957,8 +14683,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14995,8 +14721,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -15033,8 +14759,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -15071,8 +14797,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -15109,8 +14835,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -15147,46 +14873,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "i-hate-glider-guy-this-is-why-you-should-too",
-      "title": "i HATE glider guy. this is why you should too.",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3eezp/i_hate_glider_guy_this_is_why_you_should_too/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T04:34:07.071922+00:00",
-      "summary": "u//u/RaceKnown4231 · r/YouTube · 2026-10-11",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -15223,46 +14911,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "we-have-don-t-recommend-channel-and-don-t-recommen",
-      "title": "We have “don’t recommend channel” and “don’t recommend this type of content”, it’s time for “don’t recommend shorts with this sound”.",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3qxgu/we_have_dont_recommend_channel_and_dont_recommend/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T04:34:07.072023+00:00",
-      "summary": "u//u/Dry-Toe9414 · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -15345,262 +14995,13 @@
         "per_platform": {
           "x": {
             "snapshots": 1,
-            "latest_velocity": 70,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "building-a-vmm-from-scratch-0-why-boxlite-is-repla",
-      "title": "Building a VMM from scratch, #0: Why BoxLite is replacing libkrun",
-      "source": "hackernews",
-      "url": "https://blog.boxlite.ai/building-a-vmm-from-scratch-0-why-boxlite-is-replacing-libkrun",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:04:44.595633+00:00",
-      "summary": "4 points · 0 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "x": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "clickhouse-c-talk-to-clickhouse-using-its-native-b",
-      "title": "ClickHouse C – Talk to ClickHouse using its native binary protocol",
-      "source": "hackernews",
-      "url": "https://github.com/ClickHouse/clickhouse-c",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:05:05.636646+00:00",
-      "summary": "23 points · 1 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "x": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "shredding-json-columns-gave-logfire-up-to-1000x-fa",
-      "title": "Shredding JSON columns gave Logfire up to 1000x faster queries",
-      "source": "hackernews",
-      "url": "https://pydantic.dev/articles/dynamic-shredding-2026-01-26",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:05:07.181340+00:00",
-      "summary": "15 points · 8 comments",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "x": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "i-have-strong-feelings-about-air-conditioning-in-t",
-      "title": "I Have Strong Feelings About Air Conditioning in the Tech House",
-      "source": "yt-rss:LinusTechTips",
-      "url": "https://www.youtube.com/watch?v=1H20xp8Brnc",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:07:14.744772+00:00",
-      "summary": "LinusTechTips · published 2026-10-01. Get a free 15-day trial of Odoo’s all-in-one business solution and see how it can make your life easier! Check it out at https://www.odoo.com/ltt\n\nIt is HOT in the Tech House, and we're tired of sweat",
-      "category": "tech",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:LinusTechTips"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "i-found-these-computers-in-a-ditch",
-      "title": "I Found these Computers in a Ditch…",
-      "source": "yt-rss:LinusTechTips",
-      "url": "https://www.youtube.com/watch?v=y1hZ3EalPQU",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:07:14.744780+00:00",
-      "summary": "LinusTechTips · published 2026-09-28. Thanks to UGREEN for sponsoring this video! Check out their Home Agent lineup and more below!\nUGREEN HomeAgent 100(Reserve from $50, Save 50%)  https://ai.us.ugreen.com/vVqCH4\nUGREEN HomeAgent on Kick",
-      "category": "tech",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:LinusTechTips"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "what-s-the-worst-tech-linus-still-uses",
-      "title": "What's the Worst Tech Linus Still Uses?",
-      "source": "yt-rss:LinusTechTips",
-      "url": "https://www.youtube.com/shorts/zH9bqwNShiM",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:07:14.744788+00:00",
-      "summary": "LinusTechTips · published 2026-09-27. We always talk about the best tech we use, but what about the worst tech?",
-      "category": "tech",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:LinusTechTips"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15639,13 +15040,13 @@
         "per_platform": {
           "x": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15684,13 +15085,13 @@
         "per_platform": {
           "x": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15730,19 +15131,19 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           },
           "x": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           },
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15782,10 +15183,460 @@
         "per_platform": {
           "tiktok": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           },
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "the-weirdest-video-games-were-hacks",
+      "title": "The Weirdest Video Games Were Hacks",
+      "source": "gnews-q:video games",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBqdUswdF8zQUF6QmsycjVjclMzTUpxU3RqYkJYNURkekkwdmNsZWgweG1TR1ByNHFlaHdFa2k0RlZHRlZ6NWlLRU5Jd1lxcXVxcUV6cDEtbkU5eUpiWFhDWlhJMm5uRlNodXgtSEZRNXZnVlRiWkdv?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:03:58.209992+00:00",
+      "summary": "Hackaday · Sat, 10 Oct 2026 14:00:00 GMT",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:video games"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "twitch": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "logged-out-why-the-social-reckoning-flatlined-in-t",
+      "title": "Logged Out: Why 'The Social Reckoning' Flatlined in the Shadow of 'The Social Network' | Analysis",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNclBuUG1nZlNsMTNVSzE5ekE0WlFmUVNscW9DeFE0RzY3YlRQeVUxR0FfeWE1VzI3UF90eUlrbGpjRXcxZTk4cmxXaU15SUVqOGVjcE44a0tXUmNQb3pyOFdUbkpNZ3NFSC1IZTR3aHlBdk9DRUhMMURJMEZ5Nnk0anB6UndlblpoRmQ5MjVKZ0Z3dW82RGhycFFwZw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:04:00.707265+00:00",
+      "summary": "TheWrap · Mon, 12 Oct 2026 03:00:06 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "couple-charged-over-the-death-of-their-8-month-old",
+      "title": "Couple charged over the death of their 8-month-old baby",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x3sfqs/couple_charged_over_the_death_of_their_8monthold/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:04:14.306893+00:00",
+      "summary": "u//u/Karn__liberated · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "x",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "days-gone",
+      "title": "Days Gone",
+      "source": "reddit-rss:r/gaming",
+      "url": "https://www.reddit.com/r/gaming/comments/1x3roef/days_gone/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:04:22.562013+00:00",
+      "summary": "u//u/UkNomysTeezz · r/gaming · 2026-10-12",
+      "category": "gaming",
+      "platforms": [
+        "youtube",
+        "twitch"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/gaming"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "twitch": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "can-we-talk-about-the-kirby-icon-in-this-subreddit",
+      "title": "Can we talk about the Kirby icon in this subreddit?",
+      "source": "reddit-rss:r/Music",
+      "url": "https://www.reddit.com/r/Music/comments/1x3s3pa/can_we_talk_about_the_kirby_icon_in_this_subreddit/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:04:25.934124+00:00",
+      "summary": "u//u/Maleficent_Ninja778 · r/Music · 2026-10-12",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/Music"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "art-of-play-responds-to-kelly-clarkson",
+      "title": "Art of Play responds to Kelly Clarkson",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Art+of+Play+responds+to+Kelly+Clarkson",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:05:46.689805+00:00",
+      "summary": "The Brooklyn store says the singing bird automaton Kelly Clarkson wanted, Molly, isn't for sale.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "at-least-5-tornadoes-strike-central-nc-uprooting-t",
+      "title": "At least 5 tornadoes strike Central NC, uprooting trees and damaging homes in northeast Raleigh",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdGhMWkxWNG1wVzF5SVVEdmczQlZLTUsxbnczSDBRLTFvY2lSUGUyOXBMZTZCajdqeTNFS3FscXk1T1FJVTh4RGt1UG03aDVzWHlybzYyOHB5SFJZc2hHLVRzXzBjUndpLVlfM01EWXByUjFKbnZucmRfZ2RJYlg3SWVMZWVOWjBhcTBlelRmdTF5RU1vT0N0N2llMEE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:03.291509+00:00",
+      "summary": "WRAL · Mon, 12 Oct 2026 02:33:29 GMT",
+      "category": "news",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "regional-policing-unit-drops-controversial-palanti",
+      "title": "Regional policing unit drops controversial Palantir AI technology",
+      "source": "gnews-technology",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBqcnNHMFJEWTBsVWtJX21FckhxTWwtN1YtbGVNZnlaVVhURVlSZlJvak9Zc2xXN2VVMHdVb245QTFidFpZVVhyeHFCa0NULUhLN0JtVWhpNFY1NTA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:05.752357+00:00",
+      "summary": "BBC · Mon, 12 Oct 2026 05:17:10 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-technology"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 95,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 95,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "uk-to-strengthen-cyber-defences-as-minister-calls-",
+      "title": "UK to strengthen cyber defences as minister calls for AI firms to increase safety efforts",
+      "source": "gnews-technology",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMFpoZ1QxOWVmSkdqblhxbndMUjAyZUtFbWpIcHFnU0Q0SHNJMms1UkVLOVhmUHVDUXpIQmhmSVpoRWE5TTNHRFFXNkNSbmVhTXpFaEk3ZkU2TTk3VWt1Wk1xZE9iVkZiT0JzNDlkRXlUZEI0U0I5ZXl3aUpJWDBXN1RmaUcwYTJiZ2hNb3U0bFBoaHhvR2Z4eTI5LWNYYTRTYXJPQU56QQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:05.752423+00:00",
+      "summary": "The Guardian · Sun, 11 Oct 2026 23:01:00 GMT",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-technology"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 95,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 95,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "type-safe-html-templating-in-zig",
+      "title": "Type-safe HTML templating in Zig",
+      "source": "hackernews",
+      "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:41:43.798009+00:00",
+      "summary": "19 points · 2 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
           "x": {
             "snapshots": 1,
             "latest_velocity": 45,
@@ -15802,15 +15653,143 @@
       }
     },
     {
-      "id": "bambi-core-and-brocade-trending-prints-to-try-inst",
-      "title": "‘Bambi core’ and brocade: Trending prints to try instead of tartan",
-      "source": "gnews-q:trending",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZm53R3ZLbUpsdUtWSmhTRy1VbXVrN2R6VElkOVBaQ0R6bnJ5bjBKODJDNFhQTW1vbG81WXhfMDJ0SkJRVHJpN0pDWDRqNlVBR09ncW5veHptTlpZd190VTJjOHFPZWNwOUR5VUctSEJwRjVVWC0ySmZOZS1ZN0szSEk5Y2loU2lmc3pXRlB2bHBXRnppT0NzNXQydXZ0Y29Qd0E?oc=5",
+      "id": "yandex-bot-traffic-down-99-after-data-center-attac",
+      "title": "Yandex bot traffic down 99% after data center attack",
+      "source": "hackernews",
+      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d#bot-traffic",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:03:52.324205+00:00",
-      "summary": "Yahoo · Mon, 12 Oct 2026 02:03:00 GMT",
+      "detected_at": "2026-10-12T05:41:50.029256+00:00",
+      "summary": "58 points · 10 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "apsw-another-python-sqlite-wrapper",
+      "title": "apsw: Another Python SQLite Wrapper",
+      "source": "hackernews",
+      "url": "https://github.com/rogerbinns/apsw",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:42:25.362547+00:00",
+      "summary": "75 points · 17 comments",
+      "category": "tech",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "extras-i-spent-over-10-hours-upgrading-my-controll",
+      "title": "Extras - I spent over 10 hours upgrading my controllers",
+      "source": "yt-rss:LinusTechTips",
+      "url": "https://www.youtube.com/watch?v=evOOH_G2ti4",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:44:31.028559+00:00",
+      "summary": "LinusTechTips · 6 days ago",
+      "category": "tech",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:LinusTechTips"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "jeremiyah-love-trending-well-to-play-despite-ankle",
+      "title": "Jeremiyah Love 'trending well' to play despite ankle reinjury",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMVdHOXhLa3VOVG04alVYYmhIMm5yeHJMS01hOTZZbkdOdFEwQXM5cko1WFp4NVpBNEdWNlEwTVlhVzk4RXZhS2czUzJsem1FTDFPVHJWR296Tl9OMXVGQUVoQ1RkS29sX1RUeFhUYXlObVZtZTAwdUp6QV9MN0hNZUFHQTRiZ19UcnBlWjFOeE1CUldjYmVJZA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:17.208141+00:00",
+      "summary": "ESPN · Fri, 09 Oct 2026 19:31:00 GMT",
       "category": "news",
       "platforms": [
         "x",
@@ -15854,165 +15833,24 @@
       }
     },
     {
-      "id": "the-weirdest-video-games-were-hacks",
-      "title": "The Weirdest Video Games Were Hacks",
-      "source": "gnews-q:video games",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBqdUswdF8zQUF6QmsycjVjclMzTUpxU3RqYkJYNURkekkwdmNsZWgweG1TR1ByNHFlaHdFa2k0RlZHRlZ6NWlLRU5Jd1lxcXVxcUV6cDEtbkU5eUpiWFhDWlhJMm5uRlNodXgtSEZRNXZnVlRiWkdv?oc=5",
+      "id": "buffalo-bills-trending-up-trending-down-who-bills-",
+      "title": "Buffalo Bills trending up, trending down: Who Bills need on Monday Night Football in Los Angeles",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPaEQ3Sm4yeWQwRWRWNjNkWXF4VjE5TFU3TVFKUy1zLVBxNTU5XzIzdVc0V0R1YVg2WE55M1pIbmtYdTZranpITTIxOC1EMWxVbzZXTUtzbjJ6d1JXanVkNWtSSVA0WU1UTm81azRfVWNYS0JHV0VRcHVrOVpvdF9fbF9HeDlCWFY1LVlIaHJvTGdDN21rSUIxUTg0RTRqZDd0Q2hRSG1vWW5wSFM2SllPN0FoQXFCMDFtSVZ2ZUMxQmlzSVlwZ2tQbG95SV9sNWpBNk1GZm5NV2RVSE9WeGZwU1JyQ1FQRE5WSEQ4S0FR?oc=5",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:03:58.209992+00:00",
-      "summary": "Hackaday · Sat, 10 Oct 2026 14:00:00 GMT",
-      "category": "gaming",
-      "platforms": [
-        "youtube",
-        "twitch",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:video games"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "tiktok": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "twitch": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "logged-out-why-the-social-reckoning-flatlined-in-t",
-      "title": "Logged Out: Why 'The Social Reckoning' Flatlined in the Shadow of 'The Social Network' | Analysis",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNclBuUG1nZlNsMTNVSzE5ekE0WlFmUVNscW9DeFE0RzY3YlRQeVUxR0FfeWE1VzI3UF90eUlrbGpjRXcxZTk4cmxXaU15SUVqOGVjcE44a0tXUmNQb3pyOFdUbkpNZ3NFSC1IZTR3aHlBdk9DRUhMMURJMEZ5Nnk0anB6UndlblpoRmQ5MjVKZ0Z3dW82RGhycFFwZw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:04:00.707265+00:00",
-      "summary": "TheWrap · Mon, 12 Oct 2026 03:00:06 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "tiktok": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "movie-theaters-are-having-their-best-year-since-20",
-      "title": "Movie Theaters Are Having Their Best Year Since 2011",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY0pKSmd6QU1iOWpleHhfN1B5LVByelVuTEVVZkUtSWZFdEFHY2pRaFFJM3RTWHRENGNuX09uQkZEVHdXRm0tTmRYZ2JLdm8wNjJLbVNLOVR2SzNOckY4eXZsTWg4YlJnckdJb1d1bHBZdEFFREprajk0MVBmX1Mzbko4TGluQWZGeC1FTEtDb2VpUHk1M3VicEFQeTdQRzVo?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:04:00.707280+00:00",
-      "summary": "Yahoo · Mon, 12 Oct 2026 01:44:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "tiktok": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
-          "youtube": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "couple-charged-over-the-death-of-their-8-month-old",
-      "title": "Couple charged over the death of their 8-month-old baby",
-      "source": "reddit-rss:r/news",
-      "url": "https://www.reddit.com/r/news/comments/1x3sfqs/couple_charged_over_the_death_of_their_8monthold/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:04:14.306893+00:00",
-      "summary": "u//u/Karn__liberated · r/news · 2026-10-12",
+      "detected_at": "2026-10-12T05:40:17.208207+00:00",
+      "summary": "Buffalo Rumblings · Sat, 10 Oct 2026 14:00:00 GMT",
       "category": "news",
       "platforms": [
         "x",
+        "tiktok",
         "youtube"
       ],
       "format_tags": [],
       "sources": [
-        "reddit-rss:r/news"
+        "gnews-q:trending"
       ],
       "trend_type": "topic",
       "format_family": null,
@@ -16025,6 +15863,12 @@
         "delta": 0,
         "sparkline_svg": null,
         "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
           "x": {
             "snapshots": 1,
             "latest_velocity": 45,
@@ -16041,15 +15885,292 @@
       }
     },
     {
-      "id": "days-gone",
-      "title": "Days Gone",
-      "source": "reddit-rss:r/gaming",
-      "url": "https://www.reddit.com/r/gaming/comments/1x3roef/days_gone/",
+      "id": "arizona-is-trending-for-one-of-the-nation-s-best-s",
+      "title": "Arizona is trending for one of the nation's best safeties closing in on a decision",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQR0lncmtmdGZmTHBaYUpieERHZTg4eGZjQnU1eURoak5BeFJ6RTBsUF9aY1VJX19uMXNjV0ZyNkhWdHZGa3p0Zlg0QWFoQW16OXJ4NjJneFpnVXhlTGxHQWxxQkhCRzN0bmJKc3FPN1dWSm1wN1Fta20tZHpxQTkzSFRadjZobDB5SS1OZHdHTmh2TTRtRzd1OW14NjZ2VURXWklURk5TRm5NWXhXaEthNlB2aw?oc=5",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:04:22.562013+00:00",
-      "summary": "u//u/UkNomysTeezz · r/gaming · 2026-10-12",
+      "detected_at": "2026-10-12T05:40:17.208350+00:00",
+      "summary": "On3 · Mon, 12 Oct 2026 02:06:56 GMT",
+      "category": "news",
+      "platforms": [
+        "x",
+        "tiktok",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "x": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "haunted-mansion-movies-when-freeform-airs-both-and",
+      "title": "Haunted Mansion movies: when Freeform airs both and where to stream",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1lVkE5WTlETHlpbVpWOE41V2J5V3daUVVxUHo5a245NzgwcUdpNkllb2VOekxlM19DaGVjdHBDRG84cjBnWW9aSWRXQWxpSTJ2U2kxVXMwZ3RvZW5FZ3BjWnh0MGVONE0?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:34.099919+00:00",
+      "summary": "IMDb · Mon, 12 Oct 2026 01:48:11 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "sacha-baron-cohen-and-300-ali-g-look-alikes-descen",
+      "title": "Sacha Baron Cohen and 300 Ali G Look-Alikes Descend on London Ahead of New Movie ‘Who Iz I?’",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPRzRpd3FOZ2pVSFlNRUZfbWw3azNBa1ZUUXlJRVYwTWhJZko0dnBvSktsWlZZZW94ZVhkVkNfNDdTVlhJWUpjZHhSSk94ZWxoWlR6UXV5VjhnSmkzYmlaNTkwVnBfWGNZZTFEVHBiWEF4RVNDa0Q4ZlJBT1RQR2xNSWVLV1U2YkJudWtsVkZNY19Va05sQ3JLV2kzckNnZ3pUN3Vhdm9rbzNuZFhncERvSE83b1RvNlQ2eGEyM0dLVQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:34.099952+00:00",
+      "summary": "The Hollywood Reporter · Sun, 11 Oct 2026 23:13:03 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "megalopolis-is-making-a-long-term-theatrical-comeb",
+      "title": "‘Megalopolis’ Is Making a Long-Term Theatrical Comeback",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVkRJR1Z1RVpPUnozZlBNc0JFN0d2RU53S0xWQmwtVW9Ick8yaXZjcmFzMUN6bmZ6WVd6LXEtMGk3dTZpcVdmNEVsRzlvYl92RmNFWkpzZWQ2aG5KVTRtNDRYMUVhQ0pnbkZ4dVloUEFYRUlIY3pQcGVFTnMxNkg5bXMzel9pRHNvY0JNTA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:34.099969+00:00",
+      "summary": "Gizmodo · Sun, 11 Oct 2026 20:15:08 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "youtube",
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "carly-rae-jepsen-adds-eight-more-songs-to-her-new-",
+      "title": "Carly Rae Jepsen Adds Eight More Songs To Her New Double Album Day And Night",
+      "source": "gnews-q:new music",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSzg2VFl5dnVvYXJFdnB2eHpCYTUwLXJKV0ZFNFEzaERpRUlFMnV1TDhIZ2hVNzdWaTVuX09DS1R1RVRHU01nNUdPM0hsOEZpek9vdnhYcnBYVkdxakprc1M1YW5CV0oyMGV3OWJCMVQyUFc0RzQ4UjJNUzNFb3ZWQzQxaV9GVThYZnFGa2lCalNXcFBYcGtTSjh2WkZ3bjNPRGk2b3VWVzNPVUVtMEtrUzlR?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:49.501921+00:00",
+      "summary": "Stereogum · Fri, 09 Oct 2026 14:58:00 GMT",
+      "category": "music",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:new music"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "poughkeepsie-tiktok-prank-goes-viral-after-cops-ge",
+      "title": "Poughkeepsie TikTok Prank Goes Viral After Cops Get Involved",
+      "source": "gnews-q:TikTok viral",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE90dFNuM3R3Nko1ZDlnb042UFl4XzdCSDEwR3lOOU9MUEZrQm1ha0QyQWZJUzJmUUZrUUN4aVh5ZjNsTlBxVTF6Z0ExYUlwdGRyQW1saG02RUZmdVROTWEySHVPTkdMMnBuR3NRcE10cHVTSkJ3Q1hCNQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:40:52.846808+00:00",
+      "summary": "hudsonvalleycountry.com · Thu, 08 Oct 2026 11:19:24 GMT",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:TikTok viral"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "instagram": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "tiktok": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "doom-2016-composer-mick-gordon-says-he-d-return-to",
+      "title": "Doom 2016 Composer Mick Gordon Says He'd Return to the Doom Series \"In a Heartbeat\"",
+      "source": "reddit-rss:r/gaming",
+      "url": "https://www.reddit.com/r/gaming/comments/1x3tey8/doom_2016_composer_mick_gordon_says_hed_return_to/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:41:24.159243+00:00",
+      "summary": "u//u/RenatsMC · r/gaming · 2026-10-12",
       "category": "gaming",
       "platforms": [
         "youtube",
@@ -16086,23 +16207,22 @@
       }
     },
     {
-      "id": "can-we-talk-about-the-kirby-icon-in-this-subreddit",
-      "title": "Can we talk about the Kirby icon in this subreddit?",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x3s3pa/can_we_talk_about_the_kirby_icon_in_this_subreddit/",
+      "id": "dear-people-who-tell-me-to-use-don-t-recommend-or-",
+      "title": "Dear people who tell me to use \"don't recommend\" or \"not interested\" on youtube, please pay attention! When RWBY Fans try typing in the name of the show into youtube? Hate videos a",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3si5r/dear_people_who_tell_me_to_use_dont_recommend_or/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:04:25.934124+00:00",
-      "summary": "u//u/Maleficent_Ninja778 · r/Music · 2026-10-12",
-      "category": "music",
+      "detected_at": "2026-10-12T05:41:36.625386+00:00",
+      "summary": "u//u/Important-Cry4782 · r/YouTube · 2026-10-12",
+      "category": "entertainment",
       "platforms": [
-        "tiktok",
         "youtube"
       ],
       "format_tags": [],
       "sources": [
-        "reddit-rss:r/Music"
+        "reddit-rss:r/YouTube"
       ],
       "trend_type": "topic",
       "format_family": null,
@@ -16115,12 +16235,6 @@
         "delta": 0,
         "sparkline_svg": null,
         "per_platform": {
-          "tiktok": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          },
           "youtube": {
             "snapshots": 1,
             "latest_velocity": 45,
@@ -16131,15 +16245,53 @@
       }
     },
     {
-      "id": "cartoon-network-production-materials-leak",
-      "title": "Cartoon Network production materials leak",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Cartoon+Network+production+materials+leak",
+      "id": "youtube-s-enshittification-has-started",
+      "title": "Youtube's enshittification has started!",
+      "source": "reddit-rss:r/YouTube",
+      "url": "https://www.reddit.com/r/youtube/comments/1x3stct/youtubes_enshittification_has_started/",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:05:46.689794+00:00",
-      "summary": "A 300GB trove of model sheets, rigs, and storyboards spread online as fans eye the Skydance merger.",
+      "detected_at": "2026-10-12T05:41:36.625419+00:00",
+      "summary": "u//u/That_Redmond_Guy · r/YouTube · 2026-10-12",
+      "category": "entertainment",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/YouTube"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "tom-cruise-s-film-digger",
+      "title": "Tom Cruise's film 'Digger'",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Tom+Cruise%27s+film+%27Digger%27",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-12T05:43:09.260515+00:00",
+      "summary": "Alejandro G. Iñárritu's climate crisis satire is splitting viewers, with fans urging people to go.",
       "category": "news",
       "platforms": [
         "bluesky"
@@ -16169,15 +16321,15 @@
       }
     },
     {
-      "id": "art-of-play-responds-to-kelly-clarkson",
-      "title": "Art of Play responds to Kelly Clarkson",
+      "id": "data-center-community-impacts",
+      "title": "Data center community impacts",
       "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Art+of+Play+responds+to+Kelly+Clarkson",
+      "url": "https://bsky.app/search?q=Data+center+community+impacts",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:05:46.689805+00:00",
-      "summary": "The Brooklyn store says the singing bird automaton Kelly Clarkson wanted, Molly, isn't for sale.",
+      "detected_at": "2026-10-12T05:43:09.260612+00:00",
+      "summary": "Big Tech facilities draw criticism over pollution, noise, water use, tax breaks, and rising power bills.",
       "category": "news",
       "platforms": [
         "bluesky"
@@ -16207,15 +16359,15 @@
       }
     },
     {
-      "id": "trump-weighs-firing-kimberly-guilfoyle",
-      "title": "Trump weighs firing Kimberly Guilfoyle",
+      "id": "burnham-on-brexit-interference",
+      "title": "Burnham on Brexit interference",
       "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Trump+weighs+firing+Kimberly+Guilfoyle",
+      "url": "https://bsky.app/search?q=Burnham+on+Brexit+interference",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:05:46.689896+00:00",
-      "summary": "Trump and Rubio consider removing the US ambassador to Greece over improper conduct reports.",
+      "detected_at": "2026-10-12T05:43:09.260621+00:00",
+      "summary": "Andy Burnham comments on claims of Russian interference in the 2016 Brexit referendum.",
       "category": "news",
       "platforms": [
         "bluesky"
@@ -16245,53 +16397,15 @@
       }
     },
     {
-      "id": "ruin-a-book-by-adding-a-word",
-      "title": "Ruin a book by adding a word",
+      "id": "hellraiser-revival-game-launches",
+      "title": "Hellraiser: Revival game launches",
       "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Ruin+a+book+by+adding+a+word",
+      "url": "https://bsky.app/search?q=Hellraiser%3A+Revival+game+launches",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-12T05:05:46.689906+00:00",
-      "summary": "Users add one word to famous titles, like \"Lord of the Onion Rings\" and \"Charlotte's Dark Web.\"",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "newsom-backs-wealth-tax-ban",
-      "title": "Newsom backs wealth tax ban",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Newsom+backs+wealth+tax+ban",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T05:05:46.689915+00:00",
-      "summary": "Gov. Gavin Newsom opposes the billionaire levy and supports Proposition 42 to block future ones.",
+      "detected_at": "2026-10-12T05:43:09.260636+00:00",
+      "summary": "Critics review Boss Team Games' survival horror adaptation of Clive Barker's franchise",
       "category": "news",
       "platforms": [
         "bluesky"

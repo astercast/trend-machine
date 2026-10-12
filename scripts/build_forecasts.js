@@ -33,6 +33,8 @@ const ACC_OUT = path.join(API, "forecast-accuracy.json");
 const MANIFEST = path.join(API, "index.json");
 
 const T = require("../assets/js/trajectory.js");
+const R = require("./resolution-lib.js"); // wave 14: shared resolution rules
+                                          // (hit/miss/unverifiable + evidence)
 
 // --- wave 6: forecast-accuracy log -----------------------------------------
 const HORIZON_H = 48;            // forecasts resolve after 48h
@@ -50,40 +52,10 @@ function writeJSON(p, obj) {
   fs.writeFileSync(p, JSON.stringify(obj, null, 2));
 }
 
-function slopeOf(points, t0ms) {
-  // points: [[iso, v], ...] -> least-squares slope per hour vs t0ms
-  const xs = points.map(p => (Date.parse(p[0]) - t0ms) / 3600000);
-  const ys = points.map(p => p[1]);
-  return { slope: T._slope(xs, ys), ys: ys };
-}
-
-function verdictFor(entry, history) {
-  // Compare the forecast recorded 48h ago with what actually happened.
-  // Rules are documented in the output's resolution_rules — same
-  // thresholds the classifier itself uses (T.RISE / T.FALL).
-  const fAt = Date.parse(entry.forecast_at);
-  const end = fAt + HORIZON_H * 3600000;
-  const pts = (history[entry.topic_id] || [])
-    .filter(p => { const t = Date.parse(p[0]); return t > fAt && t <= end; });
-  if (pts.length < 2) { return null; } // not enough actuals yet — retry later
-  const r = slopeOf(pts, fAt);
-  const slope = Math.round(r.slope * 100) / 100;
-  const endVel = r.ys[r.ys.length - 1];
-  const maxVel = Math.max.apply(null, r.ys);
-  let verdict;
-  if (entry.state === "accelerating" || entry.state === "rising") {
-    verdict = slope >= T.RISE ? "hit" : "miss";
-  } else if (entry.state === "fading") {
-    verdict = slope <= T.FALL ? "hit" : "miss";
-  } else if (entry.state === "peaking") {
-    // Called the top: the peak stayed at/below the forecast level (+2 tolerance).
-    verdict = maxVel <= entry.latest_velocity + 2 ? "hit" : "miss";
-  } else {
-    verdict = "miss";
-  }
-  return { verdict: verdict, actual_slope: slope,
-           actual_end_velocity: endVel, actual_max_velocity: maxVel };
-}
+// wave 14: inline slope/verdict logic moved to scripts/resolution-lib.js
+// (shared with scripts/check_resolutions.js — one rule set, no drift).
+// The hit/miss rules below are unchanged: classifier's own T.RISE/T.FALL,
+// peaking tolerance +2, least-squares slope with the isFinite guard.
 
 function updateAccuracyLedger(now, history, analyses) {
   // analyses: {topic_id: {state, latestVelocity, peakInHours, n, title}}
@@ -95,14 +67,15 @@ function updateAccuracyLedger(now, history, analyses) {
   // 1) prune entries older than the max age
   entries = entries.filter(e => nowMs - Date.parse(e.forecast_at) < maxAgeMs);
 
-  // 2) resolve pending entries old enough to judge
+  // 2) resolve pending entries old enough to judge (wave 14: via the shared
+  //    resolution-lib — same hit/miss rules as before, plus a terminal
+  //    "unverifiable" verdict with evidence when the 48h window holds <2
+  //    actual snapshots, instead of lingering pending forever)
+  const thresholds = { rise: T.RISE, fall: T.FALL };
   entries.forEach(e => {
     if (e.resolved) { return; }
     if (nowMs - Date.parse(e.forecast_at) < HORIZON_H * 3600000) { return; }
-    const res = verdictFor(e, history);
-    if (res) {
-      e.resolved = Object.assign({ resolved_at: now.toISOString() }, res);
-    }
+    R.resolveEntry(e, history, nowMs, thresholds);
   });
 
   // 3) append today's decisive forecasts (dedupe: one open entry per
@@ -144,21 +117,33 @@ function updateAccuracyLedger(now, history, analyses) {
 }
 
 function buildAccuracyPayload(now, entries) {
-  const resolved = entries.filter(e => e.resolved);
-  const hits = resolved.filter(e => e.resolved.verdict === "hit");
+  // wave 14: "resolved" keeps its historical meaning — scored hit or miss
+  // (the scorecard page's own words). Terminal-but-unscorable entries
+  // (verdict "unverifiable": 48h passed, <2 actual snapshots) get their
+  // own counter so the hit rate stays meaningful and the honesty contract
+  // (MIN_RESOLVED_FOR_RATE) counts decisive calls only.
+  const terminal = entries.filter(e => e.resolved);
+  const decisive = terminal.filter(e => e.resolved.verdict === "hit" ||
+                                        e.resolved.verdict === "miss");
+  const unverifiable = terminal.filter(e => e.resolved.verdict === "unverifiable");
+  const hits = decisive.filter(e => e.resolved.verdict === "hit");
   const byState = {};
   RECORDED_STATES.forEach(s => {
-    const rs = resolved.filter(e => e.state === s);
+    const rs = decisive.filter(e => e.state === s);
     byState[s] = { resolved: rs.length,
                    hits: rs.filter(e => e.resolved.verdict === "hit").length };
   });
-  const recent = resolved
+  const recent = terminal
     .slice().sort((a, b) => Date.parse(b.resolved.resolved_at) - Date.parse(a.resolved.resolved_at))
     .slice(0, 20)
     .map(e => ({
       topic_id: e.topic_id, title: e.title, forecast_at: e.forecast_at,
       state: e.state, peak_in_hours: e.peak_in_hours,
-      verdict: e.resolved.verdict, actual_slope: e.resolved.actual_slope,
+      verdict: e.resolved.verdict, reason: e.resolved.reason,
+      actual_slope: e.resolved.actual_slope,
+      actual_end_velocity: e.resolved.actual_end_velocity,
+      actual_max_velocity: e.resolved.actual_max_velocity,
+      n_actual_points: e.resolved.n_actual_points,
       n_snapshots: e.n_snapshots
     }));
   // wave 9: resolution timeline — pending forecasts grouped by the day their
@@ -188,20 +173,22 @@ function buildAccuracyPayload(now, entries) {
   // data" until that confidence level has MIN_RESOLVED_FOR_RATE resolved.
   const byConfidence = {};
   ["high", "medium", "low"].forEach(level => {
-    const rs = resolved.filter(e => e.confidence === level);
+    const rs = decisive.filter(e => e.confidence === level);
     byConfidence[level] = {
       resolved: rs.length,
       hits: rs.filter(e => e.resolved.verdict === "hit").length
     };
   });
-  const showRate = resolved.length >= MIN_RESOLVED_FOR_RATE;
+  const showRate = decisive.length >= MIN_RESOLVED_FOR_RATE;
   return {
     generated_at: now.toISOString(),
     status: showRate ? "live" : "building history",
     method: "Each refresh records the Oracle's decisive forecasts (peaking / " +
             "accelerating / rising / fading) in data/forecast_ledger.json. " +
             "48h later the forecast is compared with the actual velocity " +
-            "history and scored hit/miss. Nothing is backfilled — the log " +
+            "history and scored hit/miss; when the 48h window holds fewer than " +
+            "2 actual snapshots the call is marked unverifiable (data gap — " +
+            "not a miss) with its reason recorded. Nothing is backfilled — the log " +
             "starts 2026-10-11, so the first resolutions land 48h after that.",
     horizon_hours: HORIZON_H,
     resolution_rules: {
@@ -210,19 +197,25 @@ function buildAccuracyPayload(now, entries) {
       peaking: "hit if the highest velocity in the 48h window stays at/below " +
         "the forecast-time velocity +2 (the top was called, not blown through)",
       fading: "hit if the actual velocity slope over the 48h window is <= " +
-        T.FALL + "/hr (the classifier's own falling threshold)"
+        T.FALL + "/hr (the classifier's own falling threshold)",
+      unverifiable: "the 48h window holds fewer than 2 actual velocity " +
+        "snapshots (data gap: topic dropped, series pruned, fetch outage) — " +
+        "counted separately, never folded into the hit rate"
     },
     counts: { recorded: entries.length,
-              pending: entries.length - resolved.length,
-              resolved: resolved.length, hits: hits.length },
+              pending: entries.length - terminal.length,
+              resolved: decisive.length, unverifiable: unverifiable.length,
+              hits: hits.length },
     upcoming_resolutions: upcoming_resolutions,
     recorded_per_day: recorded_per_day,
     by_confidence: byConfidence,
-    hit_rate: showRate ? Math.round((hits.length / resolved.length) * 1000) / 1000 : null,
+    hit_rate: showRate ? Math.round((hits.length / decisive.length) * 1000) / 1000 : null,
     hit_rate_note: showRate
-      ? "Hit rate across " + resolved.length + " resolved forecasts."
+      ? "Hit rate across " + decisive.length + " decisive resolved forecasts" +
+        (unverifiable.length ? " (" + unverifiable.length + " unverifiable excluded)." : ".")
       : "The Oracle shows its own hit rate once " + MIN_RESOLVED_FOR_RATE +
-        " forecasts have resolved; currently " + resolved.length + " resolved.",
+        " forecasts have resolved decisively; currently " + decisive.length +
+        " decisive" + (unverifiable.length ? ", " + unverifiable.length + " unverifiable" : "") + ".",
     by_state: byState,
     recent: recent
   };

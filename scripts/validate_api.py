@@ -150,6 +150,33 @@ def main():
     else:
         print("[validate] meme-formats.json absent — not validated")
 
+    # wave 14: seed-freshness.json — schema + consistency with seeded topics
+    sf_path = os.path.join(API, "seed-freshness.json")
+    if os.path.exists(sf_path):
+        sf = validate_doc("seed-freshness.json", sf_path, "seed-freshness.json")
+        sc = sf.get("counts", {})
+        check("seed-freshness counts sum to seeds",
+              sc.get("healthy", -1) + sc.get("stale-source", -1)
+              + sc.get("stale-untracked", -1) + sc.get("flaky-warning", -1)
+              == sc.get("seeds", -2) == len(sf.get("seeds", [])),
+              f"counts={sc}")
+        seeded_ids = {t["id"] for t in topics if t.get("seeded")}
+        bad_sf = [s["id"] for s in sf.get("seeds", [])
+                  if s["id"] not in seeded_ids]
+        check("seed-freshness covers exactly the seeded topics",
+              not bad_sf and len(sf.get("seeds", [])) == len(seeded_ids),
+              f"bad ids: {bad_sf[:5]}")
+        stale_ids = {s["id"] for s in sf.get("stale", [])}
+        bad_stale = [s["id"] for s in sf.get("seeds", [])
+                     if (s["verdict"].startswith("stale")) != (s["id"] in stale_ids)]
+        check("seed-freshness stale list matches verdicts", not bad_stale,
+              f"mismatches: {bad_stale[:5]}")
+        check("seed-freshness verdicts honest enum",
+              all(s["verdict"] in ("healthy", "stale-source", "stale-untracked",
+                                   "flaky-warning") for s in sf.get("seeds", [])))
+    else:
+        print("[validate] seed-freshness.json absent (sweep not run) — not validated")
+
     # wave 9: forecast-accuracy rich-dashboard fields (additive, honest)
     fa_path2 = os.path.join(API, "forecast-accuracy.json")
     if os.path.exists(fa_path2):
@@ -187,8 +214,10 @@ def main():
     if os.path.exists(fa_path):
         fa = validate_doc("forecast-accuracy.json", fa_path, "forecast-accuracy.json")
         c = fa.get("counts", {})
+        # wave 14: unverifiable is counted separately, never in the hit rate
         check("accuracy counts consistent",
               c.get("recorded", -1) == c.get("pending", -2) + c.get("resolved", -3)
+              + c.get("unverifiable", 0)
               and c.get("hits", 999) <= c.get("resolved", -1),
               f"counts={c}")
         check("accuracy hit_rate honest",
@@ -196,6 +225,15 @@ def main():
               (c.get("resolved", 0) < 10 and fa.get("hit_rate") is None
                and fa.get("status") == "building history"),
               f"status={fa.get('status')} hit_rate={fa.get('hit_rate')} resolved={c.get('resolved')}")
+        check("accuracy verdicts honest enum",
+              all(r.get("verdict") in ("hit", "miss", "unverifiable")
+                  for r in fa.get("recent", [])),
+              "recent verdicts must be hit/miss/unverifiable")
+        check("every resolution carries its evidence",
+              all(isinstance(r.get("reason"), str) and r.get("reason")
+                  and isinstance(r.get("n_actual_points"), int)
+                  for r in fa.get("recent", [])),
+              "recent entries must carry reason + n_actual_points")
     else:
         print("[validate] forecast-accuracy.json absent (node step skipped) — not validated")
 

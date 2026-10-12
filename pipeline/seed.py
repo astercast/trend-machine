@@ -1076,6 +1076,48 @@ T("trump-diesel-russia", "Trump diesel deal with Russia",
 
 topics = topics + wave11_topics
 
+WAVE13_TS = "2026-10-11T22:40:00-07:00"
+WAVE13_NOTE = ("Wave-9 re-add (wave 13, 2026-10-11): the merge note flagged these "
+               "two seeds as never landed — verified live this wave against Know "
+               "Your Meme entry pages (both updated within the last day) and "
+               "meme.com's meme library (both freshly listed). Corroborate on "
+               "next pipeline refresh.")
+
+# --- wave 13: the two missing wave-9 seeds, finally landed ---------------------
+# The wave-9 entry named five seeds, but only three made it into the tree;
+# "turn-to-your-neighbor" and "zayn-sleeping-photo" were never landed (lost in
+# the waves 9–11 interleave). Both turn out to be real, live fall-2026 trends:
+# verified this wave against Know Your Meme (both entries updated within the
+# last day) and meme.com's meme library (both listed fresh). Nothing invented;
+# both flagged "verified" = 2+ independent sources, corroborate on refresh.
+wave13_topics = [
+T("turn-to-your-neighbor", "\"Turn To Your Neighbor and Say\" (Marvin Sapp sports-fail edits)",
+  "Marvin Sapp's 2017 gospel song \"Listen\" — the \"Turn to your neighbor and say (neighbor)\" hook — became one of fall 2026's dominant fail-edit audios: comedy skits, lip dubs, and video edits set over sports fail videos and lowlights. Sometimes paired with a looped Cash Nasty arm-run clip mocking FlightReacts' basketball form (a 2020 moment revived). Popularized across TikTok and Instagram Reels through September and October 2026; an early notable example was @rfiseditz's NBA lowlights edit (Sept 20, 2026, 154K views in three weeks).",
+  "meme", ["tiktok", "instagram"], ["#turntoyourneighbor", "#sportsfail", "#edit"], 82, "medium",
+  "2026-09-20T00:00:00-07:00",
+  [("Know Your Meme", "https://knowyourmeme.com/memes/turn-to-your-neighbor-and-say"),
+   ("meme.com", "https://meme.com/memes")],
+  ["Sports fail edit over the \"turn to your neighbor\" hook", "Cash Nasty arm-run loop over your lowlight reel",
+   "Comedy skit: what you'd tell your neighbor before game time"],
+  ["Turn to your neighbor and say", "One of fall's dominant fail-edit audios"],
+  ["@rfiseditz (early example)", "Cash Nasty / FlightReacts"], ["content-engine/formats", "packaging/hooks"],
+  verification="verified", note=WAVE13_NOTE),
+
+T("zayn-sleeping-photo", "\"Why am I lowkey giving Zayn Malik sleeping photo?\"",
+  "A shirtless sleeping photo of Zayn Malik — circulating online since 2013 (59K Tumblr notes over 13 years) — became one of fall 2026's breakout TikTok comparison memes. The format: post the Zayn photo, then a photo of yourself or your partner sleeping in a similar — or comedically dissimilar — way, captioned \"Why am I lowkey giving Zayn Malik sleeping photo?\" Origin: @timmy.thick47 (Sept 4, 2026, 1.8M views in a month); big spreads from @ilove2000sshows (Sept 7, 8.5M views in a month), @anahyy.lol (Sept 23, 4.8M views in two weeks), @cancelmil (Sept 26, 3M views in two weeks). Still being covered on meme desks into the second week of October.",
+  "meme", ["tiktok"], ["#zaynmalik", "#zaynmaliksleepingphoto", "#fyp"], 80, "medium",
+  "2026-09-04T00:00:00-07:00",
+  [("Know Your Meme", "https://knowyourmeme.com/memes/zayn-malik-sleeping"),
+   ("meme.com", "https://meme.com/memes")],
+  ["Rate your sleep position against the Zayn photo", "Couple sleeping-photo comparison, dissimilarity as the joke",
+   "Moodboard edit: the 2013 photo as the aesthetic benchmark"],
+  ["Why am I lowkey giving Zayn Malik sleeping photo", "The 2013 photo that became fall 2026's meme"],
+  ["@timmy.thick47 (origin)", "@ilove2000sshows", "@anahyy.lol", "@cancelmil"], ["content-engine/formats", "audience/community"],
+  verification="verified", note=WAVE13_NOTE),
+]
+
+topics = topics + wave13_topics
+
 
 def main():
     seed_ids = {t["id"] for t in topics}
@@ -1095,11 +1137,12 @@ def main():
     merged = kept + topics
     data = {
         "generated_at": SEED_TS,
-        "generator": "pipeline/seed.py (wave 11: +35 Oct-2026 seeds, 91 seeds)",
+        "generator": "pipeline/seed.py (wave 13: +2 missing wave-9 seeds re-added, 93 seeds)",
         "note": ("Seed topics researched 2026-10-11 (waves 1+4), re-verified "
                  "2026-10-11 (wave 7), +3 fresh format seeds 2026-10-11 (wave 9), "
                  "+35 seeds 2026-10-11 (wave 11: Oct trend trackers + live "
-                 "Bluesky trending). "
+                 "Bluesky trending), +2 re-added missing wave-9 seeds "
+                 "2026-10-11 (wave 13). "
                  "The refresh pipeline corroborates/expires these on each run."),
         "topics": merged,
     }

@@ -85,6 +85,7 @@ TOPIC_TMPL = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — Trend Machine</title>
 <meta name="description" content="{desc}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b0f0e'/%3E%3Ccircle cx='8' cy='8' r='5' fill='none' stroke='%2339ff88' stroke-width='1.6'/%3E%3Ccircle cx='8' cy='8' r='1.4' fill='%2339ff88'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/base.css">
 <link rel="stylesheet" href="../assets/css/components.css">
@@ -304,6 +305,14 @@ def main():
             mf_doc = json.load(f)
     except Exception:
         mf_doc = {"families": []}
+    # wave 14: seed-freshness audit payload (written by scripts/seed_freshness.py;
+    # may not exist yet on a fresh checkout — manifest entry reports 0 seeds then)
+    freshness = {}
+    try:
+        with open(os.path.join(ROOT, "data", "seed_freshness.json")) as f:
+            freshness = json.load(f)
+    except Exception:
+        freshness = {}
     by_family = {}
     for t in topics:
         fam = t.get("format_family")
@@ -588,6 +597,75 @@ def main():
                 },
             },
         },
+        "seed-freshness": {
+            "$schema": DRAFT,
+            "title": "trend-machine seed freshness sweep",
+            "description": ("Wave 14: the seed-freshness audit. Every seeded topic "
+                            "is checked for staleness: source URL liveness (HTTP "
+                            "probe; dead = GET 404/410 only, never a timeout or "
+                            "HEAD rejection), store corroboration (last_seen <= "
+                            "7 days), and velocity tracking (a seed with <3 "
+                            "snapshots but a first snapshot <6h old is warming "
+                            "up, not stale). Verdicts: healthy / stale-source / "
+                            "stale-untracked / flaky-warning (probe timeout — a "
+                            "warning, never marked stale)."),
+            "type": "object",
+            "required": ["generated_at", "method", "counts", "stale", "seeds"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "method": {"type": "string"},
+                "counts": {"type": "object",
+                    "required": ["healthy", "stale-source", "stale-untracked",
+                                 "flaky-warning", "seeds"],
+                    "properties": {
+                        "healthy": {"type": "integer", "minimum": 0},
+                        "stale-source": {"type": "integer", "minimum": 0},
+                        "stale-untracked": {"type": "integer", "minimum": 0},
+                        "flaky-warning": {"type": "integer", "minimum": 0},
+                        "seeds": {"type": "integer", "minimum": 0},
+                    }},
+                "stale": {"type": "array",
+                    "items": {"type": "object",
+                        "required": ["id", "title", "verdict", "reason"],
+                        "properties": {
+                            "id": {"type": "string"},
+                            "title": {"type": "string"},
+                            "verdict": {"type": "string",
+                                        "enum": ["stale-source", "stale-untracked"]},
+                            "reason": {"type": "string"},
+                        }}},
+                "seeds": {"type": "array",
+                    "items": {"type": "object",
+                        "required": ["id", "title", "verification", "verdict",
+                                     "reason", "sources", "last_seen",
+                                     "last_seen_age_days", "velocity_snapshots",
+                                     "in_store"],
+                        "properties": {
+                            "id": {"type": "string"},
+                            "title": {"type": "string"},
+                            "verification": {"type": "string"},
+                            "verdict": {"type": "string",
+                                        "enum": ["healthy", "stale-source",
+                                                 "stale-untracked", "flaky-warning"]},
+                            "reason": {"type": "string"},
+                            "sources": {"type": "array",
+                                "items": {"type": "object",
+                                    "required": ["name", "url", "status", "note"],
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string", "format": "uri"},
+                                        "status": {"type": "string",
+                                                   "enum": ["live", "dead", "flaky",
+                                                            "not-probed"]},
+                                        "note": {"type": "string"},
+                                    }}},
+                            "last_seen": {"type": ["string", "null"]},
+                            "last_seen_age_days": {"type": ["number", "null"]},
+                            "velocity_snapshots": {"type": "integer", "minimum": 0},
+                            "in_store": {"type": "boolean"},
+                        }}},
+            },
+        },
         "velocity": {
             "$schema": DRAFT,
             "title": "trend-machine velocity snapshots",
@@ -625,8 +703,11 @@ def main():
             "title": "trend-machine forecast accuracy log",
             "description": ("Wave 6: the Oracle's own forecast-vs-actual scorecard. "
                             "Decisive forecasts are recorded in a ledger and scored "
-                            "hit/miss after a 48h horizon. Status is 'building history' "
-                            "until 10+ forecasts resolve; hit_rate is null before that."),
+                            "hit/miss after a 48h horizon; wave 14 adds a terminal "
+                            "'unverifiable' verdict (48h passed, <2 actual snapshots "
+                            "— counted separately, never in the hit rate). Status is "
+                            "'building history' until 10+ forecasts resolve decisively; "
+                            "hit_rate is null before that."),
             "type": "object",
             "required": ["generated_at", "status", "method", "horizon_hours",
                          "resolution_rules", "counts", "hit_rate",
@@ -640,12 +721,14 @@ def main():
                     "properties": {
                         "rising_accelerating": {"type": "string"},
                         "peaking": {"type": "string"},
-                        "fading": {"type": "string"}}},
+                        "fading": {"type": "string"},
+                        "unverifiable": {"type": "string"}}},
                 "counts": {"type": "object",
                     "properties": {
                         "recorded": {"type": "integer", "minimum": 0},
                         "pending": {"type": "integer", "minimum": 0},
                         "resolved": {"type": "integer", "minimum": 0},
+                        "unverifiable": {"type": "integer", "minimum": 0},
                         "hits": {"type": "integer", "minimum": 0}}},
                 "hit_rate": {"type": ["number", "null"]},
                 "hit_rate_note": {"type": "string"},
@@ -662,8 +745,12 @@ def main():
                             "forecast_at": {"type": "string"},
                             "state": {"type": "string"},
                             "peak_in_hours": {"type": ["number", "null"]},
-                            "verdict": {"type": "string", "enum": ["hit", "miss"]},
-                            "actual_slope": {"type": "number"},
+                            "verdict": {"type": "string", "enum": ["hit", "miss", "unverifiable"]},
+                            "reason": {"type": "string"},
+                            "actual_slope": {"type": ["number", "null"]},
+                            "actual_end_velocity": {"type": ["number", "null"]},
+                            "actual_max_velocity": {"type": ["number", "null"]},
+                            "n_actual_points": {"type": ["integer", "null"]},
                             "n_snapshots": {"type": "integer", "minimum": 0}}}},
                 # wave 9: resolution timeline, ledger activity, calibration
                 "upcoming_resolutions": {"type": "array",
@@ -775,7 +862,7 @@ def main():
 
     manifest = {
         "name": "trend-machine",
-        "version": "0.5.0",
+        "version": "0.6.0",
         "generated_at": stamp,
         "base": ("api/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
@@ -836,13 +923,36 @@ def main():
                  "(tracked_topics — derived, never stale)."),
                 schema_path("meme-formats"), len(mf_out["families"]),
                 "Topics link back via their format_family field (null when unmatched)."),
+            "seed_freshness": endpoint(
+                "api/v1/seed-freshness.json",
+                ("Wave 14: the seed-freshness sweep — every seeded topic checked "
+                 "for staleness: source URL liveness (HTTP probe; dead = GET "
+                 "404/410 only — HEAD rejections fall through to GET, timeouts "
+                 "never mark stale), store corroboration (last_seen <= 7d), and "
+                 "velocity tracking (a seed with <3 snapshots but a first "
+                 "snapshot <6h old is warming up, not stale). Verdicts: healthy / "
+                 "stale-source / stale-untracked / flaky-warning."),
+                schema_path("seed-freshness"),
+                len([s for s in freshness.get("seeds", [])]) if isinstance(freshness, dict) else 0,
+                "Generated by scripts/seed_freshness.py (not in refresh.sh — run as a periodic audit)."),
             "schemas": endpoint(
                 "api/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
                 None, len(SCHEMAS)),
         },
         "deprecated": [],
-        "changelog": ("0.5.0 (2026-10-11): Wave 9 — Oracle accuracy scorecard becomes a full page "
+        "changelog": ("0.6.0 (2026-10-11/12): Wave 13 — the two missing wave-9 seeds land: "
+                      "turn-to-your-neighbor and zayn-sleeping-photo, verified live against Know Your Meme "
+                      "(both entries updated within the day) and meme.com's meme library. "
+                      "Wave 14 — ledger health: forecast resolution gains a terminal 'unverifiable' verdict "
+                      "(48h passed, <2 actual snapshots — counted separately, never in the hit rate) with "
+                      "full evidence recorded (window bounds, point counts, thresholds); the resolution rules "
+                      "live in one shared module (scripts/resolution-lib.js) used by both the hourly pipeline "
+                      "and the standalone scripts/check_resolutions.js audit. New api/v1/seed-freshness.json "
+                      "endpoint: the seed-freshness audit (scripts/seed_freshness.py) verdicts every seed "
+                      "healthy / stale-source / stale-untracked / flaky-warning with per-source probe results. "
+                      "Additive only. "
+                      "0.5.0 (2026-10-11): Wave 9 — Oracle accuracy scorecard becomes a full page "
                       "(forecast-accuracy.html): honest pre-resolution states, per-horizon accuracy table, "
                       "by-call breakdown, recent resolutions, current 48h projections, and the resolution "
                       "method — all rendered live from api/v1/forecast-accuracy.json, with the hit rate "

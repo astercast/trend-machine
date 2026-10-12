@@ -1,17 +1,19 @@
 {
-  "generated_at": "2026-10-12T05:09:21.482Z",
+  "generated_at": "2026-10-12T06:05:13.539Z",
   "status": "building history",
-  "method": "Each refresh records the Oracle's decisive forecasts (peaking / accelerating / rising / fading) in data/forecast_ledger.json. 48h later the forecast is compared with the actual velocity history and scored hit/miss. Nothing is backfilled — the log starts 2026-10-11, so the first resolutions land 48h after that.",
+  "method": "Each refresh records the Oracle's decisive forecasts (peaking / accelerating / rising / fading) in data/forecast_ledger.json. 48h later the forecast is compared with the actual velocity history and scored hit/miss; when the 48h window holds fewer than 2 actual snapshots the call is marked unverifiable (data gap — not a miss) with its reason recorded. Nothing is backfilled — the log starts 2026-10-11, so the first resolutions land 48h after that.",
   "horizon_hours": 48,
   "resolution_rules": {
     "rising_accelerating": "hit if the actual velocity slope over the 48h window after the forecast is >= +1.5/hr (the classifier's own rising threshold)",
     "peaking": "hit if the highest velocity in the 48h window stays at/below the forecast-time velocity +2 (the top was called, not blown through)",
-    "fading": "hit if the actual velocity slope over the 48h window is <= -1.5/hr (the classifier's own falling threshold)"
+    "fading": "hit if the actual velocity slope over the 48h window is <= -1.5/hr (the classifier's own falling threshold)",
+    "unverifiable": "the 48h window holds fewer than 2 actual velocity snapshots (data gap: topic dropped, series pruned, fetch outage) — counted separately, never folded into the hit rate"
   },
   "counts": {
     "recorded": 285,
     "pending": 285,
     "resolved": 0,
+    "unverifiable": 0,
     "hits": 0
   },
   "upcoming_resolutions": [
@@ -41,7 +43,7 @@
     }
   },
   "hit_rate": null,
-  "hit_rate_note": "The Oracle shows its own hit rate once 10 forecasts have resolved; currently 0 resolved.",
+  "hit_rate_note": "The Oracle shows its own hit rate once 10 forecasts have resolved decisively; currently 0 decisive.",
   "by_state": {
     "peaking": {
       "resolved": 0,

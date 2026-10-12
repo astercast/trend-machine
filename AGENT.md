@@ -140,7 +140,9 @@ ranks families by tracked-topic opportunity (the format leaderboard).
 Draft-07 for every endpoint: `trends.json`, `trends-flat.json`,
 `trends-flat-sample.json`, `hashtags.json`, `velocity.json`,
 `platform-velocity.json`, `forecast-accuracy.json`, `forecasts.json`,
-`meme-formats.json`, `trend.json` (one dossier), and `index.json` itself.
+`meme-formats.json`, `trend.json` (one dossier), `seed-freshness.json` (wave 14:
+seed-staleness audit — verdicts healthy / stale-source / stale-untracked /
+flaky-warning per seeded topic), and `index.json` itself.
 
 ## End-to-end workflows
 

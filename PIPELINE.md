@@ -190,7 +190,9 @@ the Patient Zero TikTok Search Hub mechanic, pumpkin patch season). Wave 9
 added the biggest injection yet — 35 new seeds from fresh Oct-2026 research
 (Anijam, Lightreel, Virlo, SocialPilot, SocialBee, MediaNug, Revid, genznewz,
 NapoleonCat) plus 5 day-of topics from live Bluesky trending data. 91 seeds
-total. `verification` lives on every seeded topic (`verified`/`single-source`/
+total. Wave 13 (2026-10-11) re-added the two wave-9 seeds that never landed
+(turn-to-your-neighbor, zayn-sleeping-photo — verified live against Know Your
+Meme + meme.com). 93 seeds total. `verification` lives on every seeded topic (`verified`/`single-source`/
 `unverified`) and is documented in the trend schema. **seed.py upserts by id**
 (preserves non-seed topics — never rewrites the store from scratch). The refresh
 pipeline corroborates or expires seeds like any other topic.

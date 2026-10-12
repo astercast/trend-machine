@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T05:09:21.168847+00:00",
+  "generated_at": "2026-10-12T05:46:29.118652+00:00",
   "sample": true,
-  "source_count": 91,
+  "source_count": 93,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
   "trends": [
     {
@@ -870,6 +870,48 @@
       }
     },
     {
+      "id": "national-coming-out-day",
+      "title": "National Coming Out Day (Oct 11)",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 78,
+      "opportunity_score": 78,
+      "hashtags": [
+        "#nationalcomingoutday",
+        "#comingoutday"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics today, Oct 11: LGBTQ people and allies sharing stories, with the recurring reminder to come out only when safe and ready. A day-of social moment — stories and solidarity content peak with the date.",
+      "category": "culture",
+      "platforms": [
+        "bluesky",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Bluesky trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 3,
+        "state": "ready",
+        "since": "Oct 12, 2026",
+        "first_velocity": 78,
+        "latest_velocity": 78,
+        "delta": 0,
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 3,
+            "latest_velocity": 70,
+            "delta": 25,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
+          }
+        }
+      }
+    },
+    {
       "id": "like-a-prayer-remix",
       "title": "\"Like a Prayer\" house remix — emotional montage bed",
       "source": "Anijam",
@@ -1012,6 +1054,52 @@
         "delta": 0,
         "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
+      }
+    },
+    {
+      "id": "resume-gap-interview",
+      "title": "Resume gap interview meme",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 76,
+      "opportunity_score": 76,
+      "hashtags": [
+        "#resumegap",
+        "#interview",
+        "#meme"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): users imagine how different professions — and famous figures — would answer a job interviewer's question about the gap in their resume. A caption-first meme format: the gap is the setup, the profession is the punchline.",
+      "category": "meme",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [
+        "caption",
+        "format",
+        "meme"
+      ],
+      "sources": [
+        "Bluesky trending"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 3,
+        "state": "ready",
+        "since": "Oct 12, 2026",
+        "first_velocity": 76,
+        "latest_velocity": 76,
+        "delta": 0,
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 3,
+            "latest_velocity": 95,
+            "delta": 50,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+          }
+        }
       }
     },
     {
@@ -1811,44 +1899,6 @@
       }
     },
     {
-      "id": "canadian-thanksgiving",
-      "title": "Canadian Thanksgiving (Oct 12)",
-      "source": "Bluesky trending",
-      "url": "https://bsky.app",
-      "velocity": 70,
-      "opportunity_score": 70,
-      "hashtags": [
-        "#canadianthanksgiving",
-        "#thanksgiving",
-        "#grateful"
-      ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Live on Bluesky's trending topics (Oct 11): Canadians sharing holiday greetings, turkey-dinner stories, and gratitude lists ahead of Thanksgiving Monday (Oct 12). A 24-hour content window — the greeting-and-gratitude format peaks the day before and the day of.",
-      "category": "culture",
-      "platforms": [
-        "bluesky",
-        "instagram"
-      ],
-      "format_tags": [
-        "format"
-      ],
-      "sources": [
-        "Bluesky trending"
-      ],
-      "trend_type": "format",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 70,
-        "latest_velocity": 70,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {}
-      }
-    },
-    {
       "id": "dhurandhar2-grammy",
       "title": "Dhurandhar 2 enters the Grammy race",
       "source": "Sacnilk",
@@ -2323,9 +2373,9 @@
         "per_platform": {
           "youtube": {
             "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,14.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -2557,15 +2607,15 @@
         "per_platform": {
           "x": {
             "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,14.0 60.0,24.0 88.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           },
           "youtube": {
             "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,14.0 60.0,24.0 88.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,24.0 88.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -2607,6 +2657,43 @@
         "latest_velocity": 82,
         "delta": 0,
         "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {}
+      }
+    },
+    {
+      "id": "turn-to-your-neighbor",
+      "title": "\"Turn To Your Neighbor and Say\" (Marvin Sapp sports-fail edits)",
+      "source": "Know Your Meme",
+      "url": "https://knowyourmeme.com/memes/turn-to-your-neighbor-and-say",
+      "velocity": 82,
+      "opportunity_score": 53,
+      "hashtags": [
+        "#turntoyourneighbor",
+        "#sportsfail",
+        "#edit"
+      ],
+      "detected_at": "2026-09-20T00:00:00-07:00",
+      "summary": "Marvin Sapp's 2017 gospel song \"Listen\" — the \"Turn to your neighbor and say (neighbor)\" hook — became one of fall 2026's dominant fail-edit audios: comedy skits, lip dubs, and video edits set over sports fail videos and lowlights. Sometimes paired with a looped Cash Nasty arm-run clip mocking FlightReacts' basketball form (a 2020 moment revived). Popularized across TikTok and Instagram Reels thro",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Know Your Meme",
+        "meme.com"
+      ],
+      "trend_type": "topic",
+      "format_family": "audio-skit",
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 82,
+        "latest_velocity": 82,
+        "delta": 0,
+        "sparkline_svg": null,
         "per_platform": {}
       }
     },
@@ -2797,6 +2884,45 @@
       }
     },
     {
+      "id": "zayn-sleeping-photo",
+      "title": "\"Why am I lowkey giving Zayn Malik sleeping photo?\"",
+      "source": "Know Your Meme",
+      "url": "https://knowyourmeme.com/memes/zayn-malik-sleeping",
+      "velocity": 80,
+      "opportunity_score": 52,
+      "hashtags": [
+        "#zaynmalik",
+        "#zaynmaliksleepingphoto",
+        "#fyp"
+      ],
+      "detected_at": "2026-09-04T00:00:00-07:00",
+      "summary": "A shirtless sleeping photo of Zayn Malik — circulating online since 2013 (59K Tumblr notes over 13 years) — became one of fall 2026's breakout TikTok comparison memes. The format: post the Zayn photo, then a photo of yourself or your partner sleeping in a similar — or comedically dissimilar — way, captioned \"Why am I lowkey giving Zayn Malik sleeping photo?\" Origin: @timmy.thick47 (Sept 4, 2026, 1",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "format",
+        "meme"
+      ],
+      "sources": [
+        "Know Your Meme",
+        "meme.com"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 12, 2026",
+        "first_velocity": 80,
+        "latest_velocity": 80,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {}
+      }
+    },
+    {
       "id": "tiktok-sounds-week",
       "title": "This week's breakout TikTok sounds",
       "source": "Revid",
@@ -2945,49 +3071,6 @@
       }
     },
     {
-      "id": "national-coming-out-day",
-      "title": "National Coming Out Day (Oct 11)",
-      "source": "Bluesky trending",
-      "url": "https://bsky.app",
-      "velocity": 78,
-      "opportunity_score": 51,
-      "hashtags": [
-        "#nationalcomingoutday",
-        "#comingoutday"
-      ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Live on Bluesky's trending topics today, Oct 11: LGBTQ people and allies sharing stories, with the recurring reminder to come out only when safe and ready. A day-of social moment — stories and solidarity content peak with the date.",
-      "category": "culture",
-      "platforms": [
-        "bluesky",
-        "instagram"
-      ],
-      "format_tags": [],
-      "sources": [
-        "Bluesky trending",
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 78,
-        "latest_velocity": 78,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 3,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "oh-yeah-city-walk",
       "title": "Steve Lacy \"Oh yeah?\" city walk",
       "source": "genznewz",
@@ -3022,53 +3105,6 @@
         "delta": 0,
         "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
-      }
-    },
-    {
-      "id": "resume-gap-interview",
-      "title": "Resume gap interview meme",
-      "source": "Bluesky trending",
-      "url": "https://bsky.app",
-      "velocity": 76,
-      "opportunity_score": 49,
-      "hashtags": [
-        "#resumegap",
-        "#interview",
-        "#meme"
-      ],
-      "detected_at": "2026-10-11T00:00:00-07:00",
-      "summary": "Live on Bluesky's trending topics (Oct 11): users imagine how different professions — and famous figures — would answer a job interviewer's question about the gap in their resume. A caption-first meme format: the gap is the setup, the profession is the punchline.",
-      "category": "meme",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [
-        "caption",
-        "format",
-        "meme"
-      ],
-      "sources": [
-        "Bluesky trending",
-        "bluesky-trending"
-      ],
-      "trend_type": "format",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 76,
-        "latest_velocity": 76,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
       }
     },
     {
@@ -3143,9 +3179,55 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,14.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,24.0\" fill=\"none\"/></svg>"
+          }
+        }
+      }
+    },
+    {
+      "id": "canadian-thanksgiving",
+      "title": "Canadian Thanksgiving (Oct 12)",
+      "source": "Bluesky trending",
+      "url": "https://bsky.app",
+      "velocity": 70,
+      "opportunity_score": 46,
+      "hashtags": [
+        "#canadianthanksgiving",
+        "#thanksgiving",
+        "#grateful"
+      ],
+      "detected_at": "2026-10-11T00:00:00-07:00",
+      "summary": "Live on Bluesky's trending topics (Oct 11): Canadians sharing holiday greetings, turkey-dinner stories, and gratitude lists ahead of Thanksgiving Monday (Oct 12). A 24-hour content window — the greeting-and-gratitude format peaks the day before and the day of.",
+      "category": "culture",
+      "platforms": [
+        "bluesky",
+        "instagram"
+      ],
+      "format_tags": [
+        "format"
+      ],
+      "sources": [
+        "Bluesky trending",
+        "bluesky-trending"
+      ],
+      "trend_type": "format",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 3,
+        "state": "ready",
+        "since": "Oct 12, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
           }
         }
       }

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>API docs — Trend Machine</title>
 <meta name="description" content="Trend Machine agent API: every endpoint, its schema, and an interactive console to try them.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b0f0e'/%3E%3Ccircle cx='8' cy='8' r='5' fill='none' stroke='%2339ff88' stroke-width='1.6'/%3E%3Ccircle cx='8' cy='8' r='1.4' fill='%2339ff88'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
@@ -70,6 +71,7 @@ Start at the <a href="api/v1/index.json">manifest</a>: every endpoint with its d
 <tr><td><code>api/v1/platform-velocity.json</code></td><td>Per-platform hourly velocity series per topic (per-platform trajectories input)</td><td><code>api/v1/schema/platform-velocity.json</code></td></tr>
 <tr><td><code>api/v1/forecast-accuracy.json</code></td><td>The Oracle's own scorecard: forecast-vs-actual over a 48h horizon ("building history" until 10+ resolve); wave 9 adds resolution timeline, ledger activity, and calibration views — human-readable at <code>forecast-accuracy.html</code></td><td><code>api/v1/schema/forecast-accuracy.json</code></td></tr>
 <tr><td><code>api/v1/meme-formats.json</code></td><td>Wave 9: the tracked meme format families — hand-curated from Oct-2026 research (verified/single-source flags), each with current examples, evidence URLs, and live <code>tracked_topics</code> links; human-readable at <code>formats.html</code> (format leaderboard included)</td><td><code>api/v1/schema/meme-formats.json</code></td></tr>
+<tr><td><code>api/v1/seed-freshness.json</code></td><td>Wave 14: seed-freshness audit — every seeded topic's staleness verdict (healthy / stale-source / stale-untracked / flaky-warning) with per-source probe results, corroboration age, and snapshot counts</td><td><code>api/v1/schema/seed-freshness.json</code></td></tr>
 <tr><td><code>api/v1/index.json</code></td><td>Self-describing manifest of all endpoints</td><td><code>api/v1/schema/index.json</code></td></tr>
 </tbody>
 </table>
@@ -97,6 +99,7 @@ large payloads are pretty-printed and truncated for display.</p>
 <option value="api/v1/platform-velocity.json">platform-velocity.json — per-platform series</option>
 <option value="api/v1/forecast-accuracy.json">forecast-accuracy.json — Oracle scorecard</option>
 <option value="api/v1/meme-formats.json">meme-formats.json — format families</option>
+<option value="api/v1/seed-freshness.json">seed-freshness.json — seed audit</option>
 </select>
 </div>
 <div class="field">

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "trend-machine forecast accuracy log",
-  "description": "Wave 6: the Oracle's own forecast-vs-actual scorecard. Decisive forecasts are recorded in a ledger and scored hit/miss after a 48h horizon. Status is 'building history' until 10+ forecasts resolve; hit_rate is null before that.",
+  "description": "Wave 6: the Oracle's own forecast-vs-actual scorecard. Decisive forecasts are recorded in a ledger and scored hit/miss after a 48h horizon; wave 14 adds a terminal 'unverifiable' verdict (48h passed, <2 actual snapshots \u2014 counted separately, never in the hit rate). Status is 'building history' until 10+ forecasts resolve decisively; hit_rate is null before that.",
   "type": "object",
   "required": [
     "generated_at",
@@ -44,6 +44,9 @@
         },
         "fading": {
           "type": "string"
+        },
+        "unverifiable": {
+          "type": "string"
         }
       }
     },
@@ -59,6 +62,10 @@
           "minimum": 0
         },
         "resolved": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unverifiable": {
           "type": "integer",
           "minimum": 0
         },
@@ -120,11 +127,36 @@
             "type": "string",
             "enum": [
               "hit",
-              "miss"
+              "miss",
+              "unverifiable"
             ]
           },
+          "reason": {
+            "type": "string"
+          },
           "actual_slope": {
-            "type": "number"
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "actual_end_velocity": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "actual_max_velocity": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "n_actual_points": {
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "n_snapshots": {
             "type": "integer",

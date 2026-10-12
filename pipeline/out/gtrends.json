@@ -1,6 +1,6 @@
 [
   {
-    "title": "pablo carreno busta",
+    "title": "lakers news",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -9,19 +9,19 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219541+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643130+00:00"
   },
   {
     "title": "bryan cranston",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~200+ searches.",
+    "summary": "~500+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219620+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643205+00:00"
   },
   {
     "title": "learner tien",
@@ -33,7 +33,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219646+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643230+00:00"
   },
   {
     "title": "felix auger aliassime",
@@ -45,7 +45,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219664+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643248+00:00"
   },
   {
     "title": "nicolas cage",
@@ -57,7 +57,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219681+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643266+00:00"
   },
   {
     "title": "casper ruud",
@@ -69,19 +69,31 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219697+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643281+00:00"
   },
   {
     "title": "leylah fernandez",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~2000+ searches.",
+    "summary": "~1000+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219712+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643296+00:00"
+  },
+  {
+    "title": "ekaterina alexandrova",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T05:40:00.643310+00:00"
   },
   {
     "title": "san antonio",
@@ -93,19 +105,7 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219761+00:00"
-  },
-  {
-    "title": "nfc south",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:03:39.219775+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643325+00:00"
   },
   {
     "title": "sonay kartal",
@@ -117,6 +117,6 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:03:39.219790+00:00"
+    "fetched_at": "2026-10-12T05:40:00.643339+00:00"
   }
 ]
