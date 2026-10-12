@@ -12,22 +12,22 @@ flat consumer feed, all fetchers exit 0 with zero keys set). Repo stays
 [pipeline/normalize.py] --merge/corroborate--> data/trends.json (canonical store)
       |
 [scripts/build_site.py] --topic pages--> topics/*.html
-                        --rich API-->   api/v1/trends.json  (full editorial schema)
-                        --tag index-->  api/v1/hashtags.json
-                        --api index-->  api/v1/index.json  (v0.2.0: self-describing manifest)
-                        --schemas-->    api/v1/schema/*.json (draft-07, one per endpoint)
-                        --velocity-->   api/v1/velocity.json (Oracle input: hourly snapshots)
+                        --rich API-->   data/v1/trends.json  (full editorial schema)
+                        --tag index-->  data/v1/hashtags.json
+                        --api index-->  data/v1/index.json  (v0.2.0: self-describing manifest)
+                        --schemas-->    data/v1/schema/*.json (draft-07, one per endpoint)
+                        --velocity-->   data/v1/velocity.json (Oracle input: hourly snapshots)
                         --llms-->       llms.txt / llms-full.txt
       |
-[node scripts/build_forecasts.js] --Oracle output--> api/v1/forecasts.json
+[node scripts/build_forecasts.js] --Oracle output--> data/v1/forecasts.json
       |              (uses assets/js/trajectory.js directly — same classifier as the dashboard;
-      |               patches api/v1/index.json to add the forecasts entry)
+      |               patches data/v1/index.json to add the forecasts entry)
       |
-[pipeline/aggregate.py] --flat consumer feed--> api/v1/trends.flat.json
+[pipeline/aggregate.py] --flat consumer feed--> data/v1/trends.flat.json
                                                static/v1/trends.flat.js (JSONP;
-                                                 public URL /api/v1/trends.flat.js
+                                                 public URL /data/v1/trends.flat.js
                                                  via vercel.json rewrite)
-                                               api/v1/trends.flat.sample.json
+                                               data/v1/trends.flat.sample.json
 ```
 
 **Hosting:** any static host (GitHub Pages, Cloudflare Pages, Netlify, S3).
@@ -38,25 +38,25 @@ pre-rendered. There is no server, no database, no runtime dependency.
 
 | file | shape | use when |
 |---|---|---|
-| `api/v1/trends.json` | `{generated_at, count, topics:[...]}` — full dossiers (angles, hooks, guide_links, sources[], first_seen/last_seen, stale flag) | deep integration, topic pages |
-| `api/v1/velocity.json` | `{topic_id: [[iso_ts, velocity, opportunity], ...]}` — hourly Oracle input snapshots | agent trajectory classification |
-| `api/v1/forecasts.json` | `{generated_at, counts, peaking_48h[], rising_fast[], cooling_off[], steady[], projections{}}` — precomputed Oracle trajectories (projections, never guarantees) | "peaking in 48h" without running JS |
-| `api/v1/trends.flat.json` | `{generated_at, sample, source_count, trends:[{id,title,source,url,velocity,opportunity_score,hashtags[],detected_at}]}` | the flat contract — client-side fetch, opportunity-ranked list |
+| `data/v1/trends.json` | `{generated_at, count, topics:[...]}` — full dossiers (angles, hooks, guide_links, sources[], first_seen/last_seen, stale flag) | deep integration, topic pages |
+| `data/v1/velocity.json` | `{topic_id: [[iso_ts, velocity, opportunity], ...]}` — hourly Oracle input snapshots | agent trajectory classification |
+| `data/v1/forecasts.json` | `{generated_at, counts, peaking_48h[], rising_fast[], cooling_off[], steady[], projections{}}` — precomputed Oracle trajectories (projections, never guarantees) | "peaking in 48h" without running JS |
+| `data/v1/trends.flat.json` | `{generated_at, sample, source_count, trends:[{id,title,source,url,velocity,opportunity_score,hashtags[],detected_at}]}` | the flat contract — client-side fetch, opportunity-ranked list |
 
 **CORS situation (decided 2026-10-11):** pure static hosts like GitHub Pages
 cannot emit `Access-Control-Allow-Origin` headers, and the creator site is a
-*different origin*, so `fetch(api/v1/trends.flat.json)` from it would be
+*different origin*, so `fetch(data/v1/trends.flat.json)` from it would be
 blocked if the two sites live on different domains. Implemented solution:
 every refresh also writes the JSONP twin **`static/v1/trends.flat.js`**
 (file lives outside `api/` — Vercel deploys every `.js` under `api/` as a
-serverless function; the public URL stays `/api/v1/trends.flat.js` via a
+serverless function; the public URL stays `/data/v1/trends.flat.js` via a
 `vercel.json` rewrite):
 
 ```html
 <script>
 function trendsCallback(feed){ /* feed.trends, sorted by opportunity_score */ }
 </script>
-<script src="https://<trend-machine-host>/api/v1/trends.flat.js"></script>
+<script src="https://<trend-machine-host>/data/v1/trends.flat.js"></script>
 ```
 
 JSONP sidesteps CORS entirely (it's just a script tag) and needs no headers,
@@ -67,7 +67,7 @@ want plain `fetch()` instead:
    `/api/*\n  Access-Control-Allow-Origin: *` — then plain fetch works.
 3. **Tiny proxy** (Cloudflare Worker, etc.) — last resort; JSONP already covers it.
 
-The sample feed `api/v1/trends.flat.sample.json` has `"sample": true` and is
+The sample feed `data/v1/trends.flat.sample.json` has `"sample": true` and is
 for consumer development only — never promote it to the live path.
 
 ## 2. Pipeline stages and what each does
@@ -117,7 +117,7 @@ line in `pipeline/refresh.sh` (builder's file — their call).
 | stage | file | does |
 |---|---|---|
 | X fetcher | `pipeline/fetch_x.py` | X API v2 recent search (3 curated queries: meme/gaming/music). **BYO key only** — with no `X_BEARER_TOKEN` it logs a skip and writes nothing. Never fabricates X data. |
-| YouTube fetcher | `pipeline/fetch_youtube.py` | No-key path: Invidious public instances `/api/v1/popular` first, then direct trending-page scrape. Keyed path: `YT_API_KEY` → Data API v3 `videos.list?chart=mostPopular&regionCode=US` (stable, recommended). |
+| YouTube fetcher | `pipeline/fetch_youtube.py` | No-key path: Invidious public instances `/data/v1/popular` first, then direct trending-page scrape. Keyed path: `YT_API_KEY` → Data API v3 `videos.list?chart=mostPopular&regionCode=US` (stable, recommended). |
 | YouTube RSS fetcher | `pipeline/fetch_youtube_rss.py` | Public channel RSS for 10 curated channels (MrBeast, pewdiepie, MKBHD, LinusTechTips, BBCNews, IGN, ESPN, VEVO, NPRMusic, TEDx). Channel IDs verified 2026-10-11 from canonical links. |
 | News fetcher | `pipeline/fetch_news.py` | Google News RSS category feeds, no key. Headline velocity = a story appearing across category feeds in one run. |
 | News search fetcher | `pipeline/fetch_news_search.py` | Google News RSS *search* across 6 topic lanes + Top Stories, no key. |
@@ -128,7 +128,7 @@ line in `pipeline/refresh.sh` (builder's file — their call).
 | Google Trends fetcher | `pipeline/fetch_gtrends.py` | `trends.google.com/trending/rss?geo=US`, no key. Probed 2026-10-11: `category=`/`hours=` params are accepted but don't change the item set — the base daily-trends RSS is the useful keyless endpoint. |
 | TikTok stub | `pipeline/fetch_tiktok.py` | No reliable keyless source exists (verified 2026-10-11 — see "TikTok lane" note above). Logs a SKIP, emits nothing. Keyed implementation goes here when one is vetted. Never fakes data. |
 | Aggregator | `pipeline/normalize.py` | Merges fetcher hits into `data/trends.json`: token-set Jaccard ≥0.55 dedup, corroborates seeded topics (refreshes `last_seen`), marks topics stale after 72h without corroboration, recomputes `velocity`/`opportunity_score`. |
-| Site builder | `scripts/build_site.py` | Renders `topics/*.html` dossiers, rich `api/v1/*`, `llms.txt`. Reads `GUIDE_BASE_URL` env (default `../creator-growth-empire/`). |
+| Site builder | `scripts/build_site.py` | Renders `topics/*.html` dossiers, rich `data/v1/*`, `llms.txt`. Reads `GUIDE_BASE_URL` env (default `../creator-growth-empire/`). |
 | Contract publisher | `pipeline/aggregate.py` | Derives the flat consumer feed + JSONP twin + labeled sample from `data/trends.json`. Stale topics excluded from the live feed. |
 | Orchestrator | `pipeline/refresh.sh` | Runs fetchers → normalize → build_site. Every stage is failure-tolerant: one source down never blocks the run. |
 | Entry point | `pipeline/refresh.sh` (same) | Cron / Actions call this one file. |
@@ -192,10 +192,10 @@ to enable the keyed fetchers in CI. Manual runs via "Run workflow".
 - [ ] Deploy = push. Site + `api/` are static; no build step on the host.
 - [ ] Enable the `trend-refresh` GitHub Action; verify one manual run greens.
 - [ ] Add `X_BEARER_TOKEN` and/or `YT_API_KEY` as Actions secrets (optional but recommended).
-- [ ] Creator site: point it at `<host>/api/v1/trends.flat.json` — or use the
-      JSONP `<host>/api/v1/trends.flat.js` + `trendsCallback` if cross-origin
+- [ ] Creator site: point it at `<host>/data/v1/trends.flat.json` — or use the
+      JSONP `<host>/data/v1/trends.flat.js` + `trendsCallback` if cross-origin
       fetch is blocked (see §1).
-- [ ] Confirm `api/v1/trends.flat.json` has `"sample": false` post-deploy.
+- [ ] Confirm `data/v1/trends.flat.json` has `"sample": false` post-deploy.
 - [ ] Set uptime check on the feed URL (optional): alert if `generated_at` is
       older than 6h — that means the Action is failing or racing.
 

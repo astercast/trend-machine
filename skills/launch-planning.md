@@ -14,7 +14,7 @@ dossier; the generator only orders, rotates, and paces.
 
 ## Inputs
 
-- `api/v1/trends.json`: find the dossier by `id`. You need `angles[]`,
+- `data/v1/trends.json`: find the dossier by `id`. You need `angles[]`,
   `hooks[]`, `hashtags[]`, `platforms[]`, `format_tags[]`,
   `opportunity_score`, and `trend_type` (`format` / `topic` /
   `format+topic` — wave 7, rule-derived from `format_tags` + category).
@@ -23,7 +23,7 @@ dossier; the generator only orders, rotates, and paces.
   angles rotate so no angle airs two days in a row, hooks cycle
   independently so every day is a unique angle+hook pairing, hashtags
   and platforms rotate from the dossier.
-- `api/v1/forecasts.json` (optional): if the topic has a projection,
+- `data/v1/forecasts.json` (optional): if the topic has a projection,
   pass its `state` as the `trajectory` argument — the "why this order"
   rationale adapts (front-load for `peaking`, lean on the back half for
   `rising`/`accelerating`, evergreen fallbacks for `fading`).

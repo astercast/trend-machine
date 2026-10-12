@@ -263,7 +263,7 @@ def main():
     print(f"[build] {len(topics)} topic pages ({orphans} orphans removed)")
 
     # api/v1
-    api = os.path.join(ROOT, "api", "v1")
+    api = os.path.join(ROOT, "data", "v1")
     os.makedirs(os.path.join(api, "schema"), exist_ok=True)
     with open(os.path.join(api, "trends.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "count": len(topics),
@@ -274,14 +274,14 @@ def main():
             tags.setdefault(h, []).append(t["id"])
     with open(os.path.join(api, "hashtags.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "tags": tags}, f, indent=2)
-    # api/v1/velocity.json — Oracle input: hourly velocity snapshots, the exact
+    # data/v1/velocity.json — Oracle input: hourly velocity snapshots, the exact
     # same shape as data/velocity_history.json ({topic_id: [[iso, vel, opp]]}).
     # (data/velocity_history.json is the pipeline working copy; api/v1 is the
     # public contract. Shape is identical so the dashboard math ports 1:1.)
     with open(os.path.join(api, "velocity.json"), "w") as f:
         json.dump(history, f, ensure_ascii=False)
-    print(f"[build] api/v1/velocity.json ({len(history)} topics)")
-    # api/v1/platform-velocity.json — wave 6: per-platform velocity series
+    print(f"[build] data/v1/velocity.json ({len(history)} topics)")
+    # data/v1/platform-velocity.json — wave 6: per-platform velocity series
     # ({topic_id: {platform: [[iso, vel], ...]}}). Starting points: series
     # begin empty and build one snapshot per refresh; per-platform
     # trajectories only classify after 3+ snapshots.
@@ -294,8 +294,8 @@ def main():
         pass
     with open(os.path.join(api, "platform-velocity.json"), "w") as f:
         json.dump(phist, f, ensure_ascii=False)
-    print(f"[build] api/v1/platform-velocity.json ({len(phist)} topics)")
-    # api/v1/meme-formats.json — wave 9: the curated format-family table
+    print(f"[build] data/v1/platform-velocity.json ({len(phist)} topics)")
+    # data/v1/meme-formats.json — wave 9: the curated format-family table
     # (data/meme_formats.json) enriched with this run's derived topic links.
     # tracked_topics are the live topic ids whose format_family matched.
     families_path = os.path.join(ROOT, "data", "meme_formats.json")
@@ -330,13 +330,13 @@ def main():
         mf_out["families"].append(entry)
     with open(os.path.join(api, "meme-formats.json"), "w") as f:
         json.dump(mf_out, f, ensure_ascii=False, indent=2)
-    print(f"[build] api/v1/meme-formats.json ({len(mf_out['families'])} families, "
+    print(f"[build] data/v1/meme-formats.json ({len(mf_out['families'])} families, "
           f"{sum(len(f['tracked_topics']) for f in mf_out['families'])} topic links)")
 
     DRAFT = "http://json-schema.org/draft-07/schema#"
 
     def schema_path(name):
-        return f"api/v1/schema/{name}.json"
+        return f"data/v1/schema/{name}.json"
 
     TOPIC = {
         "$schema": DRAFT,
@@ -371,7 +371,7 @@ def main():
             "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"],
                 "description": "Wave 7: 'format' = a reusable template others can fill (dance, caption variant, sound, challenge); 'topic' = a subject/event to cover; 'format+topic' = an event-driven topic riding a meme template. Rule-derived from format_tags + category."},
             "format_family": {"type": ["string", "null"],
-                "description": "Wave 9: id of the curated format family this topic belongs to (see api/v1/meme-formats.json) — matched from the topic's own text against the curated family keywords, re-computed every run; null when the topic matches no tracked family."},
+                "description": "Wave 9: id of the curated format family this topic belongs to (see data/v1/meme-formats.json) — matched from the topic's own text against the curated family keywords, re-computed every run; null when the topic matches no tracked family."},
             "verification": {"type": "string", "enum": ["verified", "single-source", "unverified"],
                 "description": "Wave 7 (seeded topics): 'verified' = 2+ real sources; 'single-source' = one real source; 'unverified' = claimed sources not found on re-check — confirm live before building on it."},
             "guide_links": {"type": "array", "items": {"type": "string"}},
@@ -433,7 +433,7 @@ def main():
             "format_tags": {"type": "array", "items": {"type": "string"}},
             "trend_type": {"type": "string", "enum": ["format", "topic", "format+topic"]},
             "format_family": {"type": ["string", "null"],
-                "description": "Wave 9: curated format-family id (see api/v1/meme-formats.json), or null."},
+                "description": "Wave 9: curated format-family id (see data/v1/meme-formats.json), or null."},
             "sources": {"type": "array", "items": {"type": "string"}},
             "velocity_trend": VELOCITY_TREND,
         },
@@ -489,7 +489,7 @@ def main():
     }
 
     SCHEMAS = {
-        # canonical topic dossier record (one item of api/v1/trends.json)
+        # canonical topic dossier record (one item of data/v1/trends.json)
         "trend": TOPIC,
         "trends": {
             "$schema": DRAFT,
@@ -843,7 +843,7 @@ def main():
     for sname, sdoc in SCHEMAS.items():
         with open(os.path.join(api, "schema", sname + ".json"), "w") as f:
             json.dump(sdoc, f, indent=2)
-    print(f"[build] {len(SCHEMAS)} endpoint schemas -> api/v1/schema/")
+    print(f"[build] {len(SCHEMAS)} endpoint schemas -> data/v1/schema/")
 
     # ---- self-describing manifest (wave 5) ----
     stamp = data["generated_at"]
@@ -864,11 +864,11 @@ def main():
         "name": "trend-machine",
         "version": "0.6.0",
         "generated_at": stamp,
-        "base": ("api/v1/ relative to the site root. Works on any static host; "
+        "base": ("data/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
         "endpoints": {
             "trends": endpoint(
-                "api/v1/trends.json",
+                "data/v1/trends.json",
                 ("All topics, full editorial dossiers: angles, hooks, sources[], "
                  "first_seen/last_seen, stale + seeded flags. The canonical record — "
                  "sort by opportunity_score desc for the hottest plays."),
@@ -876,7 +876,7 @@ def main():
                 ("Seeded topics (seeded:true) carry researched starting-point figures "
                  "in their summaries — treat as baselines, not live measurements.")),
             "trends_flat": endpoint(
-                "api/v1/trends.flat.json",
+                "data/v1/trends.flat.json",
                 ("Flat consumer feed: opportunity-ranked, stale topics excluded. "
                  "Lightweight 'what to make content about today' list. Every item "
                  "carries 'velocity_trend': snapshots/delta/since plus a ready-made "
@@ -884,29 +884,29 @@ def main():
                  "than 3 snapshots exist."),
                 schema_path("trends-flat"), len(live)),
             "trends_flat_sample": endpoint(
-                "api/v1/trends.flat.sample.json",
+                "data/v1/trends.flat.sample.json",
                 "Clearly-labeled SAMPLE (sample:true) derived from seeded topics — for consumer development only, never the live path.",
                 schema_path("trends-flat-sample"), len(seeded)),
             "trends_flat_js": endpoint(
-                "api/v1/trends.flat.js",
+                "api/v1/trends.flat.js",  # public URL — preserved by the vercel.json rewrite (file lives at static/v1/)
                 ("JSONP twin of the flat feed — trendsCallback({...}). The CORS-safe "
                  "fallback for pure static hosts that cannot send "
                  "Access-Control-Allow-Origin headers."),
                 schema_path("trends-flat")),
             "hashtags": endpoint(
-                "api/v1/hashtags.json",
+                "data/v1/hashtags.json",
                 "Tag -> topic-id index.",
                 schema_path("hashtags"), len(tags)),
             "velocity": endpoint(
-                "api/v1/velocity.json",
+                "data/v1/velocity.json",
                 ("Oracle input: hourly velocity/opportunity snapshots per topic, "
                  "ascending by timestamp. Classify with assets/js/trajectory.js "
                  "(UMD — loadable in node) or read the precomputed "
-                 "api/v1/forecasts.json."),
+                 "data/v1/forecasts.json."),
                 schema_path("velocity"), len(history),
                 "Snapshots are real pipeline observations; topics with <3 snapshots get no forecast."),
             "platform_velocity": endpoint(
-                "api/v1/platform-velocity.json",
+                "data/v1/platform-velocity.json",
                 ("Wave 6: per-platform hourly velocity series per topic "
                  "({topic_id: {platform: [[iso, vel], ...]}}). Starting points — "
                  "series build one snapshot per refresh; trajectories classify "
@@ -914,7 +914,7 @@ def main():
                 schema_path("platform-velocity"), len(phist),
                 "Empty/missing series mean 'still building history', never a guess."),
             "meme_formats": endpoint(
-                "api/v1/meme-formats.json",
+                "data/v1/meme-formats.json",
                 ("Wave 9: the tracked meme format families — hand-curated from "
                  "Oct-2026 web research (verified = 2+ independent sources; "
                  "single-source = one source or creator lore, flagged). Each "
@@ -924,7 +924,7 @@ def main():
                 schema_path("meme-formats"), len(mf_out["families"]),
                 "Topics link back via their format_family field (null when unmatched)."),
             "seed_freshness": endpoint(
-                "api/v1/seed-freshness.json",
+                "data/v1/seed-freshness.json",
                 ("Wave 14: the seed-freshness sweep — every seeded topic checked "
                  "for staleness: source URL liveness (HTTP probe; dead = GET "
                  "404/410 only — HEAD rejections fall through to GET, timeouts "
@@ -936,7 +936,7 @@ def main():
                 len([s for s in freshness.get("seeds", [])]) if isinstance(freshness, dict) else 0,
                 "Generated by scripts/seed_freshness.py (not in refresh.sh — run as a periodic audit)."),
             "schemas": endpoint(
-                "api/v1/schema/",
+                "data/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
                 None, len(SCHEMAS)),
         },
@@ -948,20 +948,20 @@ def main():
                       "(48h passed, <2 actual snapshots — counted separately, never in the hit rate) with "
                       "full evidence recorded (window bounds, point counts, thresholds); the resolution rules "
                       "live in one shared module (scripts/resolution-lib.js) used by both the hourly pipeline "
-                      "and the standalone scripts/check_resolutions.js audit. New api/v1/seed-freshness.json "
+                      "and the standalone scripts/check_resolutions.js audit. New data/v1/seed-freshness.json "
                       "endpoint: the seed-freshness audit (scripts/seed_freshness.py) verdicts every seed "
                       "healthy / stale-source / stale-untracked / flaky-warning with per-source probe results. "
                       "Additive only. "
                       "0.5.0 (2026-10-11): Wave 9 — Oracle accuracy scorecard becomes a full page "
                       "(forecast-accuracy.html): honest pre-resolution states, per-horizon accuracy table, "
                       "by-call breakdown, recent resolutions, current 48h projections, and the resolution "
-                      "method — all rendered live from api/v1/forecast-accuracy.json, with the hit rate "
+                      "method — all rendered live from data/v1/forecast-accuracy.json, with the hit rate "
                       "shown only after 10+ forecasts resolve. New meme-format family tracking: "
                       "data/meme_formats.json curates 12 hand-researched Oct-2026 format families "
                       "(verified/single-source flags kept honest), pipeline/format_families.py matches "
                       "topics to families by conservative keyword rules (re-computed every run), every "
                       "topic carries format_family, dossiers show a family chip linking to formats.html, "
-                      "and api/v1/meme-formats.json publishes the families with their live topic links. "
+                      "and data/v1/meme-formats.json publishes the families with their live topic links. "
                       "Additive only, no shape changes. "
                       "0.4.0 (2026-10-11): Wave 8 — velocity sparkline history UI + "
                       "'Remix this' exporter polish. Every flat-feed item now carries "
@@ -990,26 +990,26 @@ def main():
                       "attribution (velocity delta, slope, accel, recency, "
                       "cross-platform spread, fired thresholds), and per-platform "
                       "trajectories (additive only, no shape changes). New "
-                      "api/v1/platform-velocity.json and api/v1/forecast-accuracy.json "
+                      "data/v1/platform-velocity.json and data/v1/forecast-accuracy.json "
                       "(the Oracle's own forecast-vs-actual log; 'building history' "
                       "until 10+ forecasts resolve). 0.2.0 (2026-10-11): index.json "
                       "endpoints are now objects "
                       "{path, description, schema, updated, records, notes} (was plain "
                       "path strings). Added flat-feed, JSONP, velocity entries; "
-                      "draft-07 schemas for every endpoint under api/v1/schema/. "
-                      "api/v1/forecasts.json is added by the post-build forecast step "
+                      "draft-07 schemas for every endpoint under data/v1/schema/. "
+                      "data/v1/forecasts.json is added by the post-build forecast step "
                       "(scripts/build_forecasts.js) when present."),
-        "usage": ("GET api/v1/trends.json, sort by opportunity_score desc for the "
-                  "hottest plays. Start at api/v1/index.json for the full endpoint map."),
+        "usage": ("GET data/v1/trends.json, sort by opportunity_score desc for the "
+                  "hottest plays. Start at data/v1/index.json for the full endpoint map."),
     }
     with open(os.path.join(api, "index.json"), "w") as f:
         json.dump(manifest, f, indent=2)
-    print(f"[build] api/v1/index.json manifest v{manifest['version']}")
+    print(f"[build] data/v1/index.json manifest v{manifest['version']}")
 
     # llms.txt
     lines = ["# Trend Machine", "",
              "Live trending-topic intelligence: what to make content about TODAY.",
-             "Machine-readable: api/v1/trends.json (sort by opportunity_score desc).",
+             "Machine-readable: data/v1/trends.json (sort by opportunity_score desc).",
              f"Generated: {data['generated_at']} · {len(topics)} topics.", "",
              "## Hottest right now"]
     for t in topics[:10]:
@@ -1030,12 +1030,12 @@ def main():
               f"## Trend types (wave 7): {nfmt} formats, {nmix} format+topic, ",
               famline,
               f"{len(topics) - nfmt - nmix} topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).",
-              "", "## API", "- [api/v1/index.json](api/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
-              "- [api/v1/trends.json](api/v1/trends.json) — all topics, full dossiers", "- [api/v1/trends.flat.json](api/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)",
-              "- [api/v1/velocity.json](api/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)", "- [api/v1/forecasts.json](api/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
-              "- [api/v1/platform-velocity.json](api/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [api/v1/forecast-accuracy.json](api/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)",
-              "- [api/v1/meme-formats.json](api/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
-              "- [api/v1/hashtags.json](api/v1/hashtags.json) — tag index", "- [api/v1/schema/](api/v1/schema/) — draft-07 schemas for every endpoint",
+              "", "## API", "- [data/v1/index.json](data/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
+              "- [data/v1/trends.json](data/v1/trends.json) — all topics, full dossiers", "- [data/v1/trends.flat.json](data/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)",
+              "- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)", "- [data/v1/forecasts.json](data/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
+              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)",
+              "- [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
+              "- [data/v1/hashtags.json](data/v1/hashtags.json) — tag index", "- [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint",
               "- [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)", "",
               "## Oracle (flagship)", "- [oracle.html](oracle.html) — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
               "- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)",
@@ -1062,7 +1062,7 @@ def main():
         full.append("")
     with open(os.path.join(ROOT, "llms-full.txt"), "w") as f:
         f.write("\n".join(full))
-    print("[build] api/v1 + llms.txt + llms-full.txt done")
+    print("[build] data/v1 + llms.txt + llms-full.txt done")
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,6 @@
 /* api/trends.js — GET /api/trends (§7.2 "The Wire" roster).
    Opportunity-ranked trends, served from the committed store
-   (api/v1/trends.json — the same file that is both the database and the
+   (data/v1/trends.json — the same file that is both the database and the
    static fallback, §5/§4.6). Query: ?limit= (default 50, max 200),
    ?platform= (e.g. tiktok). Stale (>72h, no corroboration) topics are
    excluded — stale-ness is the pipeline's own cooling signal.
@@ -16,7 +16,7 @@ const github = require("../lib/github.js");
 
 const SERVICE = "trend-wire";
 const VERSION = "1.0.0";
-const FILE = "api/v1/trends.json";
+const FILE = "data/v1/trends.json";
 
 function readStore() {
   if (github.tokenConfigured()) return github.readJson(FILE);

@@ -23,7 +23,7 @@ Verdicts:
                    not evidence of death.
 
 Output: console report + data/seed_freshness.json +
-        api/v1/seed-freshness.json (the public endpoint; described in the
+        data/v1/seed-freshness.json (the public endpoint; described in the
         API manifest by scripts/build_site.py).
 
 Run: python3 scripts/seed_freshness.py [--offline]
@@ -40,7 +40,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 STORE = os.path.join(ROOT, "data", "trends.json")
 HIST = os.path.join(ROOT, "data", "velocity_history.json")
 OUT_DATA = os.path.join(ROOT, "data", "seed_freshness.json")
-OUT_API = os.path.join(ROOT, "api", "v1", "seed-freshness.json")
+OUT_API = os.path.join(ROOT, "data", "v1", "seed-freshness.json")
 
 FRESH_DAYS = 7
 PROBE_TIMEOUT_S = 12

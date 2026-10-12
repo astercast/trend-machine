@@ -51,28 +51,28 @@
 <section aria-labelledby="api-title">
 <p class="kicker">for agents &amp; integrations</p>
 <h1 id="api-title">API docs</h1>
-<p style="max-width:68ch">Everything is static JSON under <code>api/v1/</code> — no auth, no keys, no rate limits.
-Start at the <a href="api/v1/index.json">manifest</a>: every endpoint with its description, schema URL,
+<p style="max-width:68ch">Everything is static JSON under <code>data/v1/</code> — no auth, no keys, no rate limits.
+Start at the <a href="data/v1/index.json">manifest</a>: every endpoint with its description, schema URL,
 <code>updated</code> timestamp, and record counts. Schemas are draft-07 under
-<a href="api/v1/schema/">api/v1/schema/</a>. The full agent guide (workflows included) is
+<a href="data/v1/schema/">data/v1/schema/</a>. The full agent guide (workflows included) is
 <a href="AGENT.md">AGENT.md</a>; shared conventions are in <a href="API.md">API.md</a>.</p>
 
 <div class="ep-scroll">
 <table class="ep-table" aria-label="API endpoints">
 <thead><tr><th scope="col">Endpoint</th><th scope="col">What it is</th><th scope="col">Schema</th></tr></thead>
 <tbody id="ep-body">
-<tr><td><code>api/v1/trends.json</code></td><td>All topics, full dossiers — sort by <code>opportunity_score</code> desc for the hottest plays; each topic now carries <code>trend_type</code> (format/topic/format+topic) and seeded <code>verification</code> flags</td><td><code>api/v1/schema/trends.json</code></td></tr>
-<tr><td><code>api/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded; includes <code>trend_type</code> and <code>velocity_trend</code> (wave 8: snapshot count, delta, since label, ready-made inline SVG sparkline, per-platform mini-summaries — <code>state: "building"</code> with <code>sparkline_svg: null</code> when fewer than 3 snapshots: no fake lines)</td><td><code>api/v1/schema/trends-flat.json</code></td></tr>
-<tr><td><code>api/v1/trends.flat.sample.json</code></td><td>Labeled <code>sample:true</code> twin — development only</td><td><code>api/v1/schema/trends-flat-sample.json</code></td></tr>
-<tr><td><code>api/v1/trends.flat.js</code></td><td>JSONP twin (<code>trendsCallback(...)</code>) — CORS-safe for pure static hosts. File lives at <code>static/v1/trends.flat.js</code> (no static <code>.js</code> under <code>api/</code> — Vercel would deploy it as a function); this public URL is preserved by a <code>vercel.json</code> rewrite</td><td>same as flat feed</td></tr>
-<tr><td><code>api/v1/hashtags.json</code></td><td>Tag → topic-id index</td><td><code>api/v1/schema/hashtags.json</code></td></tr>
-<tr><td><code>api/v1/velocity.json</code></td><td>Oracle input: hourly velocity snapshots per topic</td><td><code>api/v1/schema/velocity.json</code></td></tr>
-<tr><td><code>api/v1/forecasts.json</code></td><td>Oracle output: precomputed 48h trajectory forecasts — projections, never guarantees</td><td><code>api/v1/schema/forecasts.json</code></td></tr>
-<tr><td><code>api/v1/platform-velocity.json</code></td><td>Per-platform hourly velocity series per topic (per-platform trajectories input)</td><td><code>api/v1/schema/platform-velocity.json</code></td></tr>
-<tr><td><code>api/v1/forecast-accuracy.json</code></td><td>The Oracle's own scorecard: forecast-vs-actual over a 48h horizon ("building history" until 10+ resolve); wave 9 adds resolution timeline, ledger activity, and calibration views — human-readable at <code>forecast-accuracy.html</code></td><td><code>api/v1/schema/forecast-accuracy.json</code></td></tr>
-<tr><td><code>api/v1/meme-formats.json</code></td><td>Wave 9: the tracked meme format families — hand-curated from Oct-2026 research (verified/single-source flags), each with current examples, evidence URLs, and live <code>tracked_topics</code> links; human-readable at <code>formats.html</code> (format leaderboard included)</td><td><code>api/v1/schema/meme-formats.json</code></td></tr>
-<tr><td><code>api/v1/seed-freshness.json</code></td><td>Wave 14: seed-freshness audit — every seeded topic's staleness verdict (healthy / stale-source / stale-untracked / flaky-warning) with per-source probe results, corroboration age, and snapshot counts</td><td><code>api/v1/schema/seed-freshness.json</code></td></tr>
-<tr><td><code>api/v1/index.json</code></td><td>Self-describing manifest of all endpoints</td><td><code>api/v1/schema/index.json</code></td></tr>
+<tr><td><code>data/v1/trends.json</code></td><td>All topics, full dossiers — sort by <code>opportunity_score</code> desc for the hottest plays; each topic now carries <code>trend_type</code> (format/topic/format+topic) and seeded <code>verification</code> flags</td><td><code>data/v1/schema/trends.json</code></td></tr>
+<tr><td><code>data/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded; includes <code>trend_type</code> and <code>velocity_trend</code> (wave 8: snapshot count, delta, since label, ready-made inline SVG sparkline, per-platform mini-summaries — <code>state: "building"</code> with <code>sparkline_svg: null</code> when fewer than 3 snapshots: no fake lines)</td><td><code>data/v1/schema/trends-flat.json</code></td></tr>
+<tr><td><code>data/v1/trends.flat.sample.json</code></td><td>Labeled <code>sample:true</code> twin — development only</td><td><code>data/v1/schema/trends-flat-sample.json</code></td></tr>
+<tr><td><code>data/v1/trends.flat.js</code></td><td>JSONP twin (<code>trendsCallback(...)</code>) — CORS-safe for pure static hosts. File lives at <code>static/v1/trends.flat.js</code> (no static <code>.js</code> under <code>api/</code> — Vercel would deploy it as a function); this public URL is preserved by a <code>vercel.json</code> rewrite</td><td>same as flat feed</td></tr>
+<tr><td><code>data/v1/hashtags.json</code></td><td>Tag → topic-id index</td><td><code>data/v1/schema/hashtags.json</code></td></tr>
+<tr><td><code>data/v1/velocity.json</code></td><td>Oracle input: hourly velocity snapshots per topic</td><td><code>data/v1/schema/velocity.json</code></td></tr>
+<tr><td><code>data/v1/forecasts.json</code></td><td>Oracle output: precomputed 48h trajectory forecasts — projections, never guarantees</td><td><code>data/v1/schema/forecasts.json</code></td></tr>
+<tr><td><code>data/v1/platform-velocity.json</code></td><td>Per-platform hourly velocity series per topic (per-platform trajectories input)</td><td><code>data/v1/schema/platform-velocity.json</code></td></tr>
+<tr><td><code>data/v1/forecast-accuracy.json</code></td><td>The Oracle's own scorecard: forecast-vs-actual over a 48h horizon ("building history" until 10+ resolve); wave 9 adds resolution timeline, ledger activity, and calibration views — human-readable at <code>forecast-accuracy.html</code></td><td><code>data/v1/schema/forecast-accuracy.json</code></td></tr>
+<tr><td><code>data/v1/meme-formats.json</code></td><td>Wave 9: the tracked meme format families — hand-curated from Oct-2026 research (verified/single-source flags), each with current examples, evidence URLs, and live <code>tracked_topics</code> links; human-readable at <code>formats.html</code> (format leaderboard included)</td><td><code>data/v1/schema/meme-formats.json</code></td></tr>
+<tr><td><code>data/v1/seed-freshness.json</code></td><td>Wave 14: seed-freshness audit — every seeded topic's staleness verdict (healthy / stale-source / stale-untracked / flaky-warning) with per-source probe results, corroboration age, and snapshot counts</td><td><code>data/v1/schema/seed-freshness.json</code></td></tr>
+<tr><td><code>data/v1/index.json</code></td><td>Self-describing manifest of all endpoints</td><td><code>data/v1/schema/index.json</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -88,18 +88,18 @@ large payloads are pretty-printed and truncated for display.</p>
 <div class="field">
 <label for="ep-picker">Endpoint</label>
 <select id="ep-picker" name="endpoint">
-<option value="api/v1/index.json">index.json — manifest</option>
-<option value="api/v1/trends.json">trends.json — all dossiers</option>
-<option value="api/v1/trends.flat.json">trends.flat.json — flat feed</option>
-<option value="api/v1/trends.flat.sample.json">trends.flat.sample.json — labeled sample</option>
-<option value="api/v1/trends.flat.js">trends.flat.js — JSONP twin (text)</option>
-<option value="api/v1/hashtags.json">hashtags.json — tag index</option>
-<option value="api/v1/velocity.json">velocity.json — snapshots</option>
-<option value="api/v1/forecasts.json">forecasts.json — Oracle output</option>
-<option value="api/v1/platform-velocity.json">platform-velocity.json — per-platform series</option>
-<option value="api/v1/forecast-accuracy.json">forecast-accuracy.json — Oracle scorecard</option>
-<option value="api/v1/meme-formats.json">meme-formats.json — format families</option>
-<option value="api/v1/seed-freshness.json">seed-freshness.json — seed audit</option>
+<option value="data/v1/index.json">index.json — manifest</option>
+<option value="data/v1/trends.json">trends.json — all dossiers</option>
+<option value="data/v1/trends.flat.json">trends.flat.json — flat feed</option>
+<option value="data/v1/trends.flat.sample.json">trends.flat.sample.json — labeled sample</option>
+<option value="data/v1/trends.flat.js">trends.flat.js — JSONP twin (text)</option>
+<option value="data/v1/hashtags.json">hashtags.json — tag index</option>
+<option value="data/v1/velocity.json">velocity.json — snapshots</option>
+<option value="data/v1/forecasts.json">forecasts.json — Oracle output</option>
+<option value="data/v1/platform-velocity.json">platform-velocity.json — per-platform series</option>
+<option value="data/v1/forecast-accuracy.json">forecast-accuracy.json — Oracle scorecard</option>
+<option value="data/v1/meme-formats.json">meme-formats.json — format families</option>
+<option value="data/v1/seed-freshness.json">seed-freshness.json — seed audit</option>
 </select>
 </div>
 <div class="field">
@@ -116,7 +116,7 @@ large payloads are pretty-printed and truncated for display.</p>
 
 <section aria-labelledby="curl" style="margin-top:26px">
 <h2 id="curl">One query that matters</h2>
-<pre style="background:#06080c;border:1px solid var(--line,#1b2230);border-radius:8px;padding:14px;font-size:12.5px;overflow-x:auto"><code>curl -s https://&lt;host&gt;/api/v1/trends.json \
+<pre style="background:#06080c;border:1px solid var(--line,#1b2230);border-radius:8px;padding:14px;font-size:12.5px;overflow-x:auto"><code>curl -s https://&lt;host&gt;/data/v1/trends.json \
  | python3 -c "
 import json,sys
 d = json.load(sys.stdin)

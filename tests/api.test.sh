@@ -34,7 +34,7 @@ echo "== target: $BASE =="
 # pick a real topic id from the static velocity store for the ?topic_id= test
 TOPIC_ID="$(python3 -c "
 import json
-v=json.load(open('$ROOT/api/v1/velocity.json'))
+v=json.load(open('$ROOT/data/v1/velocity.json'))
 ks=[k for k in v if isinstance(v[k],list) and len(v[k])>=3]
 print(ks[0] if ks else '')")"
 
@@ -171,13 +171,13 @@ except urllib.error.HTTPError as ex:
 
 # 8. static fallback present (the §3 coexistence gate — function AND static
 #    file both return 200 on the same deploy)
-chk "static fallback trends.flat.json" curl -sf --max-time 15 "$BASE/api/v1/trends.flat.json"
+chk "static fallback trends.flat.json" curl -sf --max-time 15 "$BASE/data/v1/trends.flat.json"
 # 2026-10-12: the JSONP twin lives at static/v1/ (no static .js under api/);
 # the public /api/v1 URL is preserved by the vercel.json rewrite.
 chk "static fallback trends.flat.js (rewrite)" curl -sf --max-time 15 "$BASE/api/v1/trends.flat.js"
-chk "static fallback forecasts.json" curl -sf --max-time 15 "$BASE/api/v1/forecasts.json"
-chk "static fallback velocity.json" curl -sf --max-time 15 "$BASE/api/v1/velocity.json"
-chk "static fallback envelope schema" curl -sf --max-time 15 "$BASE/api/v1/schema/envelope.json"
+chk "static fallback forecasts.json" curl -sf --max-time 15 "$BASE/data/v1/forecasts.json"
+chk "static fallback velocity.json" curl -sf --max-time 15 "$BASE/data/v1/velocity.json"
+chk "static fallback envelope schema" curl -sf --max-time 15 "$BASE/data/v1/schema/envelope.json"
 
 # 9. vercel.json lint: cron daily-or-slower (Hobby hard limit, §4.1);
 #    buildCommand pins the repo's real build; functions runtime pinned.
@@ -196,8 +196,9 @@ v=json.load(open('$ROOT/vercel.json'))
 assert v['outputDirectory']=='.'
 assert 'build_site.py' in v['buildCommand'] and 'build_forecasts.js' in v['buildCommand']
 assert v['installCommand']==\"echo 'no dependencies'\"
-# explicit function paths (NOT the api/**/*.js glob): the glob would deploy
-# api/v1/trends.flat.js (the static JSONP twin) as a serverless function
+# explicit function paths (NOT the api/**/*.js glob): Vercel deploys every
+# .js under api/ as a function (the map is not an allowlist), so the static
+# JSONP twin lives at static/v1/trends.flat.js instead
 fns=v['functions']
 assert set(fns)=={'api/health.js','api/trends.js','api/forecasts.js','api/velocity.js','api/cron/wire.js'}, fns
 assert all(f=={'maxDuration':10} for f in fns.values()), fns  # 2026-10-12: entries need >=1 valid property (maxDuration 10 = Hobby limit); runtime key must NEVER be set for Node

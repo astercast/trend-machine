@@ -11,7 +11,7 @@ Publishing anything riding a trend.
 
 ## Inputs
 
-- `api/v1/hashtags.json` (tag → topic index)
+- `data/v1/hashtags.json` (tag → topic index)
 - The topic dossier's hashtags
 
 ## Procedure

@@ -14,7 +14,7 @@ it runs on any static host with a cron (or GitHub Actions).
 ## Option B — GitHub Actions (included)
 
 `.github/workflows/refresh.yml` runs `pipeline/refresh.sh` every 15 minutes
-and commits `data/trends.json`, `topics/`, `api/v1/`, and `llms.txt` back to
+and commits `data/trends.json`, `topics/`, `data/v1/`, and `llms.txt` back to
 the repo. Point any static host at the repo and you're live.
 
 Requirements: the workflow needs write permission (default `GITHUB_TOKEN`

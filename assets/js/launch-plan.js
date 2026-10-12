@@ -13,7 +13,7 @@
 (function () {
   "use strict";
 
-  var TRENDS_URL = "api/v1/trends.json";
+  var TRENDS_URL = "data/v1/trends.json";
   var HIST_URL = "data/velocity_history.json";
   var LEDGER_URL = "data/forecast_ledger.json";
   var STORE_KEY = "tm_plans_v1";
@@ -485,7 +485,7 @@
       }
     }).catch(function () {
       status.innerHTML = '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the data</h2>' +
-        "<p>The planner needs api/v1/trends.json and data/velocity_history.json. " +
+        "<p>The planner needs data/v1/trends.json and data/velocity_history.json. " +
         "Run pipeline/refresh.sh or check the connection.</p></div>";
     });
   }

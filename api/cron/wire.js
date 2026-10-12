@@ -25,10 +25,10 @@
        topic-page rebuilds, format families, seed backfills) keeps its own
        cadence in the wave engine and does the deep work.
      - The wire does NOT touch: data/forecast_ledger.json or
-       api/v1/forecast-accuracy.json (the resolution-check workflow —
+       data/v1/forecast-accuracy.json (the resolution-check workflow —
        scripts/resolution-lib.js hit/miss/unverifiable semantics — stays
        repo-side in scripts/build_forecasts.js + scripts/check_resolutions.js),
-       api/v1/index.json (manifest), api/v1/trends.flat.sample.json.
+       data/v1/index.json (manifest), data/v1/trends.flat.sample.json.
      - Derived-artifact fields the wire cannot recompute byte-identically
        (flat feed `velocity_trend` sparkline SVGs) are PRESERVED from the
        current file for existing topics; new topics get the honest
@@ -61,15 +61,15 @@ const VERSION = "1.0.0";
 const ROOT = path.resolve(__dirname, "..", ".."); // servedRoot = repo root
 
 const FILES = {
-  trends: "api/v1/trends.json",
-  flat: "api/v1/trends.flat.json",
+  trends: "data/v1/trends.json",
+  flat: "data/v1/trends.flat.json",
   flatJs: "static/v1/trends.flat.js", // 2026-10-12: outside api/ — Vercel
   // deploys every .js under api/ as a function (functions map is not an
-  // allowlist); public URL /api/v1/trends.flat.js preserved via rewrite
-  forecasts: "api/v1/forecasts.json",
-  velocity: "api/v1/velocity.json",
-  platformVelocity: "api/v1/platform-velocity.json",
-  memeFormats: "api/v1/meme-formats.json",
+  // allowlist); public URL /data/v1/trends.flat.js preserved via rewrite
+  forecasts: "data/v1/forecasts.json",
+  velocity: "data/v1/velocity.json",
+  platformVelocity: "data/v1/platform-velocity.json",
+  memeFormats: "data/v1/meme-formats.json",
 };
 
 const FETCH_TIMEOUT_MS = Math.max(1000,
@@ -253,7 +253,7 @@ async function srcBluesky() {
 }
 
 async function srcMastodon() {
-  const r = await fetchTimeout("https://mastodon.social/api/v1/trends?limit=20",
+  const r = await fetchTimeout("https://mastodon.social/data/v1/trends?limit=20",
     { timeoutMs: FETCH_TIMEOUT_MS, userAgent: UA });
   if (!r.ok) throw new Error(r.error || ("http " + r.status));
   const tags = JSON.parse(r.text).slice(0, 12);

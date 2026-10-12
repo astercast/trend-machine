@@ -1,5 +1,5 @@
 /* trend-machine — wave 9: pure Oracle-scorecard rendering lib.
-   Reads api/v1/forecast-accuracy.json + api/v1/forecasts.json and renders
+   Reads data/v1/forecast-accuracy.json + data/v1/forecasts.json and renders
    the "Forecast accuracy" view. Honest by construction: the ONLY accuracy
    ever shown comes from the ledger's resolved counts — with fewer than
    MIN_RESOLVED resolved the page says "building history" and hit_rate

@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine flat consumer feed",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "sample",
+    "source_count",
+    "trends"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "sample": {
+      "const": false,
+      "description": "false = live feed (the labeled sample twin uses trends-flat-sample.json)"
+    },
+    "source_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trends": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/flatTrend"
+      }
+    }
+  },
+  "definitions": {
+    "flatTrend": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "source",
+        "url",
+        "velocity",
+        "opportunity_score",
+        "hashtags",
+        "detected_at",
+        "summary",
+        "category",
+        "platforms",
+        "format_tags",
+        "trend_type",
+        "sources",
+        "velocity_trend"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "description": "First source name, or 'seed' for editorial seed topics."
+        },
+        "url": {
+          "type": "string"
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "opportunity_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "hashtags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "detected_at": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "format_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "trend_type": {
+          "type": "string",
+          "enum": [
+            "format",
+            "topic",
+            "format+topic"
+          ]
+        },
+        "format_family": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Wave 9: curated format-family id (see data/v1/meme-formats.json), or null."
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "velocity_trend": {
+          "type": "object",
+          "required": [
+            "snapshots",
+            "state",
+            "since",
+            "first_velocity",
+            "latest_velocity",
+            "delta",
+            "sparkline_svg",
+            "per_platform"
+          ],
+          "properties": {
+            "snapshots": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of hourly velocity snapshots behind this trend."
+            },
+            "state": {
+              "type": "string",
+              "enum": [
+                "ready",
+                "building"
+              ],
+              "description": "ready = 3+ snapshots, sparkline drawn from real data; building = fewer than 3 snapshots, no line drawn (honest state)."
+            },
+            "since": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "'Oct 11, 2026'-style label of the first snapshot; null when no snapshots yet."
+            },
+            "first_velocity": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "latest_velocity": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "delta": {
+              "type": "integer",
+              "description": "latest_velocity - first_velocity."
+            },
+            "sparkline_svg": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Wave 8: pre-rendered inline SVG mini-sparkline (role=img, data-grounded aria-label, static/no animation) when state=ready; null when building."
+            },
+            "per_platform": {
+              "type": "object",
+              "description": "Per-platform mini-summaries {platform: {snapshots, latest_velocity, delta, sparkline_svg|null}} from real per-platform snapshot data.",
+              "additionalProperties": {
+                "type": "object",
+                "required": [
+                  "snapshots",
+                  "latest_velocity",
+                  "delta",
+                  "sparkline_svg"
+                ],
+                "properties": {
+                  "snapshots": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "latest_velocity": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "delta": {
+                    "type": "integer"
+                  },
+                  "sparkline_svg": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -73,8 +73,8 @@ resolve, this page says "building history" — no accuracy is claimed.</p>
     var stampEl = document.getElementById("sc-stamp");
     if (!statusEl || !main) { return; }
     Promise.all([
-      getJSON("api/v1/forecast-accuracy.json"),
-      getJSON("api/v1/forecasts.json", true)
+      getJSON("data/v1/forecast-accuracy.json"),
+      getJSON("data/v1/forecasts.json", true)
     ]).then(function (res) {
       var acc = res[0], fc = res[1];
       statusEl.hidden = true;
@@ -96,7 +96,7 @@ resolve, this page says "building history" — no accuracy is claimed.</p>
     }).catch(function () {
       statusEl.innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the ledger</h2>' +
-        "<p>This page needs api/v1/forecast-accuracy.json (built by scripts/build_forecasts.js). " +
+        "<p>This page needs data/v1/forecast-accuracy.json (built by scripts/build_forecasts.js). " +
         "Run pipeline/refresh.sh or check the connection.</p></div>";
     });
   }

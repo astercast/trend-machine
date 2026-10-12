@@ -1,8 +1,8 @@
 /* trend-machine dashboard */
 (function () {
   "use strict";
-  var DATA_URLS = ["data/trends.json", "api/v1/trends.json"];
-  var VELOCITY_URLS = ["api/v1/velocity.json", "data/velocity_history.json"];
+  var DATA_URLS = ["data/trends.json", "data/v1/trends.json"];
+  var VELOCITY_URLS = ["data/v1/velocity.json", "data/velocity_history.json"];
 
   /* wave 8: velocity snapshots for the Trend sparkline column (best-effort) */
   function loadVelocity(i) {

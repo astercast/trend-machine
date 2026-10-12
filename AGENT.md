@@ -1,23 +1,23 @@
 # AGENT.md — how an agent uses Trend Machine
 
 Trend Machine is a static trending-topic tracker: what to make content
-about TODAY. Everything an agent needs is plain JSON under `api/v1/`.
+about TODAY. Everything an agent needs is plain JSON under `data/v1/`.
 There is no server, no auth, no API keys, and no rate limits — it's your
 own static host.
 
 ## Base URL
 
-`api/v1/` relative to the site root. Works on any static host.
+`data/v1/` relative to the site root. Works on any static host.
 
-- Deployed: `https://<your-host>/api/v1/trends.json`
-- Local checkout: read `api/v1/*.json` straight off disk.
+- Deployed: `https://<your-host>/data/v1/trends.json`
+- Local checkout: read `data/v1/*.json` straight off disk.
 - Cross-origin from a browser page on another domain: plain `fetch()`
   is blocked by CORS on pure static hosts (GitHub Pages can't send
   `Access-Control-Allow-Origin`). Use the JSONP twin instead:
-  `<script src="https://<host>/api/v1/trends.flat.js">` with a
+  `<script src="https://<host>/data/v1/trends.flat.js">` with a
   `trendsCallback(feed)` handler. See GO_LIVE.md §1.
 
-**Start at `api/v1/index.json`.** It's a self-describing manifest: every
+**Start at `data/v1/index.json`.** It's a self-describing manifest: every
 endpoint with `description`, `schema` (draft-07), `updated` timestamp,
 `records` count, and notes. The changelog there tells you what changed
 between versions; breaking changes get a new `v2/` path, never a silent
@@ -30,7 +30,7 @@ All responses are complete static snapshots sized for client-side
 filtering — there is no pagination and no query language. Fetch the
 file, filter in memory.
 
-**1. Full dossiers — `api/v1/trends.json`**
+**1. Full dossiers — `data/v1/trends.json`**
 `{generated_at, count, topics:[{id, title, summary, category, platforms[],
 hashtags[], velocity 0-100, saturation, opportunity_score 0-100,
 first_seen, last_seen, stale, seeded, verification, trend_type,
@@ -38,7 +38,7 @@ format_family, sources[{name,url}], angles[], hooks[], who_to_watch[],
 format_tags[], guide_links[]}]}`
 
 - `format_family` (wave 9): id of the curated format family this topic
-  belongs to (see `api/v1/meme-formats.json`), or `null`. Matched from the
+  belongs to (see `data/v1/meme-formats.json`), or `null`. Matched from the
   topic's own text against the family's keywords — re-computed every run.
 
 - `trend_type` (wave 7): `format` = a reusable template to join (dance,
@@ -51,7 +51,7 @@ format_tags[], guide_links[]}]}`
 
 ```bash
 # Hottest plays right now (opportunity = velocity minus saturation penalty)
-curl -s https://<host>/api/v1/trends.json | python3 -c "
+curl -s https://<host>/data/v1/trends.json | python3 -c "
 import json, sys
 d = json.load(sys.stdin)
 for t in sorted(d['topics'], key=lambda t: t['opportunity_score'], reverse=True)[:5]:
@@ -62,12 +62,12 @@ for t in sorted(d['topics'], key=lambda t: t['opportunity_score'], reverse=True)
 
 ```js
 // node: load the dossier for one topic
-const d = require('./api/v1/trends.json');
+const d = require('./data/v1/trends.json');
 const t = d.topics.find(t => t.id === 'ramalama-walk');
 console.log(t.title, t.opportunity_score, t.angles);
 ```
 
-**2. Flat feed — `api/v1/trends.flat.json`**
+**2. Flat feed — `data/v1/trends.flat.json`**
 `{generated_at, sample:false, source_count, trends:[{id, title, source,
 url, velocity, opportunity_score, hashtags[], detected_at, summary,
 category, platforms[], format_tags[], trend_type, sources[],
@@ -78,19 +78,19 @@ sparkline_svg, per_platform}` — a ready-made inline SVG sparkline
 (`role="img"`, data-grounded `aria-label`, static — safe to embed) plus
 per-platform mini-summaries. `state` is `ready` (3+ real snapshots) or
 `building` (fewer than 3 — `sparkline_svg` is then `null`: no fake line).
-When you need the raw series, `api/v1/velocity.json` (all platforms) and
-`api/v1/platform-velocity.json` (per-platform) have every snapshot.
+When you need the raw series, `data/v1/velocity.json` (all platforms) and
+`data/v1/platform-velocity.json` (per-platform) have every snapshot.
 
-**3. Hashtag index — `api/v1/hashtags.json`**
+**3. Hashtag index — `data/v1/hashtags.json`**
 `{generated_at, tags: {"#tag": [topic-id, ...]}}` — reverse lookup.
 
-**4. Oracle input — `api/v1/velocity.json`**
+**4. Oracle input — `data/v1/velocity.json`**
 `{topic-id: [[iso_ts, velocity, opportunity], ...]}` — hourly velocity
 snapshots per topic, ascending by time. Classify them with
 `assets/js/trajectory.js` (UMD — `require()` it in node) into
 `accelerating | rising | peaking | fading | steady | insufficient`.
 
-**5. Oracle output — `api/v1/forecasts.json`**
+**5. Oracle output — `data/v1/forecasts.json`**
 Precomputed trajectory classifications from the same classifier the
 dashboard uses: `peaking_48h[]`, `rising_fast[]`, `cooling_off[]`,
 `steady[]`, plus `projections` keyed by topic id. Each record carries
@@ -106,13 +106,13 @@ snapshots; thinner series get the honest `insufficient` label). The
 `label` is always the honest one: "Projection from N snapshots — not a
 guarantee."
 
-**5b. Per-platform input — `api/v1/platform-velocity.json`** (wave 6)
+**5b. Per-platform input — `data/v1/platform-velocity.json`** (wave 6)
 `{topic-id: {platform: [[iso_ts, velocity], ...]}}` — per-platform
 hourly velocity series. Starting points: series begin empty and build
 one snapshot per refresh; treat missing/thin series as "still building
 history", never a guess.
 
-**5c. Oracle scorecard — `api/v1/forecast-accuracy.json`** (wave 6; wave 9: full dashboard page)
+**5c. Oracle scorecard — `data/v1/forecast-accuracy.json`** (wave 6; wave 9: full dashboard page)
 The Oracle's own forecast-vs-actual log: decisive forecasts recorded in
 `data/forecast_ledger.json` and scored hit/miss after a 48h horizon
 (same ±1.5/hr thresholds the classifier uses). `status` stays
@@ -124,7 +124,7 @@ horizon lands — a queue schedule, not a prediction), `recorded_per_day[]`
 level claimed at forecast time; rows read "awaiting data" until that level
 has 10+ resolved). Human-readable at `forecast-accuracy.html`.
 
-**5d. Meme format families — `api/v1/meme-formats.json`** (wave 9)
+**5d. Meme format families — `data/v1/meme-formats.json`** (wave 9)
 The tracked meme format families: hand-curated from Oct-2026 web research
 (`verification`: `verified` = 2+ independent sources, `single-source` =
 one source or creator lore — flagged, never hidden; `status`: rising /
@@ -136,7 +136,7 @@ are derived, never stale). Topics link back via their `format_family`
 field (null when unmatched). Human-readable at `formats.html`, which also
 ranks families by tracked-topic opportunity (the format leaderboard).
 
-**6. Schemas — `api/v1/schema/`**
+**6. Schemas — `data/v1/schema/`**
 Draft-07 for every endpoint: `trends.json`, `trends-flat.json`,
 `trends-flat-sample.json`, `hashtags.json`, `velocity.json`,
 `platform-velocity.json`, `forecast-accuracy.json`, `forecasts.json`,
@@ -150,11 +150,11 @@ flaky-warning per seeded topic), and `index.json` itself.
 
 Goal: one topic, one angle, one hook, ready to film.
 
-1. `GET api/v1/trends.flat.json`. Confirm `sample` is `false`
+1. `GET data/v1/trends.flat.json`. Confirm `sample` is `false`
    (the `sample:true` twin is for development only).
 2. Take the first entry — the feed is already sorted by
    `opportunity_score` desc, stale topics excluded.
-3. Enrich: look the `id` up in `api/v1/trends.json` for `angles[]`,
+3. Enrich: look the `id` up in `data/v1/trends.json` for `angles[]`,
    `hooks[]`, `platforms[]`, `format_tags[]`.
 4. Check freshness: `last_seen` should be within ~24h; if the dossier
    is `stale:true`, skip it (the flat feed already does this for you).
@@ -176,7 +176,7 @@ easiest today: "6-7" — Gen Alpha's defining brainrot joke
 
 Goal: a week of posts from one trend, nothing invented.
 
-1. `GET api/v1/trends.json`, find `id == "ramalama-walk"`. Read its
+1. `GET data/v1/trends.json`, find `id == "ramalama-walk"`. Read its
    dossier: 3 angles, 2 hooks, `#halloweencostume #ramalama
    #spookyseason`, platform `tiktok`, opportunity 58, velocity 90.
    (This is a seeded topic — its "430K videos" figure is a researched
@@ -213,7 +213,7 @@ The same plan is one click in the dashboard: any topic dossier has a
 
 Goal: catch trends at their crest, not after it.
 
-1. `GET api/v1/forecasts.json`.
+1. `GET data/v1/forecasts.json`.
 2. Read `peaking_48h[]` — each record has `peak_in_hours` (hours until
    the projected crest; `null` = no peak projected in the window),
    `latest_velocity`, `slope_per_hour`, and the honest `label`.
@@ -225,11 +225,11 @@ Goal: catch trends at their crest, not after it.
    next refreshes.
 
 Fallback (no forecasts.json — e.g. an older snapshot): load
-`api/v1/velocity.json` and classify locally:
+`data/v1/velocity.json` and classify locally:
 
 ```js
 const T = require('./assets/js/trajectory.js');
-const hist = require('./api/v1/velocity.json');
+const hist = require('./data/v1/velocity.json');
 for (const [id, pts] of Object.entries(hist)) {
   const a = T.analyze(pts);
   if (a.state === 'peaking' && a.peakInHours <= T.PEAK_WINDOW_H)
@@ -241,9 +241,9 @@ for (const [id, pts] of Object.entries(hist)) {
 
 Goal: find every topic a hashtag touches.
 
-1. `GET api/v1/hashtags.json`, look up e.g. `tags["#dancechallenge"]`
+1. `GET data/v1/hashtags.json`, look up e.g. `tags["#dancechallenge"]`
    → topic ids.
-2. Join against `api/v1/trends.json` dossiers for titles, scores,
+2. Join against `data/v1/trends.json` dossiers for titles, scores,
    and angles. Sort by `opportunity_score` desc.
 
 ### Workflow 5 — Weave 2–5 trends into one battle week
@@ -251,7 +251,7 @@ Goal: find every topic a hashtag touches.
 Goal: a single 7-day campaign across multiple trends, exportable and
 trackable against reality.
 
-1. Pick 2–5 dossier ids from `api/v1/trends.json` (or start at
+1. Pick 2–5 dossier ids from `data/v1/trends.json` (or start at
    `launch-plan.html?battle=id1,id2,id3`).
 2. `require('./assets/js/launch-plan-lib.js')` and call
    `LaunchPlanLib.buildBattlePlan(entries, ledgerEntries)` where

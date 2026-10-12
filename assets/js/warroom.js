@@ -4,9 +4,9 @@
    contacts ignite and burn out on a real-data trajectory map.
 
    Data (all real, all from the pipeline):
-     api/v1/forecasts.json        — contact lists + projections
+     data/v1/forecasts.json        — contact lists + projections
      data/velocity_history.json   — real past snapshot trails
-     api/v1/forecast-accuracy.json — resolution queue countdowns
+     data/v1/forecast-accuracy.json — resolution queue countdowns
 
    Pure geometry lives in warroom-lib.js (unit-tested). This file is the
    DOM layer: SVG scope + HTML blips, the sweep cursor, pings, LEDs,
@@ -20,9 +20,9 @@
 (function () {
   "use strict";
 
-  var FORECASTS_URL = "api/v1/forecasts.json";
+  var FORECASTS_URL = "data/v1/forecasts.json";
   var HIST_URL = "data/velocity_history.json"; // same URL oracle.js uses
-  var ACC_URL = "api/v1/forecast-accuracy.json";
+  var ACC_URL = "data/v1/forecast-accuracy.json";
 
   var SWEEP_PERIOD_MS = 14000;
   var PING_STAGGER_MS = 130;
@@ -404,7 +404,7 @@
       })
       .catch(function (e) {
         fail("Couldn't load the forecast data (" + (e && e.message || "fetch failed") +
-             "). The theatre needs api/v1/forecasts.json and data/velocity_history.json.", true);
+             "). The theatre needs data/v1/forecasts.json and data/velocity_history.json.", true);
       });
   }
 

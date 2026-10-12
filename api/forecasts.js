@@ -17,8 +17,8 @@ const github = require("../lib/github.js");
 
 const SERVICE = "trend-wire";
 const VERSION = "1.0.0";
-const FILE = "api/v1/forecasts.json";
-const VEL_FILE = "api/v1/velocity.json";
+const FILE = "data/v1/forecasts.json";
+const VEL_FILE = "data/v1/velocity.json";
 
 function readStore(name) {
   if (github.tokenConfigured()) return github.readJson(name);

@@ -8,12 +8,12 @@ description: Read the Oracle's 48h trajectory forecasts and know whether to post
 ## Use when
 
 Deciding what to post in the next 48 hours from the Oracle's trajectory
-forecasts (`api/v1/forecasts.json`), or explaining why a trend is
+forecasts (`data/v1/forecasts.json`), or explaining why a trend is
 "peaking", "rising", or "cooling" to another agent or a creator.
 
 ## Inputs
 
-- `api/v1/forecasts.json`: `peaking_48h[]`, `rising_fast[]`,
+- `data/v1/forecasts.json`: `peaking_48h[]`, `rising_fast[]`,
   `cooling_off[]`, `steady[]`, `projections{}`. Each record carries
   `state, n_snapshots, latest_velocity, slope_per_hour, accel,
   peak_in_hours, summary, label` — plus (wave 6) `confidence`
@@ -21,11 +21,11 @@ forecasts (`api/v1/forecasts.json`), or explaining why a trend is
   peaking" attribution: velocity delta, slope, accel, recency,
   cross-platform spread, fired thresholds), and `per_platform`
   (each platform's own trajectory where data supports it).
-- `api/v1/forecast-accuracy.json`: the Oracle's own scorecard
+- `data/v1/forecast-accuracy.json`: the Oracle's own scorecard
   (forecast-vs-actual, 48h horizon). `status: "building history"` and
   `hit_rate: null` until 10+ forecasts resolve — quote that honestly,
   never invent a hit rate.
-- Fallback: `api/v1/velocity.json` + `assets/js/trajectory.js`
+- Fallback: `data/v1/velocity.json` + `assets/js/trajectory.js`
   (`require()` it in node — same classifier the dashboard uses).
 
 ## Procedure

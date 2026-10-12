@@ -10,12 +10,16 @@ user "push"/"ship it" — never from wave-engine automation.
 - Static frontend at repo root: `index.html`, `oracle.html`, `formats.html`,
   `launch-plan.html`, `algorithms.html`, `forecast-accuracy.html`,
   `api-docs.html`, `topics/*.html` (393 topic pages)
-- Static data fallback: `api/v1/` (trends.json, trends.flat.json,
+- Static data fallback: `data/v1/` (trends.json, trends.flat.json,
   forecasts.json, forecast-accuracy.json, velocity.json,
   platform-velocity.json, hashtags.json, meme-formats.json, seed-freshness.json,
   schema/, manifest index.json), `static/v1/trends.flat.js` (JSONP twin —
-  public URL `/api/v1/trends.flat.js` via `vercel.json` rewrite), `assets/`,
+  public URL `/data/v1/trends.flat.js` via `vercel.json` rewrite), `assets/`,
   `llms.txt`, `llms-full.txt`
+- **Vercel never serves static files under `api/`** — all static data lives
+  in `data/v1/`; only real function handlers (`.js` with exported handlers)
+  under `api/` (2026-10-12). Every frontend fetch of `api/v1/*.json` 404s in
+  production otherwise.
 - **No static `.js` data files under `api/` ever** — Vercel deploys every
   `.js` there as a function (the `functions` map is not an allowlist);
   basename collisions (`x.js` + `x.json` in one dir) fail the build with
@@ -45,7 +49,7 @@ a basename-without-extension in one dir (`trends.flat.js` + `trends.flat.json`)
 fail the build with "conflicting paths or names" (this killed the
 trend-machine-live deploy on 2026-10-12). So: (1) the static JSONP twin moved
 to `static/v1/trends.flat.js` with a `rewrites` entry preserving the public
-`/api/v1/trends.flat.js` URL; (2) the `functions` map keeps the 5 real paths
+`/data/v1/trends.flat.js` URL; (2) the `functions` map keeps the 5 real paths
 explicit (never broad globs). Each entry carries `{"maxDuration": 10}` (10s
 Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 `nodejs20.x`, and empty `{}` — 2026-10-12 lessons above).

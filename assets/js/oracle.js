@@ -14,10 +14,10 @@
 (function () {
   "use strict";
 
-  var TRENDS_URL = "api/v1/trends.json";
+  var TRENDS_URL = "data/v1/trends.json";
   var HIST_URL = "data/velocity_history.json";
   var PHIST_URL = "data/platform_velocity_history.json"; // wave 6, best-effort
-  var ACC_URL = "api/v1/forecast-accuracy.json";         // wave 6, best-effort
+  var ACC_URL = "data/v1/forecast-accuracy.json";         // wave 6, best-effort
 
   function getJSON(url, optional) {
     return fetch(url).then(function (r) {
@@ -269,7 +269,7 @@
     }).catch(function () {
       statusEl.innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the data</h2>' +
-        "<p>The Oracle needs api/v1/trends.json and data/velocity_history.json. " +
+        "<p>The Oracle needs data/v1/trends.json and data/velocity_history.json. " +
         "Run pipeline/refresh.sh or check the connection.</p></div>";
     });
   }

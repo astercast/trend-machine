@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trend Machine — what to make content about TODAY</title>
-<meta name="description" content="Live trending-topic intelligence: the hottest topics, memes, and hashtags right now, scored by opportunity for creators.">
+<title>Trend Machine — know what's peaking before it peaks</title>
+<meta name="description" content="Live trend radar: 393 topics across 8 platforms, trajectory forecasts from real velocity snapshots, and the Oracle's 48-hour peak projections. Projections, never guarantees.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b0f0e'/%3E%3Ccircle cx='8' cy='8' r='5' fill='none' stroke='%2339ff88' stroke-width='1.6'/%3E%3Ccircle cx='8' cy='8' r='1.4' fill='%2339ff88'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -14,13 +14,13 @@
 <link rel="stylesheet" href="assets/css/wave8.css">
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/wave12.css">
+<link rel="stylesheet" href="assets/css/wave16.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="head-inner">
     <a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
-    <span class="kicker" id="data-ts">data: loading…</span>
     <div class="live-clock" aria-label="Mission clock: ground elapsed time since the data run">
       <span class="led led-live blink" aria-hidden="true"></span>
       <span class="tm-plate-label" id="clock-label">GET</span>
@@ -30,69 +30,139 @@
   <div class="ticker" aria-hidden="true"><span class="ticker-track" id="ticker-track"></span></div>
 </header>
 
-<main id="main" class="wrap">
+<main id="main">
   <div id="load-error" role="alert" hidden>
     <span class="tm-alarm-code" id="alarm-code">1202 · DATA LINK LOST</span>
     <p id="alarm-msg">The trend feed failed to load. Non-essential loads shed — ticker tape and radar sweep secured. Content below remains readable.</p>
     <button type="button" class="tm-retry" id="load-retry">Retry link</button>
   </div>
 
-  <a class="oracle-banner" href="oracle.html" aria-label="Open the Oracle: 48-hour trend forecasts and 7-day launch plans">
-    <span class="led led-violet" aria-hidden="true"></span>
-    <span class="kicker">🔮 flagship</span>
-    <h2>The Oracle — what's about to peak</h2>
-    <p>48-hour peak forecasts from real velocity snapshots, plus a 7-day battle plan for any topic. Projections, never guarantees.</p>
-    <div class="cta-row">
-      <span class="btn" aria-hidden="true">Open the Oracle</span>
-      <span style="font-size:13px;color:var(--ink-faint)">peaking 48h · rising fast · cooling off</span>
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-kicker">
+          <span class="led led-live blink" aria-hidden="true"></span>
+          <span class="kicker">live trend radar</span>
+          <span class="kicker" id="data-ts" style="color:var(--ink-ghost)">data: loading…</span>
+        </p>
+        <h1 id="hero-h">Know what's <span class="strike-live">peaking</span> before it peaks.</h1>
+        <p class="hero-sub">
+          Trend Machine watches the fastest-moving corners of the internet, fits a
+          trajectory to every real velocity snapshot, and projects the next
+          <strong>48 hours</strong>. Not what's viral now — <strong>what's about
+          to be</strong>. Projections, never guarantees.
+        </p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="oracle.html">Open the Oracle →</a>
+          <a class="btn-ghost" href="#all">Scan the board ↓</a>
+        </div>
+        <div class="hero-stats" role="list" aria-label="Live machine statistics">
+          <div class="hero-stat" role="listitem"><div class="num" id="hs-topics">–</div><div class="lbl">topics tracked</div></div>
+          <div class="hero-stat" role="listitem"><div class="num" id="hs-platforms">–</div><div class="lbl">platforms watched</div></div>
+          <div class="hero-stat" role="listitem"><div class="num" id="hs-peaking">–</div><div class="lbl">peaking now</div></div>
+          <div class="hero-stat" role="listitem"><div class="num" id="hs-age">–</div><div class="lbl">data age</div></div>
+        </div>
+      </div>
+      <div class="hero-scope" role="img" aria-label="Radar scope showing the five hottest trends as blips">
+        <span class="scope-cross" aria-hidden="true"></span>
+        <div class="hero-blips" id="hero-blips" aria-hidden="true"></div>
+        <div class="hero-scope-cap">
+          <span>scope · top 5 contacts</span>
+          <span class="num" id="scope-cap-topic">sweeping…</span>
+        </div>
+      </div>
     </div>
-  </a>
+  </section>
 
-  <a class="oracle-banner" href="forecast-accuracy.html" aria-label="Open the Oracle accuracy scorecard: forecast-vs-actual record, per-horizon accuracy, calibration" style="margin-top:12px">
-    <span class="led led-violet" aria-hidden="true"></span>
-    <span class="kicker">📊 new · wave 9</span>
-    <h2>Forecast accuracy — the Oracle's own scorecard</h2>
-    <p>Every forecast scored hit/miss against reality 48h later. Per-horizon accuracy, calibration, and the resolution timeline — honest "building history" until 10 forecasts resolve.</p>
-    <div class="cta-row">
-      <span class="btn" aria-hidden="true">Open the scorecard</span>
-      <span style="font-size:13px;color:var(--ink-faint)">resolutions · calibration · timeline</span>
-    </div>
-  </a>
-
-  <a class="oracle-banner" href="formats.html" aria-label="Open the meme format families: reusable templates to join, with current examples and evidence" style="margin-top:12px">
-    <span class="led led-violet" aria-hidden="true"></span>
-    <span class="kicker">⧉ new · wave 9</span>
-    <h2>Meme format families — templates to join</h2>
-    <p>Costume walks, POV setups, dance hooks, call-out copy… the reusable containers behind the trends, each with current examples, evidence, and verification flags.</p>
-    <div class="cta-row">
-      <span class="btn" aria-hidden="true">Browse formats</span>
-      <span style="font-size:13px;color:var(--ink-faint)">13 families · verified + flagged</span>
-    </div>
-  </a>
-
-  <a class="oracle-banner" href="algorithms.html" aria-label="Open the algorithm mechanics reference: what each platform rewards right now, October 2026" style="margin-top:12px">
-    <span class="led led-violet" aria-hidden="true"></span>
-    <span class="kicker">⚙️ reference · oct 2026</span>
-    <h2>Algorithm mechanics — why trajectories move</h2>
-    <p>What TikTok, YouTube Shorts, and Instagram Reels actually reward right now: signal hierarchies, the Oct 1 Shorts originality update, and the cross-platform breakout consensus. Sourced and dated.</p>
-    <div class="cta-row">
-      <span class="btn" aria-hidden="true">Read the mechanics</span>
-      <span style="font-size:13px;color:var(--ink-faint)">tiktok · shorts · reels</span>
-    </div>
-  </a>
-
-  <section aria-labelledby="hot-now" style="margin-top:28px">
+<div class="wrap">
+  <!-- ============ STATIONS (progressive disclosure) ============ -->
+  <section class="stations reveal" aria-labelledby="stations-h">
     <div class="section-head">
-      <h2 id="hot-now"><span class="sec-no">01</span>Hot right now</h2>
+      <h2 id="stations-h"><span class="sec-no">01</span>Stations</h2>
+      <span class="kicker">tune to one — the rest stays on the board</span>
+    </div>
+    <div class="station-tabs" role="tablist" aria-label="Machine stations">
+      <button class="station-tab" role="tab" id="station-oracle" aria-controls="panel-oracle" aria-selected="true">
+        <span class="led led-violet" aria-hidden="true"></span>🔮 The Oracle
+      </button>
+      <button class="station-tab" role="tab" id="station-scorecard" aria-controls="panel-scorecard" aria-selected="false" tabindex="-1">
+        <span class="led led-live" aria-hidden="true"></span>📊 Scorecard
+      </button>
+      <button class="station-tab" role="tab" id="station-formats" aria-controls="panel-formats" aria-selected="false" tabindex="-1">
+        <span class="led led-live" aria-hidden="true"></span>⧉ Formats
+      </button>
+      <button class="station-tab" role="tab" id="station-algorithms" aria-controls="panel-algorithms" aria-selected="false" tabindex="-1">
+        <span class="led led-live" aria-hidden="true"></span>⚙️ Mechanics
+      </button>
+    </div>
+
+    <div class="station-panel is-active" id="panel-oracle" role="tabpanel" aria-labelledby="station-oracle" tabindex="0">
+      <div class="station-card">
+        <div>
+          <p class="kicker">🔮 flagship · forecasting</p>
+          <h3>The Oracle — what's about to peak</h3>
+          <p>48-hour peak forecasts from real velocity snapshots, plotted as a live war-room:
+          trends igniting and burning out on a trajectory map, plus a 7-day battle plan
+          for any topic. Projections, never guarantees.</p>
+          <p class="station-meta">peaking 48h · rising fast · cooling off</p>
+        </div>
+        <a class="btn-primary" href="oracle.html">Open the Oracle →</a>
+      </div>
+    </div>
+    <div class="station-panel" id="panel-scorecard" role="tabpanel" aria-labelledby="station-scorecard" tabindex="0" hidden>
+      <div class="station-card">
+        <div>
+          <p class="kicker">📊 accountability</p>
+          <h3>Forecast accuracy — the Oracle's own scorecard</h3>
+          <p>Every forecast scored hit/miss against reality 48 hours later. Per-horizon
+          accuracy, calibration, and the resolution timeline. Wrong in public, on
+          purpose — that's the only way a forecast earns trust.</p>
+          <p class="station-meta">resolutions · calibration · timeline</p>
+        </div>
+        <a class="btn-ghost" href="forecast-accuracy.html">Open the scorecard →</a>
+      </div>
+    </div>
+    <div class="station-panel" id="panel-formats" role="tabpanel" aria-labelledby="station-formats" aria-selected="false" tabindex="0" hidden>
+      <div class="station-card">
+        <div>
+          <p class="kicker">⧉ templates</p>
+          <h3>Meme format families — templates to join</h3>
+          <p>Costume walks, POV setups, dance hooks, call-out copy… the reusable containers
+          behind the trends, each with current examples, evidence, and verification
+          flags. Don't chase the trend — join the format.</p>
+          <p class="station-meta"><span class="num">13</span> families · verified + flagged</p>
+        </div>
+        <a class="btn-ghost" href="formats.html">Browse formats →</a>
+      </div>
+    </div>
+    <div class="station-panel" id="panel-algorithms" role="tabpanel" aria-labelledby="station-algorithms" tabindex="0" hidden>
+      <div class="station-card">
+        <div>
+          <p class="kicker">⚙️ reference · oct 2026</p>
+          <h3>Algorithm mechanics — why trajectories move</h3>
+          <p>What TikTok, YouTube Shorts, and Instagram Reels actually reward right now:
+          signal hierarchies, the Oct 1 Shorts originality update, and the cross-platform
+          breakout consensus. Sourced and dated — no guru talk.</p>
+          <p class="station-meta">tiktok · shorts · reels</p>
+        </div>
+        <a class="btn-ghost" href="algorithms.html">Read the mechanics →</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="hot-now" class="reveal" style="margin-top:var(--s16)">
+    <div class="section-head">
+      <h2 id="hot-now"><span class="sec-no">02</span>Hot right now</h2>
       <span class="kicker">top 5 by opportunity · updated live</span>
     </div>
     <div class="hot5 is-loading" id="hot5" role="list" aria-busy="true" aria-label="Loading hottest topics"></div>
   </section>
 
-  <section aria-labelledby="radar" style="margin-top:8px">
+  <section aria-labelledby="radar" class="reveal" style="margin-top:var(--s10)">
     <div class="radar">
       <div class="section-head" style="margin-top:0;border-bottom:0;padding-bottom:0">
-        <h2 id="radar"><span class="sec-no">02</span>◉ Meme radar</h2>
+        <h2 id="radar"><span class="sec-no">03</span>◉ Meme radar</h2>
         <span class="kicker" id="radar-count">scanning…</span>
       </div>
       <p>
@@ -113,9 +183,9 @@
     </div>
   </section>
 
-  <section aria-labelledby="all">
+  <section aria-labelledby="all" class="reveal">
     <div class="section-head">
-      <h2 id="all"><span class="sec-no">03</span>All signals</h2>
+      <h2 id="all"><span class="sec-no">04</span>All signals</h2>
       <span class="kicker" id="table-meta"></span>
     </div>
     <div class="controls" role="search" aria-label="Filter trends">
@@ -147,20 +217,34 @@
     <p style="font-size:12.5px;color:var(--ink-faint);margin-top:14px;max-width:80ch">
       Opportunity = velocity × (1 − saturation penalty).
       Every topic links to a dossier with content angles,
-      hooks, and hashtags. Machine-readable feed: <a href="api/v1/trends.json">api/v1/trends.json</a> ·
+      hooks, and hashtags. Machine-readable feed: <a href="data/v1/trends.json">data/v1/trends.json</a> ·
       <a href="api-docs.html">API docs + interactive console</a> · <a href="AGENT.md">AGENT.md</a> (agent guide).
     </p>
   </section>
 
-  <section aria-labelledby="how">
-    <div class="section-head"><h2 id="how"><span class="sec-no">04</span>How the machine works</h2></div>
+  <section aria-labelledby="how" class="reveal">
+    <div class="section-head"><h2 id="how"><span class="sec-no">05</span>How the machine works</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
-      <div class="angle"><h4>1 · Fetch</h4><p>Pluggable fetchers hit Google Trends, Google News, Reddit, YouTube, and X (BYO key) every 15 minutes.</p></div>
+      <div class="angle"><h4>1 · Fetch</h4><p>Twelve fetchers sweep Google Trends, news, Reddit, Hacker News, Mastodon, Bluesky, YouTube, TikTok, and X every 15 minutes.</p></div>
       <div class="angle"><h4>2 · Normalize</h4><p>Hits are deduped, merged, and scored: velocity from corroboration + recency, opportunity from velocity ÷ saturation.</p></div>
-      <div class="angle"><h4>3 · Publish</h4><p>Dashboards, topic dossiers, and the versioned JSON API rebuild. Agents read <span class="num">api/v1/trends.json</span> directly.</p></div>
+      <div class="angle"><h4>3 · Publish</h4><p>Dashboards, topic dossiers, and the versioned JSON API rebuild. Agents read <span class="num">data/v1/trends.json</span> directly.</p></div>
     </div>
     <p style="margin-top:16px;font-size:14px"><a href="PIPELINE.md">PIPELINE.md</a> · <a href="LIVE.md">LIVE.md</a> · <a href="API.md">API.md</a></p>
   </section>
+
+  <aside class="curator reveal" aria-labelledby="curator-h">
+    <p class="kicker" id="curator-h">✎ curator's note</p>
+    <blockquote>
+      <p>Every other trend tool is a trophy case — here's what already won. By the time
+      a topic makes a leaderboard, the window for making something about it is closing.
+      That's why the Oracle asks the opposite question: <em>what's still climbing?</em></p>
+      <p>The trajectory map is the whole bet. And when a forecast is wrong, the
+      scorecard says so in public. I'd rather be interesting and wrong on the record
+      than safe and vague.</p>
+    </blockquote>
+    <cite><strong>The Curator</strong> · runs the machine, reads the Oracle before making anything</cite>
+  </aside>
+</div>
 </main>
 
 <footer class="site-foot"><div class="wrap foot-grid">
@@ -172,5 +256,6 @@
 
 <script src="assets/js/sparkline-lib.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/makeover.js"></script>
 </body>
 </html>

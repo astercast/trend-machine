@@ -2,7 +2,7 @@
 """Wave 5 — validate every api/v1 endpoint against its draft-07 schema.
 
 Checks:
-  - every endpoint file in api/v1 validates against api/v1/schema/*.json
+  - every endpoint file in api/v1 validates against data/v1/schema/*.json
   - all N topics in trends.json pass the trend schema (N/341 baseline)
   - manifest (index.json) is self-consistent: every listed path/schema exists
   - flat-feed <-> dossier consistency (ids, counts)
@@ -18,7 +18,7 @@ import jsonschema
 from jsonschema import Draft7Validator
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-API = os.path.join(ROOT, "api", "v1")
+API = os.path.join(ROOT, "data", "v1")
 SCHEMA_DIR = os.path.join(API, "schema")
 
 failures = []
@@ -239,7 +239,7 @@ def main():
 
     # manifest self-consistency
     # 2026-10-12: resolve vercel.json rewrites first — the manifest advertises
-    # public URLs (e.g. /api/v1/trends.flat.js), which may rewrite to a file
+    # public URLs (e.g. /data/v1/trends.flat.js), which may rewrite to a file
     # living elsewhere (static/v1/trends.flat.js — no static .js under api/).
     rewrites = {}
     try:

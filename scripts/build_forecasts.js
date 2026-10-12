@@ -8,12 +8,12 @@
 
    Input : data/trends.json (titles/platforms), data/velocity_history.json,
            data/platform_velocity_history.json (wave 6)
-   Output: api/v1/forecasts.json
-           api/v1/forecast-accuracy.json (wave 6 — the Oracle's own
+   Output: data/v1/forecasts.json
+           data/v1/forecast-accuracy.json (wave 6 — the Oracle's own
              forecast-vs-actual scorecard; labeled "building history"
              until >=10 forecasts resolve)
            data/forecast_ledger.json (append-only forecast record)
-           + patches api/v1/index.json to add the forecasts and
+           + patches data/v1/index.json to add the forecasts and
              forecast-accuracy entries
    Run   : node scripts/build_forecasts.js  (wired into pipeline/refresh.sh)
    ============================================================ */
@@ -27,7 +27,7 @@ const HIST_FILE = path.join(ROOT, "data", "velocity_history.json");
 const PHIST_FILE = path.join(ROOT, "data", "platform_velocity_history.json");
 const TRENDS_FILE = path.join(ROOT, "data", "trends.json");
 const LEDGER_FILE = path.join(ROOT, "data", "forecast_ledger.json");
-const API = path.join(ROOT, "api", "v1");
+const API = path.join(ROOT, "data", "v1");
 const OUT = path.join(API, "forecasts.json");
 const ACC_OUT = path.join(API, "forecast-accuracy.json");
 const MANIFEST = path.join(API, "index.json");
@@ -349,23 +349,23 @@ function main() {
   try {
     const manifest = readJSON(MANIFEST);
     manifest.endpoints.forecasts = {
-      path: "api/v1/forecasts.json",
+      path: "data/v1/forecasts.json",
       description: "Oracle output: precomputed trajectory classifications (peaking_48h / rising_fast / cooling_off / steady) from the same classifier as the dashboard. Every forecast is a projection from N snapshots — never a guarantee. Wave 6 adds confidence basis, signal attribution, and per-platform trajectories.",
-      schema: "api/v1/schema/forecasts.json",
+      schema: "data/v1/schema/forecasts.json",
       updated: payload.generated_at,
       records: Object.keys(projections).length,
       notes: "Topics with fewer than 3 snapshots are excluded from the lists (counts.insufficient). Additive-only changes; no payload-shape breaks."
     };
     manifest.endpoints.forecast_accuracy = {
-      path: "api/v1/forecast-accuracy.json",
+      path: "data/v1/forecast-accuracy.json",
       description: "The Oracle's own scorecard: forecast-vs-actual ledger (hit/miss per forecast after a 48h horizon). Hit rate shown only after 10+ forecasts resolve; before that the status is 'building history'.",
-      schema: "api/v1/schema/forecast-accuracy.json",
+      schema: "data/v1/schema/forecast-accuracy.json",
       updated: accPayload.generated_at,
       records: accPayload.counts.recorded,
       notes: "Started 2026-10-11 — first resolutions land 48h later. Nothing backfilled."
     };
     writeJSON(MANIFEST, manifest);
-    console.log("[forecasts] api/v1/index.json patched with forecasts + forecast_accuracy endpoints");
+    console.log("[forecasts] data/v1/index.json patched with forecasts + forecast_accuracy endpoints");
   } catch (e) {
     console.log("[forecasts] WARNING: could not patch manifest: " + e.message);
   }

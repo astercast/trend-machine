@@ -4,8 +4,8 @@
 
 ```
 fetchers → pipeline/out/*.json → normalize.py → data/trends.json
-                                              → scripts/build_site.py → topics/, api/v1/, llms.txt
-                                              → pipeline/aggregate.py → api/v1/trends.flat.{json,js}
+                                              → scripts/build_site.py → topics/, data/v1/, llms.txt
+                                              → pipeline/aggregate.py → data/v1/trends.flat.{json,js}
 ```
 
 Run everything: `./pipeline/refresh.sh` (or `pipeline/refresh.sh` from the repo root).
@@ -29,7 +29,7 @@ Or use the included GitHub Actions workflow (`.github/workflows/refresh.yml`) �
 | `fetch_hn.py` | Hacker News top/best stories (public Firebase API) | No | Working |
 | `fetch_mastodon.py` | Mastodon fediverse trending hashtags | No | Working |
 | `fetch_bluesky.py` | Bluesky trending topics (`public.api.bsky.app` unauthenticated `getTrendingTopics`) | No | **New wave 11**: verified keyless 2026-10-11 (HTTP 200, real topics w/ descriptions); early-signal lane like Mastodon — 10 hits/run |
-| `fetch_youtube.py` | Invidious public API (`/api/v1/popular`, no key) → direct scrape fallback | No | Working via Invidious; set `YT_API_KEY` for the official Data API v3 path |
+| `fetch_youtube.py` | Invidious public API (`/data/v1/popular`, no key) → direct scrape fallback | No | Working via Invidious; set `YT_API_KEY` for the official Data API v3 path |
 | `fetch_youtube_rss.py` | YouTube channel RSS (`/feeds/videos.xml`) → channel `/videos` page fallback | No | **Repaired wave 6**: official RSS endpoint intermittently 404/500s on *valid* IDs (verified via control channels) — now retries 3× with backoff, then parses each channel's own `/videos` page (ytInitialData JSON, real titles/URLs). 10/10 feeds ok, 80 hits |
 | `fetch_tiktok.py` | **STUB — no reliable keyless source exists** (see "The TikTok lane" below) | N/A (wired in `refresh.sh`, logs a SKIP) | Stub; never fakes data |
 | `fetch_x.py` | X API v2 recent search | **Yes** (`X_BEARER_TOKEN`) | Full implementation; **skips silently with no key — X data is never faked** |
@@ -125,7 +125,7 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   word-boundary keyword regexes (same recipe as `detect_format` — no ML);
   `normalize.py` stores `format_family` (family id or null) on every topic,
   re-computed every run, so links are derived, never stale.
-- `api/v1/meme-formats.json` publishes the families with `tracked_topics[]`
+- `data/v1/meme-formats.json` publishes the families with `tracked_topics[]`
   (live topic ids matched this run); dossiers show a `⧉ family:` chip
   linking to `formats.html#family-<id>`; `formats.html` renders every family
   with current examples, evidence, verification flags, a format leaderboard
@@ -142,7 +142,7 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   the same corroboration recipe scoped to that platform:
   `vel_p = min(100, 25 × min(hits_48h, 3) + 20 × recency_p)`.
   These are **starting points**: series begin empty and build one snapshot
-  per refresh — published as `api/v1/platform-velocity.json`.
+  per refresh — published as `data/v1/platform-velocity.json`.
 - `scripts/build_forecasts.js` enriches every forecast via
   `trajectory.js`'s `enrich()` (additive, no shape changes): `confidence`
   (high/medium/low + basis text from snapshot count and R² fit quality —
@@ -155,7 +155,7 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   forecasts (peaking / accelerating / rising / fading) in
   `data/forecast_ledger.json`; 48h later each is judged against the actual
   velocity history (same ±1.5/hr thresholds the classifier uses) and
-  published as `api/v1/forecast-accuracy.json`. Status stays
+  published as `data/v1/forecast-accuracy.json`. Status stays
   "building history" (hit_rate: null) until 10+ forecasts resolve —
   the log starts 2026-10-11, nothing is backfilled.
 

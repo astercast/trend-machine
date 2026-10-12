@@ -29,7 +29,7 @@ def main():
             hits.append(hit(
                 it.get("title", ""), url, "hackernews",
                 summary=f"{it.get('score',0)} points · {it.get('descendants',0)} comments",
-                category="tech", platforms=["youtube", "x"]))
+                category="tech", platforms=["hackernews"]))
     save_hits("hn", hits)
 
 if __name__ == "__main__":

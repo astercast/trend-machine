@@ -3,8 +3,8 @@
 All endpoints are static JSON. No auth, no rate limits (it's your own host).
 
 ## Shared API conventions (all sites)
-- Base: `api/v1/` relative to the site root. Works on any static host; no auth, no keys, no rate limits.
-- Manifest: `api/v1/index.json` lists every endpoint with its schema URL, `updated` timestamp, and notes. Start here.
+- Base: `data/v1/` relative to the site root. Works on any static host; no auth, no keys, no rate limits.
+- Manifest: `data/v1/index.json` lists every endpoint with its schema URL, `updated` timestamp, and notes. Start here.
 - Timestamps: ISO-8601 UTC (`2026-10-11T00:00:00Z`). Date-only fields are `YYYY-MM-DD`.
 - Versions: `meta.version` semver on the manifest; breaking changes get a new `v2/` path, never a silent shape change.
 - Errors: static files can't return error bodies. A missing endpoint means a wrong path — re-read `index.json`. Empty results are `[]`, never `null`. Every record carries its provenance (`source`, `observed`/`updated`).
@@ -15,15 +15,15 @@ All endpoints are static JSON. No auth, no rate limits (it's your own host).
 
 | Endpoint | Contents |
 |---|---|
-| `api/v1/index.json` | Manifest: version, generated_at, endpoint map, usage hint |
-| `api/v1/trends.json` | All topics, full dossiers |
-| `api/v1/hashtags.json` | Tag → topic-id index |
-| `api/v1/schema/trend.json` | JSON Schema (draft-07) for a topic |
+| `data/v1/index.json` | Manifest: version, generated_at, endpoint map, usage hint |
+| `data/v1/trends.json` | All topics, full dossiers |
+| `data/v1/hashtags.json` | Tag → topic-id index |
+| `data/v1/schema/trend.json` | JSON Schema (draft-07) for a topic |
 
 ## The one query that matters
 
 ```bash
-curl -s https://<host>/api/v1/trends.json \
+curl -s https://<host>/data/v1/trends.json \
  | python3 -c "
 import json,sys
 d = json.load(sys.stdin)

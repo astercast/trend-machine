@@ -2,17 +2,17 @@
 """Flat contract publisher — the creator-site consumer feed.
 
 The builder's pipeline (fetchers -> pipeline/normalize.py -> scripts/build_site.py)
-produces the rich editorial schema in data/trends.json and api/v1/trends.json.
+produces the rich editorial schema in data/trends.json and data/v1/trends.json.
 This stage derives the FLAT, consumer-safe contract from the canonical store
 (data/trends.json) so the creator-growth-empire site can fetch one stable
 shape client-side:
 
-  api/v1/trends.flat.json = { generated_at, sample, source_count, trends: [
+  data/v1/trends.flat.json = { generated_at, sample, source_count, trends: [
       { id, title, source, url, velocity, opportunity_score, hashtags[],
         detected_at, summary, category, platforms, format_tags[], trend_type,
         sources[] } ] }
 
-  api/v1/trends.flat.js   = JSONP twin: trendsCallback({...}) — the CORS-safe
+  data/v1/trends.flat.js   = JSONP twin: trendsCallback({...}) — the CORS-safe
                               fallback for pure static hosts. NOTE (2026-10-12):
                               Vercel deploys EVERY .js under api/ as a serverless
                               function (the functions map is NOT an allowlist),
@@ -21,7 +21,7 @@ shape client-side:
                             fallback for pure static hosts that cannot send
                             Access-Control-Allow-Origin headers (see GO_LIVE.md).
 
-  api/v1/trends.flat.sample.json = clearly-labeled sample from seed topics
+  data/v1/trends.flat.sample.json = clearly-labeled sample from seed topics
                             (sample: true) for consumer development.
 
 Stale (>72h, no corroboration) topics are excluded from the live feed;
@@ -34,11 +34,11 @@ import json, os, sys
 HERE = os.path.dirname(__file__)
 ROOT = os.path.join(HERE, "..")
 STORE = os.path.join(ROOT, "data", "trends.json")
-API = os.path.join(ROOT, "api", "v1")
+API = os.path.join(ROOT, "data", "v1")
 OUT_JSON = os.path.join(API, "trends.flat.json")
 # 2026-10-12: the JSONP twin lives OUTSIDE api/ — Vercel deploys every .js
 # under api/ as a serverless function (functions map is not an allowlist).
-# Public URL /api/v1/trends.flat.js is preserved via a vercel.json rewrite.
+# Public URL /data/v1/trends.flat.js is preserved via a vercel.json rewrite.
 OUT_JS = os.path.join(ROOT, "static", "v1", "trends.flat.js")
 OUT_SAMPLE = os.path.join(API, "trends.flat.sample.json")
 

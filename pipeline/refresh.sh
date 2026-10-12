@@ -16,6 +16,6 @@ python3 pipeline/aggregate.py
 if command -v node >/dev/null 2>&1; then
   node scripts/build_forecasts.js
 else
-  echo "[forecasts] node unavailable — skipping api/v1/forecasts.json"
+  echo "[forecasts] node unavailable — skipping data/v1/forecasts.json"
 fi
 echo "=== done ==="

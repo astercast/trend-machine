@@ -2,7 +2,7 @@
 """YouTube trending fetcher.
 
 NO-KEY PATH (best effort), in order:
-  1. Invidious public instances (no key, no signup): /api/v1/popular.
+  1. Invidious public instances (no key, no signup): /data/v1/popular.
      Instances rotate; the fetcher tries several.
   2. Direct youtube.com/feed/trending scrape (markup changes often).
 API-KEY UPGRADE PATH (recommended): set YT_API_KEY and this fetcher uses the
@@ -43,7 +43,7 @@ def via_invidious():
     from common import fetch_json
     for inst in INVIDIOUS:
         try:
-            data = fetch_json(inst + "/api/v1/popular", timeout=15)
+            data = fetch_json(inst + "/data/v1/popular", timeout=15)
         except Exception as e:
             print(f"[youtube] invidious {inst} SKIP: {e}")
             continue

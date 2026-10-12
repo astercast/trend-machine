@@ -1,5 +1,5 @@
 /* trend-machine — wave 9: pure meme-format-families rendering lib.
-   Reads api/v1/meme-formats.json (the curated family file + per-run topic
+   Reads data/v1/meme-formats.json (the curated family file + per-run topic
    links) and renders the "Meme formats" view. Verification is surfaced,
    never smoothed over: single-source families carry an explicit flag.
    Pure functions, no DOM — unit-tested with pinned fixtures

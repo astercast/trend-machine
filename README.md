@@ -31,8 +31,8 @@ history, and detects meme-format signals; `refresh.sh` runs the loop
 
 ## For agents
 
-- `api/v1/trends.json` — everything, machine-readable. Sort by `opportunity_score` desc, skip `stale: true`.
-- `api/v1/hashtags.json`, `api/v1/schema/trend.json`, `llms.txt`, `llms-full.txt`
+- `data/v1/trends.json` — everything, machine-readable. Sort by `opportunity_score` desc, skip `stale: true`.
+- `data/v1/hashtags.json`, `data/v1/schema/trend.json`, `llms.txt`, `llms-full.txt`
 - `skills/` — trend-spotting, angle-generation, hashtag-research, velocity-reading, remix-ideation
 - [API.md](API.md) · [LIVE.md](LIVE.md)
 

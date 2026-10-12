@@ -11,7 +11,7 @@ Before making any video, check what's moving. A good topic beats a good video.
 
 ## Inputs
 
-- `api/v1/trends.json` (or the dashboard)
+- `data/v1/trends.json` (or the dashboard)
 - Your niche and platforms
 
 ## Procedure
