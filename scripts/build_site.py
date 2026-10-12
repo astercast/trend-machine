@@ -269,6 +269,20 @@ def main():
     with open(os.path.join(api, "velocity.json"), "w") as f:
         json.dump(history, f, ensure_ascii=False)
     print(f"[build] api/v1/velocity.json ({len(history)} topics)")
+    # api/v1/platform-velocity.json — wave 6: per-platform velocity series
+    # ({topic_id: {platform: [[iso, vel], ...]}}). Starting points: series
+    # begin empty and build one snapshot per refresh; per-platform
+    # trajectories only classify after 3+ snapshots.
+    phist = {}
+    phist_path = os.path.join(ROOT, "data", "platform_velocity_history.json")
+    try:
+        with open(phist_path) as f:
+            phist = json.load(f)
+    except Exception:
+        pass
+    with open(os.path.join(api, "platform-velocity.json"), "w") as f:
+        json.dump(phist, f, ensure_ascii=False)
+    print(f"[build] api/v1/platform-velocity.json ({len(phist)} topics)")
 
     DRAFT = "http://json-schema.org/draft-07/schema#"
 
@@ -305,6 +319,9 @@ def main():
             "who_to_watch": {"type": "array", "items": {"type": "string"}},
             "format_tags": {"type": "array", "items": {"type": "string"}},
             "guide_links": {"type": "array", "items": {"type": "string"}},
+            "platform_hits": {"type": "object",
+                "description": "Wave 6: recent hit timestamps per platform (last 48h window). Powers the per-platform velocity history.",
+                "additionalProperties": {"type": "array", "items": {"type": "string"}}},
         },
     }
 
@@ -349,6 +366,34 @@ def main():
             "summary": {"type": "string"},
             "label": {"type": "string",
                       "description": "Honest human label: always 'projection from N snapshots — not a guarantee'."},
+            "confidence": {"type": "object",
+                "description": "Wave 6: the evidence basis behind the forecast (snapshot count + fit quality). Never a probability of being right.",
+                "properties": {
+                    "level": {"type": "string", "enum": ["high", "medium", "low"]},
+                    "n": {"type": "integer", "minimum": 0},
+                    "r2": {"type": "number"},
+                    "basis": {"type": "string"}}},
+            "signals": {"type": "object",
+                "description": "Wave 6: which signals drive the trajectory call — velocity delta, slope, accel, recency, cross-platform spread, and the classifier thresholds that fired (drivers).",
+                "properties": {
+                    "velocity_delta": {"type": "number"},
+                    "slope_per_hour": {"type": "number"},
+                    "accel": {"type": "number"},
+                    "recency_hours": {"type": ["number", "null"]},
+                    "platform_spread": {"type": "integer", "minimum": 0},
+                    "platforms": {"type": "array", "items": {"type": "string"}},
+                    "drivers": {"type": "array", "items": {"type": "string"}}}},
+            "per_platform": {"type": "object",
+                "description": "Wave 6: per-platform trajectory classifications, where the data supports it (3+ per-platform snapshots). Platforms with fewer get the honest 'insufficient' label.",
+                "additionalProperties": {"type": "object",
+                    "properties": {
+                        "state": {"type": "string", "enum": ["accelerating", "rising",
+                                  "peaking", "fading", "steady", "insufficient"]},
+                        "n": {"type": "integer", "minimum": 0},
+                        "latest_velocity": {"type": "integer"},
+                        "slope_per_hour": {"type": "number"},
+                        "peak_in_hours": {"type": ["number", "null"]},
+                        "summary": {"type": "string"}}}},
         },
     }
 
@@ -421,6 +466,72 @@ def main():
                           "items": [{"type": "string"},
                                     {"type": "integer", "minimum": 0, "maximum": 100},
                                     {"type": "integer", "minimum": 0, "maximum": 100}]},
+            },
+        },
+        "platform-velocity": {
+            "$schema": DRAFT,
+            "title": "trend-machine per-platform velocity snapshots",
+            "description": ("Wave 6: per-platform hourly velocity series per topic "
+                            "({topic_id: {platform: [[iso_ts, velocity], ...]}}). "
+                            "Starting points — series begin empty and build one "
+                            "snapshot per refresh; per-platform trajectories only "
+                            "classify after 3+ snapshots."),
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "array",
+                    "items": {"type": "array", "minItems": 2, "maxItems": 2,
+                              "items": [{"type": "string"},
+                                        {"type": "integer", "minimum": 0, "maximum": 100}]},
+                },
+            },
+        },
+        "forecast-accuracy": {
+            "$schema": DRAFT,
+            "title": "trend-machine forecast accuracy log",
+            "description": ("Wave 6: the Oracle's own forecast-vs-actual scorecard. "
+                            "Decisive forecasts are recorded in a ledger and scored "
+                            "hit/miss after a 48h horizon. Status is 'building history' "
+                            "until 10+ forecasts resolve; hit_rate is null before that."),
+            "type": "object",
+            "required": ["generated_at", "status", "method", "horizon_hours",
+                         "resolution_rules", "counts", "hit_rate",
+                         "hit_rate_note", "by_state", "recent"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "status": {"type": "string", "enum": ["building history", "live"]},
+                "method": {"type": "string"},
+                "horizon_hours": {"type": "integer", "const": 48},
+                "resolution_rules": {"type": "object",
+                    "properties": {
+                        "rising_accelerating": {"type": "string"},
+                        "peaking": {"type": "string"},
+                        "fading": {"type": "string"}}},
+                "counts": {"type": "object",
+                    "properties": {
+                        "recorded": {"type": "integer", "minimum": 0},
+                        "pending": {"type": "integer", "minimum": 0},
+                        "resolved": {"type": "integer", "minimum": 0},
+                        "hits": {"type": "integer", "minimum": 0}}},
+                "hit_rate": {"type": ["number", "null"]},
+                "hit_rate_note": {"type": "string"},
+                "by_state": {"type": "object",
+                    "additionalProperties": {"type": "object",
+                        "properties": {
+                            "resolved": {"type": "integer", "minimum": 0},
+                            "hits": {"type": "integer", "minimum": 0}}}},
+                "recent": {"type": "array",
+                    "items": {"type": "object",
+                        "properties": {
+                            "topic_id": {"type": "string"},
+                            "title": {"type": "string"},
+                            "forecast_at": {"type": "string"},
+                            "state": {"type": "string"},
+                            "peak_in_hours": {"type": ["number", "null"]},
+                            "verdict": {"type": "string", "enum": ["hit", "miss"]},
+                            "actual_slope": {"type": "number"},
+                            "n_snapshots": {"type": "integer", "minimum": 0}}}},
             },
         },
         # self-describing manifest itself
@@ -512,7 +623,7 @@ def main():
 
     manifest = {
         "name": "trend-machine",
-        "version": "0.2.0",
+        "version": "0.2.1",
         "generated_at": stamp,
         "base": ("api/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
@@ -552,13 +663,29 @@ def main():
                  "api/v1/forecasts.json."),
                 schema_path("velocity"), len(history),
                 "Snapshots are real pipeline observations; topics with <3 snapshots get no forecast."),
+            "platform_velocity": endpoint(
+                "api/v1/platform-velocity.json",
+                ("Wave 6: per-platform hourly velocity series per topic "
+                 "({topic_id: {platform: [[iso, vel], ...]}}). Starting points — "
+                 "series build one snapshot per refresh; trajectories classify "
+                 "after 3+ per-platform snapshots."),
+                schema_path("platform-velocity"), len(phist),
+                "Empty/missing series mean 'still building history', never a guess."),
             "schemas": endpoint(
                 "api/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
                 None, len(SCHEMAS)),
         },
         "deprecated": [],
-        "changelog": ("0.2.0 (2026-10-11): index.json endpoints are now objects "
+        "changelog": ("0.2.1 (2026-10-11): Oracle 2.0 — forecasts.json records now "
+                      "carry confidence basis (snapshot count + fit quality), signal "
+                      "attribution (velocity delta, slope, accel, recency, "
+                      "cross-platform spread, fired thresholds), and per-platform "
+                      "trajectories (additive only, no shape changes). New "
+                      "api/v1/platform-velocity.json and api/v1/forecast-accuracy.json "
+                      "(the Oracle's own forecast-vs-actual log; 'building history' "
+                      "until 10+ forecasts resolve). 0.2.0 (2026-10-11): index.json "
+                      "endpoints are now objects "
                       "{path, description, schema, updated, records, notes} (was plain "
                       "path strings). Added flat-feed, JSONP, velocity entries; "
                       "draft-07 schemas for every endpoint under api/v1/schema/. "
@@ -583,7 +710,8 @@ def main():
               ", ".join(sorted({t['category'] for t in topics})), "",
               "## API", "- api/v1/index.json — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
               "- api/v1/trends.json — all topics, full dossiers", "- api/v1/trends.flat.json — flat opportunity-ranked feed (stale excluded)",
-              "- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)", "- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output)",
+              "- api/v1/velocity.json — hourly velocity snapshots per topic (Oracle input)", "- api/v1/forecasts.json — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
+              "- api/v1/platform-velocity.json — per-platform hourly velocity series (per-platform trajectories input)", "- api/v1/forecast-accuracy.json — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)",
               "- api/v1/hashtags.json — tag index", "- api/v1/schema/ — draft-07 schemas for every endpoint",
               "- AGENT.md — how an agent uses this tracker (end-to-end workflows)", "",
               "## Oracle (flagship)", "- oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",

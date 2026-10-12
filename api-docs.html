@@ -65,6 +65,8 @@ Start at the <a href="api/v1/index.json">manifest</a>: every endpoint with its d
 <tr><td><code>api/v1/hashtags.json</code></td><td>Tag → topic-id index</td><td><code>api/v1/schema/hashtags.json</code></td></tr>
 <tr><td><code>api/v1/velocity.json</code></td><td>Oracle input: hourly velocity snapshots per topic</td><td><code>api/v1/schema/velocity.json</code></td></tr>
 <tr><td><code>api/v1/forecasts.json</code></td><td>Oracle output: precomputed 48h trajectory forecasts — projections, never guarantees</td><td><code>api/v1/schema/forecasts.json</code></td></tr>
+<tr><td><code>api/v1/platform-velocity.json</code></td><td>Per-platform hourly velocity series per topic (per-platform trajectories input)</td><td><code>api/v1/schema/platform-velocity.json</code></td></tr>
+<tr><td><code>api/v1/forecast-accuracy.json</code></td><td>The Oracle's own scorecard: forecast-vs-actual over a 48h horizon ("building history" until 10+ resolve)</td><td><code>api/v1/schema/forecast-accuracy.json</code></td></tr>
 <tr><td><code>api/v1/index.json</code></td><td>Self-describing manifest of all endpoints</td><td><code>api/v1/schema/index.json</code></td></tr>
 </tbody>
 </table>
@@ -89,6 +91,8 @@ large payloads are pretty-printed and truncated for display.</p>
 <option value="api/v1/hashtags.json">hashtags.json — tag index</option>
 <option value="api/v1/velocity.json">velocity.json — snapshots</option>
 <option value="api/v1/forecasts.json">forecasts.json — Oracle output</option>
+<option value="api/v1/platform-velocity.json">platform-velocity.json — per-platform series</option>
+<option value="api/v1/forecast-accuracy.json">forecast-accuracy.json — Oracle scorecard</option>
 </select>
 </div>
 <div class="field">

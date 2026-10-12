@@ -1,66 +1,6 @@
 [
   {
-    "title": "kike hernandez",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~2000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:57:34.242653+00:00"
-  },
-  {
-    "title": "andy pages",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:57:34.242727+00:00"
-  },
-  {
-    "title": "matt ryan",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~2000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:57:34.242749+00:00"
-  },
-  {
-    "title": "brice turang",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:57:34.242767+00:00"
-  },
-  {
-    "title": "anthony davis",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:57:34.242783+00:00"
-  },
-  {
-    "title": "shohei ohtani",
+    "title": "kyle pitts",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~5000+ searches.",
@@ -69,10 +9,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:57:34.242798+00:00"
+    "fetched_at": "2026-10-12T01:45:38.035187+00:00"
   },
   {
-    "title": "the miz",
+    "title": "dalton knecht los angeles lakers",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~500+ searches.",
@@ -81,10 +21,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:57:34.242813+00:00"
+    "fetched_at": "2026-10-12T01:45:38.035270+00:00"
   },
   {
-    "title": "iren stock",
+    "title": "denver nuggets",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~500+ searches.",
@@ -93,22 +33,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:57:34.242827+00:00"
+    "fetched_at": "2026-10-12T01:45:38.035293+00:00"
   },
   {
-    "title": "snoop huntley",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:57:34.242843+00:00"
-  },
-  {
-    "title": "michael vick",
+    "title": "drake london",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~2000+ searches.",
@@ -117,6 +45,78 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:57:34.243377+00:00"
+    "fetched_at": "2026-10-12T01:45:38.035312+00:00"
+  },
+  {
+    "title": "pumas",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T01:45:38.035328+00:00"
+  },
+  {
+    "title": "terremoto",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~5000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T01:45:38.035344+00:00"
+  },
+  {
+    "title": "carrie tv show cast",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T01:45:38.035360+00:00"
+  },
+  {
+    "title": "polymarket",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T01:45:38.035375+00:00"
+  },
+  {
+    "title": "cruz azul",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T01:45:38.035389+00:00"
+  },
+  {
+    "title": "tea leoni",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T01:45:38.035404+00:00"
   }
 ]

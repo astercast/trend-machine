@@ -113,6 +113,16 @@
       "items": {
         "type": "string"
       }
+    },
+    "platform_hits": {
+      "type": "object",
+      "description": "Wave 6: recent hit timestamps per platform (last 48h window). Powers the per-platform velocity history.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
     }
   }
 }

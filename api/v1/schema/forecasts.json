@@ -134,6 +134,106 @@
         "label": {
           "type": "string",
           "description": "Honest human label: always 'projection from N snapshots \u2014 not a guarantee'."
+        },
+        "confidence": {
+          "type": "object",
+          "description": "Wave 6: the evidence basis behind the forecast (snapshot count + fit quality). Never a probability of being right.",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "n": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "r2": {
+              "type": "number"
+            },
+            "basis": {
+              "type": "string"
+            }
+          }
+        },
+        "signals": {
+          "type": "object",
+          "description": "Wave 6: which signals drive the trajectory call \u2014 velocity delta, slope, accel, recency, cross-platform spread, and the classifier thresholds that fired (drivers).",
+          "properties": {
+            "velocity_delta": {
+              "type": "number"
+            },
+            "slope_per_hour": {
+              "type": "number"
+            },
+            "accel": {
+              "type": "number"
+            },
+            "recency_hours": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "platform_spread": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "platforms": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "drivers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "per_platform": {
+          "type": "object",
+          "description": "Wave 6: per-platform trajectory classifications, where the data supports it (3+ per-platform snapshots). Platforms with fewer get the honest 'insufficient' label.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "state": {
+                "type": "string",
+                "enum": [
+                  "accelerating",
+                  "rising",
+                  "peaking",
+                  "fading",
+                  "steady",
+                  "insufficient"
+                ]
+              },
+              "n": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "latest_velocity": {
+                "type": "integer"
+              },
+              "slope_per_hour": {
+                "type": "number"
+              },
+              "peak_in_hours": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "summary": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     }

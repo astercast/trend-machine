@@ -1,0 +1,1434 @@
+{
+  "entries": [
+    {
+      "topic_id": "six-seven-meme",
+      "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 92,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "seis-sete-dance",
+      "title": "\"Six Seven\" (Seis Sete) funk dance",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 90,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "trump-rally-nobel",
+      "title": "Trump roasts rally protester; Nobel Prize outrage",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 90,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nba-tiktok-surge",
+      "title": "#nba explodes on TikTok (+493%)",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 86,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nana-patekar-tributes",
+      "title": "Nana Patekar dies at 75 — meme legend tributes",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 85,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "patient-zero-swift",
+      "title": "Taylor Swift \"Patient Zero\" wedding edits",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0.7,
+      "latest_velocity": 84,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "pumpkin-head",
+      "title": "Pumpkin Head Illusion",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0.7,
+      "latest_velocity": 78,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "october-music-drops",
+      "title": "October's stacked release calendar",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 71,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "emily-thats-all",
+      "title": "\"And Emily… that's all\" audio",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 70,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "spooky-season",
+      "title": "#spookyseason peaks — Halloween is a Saturday",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 93,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "battlefield-6-gamepass",
+      "title": "Battlefield 6 hits Game Pass day one",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 87,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ramalama-walk",
+      "title": "Ramalama Costume Walk",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0.7,
+      "latest_velocity": 90,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "gears-eday",
+      "title": "Gears of War: E-Day launches",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 76,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "silentsunday",
+      "title": "#SilentSunday",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "fragrantplaces",
+      "title": "#FragrantPlaces",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "comingoutday",
+      "title": "#comingoutday",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nationalcomingoutday",
+      "title": "#nationalcomingoutday",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "glucksmann",
+      "title": "#glucksmann",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nfl",
+      "title": "#nfl",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "comingout",
+      "title": "#comingout",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "tatort",
+      "title": "#tatort",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "jaguars",
+      "title": "#jaguars",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "myweekcounted",
+      "title": "#MyWeekCounted",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "rescue",
+      "title": "#rescue",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "tusk",
+      "title": "#tusk",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "yandex",
+      "title": "#yandex",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "lfc",
+      "title": "#lfc",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 47,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "wildwood-review",
+      "title": "Wildwood Review",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0,
+      "latest_velocity": 70,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "rachel-downgraded-from-tropical-storm-but-strong-w",
+      "title": "Rachel downgraded from 'tropical' storm, but strong winds, rain and flooding hit Southern California",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "mullin-says-livestreaming-hasan-execution-is-part-",
+      "title": "Mullin says livestreaming Hasan execution is part of ‘restoring American values’",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "total-annihilation-rebuilt-for-modern-computers",
+      "title": "Total Annihilation, rebuilt for modern computers",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-gap-in-shared-understanding-of-llm-capability-",
+      "title": "The gap in shared understanding of LLM capability is widening",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "cartographers-of-north-korea",
+      "title": "Cartographers of North Korea",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "chapter-1-of-ways-of-seeing-by-john-berger",
+      "title": "Chapter 1 of Ways of Seeing by John Berger",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "terence-tao-math-2-0-pdf",
+      "title": "Terence Tao: Math 2.0 [pdf]",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nyc-s-click-to-cancel-rule-is-now-in-effect",
+      "title": "NYC's \"Click to Cancel\" rule is now in effect",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ircv3",
+      "title": "IRCv3",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-tilde-in-your-path-may-not-be-your-home",
+      "title": "The tilde in your PATH may not be your HOME",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "lineageos-24-0",
+      "title": "LineageOS 24.0",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "safe-simd-in-rust-even-on-the-inside",
+      "title": "Safe SIMD in Rust, even on the inside",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-ram-shortage-is-bringing-back-ddr4",
+      "title": "The RAM shortage is bringing back DDR4",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "bot-traffic-from-yandex",
+      "title": "Bot traffic from Yandex",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-lightbulb-computer",
+      "title": "The Lightbulb Computer",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "3rd-yandex-cloud-data-center-was-hit",
+      "title": "3rd Yandex Cloud Data Center Was Hit",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "a-city-building-game-in-which-the-city-would-prefe",
+      "title": "A city-building game in which the city would prefer you didn't",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "lobbying-is-corruption",
+      "title": "Lobbying is corruption",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "telegram-desktop-vulnerability-allowed-any-user-s-",
+      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "build-your-own-decision-model",
+      "title": "Build your own decision model",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nitter-update-oct-10th-seeking-funding-and-legal-h",
+      "title": "Nitter: Update Oct 10th seeking funding and legal help",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "123456-password-used-in-danish-cpr-data-breach",
+      "title": "`123456' password used in Danish CPR data breach",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "bitwarden-dual-license-model",
+      "title": "Bitwarden Dual License Model",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "documents-add-to-evidence-in-climate-deception-cas",
+      "title": "Documents add to evidence in climate deception case against ExxonMobil",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-paid-people-to-try-and-follow-my-readme",
+      "title": "I paid people to try and follow my README",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "talorys-a-self-hosted-personal-ai-agent-on-cloudfl",
+      "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "apple-macos-removed-from-official-unix-registry",
+      "title": "Apple/macOS removed from official Unix registry",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-m-sorry-but-you-still-have-to-think",
+      "title": "I'm sorry, but you still have to think",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-would-like-the-value-of-my-home-to-rise-while-my",
+      "title": "I would like the value of my home to rise, while my property taxes fall",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "show-hn-wallhop-12ft-io-is-gone-so-i-built-a-repla",
+      "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "transcript-shyam-sankar-chief-technology-officer-o",
+      "title": "Transcript: Shyam Sankar, chief technology officer of Palantir, on \"Face the Nation with Margaret Brennan,\" Oct. 11, 2026",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "accelerating",
+      "peak_in_hours": null,
+      "latest_velocity": 70,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "trump-says-anyone-who-does-not-refer-to-ai-as-supe",
+      "title": "Trump says anyone who does not refer to AI as ‘super intelligence’ is ‘THE ENEMY'",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "here-are-10-terms-you-need-to-know-to-understand-a",
+      "title": "Here are 10 terms you need to know to understand artificial intelligence",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ai-has-a-god-problem-stretching-from-the-vatican-t",
+      "title": "AI Has a God Problem Stretching From the Vatican to the Baptist Pulpit",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "using-ai-for-just-10-minutes-erodes-your-ability-t",
+      "title": "Using AI for just 10 minutes erodes your ability to persist at hard things",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "trump-really-wants-to-make-super-intelligence-happ",
+      "title": "Trump really wants to make ‘super intelligence’ happen. Is it going to happen?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "silicon-valley-is-falling-in-line-with-trump-s-att",
+      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "trump-warns-call-ai-super-intelligence-or-face-ene",
+      "title": "Trump Warns: Call AI \"Super Intelligence\" Or Face \"Enemy\" Status",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "what-s-dragging-down-a-i-efficiency-the-verificati",
+      "title": "What’s Dragging Down A.I. Efficiency? The ‘Verification Tax.’",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "is-local-ai-as-private-as-you-think-techlore-offic",
+      "title": "Is Local AI as Private as You Think? - Techlore Office Hours Live",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "he-might-leak-the-entire-game",
+      "title": "He Might Leak The Entire Game...",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ddr3-rides-again-ft-wendell-of-level1-techs",
+      "title": "DDR3 Rides Again, ft. Wendell of Level1 Techs",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "farmers-to-aoc-on-data-centers-there-could-be-noth",
+      "title": "Farmers to AOC on data centers: “there could be nothing left for us”",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "mini-liebschti-narrates-what-it-s-like-to-use-an-h",
+      "title": "Mini liebschti narrates what it's like to use an HP printer using accurate language",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "adobe-suite-on-linux-twice-flathub-says-yes-to-ai-",
+      "title": "Adobe suite on Linux (twice), Flathub says yes to AI - Linux Weekly News",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-science-that-finally-explains-the-dyatlov-pass",
+      "title": "The Science That Finally Explains the Dyatlov Pass Incident",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "what-is-edge-dislocation",
+      "title": "What is edge dislocation?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "my-thoughts-on-other-mommy",
+      "title": "My Thoughts on Other Mommy",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "finishing-what-we-started-seven-years-ago",
+      "title": "Finishing What we Started Seven Years Ago",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ai-keeps-pissing-off-mathematicians",
+      "title": "AI Keeps Pissing Off Mathematicians",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "which-is-better-buying-or-renting-a-home-ella-feld",
+      "title": "Which is better: Buying or renting a home? - Ella Feldman",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "we-finally-know-more-about-humanity-s-first-civili",
+      "title": "We Finally Know More About Humanity’s First Civilization",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "this-is-dumb",
+      "title": "This is dumb",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-biggest-hug",
+      "title": "The Biggest Hug",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "a-6-3-billion-open-weight-model-just-got-embarrass",
+      "title": "A $6.3 billion open-weight model just got embarrassed by the French...",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-strangest-place-on-the-internet",
+      "title": "The Strangest Place on the Internet",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "below-rusted-gods",
+      "title": "BELOW, RUSTED GODS",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-logistics-of-nyc-waste-management",
+      "title": "The Logistics of NYC Waste Management",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-hidden-engineering-of-pressure-regulators",
+      "title": "The Hidden Engineering of Pressure Regulators",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-miserable-failure-of-disney-s-mp3-player",
+      "title": "The miserable failure of Disney's MP3 player.",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "in-this-arcade-you-drop-metal-balls-on-rich-people",
+      "title": "In this arcade, you drop metal balls on rich people.",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "jeremiyah-love-trending-well-to-play-despite-ankle",
+      "title": "Jeremiyah Love 'trending well' to play despite ankle reinjury",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "buffalo-bills-trending-up-trending-down-who-bills-",
+      "title": "Buffalo Bills trending up, trending down: Who Bills need on Monday Night Football in Los Angeles",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "texas-says-insurance-rates-are-trending-down-state",
+      "title": "Texas says insurance rates are trending down. State records show a more complicated picture.",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "on-alert-for-wind-and-rain-saturday-sunday-trendin",
+      "title": "On alert for wind and rain Saturday, Sunday trending drier",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "alabama-stock-report-3-players-trending-up-after-l",
+      "title": "Alabama stock report: 3 players trending up after loss vs. Georgia",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "marvin-harrison-jr-trade-market-on-kalshi-continue",
+      "title": "Marvin Harrison Jr. Trade Market on Kalshi Continues Trending Up",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "which-cardinals-are-trending-up-4-games-in-who-nee",
+      "title": "Which Cardinals are trending up 4 games in? Who needs to step up?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "wizards-practice-notebook-keefe-says-sarr-is-trend",
+      "title": "Wizards Practice Notebook: Keefe says Sarr is ‘trending toward’ returning Saturday",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "two-steam-games-generated-560-000-across-135-000-s",
+      "title": "Two Steam games generated $560,000 across 135,000 sales in five years, but the co-creator only took home $15,000 annually, leaving him driving a 2012 Mazda — high Chinese refund ra",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "squadron-42-video-game-release-nears-as-cloud-impe",
+      "title": "‘Squadron 42’ Video Game Release Nears as Cloud Imperium Opens Steam Wishlist",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-made-terrible-games-with-google-s-ai-playground",
+      "title": "I Made Terrible Games With Google’s AI Playground",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "alien-isolation-2-this-highly-anticipated-sequel-h",
+      "title": "Alien: Isolation 2: This highly anticipated sequel has no release date yet, but here's everything else we know",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "group-threatens-to-leak-full-gta-6-build-if-physic",
+      "title": "Group threatens to leak ‘full’ GTA 6 build if physical plans aren’t reversed",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "wildwood-stuns-critics-laika-s-oscar-front-runner-",
+      "title": "‘Wildwood’ stuns critics: Laika’s Oscar front-runner is ‘one of the most astonishing animated movies ever made’",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "peaking",
+      "peak_in_hours": 0.7,
+      "latest_velocity": 70,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "wildwood-review-laika-s-pleasingly-old-fashioned-s",
+      "title": "Wildwood review – Laika’s pleasingly old fashioned stop-motion magic-forest odyssey",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "cineplexity-when-your-partner-doesn-t-like-the-sam",
+      "title": "Cineplexity: When your partner doesn't like the same movies you do",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "7-new-movies-our-critics-are-talking-about-this-we",
+      "title": "7 New Movies Our Critics Are Talking About This Week",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "mj-lenderman-debuts-new-music-at-good-moon-festiva",
+      "title": "MJ Lenderman Debuts New Music At Good Moon Festival",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "new-music-video-mozhesh-da-nye-chotshesh",
+      "title": "New Music Video: ‘Mozhesh Da Nye Chotshesh!’",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "rihanna-reveals-just-how-many-unreleased-songs-she",
+      "title": "Rihanna Reveals Just How Many Unreleased Songs She Is Sitting On as Fans Eagerly Await New Music",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "listen-power-trip-drops-first-new-music-since-2020",
+      "title": "Listen: Power Trip Drops First New Music Since 2020",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-ve-learned-to-trust-myself-victoria-justice-is-e",
+      "title": "“I’ve Learned To Trust Myself”: Victoria Justice Is Entering A New Era Of Music — And She’s Doing It On Her Own Terms",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-best-october-prime-day-owala-deals-the-tiktok-",
+      "title": "The best October Prime Day Owala deals: The TikTok-viral Owala FreeSip water bottle is on sale",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "full-video-apoorva-mukhija-viral-video-link-on-tik",
+      "title": "full,,video! Apoorva Mukhija Viral Video link on TikTok, Telegram and X",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "verdict-in-trial-over-viral-racist-tiktok-rant-add",
+      "title": "Verdict in trial over viral racist TikTok rant addressed in Orlando by Monique Worrell",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "people-don-t-have-the-right-worrell-touts-orange-c",
+      "title": "‘People don’t have the right’: Worrell touts Orange County conviction in viral TikTok assault",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "viral-tiktok-hacks-do-they-actually-work",
+      "title": "Viral TikTok Hacks: Do They Actually Work?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "how-to-make-pizza-beans-the-saucy-cheesy-dish-taki",
+      "title": "How to Make Pizza Beans, the Saucy, Cheesy Dish Taking Over Social Media",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "17-tiktok-viral-amazon-products-on-sale-ahead-of-p",
+      "title": "17 TikTok-Viral Amazon Products on Sale Ahead of Prime Day",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
+      "title": "Nurses are taking on TikTok’s viral health myths — here’s how they’re fighting back",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "so-you-d-like-to-sell-your-print-issues-of-the-oni",
+      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "i-guess-i-m-using-webp-now",
+      "title": "I guess I'm using WebP now?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "500b-tokens-later-letting-ai-agents-decompile-a-fi",
+      "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "wtf-is-a-googlebook",
+      "title": "WTF is a Googlebook?",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "every-new-hallmark-christmas-movie-in-2026-dates-c",
+      "title": "Every New Hallmark Christmas Movie in 2026: Dates, Casts and How to Stream",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "from-netflix-s-animals-to-disclosure-day-10-movies",
+      "title": "From Netflix's 'Animals' to 'Disclosure Day,' 10 movies to stream now",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "these-tiktok-viral-bags-will-get-you-through-fall",
+      "title": "These TikTok-Viral Bags Will Get You Through Fall",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "matthew-matpat-patrick-adapting-amanda-the-adventu",
+      "title": "Matthew “MatPat” Patrick Adapting ‘Amanda the Adventurer’ Video Game For Blumhouse",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ama-q-a-announcement-alex-gibney-monday-10-12-at-2",
+      "title": "AMA/Q&A Announcement - Alex Gibney - Monday 10/12 at 2 PM ET - Oscar-Winning Documentarian of 'Musk', 'Going Clear: Scientology & the Prison of Belief', 'Enron: The Smartest Guys i",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "official-discussion-megathread-the-social-reckonin",
+      "title": "Official Discussion Megathread (The Social Reckoning / Other Mommy) plus throwbacks!",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "weird-al-yankovic-reveals-a-sequel-to-his-biopic-w",
+      "title": "'Weird Al' Yankovic Reveals a Sequel to His Biopic ‘WEIRD’ is Written but is Struggling to Find a Studio; Daniel Radcliffe is Onboard to Return",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "musk-director-alex-gibney-confirms-universal-waver",
+      "title": "‘Musk’ Director Alex Gibney Confirms Universal Wavered in Planning Overseas Release, Says He Tried to Interview Elon Musk",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "just-watched-disclosure-day",
+      "title": "Just watched Disclosure Day",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "master-and-commander-the-far-side-of-the-world-200",
+      "title": "Master and Commander: The Far Side of the World (2003) Directed by Peter Weir - \"Galápagos\"",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "luca-guadagnino-s-artificial-review-thread",
+      "title": "Luca Guadagnino's 'Artificial' Review Thread",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "godzilla-minus-zero-final-trailer",
+      "title": "GODZILLA MINUS ZERO | Final Trailer",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "ama-q-a-announcement-noel-gugliemi-tuesday-10-13-a",
+      "title": "AMA/Q&A Announcement - Noel Gugliemi - Tuesday 10/13 at 3 PM ET - Actor in 'Training Day', 'The Fast and the Furious', 'Street Kings, 'Harsh Times', 'Time of Death', 'The Dark Knig",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "the-ghost-and-the-darkness-at-30-revisiting-the-hi",
+      "title": "The Ghost and the Darkness at 30: Revisiting the Historical Adventure Thriller",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "recursive-self-improvement-through-collective-inte",
+      "title": "Recursive self-improvement through collective intelligence",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "fingerprints-are-the-new-cookies",
+      "title": "Fingerprints Are the New Cookies",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "google-is-illegaly-cutting-forest-to-build-data-ce",
+      "title": "Google is illegaly cutting forest to build data centers",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "flip-a-coin-i-guess-exam-studygram-studying",
+      "title": "flip a coin, i guess…#exam #studygram #studying",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "5-video-games-from-1985-that-changed-gaming-foreve",
+      "title": "5 Video Games From 1985 That Changed Gaming Forever",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    },
+    {
+      "topic_id": "azealia-banks-confirms-move-to-israel-says-she-s-w",
+      "title": "Azealia Banks Confirms Move to Israel, Says She’s Working on New Music",
+      "forecast_at": "2026-10-12T01:45:28.760Z",
+      "state": "fading",
+      "peak_in_hours": 0,
+      "latest_velocity": 45,
+      "n_snapshots": 3,
+      "resolved": null
+    }
+  ]
+}

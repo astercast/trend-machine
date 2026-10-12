@@ -84,6 +84,15 @@ def load_history():
     except Exception:
         return {}
 
+def load_store(path):
+    """Load a JSON dict store; tolerate missing/corrupt file."""
+    try:
+        with open(path) as f:
+            h = json.load(f)
+        return h if isinstance(h, dict) else {}
+    except Exception:
+        return {}
+
 def snapshot_history(topics, hist):
     """Append one snapshot per topic, downsample to hourly, prune >14 days.
 
@@ -121,6 +130,71 @@ def snapshot_history(topics, hist):
     print(f"[normalize] history: {len(hist)} topics, {n_pts} points "
           f"(window {HIST_MAX_DAYS}d, bucket {HIST_BUCKET_S}s) -> {HIST}")
 
+# --- wave 6: per-platform velocity history -----------------------------------
+# Same bucketing/pruning as the main history, but one series per platform
+# per topic. Platform velocity uses the same corroboration recipe as the
+# main velocity, scoped to hits seen on that platform:
+#   vel_p = min(100, 25 * min(hits_48h, 3) + 20 * recency_p)
+# These are STARTING points: the series begins empty and builds one
+# snapshot per refresh, so per-platform trajectories only appear after
+# 3+ hourly snapshots — the Oracle labels thinner series "building".
+PHIST = os.path.join(ROOT, "data", "platform_velocity_history.json")
+PLATFORM_HIT_WINDOW_H = 48
+
+def snapshot_platform_history(topics, phist):
+    """Append one per-platform snapshot per topic.
+
+    Store shape: {topic_id: {platform: [[iso_ts, vel_p], ...]}}.
+    """
+    now = datetime.datetime.now(datetime.timezone.utc)
+    cutoff = now - datetime.timedelta(days=HIST_MAX_DAYS)
+    recent_cut = now - datetime.timedelta(hours=PLATFORM_HIT_WINDOW_H)
+    for tid, t in topics.items():
+        hits_map = t.get("platform_hits") or {}
+        entry = phist.get(tid) or {}
+        for p, stamps in hits_map.items():
+            recent = []
+            for s in stamps:
+                dt = parse_ts(s)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=datetime.timezone.utc)
+                if dt >= recent_cut:
+                    recent.append(dt)
+            recent.sort()
+            hits_map[p] = [d.isoformat() for d in recent]  # prune in place
+            if not recent:
+                continue
+            age_h = max(0, (now - recent[-1]).total_seconds() / 3600)
+            recency = max(0, 1 - age_h / PLATFORM_HIT_WINDOW_H)
+            vel = min(100, round(25 * min(len(recent), 3) + 20 * recency))
+            pts = entry.get(p) or []
+            pts.append([now.isoformat(), vel])
+            latest = {}
+            for pt in pts:
+                dt = parse_ts(pt[0])
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=datetime.timezone.utc)
+                if dt < cutoff:
+                    continue
+                latest[dt.strftime("%Y-%m-%dT%H")] = pt
+            entry[p] = sorted(latest.values(), key=lambda x: x[0])
+        for p in list(entry):
+            if p not in (t.get("platforms") or []):
+                del entry[p]
+        if entry:
+            phist[tid] = entry
+        elif tid in phist:
+            del phist[tid]
+    for tid in list(phist):
+        if tid not in topics:
+            del phist[tid]
+    os.makedirs(os.path.dirname(PHIST), exist_ok=True)
+    with open(PHIST, "w") as f:
+        json.dump(phist, f, ensure_ascii=False, separators=(",", ":"))
+    n_pts = sum(len(v) for e in phist.values() for v in e.values())
+    print(f"[normalize] platform history: {len(phist)} topics, {n_pts} points "
+          f"(window {HIST_MAX_DAYS}d) -> {PHIST}")
+
 def main():
     with open(DATA) as f:
         data = json.load(f)
@@ -154,6 +228,11 @@ def main():
             for p in h.get("platforms", []):
                 if p not in t["platforms"]:
                     t["platforms"].append(p)
+            # wave 6: track per-platform hit timestamps (last 48h) so the
+            # per-platform velocity series can be snapshotted honestly
+            ph = t.setdefault("platform_hits", {})
+            for p in h.get("platforms", []):
+                ph.setdefault(p, []).append(h.get("fetched_at", now.isoformat()))
             for tag in h.get("hashtags", []):
                 if tag not in t["hashtags"]:
                     t["hashtags"].append(tag)
@@ -165,17 +244,20 @@ def main():
             while tid in topics:
                 n += 1
                 tid = f"{tid}-{n}"
+            hit_plats = h.get("platforms", []) or ["x"]
             topics[tid] = {
                 "id": tid, "title": h.get("title", "")[:180],
                 "summary": h.get("summary", "")[:400] or "Detected by the live pipeline; angles pending editorial pass.",
                 "category": h.get("category") or "news",
-                "platforms": h.get("platforms", []) or ["x"],
+                "platforms": hit_plats,
                 "hashtags": h.get("hashtags", [])[:8],
                 "velocity": 55, "saturation": "low",
                 "opportunity_score": 55,
                 "first_seen": h.get("fetched_at", now.isoformat()),
                 "last_seen": h.get("fetched_at", now.isoformat()),
                 "seeded": False, "stale": False, "needs_angles": True,
+                "platform_hits": {p: [h.get("fetched_at", now.isoformat())]
+                                  for p in hit_plats},
                 "format_tags": detect_format(h.get("title", ""), h.get("summary", ""),
                                              h.get("hashtags", [])),
                 "sources": [src], "angles": [], "hooks": [],
@@ -220,6 +302,10 @@ def main():
     # Use the final (post-prune) topic list so removed topics don't
     # accumulate history.
     snapshot_history({t["id"]: t for t in data["topics"]}, load_history())
+    # wave 6: snapshot per-platform velocity history (starting points —
+    # series begin empty and build one snapshot per refresh).
+    snapshot_platform_history({t["id"]: t for t in data["topics"]},
+                              load_store(PHIST))
     with open(DATA, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     live = sum(1 for t in data["topics"] if not t.get("stale"))

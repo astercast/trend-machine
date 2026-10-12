@@ -1,5 +1,5 @@
 /* ============================================================
-   TREND MACHINE — trajectory.js (wave 3 · "Oracle")
+   TREND MACHINE — trajectory.js (wave 3 · "Oracle", wave 6 · "Oracle 2.0")
    Trajectory classification for topic velocity histories.
 
    Input: points = [[iso_ts, velocity, opportunity], ...] sorted
@@ -18,6 +18,19 @@
 
    Everything is a PROJECTION from real snapshots — never a
    guarantee. The browser UI must label it as such.
+
+   Wave 6 adds (all additive, pure functions):
+     rSquared(xs, ys)        — fit quality of the velocity slope
+     confidence(points, a)   — high/medium/low + honest basis text
+     signals(a, points, t, nowMs) — "why this is peaking" attribution:
+       velocity delta, slope, accel, recency, cross-platform spread,
+       and which classifier thresholds actually fired (drivers)
+     platformTrajectories(pp) — per-platform analyze() for
+       {platform: [[iso, v], ...]} (insufficient platforms included,
+       honestly labeled)
+     enrich(topic, points, nowMs) — {analysis, confidence, signals,
+       per_platform} in one call (topic.platforms + topic.platform_points
+       optional; missing -> honest empties)
 
    UMD: works as a browser global (window.Trajectory) and as a
    CommonJS module for node unit tests.
@@ -59,6 +72,179 @@
     return isFinite(m) ? m : 0;
   }
 
+  // The points analyze() actually fits: most recent 8 with parsable
+  // timestamps. Shared so confidence/signals use the same window.
+  function windowPts(points) {
+    var pts = (points || []).slice();
+    return pts.filter(function (p) { return tsMillis(p) !== null; }).slice(-8);
+  }
+
+  // R^2 of the velocity least-squares fit: fraction of variance the
+  // linear trend explains. 1 = perfect straight line, 0 = the line
+  // explains nothing. Returns 1 when all velocities are identical
+  // (the flat line explains everything).
+  function rSquared(xs, ys) {
+    var n = xs.length;
+    if (n < 2 || ys.length < 2) { return 0; }
+    var s = slope(xs, ys);
+    var mean = 0, xMean = 0, ssTot = 0, ssRes = 0, i;
+    for (i = 0; i < n; i++) { mean += ys[i]; }
+    mean /= n;
+    for (i = 0; i < n; i++) {
+      ssTot += (ys[i] - mean) * (ys[i] - mean);
+    }
+    for (i = 0; i < n; i++) { xMean += xs[i]; }
+    xMean /= n;
+    for (i = 0; i < n; i++) {
+      var pred = mean + s * (xs[i] - xMean);
+      ssRes += (ys[i] - pred) * (ys[i] - pred);
+    }
+    if (ssTot === 0) { return 1; }
+    var r2 = 1 - ssRes / ssTot;
+    return (isFinite(r2) && r2 >= 0) ? r2 : 0;
+  }
+
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  // Confidence basis for a forecast: how much data stands behind the call.
+  // Never a probability of being right — just the evidence volume and
+  // how consistently the snapshots point one way (fit quality).
+  function confidence(points, analysis) {
+    var a = analysis || {};
+    var pts = windowPts(points);
+    var n = pts.length;
+    if (a.state === "insufficient" || n < MIN_POINTS) {
+      return {
+        level: "low",
+        n: n,
+        r2: 0,
+        basis: "No forecast: fewer than " + MIN_POINTS +
+               " snapshots — nothing to be confident about yet."
+      };
+    }
+    var t0 = tsMillis(pts[0]);
+    var xs = pts.map(function (p) { return (tsMillis(p) - t0) / 3600000; });
+    var ys = pts.map(function (p) { return p[1]; });
+    var mean = 0, i, sd;
+    for (i = 0; i < ys.length; i++) { mean += ys[i]; }
+    mean /= ys.length;
+    sd = 0;
+    for (i = 0; i < ys.length; i++) { sd += (ys[i] - mean) * (ys[i] - mean); }
+    sd = Math.sqrt(sd / ys.length);
+    var r2 = rSquared(xs, ys);
+    var level, basis;
+    if (sd <= 3) {
+      // Flat-ish series: a "steady" call stands on N consistent snapshots —
+      // the velocity barely moves, so R^2 of the slope is the wrong lens.
+      level = n >= 6 ? "high" : (n >= 4 ? "medium" : "low");
+      basis = cap(level) + " confidence basis: " + n + " snapshot" +
+              (n === 1 ? "" : "s") + ", velocity barely moves (\u03C3 " +
+              sd.toFixed(1) + ").";
+    } else if (n >= 6 && r2 >= 0.6) {
+      level = "high";
+      basis = "High confidence basis: " + n + " snapshots with a consistent " +
+              "trend (R\u00B2 " + r2.toFixed(2) + ").";
+    } else if (n >= 4 && r2 >= 0.3) {
+      level = "medium";
+      basis = "Medium confidence basis: " + n + " snapshots; the trend is " +
+              "still forming (R\u00B2 " + r2.toFixed(2) + ").";
+    } else {
+      level = "low";
+      basis = "Low confidence basis: only " + n + " snapshot" +
+              (n === 1 ? "" : "s") + " and a wobbly fit (R\u00B2 " +
+              r2.toFixed(2) + ") — treat as an early read.";
+    }
+    return { level: level, n: n, r2: Math.round(r2 * 100) / 100,
+             basis: basis };
+  }
+
+  // "Why this is peaking" — which signals drive the trajectory call.
+  // velocity_delta: last minus first velocity inside the fit window
+  // recency_hours : hours since the most recent snapshot (a stale feed
+  //                 makes the call weaker — reported, not thresholded)
+  // platform_spread / platforms: cross-platform corroboration from the topic
+  // drivers: the classifier thresholds that actually fired, in the
+  //          classifier's own terms — this is what decided the state.
+  function signals(analysis, points, topic, nowMs) {
+    var a = analysis || {};
+    var pts = windowPts(points);
+    var t = topic || {};
+    var plats = Array.isArray(t.platforms) ? t.platforms.slice() : [];
+    var vel = pts.length ? pts[pts.length - 1][1] : 0;
+    var first = pts.length ? pts[0][1] : 0;
+    var delta = vel - first;
+    var lastTs = pts.length ? tsMillis(pts[pts.length - 1]) : null;
+    var now = (typeof nowMs === "number") ? nowMs : Date.now();
+    var recency = (lastTs === null) ? null :
+      Math.round(((now - lastTs) / 3600000) * 10) / 10;
+
+    var drivers = [];
+    if (a.state === "insufficient") {
+      drivers.push("no forecast — fewer than " + MIN_POINTS + " snapshots");
+    } else if (a.state === "accelerating") {
+      drivers.push("slope +" + a.slopePerHour.toFixed(1) + "/hr (rising threshold +1.5/hr)");
+      drivers.push("accel +" + a.accel.toFixed(1) + "/hr\u00B2 (accelerating threshold +1.0/hr\u00B2)");
+    } else if (a.state === "rising") {
+      drivers.push("slope +" + a.slopePerHour.toFixed(1) + "/hr (rising threshold +1.5/hr)");
+      drivers.push("accel " + (a.accel >= 0 ? "+" : "") + a.accel.toFixed(1) +
+                   "/hr\u00B2 (below the +1.0/hr\u00B2 accelerating bar)");
+    } else if (a.state === "peaking") {
+      drivers.push("velocity " + vel + " (hot tier: \u226570)");
+      if (a.accel <= DECEL) {
+        drivers.push("accel " + a.accel.toFixed(1) + "/hr\u00B2 (decelerating past \u22121.0/hr\u00B2)");
+      } else {
+        drivers.push("slope " + a.slopePerHour.toFixed(1) + "/hr (no longer climbing)");
+      }
+    } else if (a.state === "fading") {
+      drivers.push("slope " + a.slopePerHour.toFixed(1) + "/hr (falling threshold \u22121.5/hr)");
+    } else {
+      drivers.push("no motion threshold fired — drift below \u00B11.5/hr");
+    }
+
+    return {
+      velocity_delta: delta,
+      slope_per_hour: Math.round((a.slopePerHour || 0) * 100) / 100,
+      accel: Math.round((a.accel || 0) * 100) / 100,
+      recency_hours: recency,
+      platform_spread: plats.length,
+      platforms: plats,
+      drivers: drivers
+    };
+  }
+
+  // Per-platform trajectories: run the same classifier on each
+  // platform's own snapshot series. Platforms with <3 snapshots get the
+  // honest "insufficient" label — the UI shows those as "building".
+  // pp: { platform: [[iso_ts, v], ...], ... }
+  function platformTrajectories(pp) {
+    var out = {};
+    Object.keys(pp || {}).forEach(function (p) {
+      var a = analyze(pp[p]);
+      out[p] = {
+        state: a.state,
+        n: a.n,
+        latest_velocity: a.latestVelocity,
+        slope_per_hour: Math.round(a.slopePerHour * 100) / 100,
+        peak_in_hours: isFinite(a.peakInHours) ? Math.round(a.peakInHours * 10) / 10 : null,
+        summary: a.summary
+      };
+    });
+    return out;
+  }
+
+  // One call for the dashboard/API builders: analysis + confidence +
+  // signal attribution + per-platform trajectories.
+  function enrich(topic, points, nowMs) {
+    var t = topic || {};
+    var analysis = analyze(points);
+    return {
+      analysis: analysis,
+      confidence: confidence(points, analysis),
+      signals: signals(analysis, points, t, nowMs),
+      per_platform: platformTrajectories(t.platform_points || {})
+    };
+  }
+
   function analyze(points) {
     var pts = (points || []).slice();
     if (pts.length < MIN_POINTS) {
@@ -74,8 +260,7 @@
       };
     }
     // Use the most recent points; drop any with unparsable timestamps.
-    pts = pts.filter(function (p) { return tsMillis(p) !== null; })
-             .slice(-8);
+    pts = windowPts(pts);
     if (pts.length < MIN_POINTS) {
       return {
         state: "insufficient", n: pts.length, slopePerHour: 0, accel: 0,
@@ -166,8 +351,15 @@
   return {
     MIN_POINTS: MIN_POINTS,
     PEAK_WINDOW_H: PEAK_WINDOW_H,
+    RISE: RISE,                    // wave 6 · exported so the accuracy
+    FALL: FALL,                    //   log uses the classifier's own thresholds
     analyze: analyze,
     rankLists: rankLists,
+    rSquared: rSquared,            // wave 6 · fit quality
+    confidence: confidence,        // wave 6 · confidence basis
+    signals: signals,              // wave 6 · "why this is peaking" attribution
+    platformTrajectories: platformTrajectories, // wave 6 · per-platform trajectories
+    enrich: enrich,                // wave 6 · analysis+confidence+signals+per_platform
     _slope: slope // exported for unit tests only
   };
 });

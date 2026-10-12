@@ -90,6 +90,17 @@ def main():
     check("velocity covers topics", set(vel.keys()) <= topic_ids,
           f"unknown ids: {sorted(set(vel.keys()) - topic_ids)[:3]}")
 
+    pv = validate_doc("platform-velocity.json",
+                      os.path.join(API, "platform-velocity.json"),
+                      "platform-velocity.json")
+    check("platform-velocity ids subset of topics",
+          set(pv.keys()) <= topic_ids,
+          f"unknown ids: {sorted(set(pv.keys()) - topic_ids)[:3]}")
+    flat_pts = [p for e in pv.values() for s in e.values() for p in s]
+    check("platform-velocity points are [iso, vel]",
+          all(isinstance(p, list) and len(p) == 2 and isinstance(p[0], str)
+              and isinstance(p[1], int) for p in flat_pts))
+
     fc_path = os.path.join(API, "forecasts.json")
     if os.path.exists(fc_path):
         fc = validate_doc("forecasts.json", fc_path, "forecasts.json")
@@ -104,6 +115,22 @@ def main():
         check("forecast lists match projections", states_ok)
     else:
         print("[validate] forecasts.json absent (node step skipped) — not validated")
+
+    fa_path = os.path.join(API, "forecast-accuracy.json")
+    if os.path.exists(fa_path):
+        fa = validate_doc("forecast-accuracy.json", fa_path, "forecast-accuracy.json")
+        c = fa.get("counts", {})
+        check("accuracy counts consistent",
+              c.get("recorded", -1) == c.get("pending", -2) + c.get("resolved", -3)
+              and c.get("hits", 999) <= c.get("resolved", -1),
+              f"counts={c}")
+        check("accuracy hit_rate honest",
+              (c.get("resolved", 0) >= 10 and fa.get("hit_rate") is not None) or
+              (c.get("resolved", 0) < 10 and fa.get("hit_rate") is None
+               and fa.get("status") == "building history"),
+              f"status={fa.get('status')} hit_rate={fa.get('hit_rate')} resolved={c.get('resolved')}")
+    else:
+        print("[validate] forecast-accuracy.json absent (node step skipped) — not validated")
 
     # manifest self-consistency
     eps = manifest.get("endpoints", {})

@@ -74,13 +74,35 @@ Precomputed trajectory classifications from the same classifier the
 dashboard uses: `peaking_48h[]`, `rising_fast[]`, `cooling_off[]`,
 `steady[]`, plus `projections` keyed by topic id. Each record carries
 `state, n_snapshots, latest_velocity, slope_per_hour, accel,
-peak_in_hours, summary, label`. The `label` is always the honest one:
-"Projection from N snapshots — not a guarantee."
+peak_in_hours, summary, label` — plus (wave 6, additive): `confidence`
+(`level` high/medium/low + `basis` naming the evidence: snapshot count
+and R² fit quality — never a probability of being right), `signals`
+(the "why this is peaking" attribution: `velocity_delta`,
+`slope_per_hour`, `accel`, `recency_hours`, `platform_spread`,
+`platforms`, and `drivers` — the classifier thresholds that fired), and
+`per_platform` (each platform's own trajectory where it has 3+
+snapshots; thinner series get the honest `insufficient` label). The
+`label` is always the honest one: "Projection from N snapshots — not a
+guarantee."
+
+**5b. Per-platform input — `api/v1/platform-velocity.json`** (wave 6)
+`{topic-id: {platform: [[iso_ts, velocity], ...]}}` — per-platform
+hourly velocity series. Starting points: series begin empty and build
+one snapshot per refresh; treat missing/thin series as "still building
+history", never a guess.
+
+**5c. Oracle scorecard — `api/v1/forecast-accuracy.json`** (wave 6)
+The Oracle's own forecast-vs-actual log: decisive forecasts recorded in
+`data/forecast_ledger.json` and scored hit/miss after a 48h horizon
+(same ±1.5/hr thresholds the classifier uses). `status` stays
+`"building history"` with `hit_rate: null` until 10+ forecasts resolve —
+the log starts 2026-10-11, nothing backfilled.
 
 **6. Schemas — `api/v1/schema/`**
 Draft-07 for every endpoint: `trends.json`, `trends-flat.json`,
 `trends-flat-sample.json`, `hashtags.json`, `velocity.json`,
-`forecasts.json`, `trend.json` (one dossier), and `index.json` itself.
+`platform-velocity.json`, `forecast-accuracy.json`, `forecasts.json`,
+`trend.json` (one dossier), and `index.json` itself.
 
 ## End-to-end workflows
 

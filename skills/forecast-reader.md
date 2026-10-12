@@ -16,7 +16,15 @@ forecasts (`api/v1/forecasts.json`), or explaining why a trend is
 - `api/v1/forecasts.json`: `peaking_48h[]`, `rising_fast[]`,
   `cooling_off[]`, `steady[]`, `projections{}`. Each record carries
   `state, n_snapshots, latest_velocity, slope_per_hour, accel,
-  peak_in_hours, summary, label`.
+  peak_in_hours, summary, label` — plus (wave 6) `confidence`
+  (`level` high/medium/low + `basis` text), `signals` (the "why this is
+  peaking" attribution: velocity delta, slope, accel, recency,
+  cross-platform spread, fired thresholds), and `per_platform`
+  (each platform's own trajectory where data supports it).
+- `api/v1/forecast-accuracy.json`: the Oracle's own scorecard
+  (forecast-vs-actual, 48h horizon). `status: "building history"` and
+  `hit_rate: null` until 10+ forecasts resolve — quote that honestly,
+  never invent a hit rate.
 - Fallback: `api/v1/velocity.json` + `assets/js/trajectory.js`
   (`require()` it in node — same classifier the dashboard uses).
 
@@ -31,6 +39,14 @@ forecasts (`api/v1/forecasts.json`), or explaining why a trend is
    ("what we learned from X") or skip.
 4. `steady[]`: no trajectory signal — decide from the dossier's
    opportunity_score and age instead.
+4b. **Read the confidence basis, not just the state.** Each record's
+   `confidence.basis` names the evidence (snapshot count + fit quality).
+   Quote it when asked "how sure is the Oracle?" — never convert it to
+   a probability. `signals.drivers` tells you exactly which thresholds
+   fired; `signals.platform_spread` shows how many platforms corroborate.
+   Where `per_platform` disagrees with the overall call (e.g. TikTok
+   accelerating while YouTube is steady), say so — platform divergence is
+   the interesting story.
 5. **Honor the honest fallback.** If all lists are empty, check
    `counts.insufficient`: the Oracle needs 3+ hourly snapshots per
    topic. Don't invent a forecast — report that forecasts unlock after

@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine forecast accuracy log",
+  "description": "Wave 6: the Oracle's own forecast-vs-actual scorecard. Decisive forecasts are recorded in a ledger and scored hit/miss after a 48h horizon. Status is 'building history' until 10+ forecasts resolve; hit_rate is null before that.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "status",
+    "method",
+    "horizon_hours",
+    "resolution_rules",
+    "counts",
+    "hit_rate",
+    "hit_rate_note",
+    "by_state",
+    "recent"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "building history",
+        "live"
+      ]
+    },
+    "method": {
+      "type": "string"
+    },
+    "horizon_hours": {
+      "type": "integer",
+      "const": 48
+    },
+    "resolution_rules": {
+      "type": "object",
+      "properties": {
+        "rising_accelerating": {
+          "type": "string"
+        },
+        "peaking": {
+          "type": "string"
+        },
+        "fading": {
+          "type": "string"
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "recorded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resolved": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hits": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "hit_rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hit_rate_note": {
+      "type": "string"
+    },
+    "by_state": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "resolved": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "hits": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "recent": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "forecast_at": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "peak_in_hours": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "hit",
+              "miss"
+            ]
+          },
+          "actual_slope": {
+            "type": "number"
+          },
+          "n_snapshots": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

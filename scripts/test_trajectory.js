@@ -116,5 +116,80 @@ ok(plan.rationale.length >= 3, "rationale lines present", plan.rationale.length)
 let thin = L.buildPlan({ title: "X", angles: [], hooks: [], hashtags: [], platforms: [] });
 ok(!thin.ok, "dossier without angles -> plan refused honestly", thin.reason);
 
+console.log("== wave 6: confidence basis ==");
+// High: 6+ snapshots, consistent trend (R^2 >= 0.6)
+a = T.analyze(series([30, 36, 44, 54, 66, 80]));
+let c = T.confidence(series([30, 36, 44, 54, 66, 80]), a);
+ok(c.level === "high", "6 consistent snapshots -> high", c);
+ok(c.n === 6, "n reflects real snapshot count", c.n);
+ok(c.r2 >= 0.6, "r2 high on a consistent climb", c.r2);
+ok(c.basis.indexOf("6 snapshots") >= 0, "basis names the evidence volume", c.basis);
+// Low: wobbly fit with few snapshots
+a = T.analyze(series([40, 70, 45, 75, 42]));
+c = T.confidence(series([40, 70, 45, 75, 42]), a);
+ok(c.level === "low", "wobbly 5-snapshot fit -> low", c);
+// Flat series: steady call on barely-moving velocity is real confidence
+a = T.analyze(series([55, 56, 55, 56, 55, 56]));
+c = T.confidence(series([55, 56, 55, 56, 55, 56]), a);
+ok(c.level === "high", "6 flat snapshots -> high (steady is consistent)", c);
+ok(c.basis.indexOf("barely moves") >= 0, "flat basis says what it is", c.basis);
+// Insufficient: honest, never inflated
+a = T.analyze(series([50, 55]));
+c = T.confidence(series([50, 55]), a);
+ok(c.level === "low" && c.n === 2, "2 snapshots -> low, n=2", c);
+ok(/fewer than 3 snapshots/.test(c.basis), "insufficient basis is explicit", c.basis);
+
+console.log("== wave 6: signal attribution ==");
+const NOW = Date.UTC(2026, 9, 11, 20);
+// accelerating topic: drivers name the exact thresholds that fired
+let pts = series([30, 33, 38, 45, 54, 65]);
+a = T.analyze(pts);
+let s = T.signals(a, pts, { platforms: ["tiktok", "youtube", "x"] }, NOW);
+ok(s.velocity_delta === 35, "velocity_delta = last - first in window", s.velocity_delta);
+ok(s.slope_per_hour > 1.5, "slope reported", s.slope_per_hour);
+ok(s.platform_spread === 3, "platform_spread counts topic platforms", s.platform_spread);
+ok(s.platforms.join(",") === "tiktok,youtube,x", "platform list passed through", s.platforms);
+ok(s.drivers.length === 2 && /rising threshold/.test(s.drivers[0]) &&
+   /accelerating threshold/.test(s.drivers[1]),
+   "accelerating drivers name both fired thresholds", s.drivers);
+// recency: 3h since the last snapshot (series 12:00..17:00, NOW 20:00)
+ok(Math.abs(s.recency_hours - 3) < 0.01, "recency_hours = now - last snapshot", s.recency_hours);
+// peaking topic: drivers cite the hot tier + deceleration
+pts = series([70, 80, 86, 88, 87]);
+a = T.analyze(pts);
+s = T.signals(a, pts, { platforms: ["youtube"] }, NOW);
+ok(a.state === "peaking", "stub still classifies peaking", a.state);
+ok(/hot tier/.test(s.drivers[0]) && /decelerating/.test(s.drivers[1]),
+   "peaking drivers cite hot tier + deceleration", s.drivers);
+ok(s.platform_spread === 1, "single-platform spread reported honestly", s.platform_spread);
+// steady topic: drivers say no threshold fired (not invented)
+pts = series([55, 56, 55, 56, 55, 56]);
+a = T.analyze(pts);
+s = T.signals(a, pts, { platforms: ["x"] }, NOW);
+ok(/no motion threshold fired/.test(s.drivers[0]), "steady drivers admit no signal", s.drivers);
+// topic without platform data: spread 0, no crash
+s = T.signals(a, pts, {}, NOW);
+ok(s.platform_spread === 0 && s.platforms.length === 0,
+   "missing platforms -> spread 0, not invented", s);
+
+console.log("== wave 6: per-platform trajectories ==");
+const pp = {
+  tiktok: series([20, 30, 45, 60]),
+  youtube: series([50, 51, 50, 52]),
+  x: series([40, 42]) // too thin -> honest insufficient
+};
+const per = T.platformTrajectories(pp);
+ok(per.tiktok.state === "accelerating", "tiktok platform classified on its own series", per.tiktok.state);
+ok(per.youtube.state === "steady", "youtube platform steady on its own series", per.youtube.state);
+ok(per.x.state === "insufficient" && per.x.n === 2,
+   "thin platform -> insufficient, honestly labeled", per.x);
+ok(per.tiktok.n === 4 && typeof per.tiktok.slope_per_hour === "number",
+   "per-platform records carry n + slope", per.tiktok);
+// enrich() bundles everything; missing platform_points -> empty object, no crash
+const en = T.enrich({ id: "e", title: "E", platforms: ["tiktok"] }, series([40, 45, 50, 55, 60, 65]), NOW);
+ok(en.analysis.state === "rising" && en.confidence.level && en.signals.velocity_delta === 25,
+   "enrich returns analysis + confidence + signals", { state: en.analysis.state, conf: en.confidence.level, delta: en.signals.velocity_delta });
+ok(Object.keys(en.per_platform).length === 0, "no platform_points -> empty per_platform", en.per_platform);
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

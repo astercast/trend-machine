@@ -23,10 +23,13 @@ Or use the included GitHub Actions workflow (`.github/workflows/refresh.yml`) �
 |---|---|---|---|
 | `fetch_gtrends.py` | Google Trends daily RSS (US) | No | Working (the unofficial JSON endpoint 404s as of 2026-10-11 — removed) |
 | `fetch_news.py` | Google News RSS (top/tech/entertainment/sports) | No | Working |
+| `fetch_news_search.py` | Google News RSS topic searches | No | Working |
 | `fetch_reddit.py` | Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok) | No | Often 403 from datacenters — skips gracefully |
+| `fetch_reddit_rss.py` | Reddit subreddit RSS feeds | No | Working |
 | `fetch_hn.py` | Hacker News top/best stories (public Firebase API) | No | Working |
 | `fetch_mastodon.py` | Mastodon fediverse trending hashtags | No | Working |
 | `fetch_youtube.py` | Invidious public API (`/api/v1/popular`, no key) → direct scrape fallback | No | Working via Invidious; set `YT_API_KEY` for the official Data API v3 path |
+| `fetch_youtube_rss.py` | YouTube channel RSS (`/feeds/videos.xml`) → channel `/videos` page fallback | No | **Repaired wave 6**: official RSS endpoint intermittently 404/500s on *valid* IDs (verified via control channels) — now retries 3× with backoff, then parses each channel's own `/videos` page (ytInitialData JSON, real titles/URLs). 10/10 feeds ok, 80 hits |
 | `fetch_tiktok.py` | **STUB — no reliable keyless source exists** (see "The TikTok lane" below) | N/A (wired in `refresh.sh`, logs a SKIP) | Stub; never fakes data |
 | `fetch_x.py` | X API v2 recent search | **Yes** (`X_BEARER_TOKEN`) | Full implementation; **skips silently with no key — X data is never faked** |
 
@@ -96,6 +99,34 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
 - Dossiers have a "⧉ Remix this" button (`assets/js/remix-export.js`)
   that copies angles + hook lines + hashtags as plain text (Clipboard API
   with textarea fallback, keyboard accessible, copied-confirmation state).
+
+## Per-platform velocity history + Oracle 2.0 (wave 6)
+
+- Every fetcher hit carries `platforms[]`; `normalize.py` records each
+  hit's timestamp per platform on the topic (`platform_hits`, pruned to
+  the last 48h) and snapshots one per-platform velocity per refresh into
+  `data/platform_velocity_history.json`
+  (`{topic_id: {platform: [[iso_ts, vel_p], ...]}}`, same hourly
+  bucketing + 14-day pruning as the main history). Platform velocity uses
+  the same corroboration recipe scoped to that platform:
+  `vel_p = min(100, 25 × min(hits_48h, 3) + 20 × recency_p)`.
+  These are **starting points**: series begin empty and build one snapshot
+  per refresh — published as `api/v1/platform-velocity.json`.
+- `scripts/build_forecasts.js` enriches every forecast via
+  `trajectory.js`'s `enrich()` (additive, no shape changes): `confidence`
+  (high/medium/low + basis text from snapshot count and R² fit quality —
+  never a probability of being right), `signals` ("why this is peaking":
+  velocity delta, slope, accel, recency hours, cross-platform spread, and
+  the classifier thresholds that fired), and `per_platform` (each
+  platform's own trajectory where it has 3+ snapshots; thinner series get
+  the honest `insufficient` label).
+- The Oracle also keeps its own scorecard: every refresh records decisive
+  forecasts (peaking / accelerating / rising / fading) in
+  `data/forecast_ledger.json`; 48h later each is judged against the actual
+  velocity history (same ±1.5/hr thresholds the classifier uses) and
+  published as `api/v1/forecast-accuracy.json`. Status stays
+  "building history" (hit_rate: null) until 10+ forecasts resolve —
+  the log starts 2026-10-11, nothing is backfilled.
 
 ## Scoring (`pipeline/normalize.py`)
 
