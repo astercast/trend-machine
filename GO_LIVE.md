@@ -214,3 +214,17 @@ to enable the keyed fetchers in CI. Manual runs via "Run workflow".
   fragile scrapers skip on markup changes, rate-limited sources skip
   per-endpoint. A run with only Google News + Google Trends still produces a
   valid feed — just thinner. This is by design, not a failure.
+
+## 7. One-time Vercel deploy (2026-10-11, user's order)
+
+- One-time CLI deploy of the `-live` release repo (`astercast/trend-machine-live`).
+- **No git integration** on the Vercel project (can never auto-deploy).
+- Future work is GitHub-only, in this working repo. New `-live` snapshots land
+  only on an explicit user "push"/"ship it" order — never from wave-engine automation.
+- Track rule: before EVERY push, verify the remote URL matches the intended track.
+- The `-live` repo carries the static frontend + `vercel.json` (functions+crons,
+  no build step) + the Wire serverless functions (see `LIVE_CHECKLIST.md`).
+- Build machine: **Standard, never Turbo** (Sept 2026 $38.64 Turbo invoice — never repeat).
+- gh-push.py credential lacks the `workflow` scope: pushes containing
+  `.github/workflows/*` 404 on the Trees/Contents APIs (bisected 2026-10-11).
+  Add workflow files via the GitHub web UI, never via gh-push.py.

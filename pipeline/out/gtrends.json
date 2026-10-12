@@ -1,6 +1,18 @@
 [
   {
-    "title": "lakers news",
+    "title": "ukraine",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T06:52:20.180711+00:00"
+  },
+  {
+    "title": "rafael jodar",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -9,46 +21,22 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:40:00.643130+00:00"
+    "fetched_at": "2026-10-12T06:52:20.180785+00:00"
   },
   {
-    "title": "bryan cranston",
+    "title": "dalibor svrcina",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~500+ searches.",
+    "summary": "~100+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:40:00.643205+00:00"
+    "fetched_at": "2026-10-12T06:52:20.180808+00:00"
   },
   {
-    "title": "learner tien",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:40:00.643230+00:00"
-  },
-  {
-    "title": "felix auger aliassime",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:40:00.643248+00:00"
-  },
-  {
-    "title": "nicolas cage",
+    "title": "jiri lehecka",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -57,58 +45,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:40:00.643266+00:00"
+    "fetched_at": "2026-10-12T06:52:20.180825+00:00"
   },
   {
-    "title": "casper ruud",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:40:00.643281+00:00"
-  },
-  {
-    "title": "leylah fernandez",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:40:00.643296+00:00"
-  },
-  {
-    "title": "ekaterina alexandrova",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:40:00.643310+00:00"
-  },
-  {
-    "title": "san antonio",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T05:40:00.643325+00:00"
-  },
-  {
-    "title": "sonay kartal",
+    "title": "taylor fritz",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -117,6 +57,66 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T05:40:00.643339+00:00"
+    "fetched_at": "2026-10-12T06:52:20.180841+00:00"
+  },
+  {
+    "title": "kevin mannix sfpd",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T06:52:20.180856+00:00"
+  },
+  {
+    "title": "robert downey jr",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T06:52:20.180871+00:00"
+  },
+  {
+    "title": "blueface",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T06:52:20.180885+00:00"
+  },
+  {
+    "title": "united states midterm election",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T06:52:20.180900+00:00"
+  },
+  {
+    "title": "nfl lamar jackson injury",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~20000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T06:52:20.180914+00:00"
   }
 ]

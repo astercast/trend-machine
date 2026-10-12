@@ -2912,6 +2912,17 @@
       "n_snapshots": 3,
       "confidence": "low",
       "resolved": null
+    },
+    {
+      "topic_id": "wildlife-park-confirms-tiger-will-not-be-euthanise",
+      "title": "Wildlife park confirms tiger will not be euthanised after man mauled to death | Yorkshire",
+      "forecast_at": "2026-10-12T06:59:57.558Z",
+      "state": "accelerating",
+      "peak_in_hours": null,
+      "latest_velocity": 70,
+      "n_snapshots": 5,
+      "confidence": "medium",
+      "resolved": null
     }
   ]
 }

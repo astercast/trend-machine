@@ -1,0 +1,59 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python3 scripts/build_site.py && node scripts/build_forecasts.js",
+  "cleanUrls": true,
+  "crons": [
+    {
+      "path": "/api/cron/wire",
+      "schedule": "0 13 * * *"
+    }
+  ],
+  "functions": {
+    "api/health.js": {
+      "runtime": "nodejs22.x"
+    },
+    "api/trends.js": {
+      "runtime": "nodejs22.x"
+    },
+    "api/forecasts.js": {
+      "runtime": "nodejs22.x"
+    },
+    "api/velocity.js": {
+      "runtime": "nodejs22.x"
+    },
+    "api/cron/wire.js": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "headers": [
+    {
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ],
+      "source": "/api/(.*)"
+    },
+    {
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ],
+      "source": "/(.*)"
+    }
+  ],
+  "installCommand": "echo 'no dependencies'",
+  "outputDirectory": ".",
+  "trailingSlash": false
+}
