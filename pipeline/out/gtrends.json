@@ -1,6 +1,54 @@
 [
   {
-    "title": "afc west",
+    "title": "dodgers schedule",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:27:09.400737+00:00"
+  },
+  {
+    "title": "nbc sports",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:27:09.400814+00:00"
+  },
+  {
+    "title": "derek jeter",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:27:09.400837+00:00"
+  },
+  {
+    "title": "john turturro",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-12T00:27:09.400854+00:00"
+  },
+  {
+    "title": "world series",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~10000+ searches.",
@@ -9,46 +57,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:02:20.801623+00:00"
+    "fetched_at": "2026-10-12T00:27:09.400871+00:00"
   },
   {
-    "title": "nfl undefeated teams",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:02:20.801696+00:00"
-  },
-  {
-    "title": "49ers",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:02:20.801718+00:00"
-  },
-  {
-    "title": "detroit pistons",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~2000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:02:20.801735+00:00"
-  },
-  {
-    "title": "kasie whitener",
+    "title": "nbc",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~1000+ searches.",
@@ -57,10 +69,10 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:02:20.801751+00:00"
+    "fetched_at": "2026-10-12T00:27:09.400887+00:00"
   },
   {
-    "title": "san francisco 49ers schedule",
+    "title": "world series 2026",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~2000+ searches.",
@@ -69,46 +81,34 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:02:20.801766+00:00"
+    "fetched_at": "2026-10-12T00:27:09.400901+00:00"
   },
   {
-    "title": "zaire franklin",
+    "title": "fox sports",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~20000+ searches.",
+    "summary": "~2000+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:02:20.801782+00:00"
+    "fetched_at": "2026-10-12T00:27:09.400944+00:00"
   },
   {
-    "title": "rashod bateman",
+    "title": "alex rodriguez",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~500+ searches.",
+    "summary": "~1000+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:02:20.801797+00:00"
+    "fetched_at": "2026-10-12T00:27:09.400958+00:00"
   },
   {
-    "title": "rashid shaheed",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-12T00:02:20.801812+00:00"
-  },
-  {
-    "title": "lucero",
+    "title": "david ortiz",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~500+ searches.",
@@ -117,6 +117,6 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-12T00:02:20.801828+00:00"
+    "fetched_at": "2026-10-12T00:27:09.400973+00:00"
   }
 ]

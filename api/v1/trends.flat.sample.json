@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T00:04:12.305263+00:00",
+  "generated_at": "2026-10-12T00:29:47.033116+00:00",
   "sample": true,
-  "source_count": 30,
+  "source_count": 41,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
   "trends": [
     {
@@ -104,6 +104,29 @@
       ]
     },
     {
+      "id": "mini-dramas",
+      "title": "Mini-dramas — TikTok's fastest-growing NEW category",
+      "source": "buytiktokaccount",
+      "url": "https://buytiktokaccount.com/top-10-best-tiktok-niches-usa-in-2026-to-grow-faster/",
+      "velocity": 90,
+      "opportunity_score": 90,
+      "hashtags": [
+        "#minidrama",
+        "#series",
+        "#cliffhanger"
+      ],
+      "detected_at": "2026-06-01T00:00:00-07:00",
+      "summary": "Mini dramas are the fastest-growing NEW category on TikTok since the platform began promoting episodic series in June 2026. Serialized micro-dramas with cliffhangers turn viewers into subscribers — the format rewards consistency, not one-off virality. (buytiktokaccount, Oct 2026.)",
+      "category": "entertainment",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "buytiktokaccount"
+      ]
+    },
+    {
       "id": "houthi-riyadh-strike",
       "title": "Houthi missile strike on Riyadh airport",
       "source": "NewsWatchmen",
@@ -125,6 +148,29 @@
       "format_tags": [],
       "sources": [
         "NewsWatchmen"
+      ]
+    },
+    {
+      "id": "bow-bow-bow",
+      "title": "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 88,
+      "opportunity_score": 88,
+      "hashtags": [
+        "#bowbowbow",
+        "#zeddywill",
+        "#dancechallenge"
+      ],
+      "detected_at": "2026-09-28T00:00:00-07:00",
+      "summary": "Zeddy Will's \"Bow Bow Bow\" with a bend-and-bounce move and a shouted \"BOW!\" hook — spreading from straight dance versions into fit checks and duo dances. At peak: 246K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026).",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot"
       ]
     },
     {
@@ -176,28 +222,6 @@
       ]
     },
     {
-      "id": "patient-zero-swift",
-      "title": "Taylor Swift \"Patient Zero\" reactions",
-      "source": "SocialPilot",
-      "url": "https://www.socialpilot.co/blog/tiktok-trends",
-      "velocity": 82,
-      "opportunity_score": 82,
-      "hashtags": [
-        "#patientzero",
-        "#taylorswift"
-      ],
-      "detected_at": "2026-10-07T00:00:00-07:00",
-      "summary": "#patientzero is rising fast on TikTok — reaction wave around Taylor Swift's \"Patient Zero\". Music-reaction content is one of the lowest-effort, highest-reach formats when a Swift-adjacent moment hits.",
-      "category": "music",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "SocialPilot"
-      ]
-    },
-    {
       "id": "hurricane-isaias",
       "title": "Hurricane Isaias makes landfall",
       "source": "NewsWatchmen",
@@ -241,29 +265,6 @@
       "format_tags": [],
       "sources": [
         "Revid"
-      ]
-    },
-    {
-      "id": "pumpkin-head",
-      "title": "Pumpkin Head Illusion",
-      "source": "Anijam",
-      "url": "https://www.anijam.ai/blog/tiktok-trends/",
-      "velocity": 76,
-      "opportunity_score": 76,
-      "hashtags": [
-        "#pumpkinhead",
-        "#spookyseason",
-        "#halloween2026"
-      ],
-      "detected_at": "2026-10-03T00:00:00-07:00",
-      "summary": "Hold a real pumpkin up to the lens so it covers a friend's head, then let the body below do the acting — dancing, arm flares, full chaos. Set to a spooky \"hocus pocus\" remix. One prop, zero editing, pure Halloween wave-riding.",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "Anijam"
       ]
     },
     {
@@ -334,6 +335,29 @@
       "format_tags": [],
       "sources": [
         "NewEngen"
+      ]
+    },
+    {
+      "id": "cozy-fall-jazz",
+      "title": "Cozy-fall jazz beds",
+      "source": "Virlo",
+      "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
+      "velocity": 74,
+      "opportunity_score": 74,
+      "hashtags": [
+        "#cozyfall",
+        "#fallvibes",
+        "#morningroutine"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Five of the top 10 sounds in Metricool's Oct 1, 2026 chart are jazz/piano/ambient instrumentals — the cozy-fall romanticize-your-routine wave. Plus original beds: \"My Day Is Good\" (unproductive-day confessions), \"Hey Y'all,\" \"After All Seasons Change\" (summer-to-fall transitions). (Virlo; Nuelink, Oct 2.)",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Virlo"
       ]
     },
     {
@@ -502,6 +526,96 @@
       ]
     },
     {
+      "id": "stop-the-wedding",
+      "title": "\"Stop the Wedding\" photo carousels",
+      "source": "New Engen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "velocity": 66,
+      "opportunity_score": 66,
+      "hashtags": [
+        "#stopthewedding",
+        "#weddingregret"
+      ],
+      "detected_at": "2026-10-04T00:00:00-07:00",
+      "summary": "Wedding-regret photo carousels set to Ashe's audio — creators post the wedding pics and let the captions do the talking. A carousel-native format riding the wedding-season long tail. (New Engen, Oct 2026.)",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "New Engen"
+      ]
+    },
+    {
+      "id": "there-she-goes",
+      "title": "\"There She Goes\" shimmy dance",
+      "source": "SocialBee",
+      "url": "https://socialbee.com/blog/trending-tiktok-songs/",
+      "velocity": 66,
+      "opportunity_score": 66,
+      "hashtags": [
+        "#thereshegoes",
+        "#shimmydance"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "Cyril Riley & MOONLGHT's \"There she goes\" soundtracking a shimmy dance — loose shoulders, walking forward, main-character energy. A climbing October sound (SocialBee, Oct 7, 2026), in the same lane as the \"Hard Times\" relatable-problem memes and slowed \"Scott Street\" nostalgic edits.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "meme"
+      ],
+      "sources": [
+        "SocialBee"
+      ]
+    },
+    {
+      "id": "ai-roleplay-comedy",
+      "title": "AI roleplay comedy",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 64,
+      "opportunity_score": 64,
+      "hashtags": [
+        "#airoleplay",
+        "#comedy"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Creators roleplay as AI assistants — deadpan, literal, glitching on slang — for comedy sketches. An emerging-fast container (Lightreel, week ending Oct 3, 2026): the joke is the gap between human mess and machine logic.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Lightreel"
+      ]
+    },
+    {
+      "id": "ceiling-fan-wipe",
+      "title": "Ceiling-fan wipe transitions",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 62,
+      "opportunity_score": 62,
+      "hashtags": [
+        "#transition",
+        "#ceilingfan"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "An emerging-fast transition container: the camera whips past a ceiling fan and the scene changes on the other side. Zero props, pure motion — one of Lightreel's fastest-rising October containers (week ending Oct 3, 2026), alongside AI roleplay comedy and yellow-text relationship reposts.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "Lightreel"
+      ]
+    },
+    {
       "id": "spooky-season",
       "title": "#spookyseason peaks — Halloween is a Saturday",
       "source": "SocialPilot",
@@ -529,10 +643,59 @@
       ]
     },
     {
+      "id": "october-calendar-memes",
+      "title": "October calendar memes",
+      "source": "Lightreel",
+      "url": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "velocity": 60,
+      "opportunity_score": 60,
+      "hashtags": [
+        "#october",
+        "#halloweencountdown"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "The October calendar itself is the meme — circling the 31st, counting down days, treating the month like a loading bar for Halloween. An emerging-fast container (Lightreel, week ending Oct 3, 2026); calendar memes resurface every month with a new twist.",
+      "category": "meme",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "format_tags": [
+        "meme"
+      ],
+      "sources": [
+        "Lightreel"
+      ]
+    },
+    {
+      "id": "ramalama-walk",
+      "title": "Ramalama Costume Walk",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 90,
+      "opportunity_score": 58,
+      "hashtags": [
+        "#halloweencostume",
+        "#ramalama",
+        "#spookyseason"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Low-angle creepy walk zooming out to reveal a Halloween fit, set to Róisín Murphy's \"Ramalama (Bang Bang)\". Rising, 430.7K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026; also New Engen). No text, no talking — the walk IS the video.",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot",
+        "New Engen"
+      ]
+    },
+    {
       "id": "two-fishes",
       "title": "The \"Two Fishes\" deadpan audio",
-      "source": "Anijam",
-      "url": "https://www.anijam.ai/blog/tiktok-trends/",
+      "source": "New Engen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
       "velocity": 88,
       "opportunity_score": 57,
       "hashtags": [
@@ -541,14 +704,14 @@
         "#loveislandusa"
       ],
       "detected_at": "2026-10-05T00:00:00-07:00",
-      "summary": "A deadpan clip from Love Island USA Season 8 contestant Corbin Mims (nicknamed \"CorbinGPT\") explaining that having two fishes doesn't mean you have to put one back. Creators lip-sync it straight to camera to defend a take nobody asked them to defend — unreasonable idea, TED Talk patience.",
+      "summary": "Creators defending a relatable take over Corbin Mims's Love Island USA audio — deadpan \"two fishes\" logic applied to your niche's most unreasonable opinion. (New Engen, Oct 2026.)",
       "category": "meme",
       "platforms": [
         "tiktok"
       ],
       "format_tags": [],
       "sources": [
-        "Anijam",
+        "New Engen",
         "Virlo"
       ]
     },
@@ -579,6 +742,30 @@
       ]
     },
     {
+      "id": "patient-zero-swift",
+      "title": "Taylor Swift \"Patient Zero\" wedding edits",
+      "source": "SocialPilot",
+      "url": "https://www.socialpilot.co/blog/tiktok-trends",
+      "velocity": 84,
+      "opportunity_score": 55,
+      "hashtags": [
+        "#patientzero",
+        "#taylorswift",
+        "#weddingtiktok"
+      ],
+      "detected_at": "2026-10-07T00:00:00-07:00",
+      "summary": "Taylor Swift's \"Patient Zero\" (single out Sept 25) soundtracks wedding edits — plus \"leaving something behind\" audio for quitting jobs and ending habits. Rising, 149.3K videos on the sound (SocialPilot, Sept 25–Oct 5, 2026; Virlo).",
+      "category": "music",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "SocialPilot",
+        "Virlo"
+      ]
+    },
+    {
       "id": "mlb-playoffs",
       "title": "MLB playoffs — World Series Oct 23",
       "source": "SocialPilot",
@@ -604,30 +791,6 @@
       ]
     },
     {
-      "id": "ramalama-walk",
-      "title": "Ramalama Costume Walk",
-      "source": "Anijam",
-      "url": "https://www.anijam.ai/blog/tiktok-trends/",
-      "velocity": 81,
-      "opportunity_score": 53,
-      "hashtags": [
-        "#halloweencostume",
-        "#ramalama",
-        "#spookyseason"
-      ],
-      "detected_at": "2026-10-01T00:00:00-07:00",
-      "summary": "The Halloween format back from last year: camera low on legs and shoes while you stalk toward it dragging a baseball bat, set to Róisín Murphy's \"Ramalama (Bang Bang)\". No text, no talking — then the camera pulls back and the full costume is revealed.",
-      "category": "meme",
-      "platforms": [
-        "tiktok"
-      ],
-      "format_tags": [],
-      "sources": [
-        "Anijam",
-        "Virlo"
-      ]
-    },
-    {
       "id": "valor-mortis",
       "title": "Valor Mortis — the new soulslike to watch",
       "source": "NEXTARCA",
@@ -650,6 +813,30 @@
       "sources": [
         "NEXTARCA",
         "TrueAchievements"
+      ]
+    },
+    {
+      "id": "pumpkin-head",
+      "title": "Pumpkin Head Illusion",
+      "source": "New Engen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "velocity": 78,
+      "opportunity_score": 51,
+      "hashtags": [
+        "#pumpkinhead",
+        "#spookyseason",
+        "#halloween2026"
+      ],
+      "detected_at": "2026-10-03T00:00:00-07:00",
+      "summary": "Pumpkin held to the lens becomes a fake head — the body below does the dancing. Set to a groovy spooky remix of the \"it's just a bunch of hocus pocus\" line. Zero editing, one prop; doubles for fall-decorating content. (New Engen; Virlo, Oct 2026.)",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "New Engen",
+        "Virlo"
       ]
     },
     {
@@ -723,7 +910,79 @@
       "format_tags": [],
       "sources": [
         "NewsWatchmen",
-        "gnews-top"
+        "gnews-top",
+        "reddit-rss:r/news"
+      ]
+    },
+    {
+      "id": "be-ok",
+      "title": "\"Be OK\" — happy dance over chaos",
+      "source": "New Engen",
+      "url": "https://newengen.com/insights/october-tiktok-trends/",
+      "velocity": 74,
+      "opportunity_score": 48,
+      "hashtags": [
+        "#beok",
+        "#ingridmichaelson"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "Ingrid Michaelson's \"I Just Want to Be OK\" soundtracks happy-dance-over-chaos: an upbeat track clashing with chaotic captions about real life — inboxes, bills, deadlines. (New Engen, Oct 2026; Later, Oct 2, 2026.)",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "New Engen",
+        "Later"
+      ]
+    },
+    {
+      "id": "text-from-a",
+      "title": "Text From \"-A\" — the Pretty Little Liars call-out",
+      "source": "MediaNug",
+      "url": "https://www.medianug.com/tiktok-trending-report",
+      "velocity": 72,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#textfroma",
+        "#prettylittleliars"
+      ],
+      "detected_at": "2026-10-01T00:00:00-07:00",
+      "summary": "Pretty Little Liars copy trend: creators call out something they're hiding — bad habits, guilty purchases, secret opinions — as if \"-A\" is watching and about to expose them. 53.5K videos (MediaNug, 10/1/26; Later, Oct 2, 2026).",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [],
+      "sources": [
+        "MediaNug",
+        "Later"
+      ]
+    },
+    {
+      "id": "upside-down",
+      "title": "\"Upside Down\" before/after transitions",
+      "source": "Later",
+      "url": "https://later.com/blog/tiktok-trends/",
+      "velocity": 68,
+      "opportunity_score": 44,
+      "hashtags": [
+        "#upsidedown",
+        "#beforeandafter"
+      ],
+      "detected_at": "2026-10-02T00:00:00-07:00",
+      "summary": "Before/after main-character transitions with hand gestures to an original sound — flip the phone and the scene changes. Emerging-fast containers in the same lane: ceiling-fan wipes, AI roleplay comedy, yellow-text relationship reposts, October calendar memes. (Later, Oct 2, 2026; Lightreel, week ending Oct 3.)",
+      "category": "meme",
+      "platforms": [
+        "tiktok"
+      ],
+      "format_tags": [
+        "meme"
+      ],
+      "sources": [
+        "Later",
+        "Lightreel"
       ]
     }
   ]

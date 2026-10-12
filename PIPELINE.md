@@ -114,5 +114,8 @@ into the existing topic (new source appended, `last_seen` refreshed).
 ## Seed data
 
 `pipeline/seed.py` wrote the initial 30 topics from real web research on
-2026-10-11 (news, TikTok trend trackers, gaming press). Each traces to a source
-URL. The refresh pipeline corroborates or expires them like any other topic.
+2026-10-11 (news, TikTok trend trackers, gaming press). Wave 4 (2026-10-11)
+added 11 more seeds + refreshed 4 existing ones from the October-2026 wave-fuel
+research (SocialPilot Sept 25–Oct 5, New Engen, Virlo, Later, MediaNug, Lightreel —
+41 seeds total). Each traces to a source URL. The refresh pipeline corroborates
+or expires them like any other topic.

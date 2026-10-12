@@ -2,19 +2,19 @@
 
 Live trending-topic intelligence: what to make content about TODAY.
 Machine-readable: api/v1/trends.json (sort by opportunity_score desc).
-Generated: 2026-10-12T00:04:11.105479+00:00 · 330 topics.
+Generated: 2026-10-12T00:29:45.490818+00:00 · 341 topics.
 
 ## Hottest right now
 - "6-7" — Gen Alpha's defining brainrot joke (opportunity 92, velocity 92) — topics/six-seven-meme.html
 - GTA 6: robberies and partner getaways detailed (opportunity 91, velocity 91) — topics/gta6-robberies.html
 - "Six Seven" (Seis Sete) funk dance (opportunity 90, velocity 90) — topics/seis-sete-dance.html
 - Trump roasts rally protester; Nobel Prize outrage (opportunity 90, velocity 90) — topics/trump-rally-nobel.html
+- Mini-dramas — TikTok's fastest-growing NEW category (opportunity 90, velocity 90) — topics/mini-dramas.html
 - Houthi missile strike on Riyadh airport (opportunity 88, velocity 88) — topics/houthi-riyadh-strike.html
+- "Bow Bow Bow" — Zeddy Will's bend-and-bounce (opportunity 88, velocity 88) — topics/bow-bow-bow.html
 - #nba explodes on TikTok (+493%) (opportunity 86, velocity 86) — topics/nba-tiktok-surge.html
 - Nana Patekar dies at 75 — meme legend tributes (opportunity 85, velocity 85) — topics/nana-patekar-tributes.html
-- Taylor Swift "Patient Zero" reactions (opportunity 82, velocity 82) — topics/patient-zero-swift.html
 - Hurricane Isaias makes landfall (opportunity 81, velocity 81) — topics/hurricane-isaias.html
-- This week's breakout TikTok sounds (opportunity 79, velocity 79) — topics/tiktok-sounds-week.html
 
 ## Categories
 culture, entertainment, gaming, meme, music, news, sports, tech
@@ -27,5 +27,8 @@ culture, entertainment, gaming, meme, music, news, sports, tech
 ## Oracle (flagship)
 - oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic
 - launch-plan.html — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)
+
+## Algorithm mechanics (Oct 2026)
+- algorithms.html — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated
 
 Freshness: every topic carries first_seen/last_seen; stale (>72h) topics are flagged.

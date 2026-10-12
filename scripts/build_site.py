@@ -314,6 +314,7 @@ def main():
               "- api/v1/schema/trend.json — schema", "",
               "## Oracle (flagship)", "- oracle.html — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
               "- launch-plan.html — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
+              "## Algorithm mechanics (Oct 2026)", "- algorithms.html — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated", "",
               "Freshness: every topic carries first_seen/last_seen; stale (>72h) topics are flagged."]
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
