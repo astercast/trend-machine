@@ -1,0 +1,396 @@
+{
+  "generated_at": "2026-10-13T06:39:07.933Z",
+  "refresh_at": "2026-10-13T06:36:29.997725+00:00",
+  "method": "Lanes: one row per fetcher wired into pipeline/refresh.sh. The 10 file-writing lanes read pipeline/out/<lane>.json — hit count is that file's array length, source labels are the hits' own recorded `source` values, and freshness compares the file's newest fetched_at (or, for an empty file, its write time) with data/trends.json's generated_at from the same refresh. TikTok and X write no file and are skip-by-design. Movers: per topic, latest stored velocity vs the latest stored point at or before 1h earlier, over the live velocity store merged with the resolution archive (scripts/resolution-lib.js mergeHistory); only pairs spanning 0.5–3h count, and the real span is published per mover.",
+  "honesty": "Zero invented data: a lane that recorded nothing says so, a file the latest refresh did not rewrite is labeled stale-skip with its hits excluded from the current total, skip-by-design lanes claim no hits, and movers are computed only from stored snapshot points — a topic with no ~1h pair is not a mover, however hot it looks.",
+  "provenance": {
+    "lanes": "pipeline/out/*.json (hit counts, source labels, fetched_at stamps)",
+    "refresh_stamp": "data/trends.json generated_at",
+    "movers": "data/velocity_history.json + data/velocity_archive.json (merged, stored points only)",
+    "lane_registry": "pipeline/refresh.sh fetcher loop + pipeline/fetch_*.py"
+  },
+  "counts": {
+    "lanes": 12,
+    "lanes_live": 7,
+    "lanes_degraded": 1,
+    "lanes_stale_skip": 2,
+    "lanes_skip_by_design": 2,
+    "current_hits": 293,
+    "stale_hits_excluded": 45,
+    "topics_live": 393,
+    "movers_with_hour_pair": 481,
+    "gainers": 1,
+    "fallers": 25,
+    "flat": 455
+  },
+  "lanes": [
+    {
+      "id": "gtrends",
+      "label": "Google Trends",
+      "fetcher": "pipeline/fetch_gtrends.py",
+      "output_file": "pipeline/out/gtrends.json",
+      "status": "live",
+      "hits": 10,
+      "current_hits": 10,
+      "sources": [
+        "google-trends"
+      ],
+      "newest_fetched_at": "2026-10-13T06:30:13.018920+00:00",
+      "file_written_at": "2026-10-13T06:30:13.029Z",
+      "detail": "Google Trends daily RSS (US)."
+    },
+    {
+      "id": "news",
+      "label": "Google News",
+      "fetcher": "pipeline/fetch_news.py",
+      "output_file": "pipeline/out/news.json",
+      "status": "live",
+      "hits": 75,
+      "current_hits": 75,
+      "sources": [
+        "gnews-ai",
+        "gnews-entertainment",
+        "gnews-sports",
+        "gnews-technology",
+        "gnews-top"
+      ],
+      "newest_fetched_at": "2026-10-13T06:30:29.846051+00:00",
+      "file_written_at": "2026-10-13T06:30:29.888Z",
+      "detail": "Google News RSS — top / tech / entertainment / sports / AI feeds."
+    },
+    {
+      "id": "news_search",
+      "label": "Google News Search",
+      "fetcher": "pipeline/fetch_news_search.py",
+      "output_file": "pipeline/out/news_search.json",
+      "status": "live",
+      "hits": 70,
+      "current_hits": 70,
+      "sources": [
+        "gnews-q:TikTok viral",
+        "gnews-q:artificial intelligence",
+        "gnews-q:movies",
+        "gnews-q:new music",
+        "gnews-q:trending",
+        "gnews-q:video games",
+        "gnews-top"
+      ],
+      "newest_fetched_at": "2026-10-13T06:31:04.467561+00:00",
+      "file_written_at": "2026-10-13T06:31:05.478Z",
+      "detail": "Google News RSS topic searches."
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit (direct JSON)",
+      "fetcher": "pipeline/fetch_reddit.py",
+      "output_file": "pipeline/out/reddit.json",
+      "status": "degraded",
+      "hits": 0,
+      "current_hits": 0,
+      "sources": [],
+      "newest_fetched_at": null,
+      "file_written_at": "2026-10-13T06:31:14.377Z",
+      "detail": "Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok). PIPELINE.md records this lane as often 403 from datacenters — it skips gracefully; an empty rewritten file is the degraded record, never faked."
+    },
+    {
+      "id": "reddit_rss",
+      "label": "Reddit (RSS)",
+      "fetcher": "pipeline/fetch_reddit_rss.py",
+      "output_file": "pipeline/out/reddit_rss.json",
+      "status": "live",
+      "hits": 24,
+      "current_hits": 24,
+      "sources": [
+        "reddit-rss:r/Music",
+        "reddit-rss:r/movies"
+      ],
+      "newest_fetched_at": "2026-10-13T06:31:25.664533+00:00",
+      "file_written_at": "2026-10-13T06:31:28.792Z",
+      "detail": "Reddit subreddit RSS feeds — the lane that carries Reddit when the direct JSON lane is degraded."
+    },
+    {
+      "id": "hn",
+      "label": "Hacker News",
+      "fetcher": "pipeline/fetch_hn.py",
+      "output_file": "pipeline/out/hn.json",
+      "status": "live",
+      "hits": 24,
+      "current_hits": 24,
+      "sources": [
+        "hackernews"
+      ],
+      "newest_fetched_at": "2026-10-13T06:32:20.406672+00:00",
+      "file_written_at": "2026-10-13T06:33:07.078Z",
+      "detail": "Hacker News top/best stories (public Firebase API)."
+    },
+    {
+      "id": "mastodon",
+      "label": "Mastodon",
+      "fetcher": "pipeline/fetch_mastodon.py",
+      "output_file": "pipeline/out/mastodon.json",
+      "status": "stale-skip",
+      "hits": 20,
+      "current_hits": 0,
+      "sources": [
+        "mastodon-trends"
+      ],
+      "newest_fetched_at": "2026-10-13T05:21:13.924956+00:00",
+      "file_written_at": "2026-10-13T05:21:13.931Z",
+      "detail": "Mastodon fediverse trending hashtags (/api/v1/trends/tags — repaired wave 20)."
+    },
+    {
+      "id": "bluesky",
+      "label": "Bluesky",
+      "fetcher": "pipeline/fetch_bluesky.py",
+      "output_file": "pipeline/out/bluesky.json",
+      "status": "live",
+      "hits": 10,
+      "current_hits": 10,
+      "sources": [
+        "bluesky-trending"
+      ],
+      "newest_fetched_at": "2026-10-13T06:33:33.216377+00:00",
+      "file_written_at": "2026-10-13T06:33:33.217Z",
+      "detail": "Bluesky trending topics (keyless public API)."
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube (Invidious / direct)",
+      "fetcher": "pipeline/fetch_youtube.py",
+      "output_file": "pipeline/out/youtube.json",
+      "status": "stale-skip",
+      "hits": 25,
+      "current_hits": 0,
+      "sources": [
+        "youtube-invidious"
+      ],
+      "newest_fetched_at": "2026-10-12T08:06:54.654646+00:00",
+      "file_written_at": "2026-10-12T08:06:54.655Z",
+      "detail": "YouTube trending via Invidious public instances, direct scrape fallback (official Data API when YT_API_KEY is set). When every path fails the fetcher prints SKIP and writes nothing — the stored file then ages, and this board labels it stale-skip instead of counting old hits as new."
+    },
+    {
+      "id": "youtube_rss",
+      "label": "YouTube (channel RSS)",
+      "fetcher": "pipeline/fetch_youtube_rss.py",
+      "output_file": "pipeline/out/youtube_rss.json",
+      "status": "live",
+      "hits": 80,
+      "current_hits": 80,
+      "sources": [
+        "yt-rss:BBCNews",
+        "yt-rss:ESPN",
+        "yt-rss:IGN",
+        "yt-rss:LinusTechTips",
+        "yt-rss:MKBHD",
+        "yt-rss:MrBeast",
+        "yt-rss:NPRMusic",
+        "yt-rss:TEDx",
+        "yt-rss:VEVO",
+        "yt-rss:pewdiepie"
+      ],
+      "newest_fetched_at": "2026-10-13T06:36:25.297475+00:00",
+      "file_written_at": "2026-10-13T06:36:26.318Z",
+      "detail": "YouTube channel RSS with channel-page fallback — the lane that carries YouTube."
+    },
+    {
+      "id": "tiktok",
+      "label": "TikTok",
+      "fetcher": "pipeline/fetch_tiktok.py",
+      "output_file": null,
+      "status": "skip-by-design",
+      "hits": 0,
+      "current_hits": 0,
+      "sources": [],
+      "newest_fetched_at": null,
+      "file_written_at": null,
+      "detail": "SKIP by design: no vetted keyless TikTok trending source exists (research in PIPELINE.md) and TikTok data is never faked. The lane is covered by seed topics + cross-platform corroboration."
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "fetcher": "pipeline/fetch_x.py",
+      "output_file": null,
+      "status": "skip-by-design",
+      "hits": 0,
+      "current_hits": 0,
+      "sources": [],
+      "newest_fetched_at": null,
+      "file_written_at": null,
+      "detail": "SKIP by design: the X API v2 path needs X_BEARER_TOKEN, which is not set — the fetcher logs its SKIP and writes nothing. X data is never faked."
+    }
+  ],
+  "movers": {
+    "window": "latest stored point vs latest stored point at or before 1h earlier (accepted span 0.5–3h, published per mover)",
+    "topics_with_series": 606,
+    "with_hour_pair": 481,
+    "gainers": [
+      {
+        "topic_id": "blackhawks-star-connor-bedard-trending-toward-seas",
+        "title": "Blackhawks star Connor Bedard 'trending toward' season debut Tuesday",
+        "topic_live": true,
+        "platforms": [
+          "google"
+        ],
+        "from_velocity": 45,
+        "to_velocity": 70,
+        "delta": 25,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 7
+      }
+    ],
+    "fallers": [
+      {
+        "topic_id": "fotomontag",
+        "title": "#Fotomontag",
+        "topic_live": true,
+        "platforms": [
+          "mastodon"
+        ],
+        "from_velocity": 47,
+        "to_velocity": 46,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 8
+      },
+      {
+        "topic_id": "mondaymotivation",
+        "title": "#MondayMotivation",
+        "topic_live": true,
+        "platforms": [
+          "mastodon"
+        ],
+        "from_velocity": 47,
+        "to_velocity": 46,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 8
+      },
+      {
+        "topic_id": "mondayrandom10",
+        "title": "#mondayrandom10",
+        "topic_live": true,
+        "platforms": [
+          "mastodon"
+        ],
+        "from_velocity": 47,
+        "to_velocity": 46,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 8
+      },
+      {
+        "topic_id": "mondog",
+        "title": "#mondog",
+        "topic_live": true,
+        "platforms": [
+          "mastodon"
+        ],
+        "from_velocity": 47,
+        "to_velocity": 46,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 8
+      },
+      {
+        "topic_id": "mountainmonday",
+        "title": "#MountainMonday",
+        "topic_live": true,
+        "platforms": [
+          "mastodon"
+        ],
+        "from_velocity": 47,
+        "to_velocity": 46,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 7
+      },
+      {
+        "topic_id": "rjmitte",
+        "title": "#rjmitte",
+        "topic_live": true,
+        "platforms": [
+          "mastodon"
+        ],
+        "from_velocity": 47,
+        "to_velocity": 46,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 8
+      },
+      {
+        "topic_id": "50-youtube-legends-fight-for-1-000-000",
+        "title": "50 YouTube Legends Fight For $1,000,000",
+        "topic_live": true,
+        "platforms": [
+          "youtube"
+        ],
+        "from_velocity": 45,
+        "to_velocity": 44,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 4
+      },
+      {
+        "topic_id": "anno-117-pax-romana-official-pyramids-trailer-ign-",
+        "title": "Anno 117 : Pax Romana -  Official Pyramids Trailer | IGN Fall Fan Fest 2026",
+        "topic_live": true,
+        "platforms": [
+          "youtube"
+        ],
+        "from_velocity": 45,
+        "to_velocity": 44,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 4
+      },
+      {
+        "topic_id": "blind-descent-official-release-date-trailer-ign-fa",
+        "title": "Blind Descent - Official Release Date Trailer | IGN Fall Fan Fest 2026",
+        "topic_live": true,
+        "platforms": [
+          "youtube"
+        ],
+        "from_velocity": 45,
+        "to_velocity": 44,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 4
+      },
+      {
+        "topic_id": "christopher-columbus-s-legacy",
+        "title": "Christopher Columbus's legacy",
+        "topic_live": true,
+        "platforms": [
+          "bluesky"
+        ],
+        "from_velocity": 45,
+        "to_velocity": 44,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 3
+      }
+    ]
+  }
+}

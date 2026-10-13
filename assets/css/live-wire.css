@@ -1,0 +1,130 @@
+/* ============================================================
+   TREND MACHINE — wave 28 · the Live Wire
+   War-room command view, editorial grade: an engraved plate
+   header, a decisive summary strip, then two ruled boards —
+   the lanes (health is the visual language: live = signal
+   green, degraded / stale = alarm amber, skip-by-design =
+   quiet steel) and the hour's movers (up = live green,
+   down = hot). Nothing decorative moves; the numbers lead.
+   ============================================================ */
+
+.lw-hero h1 { letter-spacing: -.01em; }
+.lw-hero .lw-lede { max-width: 62ch; font-size: 1.06rem; color: var(--ink-dim); }
+.lw-hero .lw-lede strong { color: var(--ink); }
+
+/* ---- summary banner + cards ---- */
+.lw-banner {
+  border: 1px solid var(--line-bright); border-left: 4px solid var(--signal);
+  background: var(--plate); border-radius: var(--r); padding: 20px 22px;
+  margin: 22px 0 14px;
+}
+.lw-banner h2 {
+  font-family: var(--font-display); font-size: var(--fs-h2);
+  margin: 0 0 6px; text-transform: uppercase; letter-spacing: .04em;
+}
+.lw-banner p { margin: 0; color: var(--ink-dim); max-width: 78ch; }
+.lw-banner strong { color: var(--ink); }
+
+.lw-cards {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;
+  margin: 0 0 22px;
+}
+.lw-card {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.lw-card-num { font-family: var(--font-data); font-size: 1.55rem; color: var(--ink); }
+.lw-card-label {
+  font-family: var(--font-display); font-size: var(--fs-tiny);
+  text-transform: uppercase; letter-spacing: .09em; color: var(--ink);
+}
+.lw-card-note { font-size: var(--fs-tiny); color: var(--ink-faint); }
+
+/* ---- section heads ---- */
+.lw-section-h {
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: .05em; margin: 26px 0 10px;
+}
+.lw-section-sub { color: var(--ink-dim); font-size: var(--fs-small); max-width: 78ch; margin: 0 0 12px; }
+
+/* ---- the lane board ---- */
+.lw-head, .lw-row {
+  display: grid; gap: 14px; align-items: start;
+  grid-template-columns: minmax(260px, 1.7fr) 128px 180px minmax(180px, 1fr);
+}
+.lw-head {
+  padding: 10px 14px; border-bottom: 2px solid var(--line-bright);
+  font-family: var(--font-display); font-size: var(--fs-micro);
+  text-transform: uppercase; letter-spacing: .1em; color: var(--plate-ink);
+}
+.lw-table { border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); overflow: hidden; }
+.lw-row { padding: 13px 14px; border-bottom: 1px solid var(--line-soft); }
+.lw-row:last-child { border-bottom: 0; }
+.lw-row:hover { background: var(--panel-2); }
+.lw-lane h3 { margin: 0 0 3px; font-size: .98rem; font-weight: 600; line-height: 1.35; }
+.lw-meta { margin: 0; font-size: var(--fs-tiny); color: var(--ink-faint); }
+.lw-meta code { font-family: var(--font-data); }
+.lw-detail { margin: 4px 0 0; font-size: var(--fs-tiny); color: var(--ink-dim); max-width: 56ch; }
+
+.lw-badge {
+  font-family: var(--font-display); font-size: var(--fs-tiny);
+  text-transform: uppercase; letter-spacing: .07em;
+  padding: 4px 9px; border-radius: var(--r-pill); border: 1px solid var(--line-bright);
+  color: var(--ink-dim); white-space: nowrap; display: inline-block;
+}
+.lw-badge.is-live { color: #06130b; background: var(--live); border-color: var(--live); }
+.lw-badge.is-degraded { color: var(--alarm); border-color: var(--alarm); }
+.lw-badge.is-stale-skip { color: var(--alarm); border-color: var(--alarm); }
+.lw-badge.is-skip-by-design { color: var(--ink-dim); }
+
+.lw-hitcell { display: flex; flex-direction: column; gap: 2px; }
+.lw-hits { font-family: var(--font-data); font-size: 1.05rem; color: var(--ink); }
+.lw-hits-note { font-size: var(--fs-tiny); color: var(--ink-faint); }
+.lw-srccell { display: flex; flex-direction: column; gap: 2px; }
+.lw-sources { font-size: var(--fs-tiny); color: var(--ink-dim); word-break: break-word; }
+.lw-stamp { font-size: var(--fs-micro); color: var(--ink-faint); }
+.lw-offboard { font-size: var(--fs-tiny); color: var(--ink-faint); white-space: nowrap; }
+
+/* ---- movers ---- */
+.lw-movers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.lw-movers > section {
+  border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--panel); padding: 6px 14px 10px;
+}
+.lw-movers-h {
+  font-family: var(--font-display); font-size: var(--fs-small);
+  text-transform: uppercase; letter-spacing: .07em; margin: 10px 0 4px;
+}
+.lw-movers-h.is-up { color: var(--live); }
+.lw-movers-h.is-down { color: var(--hot); }
+.lw-mover {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line-soft);
+}
+.lw-mover:last-child { border-bottom: 0; }
+.lw-mover h4 { margin: 0 0 2px; font-size: .92rem; font-weight: 600; line-height: 1.35; }
+.lw-mover h4 a { color: var(--ink); text-decoration: none; }
+.lw-mover h4 a:hover { text-decoration: underline; }
+.lw-delta { font-family: var(--font-data); font-size: 1.25rem; white-space: nowrap; }
+.lw-delta.is-up { color: var(--live); }
+.lw-delta.is-down { color: var(--hot); }
+
+.lw-empty { padding: 14px 4px; color: var(--ink-dim); font-size: var(--fs-small); }
+.lw-method { margin: 26px 0 8px; max-width: 78ch; color: var(--ink-dim); font-size: var(--fs-small); }
+.lw-method h2 { font-family: var(--font-display); color: var(--ink); text-transform: uppercase; letter-spacing: .04em; }
+
+/* ---- mobile ---- */
+@media (max-width: 900px) {
+  .lw-cards { grid-template-columns: repeat(3, 1fr); }
+  .lw-head { display: none; }
+  .lw-row { grid-template-columns: 1fr 1fr; row-gap: 8px; }
+  .lw-lane { grid-column: 1 / -1; }
+  .lw-movers { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .lw-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lw-row, .lw-mover { transition: none; }
+}

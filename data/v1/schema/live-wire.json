@@ -1,0 +1,267 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine Live Wire",
+  "description": "Wave 28: the pipeline command view. One row per fetcher wired into pipeline/refresh.sh, with the hit count and health the pipeline itself recorded in pipeline/out/*.json \u2014 live (rewritten by the latest refresh, hits > 0), degraded (rewritten, 0 hits), stale-skip (not rewritten; stored hits dated and excluded from the current total), or skip-by-design (TikTok / X write no file and claim no hits). Plus the hour's top movers: latest stored velocity vs the latest stored point at or before 1h earlier, merged live + archive history, real span published per mover.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "refresh_at",
+    "method",
+    "honesty",
+    "provenance",
+    "counts",
+    "lanes",
+    "movers"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "refresh_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": "string"
+    },
+    "honesty": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "lanes",
+        "lanes_live",
+        "lanes_degraded",
+        "lanes_stale_skip",
+        "lanes_skip_by_design",
+        "current_hits",
+        "stale_hits_excluded",
+        "topics_live",
+        "movers_with_hour_pair",
+        "gainers",
+        "fallers",
+        "flat"
+      ],
+      "properties": {
+        "lanes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lanes_live": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lanes_degraded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lanes_stale_skip": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lanes_skip_by_design": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "current_hits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stale_hits_excluded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "topics_live": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "movers_with_hour_pair": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gainers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fallers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "flat": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "lanes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "fetcher",
+          "output_file",
+          "status",
+          "hits",
+          "current_hits",
+          "sources",
+          "newest_fetched_at",
+          "file_written_at",
+          "detail"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "fetcher": {
+            "type": "string"
+          },
+          "output_file": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "live",
+              "degraded",
+              "stale-skip",
+              "skip-by-design"
+            ]
+          },
+          "hits": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "current_hits": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "newest_fetched_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "file_written_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "movers": {
+      "type": "object",
+      "required": [
+        "window",
+        "topics_with_series",
+        "with_hour_pair",
+        "gainers",
+        "fallers"
+      ],
+      "properties": {
+        "window": {
+          "type": "string"
+        },
+        "topics_with_series": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "with_hour_pair": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gainers": {
+          "$ref": "#/definitions/movers"
+        },
+        "fallers": {
+          "$ref": "#/definitions/movers"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "movers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "topic_id",
+          "title",
+          "topic_live",
+          "platforms",
+          "from_velocity",
+          "to_velocity",
+          "delta",
+          "from_ts",
+          "to_ts",
+          "span_hours",
+          "n_points"
+        ],
+        "properties": {
+          "topic_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "topic_live": {
+            "type": "boolean"
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "from_velocity": {
+            "type": "number"
+          },
+          "to_velocity": {
+            "type": "number"
+          },
+          "delta": {
+            "type": "number"
+          },
+          "from_ts": {
+            "type": "string"
+          },
+          "to_ts": {
+            "type": "string"
+          },
+          "span_hours": {
+            "type": "number",
+            "minimum": 0
+          },
+          "n_points": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

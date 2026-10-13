@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Wire — every lane, its health, the hour's movers — Trend Machine</title>
+<meta name="description" content="The Live Wire: a command view over the pipeline's own stored outputs — every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b0f0e'/%3E%3Cpath d='M9 1 L3 9 h4 l-1 6 7-9 H8 z' fill='%2339ff88'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/wave3.css">
+<link rel="stylesheet" href="assets/css/wave9.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/wave12.css">
+<link rel="stylesheet" href="assets/css/wave18.css">
+<link rel="stylesheet" href="assets/css/live-wire.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="head-inner">
+<a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<span class="kicker">⚡ the live wire</span>
+</div></header>
+
+<main id="main" class="wrap">
+<nav aria-label="Breadcrumb" style="margin:20px 0 0">
+<a href="index.html" style="font-size:13px">&larr; all trends</a> ·
+<a href="oracle.html" style="font-size:13px">the oracle</a> ·
+<a href="oracle-board.html" style="font-size:13px">the oracle board</a> ·
+<a href="forecast-accuracy.html" style="font-size:13px">forecast accuracy</a>
+</nav>
+
+<section class="oracle-hero lw-hero" aria-labelledby="lw-title">
+<p class="kicker">pipeline command view · the wire</p>
+<h1 id="lw-title">⚡ The Live Wire</h1>
+<p class="lw-lede">
+  What the pipeline actually did on its latest run — every lane on one board,
+  with the hit count <strong>the pipeline itself recorded</strong> and the
+  health it earned: live, degraded, stale, or skip-by-design. Below it, the
+  hour's movers, computed <strong>only from stored snapshots</strong>.
+  Failures are not footnotes here — they are rows.
+</p>
+<p class="kicker" id="lw-stamp">Loading the wire…</p>
+</section>
+
+<div id="lw-status" role="status" aria-live="polite"></div>
+<div id="lw-summary"></div>
+
+<h2 class="lw-section-h">The lanes</h2>
+<p class="lw-section-sub">
+  One row per fetcher wired into <code>pipeline/refresh.sh</code>. The ten
+  file-writing lanes read their stored output in <code>pipeline/out/</code>;
+  TikTok and X write no file — they skip by design and claim no hits.
+</p>
+<div class="lw-table" id="lw-lanes-wrap" hidden>
+  <div class="lw-head" aria-hidden="true">
+    <span>Lane · what it is</span><span>Health</span><span>Hits</span>
+    <span>Recorded sources · stamps</span>
+  </div>
+  <div id="lw-lanes"></div>
+</div>
+
+<h2 class="lw-section-h">The hour's movers</h2>
+<p class="lw-section-sub">
+  Latest stored velocity vs the latest stored point at or before one hour
+  earlier — the real span is printed on every row. A topic with no proven
+  pair is not a mover, however hot it looks.
+</p>
+<div id="lw-movers"></div>
+
+<section class="lw-method" aria-labelledby="lw-method-title">
+<h2 id="lw-method-title">How to read this wire</h2>
+<p>
+  <strong>Live</strong> means the lane's stored file was written by the
+  latest refresh and holds hits. <strong>Degraded</strong> means the file
+  was rewritten and holds zero — the lane ran and recorded nothing (the
+  Reddit direct-JSON lane lives here: Reddit's public JSON is often
+  403 from datacenters, and the RSS lane carries Reddit instead).
+  <strong>Stale · skip</strong> means the latest refresh did not rewrite
+  the file at all — the fetcher's skip path writes nothing — so its hits
+  are shown with their real date and <em>excluded</em> from the current
+  total (the YouTube Invidious/direct lane; channel RSS carries YouTube).
+  <strong>Skip by design</strong> is TikTok and X: no vetted keyless
+  TikTok source exists, and X needs a bearer token that is not set —
+  both lanes are documented in <code>PIPELINE.md</code> and neither
+  one's data is ever faked.
+</p>
+<p>
+  Every number on this page traces to a file named in the payload's
+  provenance (<code>data/v1/live-wire.json</code>, built by
+  <code>scripts/build_live_wire.js</code>). Movers come from the stored
+  velocity history merged with the resolution archive — the same merge
+  rule the <a href="oracle-board.html">Oracle Board</a> uses — and flat
+  topics are counted in the banner, not hidden.
+</p>
+</section>
+</main>
+
+<footer class="site-foot"><div class="wrap foot-grid">
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+</div></footer>
+
+<script src="assets/js/live-wire-lib.js"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function init() {
+    fetch("data/v1/live-wire.json").then(function (r) {
+      if (!r.ok) { throw new Error("live-wire"); }
+      return r.json();
+    }).then(function (wire) {
+      $("lw-status").hidden = true;
+      $("lw-summary").innerHTML = TM_LiveWire.summaryHTML(wire);
+      $("lw-lanes").innerHTML = TM_LiveWire.lanesHTML(wire);
+      $("lw-movers").innerHTML = TM_LiveWire.moversHTML(wire);
+      $("lw-lanes-wrap").hidden = false;
+      $("lw-stamp").textContent = "Wire: " + wire.counts.lanes +
+        " lanes · " + wire.counts.current_hits + " current hits · refresh " +
+        wire.refresh_at + " · built " + wire.generated_at;
+    }).catch(function () {
+      $("lw-status").innerHTML =
+        '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the wire</h2>' +
+        "<p>This page needs data/v1/live-wire.json (built by " +
+        "scripts/build_live_wire.js). Run pipeline/refresh.sh or check " +
+        "the connection.</p></div>";
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else { init(); }
+})();
+</script>
+</body>
+</html>

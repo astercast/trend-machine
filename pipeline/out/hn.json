@@ -3,600 +3,288 @@
     "title": "AI Models Can Provably Hide Arbitrary Capabilities",
     "url": "https://arxiv.org/abs/2610.13928",
     "source": "hackernews",
-    "summary": "58 points · 32 comments",
+    "summary": "117 points · 61 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:19:58.777772+00:00"
+    "fetched_at": "2026-10-13T06:31:32.417968+00:00"
   },
   {
     "title": "The baffling intelligence of a single cell (2024)",
     "url": "https://jsomers.net/e-coli-chemotaxis/",
     "source": "hackernews",
-    "summary": "169 points · 20 comments",
+    "summary": "192 points · 27 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:00.263614+00:00"
+    "fetched_at": "2026-10-13T06:31:33.447263+00:00"
   },
   {
     "title": "GLM-Legal",
     "url": "https://z.ai/blog/glm-legal",
     "source": "hackernews",
-    "summary": "494 points · 288 comments",
+    "summary": "512 points · 298 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:02.707409+00:00"
+    "fetched_at": "2026-10-13T06:31:35.166696+00:00"
   },
   {
     "title": "A Modern Web App in C",
     "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
     "source": "hackernews",
-    "summary": "467 points · 185 comments",
+    "summary": "498 points · 205 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:04.142214+00:00"
+    "fetched_at": "2026-10-13T06:31:36.560454+00:00"
   },
   {
     "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
     "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
     "source": "hackernews",
-    "summary": "132 points · 57 comments",
+    "summary": "158 points · 69 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:05.887691+00:00"
+    "fetched_at": "2026-10-13T06:31:37.859729+00:00"
   },
   {
     "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
     "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
     "source": "hackernews",
-    "summary": "539 points · 717 comments",
+    "summary": "585 points · 751 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:07.250474+00:00"
+    "fetched_at": "2026-10-13T06:31:39.474652+00:00"
   },
   {
     "title": "Who is vfmaddrnd231pd?",
     "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
     "source": "hackernews",
-    "summary": "155 points · 16 comments",
+    "summary": "169 points · 16 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:08.502104+00:00"
+    "fetched_at": "2026-10-13T06:31:40.690419+00:00"
   },
   {
     "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
     "url": "https://github.com/prabanta-dev/janas",
     "source": "hackernews",
-    "summary": "76 points · 29 comments",
+    "summary": "97 points · 31 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:10.498637+00:00"
-  },
-  {
-    "title": "Making big downloads resumable in Firefox",
-    "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
-    "source": "hackernews",
-    "summary": "139 points · 45 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:11.899796+00:00"
-  },
-  {
-    "title": "A look at OpenAI’s math that’s claimed computes faster Fourier transforms",
-    "url": "https://www.argmin.net/p/faster-fourier-transforms",
-    "source": "hackernews",
-    "summary": "72 points · 41 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:13.068311+00:00"
-  },
-  {
-    "title": "Auto Research: Integer multiplication below n log n",
-    "url": "https://app.getsupers.com/auto-research",
-    "source": "hackernews",
-    "summary": "37 points · 11 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:14.628467+00:00"
-  },
-  {
-    "title": "AI is a tool and using it well takes skill",
-    "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
-    "source": "hackernews",
-    "summary": "301 points · 243 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:15.925886+00:00"
-  },
-  {
-    "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
-    "url": "https://github.com/h0m3us3r/w1700k-sdr",
-    "source": "hackernews",
-    "summary": "304 points · 87 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:16.780605+00:00"
-  },
-  {
-    "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-    "url": "https://news.ycombinator.com/item?id=50059096",
-    "source": "hackernews",
-    "summary": "122 points · 84 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:18.232616+00:00"
+    "fetched_at": "2026-10-13T06:31:42.199933+00:00"
   },
   {
     "title": "The Dock on Mac, from OS 10 to macOS 27",
     "url": "https://blog.jim-nielsen.com/2026/macos-dock-icons-over-time/",
     "source": "hackernews",
-    "summary": "23 points · 10 comments",
+    "summary": "53 points · 33 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:20.265703+00:00"
+    "fetched_at": "2026-10-13T06:31:43.727987+00:00"
   },
   {
-    "title": "Phreak.ing – Internet Phone Switch",
-    "url": "https://phreak.ing/",
+    "title": "Making big downloads resumable in Firefox",
+    "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
     "source": "hackernews",
-    "summary": "104 points · 28 comments",
+    "summary": "158 points · 60 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:22.462832+00:00"
+    "fetched_at": "2026-10-13T06:31:45.464571+00:00"
+  },
+  {
+    "title": "Threat of AI share crash puts world financial stability at risk, says IMF",
+    "url": "https://www.theguardian.com/business/2026/oct/13/ai-share-crash-risk-global-imf-debt-corrowing-cyber-attacks",
+    "source": "hackernews",
+    "summary": "16 points · 4 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:31:47.562525+00:00"
+  },
+  {
+    "title": "Auto Research: Integer multiplication below n log n",
+    "url": "https://app.getsupers.com/auto-research",
+    "source": "hackernews",
+    "summary": "42 points · 18 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:31:49.067078+00:00"
+  },
+  {
+    "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
+    "url": "https://github.com/h0m3us3r/w1700k-sdr",
+    "source": "hackernews",
+    "summary": "315 points · 89 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:31:50.866842+00:00"
+  },
+  {
+    "title": "AI is a tool and using it well takes skill",
+    "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+    "source": "hackernews",
+    "summary": "335 points · 275 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:31:53.053369+00:00"
+  },
+  {
+    "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+    "url": "https://news.ycombinator.com/item?id=50059096",
+    "source": "hackernews",
+    "summary": "126 points · 85 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:31:55.413639+00:00"
   },
   {
     "title": "Citroen revives the 2CV for an electric age",
     "url": "https://www.bbc.com/news/articles/c620r33plgppo",
     "source": "hackernews",
-    "summary": "295 points · 333 comments",
+    "summary": "307 points · 343 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:23.609460+00:00"
+    "fetched_at": "2026-10-13T06:31:57.263968+00:00"
+  },
+  {
+    "title": "Phreak.ing – Internet Phone Switch",
+    "url": "https://phreak.ing/",
+    "source": "hackernews",
+    "summary": "112 points · 30 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:31:59.090829+00:00"
   },
   {
     "title": "Writing a Demoscene Intro for the ZX Spectrum",
     "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
     "source": "hackernews",
-    "summary": "96 points · 10 comments",
+    "summary": "105 points · 17 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:24.634123+00:00"
+    "fetched_at": "2026-10-13T06:32:00.818791+00:00"
   },
   {
     "title": "Solar panels that plug into your wall",
     "url": "https://www.nationalgeographic.com/environment/article/balcony-plug-in-solar-panels-renewable-energy",
     "source": "hackernews",
-    "summary": "156 points · 142 comments",
+    "summary": "164 points · 151 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:26.216597+00:00"
+    "fetched_at": "2026-10-13T06:32:02.484707+00:00"
+  },
+  {
+    "title": "Show HN: SolidCraft – Open-Source Parametric CAD in Rust (With MCP Support)",
+    "url": "https://github.com/bherbruck/solidcraft",
+    "source": "hackernews",
+    "summary": "30 points · 1 comments",
+    "hashtags": [],
+    "category": "tech",
+    "platforms": [
+      "hackernews"
+    ],
+    "fetched_at": "2026-10-13T06:32:04.122695+00:00"
   },
   {
     "title": "Secret of Orange Cats Revealed After 60-Year Search",
     "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
     "source": "hackernews",
-    "summary": "251 points · 180 comments",
+    "summary": "258 points · 180 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:27.739660+00:00"
+    "fetched_at": "2026-10-13T06:32:05.534720+00:00"
   },
   {
     "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
     "url": "https://taylor.town/kk-ai-2026",
     "source": "hackernews",
-    "summary": "166 points · 59 comments",
+    "summary": "173 points · 64 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:29.387685+00:00"
-  },
-  {
-    "title": "China Overtakes U.S. For First Time as Top Spender on R&D in 2024",
-    "url": "https://japannews.yomiuri.co.jp/science-nature/science/20260908-347742/",
-    "source": "hackernews",
-    "summary": "105 points · 92 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:30.459690+00:00"
-  },
-  {
-    "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
-    "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
-    "source": "hackernews",
-    "summary": "237 points · 88 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:31.787862+00:00"
-  },
-  {
-    "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-    "url": "https://github.com/openai/codex/issues/48195",
-    "source": "hackernews",
-    "summary": "508 points · 259 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:33.319614+00:00"
+    "fetched_at": "2026-10-13T06:32:06.906563+00:00"
   },
   {
     "title": "Show HN: An experimental pattern-first DAW that supports MCP",
     "url": "https://github.com/andrewfader/blokkily",
     "source": "hackernews",
-    "summary": "34 points · 17 comments",
+    "summary": "41 points · 20 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:34.507112+00:00"
-  },
-  {
-    "title": "Passkeys are a trap",
-    "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-    "source": "hackernews",
-    "summary": "1039 points · 544 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:36.621103+00:00"
-  },
-  {
-    "title": "Fingerprints are the new cookies",
-    "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
-    "source": "hackernews",
-    "summary": "706 points · 351 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:37.575802+00:00"
-  },
-  {
-    "title": "The gap in shared understanding of LLM capability is widening",
-    "url": "https://twitter.com/karpathy/status/2109361546505966046",
-    "source": "hackernews",
-    "summary": "683 points · 1001 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:38.909660+00:00"
-  },
-  {
-    "title": "Total Annihilation, rebuilt for modern computers",
-    "url": "https://nanolathe.gg",
-    "source": "hackernews",
-    "summary": "671 points · 253 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:41.189875+00:00"
-  },
-  {
-    "title": "Bot traffic from Yandex",
-    "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
-    "source": "hackernews",
-    "summary": "649 points · 256 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:42.376729+00:00"
-  },
-  {
-    "title": "3rd Yandex Cloud Data Center Was Hit",
-    "url": "https://status.yandex.cloud/en/incidents/2136",
-    "source": "hackernews",
-    "summary": "627 points · 775 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:43.816369+00:00"
-  },
-  {
-    "title": "Deloitte falsified documents to evade tax on Abramovich's wealth",
-    "url": "https://www.bbc.com/news/articles/c64g1l5389kvo",
-    "source": "hackernews",
-    "summary": "595 points · 199 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:45.555709+00:00"
-  },
-  {
-    "title": "NYC's \"Click to Cancel\" rule is now in effect",
-    "url": "https://www.nyc.gov/main/click-to-cancel",
-    "source": "hackernews",
-    "summary": "592 points · 319 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:46.880603+00:00"
-  },
-  {
-    "title": "Muse Wonder",
-    "url": "https://research.meta.ai/blog/muse-wonder",
-    "source": "hackernews",
-    "summary": "575 points · 316 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:48.809640+00:00"
-  },
-  {
-    "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
-    "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
-    "source": "hackernews",
-    "summary": "540 points · 717 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:50.739854+00:00"
-  },
-  {
-    "title": "Terence Tao: Math 2.0 [pdf]",
-    "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
-    "source": "hackernews",
-    "summary": "529 points · 528 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:51.738464+00:00"
+    "fetched_at": "2026-10-13T06:32:09.863301+00:00"
   },
   {
     "title": "Codex CLI installs a persistent, self-updating background daemon by default",
     "url": "https://github.com/openai/codex/issues/48195",
     "source": "hackernews",
-    "summary": "508 points · 259 comments",
+    "summary": "528 points · 270 comments",
     "hashtags": [],
     "category": "tech",
     "platforms": [
       "hackernews"
     ],
-    "fetched_at": "2026-10-13T05:20:52.953357+00:00"
-  },
-  {
-    "title": "GLM-Legal",
-    "url": "https://z.ai/blog/glm-legal",
-    "source": "hackernews",
-    "summary": "495 points · 288 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:54.090039+00:00"
-  },
-  {
-    "title": "Nitter: Update Oct 10th seeking funding and legal help",
-    "url": "https://nitter.net",
-    "source": "hackernews",
-    "summary": "471 points · 247 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:55.175790+00:00"
-  },
-  {
-    "title": "A Modern Web App in C",
-    "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
-    "source": "hackernews",
-    "summary": "468 points · 186 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:56.318912+00:00"
-  },
-  {
-    "title": "LineageOS 24",
-    "url": "https://lineageos.org/Changelog-32/",
-    "source": "hackernews",
-    "summary": "447 points · 183 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:57.229694+00:00"
-  },
-  {
-    "title": "Google told to halt work on datacentres in Finland over environmental concerns",
-    "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
-    "source": "hackernews",
-    "summary": "446 points · 170 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:20:59.523640+00:00"
-  },
-  {
-    "title": "I'm sorry, but you still have to think",
-    "url": "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/",
-    "source": "hackernews",
-    "summary": "436 points · 181 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:00.879047+00:00"
-  },
-  {
-    "title": "I paid people to try and follow my README",
-    "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
-    "source": "hackernews",
-    "summary": "418 points · 204 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:03.011625+00:00"
-  },
-  {
-    "title": "IRCv3",
-    "url": "https://ircv3.net/",
-    "source": "hackernews",
-    "summary": "409 points · 347 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:04.736628+00:00"
-  },
-  {
-    "title": "Documents add to evidence in climate deception case against ExxonMobil",
-    "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
-    "source": "hackernews",
-    "summary": "403 points · 219 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:06.358869+00:00"
-  },
-  {
-    "title": "QGIS enacts moratorium on AI contributions",
-    "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
-    "source": "hackernews",
-    "summary": "372 points · 401 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:07.321582+00:00"
-  },
-  {
-    "title": "So, you’d like to sell your print issues of The Onion?",
-    "url": "https://theonion.com/archivehunt/",
-    "source": "hackernews",
-    "summary": "372 points · 63 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:08.363783+00:00"
-  },
-  {
-    "title": "AI coding agents generate more code, but not more software",
-    "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
-    "source": "hackernews",
-    "summary": "324 points · 276 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:09.693209+00:00"
-  },
-  {
-    "title": "Cartographers of North Korea (2019)",
-    "url": "https://cartographers-nk.wonyoung.so/",
-    "source": "hackernews",
-    "summary": "316 points · 67 comments",
-    "hashtags": [],
-    "category": "tech",
-    "platforms": [
-      "hackernews"
-    ],
-    "fetched_at": "2026-10-13T05:21:11.940541+00:00"
+    "fetched_at": "2026-10-13T06:32:20.406672+00:00"
   }
 ]

@@ -942,6 +942,103 @@ def main():
                             "trajectory_n": {"type": "integer", "minimum": 0}}}},
             },
         },
+        "live-wire": {
+            "$schema": DRAFT,
+            "title": "trend-machine Live Wire",
+            "description": ("Wave 28: the pipeline command view. One row per "
+                            "fetcher wired into pipeline/refresh.sh, with the "
+                            "hit count and health the pipeline itself recorded "
+                            "in pipeline/out/*.json — live (rewritten by the "
+                            "latest refresh, hits > 0), degraded (rewritten, "
+                            "0 hits), stale-skip (not rewritten; stored hits "
+                            "dated and excluded from the current total), or "
+                            "skip-by-design (TikTok / X write no file and "
+                            "claim no hits). Plus the hour's top movers: "
+                            "latest stored velocity vs the latest stored "
+                            "point at or before 1h earlier, merged live + "
+                            "archive history, real span published per mover."),
+            "type": "object",
+            "required": ["generated_at", "refresh_at", "method", "honesty",
+                         "provenance", "counts", "lanes", "movers"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "refresh_at": {"type": ["string", "null"]},
+                "method": {"type": "string"},
+                "honesty": {"type": "string"},
+                "provenance": {"type": "object"},
+                "counts": {"type": "object",
+                    "required": ["lanes", "lanes_live", "lanes_degraded",
+                                 "lanes_stale_skip", "lanes_skip_by_design",
+                                 "current_hits", "stale_hits_excluded",
+                                 "topics_live", "movers_with_hour_pair",
+                                 "gainers", "fallers", "flat"],
+                    "properties": {
+                        "lanes": {"type": "integer", "minimum": 0},
+                        "lanes_live": {"type": "integer", "minimum": 0},
+                        "lanes_degraded": {"type": "integer", "minimum": 0},
+                        "lanes_stale_skip": {"type": "integer", "minimum": 0},
+                        "lanes_skip_by_design": {"type": "integer", "minimum": 0},
+                        "current_hits": {"type": "integer", "minimum": 0},
+                        "stale_hits_excluded": {"type": "integer", "minimum": 0},
+                        "topics_live": {"type": "integer", "minimum": 0},
+                        "movers_with_hour_pair": {"type": "integer", "minimum": 0},
+                        "gainers": {"type": "integer", "minimum": 0},
+                        "fallers": {"type": "integer", "minimum": 0},
+                        "flat": {"type": "integer", "minimum": 0}}},
+                "lanes": {"type": "array",
+                    "items": {"type": "object",
+                        "required": ["id", "label", "fetcher", "output_file",
+                                     "status", "hits", "current_hits",
+                                     "sources", "newest_fetched_at",
+                                     "file_written_at", "detail"],
+                        "properties": {
+                            "id": {"type": "string"},
+                            "label": {"type": "string"},
+                            "fetcher": {"type": "string"},
+                            "output_file": {"type": ["string", "null"]},
+                            "status": {"type": "string",
+                                       "enum": ["live", "degraded",
+                                                "stale-skip",
+                                                "skip-by-design"]},
+                            "hits": {"type": "integer", "minimum": 0},
+                            "current_hits": {"type": "integer", "minimum": 0},
+                            "sources": {"type": "array",
+                                        "items": {"type": "string"}},
+                            "newest_fetched_at": {"type": ["string", "null"]},
+                            "file_written_at": {"type": ["string", "null"]},
+                            "detail": {"type": "string"}}}},
+                "movers": {"type": "object",
+                    "required": ["window", "topics_with_series",
+                                 "with_hour_pair", "gainers", "fallers"],
+                    "properties": {
+                        "window": {"type": "string"},
+                        "topics_with_series": {"type": "integer", "minimum": 0},
+                        "with_hour_pair": {"type": "integer", "minimum": 0},
+                        "gainers": {"$ref": "#/definitions/movers"},
+                        "fallers": {"$ref": "#/definitions/movers"}}},
+            },
+            "definitions": {
+                "movers": {"type": "array",
+                    "items": {"type": "object",
+                        "required": ["topic_id", "title", "topic_live",
+                                     "platforms", "from_velocity",
+                                     "to_velocity", "delta", "from_ts",
+                                     "to_ts", "span_hours", "n_points"],
+                        "properties": {
+                            "topic_id": {"type": "string"},
+                            "title": {"type": "string"},
+                            "topic_live": {"type": "boolean"},
+                            "platforms": {"type": "array",
+                                          "items": {"type": "string"}},
+                            "from_velocity": {"type": "number"},
+                            "to_velocity": {"type": "number"},
+                            "delta": {"type": "number"},
+                            "from_ts": {"type": "string"},
+                            "to_ts": {"type": "string"},
+                            "span_hours": {"type": "number", "minimum": 0},
+                            "n_points": {"type": "integer", "minimum": 0}}}},
+            },
+        },
         # self-describing manifest itself
         "index": {
             "$schema": DRAFT,
@@ -1123,6 +1220,16 @@ def main():
                  "pending; short windows are labeled short."),
                 schema_path("oracle-board"), None,
                 "Written by scripts/build_oracle_board.js (runs after build_forecasts.js in refresh.sh and in resolution_night.sh step 3); human-readable on oracle-board.html."),
+            "live_wire": endpoint(
+                "data/v1/live-wire.json",
+                ("Wave 28: the Live Wire — a command view over the pipeline's "
+                 "own stored outputs: every refresh lane with its real "
+                 "recorded hit count and health (live / degraded / "
+                 "stale-skip / skip-by-design, exactly as the pipeline "
+                 "records it), plus the hour's top movers computed from "
+                 "stored velocity snapshots only."),
+                schema_path("live-wire"), None,
+                "Written by scripts/build_live_wire.js (runs after build_oracle_board.js in refresh.sh); human-readable on live-wire.html."),
             "schemas": endpoint(
                 "data/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
@@ -1221,7 +1328,7 @@ def main():
               "", "## API", "- [data/v1/index.json](data/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
               "- [data/v1/trends.json](data/v1/trends.json) — all topics, full dossiers", "- [data/v1/trends.flat.json](data/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)",
               "- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)", "- [data/v1/forecasts.json](data/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
-              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)", "- [data/v1/oracle-board.json](data/v1/oracle-board.json) — the Oracle Board: every recorded forecast with its stored trajectory, 48h window state (ready/short), and verdict when one exists",
+              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)", "- [data/v1/oracle-board.json](data/v1/oracle-board.json) — the Oracle Board: every recorded forecast with its stored trajectory, 48h window state (ready/short), and verdict when one exists", "- [data/v1/live-wire.json](data/v1/live-wire.json) — the Live Wire: every pipeline lane with its recorded hit count + health (live/degraded/stale-skip/skip-by-design) and the hour's top movers from stored snapshots only",
               "- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the Oracle's ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)",
               "- [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
               "- [data/v1/hashtags.json](data/v1/hashtags.json) — tag index", "- [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint",
@@ -1229,6 +1336,7 @@ def main():
               "## Oracle (flagship)", "- [oracle.html](oracle.html) — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
               "- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)",
               "- [oracle-board.html](oracle-board.html) — the Oracle Board: a forecast-explorer over the ledger — every recorded call with its real stored trajectory, window readiness, and (after Resolution Night) its verdict",
+              "- [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only",
               "- [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join",
               "- [launch-plan.html](launch-plan.html) — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
               "## Algorithm mechanics (Oct 2026)", "- [algorithms.html](algorithms.html) — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated", "",

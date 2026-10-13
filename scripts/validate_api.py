@@ -303,6 +303,72 @@ def main():
     else:
         print("[validate] oracle-board.json absent (node step skipped) — not validated")
 
+    # wave 28: live-wire.json — schema + lane/mover honesty vs stored outputs
+    lw_path = os.path.join(API, "live-wire.json")
+    if os.path.exists(lw_path):
+        lw = validate_doc("live-wire.json", lw_path, "live-wire.json")
+        lc = lw.get("counts", {})
+        lanes = lw.get("lanes", [])
+        check("live-wire lane totals reconcile",
+              lc.get("lanes", -1) == len(lanes)
+              and lc.get("lanes_live", -1) + lc.get("lanes_degraded", -2)
+              + lc.get("lanes_stale_skip", -3)
+              + lc.get("lanes_skip_by_design", -4) == lc.get("lanes", -5),
+              f"counts={lc} lanes={len(lanes)}")
+        check("live-wire current hits sum only live lanes",
+              lc.get("current_hits", -1)
+              == sum(l.get("current_hits", 0) for l in lanes)
+              and all(l.get("current_hits", 0) == l.get("hits", -1)
+                      for l in lanes if l.get("status") == "live")
+              and all(l.get("current_hits", -1) == 0
+                      for l in lanes if l.get("status") != "live"),
+              "current_hits must equal the live lanes' hits; every other lane contributes 0")
+        check("live-wire stale hits excluded + dated",
+              lc.get("stale_hits_excluded", -1)
+              == sum(l.get("hits", 0) for l in lanes
+                     if l.get("status") == "stale-skip")
+              and all(l.get("newest_fetched_at")
+                      for l in lanes if l.get("status") == "stale-skip"),
+              "stale-skip hits are summed apart and every stale lane carries its newest stamp")
+        check("live-wire skip-by-design lanes claim nothing",
+              all(l.get("hits", -1) == 0 and l.get("output_file") is None
+                  for l in lanes if l.get("status") == "skip-by-design")
+              and {l.get("id") for l in lanes
+                   if l.get("status") == "skip-by-design"} == {"tiktok", "x"},
+              "exactly tiktok + x skip by design, with 0 hits and no output file")
+        check("live-wire lane hit counts match pipeline/out files",
+              all(l.get("hits", -1) == len(load(os.path.join(
+                      ROOT, "pipeline", "out",
+                      os.path.basename(l["output_file"]))))
+                  for l in lanes if l.get("output_file")),
+              "every file lane's hits must equal its stored file's length")
+        mv = lw.get("movers", {})
+        gains = mv.get("gainers", [])
+        falls = mv.get("fallers", [])
+        check("live-wire movers honest deltas + spans",
+              all(m.get("delta", 0) > 0
+                  and m.get("delta") == m.get("to_velocity", 0)
+                  - m.get("from_velocity", 0)
+                  and 0.5 <= m.get("span_hours", 0) <= 3
+                  for m in gains)
+              and all(m.get("delta", 0) < 0
+                      and m.get("delta") == m.get("to_velocity", 0)
+                      - m.get("from_velocity", 0)
+                      and 0.5 <= m.get("span_hours", 0) <= 3
+                      for m in falls)
+              and len(gains) <= 10 and len(falls) <= 10,
+              "gainers delta>0, fallers delta<0, delta = to - from, span within 0.5-3h, top-10 caps")
+        check("live-wire mover counts reconcile",
+              lc.get("gainers", -1) >= len(gains)
+              and lc.get("fallers", -1) >= len(falls)
+              and lc.get("movers_with_hour_pair", -1)
+              == lc.get("gainers", -2) + lc.get("fallers", -3)
+              + lc.get("flat", -4)
+              and mv.get("with_hour_pair") == lc.get("movers_with_hour_pair"),
+              f"counts={lc} movers={mv.get('with_hour_pair')}")
+    else:
+        print("[validate] live-wire.json absent (node step skipped) — not validated")
+
     # manifest self-consistency
     # 2026-10-12: resolve vercel.json rewrites first — the manifest advertises
     # public URLs (e.g. /data/v1/trends.flat.js), which may rewrite to a file

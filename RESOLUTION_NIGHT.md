@@ -86,6 +86,33 @@ same run; the one command in §2 is unchanged. The link check ran
 internal-only this wave (6,050 checked / 0 broken) — its external
 probing was skipped under the standing fetch rule.*
 
+*Wave-28 pre-gate check (2026-10-13 06:28–06:52 UTC, ~19.3h before
+the gate): the gate was re-proved once — `--run` refused with exit 2
+and the ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was
+byte-identical before and after. A full refresh then ran (exit 0,
+393 topics live, forecasts built 2026-10-13T06:37:42.938Z) and
+recorded **+25 batch-2 forecasts** — the first big batch-2 issuance:
+the Oct-12 entries' 24h dedupes expired through the morning and 25
+still-decisive topics recorded second entries, due
+2026-10-15T06:36Z (new ledger md5
+`a81bcd99129a71ac091168ddecd762e3`). Counts reconcile
+315 recorded = 315 pending + 0 resolved + 0 unverifiable; readiness
+is **271/315 overall (268/286 batch 1)** — the 44 short are the
+same 19 as before plus the 25 newborn batch-2 windows at 0, which
+gain points until their horizons; the audit ends ALL INVARIANTS
+HOLD, and the scorecard stays "building history" with `hit_rate`
+null, screenshot-verified with zero console errors. This wave also
+built the **Live Wire** (`live-wire.html` /
+`data/v1/live-wire.json`): every refresh lane with the hit count
+and health the pipeline itself recorded (this run: 7 live / 293
+current hits, reddit direct degraded at 0 after 403s, mastodon +
+YouTube-Invidious stale-skip with 45 old hits dated and excluded,
+TikTok/X skip-by-design), plus the hour's movers from stored
+snapshots only. `pipeline/refresh.sh` rebuilds it after the Oracle
+Board. The link check ran internal-only this wave (6,067 checked /
+0 broken) — its external probing was skipped under the standing
+fetch rule.*
+
 *Wave-25 pre-gate check (2026-10-13 03:50–04:02 UTC, ~21.9h before
 the gate): the gate was re-proved once — `--run` refused with exit 2
 and the ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was
