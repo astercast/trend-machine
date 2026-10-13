@@ -85,7 +85,20 @@ TOPIC_TMPL = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — Trend Machine</title>
 <meta name="description" content="{desc}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b0f0e'/%3E%3Ccircle cx='8' cy='8' r='5' fill='none' stroke='%2339ff88' stroke-width='1.6'/%3E%3Ccircle cx='8' cy='8' r='1.4' fill='%2339ff88'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0a0c10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{title} — Trend Machine">
+<meta property="og:description" content="{desc}">
+<meta property="og:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title} — Trend Machine">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/base.css">
 <link rel="stylesheet" href="../assets/css/components.css">
@@ -360,6 +373,73 @@ def write_home_fallback(topics, generated_at):
           % (min(5, len(topics)), len(memes), min(TMFB_TABLE_ROWS, len(topics))))
 
 
+# wave 32 (Foundry round 2; round-11 placement packet): the root pages are
+# hand-maintained sources, so their OG / theme-color / favicon head block is
+# injected by the generator — idempotently — rather than hand-edited into
+# outputs, keeping every rebuild and refresh covered. Per-page rule from the
+# packet: og:title / twitter:title mirror the page's own <title>;
+# og:description / twitter:description mirror its existing meta description
+# — verbatim, nothing invented. og:image / twitter:image are ABSOLUTE URLs
+# against the live deployment domain (Foundry round 6 catch: social
+# crawlers ignore relative og:image paths). theme-color is the site's own
+# declared war-room ground, tokens.css --bg. The favicon set is file-based,
+# completing the site's existing radar-reticle mark (formerly only an inline
+# SVG data URI) per the Foundry round-12 icon+theme proposal: geometry
+# verbatim, colors token-harmonized (--bg field, --live ring/dot), files at
+# the repo root — favicon.svg, favicon.ico (16/32/48), icon-192.png,
+# icon-512.png, apple-touch-icon.png (full-bleed field for the iOS mask).
+ROOT_PAGES = ["index.html", "oracle.html", "oracle-board.html",
+              "live-wire.html", "streamer-desk.html", "forecast-accuracy.html",
+              "formats.html", "launch-plan.html", "algorithms.html",
+              "api-docs.html", "404.html"]
+OG_IMAGE_URL = "https://trend-machine-live.vercel.app/assets/og-card.png"
+THEME_COLOR = "#0a0c10"  # assets/css/tokens.css --bg
+
+
+def inject_root_head_meta():
+    import re
+    icon_data = re.compile(r'<link rel="icon" href="data:image/svg\+xml,[^>]*>\n?')
+    for name in ROOT_PAGES:
+        path = os.path.join(ROOT, name)
+        if not os.path.exists(path):
+            continue
+        with open(path) as f:
+            page = f.read()
+        if "og:image" in page:
+            continue  # already wired — idempotent
+        mt = re.search(r"<title>(.*?)</title>", page, re.S)
+        md = re.search(r'<meta name="description" content="(.*?)">', page, re.S)
+        if not mt or not md:
+            print(f"[build] head-meta SKIP {name}: no title/description found")
+            continue
+        title, desc = mt.group(1), md.group(1)
+        block = (
+            '<meta name="theme-color" content="' + THEME_COLOR + '">\n'
+            '<meta property="og:type" content="website">\n'
+            '<meta property="og:title" content="' + title + '">\n'
+            '<meta property="og:description" content="' + desc + '">\n'
+            '<meta property="og:image" content="' + OG_IMAGE_URL + '">\n'
+            '<meta property="og:image:width" content="1200">\n'
+            '<meta property="og:image:height" content="630">\n'
+            '<meta name="twitter:card" content="summary_large_image">\n'
+            '<meta name="twitter:title" content="' + title + '">\n'
+            '<meta name="twitter:description" content="' + desc + '">\n'
+            '<meta name="twitter:image" content="' + OG_IMAGE_URL + '">'
+        )
+        page = page.replace(md.group(0), md.group(0) + "\n" + block, 1)
+        icons = (
+            '<link rel="icon" href="/favicon.ico" sizes="48x48">\n'
+            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
+            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">'
+        )
+        page, n = icon_data.subn(icons + "\n", page, count=1)
+        if not n:
+            print(f"[build] head-meta WARN {name}: inline icon link not found")
+        with open(path, "w") as f:
+            f.write(page)
+        print(f"[build] head-meta wired {name}")
+
+
 def main():
     with open(DATA) as f:
         data = json.load(f)
@@ -405,6 +485,8 @@ def main():
                    "topics": topics}, f, indent=2, ensure_ascii=False)
     # VP-0001: bake the homepage static fallback rows from the same payload
     write_home_fallback(topics, data["generated_at"])
+    # wave 32: OG / theme-color / favicon head wiring on the root pages
+    inject_root_head_meta()
     tags = {}
     for t in topics:
         for h in t.get("hashtags", []):
