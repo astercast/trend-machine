@@ -1,6 +1,6 @@
 [
   {
-    "title": "battlestar galactica",
+    "title": "nasa",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~100+ searches.",
@@ -9,46 +9,22 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.768819+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560543+00:00"
   },
   {
-    "title": "lilli tagger",
+    "title": "matthew rhys",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~100+ searches.",
+    "summary": "~1000+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.768889+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560619+00:00"
   },
   {
-    "title": "gpt",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~2000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T08:48:38.768913+00:00"
-  },
-  {
-    "title": "cartoon network leaks",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T08:48:38.768936+00:00"
-  },
-  {
-    "title": "meta",
+    "title": "rocket launch today",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~500+ searches.",
@@ -57,34 +33,22 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.768955+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560644+00:00"
   },
   {
-    "title": "2028 presidential candidates",
+    "title": "snow forecast",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~20000+ searches.",
+    "summary": "~200+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.768972+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560661+00:00"
   },
   {
-    "title": "new york times the",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T08:48:38.768988+00:00"
-  },
-  {
-    "title": "zeynep sonmez",
+    "title": "week 6 defense rankings",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~100+ searches.",
@@ -93,10 +57,22 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.769004+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560678+00:00"
   },
   {
-    "title": "and",
+    "title": "spacex launch",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T10:12:40.560694+00:00"
+  },
+  {
+    "title": "charley hull",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~100+ searches.",
@@ -105,18 +81,42 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.769019+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560709+00:00"
   },
   {
-    "title": "ann li",
+    "title": "patriots news",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~2000+ searches.",
+    "summary": "~100+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T08:48:38.769036+00:00"
+    "fetched_at": "2026-10-13T10:12:40.560723+00:00"
+  },
+  {
+    "title": "raw results",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T10:12:40.560738+00:00"
+  },
+  {
+    "title": "nvidia stock price",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T10:12:40.575849+00:00"
   }
 ]

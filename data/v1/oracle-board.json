@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T08:52:39.643Z",
+  "generated_at": "2026-10-13T10:15:57.430Z",
   "status": "building history",
   "horizon_hours": 48,
   "method": "One row per forecast in data/forecast_ledger.json. Trajectories are the topic's stored velocity snapshots (live store merged with the resolution archive via scripts/resolution-lib.js mergeHistory — live store wins per hour bucket), kept as recorded. Window evidence is resolution-lib.js actualsInWindow() over the forecast's own 48h window — the same evidence the graders use. Status and hit_rate are read from data/v1/forecast-accuracy.json, never recomputed here.",
@@ -11,8 +11,8 @@
     "unverifiable": 0,
     "hits": 0,
     "hit_rate": null,
-    "ready": 271,
-    "short": 44
+    "ready": 274,
+    "short": 41
   },
   "next_resolution_at": "2026-10-14T01:45:28.760Z",
   "by_state": {
@@ -31,8 +31,8 @@
       "resolved": 0,
       "hits": 0,
       "unverifiable": 0,
-      "ready": 6,
-      "short": 3
+      "ready": 7,
+      "short": 2
     },
     "fading": {
       "recorded": 276,
@@ -40,8 +40,8 @@
       "resolved": 0,
       "hits": 0,
       "unverifiable": 0,
-      "ready": 235,
-      "short": 41
+      "ready": 237,
+      "short": 39
     }
   },
   "due_per_day": [
@@ -74,10 +74,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -161,9 +161,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           93
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          93
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "six-seven-meme",
@@ -183,10 +187,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -270,9 +274,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           92
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          92
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "seis-sete-dance",
@@ -291,10 +299,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -378,9 +386,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           90
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          90
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "trump-rally-nobel",
@@ -401,10 +413,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -488,9 +500,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           90
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          90
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "ramalama-walk",
@@ -509,10 +525,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -596,9 +612,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           90
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          90
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "battlefield-6-gamepass",
@@ -619,10 +639,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -706,9 +726,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           87
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          87
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "nba-tiktok-surge",
@@ -727,10 +751,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -814,9 +838,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           86
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          86
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "nana-patekar-tributes",
@@ -837,10 +865,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -924,9 +952,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           85
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          85
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "patient-zero-swift",
@@ -945,10 +977,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -1032,9 +1064,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           84
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          84
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "pumpkin-head",
@@ -1053,10 +1089,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -1140,9 +1176,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           78
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          78
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "gears-eday",
@@ -1163,10 +1203,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -1250,9 +1290,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           89
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          89
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "october-music-drops",
@@ -1272,10 +1316,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -1359,9 +1403,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           71
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          71
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "emily-thats-all",
@@ -1381,10 +1429,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -1468,9 +1516,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "wildwood-review",
@@ -1675,10 +1727,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -1750,9 +1802,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           47
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          47
         ]
       ],
-      "trajectory_n": 17
+      "trajectory_n": 18
     },
     {
       "topic_id": "fragrantplaces",
@@ -2605,10 +2661,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -2668,9 +2724,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "the-gap-in-shared-understanding-of-llm-capability-",
@@ -2689,10 +2749,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -2752,9 +2812,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "cartographers-of-north-korea",
@@ -2865,10 +2929,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -2928,9 +2992,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "nyc-s-click-to-cancel-rule-is-now-in-effect",
@@ -2949,10 +3017,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -3012,9 +3080,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "ircv3",
@@ -3033,10 +3105,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -3096,9 +3168,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "the-tilde-in-your-path-may-not-be-your-home",
@@ -3297,10 +3373,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -3360,9 +3436,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "the-lightbulb-computer",
@@ -3689,10 +3769,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -3752,9 +3832,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "123456-password-used-in-danish-cpr-data-breach",
@@ -3865,10 +3949,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -3928,9 +4012,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "i-paid-people-to-try-and-follow-my-readme",
@@ -3949,10 +4037,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -4012,9 +4100,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "talorys-a-self-hosted-personal-ai-agent-on-cloudfl",
@@ -4125,10 +4217,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -4188,9 +4280,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "i-would-like-the-value-of-my-home-to-rise-while-my",
@@ -5335,11 +5431,11 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
-        "slope_per_hour": 0.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
+        "slope_per_hour": 0.19,
         "ready": true
       },
       "trajectory": [
@@ -5422,9 +5518,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "ai-keeps-pissing-off-mathematicians",
@@ -6250,10 +6350,8 @@
       "peak_in_hours": 0,
       "n_snapshots_at_forecast": 3,
       "confidence": null,
-      "topic_live": true,
-      "platforms": [
-        "google"
-      ],
+      "topic_live": false,
+      "platforms": [],
       "status": "pending",
       "verdict": null,
       "window": {
@@ -7135,10 +7233,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -7222,9 +7320,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "new-music-video-mozhesh-da-nye-chotshesh",
@@ -7245,10 +7347,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -7332,9 +7434,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "rihanna-reveals-just-how-many-unreleased-songs-she",
@@ -7355,10 +7461,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -7442,9 +7548,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "listen-power-trip-drops-first-new-music-since-2020",
@@ -7613,10 +7723,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -7700,9 +7810,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "full-video-apoorva-mukhija-viral-video-link-on-tik",
@@ -7723,10 +7837,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -7810,9 +7924,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "verdict-in-trial-over-viral-racist-tiktok-rant-add",
@@ -8011,10 +8129,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -8098,9 +8216,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "17-tiktok-viral-amazon-products-on-sale-ahead-of-p",
@@ -8121,10 +8243,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -8208,9 +8330,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
@@ -8231,11 +8357,11 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
-        "slope_per_hour": 1.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
+        "slope_per_hour": 1.05,
         "ready": true
       },
       "trajectory": [
@@ -8318,9 +8444,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "so-you-d-like-to-sell-your-print-issues-of-the-oni",
@@ -8339,10 +8469,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -8422,9 +8552,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "i-guess-i-m-using-webp-now",
@@ -8532,10 +8666,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -8619,9 +8753,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "every-new-hallmark-christmas-movie-in-2026-dates-c",
@@ -8633,10 +8771,8 @@
       "peak_in_hours": 0,
       "n_snapshots_at_forecast": 3,
       "confidence": null,
-      "topic_live": true,
-      "platforms": [
-        "google"
-      ],
+      "topic_live": false,
+      "platforms": [],
       "status": "pending",
       "verdict": null,
       "window": {
@@ -8760,10 +8896,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -8847,9 +8983,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "matthew-matpat-patrick-adapting-amanda-the-adventu",
@@ -9338,10 +9478,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 8,
+        "n_actual_points": 9,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -9389,9 +9529,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 11
+      "trajectory_n": 12
     },
     {
       "topic_id": "the-ghost-and-the-darkness-at-30-revisiting-the-hi",
@@ -9498,10 +9642,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -9561,9 +9705,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "google-is-illegaly-cutting-forest-to-build-data-ce",
@@ -9777,10 +9925,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -9864,9 +10012,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           83
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          83
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "halloween-game-xbox",
@@ -9886,10 +10038,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -9973,9 +10125,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           75
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          75
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "there-she-goes",
@@ -9994,10 +10150,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10077,9 +10233,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           58
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          58
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "be-ok",
@@ -10098,10 +10258,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10181,9 +10341,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           58
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          58
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "text-from-a",
@@ -10202,10 +10366,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10285,9 +10449,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           58
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          58
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "mini-dramas",
@@ -10306,10 +10474,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10389,9 +10557,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           90
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          90
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "cozy-fall-jazz",
@@ -10410,10 +10582,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10493,9 +10665,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           74
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          74
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "whatever-became-of-holography-2011",
@@ -10561,10 +10737,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10644,9 +10820,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "dear-youtube",
@@ -10666,10 +10846,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10749,9 +10929,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "nothing-headphone-1-pro-they-copied-the-wrong-thin",
@@ -10771,10 +10955,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10854,9 +11038,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "xiaomi-18-pro-max-they-ve-done-it-again",
@@ -10876,10 +11064,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -10959,9 +11147,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "the-apple-watch-has-a-problem",
@@ -10981,10 +11173,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -11064,9 +11256,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "iphone-18-pro-review-all-about-that-chip",
@@ -11086,10 +11282,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -11169,9 +11365,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "iphone-duo-what-we-missed",
@@ -11191,10 +11391,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -11274,9 +11474,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "cyberleek-s-24-min-gta-6-leak-puts-focus-on-lucia-",
@@ -12607,10 +12811,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 15,
+        "n_actual_points": 16,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -12682,9 +12886,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 17
+      "trajectory_n": 18
     },
     {
       "topic_id": "artemis-fowl-animated-series-greenlit-at-disney-ch",
@@ -13399,11 +13607,11 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 15,
+        "n_actual_points": 16,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
-        "slope_per_hour": 0.75,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
+        "slope_per_hour": 0.7,
         "ready": true
       },
       "trajectory": [
@@ -13474,9 +13682,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 17
+      "trajectory_n": 18
     },
     {
       "topic_id": "box-office-zach-cregger-s-resident-evil-becomes-hi",
@@ -14119,10 +14331,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14206,9 +14418,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           91
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          91
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "houthi-riyadh-strike",
@@ -14228,10 +14444,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14315,9 +14531,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           88
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          88
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "valor-mortis",
@@ -14337,10 +14557,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14424,9 +14644,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           80
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          80
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "sw-galactic-racer",
@@ -14447,10 +14671,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14534,9 +14758,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           78
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          78
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "2xko-sett",
@@ -14557,10 +14785,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 17,
+        "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 30.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 31.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14644,9 +14872,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           73
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          73
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "tiktok-sounds-week",
@@ -14665,10 +14897,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14752,9 +14984,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           79
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          79
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "grr-mondays",
@@ -14774,10 +15010,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14861,9 +15097,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           74
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          74
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "street-fighter-movie",
@@ -14883,10 +15123,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -14970,9 +15210,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           74
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          74
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "bow-bow-bow",
@@ -14991,10 +15235,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15074,9 +15318,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           88
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          88
         ]
       ],
-      "trajectory_n": 19
+      "trajectory_n": 20
     },
     {
       "topic_id": "the-all-costco-gaming-setup",
@@ -15095,10 +15343,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15174,9 +15422,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "hashicorp-archives-the-boundary-open-source-repo",
@@ -15237,10 +15489,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 28.2,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 29.6,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15300,9 +15552,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 14
+      "trajectory_n": 15
     },
     {
       "topic_id": "i-seriously-should-not-be-dropping-this",
@@ -15321,10 +15577,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15400,9 +15656,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "thank-you-and-goodbye",
@@ -15421,10 +15681,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15500,9 +15760,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "earthquake-by-mount-fuji",
@@ -15521,10 +15785,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15600,9 +15864,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "meet-our-newest-family-member",
@@ -15621,10 +15889,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15700,9 +15968,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "i-tried-to-make-a-manga",
@@ -15721,10 +15993,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15800,9 +16072,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "my-trillion-dollar-project-is-finally-out",
@@ -15821,10 +16097,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -15900,9 +16176,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "ending-the-vlogs",
@@ -15921,10 +16201,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -16000,9 +16280,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "never-been-this-disappointed",
@@ -16021,10 +16305,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -16100,9 +16384,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "pros-try-fake-ai-photoshop",
@@ -16121,10 +16409,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -16200,9 +16488,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "i-ve-wanted-this-robot-for-10-years",
@@ -16221,10 +16513,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -16300,9 +16592,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "don-t-buy-a-pro-controller-do-this-instead",
@@ -16321,10 +16617,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 14,
+        "n_actual_points": 15,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -16392,9 +16688,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 16
+      "trajectory_n": 17
     },
     {
       "topic_id": "zelensky-says-ukraine-supports-energy-ceasefire-an",
@@ -17875,10 +18175,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -17954,9 +18254,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "pante-n-rococ-tiny-desk-concert",
@@ -17975,10 +18279,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -18054,9 +18358,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "melissa-aldana-with-gonzalo-rubalcaba-tiny-desk-co",
@@ -18075,10 +18383,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -18154,9 +18462,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "alex-ferreira-tiny-desk-concert",
@@ -18175,10 +18487,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 16,
+        "n_actual_points": 17,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -18254,9 +18566,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 18
+      "trajectory_n": 19
     },
     {
       "topic_id": "how-caregiving-makes-you-a-better-leader-gevonna-f",
@@ -18975,10 +19291,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 5,
+        "n_actual_points": 6,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 29.1,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 30.5,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -19010,9 +19326,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 7
+      "trajectory_n": 8
     },
     {
       "topic_id": "r-l-stine-s-the-babysitter-adaptation-coming-to-tu",
@@ -19420,17 +19740,19 @@
       "peak_in_hours": null,
       "n_snapshots_at_forecast": 3,
       "confidence": "low",
-      "topic_live": false,
-      "platforms": [],
+      "topic_live": true,
+      "platforms": [
+        "google"
+      ],
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 1,
+        "n_actual_points": 2,
         "first_ts": "2026-10-13T04:49:10.212520+00:00",
-        "last_ts": "2026-10-13T04:49:10.212520+00:00",
-        "coverage_hours": 0,
-        "slope_per_hour": null,
-        "ready": false
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 5.4,
+        "slope_per_hour": 0,
+        "ready": true
       },
       "trajectory": [
         [
@@ -19448,9 +19770,13 @@
         [
           "2026-10-13T04:49:10.212520+00:00",
           45
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 4
+      "trajectory_n": 5
     },
     {
       "topic_id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
@@ -19471,10 +19797,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 6,
+        "n_actual_points": 7,
         "first_ts": "2026-10-13T02:34:06.091323+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 6.3,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 7.7,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -19558,9 +19884,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 20
+      "trajectory_n": 21
     },
     {
       "topic_id": "epic-games-delays-disney-project-asks-developers-t",
@@ -19582,10 +19912,10 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 6,
+        "n_actual_points": 7,
         "first_ts": "2026-10-13T02:34:06.091323+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 6.3,
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 7.7,
         "slope_per_hour": 0,
         "ready": true
       },
@@ -19629,9 +19959,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           70
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          70
         ]
       ],
-      "trajectory_n": 10
+      "trajectory_n": 11
     },
     {
       "topic_id": "blackhawks-star-connor-bedard-trending-toward-seas",
@@ -19643,10 +19977,8 @@
       "peak_in_hours": null,
       "n_snapshots_at_forecast": 7,
       "confidence": "medium",
-      "topic_live": true,
-      "platforms": [
-        "google"
-      ],
+      "topic_live": false,
+      "platforms": [],
       "status": "pending",
       "verdict": null,
       "window": {
@@ -19710,12 +20042,12 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 1,
+        "n_actual_points": 2,
         "first_ts": "2026-10-13T08:52:31.636476+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 0,
-        "slope_per_hour": null,
-        "ready": false
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 1.4,
+        "slope_per_hour": 0,
+        "ready": true
       },
       "trajectory": [
         [
@@ -19753,9 +20085,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           47
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          47
         ]
       ],
-      "trajectory_n": 9
+      "trajectory_n": 10
     },
     {
       "topic_id": "mondaymotivation",
@@ -19767,10 +20103,8 @@
       "peak_in_hours": 0,
       "n_snapshots_at_forecast": 8,
       "confidence": "high",
-      "topic_live": true,
-      "platforms": [
-        "mastodon"
-      ],
+      "topic_live": false,
+      "platforms": [],
       "status": "pending",
       "verdict": null,
       "window": {
@@ -20016,12 +20350,12 @@
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 1,
+        "n_actual_points": 2,
         "first_ts": "2026-10-13T08:52:31.636476+00:00",
-        "last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "coverage_hours": 0,
-        "slope_per_hour": null,
-        "ready": false
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
+        "coverage_hours": 1.4,
+        "slope_per_hour": 0,
+        "ready": true
       },
       "trajectory": [
         [
@@ -20055,9 +20389,13 @@
         [
           "2026-10-13T08:52:31.636476+00:00",
           47
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          47
         ]
       ],
-      "trajectory_n": 8
+      "trajectory_n": 9
     },
     {
       "topic_id": "ken-paxton-s-texas-senate-campaign",
@@ -20069,14 +20407,16 @@
       "peak_in_hours": 0,
       "n_snapshots_at_forecast": 6,
       "confidence": "high",
-      "topic_live": false,
-      "platforms": [],
+      "topic_live": true,
+      "platforms": [
+        "bluesky"
+      ],
       "status": "pending",
       "verdict": null,
       "window": {
-        "n_actual_points": 0,
-        "first_ts": null,
-        "last_ts": null,
+        "n_actual_points": 1,
+        "first_ts": "2026-10-13T10:15:52.754276+00:00",
+        "last_ts": "2026-10-13T10:15:52.754276+00:00",
         "coverage_hours": 0,
         "slope_per_hour": null,
         "ready": false
@@ -20105,9 +20445,13 @@
         [
           "2026-10-13T06:36:35.127509+00:00",
           44
+        ],
+        [
+          "2026-10-13T10:15:52.754276+00:00",
+          45
         ]
       ],
-      "trajectory_n": 6
+      "trajectory_n": 7
     },
     {
       "topic_id": "last-to-leave-mansion-keeps-it",
