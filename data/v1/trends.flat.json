@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T03:05:06.871488+00:00",
+  "generated_at": "2026-10-13T03:58:19.303357+00:00",
   "sample": false,
   "source_count": 393,
   "trends": [
@@ -2621,15 +2621,15 @@
         "per_platform": {
           "x": {
             "snapshots": 14,
-            "latest_velocity": 88,
-            "delta": 43,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 88 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,24.0 29.8,14.0 38.5,24.0 47.1,14.0 55.7,4.0 64.3,4.0 72.9,6.0 81.5,6.4 90.2,6.4 98.8,6.8 107.4,6.8 116.0,6.8\" fill=\"none\"/></svg>"
+            "latest_velocity": 87,
+            "delta": 42,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 87 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,24.0 29.8,14.0 38.5,24.0 47.1,14.0 55.7,4.0 64.3,4.0 72.9,6.0 81.5,6.4 90.2,6.4 98.8,6.8 107.4,6.8 116.0,7.2\" fill=\"none\"/></svg>"
           },
           "youtube": {
             "snapshots": 14,
-            "latest_velocity": 88,
-            "delta": 43,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 88 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,24.0 29.8,14.0 38.5,24.0 47.1,14.0 55.7,4.0 64.3,4.0 72.9,6.0 81.5,6.4 90.2,6.4 98.8,6.8 107.4,6.8 116.0,6.8\" fill=\"none\"/></svg>"
+            "latest_velocity": 87,
+            "delta": 42,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 87 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,24.0 29.8,14.0 38.5,24.0 47.1,14.0 55.7,4.0 64.3,4.0 72.9,6.0 81.5,6.4 90.2,6.4 98.8,6.8 107.4,6.8 116.0,7.2\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3124,9 +3124,9 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 10,
-            "latest_velocity": 63,
-            "delta": 18,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 63 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,14.0 28.9,4.0 41.3,14.0 53.8,16.0 66.2,16.4 78.7,16.4 91.1,16.8 103.6,16.8 116.0,16.8\" fill=\"none\"/></svg>"
+            "latest_velocity": 62,
+            "delta": 17,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 62 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,14.0 28.9,4.0 41.3,14.0 53.8,16.0 66.2,16.4 78.7,16.4 91.1,16.8 103.6,16.8 116.0,17.2\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -4048,47 +4048,7 @@
       }
     },
     {
-      "id": "new-avatar-series-isn-t-a-direct-commentary-on-the",
-      "title": "New Avatar series isn't a direct commentary on the Korra fandom #nycc",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/shorts/SO6IbHA81NI",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#nycc"
-      ],
-      "detected_at": "2026-10-13T02:33:20.972689+00:00",
-      "summary": "IGN · published 2026-10-13. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 47,
-        "latest_velocity": 47,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "topic-2",
+      "id": "topic",
       "title": "#バーガータワー",
       "source": "mastodon-trends",
       "url": "https://mastodon.social/tags/%E3%83%90%E3%83%BC%E3%82%AC%E3%83%BC%E3%82%BF%E3%83%AF%E3%83%BC",
@@ -4097,8 +4057,8 @@
       "hashtags": [
         "#バーガータワー"
       ],
-      "detected_at": "2026-10-13T03:02:11.589531+00:00",
-      "summary": "286 recent uses across the fediverse",
+      "detected_at": "2026-10-13T03:54:21.024668+00:00",
+      "summary": "291 recent uses across the fediverse",
       "category": "culture",
       "platforms": [
         "mastodon"
@@ -4452,6 +4412,91 @@
             "latest_velocity": 93,
             "delta": 23,
             "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 70 when tracking started (Oct 12, 2026), 93 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,4.0 48.8,4.0 71.2,4.8 93.6,4.8 116.0,5.6\" fill=\"none\"/></svg>"
+          }
+        }
+      }
+    },
+    {
+      "id": "one-dead-and-more-injured-after-incident-on-six-fl",
+      "title": "One dead and more injured after incident on Six Flags rollercoaster in US",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd2ZYRWRjdFRINGoyb0RCRjM5ejFWZnVjOGpSM0ZIM0Z2ZFB2a1VzNFJDcnVaeXJhdnF2NnYzNF9aeS1oU05rRTlZMXlSOFZORm5HaXJrRndtdEFNMzBPQUR1Qlg3ZTBPc3pSTlhGZDhudV9ZWnZqcTYzeVhpOC1NT2ZtbGlHbkFrMENQeERR?oc=5",
+      "velocity": 70,
+      "opportunity_score": 46,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:00:16.709945+00:00",
+      "summary": "The Guardian · Tue, 13 Oct 2026 02:48:04 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top",
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 95,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "selma-blair-arrested-after-in-flight-incident",
+      "title": "Selma Blair arrested after in-flight incident",
+      "source": "gnews-entertainment",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOYlFVUVpDQ1dvR29tZVV3YlRUbU51cmtOVHJfclBhZUVrZW1MQXNLem1qc1c3WUVSb1NBNEF6ZU1KV1ZfaHBEQTA2SG9IZWJuZ3UyWklaU1I5V3VDcml4ZUZJYjc1Tk55OWhHcGtyU3V3MzMzVEZsXzhwOExvNC1JZ1lrMNIBiAFBVV95cUxNYTlQemtBZ0tCSVd0UkVacXFZeU9oOVNnSHBmWmhSOVQxNnhkckU1czlkRGp6WGVVeEdjaEo2ZWJ4QWxxTkZtZVJybmhYSFBta1Y4cV9BN1A2MlgxRXB6U0hseWpZLVZvVkhpdWtHdzhnb2Rhclc1dy1raFpCSkR5RVhkbVpFNi16?oc=5",
+      "velocity": 70,
+      "opportunity_score": 46,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:37.759434+00:00",
+      "summary": "Fox News · Mon, 12 Oct 2026 18:13:52 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "google",
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-entertainment",
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 70,
+        "latest_velocity": 70,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          },
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
           }
         }
       }
@@ -10955,58 +11000,6 @@
       }
     },
     {
-      "id": "derek-cianfrance-to-adapt-gary-paulsen-s-survival-",
-      "title": "Derek Cianfrance to Adapt Gary Paulsen’s Survival Book 'Hatchet' for Netflix",
-      "source": "reddit-rss:r/movies",
-      "url": "https://www.reddit.com/r/movies/comments/1x45i9e/derek_cianfrance_to_adapt_gary_paulsens_survival/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T22:12:48.473476+00:00",
-      "summary": "u//u/EThorns · r/movies · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok",
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 6,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,24.0 48.8,24.0 71.2,24.0 93.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "reddit": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"reddit velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,14.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "tiktok": {
-            "snapshots": 6,
-            "latest_velocity": 93,
-            "delta": 23,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"tiktok velocity trend: 70 when tracking started (Oct 12, 2026), 93 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,4.0 48.8,4.0 71.2,4.8 93.6,4.8 116.0,5.6\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 6,
-            "latest_velocity": 93,
-            "delta": 23,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 70 when tracking started (Oct 12, 2026), 93 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,4.0 48.8,4.0 71.2,4.8 93.6,4.8 116.0,5.6\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "hate-those-vids-sooo-much",
       "title": "Hate those vids sooo much.",
       "source": "reddit-rss:r/YouTube",
@@ -11270,44 +11263,6 @@
       }
     },
     {
-      "id": "ilhan-omar-home-search-reports",
-      "title": "Ilhan Omar home search reports",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Ilhan+Omar+home+search+reports",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T22:14:25.586335+00:00",
-      "summary": "Posts discuss unconfirmed reports of a federal search at Rep. Ilhan Omar's DC residence.",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 6,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,24.0 48.8,24.0 71.2,24.0 93.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 6,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 70 when tracking started (Oct 12, 2026), 95 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,4.0 48.8,4.0 71.2,4.0 93.6,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "who-is-vfmaddrnd231pd",
       "title": "Who Is Vfmaddrnd231pd?",
       "source": "hackernews",
@@ -11504,58 +11459,6 @@
             "latest_velocity": 68,
             "delta": 23,
             "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 68 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,4.0 48.8,4.0 71.2,4.8 93.6,4.8 116.0,5.6\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "warren-buffett-bought-this-magnificent-artificial-",
-      "title": "Warren Buffett Bought This Magnificent Artificial Intelligence (AI) Stock a Year Ago. Here's Why It's Still a Buy Today.",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdlpRZ2kyazdNYi1HNzVmMWRabFlRVUNHb28yOEphakthbjdmdXctZjRVVG40TEZuN2lOMUgtRUdCY0pfeGhKVjAxNjIyQWZTbWZnOUdGd2p2OWhQUVdWQ3R3QUlnTXF4OThxdmU5S3JMQ3MwTDFYRkt4c2hnRVdaTkVPVkpBNDhMeF9ZNWk4UFlHSTFMRDd1MnU3N0pYcTFjMkV6SEZEcjEtRkk0?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T23:22:16.588637+00:00",
-      "summary": "Yahoo Finance · Mon, 12 Oct 2026 18:20:00 GMT",
-      "category": "tech",
-      "platforms": [
-        "youtube",
-        "x",
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 5,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "google": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 70 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "x": {
-            "snapshots": 5,
-            "latest_velocity": 68,
-            "delta": -2,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 70 when tracking started (Oct 12, 2026), 68 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 32.0,4.0 60.0,14.0 88.0,14.0 116.0,24.0\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 5,
-            "latest_velocity": 68,
-            "delta": -2,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 70 when tracking started (Oct 12, 2026), 68 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 32.0,4.0 60.0,14.0 88.0,14.0 116.0,24.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -11918,44 +11821,6 @@
       }
     },
     {
-      "id": "christopher-columbus-s-legacy",
-      "title": "Christopher Columbus's legacy",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Christopher+Columbus%27s+legacy",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T23:23:50.932790+00:00",
-      "summary": "Around Indigenous Peoples Day, people discuss the explorer's role in colonization and genocide in the Americas.",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 5,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 70 when tracking started (Oct 12, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "david-pocock-concerned-senior-albanese-adviser-vet",
       "title": "David Pocock concerned senior Albanese adviser ‘vetted’ bipartisan AI letter that was sent to PM",
       "source": "gnews-ai",
@@ -12260,44 +12125,6 @@
       }
     },
     {
-      "id": "what-to-watch-this-week-new-shows-and-movies-to-st",
-      "title": "What To Watch This Week: New Shows And Movies To Stream On Netflix, Hulu, Prime Video, Apple TV And More",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZEtyM0ZyUXVSbzZXNGJVX1FoOHVVYmRhVGhoc3dtOHZNbWNCZ016Y2FFM3VjcjlCNGhsMVlkSVpFcWdYRWxyZ1NLaXV2R3NBbUJQcXNtREV3eW0tb19zZHRWS1VnVUVSRC1hNkFPZHNwSl9oVFI2UWJUc1FGVHYtU3kzaGlOVlc1aGt1Z2JLUEttR3d4eVRGQkYtdUNWS1IxNFJjd1pEUGJ3OFdtYVc4aWt2bHhyVWhVQmlDTWJlMzBWV3pzN2RfTEptZG9nVDVyc2R4R1A4ZEJqVXd6NlRnRU51SzNBeHl1?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T00:20:21.697308+00:00",
-      "summary": "Forbes · Mon, 12 Oct 2026 15:37:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 4,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,24.0 78.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "google": {
-            "snapshots": 4,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (4 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 41.3,14.0 78.7,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "jessica-lange-fx-was-too-cheap-to-pay-for-cars-hom",
       "title": "Jessica Lange: FX Was Too Cheap to Pay for Cars Home From the 'AHS Set",
       "source": "reddit-rss:r/television",
@@ -12488,44 +12315,6 @@
       }
     },
     {
-      "id": "trump-looking-at-firing-athens-ambassador-guilfoyl",
-      "title": "Trump ‘looking at’ firing Athens ambassador Guilfoyle over alleged plea for cash",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWXJwcDJLVk1nSThGSHJicG1NM0xhWldGMExVSkNCTlZFQXgxTl9aZEpLR2tzMnRGdWVUMUxzSGdfak5ONVo5S2o4VThLeTJKUTIyczdNSzdsYmdOMGhxcTNsWDdiRGVHSmFvSkxmcFJHZHFQNFFtNzc1N2NkRlBRNVhvOFRLUkdncHB3OVRPQXJGd2plYVNoWQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:46:01.738949+00:00",
-      "summary": "Politico · Mon, 12 Oct 2026 23:38:00 GMT",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "google": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 70 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "auto-research-integer-multiplication-below-n-log-n",
       "title": "Auto Research: Integer multiplication below n log n",
       "source": "hackernews",
@@ -12678,44 +12467,6 @@
       }
     },
     {
-      "id": "when-you-spend-your-life-lifting-others-up-moments",
-      "title": "When you spend your life lifting others up, moments like this mean more 🥺",
-      "source": "yt-rss:ESPN",
-      "url": "https://www.youtube.com/shorts/zPaLAv7VQyA",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:48:47.675827+00:00",
-      "summary": "ESPN · published 2026-10-13. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:ESPN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "youtube": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "omar-raja-surprises-community-hero-lester-bodiford",
       "title": "Omar Raja surprises community hero, Lester Bodiford with Super Bowl tickets 🙌 🎫",
       "source": "yt-rss:ESPN",
@@ -12725,82 +12476,6 @@
       "hashtags": [],
       "detected_at": "2026-10-13T01:48:47.675934+00:00",
       "summary": "ESPN · published 2026-10-13. Watch as Omar Raja and the crew on Monday Night Countdown surprise Lester \"Les\" Bodiford with Super Bowl tickets. Bodiford has shown up for South Los Angeles, coaching youth football in Watt",
-      "category": "sports",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:ESPN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "youtube": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "some-of-anthony-edwards-nastiest-dunks",
-      "title": "Some of Anthony Edwards’ nastiest dunks 🔥",
-      "source": "yt-rss:ESPN",
-      "url": "https://www.youtube.com/shorts/h3NYUtZKzek",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:48:47.675947+00:00",
-      "summary": "ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:ESPN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "youtube": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "kyrie-and-cade-hoops",
-      "title": "Kyrie and Cade hoops?",
-      "source": "yt-rss:ESPN",
-      "url": "https://www.youtube.com/shorts/hK14TRYdOwQ",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:48:47.676002+00:00",
-      "summary": "ESPN · published 2026-10-12. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
       "category": "sports",
       "platforms": [
         "youtube"
@@ -12868,44 +12543,6 @@
       }
     },
     {
-      "id": "valor-mortis-release-supernatural-napoleon-soulsli",
-      "title": "Valor Mortis Release: Supernatural Napoleon Soulslike Game From Lyrical",
-      "source": "gnews-q:video games",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSERiNGxYTjlnVEUzUUU5T2Z2UkxHUlFiS0NOUENkSGxMdURPT21Yb29iN19xVm13VFBNUHVaZE1hbG5iWEI0V3NIbGlMSjRBY3lPYkgwU25HbjkyMFhUOUZkbUFHcll4Ty1HdkhJR0tvb3RKVGVLWHlfeEtOOXdVb0FfTXNCbDliMTBPdTA1Um5MNUdwR2VrWFNBNEFCcXN6SHdwR1NmUUp1NzlRZjBLR0kzT3g?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:46:18.688978+00:00",
-      "summary": "Variety · Mon, 12 Oct 2026 14:00:00 GMT",
-      "category": "gaming",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:video games"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "google": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "beatles-movies-release-details-all-4-films-coming-",
       "title": "'Beatles' Movies Release Details: All 4 Films Coming in April 2028",
       "source": "gnews-q:movies",
@@ -12915,44 +12552,6 @@
       "hashtags": [],
       "detected_at": "2026-10-13T01:46:21.053144+00:00",
       "summary": "The Hollywood Reporter · Mon, 12 Oct 2026 15:53:32 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "google": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "kristen-stewart-s-bold-2020-sci-fi-horror-movie-is",
-      "title": "Kristen Stewart's Bold 2020 Sci-Fi Horror Movie Is A Gem Streaming On Prime Video",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1Qa2luQ2tzZjlISEQ0M2JqczJSalA3alAwZ3lCQWVtNGJRNGpiamtGeHpjX0puZDhxdjJ3NURGUmdLV2hFT1drSW9sU1Y4VUJxZ0l2UmEycnBfbVBHR2hvN2J3SUpxUQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:46:21.053164+00:00",
-      "summary": "IMDb · Tue, 13 Oct 2026 01:26:18 GMT",
       "category": "entertainment",
       "platforms": [
         "google"
@@ -13248,44 +12847,6 @@
       }
     },
     {
-      "id": "hytale-early-access-chapter-i-official-trailer",
-      "title": "Hytale Early Access: Chapter I (Official Trailer)",
-      "source": "reddit-rss:r/gaming",
-      "url": "https://www.reddit.com/r/gaming/comments/1x4374o/hytale_early_access_chapter_i_official_trailer/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:46:52.459160+00:00",
-      "summary": "u//u/Luzekiel · r/gaming · 2026-10-12",
-      "category": "gaming",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/gaming"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "reddit": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"reddit velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "greatest-hits-before-they-released-their-biggest-h",
       "title": "greatest hits before they released their biggest hit",
       "source": "reddit-rss:r/Music",
@@ -13438,44 +12999,6 @@
       }
     },
     {
-      "id": "niche-historical-inaccuracies-in-media",
-      "title": "Niche historical inaccuracies in media",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Niche+historical+inaccuracies+in+media",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T01:48:16.912495+00:00",
-      "summary": "Users point out tiny period errors in films, TV and games, like toys released years too late.",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 3,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 3,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "russia-says-its-diesel-exports-may-exceed-volumes-",
       "title": "Russia says its diesel exports may exceed volumes announced by Trump",
       "source": "gnews-top",
@@ -13492,82 +13015,6 @@
       "format_tags": [],
       "sources": [
         "gnews-top"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "why-moscow-is-staying-tight-lipped-on-trump-s-ener",
-      "title": "Why Moscow is staying tight-lipped on Trump's energy ceasefire",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUMUtkZGVZcjNCYy1COUlieTJqalZfbG1RSk5ESFZfWjVJX0ZzMWtXMmxhbTJaT3VYXzNqSDRjSllTWlV1THRwbjU5WnVTY1JCYUVwWUk2dGdUcEU?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:12:17.380039+00:00",
-      "summary": "BBC · Mon, 12 Oct 2026 20:17:37 GMT",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "an-overlooked-sci-fi-movie-shows-how-disruption-by",
-      "title": "An overlooked sci-fi movie shows how disruption by AI could be positive for society",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNQ2Rrd2wzUUJDNzB6cExrNWRhQmZhQ2Zac2ZkZ3Z1YjNEUy04WWRkbE5FV3lYcTN3NUY0eHVWN0RNQTU1NWFfc3N0ZElkNlVjNTJSbHZLbWp4UHo2R2ZtMkd5NXZ4dzl1RFBVRm9oYlFsU0lQWENOdzVKcEtsODc0dWxETjRBbV9xYUZiN0hzUEZ0cGtSdFZJVHJkanVlck5jSkFlRXF3ZFdxVWNSQnBNTDE1MGdIOFQxOUE?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:12:23.412118+00:00",
-      "summary": "The Conversation · Mon, 12 Oct 2026 15:00:40 GMT",
-      "category": "tech",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
       ],
       "trend_type": "topic",
       "format_family": null,
@@ -13894,44 +13341,6 @@
       }
     },
     {
-      "id": "what-we-re-listening-to-this-month",
-      "title": "What We're Listening to This Month",
-      "source": "gnews-q:new music",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBpWUdwWkdwUXJ1aHJCampMdXBBaGMxSXBsNnlvRmV3UGVjNlladUEtUjdDbVpoWlJ5djBXZFQxR2tYdVJXZS1kX2dXd1FDcEdtUzVvQy1VWnBsWGxxaHppOXFRb0dCU3J1VUpJejA1SVFwcjVWNGc?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:12:36.358745+00:00",
-      "summary": "Mpls.St.Paul Magazine · Mon, 12 Oct 2026 22:27:15 GMT",
-      "category": "music",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:new music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
       "id": "raye-this-music-may-contain-hope-pop",
       "title": "RAYE - THIS MUSIC MAY CONTAIN HOPE. [Pop]",
       "source": "reddit-rss:r/Music",
@@ -14008,44 +13417,6 @@
       }
     },
     {
-      "id": "paxton-s-dubai-new-year-s-party",
-      "title": "Paxton's Dubai New Year's party",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Paxton%27s+Dubai+New+Year%27s+party",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:13:59.267909+00:00",
-      "summary": "Report says the Texas Senate candidate celebrated with two US fugitives and a woman not his wife",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
       "id": "calls-show-how-confusion-delayed-emergency-respons",
       "title": "Calls Show How Confusion Delayed Emergency Response for Christa Pike",
       "source": "gnews-top",
@@ -14084,462 +13455,6 @@
       }
     },
     {
-      "id": "how-artificial-intelligence-can-help-with-critical",
-      "title": "How Artificial Intelligence Can Help With Critical Thinking",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTDRyeXZvdHEtSXdXV1Y4T3UxZzk3UEY1ZjN5RzhoMld1RHQ5MWxqNWtkOXhiVklVam4xUE0ySDR5NkxnT1VYakd6MUpFNjkzQjdMOXJaWERiWUQ3T2hEcHh6LTVVSHI3bWVlYWdIMUdOYzU5QW94V0Q5Mm5WNllGMFlUdFFWRU9vaXdyRlEtRlZ4MUdsZXlKN2NkVXBoaFd1YVVvVlNvM3pBZw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:30:07.427578+00:00",
-      "summary": "Greater Good: The Science of a Meaningful Life · Mon, 12 Oct 2026 19:16:19 GMT",
-      "category": "tech",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "deploy-decision-models-with-llama-cpp-on-amazon-sa",
-      "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQeEJ4aV9QaE94bk16SU93TlNmbjd1cFRoQXBNSjZONzYzNmJwcUZyeExsUkJ1V0ozSUhHeTU4ZW1TX1dybkg0bzBtYy1Nbl92Tk4wbk5VMjFzejVCMWNZcFNZUTBlRkRGNl9wRG54dHlEUTNGRlVYRmdxc0FhWkxtbUV5Z1FJekR5VFBPZVRIZm9nZjFDVEZXOEN2TkVPWUk5a0hORWNvdDktaVk?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:30:07.427594+00:00",
-      "summary": "Amazon Web Services (AWS) · Mon, 12 Oct 2026 15:51:46 GMT",
-      "category": "tech",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "zip-tie-tuning-vs-linus-tech-tips",
-      "title": "Zip Tie Tuning vs Linus Tech Tips",
-      "source": "yt-rss:LinusTechTips",
-      "url": "https://www.youtube.com/shorts/UWAWDu0anSs",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:16.315585+00:00",
-      "summary": "LinusTechTips · published 2026-10-12. We put Zip Tie Tuning and Linus Tech Tips head to head. Who knows more tech acronyms?",
-      "category": "tech",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:LinusTechTips"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "don-t-buy-a-pro-controller-do-this-instead",
-      "title": "Don’t Buy a \"Pro\" Controller. Do This Instead",
-      "source": "yt-rss:LinusTechTips",
-      "url": "https://www.youtube.com/watch?v=79s8O7Cipl0",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:16.315728+00:00",
-      "summary": "LinusTechTips · published 2026-10-03. Start building your website today! Visit https://squarespace.syuh.net/LTT and use offer code LTT for 10% off\n\nFirst-party Xbox and PlayStation controllers are built to last, but they’re often missing",
-      "category": "tech",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:LinusTechTips"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "i-have-strong-feelings-about-air-conditioning-in-t",
-      "title": "I Have Strong Feelings About Air Conditioning in the Tech House",
-      "source": "yt-rss:LinusTechTips",
-      "url": "https://www.youtube.com/watch?v=1H20xp8Brnc",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:16.315737+00:00",
-      "summary": "LinusTechTips · published 2026-10-01. Get a free 15-day trial of Odoo’s all-in-one business solution and see how it can make your life easier! Check it out at https://www.odoo.com/ltt\n\nIt is HOT in the Tech House, and we're tired of sweat",
-      "category": "tech",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:LinusTechTips"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "valor-mortis-is-a-first-person-soulslike-that-has-",
-      "title": "Valor Mortis is a first-person Soulslike that has BioShock vibes",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/shorts/Tdy0ge7g3CQ",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:20.972772+00:00",
-      "summary": "IGN · published 2026-10-13. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "ign-fan-fest-2026-fall-edition-livestream-dragon-b",
-      "title": "IGN Fan Fest 2026: Fall Edition Livestream – Dragon Ball, VisionQuest, Whalefall, and More!",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/watch?v=b23mjjnq4XQ",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:20.972786+00:00",
-      "summary": "IGN · published 2026-10-12. IGN Fan Fest 2026: Fall Edition is here! The showcase kicks off at 10am PT / 1pm ET for exclusive reveals from TV series including Cyberpunk: Edgrunners, Blue Eye Samurai, IT: VisionQuest, The Walking",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "the-new-miami-vice-starring-michael-b-jordan-and-a",
-      "title": "The new Miami Vice starring Michael B. Jordan and Austin Butler is coming in 2028",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/shorts/T4B2QA4ySUI",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:20.972794+00:00",
-      "summary": "IGN · published 2026-10-12. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "a-mix-of-personal-and-professional-issues-turned-b",
-      "title": "A mix of personal and professional issues turned Ben Affleck off from making his Batman movie",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/shorts/c7L8pJV6heg",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:20.972801+00:00",
-      "summary": "IGN · published 2026-10-12. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "bill-murray-is-back-as-a-ghostbuster",
-      "title": "Bill Murray is back as a Ghostbuster",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/shorts/ikC-TrfRBqE",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:20.972807+00:00",
-      "summary": "IGN · published 2026-10-12. Subscribe to IGN for more!\nhttp://www.youtube.com/user/IGNentertainment?sub_confirmation=1\n\n#IGN",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "cozy-after-dark-2026-cozy-games-with-a-dark-side",
-      "title": "Cozy After Dark 2026 | Cozy Games With a Dark Side",
-      "source": "yt-rss:IGN",
-      "url": "https://www.youtube.com/watch?v=CvEgCXixsNw",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:20.972833+00:00",
-      "summary": "IGN · published 2026-10-12. Welcome to the first-ever Cozy After Dark Showcase!\n\nCozy on the surface. Creepy underneath.\n\nCozy After Dark Steam Event:\nhttps://store.steampowered.com/curator/45664741/sale/TheCozyAfterDarkShowcase",
-      "category": "gaming",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:IGN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "anthony-edwards-takeover-in-nyc",
-      "title": "ANTHONY EDWARDS TAKEOVER IN NYC 😯🍿",
-      "source": "yt-rss:ESPN",
-      "url": "https://www.youtube.com/shorts/DnDQUMMGnWo",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:33:22.905468+00:00",
-      "summary": "ESPN · published 2026-10-13. ✔️ Subscribe to ESPN Unlimited: https://plus.espn.com/\n\n#ESPN",
-      "category": "sports",
-      "platforms": [
-        "youtube"
-      ],
-      "format_tags": [],
-      "sources": [
-        "yt-rss:ESPN"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "youtube": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
       "id": "gta-6-is-sold-out-on-amazon-despite-being-a-digita",
       "title": "'GTA 6' is sold out on Amazon despite being a digital-only game",
       "source": "gnews-q:video games",
@@ -14570,8 +13485,8 @@
         "per_platform": {
           "google": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14608,8 +13523,8 @@
         "per_platform": {
           "google": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14646,46 +13561,8 @@
         "per_platform": {
           "google": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "what-to-watch-tonight-30-new-shows-and-movies-just",
-      "title": "What to watch tonight: 30 new shows and movies just added to Netflix, Hulu, Peacock and more (Oct. 12)",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOVWNfVEtacUJaTGFSMG5QTmhEbVBjTmRteTJORGFSZVcyN1cxa3JKdERCLXBlV1dfaFRmWE4ybTgzSXV0R2Qxdktta2tHazVQRGJOZzlMdEVnT2NLS2pWa3doQmlfR2Qxd01TaGNJSWdzTXhDeWpOZ1psLWRPcU52Q0F1cjdSU1JxUlItRlRYemMtQ0NVX1p5TzlzSHpEVURYUEJLbzNuZTVTZUNXOW51NVltZlFGeHczTG9JTi1jelJkMDBBejJRYXBwVTNtS2szdHJSUlJ0bWVXdmFmTDJKQlZMQ0RFQQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T02:30:30.349933+00:00",
-      "summary": "Tom's Guide · Mon, 12 Oct 2026 16:00:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14722,8 +13599,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -14760,425 +13637,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "u-s-and-nato-commander-vows-to-thwart-moscow-warns",
-      "title": "U.S. and NATO commander vows to thwart Moscow, warns Kyiv over refinery strikes",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOVIwNmNCdG1jLWtWYkNTZW9EOGM1MnozMGlWTXNBVEFiaWlXU28yc3NjWVlXMkF0SXJJXzFlSllzZ24tRWVTTHhRcFN0RTk1NHlHWEwwQWN1SG5lWExtc1paNHhHNHhxa01uekw3Zk9BR3ZMNzQ0T0k1YkZlNXpVelU1MVB3VTl2c3dwWlZSOFRvNnhRWXZlTHpORXZoYnlCS2s3RXB5c2s1QXFwN1E?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:16.709868+00:00",
-      "summary": "The Washington Post · Tue, 13 Oct 2026 00:54:23 GMT",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "one-dead-and-more-injured-after-incident-on-six-fl",
-      "title": "One dead and more injured after incident on Six Flags rollercoaster in US",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd2ZYRWRjdFRINGoyb0RCRjM5ejFWZnVjOGpSM0ZIM0Z2ZFB2a1VzNFJDcnVaeXJhdnF2NnYzNF9aeS1oU05rRTlZMXlSOFZORm5HaXJrRndtdEFNMzBPQUR1Qlg3ZTBPc3pSTlhGZDhudV9ZWnZqcTYzeVhpOC1NT2ZtbGlHbkFrMENQeERR?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:16.709945+00:00",
-      "summary": "The Guardian · Tue, 13 Oct 2026 02:48:04 GMT",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "exclusive-ken-paxton-partied-in-dubai-with-fugitiv",
-      "title": "Exclusive | Ken Paxton Partied in Dubai With Fugitives Ahead of High-Stakes Texas Senate Race",
-      "source": "gnews-top",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcnp4SzJLZDczcjFGUXVmemxyQS1abFdTbEh1T3NWY3pXVEdHcDdGUG1CRDMyQy1Tcm4xNzNSZTFpaEs4NEhyeUFwc21ubzNiUWdyLVpuUmhWTmFIYWhoLVVuMnM1LXFkamZXMGtXbjRZRW1qSkJ0RTZOTVRBbzdKSlhwcy1JQQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:16.710062+00:00",
-      "summary": "WSJ · Tue, 13 Oct 2026 01:00:00 GMT",
-      "category": "news",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-top"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "matthew-lillard-calls-neve-campbell-a-remarkable-f",
-      "title": "Matthew Lillard calls Neve Campbell a ‘remarkable final girl’ weeks after sharing regret over “Scream 7” return",
-      "source": "gnews-entertainment",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeWl4LU1UU3NfY2Y1NTlIWG1IQjgxUVFHaEFkYUREc1N0cW85ZERaWVlUS1FBNlcxZUVzNTVydWl1Ty02Vno5ZWJzVW9SQ2kzMGhJWWcyLUZhQ3dpN1MxM1hSbFlQZzZFWVZ4ZDBWc2d6dmY5RjhKWUgxYkw1SG1GYXV4VjhTSWwwdS1kSmw2YXR5ZC1SNG5Wa0hiRWxUY1d4bnRFcA?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:19.425953+00:00",
-      "summary": "Yahoo · Mon, 12 Oct 2026 23:43:54 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-entertainment"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "james-madison-to-exit-sun-belt-join-american-confe",
-      "title": "James Madison to exit Sun Belt, join American Conference",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTm5UZnJGX01GNFJLSU11WWdWWms5YkdSdzhMV0hqMGxGaVJqWWc3U3RwNWZHMm40YmdVcHZ5czNjX2pGLWxNOFpUS0dFcmZTaDhOcTFwdDhvaFhmdURjakNIT1VycE85Zm1scVhYQ3JiMzlKWGFKM185YXBGaWVzYk11UWNleFpSQ3JWeWQ4NjdnaHhVeGNNZmdYc1pkUnlsNFpGcTBqOHlMcmw3?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898285+00:00",
-      "summary": "ESPN · Mon, 12 Oct 2026 14:53:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "georgia-takes-top-spot-over-miami-notre-dame-in-co",
-      "title": "Georgia takes top spot over Miami, Notre Dame in college football rankings",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNemJjLVhBTVRObDFCMGt6XzNsQ1B1Q3gzWERuSmFJeU5ESllld0JBaDJQVkJpZmxHXzNiOU1TMEVPRHJ6dFJtZlZVenJBZC1ITDl4WWg4RDloUEs3NkxNTFhaN1VmeWJ0alpFVjgwd1JDRXVHMlZCM0c1cm5pU091WFV0UTU5RC1Ec0kwejA0WVZVSGtxbW1rcnFLQ2drYkM4b2xMd24wZlVlbmVYN01zb2RzQmg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898353+00:00",
-      "summary": "CBS Sports · Mon, 12 Oct 2026 14:22:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "insider-suggests-former-yankees-manager-replace-aa",
-      "title": "Insider Suggests Former Yankees Manager Replace Aaron Boone",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMU5qM2lzcUJfd0RGbFBMcmxHcGFFb0hFaUw1RUFxR1dubFEzaEFkWk9xSzBiUXkwMmFIVGxKV1EwR2lCQnAzTEd4ZWFEOWZEbkhEMDlaQTVxTVUwQ2J3YTRFeEZYWHR6RUkzUThqZjFaMVd6a1dxSVZ6bVNXUDVsZjdtQ0lUenprc0pLNHNaVlQ4QQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898392+00:00",
-      "summary": "Yahoo Sports · Tue, 13 Oct 2026 02:17:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "celtics-paul-george-quiets-all-boston-haters-with-",
-      "title": "Celtics' Paul George Quiets All Boston Haters With Simple Comment",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX2ljWTA1T1FpYTFZdXNoREFSYTY0TXVxblJkR2M2OFdZZ2tKTHFZS3dFcUUtcjBJWjJ4Z19EaEVVUHVlcTBFamZLenFGeTlQQUJRWGJVMnc2RlV5MGJYNXVyV1AwT3Izdjdvd1BEZWNvc1Q0QWF5UUhtUFl1OWMyNGxwZTFTLXNnaHc?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898410+00:00",
-      "summary": "Yahoo Sports · Tue, 13 Oct 2026 02:10:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "jeff-hafley-shuts-down-dolphins-qb-change-talk-for",
-      "title": "Jeff Hafley Shuts Down Dolphins QB Change Talk — For Now",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbzdaVE5pRy1FSlhRVUFCYlpSbGZQaENtaTBOQzNxNGYtMjBTdWdoWV9hQUd3VXJ0QldIYzZ4QTlxb2I0R3MycmRSaTAwOXdMTkpSZGVqdDZTVU4zaXctaG1hdkc5MGNna3BSTUVxV3RsOXFlSEtNR2hUeDZ4cmlFQ3BUbUpGUmM?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898433+00:00",
-      "summary": "Yahoo Sports · Tue, 13 Oct 2026 02:22:18 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "dan-quinn-remains-employed-for-now-somehow",
-      "title": "Dan Quinn remains employed for now, somehow",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSUJzaUZoMG9UY0lIdU9nZi1TZVdDcEtGVzlCYndWOGJORzlDMHBkdWV5blRxS29GZHpHWDVWcVdmaUxtc3RPMTByUVFjN2VVNVNMeTJvZnl1WmphbU9nOXJheVpjMm1uRU80d1c2TDQ4Q2hIQ1hMem8wOWZpOVA2VUIxRHRqcm5MdDlESWhUNkRIbkdIWWNhTWJHZmhPRU11Q1l4VE9qdw?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898450+00:00",
-      "summary": "NBC Sports · Mon, 12 Oct 2026 16:55:50 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "connections-sports-edition-today-hints-and-answers",
-      "title": "Connections: Sports Edition today: Hints and answers for Oct. 12, 2026, puzzle No. 749 - The Athletic",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPN1AteXprZUlmVTNFZGs1WWVMNGtrdTdmRks3YldqVlNzVFNhT21BYzk0Q0tjM3pPWTBwMEd3MlY3c20xaDd1dFdXVHFjR3l3cFVkRktRb0xHd3hHNmlqeHlwZ1JSZUdpMDd6bk1FNmhfM2RIR2JmZDdIaXlNTzBidGZEN0p4cmpOZjY5M09Zc1c4TTI5UER3azd5TTBLbnV0QmU5SzQ2dUo?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898467+00:00",
-      "summary": "The New York Times · Mon, 12 Oct 2026 04:00:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15216,83 +13675,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "don-t-bet-against-the-sports-bets",
-      "title": "Don’t Bet Against the Sports Bets",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVl9sZVFJQjFBSVZobzdXemhkWnVwblhWVWQ5WjJ3akJLYWx2RlhadG9tWTFVRDRuNUg0V1NhTUZVeFhYTk1DdUlTWllxRFZrX2t3UklMMEM4OWhoZ2tCU0pKVmhxcnh5Z21zb2ttalRWTzc4QXpLcDRTVTZsR1BqTE1ISm9KcmV6eE9sbE9JakNmdlJP?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.898508+00:00",
-      "summary": "Bloomberg.com · Mon, 12 Oct 2026 16:38:10 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "gop-looks-for-midterm-enthusiasm-boost-from-pro-sp",
-      "title": "GOP looks for midterm enthusiasm boost from pro sports stars",
-      "source": "gnews-sports",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcjlQYWRjX3UzZDhsUlQ1VEFublRQR3EybUFoeWpJR0NhcEY1RVhSWTZmNVFTYjY3VGQzV3FKRmdkZllzYUF1bjdTaTVpYW9KSEdIUkZBYmxyeEE4bXBmWlZILXNnZGtxaHBXRW80aTM1N0JUNjJmem1XRGFZNzgtVHFiT0lia0RqSkk5WXJuQmdZTGs?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:20.900698+00:00",
-      "summary": "The Hill · Mon, 12 Oct 2026 18:08:00 GMT",
-      "category": "sports",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-sports"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15330,7 +13713,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15368,7 +13751,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15406,45 +13789,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "leaving-tech",
-      "title": "Leaving Tech",
-      "source": "hackernews",
-      "url": "https://ryanbigg.com/2026/10/leaving-tech",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:01:14.827211+00:00",
-      "summary": "56 points · 29 comments",
-      "category": "tech",
-      "platforms": [
-        "hackernews"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "hackernews": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15482,45 +13827,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "strengthening-our-defenses-against-distillation-at",
-      "title": "Strengthening our defenses against distillation attacks",
-      "source": "hackernews",
-      "url": "https://www.anthropic.com/research/distillation-defenses",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:01:37.231200+00:00",
-      "summary": "10 points · 12 comments",
-      "category": "tech",
-      "platforms": [
-        "hackernews"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "hackernews": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15558,7 +13865,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15596,7 +13903,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15634,7 +13941,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15672,7 +13979,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15710,7 +14017,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15748,7 +14055,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15786,7 +14093,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15824,7 +14131,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15862,7 +14169,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15900,7 +14207,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15938,7 +14245,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15976,7 +14283,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -16014,45 +14321,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "bryan-cranston-mourns-breaking-bad-son-rj-mitte-i-",
-      "title": "Bryan Cranston Mourns 'Breaking Bad' Son RJ Mitte: 'I’ll Miss You, Son'",
-      "source": "reddit-rss:r/television",
-      "url": "https://www.reddit.com/r/television/comments/1x4l26f/bryan_cranston_mourns_breaking_bad_son_rj_mitte/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:00:55.527429+00:00",
-      "summary": "u//u/MoneyLibrarian9032 · r/television · 2026-10-13",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/television"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -16090,7 +14359,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -16128,7 +14397,7 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -16166,6 +14435,310 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "zelenskyy-says-russia-strikes-energy-facilities-de",
+      "title": "Zelenskyy says Russia strikes energy facilities despite Trump claim of an energy ceasefire",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOX0dybDhlV0JRRVRhUlV6VF9vc3RSclA3dmNldEhENTNNcVQteEdDLVJYTkxXMjczZGRqREhtRm1sUHFUOFAwa3lWMnYxX0dFdV9aM0QtSUV6am9OcnV1YjVBenpWMWd4RmxybnBGU0wxWHpqMUNBQi1EZllvVUZ5bjR6MDl1bmdmYkhLU3FERTVKZkdhOGRfU0VSZkVoQzQya29WV2pGWDR2Z1RTSEF5S0h6Z2lEdl9EcmZfaHI5Y1EwRXfSAcgBQVVfeXFMUDJjVUgycjZITm8wRGg0dnpnaGdfTjI3RDNoT3JIY2tYRzhzb2FZTmhWd25pTEM0R0F2MDZ4TjFkNW11ZEtTSEpNcU1nR1Z4RUhEZTVzVF9jTTBlZmxVb1NqenJBWkhwRVVzektUTjBwNGpQM25Tb3poSjQyR2szTXVPX2dSNURnbzNic2VrMFlXbnJzOVBzdTFzRjZFbDVFYV9Pam1UcVB3V3Q4UGtYVUZTZHRXcTRRbzRXbTl2OTg5a1BwcjNoeXI?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:34.696819+00:00",
+      "summary": "PBS · Mon, 12 Oct 2026 16:07:13 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trump-blew-past-deadline-to-halt-running-taxpayer-",
+      "title": "Trump blew past deadline to halt running taxpayer-funded campaign-style ads",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOMjVuTkluWm8yWWhmV0ItdnVnUEFYVVo4Z1QwUDdFaHVDaVp4bG10YVJSekUtWE5TT2xGVjhrOUFmTmpjRTJpWDFUdWFtTW9MbXp5MkdGRFNvTjU3eS1QVkxjTXQ4MTBtN3prVV9yaXJyT283NHJaYXFjT0luT2lXYUo0bTd0UTFRWUh1dENmdWItSXJwUlNfV1hqbWFXbXFsb1RROFlLQmRpMmZjS1k2RXNqMk16NjlmQUlRR3ZzYk5yTnZjX0E?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:34.696838+00:00",
+      "summary": "The Washington Post · Tue, 13 Oct 2026 01:46:52 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trump-says-kimberly-guilfoyle-could-be-fired-as-gr",
+      "title": "Trump says Kimberly Guilfoyle could be fired as Greece envoy after alleged misconduct",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9LUmJpN1VPY1dEUklDUjN0NU03elM1WFM4cTFRTGZGTnlJbVUxeGtQZ2Y1NU5hMTFvNno0cFdKQnVRYktzdnoxNktsaHFXZkxKaGFOeTNwbFdDek0?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:34.696895+00:00",
+      "summary": "BBC · Tue, 13 Oct 2026 00:10:15 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "furious-judge-halts-tree-removal-demands-answers-o",
+      "title": "‘Furious’ judge halts tree removal, demands answers on Trump’s D.C. golf plan",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcHlnbGZMVFFDWmpMMzI0UVluQThuZUMyRUhWM1FxcG54LW4yaG45dWR6cUJVOE9MdkVyZFhhU2RnZEpocGJLSm9QT0NENDZrOThzVGktSXRWSE5OaWdpc0VVeGloVlVYM3RxcmREZnBmX2UtaHF4VnFYTXRNTXVRMFRvYlJYeGtBb3BoV3ZyWjNuYjhuVEJ0aF9Bam5pdVI5cjBXeVdVZTMzc3BfMnJYQ3RraHJBRGFwVm1PRGdqYUZUdw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:34.696919+00:00",
+      "summary": "The Washington Post · Tue, 13 Oct 2026 01:39:57 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "artificial-intelligence-answers-what-is-the-expect",
+      "title": "Artificial intelligence answers: what is the expected result of the Liverpool v Manchester City match?",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVTBfMHRwa2FRUlNmbF9EaVZWRlFYaVhORG9pT3d4bkk0c2M1VTMtX1ZNNVYzZlk5SU9wVGkwWE9PbHRQMUpiME5pLU9qTDgwNGhzam83aG1Gb2JyVkRuNFZSTU9nam1lSm54NE51S3pmTWtua0dadGNYRVVzSC0zM25YZUtiNE1vbHhjakI4RnBJWHpWbEp6MXJoVVpwSG1Zc2FLX241bGtMamQ0c1dleWZRNTFSd19sa0hkTkVRcHBRVU95SDNTaklSY1NrQkVIekh4S2pBWkYwTl9mUldwQVBzMXg4Uno2cmc?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:56.973326+00:00",
+      "summary": "Goal.com · Tue, 13 Oct 2026 00:13:28 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "meta-debuts-muse-wonder-ai-model-in-latest-test-of",
+      "title": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE11QldFTGNiMGg4N0FwZHE0OGl5ZTBoZkZGdnBjZ1ZyOURmb1lxUHZScVViOXQzMzNmZnJBdlNPbE1xdkVTWEpLSXVPR1R1ajRmTElvSi1JNG5YbHk0SnlnUUhVZzR5SG16YXZyMWFQQWQ2YzRUUmpZ0gF8QVVfeXFMUFVKWjBUSUhEcDFKSk1lQ2M0dVNWMHYtZVVlbkRfS0ZTVnZIQ0E2elc1UEdSbkFKcXRncjhOVjAteDJ0Y0R2YzVhRGlOY0tOWnpuUjN0dmxHSy0zUVk3bW5RWFBlUTJ5LWd0WWMxaEpqVkoxY05pdzY4a3JzSA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:56.979409+00:00",
+      "summary": "CNBC · Mon, 12 Oct 2026 17:00:25 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "meta-says-new-muse-model-hits-ai-frontier-after-ag",
+      "title": "Meta Says New Muse Model Hits AI Frontier After Aggressive Push",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbEE0WWhsM19sbHp4eXRuUHJNeURDWkpQS2tSdE9scThXNUVrWGN0R19KdHZLdXJnZjJQNFJXRnRsNXNWS1RmeGhlSlR6bVFER0JsWjRraFVIeXpZZkZIblc5TmVaeExWYjRqamRnUUl4enVHb0hnN3B5NUdaV1UwVmlmMVE4QlpYWmhQeWlzVUs5X0dTZkVtSHZDdXJZTHNaLWtFQ3luM0puZk91QlQyeWdPTVg0Zw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:56.979482+00:00",
+      "summary": "Bloomberg.com · Mon, 12 Oct 2026 16:56:51 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "ray-dalio-says-this-is-when-the-artificial-intelli",
+      "title": "Ray Dalio Says This Is When the Artificial Intelligence (AI) Bubble Could Pop",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQYnljVGdoaVpRTEtNRlQyeHBZRExjNFFxdFBKS3hoZ3Rnc05ZY0toRVV0dVAxTjF2LUl3ZS1WYmJqcXhjS3pPTDhZMWN3RFktVlhWU3VNRXdEMW9XcTFYdXl0dTJlZEFBeEZESE1Gczh4UF9BTm1LSXIxY0kwbmRwXzZCempBSFJhRkI2WWR6RFZRdVBpRmdHbnBqc0pWNjNmWmU4eA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:50:56.979593+00:00",
+      "summary": "Yahoo Finance · Mon, 12 Oct 2026 16:35:02 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
             "latest_velocity": 45,
             "delta": 0,
             "sparkline_svg": null
@@ -16174,15 +14747,1421 @@
       }
     },
     {
-      "id": "palantir-cto-says-ai-researchers-smoke",
-      "title": "Palantir CTO says AI researchers smoke",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Palantir+CTO+says+AI+researchers+smoke",
+      "id": "openai-algorithm-for-the-fft-is-less-a-breakthroug",
+      "title": "OpenAI algorithm for the FFT is less a breakthrough and more a malicious exploit",
+      "source": "hackernews",
+      "url": "https://www.argmin.net/p/faster-fourier-transforms",
       "velocity": 45,
       "opportunity_score": 45,
       "hashtags": [],
-      "detected_at": "2026-10-13T03:02:13.702316+00:00",
-      "summary": "Shyam Sankar told CBS's \"Face the Nation\" that researchers take up cigarettes believing AI will cure cancer.",
+      "detected_at": "2026-10-13T03:52:24.016201+00:00",
+      "summary": "25 points · 6 comments",
+      "category": "tech",
+      "platforms": [
+        "hackernews"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "hackernews": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "ai-models-can-provably-hide-arbitrary-capabilities",
+      "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+      "source": "hackernews",
+      "url": "https://arxiv.org/abs/2610.13928",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:52:45.445617+00:00",
+      "summary": "15 points · 1 comments",
+      "category": "tech",
+      "platforms": [
+        "hackernews"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "hackernews": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "show-hn-an-experimental-pattern-first-daw-that-sup",
+      "title": "Show HN: An experimental pattern-first DAW that supports MCP",
+      "source": "hackernews",
+      "url": "https://github.com/andrewfader/blokkily",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:53:11.615050+00:00",
+      "summary": "27 points · 15 comments",
+      "category": "tech",
+      "platforms": [
+        "hackernews"
+      ],
+      "format_tags": [],
+      "sources": [
+        "hackernews"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "hackernews": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "extras-i-spent-over-10-hours-upgrading-my-controll",
+      "title": "Extras - I spent over 10 hours upgrading my controllers",
+      "source": "yt-rss:LinusTechTips",
+      "url": "https://www.youtube.com/watch?v=evOOH_G2ti4",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:09.099114+00:00",
+      "summary": "LinusTechTips · 7 days ago",
+      "category": "tech",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:LinusTechTips"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "up-close-with-the-avengers-doomsday-costumes-nycc-",
+      "title": "Up Close with the Avengers: Doomsday Costumes | NYCC 2026",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=sslUG9iOblU",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437494+00:00",
+      "summary": "IGN · 82 thousand views · 8 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "blind-descent-official-release-date-trailer-ign-fa",
+      "title": "Blind Descent - Official Release Date Trailer | IGN Fall Fan Fest 2026",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=fPtwA2ZbKoA",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437505+00:00",
+      "summary": "IGN · 32 thousand views · 8 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "station-58-official-announce-trailer",
+      "title": "Station 58 - Official Announce Trailer",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=T1BW42fLc_Q",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437512+00:00",
+      "summary": "IGN · 28 thousand views · 8 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "anno-117-pax-romana-official-pyramids-trailer-ign-",
+      "title": "Anno 117 : Pax Romana -  Official Pyramids Trailer | IGN Fall Fan Fest 2026",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=BrNtULqIUgE",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437519+00:00",
+      "summary": "IGN · 171 thousand views · 9 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "sifu-official-mobile-launch-trailer",
+      "title": "Sifu - Official Mobile Launch Trailer",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=rBPPryxDXuY",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437526+00:00",
+      "summary": "IGN · 40 thousand views · 10 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "dragon-s-dogma-2-dark-arisen-official-burn-the-sky",
+      "title": "Dragon's Dogma 2: Dark Arisen - Official 'Burn The Sky' Music Video | IGN Fall Fan Fest 2026",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=ajzyG3r-QlI",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437533+00:00",
+      "summary": "IGN · 115 thousand views · 11 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "biohazard-exclusive-teaser-trailer-chandler-riggs-",
+      "title": "Biohazard Exclusive Teaser Trailer: Chandler Riggs' Resident Evil 7 Fan Film (2026)",
+      "source": "yt-rss:IGN",
+      "url": "https://www.youtube.com/watch?v=cYrDu9GBxn8",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:56:48.437539+00:00",
+      "summary": "IGN · 521 thousand views · 11 hours ago",
+      "category": "gaming",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:IGN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "brenda-song-on-her-rams-fandom-the-suite-life-of-z",
+      "title": "Brenda Song on her Rams fandom, The Suite Life of Zack & Cody, viral moments and more | ManningCast",
+      "source": "yt-rss:ESPN",
+      "url": "https://www.youtube.com/watch?v=2qwWLz8m3HU",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:57:11.074791+00:00",
+      "summary": "ESPN · ESPN · and NFL on ESPN · 555 views · 50 minutes ago",
+      "category": "sports",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:ESPN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "peyton-manning-draws-up-brenda-song-s-custom-play-",
+      "title": "Peyton Manning draws up Brenda Song’s custom play ‘Senda Brenda’ 😂 | ManningCast",
+      "source": "yt-rss:ESPN",
+      "url": "https://www.youtube.com/watch?v=IiVZjtx6WLk",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:57:11.074861+00:00",
+      "summary": "ESPN · 533 views · 1 hour ago",
+      "category": "sports",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:ESPN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "aaron-rodgers-was-in-a-zone-pat-mcafee-praises-ste",
+      "title": "'Aaron Rodgers was in a ZONE!' - Pat McAfee praises Steelers for Week 5 win 👏 | The Pat McAfee Show",
+      "source": "yt-rss:ESPN",
+      "url": "https://www.youtube.com/watch?v=drDORGs5LeI",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:57:11.074911+00:00",
+      "summary": "ESPN · 63 thousand views · 10 hours ago",
+      "category": "sports",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:ESPN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "i-m-back-the-playmaker-s-top-playmakers-of-week-5-",
+      "title": "'I'M BACK!' 🗣️ The Playmaker's TOP playmakers of Week 5 🏈 | First Take",
+      "source": "yt-rss:ESPN",
+      "url": "https://www.youtube.com/watch?v=XlOtUd_NIAA",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:57:11.074918+00:00",
+      "summary": "ESPN · 78 thousand views · 11 hours ago",
+      "category": "sports",
+      "platforms": [
+        "youtube"
+      ],
+      "format_tags": [],
+      "sources": [
+        "yt-rss:ESPN"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "youtube": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "aream-co-games-industry-m-a-generates-57-8-bn-in-q",
+      "title": "Aream & Co: Games industry M&A generates $57.8 bn in Q3, including EA's $55bn leveraged buyout",
+      "source": "gnews-q:video games",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUnhHRGZxWU1rbHJGQ2dZQmZrbjJ1N3A5ZGE1SXBGNzN4aUEtcFpYdERHUEFxQWhtUEhFUGh2YTNzcVF0Vzh3aWlaTndaa2d1SjBrUkN6ZDRNdEt5aUMxMktBNVktdEpvcmpnS09sMFpKVG1taXQySDJ1cFRfX3hocnNFS3V1NHZCekdfT0tmZWhLbTQ1RF8wRHl0MC05MWhBd1NFek15QjRVSGxkX1Z2WHVJRkxMQQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:22.957977+00:00",
+      "summary": "GamesIndustry.biz · Mon, 12 Oct 2026 16:00:00 GMT",
+      "category": "gaming",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:video games"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "john-cena-s-nostalgia-fueled-action-movie-from-ext",
+      "title": "John Cena's nostalgia-fueled action movie from Extraction director becomes a hit on Apple TV",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMkVXTU1tYmJQek5rck1SbXpZUXlaYVFPQUlCOUtfYzJ6SXIzcXVSUnF0N2lKZmo1NlBNZ1p3UXBwNGpPMGxwM1hIWmV5TFZJQjZTQzBibmtaN2NpR1VjVlpwUloxcDNaUTlpNTZSVi1ab3hyMU1jeHpPVWl0dXRpNzlMdi1WOFdTMFVmbS13NXpuVW8?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:25.735705+00:00",
+      "summary": "Polygon.com · Mon, 12 Oct 2026 22:17:18 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "matchbox-the-movie-review-a-risible-mess",
+      "title": "Matchbox The Movie review — 'A risible mess'",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE14MHFpT0hiZHNpWlFEMVZjOGM2YW1reHl2UGhKa29uTkpkdVJkaXg2R2J5cXpBSjFuUHRVUURydWkwQU9VU3RTYVhIc0w3b1ZQYlNYTlVNY2t4RmF1YWllcXNqR0RDM0NyTEZOZS0yQ3c?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:25.735728+00:00",
+      "summary": "Empire · Fri, 09 Oct 2026 20:51:58 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "every-new-hallmark-christmas-movie-in-2026-dates-c",
+      "title": "Every New Hallmark Christmas Movie in 2026: Dates, Casts and How to Stream",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWnE2TGxpcWJkWDNOZ0M2V08yTmZ1SmdtX1BMOGp2Qm5SbEhLTmVQV001cUxlTUh4cENwa1ZwS2R1MzRqN1lib29wWm5kUVdTcTdndGFucXBlc0pmUVd0eEpzOVNMX29yU0Joc1FVQ1E2YWc1cWEwR3ZCeDhuMGZOdmVIb3BUaEx4czZzM1hYWkNZRnN0aFRZUWZqRVY0T2tjM0lQcUFyLVI2azU1MktFOUlENTFBc1REaHdrUXFXOA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:25.735746+00:00",
+      "summary": "Forbes · Sat, 10 Oct 2026 12:00:00 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "la-opera-s-new-music-director-talks-about-carmen-a",
+      "title": "LA Opera’s new music director talks about “Carmen” and the new season",
+      "source": "gnews-q:new music",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmpyVGdtVmxLcHFpTkdiQVpjWWVkYnBtNW5iLWE2UUJDYldNRGhHOTBHY2xJTzNHTDR0MGRBWGs0cFFTUGNIYVZwSk92RGlpdjN3ZlpWUkVPOGJwVHFpUzVRQnkyZHhBMWs3ZW9KNE5mOUtNaVBPZnBYQ2ZseHhlZ05tUDFCS3FObVo5TU5kSVdONW12Y2dBdV9WYlBMUDFqZ05rUkFRaS1qandi?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:28.961356+00:00",
+      "summary": "CBS News · Tue, 13 Oct 2026 00:19:00 GMT",
+      "category": "music",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:new music"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "visitor-dies-after-accident-on-goliath-at-six-flag",
+      "title": "Visitor dies after accident on Goliath at Six Flags Over Georgia",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x4fn6f/visitor_dies_after_accident_on_goliath_at_six/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.916256+00:00",
+      "summary": "u//u/Bloated_Hamster · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "mamdani-orders-review-of-nypd-s-use-of-force-polic",
+      "title": "Mamdani orders review of NYPD’s use-of-force policies as progressives call for greater change",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x4912k/mamdani_orders_review_of_nypds_useofforce/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.916359+00:00",
+      "summary": "u//u/CharlieKonR · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "federal-agents-searched-rep-ilhan-omar-s-home-as-p",
+      "title": "Federal agents searched Rep. Ilhan Omar’s home as part of criminal investigation, AP sources say",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x40lje/federal_agents_searched_rep_ilhan_omars_home_as/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928501+00:00",
+      "summary": "u//u/sleepDeprivedHuman · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "air-strikes-kill-at-least-200-at-gold-mine-near-su",
+      "title": "Air strikes kill at least 200 at gold mine near Sudan-Egypt border, survivors say",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x4bi9a/air_strikes_kill_at_least_200_at_gold_mine_near/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928582+00:00",
+      "summary": "u//u/usefsaeed · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a-sixth-measles-related-death-is-reported-in-penns",
+      "title": "A sixth measles-related death is reported in Pennsylvania",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x4dxab/a_sixth_measlesrelated_death_is_reported_in/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928602+00:00",
+      "summary": "u//u/AudibleNod · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "judge-warns-jurors-as-russell-brand-prepares-for-r",
+      "title": "Judge warns jurors as Russell Brand prepares for rape trial in London",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x4629b/judge_warns_jurors_as_russell_brand_prepares_for/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928618+00:00",
+      "summary": "u//u/AudibleNod · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "teen-accused-of-mixing-toxic-chemicals-in-cafeteri",
+      "title": "Teen accused of mixing toxic chemicals in cafeteria faces attempted murder, terrorism charges",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x45air/teen_accused_of_mixing_toxic_chemicals_in/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928633+00:00",
+      "summary": "u//u/dt7cv · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "french-supermarkets-suffer-refrigerator-shutdown-a",
+      "title": "French supermarkets suffer refrigerator shutdown after 'unprecedented' cyberattack",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x4cl44/french_supermarkets_suffer_refrigerator_shutdown/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928662+00:00",
+      "summary": "u//u/templeofsyrinx1 · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "french-police-arrest-14-year-old-after-two-teachin",
+      "title": "French police arrest 14-year-old after two teaching staff shot and wounded by hunting rifle",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x451qb/french_police_arrest_14yearold_after_two_teaching/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928675+00:00",
+      "summary": "u//u/tonic613 · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "pennsylvania-mass-shooter-was-family-patriarch-fat",
+      "title": "Pennsylvania mass shooter was family patriarch, father of toddler killed says",
+      "source": "reddit-rss:r/news",
+      "url": "https://www.reddit.com/r/news/comments/1x3q7p2/pennsylvania_mass_shooter_was_family_patriarch/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:43.928690+00:00",
+      "summary": "u//u/One-Emu-1103 · r/news · 2026-10-12",
+      "category": "news",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/news"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "it-was-a-shit-show-explicit-feat-santino-fontana-c",
+      "title": "It Was a Shit Show (Explicit) - feat. Santino Fontana - \"Crazy Ex-Girlfriend\"",
+      "source": "reddit-rss:r/television",
+      "url": "https://www.reddit.com/r/television/comments/1x4k1qt/it_was_a_shit_show_explicit_feat_santino_fontana/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:47.906716+00:00",
+      "summary": "u//u/imjealousofyou · r/television · 2026-10-13",
+      "category": "entertainment",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/television"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "what-are-your-best-suggestions-for-single-player-g",
+      "title": "What are your best suggestions for single player games that are 10 hrs or less?",
+      "source": "reddit-rss:r/gaming",
+      "url": "https://www.reddit.com/r/gaming/comments/1x4l0dj/what_are_your_best_suggestions_for_single_player/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:51:52.246711+00:00",
+      "summary": "u//u/Call_It_Luck · r/gaming · 2026-10-13",
+      "category": "gaming",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/gaming"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "after-surely-8-billion-rewatches-of-the-sixth-sens",
+      "title": "After surely 8 billion rewatches of The Sixth Sense, I only now just noticed something [SPOILERS]",
+      "source": "reddit-rss:r/movies",
+      "url": "https://www.reddit.com/r/movies/comments/1x4lami/after_surely_8_billion_rewatches_of_the_sixth/",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:52:06.034399+00:00",
+      "summary": "u//u/Jolly-Librarian1982 · r/movies · 2026-10-13",
+      "category": "entertainment",
+      "platforms": [
+        "reddit"
+      ],
+      "format_tags": [],
+      "sources": [
+        "reddit-rss:r/movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "reddit": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "death-of-rj-mitte-reported",
+      "title": "Death of RJ Mitte reported",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Death+of+RJ+Mitte+reported",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:54:23.138965+00:00",
+      "summary": "TMZ says the actor who played Walter White Jr. on \"Breaking Bad\" has died at age 34.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "nfl-week-5-recaps",
+      "title": "NFL Week 5 recaps",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=NFL+Week+5+recaps",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:54:23.138975+00:00",
+      "summary": "Fans and analysts review Sunday's results, coaching gaffes and Marvin Harrison Jr.'s trade.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trump-promises-payments-before-midterms",
+      "title": "Trump promises payments before midterms",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Trump+promises+payments+before+midterms",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:54:23.139021+00:00",
+      "summary": "Donald Trump pledges $5,000 dividends if Republicans win, as $500 health refunds arrive.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "gop-ad-airs-in-wrong-portland",
+      "title": "GOP ad airs in wrong Portland",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=GOP+ad+airs+in+wrong+Portland",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:54:23.139030+00:00",
+      "summary": "A super PAC backing Susan Collins spent about $25,000 attacking Troy Jackson in Oregon, not Maine.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "dan-levy-criticizes-shane-gillis-monologue",
+      "title": "Dan Levy criticizes Shane Gillis monologue",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Dan+Levy+criticizes+Shane+Gillis+monologue",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T03:54:23.139040+00:00",
+      "summary": "The \"Schitt's Creek\" star says more men should speak up about the comedian's \"Saturday Night Live\" jokes.",
       "category": "news",
       "platforms": [
         "bluesky"
@@ -16287,15 +16266,15 @@
         "per_platform": {
           "google": {
             "snapshots": 5,
-            "latest_velocity": 69,
-            "delta": 24,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 45 when tracking started (Oct 12, 2026), 69 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.8 88.0,4.8 116.0,4.8\" fill=\"none\"/></svg>"
+            "latest_velocity": 68,
+            "delta": 23,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 45 when tracking started (Oct 12, 2026), 68 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.8 88.0,4.8 116.0,5.6\" fill=\"none\"/></svg>"
           },
           "hackernews": {
             "snapshots": 5,
-            "latest_velocity": 94,
-            "delta": 24,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"hackernews velocity trend: 70 when tracking started (Oct 12, 2026), 94 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.8 88.0,4.8 116.0,4.8\" fill=\"none\"/></svg>"
+            "latest_velocity": 93,
+            "delta": 23,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"hackernews velocity trend: 70 when tracking started (Oct 12, 2026), 93 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.8 88.0,4.8 116.0,5.6\" fill=\"none\"/></svg>"
           },
           "reddit": {
             "snapshots": 5,

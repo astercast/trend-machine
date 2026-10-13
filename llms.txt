@@ -2,7 +2,7 @@
 
 Live trending-topic intelligence: what to make content about TODAY.
 Machine-readable: data/v1/trends.json (sort by opportunity_score desc).
-Generated: 2026-10-13T03:05:00.513672+00:00 · 393 topics.
+Generated: 2026-10-13T03:58:09.520440+00:00 · 393 topics.
 
 ## Hottest right now
 - ["6-7" — Gen Alpha's defining brainrot joke](topics/six-seven-meme.html) (opportunity 92, velocity 92)

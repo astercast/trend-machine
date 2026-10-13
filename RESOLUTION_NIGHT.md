@@ -44,6 +44,21 @@ end-to-end in a sandbox copy (verdicts written, scorecard flipped to
 "live", counts reconciled), and the scorecard page was screenshot-
 verified in its "building history" state with zero console errors.*
 
+*Wave-25 pre-gate check (2026-10-13 03:50–04:02 UTC, ~21.9h before
+the gate): the gate was re-proved once — `--run` refused with exit 2
+and the ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was
+byte-identical before and after. A full refresh then ran (exit 0,
+393 topics live, forecasts built 2026-10-13T03:58:19.724Z) and
+recorded +0 new forecasts — the ledger md5 was unchanged start to
+end. Readiness held at **271/290 overall (268/286 batch 1)**; the
+same 19 windows stay short (18 batch-1 + the wave-21 first-timer),
+the audit ends ALL INVARIANTS HOLD (0 homeless — 80 live / 194
+archive / 16 both; archive 210 topics / 1,391 points, 0 outside the
+7d ledger window, 0 points older than 14d), counts reconcile
+290 recorded = 290 pending + 0 resolved + 0 unverifiable, and the
+scorecard stays "building history" with `hit_rate` null,
+screenshot-verified with zero console errors.*
+
 *Wave-24 pre-gate check (2026-10-13 03:19 UTC, ~22.4h before the gate):
 the gate was re-proved once more — `--run` refused with exit 2 and the
 ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was byte-identical
