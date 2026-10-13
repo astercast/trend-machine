@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T10:15:58.737Z",
+  "generated_at": "2026-10-13T12:18:13.710Z",
   "curated_at": "2026-10-13",
-  "method": "Hand-curated for the Streamer Desk (wave 29 / rotation 12) from ordinary web search on 2026-10-13. Directory facts carry at least one credible source each; drama-timeline entries carry two or more independent sources per event or are not printed as verified. Rosters are dated claims ('as of'), never eternal facts. No viewership or follower numbers are printed unless a source states them for a dated event.",
+  "method": "Hand-curated for the Streamer Desk (wave 29 / rotation 12) from ordinary web search on 2026-10-13. Directory facts carry at least one credible source each; drama-timeline entries carry two or more independent sources per event or are not printed as verified. Rosters are dated claims ('as of'), never eternal facts. No viewership or follower numbers are printed unless a source states them for a dated event. Wave 34 (rotation 13) follow-through: three items carried by the research streamer beat (multi-source-verified in its rounds through 2026-10-13) were added — the Jynxzi tournament and Kyedae return events and the Esports Awards 2026 nominees update; the beat's held single-source items (TwitchCon safety withdrawals, ComplexCon suspensions, a FaZe/100 Thieves event item) were NOT promoted.",
   "sourcing_standard": {
     "directory": "1+ credible source per profile/house, named on the record.",
     "drama": "Timeline format only. An event is 'verified' only when 2+ independent credible sources report it. Single-source or disputed claims are listed under 'unverified' with the allegation labeled as an allegation, or omitted. Neutral tone; no rumor is printed as fact.",
@@ -16,12 +16,12 @@
   "counts": {
     "streamers": 18,
     "houses": 5,
-    "updates": 6,
+    "updates": 7,
     "drama_verified": 4,
     "unverified": 2,
     "drama_source_domains": 8,
-    "events": 7,
-    "events_upcoming": 2,
+    "events": 9,
+    "events_upcoming": 4,
     "events_past": 5,
     "feeds_skip_by_design": 3
   },
@@ -472,6 +472,27 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-10-01",
+      "id": "upd-esports-awards-2026-nominees",
+      "kind": "award nominations",
+      "sources": [
+        {
+          "name": "TalkEsport — Esports Awards 2026 nominees (full list)",
+          "url": "https://www.talkesport.com/news/esports-awards-2026-nominees-full-list/"
+        },
+        {
+          "name": "Insider Gaming — Esports Awards 2026 nominees",
+          "url": "https://insider-gaming.com/esports-awards-2026-nominees/"
+        }
+      ],
+      "streamer_ids": [
+        "kai-cenat",
+        "jynxzi"
+      ],
+      "summary": "The Esports Awards 2026 nominee lists (published around Oct 1, 2026) place tracked-set names across the Streamer of the Year, Esports Personality of the Year, Esports Team of the Year, Content Group of the Year and Organisation of the Year categories — Kai Cenat and Jynxzi among the individuals, FaZe Clan and 100 Thieves among the groups and organisations, per TalkEsport's full list and Insider Gaming's announcement. Nominations only — no winners are claimed.",
+      "title": "Esports Awards 2026 nominee lists name Kai Cenat, Jynxzi, FaZe Clan and 100 Thieves"
+    },
     {
       "date": "2025-12-06",
       "id": "upd-streamer-university-award",
@@ -1094,6 +1115,46 @@
       ],
       "start": "2026-07-05",
       "status": "past"
+    },
+    {
+      "end": "2026-10-14",
+      "id": "ev-jynxzi-lol-tourney-2",
+      "kind": "streamer tournament",
+      "location": "Livestream — Jynxzi's Twitch and YouTube",
+      "name": "Jynxzi's League of Legends streamer tournament (2nd edition)",
+      "note": "Second edition: 40 streamers, Riot-backed, scheduled 16:00 ET / 20:00 UTC on Oct 14, 2026. Pre-event listing — no outcome is recorded here; coverage belongs to a post-event update.",
+      "sources": [
+        {
+          "name": "Sportskeeda — Jynxzi LoL streamer tournament date/time",
+          "url": "https://www.sportskeeda.com/us/streamers/news-jynxzi-s-league-legends-streamer-tournament-date-time"
+        },
+        {
+          "name": "Streams Charts — Jynxzi's second LoL streamer tourney",
+          "url": "https://streamscharts.com/news/jynxzi-second-lol-streamer-tourney-info"
+        }
+      ],
+      "start": "2026-10-14",
+      "status": "upcoming"
+    },
+    {
+      "end": "2026-10-20",
+      "id": "ev-kyedae-return",
+      "kind": "return stream",
+      "location": "Twitch",
+      "name": "Kyedae's Twitch return",
+      "note": "Kyedae's confirmed return to Twitch on Oct 20, 2026, after an ~18-month hiatus (since April 2025). The date was reconfirmed in the research beat's Oct 13, 2026 crawls; nothing about the return stream itself is recorded before it happens.",
+      "sources": [
+        {
+          "name": "TalkEsport — Kyedae Twitch return date",
+          "url": "https://www.talkesport.com/streaming/kyedae-twitch-return-date/"
+        },
+        {
+          "name": "Dexerto — Kyedae confirms Twitch return date",
+          "url": "https://www.dexerto.com/twitch/kyedae-finally-confirms-twitch-return-date-after-18-month-hiatus-3412956/"
+        }
+      ],
+      "start": "2026-10-20",
+      "status": "upcoming"
     },
     {
       "end": "2026-11-15",

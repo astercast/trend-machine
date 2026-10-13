@@ -111,6 +111,18 @@ the cron wire's bounded duration). The link check ran internal-only
 this wave (6,084 checked / 0 broken) — its external probing was
 skipped under the standing fetch rule.*
 
+*Wave-34 pre-gate check (2026-10-13 12:04–12:40 UTC, ~13.7h before
+the gate): gate-proof discipline — `--run` was not executed at all
+this run; no verdicts written, ledger untouched. The ledger md5
+(`a81bcd99129a71ac091168ddecd762e3`) was byte-identical at run start
+and run end, counts reconcile 315 recorded = 315 pending + 0 resolved
++ 0 unverifiable, readiness 274/315 per the round-9 board payload,
+and the scorecard stays "building history" with `hit_rate` null. No
+refresh ran this rotation (the run's work was FC-001, the manifest
+fix, and the Streamer Desk follow-through — see WAVELOG wave 34);
+the procedure in §2 is unchanged and the first execution belongs to
+the run at/after 2026-10-14T01:45:28.760Z.*
+
 *Wave-28 pre-gate check (2026-10-13 06:28–06:52 UTC, ~19.3h before
 the gate): the gate was re-proved once — `--run` refused with exit 2
 and the ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was
