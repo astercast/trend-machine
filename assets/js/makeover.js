@@ -15,10 +15,18 @@
     var el = document.getElementById(id);
     if (el) el.textContent = val;
   }
+  /* wave 30 · VP-0001: hero stats settle even if a fetch hangs — a hung
+     fetch resolves to null after 10s (the static snapshot values baked
+     into the HTML by build_site.py stay on screen in that case). */
+  function withDeadline(p) {
+    return Promise.race([p, new Promise(function (res) {
+      setTimeout(function () { res(null); }, 10000);
+    })]);
+  }
   function heroStats() {
     var tb = fetch("data/v1/trends.json").then(function (r) { return r.json(); }).catch(function () { return null; });
     var fb = fetch("data/v1/forecasts.json").then(function (r) { return r.json(); }).catch(function () { return null; });
-    Promise.all([tb, fb]).then(function (res) {
+    Promise.all([withDeadline(tb), withDeadline(fb)]).then(function (res) {
       var trends = res[0], fc = res[1];
       if (trends) {
         var topics = trends.topics || trends;

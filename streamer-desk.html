@@ -117,10 +117,16 @@
   "use strict";
   function $(id) { return document.getElementById(id); }
   function init() {
-    fetch("data/v1/streamer-desk.json").then(function (r) {
+    /* wave 30 · VP-0001: a fetch that never settles must still reach the
+       fallback alert — race the load against a 12s deadline. */
+    var got = fetch("data/v1/streamer-desk.json").then(function (r) {
       if (!r.ok) { throw new Error("streamer-desk"); }
       return r.json();
-    }).then(function (desk) {
+    });
+    var deadline = new Promise(function (_, reject) {
+      setTimeout(function () { reject(new Error("streamer-desk deadline")); }, 12000);
+    });
+    Promise.race([got, deadline]).then(function (desk) {
       $("sd-status").hidden = true;
       $("sd-summary").innerHTML = TM_StreamerDesk.summaryHTML(desk);
       $("sd-streamers").innerHTML = TM_StreamerDesk.streamersHTML(desk);

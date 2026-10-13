@@ -109,10 +109,16 @@
   "use strict";
   function $(id) { return document.getElementById(id); }
   function init() {
-    fetch("data/v1/live-wire.json").then(function (r) {
+    /* wave 30 · VP-0001: a fetch that never settles must still reach the
+       fallback alert — race the load against a 12s deadline. */
+    var got = fetch("data/v1/live-wire.json").then(function (r) {
       if (!r.ok) { throw new Error("live-wire"); }
       return r.json();
-    }).then(function (wire) {
+    });
+    var deadline = new Promise(function (_, reject) {
+      setTimeout(function () { reject(new Error("live-wire deadline")); }, 12000);
+    });
+    Promise.race([got, deadline]).then(function (wire) {
       $("lw-status").hidden = true;
       $("lw-summary").innerHTML = TM_LiveWire.summaryHTML(wire);
       $("lw-lanes").innerHTML = TM_LiveWire.lanesHTML(wire);

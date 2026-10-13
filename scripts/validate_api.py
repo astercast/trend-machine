@@ -461,6 +461,45 @@ def main():
                   os.path.isfile(os.path.join(ROOT, s)), s)
         check(f"manifest[{key}].updated present", bool(e.get("updated")))
 
+    # wave 30 · VP-0001: homepage static fallback rows + loading deadlines
+    try:
+        import re as _re
+        import html as _html
+        home = open(os.path.join(ROOT, "index.html")).read()
+
+        def _region(name):
+            m = _re.search(r"<!--TMFB:%s:BEGIN-->(.*?)<!--TMFB:%s:END-->" % (name, name),
+                           home, _re.S)
+            return m.group(1) if m else None
+
+        _trends = json.load(open(os.path.join(ROOT, "data", "v1", "trends.json")))
+        _top5 = sorted(_trends.get("topics", []),
+                       key=lambda t: -(t.get("opportunity_score") or 0))[:5]
+        _hot = _region("hot5") or ""
+        check("vp0001 fallback hot5 has 5 static cards", _hot.count("hot-card") >= 5)
+        check("vp0001 fallback hot5 = stored top 5",
+              all(_html.escape(t["title"], quote=True) in _hot for t in _top5))
+        _tbl = _region("table") or ""
+        check("vp0001 fallback table has 30 static rows", _tbl.count("<tr") >= 30)
+        check("vp0001 fallback radar has 10 static cards",
+              (_region("radar") or "").count("meme-card") >= 10)
+        check("vp0001 fallback labeled as static snapshot",
+              "static snapshot" in (_region("datats") or ""))
+        check("vp0001 fallback table-meta labeled",
+              "static snapshot" in (_region("tablemeta") or ""))
+        for _fname, _marker in [("assets/js/app.js", "armWatchdog"),
+                                ("assets/js/makeover.js", "withDeadline"),
+                                ("assets/js/oracle.js", "deadline"),
+                                ("live-wire.html", "deadline"),
+                                ("streamer-desk.html", "deadline"),
+                                ("oracle-board.html", "deadline"),
+                                ("forecast-accuracy.html", "deadline")]:
+            _src = open(os.path.join(ROOT, _fname)).read()
+            check(f"vp0001 loading deadline wired in {_fname}",
+                  _marker in _src and "VP-0001" in _src)
+    except (OSError, ValueError) as _e:
+        check("vp0001 fallback block readable", False, str(_e))
+
     print(f"[validate] {len(passed)} checks passed, {len(failures)} failed")
     for f_ in failures:
         print("  FAIL:", f_)

@@ -20,10 +20,16 @@
   var ACC_URL = "data/v1/forecast-accuracy.json";         // wave 6, best-effort
 
   function getJSON(url, optional) {
-    return fetch(url).then(function (r) {
+    /* wave 30 · VP-0001: a fetch that never settles must still reach the
+       fallback alert — race every load against a 12s deadline. */
+    var got = fetch(url).then(function (r) {
       if (!r.ok) { throw new Error(url); }
       return r.json();
-    }).catch(function () {
+    });
+    var deadline = new Promise(function (_, reject) {
+      setTimeout(function () { reject(new Error("deadline " + url)); }, 12000);
+    });
+    return Promise.race([got, deadline]).catch(function () {
       if (optional) { return null; }
       throw new Error(url);
     });

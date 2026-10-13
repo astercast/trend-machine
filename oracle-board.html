@@ -149,10 +149,16 @@
       board.entries.length + " recorded forecasts";
   }
   function init() {
-    fetch("data/v1/oracle-board.json").then(function (r) {
+    /* wave 30 · VP-0001: a fetch that never settles must still reach the
+       fallback alert — race the load against a 12s deadline. */
+    var got = fetch("data/v1/oracle-board.json").then(function (r) {
       if (!r.ok) { throw new Error("oracle-board"); }
       return r.json();
-    }).then(function (data) {
+    });
+    var deadline = new Promise(function (_, reject) {
+      setTimeout(function () { reject(new Error("oracle-board deadline")); }, 12000);
+    });
+    Promise.race([got, deadline]).then(function (data) {
       board = data;
       $("ob-status").hidden = true;
       $("ob-summary").innerHTML =

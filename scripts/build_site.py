@@ -225,6 +225,141 @@ def build_topic(t, history_pts=None, plat_hist=None):
         sources=sources, angles=angles, hooks=hooks, watch=watch,
         guide=guide, ts=esc(t.get("last_seen", "")))
 
+# ---------------------------------------------------------------------------
+# VP-0001 (wave 30): homepage static fallback rows.
+# The board (hot5 / meme radar / all-signals table / ticker / hero stats) is
+# rendered client-side from data/v1/trends.json. Before wave 30 the static
+# HTML shipped EMPTY containers, so any slow or interrupted data path left a
+# permanent loading state (Visitor Panel ticket VP-0001). The build now bakes
+# the top rows from the same stored data between TMFB markers in index.html;
+# app.js/makeover.js replace them wholesale when live data lands, and if the
+# data path fails the visitor still gets real rows labeled as a static
+# snapshot (plus the app.js watchdog raises the DATA LINK LOST banner).
+# Markup mirrors assets/js/app.js renderHot5/renderRadar/renderTable/
+# renderTicker exactly so styling and layout are identical.
+TMFB_TABLE_ROWS = 30
+
+
+def _fb_parse(iso):
+    try:
+        return datetime.datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def _fb_fresh(iso, ref):
+    t = _fb_parse(iso)
+    if t is None or ref is None:
+        return '<span class="fresh f-dead"><span class="dot" aria-hidden="true"></span>—</span>'
+    m = max(0.0, (ref - t).total_seconds() / 60.0)
+    if m < 60:
+        cls, label = "f-live", "%dm ago" % max(1, round(m))
+    elif m < 1440:
+        cls, label = "f-warm", "%dh ago" % round(m / 60)
+    else:
+        cls, label = "f-dead", "%dd ago" % round(m / 1440)
+    pulse = " pulse" if cls == "f-live" else ""
+    return ('<span class="fresh %s"><span class="dot%s" aria-hidden="true"></span>%s</span>'
+            % (cls, pulse, label))
+
+
+def _fb_score(v):
+    v = int(v or 0)
+    cls = "hot" if v >= 70 else "warm" if v >= 40 else ""
+    return ('<span class="score %s"><span class="score-bar" role="img" aria-label="score %d of 100">'
+            '<i style="width:%d%%"></i></span><span class="num">%d</span></span>' % (cls, v, v, v))
+
+
+def _fb_region(page, name, inner):
+    pat = re.compile(r"(<!--TMFB:%s:BEGIN-->).*?(<!--TMFB:%s:END-->)" % (name, name), re.S)
+    if not pat.search(page):
+        print("[build] WARN home-fallback: marker %s missing in index.html" % name)
+        return page
+    return pat.sub(lambda m: m.group(1) + inner + m.group(2), page, count=1)
+
+
+def write_home_fallback(topics, generated_at):
+    path = os.path.join(ROOT, "index.html")
+    with open(path) as f:
+        page = f.read()
+    ref = _fb_parse(generated_at)
+    by_opp = sorted(topics, key=lambda t: -(t.get("opportunity_score") or 0))
+
+    hot = []
+    for i, t in enumerate(by_opp[:5]):
+        leader = i == 0
+        hot.append(
+            '<a class="hot-card rise%s" style="--i:%d" href="topics/%s.html">%s'
+            '<span class="rank num">0%d</span><div><h3>%s</h3><p>%s</p></div>'
+            '<div class="card-foot">%s%s</div></a>'
+            % (" leader" if leader else "", i, esc(t["id"]),
+               '<span class="badge-breaking">Breaking</span>' if leader else "",
+               i + 1, esc(t.get("title")), esc(t.get("summary")),
+               _fb_score(t.get("opportunity_score")), _fb_fresh(t.get("last_seen"), ref)))
+    page = _fb_region(page, "hot5", "".join(hot))
+
+    memes = sorted((t for t in topics if t.get("category") == "meme"),
+                   key=lambda t: -(t.get("velocity") or 0))[:10]
+    radar = []
+    for i, t in enumerate(memes):
+        radar.append(
+            '<a class="meme-card rise" style="--i:%d" href="topics/%s.html">'
+            '<div class="fmt num">◉ MEME · v%s</div><h4>%s</h4>'
+            '<div class="mhash">%s</div>%s</a>'
+            % (i, esc(t["id"]), t.get("velocity") or 0, esc(t.get("title")),
+               " ".join(esc(h) for h in (t.get("hashtags") or [])[:3]),
+               _fb_fresh(t.get("last_seen"), ref)))
+    page = _fb_region(page, "radar", "".join(radar))
+    page = _fb_region(page, "radarcount",
+                      "%d meme signals tracked · static snapshot" % len(memes))
+
+    rows = []
+    for i, t in enumerate(by_opp[:TMFB_TABLE_ROWS]):
+        stale = bool(t.get("stale"))
+        rows.append(
+            '<tr%s style="--i:%d"><td data-label="Topic"><a class="topic-link" href="topics/%s.html">%s</a>%s'
+            '<div class="topic-cat">%s</div></td>'
+            '<td data-label="Platforms">%s</td>'
+            '<td data-label="Opportunity">%s</td>'
+            '<td data-label="Velocity">%s</td>'
+            '<td data-label="Trend">—</td>'
+            '<td data-label="Detected">%s</td></tr>'
+            % (' class="is-stale rise"' if stale else ' class="rise"', min(i, 12),
+               esc(t["id"]), esc(t.get("title")),
+               ' <span class="stale-badge">STALE</span>' if stale else "",
+               esc(t.get("category")),
+               "".join('<span class="chip plat">%s</span>' % esc(p)
+                       for p in (t.get("platforms") or [])),
+               _fb_score(t.get("opportunity_score")), _fb_score(t.get("velocity")),
+               _fb_fresh(t.get("last_seen"), ref)))
+    page = _fb_region(page, "table", "".join(rows))
+    page = _fb_region(page, "tablemeta",
+                      "%d of %d topics · static snapshot — the live board replaces this on load"
+                      % (min(TMFB_TABLE_ROWS, len(topics)), len(topics)))
+
+    tick = '<span class="tk-sep">·</span>'.join(
+        "<b>▲ %s</b> %s" % (t.get("opportunity_score") or 0, esc(t.get("title")))
+        for t in by_opp[:12])
+    page = _fb_region(page, "ticker", tick + '<span class="tk-sep">·</span>' + tick)
+
+    if ref is not None:
+        stamp = ref.strftime("%b %-d, %Y, %-I:%M %p UTC")
+    else:
+        stamp = esc(generated_at)
+    page = _fb_region(page, "datats",
+                      'data: <span class="num">%s</span> · static snapshot' % stamp)
+    page = _fb_region(page, "hstopics", str(len(topics)))
+    plats = set()
+    for t in topics:
+        plats.update(t.get("platforms") or [])
+    page = _fb_region(page, "hsplatforms", str(len(plats)))
+
+    with open(path, "w") as f:
+        f.write(page)
+    print("[build] home fallback: %d hot / %d radar / %d table rows baked into index.html"
+          % (min(5, len(topics)), len(memes), min(TMFB_TABLE_ROWS, len(topics))))
+
+
 def main():
     with open(DATA) as f:
         data = json.load(f)
@@ -268,6 +403,8 @@ def main():
     with open(os.path.join(api, "trends.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "count": len(topics),
                    "topics": topics}, f, indent=2, ensure_ascii=False)
+    # VP-0001: bake the homepage static fallback rows from the same payload
+    write_home_fallback(topics, data["generated_at"])
     tags = {}
     for t in topics:
         for h in t.get("hashtags", []):

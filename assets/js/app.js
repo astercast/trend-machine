@@ -4,11 +4,33 @@
   var DATA_URLS = ["data/trends.json", "data/v1/trends.json"];
   var VELOCITY_URLS = ["data/v1/velocity.json", "data/velocity_history.json"];
 
+  /* wave 30 · VP-0001: every load carries a deadline. A fetch that never
+     settles (stalled data path) used to leave the board in its loading
+     state forever — the 1202 alarm only fired on rejection. Race each
+     fetch against a timer so a hang becomes a failure the chain (and the
+     watchdog below) can act on. */
+  var FETCH_DEADLINE_MS = 10000;
+  function fetchDeadline(url) {
+    var got = fetch(url);
+    var deadline = new Promise(function (_, reject) {
+      setTimeout(function () { reject(new Error("deadline " + url)); }, FETCH_DEADLINE_MS);
+    });
+    return Promise.race([got, deadline]);
+  }
+  /* Hard watchdog: if the board is not live 15s after start, raise the
+     alarm even if some attempt is still pending. A late success clears
+     it again through the GO path in clearAlarm(). */
+  var boardLive = false, watchdog = null;
+  function armWatchdog() {
+    if (watchdog) clearTimeout(watchdog);
+    watchdog = setTimeout(function () { if (!boardLive) raiseAlarm(); }, 15000);
+  }
+
   /* wave 8: velocity snapshots for the Trend sparkline column (best-effort) */
   function loadVelocity(i) {
     i = i || 0;
     if (i >= VELOCITY_URLS.length) { renderTable(); return; }
-    fetch(VELOCITY_URLS[i]).then(function (r) {
+    fetchDeadline(VELOCITY_URLS[i]).then(function (r) {
       if (!r.ok) throw new Error(r.status);
       return r.json();
     }).then(function (data) {
@@ -283,10 +305,11 @@
       raiseAlarm();
       return;
     }
-    fetch(DATA_URLS[i]).then(function (r) {
+    fetchDeadline(DATA_URLS[i]).then(function (r) {
       if (!r.ok) throw new Error(r.status);
       return r.json();
     }).then(function (data) {
+      boardLive = true;
       state.topics = data.topics || [];
       var gen = document.getElementById("data-ts");
       if (gen && data.generated_at) {
@@ -306,6 +329,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     lampTest(true); /* V35E lamp test: every lamp burns while data loads */
+    armWatchdog(); /* wave 30 · VP-0001 */
     load();
     loadVelocity();
     tickClock(); setInterval(tickClock, 1000);
@@ -315,6 +339,8 @@
       var err = document.getElementById("load-error");
       if (err) err.hidden = true;
       lampTest(true);
+      boardLive = false; /* wave 30 · VP-0001: re-arm for the retry */
+      armWatchdog();
       load();
     });
     var pf = document.getElementById("f-platform");
