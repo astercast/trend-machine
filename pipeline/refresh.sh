@@ -15,6 +15,7 @@ python3 pipeline/aggregate.py
 # the manifest only advertises forecasts.json when this step actually writes it)
 if command -v node >/dev/null 2>&1; then
   node scripts/build_forecasts.js
+  node scripts/build_oracle_board.js
 else
   echo "[forecasts] node unavailable — skipping data/v1/forecasts.json"
 fi

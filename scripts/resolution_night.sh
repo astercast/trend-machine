@@ -78,6 +78,11 @@ node scripts/check_resolutions.js || exit 1
 
 echo "[resolution-night] step 3/5 — rebuilding forecasts + scorecard payload"
 node scripts/build_forecasts.js || exit 1
+# wave 27: the Oracle Board is the surface these verdicts land on —
+# rebuild it in the same step so its rows carry the new verdicts in
+# the same run that writes them (reads the ledger + accuracy payload
+# build_forecasts.js just published; writes no verdicts itself).
+node scripts/build_oracle_board.js || exit 1
 
 echo "[resolution-night] step 4/5 — verifying the published scorecard"
 python3 - <<'PYEOF' || exit 1

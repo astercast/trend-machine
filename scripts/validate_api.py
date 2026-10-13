@@ -257,6 +257,52 @@ def main():
     else:
         print("[validate] forecast-accuracy.json absent (node step skipped) — not validated")
 
+    # wave 27: oracle-board.json — schema + ledger consistency, honest states
+    ob_path = os.path.join(API, "oracle-board.json")
+    if os.path.exists(ob_path):
+        ob = validate_doc("oracle-board.json", ob_path, "oracle-board.json")
+        oc = ob.get("counts", {})
+        entries = ob.get("entries", [])
+        check("oracle-board counts reconcile",
+              oc.get("recorded", -1) == len(entries)
+              and oc.get("recorded", -2) == oc.get("pending", -3)
+              + oc.get("resolved", -4) + oc.get("unverifiable", -5)
+              and oc.get("hits", 999) <= oc.get("resolved", -1),
+              f"counts={oc} entries={len(entries)}")
+        check("oracle-board readiness sums to pending",
+              oc.get("ready", -1) + oc.get("short", -2) == oc.get("pending", -3),
+              f"ready={oc.get('ready')} short={oc.get('short')} pending={oc.get('pending')}")
+        check("oracle-board status + hit_rate match the scorecard contract",
+              (ob.get("status") == "live" and oc.get("hit_rate") is not None)
+              or (ob.get("status") == "building history"
+                  and oc.get("hit_rate") is None),
+              f"status={ob.get('status')} hit_rate={oc.get('hit_rate')}")
+        check("oracle-board entries honest",
+              all(e.get("status") in ("pending", "hit", "miss", "unverifiable")
+                  and (e.get("status") == "pending") == (e.get("verdict") is None)
+                  and e.get("trajectory_n") == len(e.get("trajectory", []))
+                  and e.get("window", {}).get("ready")
+                  == (e.get("window", {}).get("n_actual_points", 0) >= 2)
+                  for e in entries),
+              "pending <=> no verdict; trajectory_n matches; ready <=> 2+ actuals")
+        check("oracle-board windows + trajectories are real stored points",
+              all(e.get("due_at", "")[:10] >= e.get("forecast_at", "")[:10]
+                  and all(isinstance(p, list) and len(p) == 2
+                          and isinstance(p[0], str)
+                          and isinstance(p[1], (int, float))
+                          for p in e.get("trajectory", []))
+                  and [p[0] for p in e.get("trajectory", [])]
+                  == sorted(p[0] for p in e.get("trajectory", []))
+                  for e in entries),
+              "trajectory points are [iso, number] pairs, ascending")
+        check("oracle-board due_per_day sums to pending",
+              sum(r.get("pending", 0) for r in ob.get("due_per_day", []))
+              == oc.get("pending", 0),
+              f"due={sum(r.get('pending', 0) for r in ob.get('due_per_day', []))} "
+              f"pending={oc.get('pending')}")
+    else:
+        print("[validate] oracle-board.json absent (node step skipped) — not validated")
+
     # manifest self-consistency
     # 2026-10-12: resolve vercel.json rewrites first — the manifest advertises
     # public URLs (e.g. /data/v1/trends.flat.js), which may rewrite to a file

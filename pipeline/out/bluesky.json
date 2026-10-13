@@ -9,67 +9,7 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-13T04:44:48.269777+00:00"
-  },
-  {
-    "title": "Zelensky links strikes to fewer bots",
-    "url": "https://bsky.app/search?q=Zelensky+links+strikes+to+fewer+bots",
-    "source": "bluesky-trending",
-    "summary": "Volodymyr Zelensky says social media grew calmer after Ukraine hit Russia's Yandex data centers.",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-13T04:44:48.269830+00:00"
-  },
-  {
-    "title": "Dan Levy criticizes Shane Gillis monologue",
-    "url": "https://bsky.app/search?q=Dan+Levy+criticizes+Shane+Gillis+monologue",
-    "source": "bluesky-trending",
-    "summary": "The \"Schitt's Creek\" star says more men should speak up about the comedian's \"Saturday Night Live\" jokes.",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-13T04:44:48.269849+00:00"
-  },
-  {
-    "title": "Death of RJ Mitte reported",
-    "url": "https://bsky.app/search?q=Death+of+RJ+Mitte+reported",
-    "source": "bluesky-trending",
-    "summary": "TMZ says the actor who played Walter White Jr. on \"Breaking Bad\" has died at age 34.",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-13T04:44:48.269862+00:00"
-  },
-  {
-    "title": "Christopher Columbus's legacy",
-    "url": "https://bsky.app/search?q=Christopher+Columbus%27s+legacy",
-    "source": "bluesky-trending",
-    "summary": "Around Indigenous Peoples Day, people discuss the explorer's role in colonization and genocide in the Americas.",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-13T04:44:48.269881+00:00"
-  },
-  {
-    "title": "Trump strikes diesel deal with Russia",
-    "url": "https://bsky.app/search?q=Trump+strikes+diesel+deal+with+Russia",
-    "source": "bluesky-trending",
-    "summary": "Vladimir Putin will send fuel to lower US prices, reversing years of pressure over Ukraine.",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-13T04:44:48.269892+00:00"
+    "fetched_at": "2026-10-13T05:21:17.462569+00:00"
   },
   {
     "title": "Ilhan Omar home search reports",
@@ -81,7 +21,67 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-13T04:44:48.269902+00:00"
+    "fetched_at": "2026-10-13T05:21:17.462624+00:00"
+  },
+  {
+    "title": "Christopher Columbus's legacy",
+    "url": "https://bsky.app/search?q=Christopher+Columbus%27s+legacy",
+    "source": "bluesky-trending",
+    "summary": "Around Indigenous Peoples Day, people discuss the explorer's role in colonization and genocide in the Americas.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-13T05:21:17.462651+00:00"
+  },
+  {
+    "title": "Death of RJ Mitte reported",
+    "url": "https://bsky.app/search?q=Death+of+RJ+Mitte+reported",
+    "source": "bluesky-trending",
+    "summary": "TMZ says the actor who played Walter White Jr. on \"Breaking Bad\" has died at age 34.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-13T05:21:17.462664+00:00"
+  },
+  {
+    "title": "Dan Levy criticizes Shane Gillis monologue",
+    "url": "https://bsky.app/search?q=Dan+Levy+criticizes+Shane+Gillis+monologue",
+    "source": "bluesky-trending",
+    "summary": "The \"Schitt's Creek\" star says more men should speak up about the comedian's \"Saturday Night Live\" jokes.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-13T05:21:17.462676+00:00"
+  },
+  {
+    "title": "Trump strikes diesel deal with Russia",
+    "url": "https://bsky.app/search?q=Trump+strikes+diesel+deal+with+Russia",
+    "source": "bluesky-trending",
+    "summary": "Vladimir Putin will send fuel to lower US prices, reversing years of pressure over Ukraine.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-13T05:21:17.462687+00:00"
+  },
+  {
+    "title": "Zelensky links strikes to fewer bots",
+    "url": "https://bsky.app/search?q=Zelensky+links+strikes+to+fewer+bots",
+    "source": "bluesky-trending",
+    "summary": "Volodymyr Zelensky says social media grew calmer after Ukraine hit Russia's Yandex data centers.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-13T05:21:17.462697+00:00"
   },
   {
     "title": "Trump denies Russia, China aid Iran",
@@ -93,7 +93,19 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-13T04:44:48.269919+00:00"
+    "fetched_at": "2026-10-13T05:21:17.462715+00:00"
+  },
+  {
+    "title": "Trump promises payments before midterms",
+    "url": "https://bsky.app/search?q=Trump+promises+payments+before+midterms",
+    "source": "bluesky-trending",
+    "summary": "Donald Trump pledges $5,000 dividends if Republicans win, as $500 health refunds arrive.",
+    "hashtags": [],
+    "category": null,
+    "platforms": [
+      "bluesky"
+    ],
+    "fetched_at": "2026-10-13T05:21:17.462726+00:00"
   },
   {
     "title": "Ken Paxton's Texas Senate campaign",
@@ -105,18 +117,6 @@
     "platforms": [
       "bluesky"
     ],
-    "fetched_at": "2026-10-13T04:44:48.269933+00:00"
-  },
-  {
-    "title": "Paxton's Dubai New Year's party",
-    "url": "https://bsky.app/search?q=Paxton%27s+Dubai+New+Year%27s+party",
-    "source": "bluesky-trending",
-    "summary": "Report says the Texas Senate candidate celebrated with two US fugitives and a woman not his wife",
-    "hashtags": [],
-    "category": null,
-    "platforms": [
-      "bluesky"
-    ],
-    "fetched_at": "2026-10-13T04:44:48.269947+00:00"
+    "fetched_at": "2026-10-13T05:21:17.462740+00:00"
   }
 ]
