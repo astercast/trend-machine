@@ -1,13 +1,13 @@
 {
   "name": "trend-machine",
   "version": "0.7.0",
-  "generated_at": "2026-10-12T23:29:49.820021+00:00",
+  "generated_at": "2026-10-13T00:24:48.255747+00:00",
   "base": "data/v1/ relative to the site root. Works on any static host; no auth, no keys, no rate limits.",
   "endpoints": {
     "trends": {
       "path": "data/v1/trends.json",
       "description": "All topics, full editorial dossiers: angles, hooks, sources[], first_seen/last_seen, stale + seeded flags. The canonical record — sort by opportunity_score desc for the hottest plays.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/trends.json",
       "records": 393,
       "notes": "Seeded topics (seeded:true) carry researched starting-point figures in their summaries — treat as baselines, not live measurements."
@@ -15,34 +15,34 @@
     "trends_flat": {
       "path": "data/v1/trends.flat.json",
       "description": "Flat consumer feed: opportunity-ranked, stale topics excluded. Lightweight 'what to make content about today' list. Every item carries 'velocity_trend': snapshots/delta/since plus a ready-made inline SVG sparkline (wave 8) — honest 'building' state when fewer than 3 snapshots exist.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/trends-flat.json",
       "records": 393
     },
     "trends_flat_sample": {
       "path": "data/v1/trends.flat.sample.json",
       "description": "Clearly-labeled SAMPLE (sample:true) derived from seeded topics — for consumer development only, never the live path.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/trends-flat-sample.json",
       "records": 93
     },
     "trends_flat_js": {
       "path": "api/v1/trends.flat.js",
       "description": "JSONP twin of the flat feed — trendsCallback({...}). The CORS-safe fallback for pure static hosts that cannot send Access-Control-Allow-Origin headers.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/trends-flat.json"
     },
     "hashtags": {
       "path": "data/v1/hashtags.json",
       "description": "Tag -> topic-id index.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/hashtags.json",
-      "records": 238
+      "records": 235
     },
     "velocity": {
       "path": "data/v1/velocity.json",
       "description": "Oracle input: hourly velocity/opportunity snapshots per topic, ascending by timestamp. Classify with assets/js/trajectory.js (UMD — loadable in node) or read the precomputed data/v1/forecasts.json.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/velocity.json",
       "records": 393,
       "notes": "Snapshots are real pipeline observations; topics with <3 snapshots get no forecast."
@@ -50,7 +50,7 @@
     "platform_velocity": {
       "path": "data/v1/platform-velocity.json",
       "description": "Wave 6: per-platform hourly velocity series per topic ({topic_id: {platform: [[iso, vel], ...]}}). Starting points — series build one snapshot per refresh; trajectories classify after 3+ per-platform snapshots.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/platform-velocity.json",
       "records": 306,
       "notes": "Empty/missing series mean 'still building history', never a guess."
@@ -58,7 +58,7 @@
     "meme_formats": {
       "path": "data/v1/meme-formats.json",
       "description": "Wave 9: the tracked meme format families — hand-curated from Oct-2026 web research (verified = 2+ independent sources; single-source = one source or creator lore, flagged). Each family carries current examples with evidence URLs and the live topic ids whose text matches the family this run (tracked_topics — derived, never stale).",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/meme-formats.json",
       "records": 13,
       "notes": "Topics link back via their format_family field (null when unmatched)."
@@ -66,7 +66,7 @@
     "seed_freshness": {
       "path": "data/v1/seed-freshness.json",
       "description": "Wave 14: the seed-freshness sweep — every seeded topic checked for staleness: source URL liveness (HTTP probe; dead = GET 404/410 only — HEAD rejections fall through to GET, timeouts never mark stale), store corroboration (last_seen <= 7d), and velocity tracking (a seed with <3 snapshots but a first snapshot <6h old is warming up, not stale). Verdicts: healthy / stale-source / stale-untracked / flaky-warning.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "schema": "data/v1/schema/seed-freshness.json",
       "records": 93,
       "notes": "Generated by scripts/seed_freshness.py (not in refresh.sh — run as a periodic audit)."
@@ -75,21 +75,21 @@
       "path": "data/v1/lifecycle.json",
       "description": "Ignition/burnout lifecycle layer: every topic's current lifecycle stage (building/steady/warming/igniting/peaking/cooling/burned-out) classified from its real velocity snapshots, per-topic stage ribbons, and the last-24h ignitions/burnouts boards. Stages use the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr) — readouts, not predictions.",
       "schema": "data/v1/schema/lifecycle.json",
-      "updated": "2026-10-12T23:30:07.599Z",
+      "updated": "2026-10-13T00:24:53.144Z",
       "records": 393,
       "notes": "Stages are computed from the same snapshots as forecasts.json; the boards show transitions that actually happened in the last 24h."
     },
     "schemas": {
       "path": "data/v1/schema/",
       "description": "JSON Schema (draft-07) for every endpoint.",
-      "updated": "2026-10-12T23:29:49.820021+00:00",
+      "updated": "2026-10-13T00:24:48.255747+00:00",
       "records": 13
     },
     "forecasts": {
       "path": "data/v1/forecasts.json",
       "description": "Oracle output: precomputed trajectory classifications (peaking_48h / rising_fast / cooling_off / steady) from the same classifier as the dashboard. Every forecast is a projection from N snapshots — never a guarantee. Wave 6 adds confidence basis, signal attribution, and per-platform trajectories.",
       "schema": "data/v1/schema/forecasts.json",
-      "updated": "2026-10-12T23:30:07.599Z",
+      "updated": "2026-10-13T00:24:53.144Z",
       "records": 393,
       "notes": "Topics with fewer than 3 snapshots are excluded from the lists (counts.insufficient). Additive-only changes; no payload-shape breaks."
     },
@@ -97,8 +97,8 @@
       "path": "data/v1/forecast-accuracy.json",
       "description": "The Oracle's own scorecard: forecast-vs-actual ledger (hit/miss per forecast after a 48h horizon; unverifiable counted separately). Hit rate shown only after 10+ forecasts resolve; before that the status is 'building history'. Wave 18 adds next_resolution_at, resolution_readiness (pending forecasts whose 48h window already holds 2+ actual snapshots, live store + resolution archive), and per-resolution window-coverage evidence.",
       "schema": "data/v1/schema/forecast-accuracy.json",
-      "updated": "2026-10-12T23:30:07.599Z",
-      "records": 286,
+      "updated": "2026-10-13T00:24:53.144Z",
+      "records": 288,
       "notes": "Started 2026-10-11 — first resolutions land 48h later. Nothing backfilled."
     }
   },

@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-10-12T23:30:07.599Z",
+  "generated_at": "2026-10-13T00:24:53.144Z",
   "method": "assets/js/lifecycle-lib.js summarize() — stage-per-snapshot classification using the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr)",
   "honesty": "Stages are readouts from recorded velocity snapshots, not predictions. Topics with fewer than 3 snapshots report 'building'. The ignitions/burnouts boards list stage transitions that actually happened in the last 24h.",
   "counts": {
-    "peaking": 86,
-    "steady": 103,
-    "building": 204
+    "peaking": 93,
+    "steady": 204,
+    "igniting": 1,
+    "building": 95
   },
   "ignitions": [
     {
@@ -117,6 +118,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -124,6 +126,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -153,6 +156,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -160,6 +164,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -189,6 +194,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -196,6 +202,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -225,6 +232,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -232,6 +240,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -261,6 +270,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -268,6 +278,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -297,6 +308,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -304,6 +316,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -333,6 +346,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -340,6 +354,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -369,6 +384,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -376,6 +392,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -405,6 +422,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -412,6 +430,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -441,6 +460,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -448,6 +468,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -477,6 +498,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -484,6 +506,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -513,6 +536,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -520,6 +544,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -549,6 +574,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -556,6 +582,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -585,6 +612,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -592,6 +620,7 @@
       "stage": "peaking",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -621,6 +650,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -632,6 +662,7 @@
         "peaking",
         "peaking",
         "igniting",
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -657,6 +688,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -664,6 +696,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -693,6 +726,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -700,6 +734,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -729,6 +764,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -736,6 +772,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -765,6 +802,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -772,6 +810,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -801,6 +840,7 @@
         "steady",
         "steady",
         "igniting",
+        "peaking",
         "peaking"
       ]
     },
@@ -808,6 +848,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -837,6 +878,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -844,6 +886,7 @@
       "stage": "steady",
       "since": "2026-10-11T23:47:16.629612+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -872,6 +915,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -879,6 +923,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -906,6 +951,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -913,6 +959,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -940,6 +987,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -947,6 +995,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -974,6 +1023,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -981,6 +1031,7 @@
       "stage": "peaking",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1008,6 +1059,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1015,6 +1067,7 @@
       "stage": "peaking",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1042,6 +1095,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1059,6 +1113,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1066,6 +1121,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1093,6 +1149,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1100,6 +1157,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1127,6 +1185,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1144,6 +1203,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1151,6 +1211,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1178,6 +1239,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1195,6 +1257,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1202,6 +1265,7 @@
       "stage": "steady",
       "since": "2026-10-12T00:59:56.197979+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1228,6 +1292,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1235,6 +1300,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1260,6 +1326,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1267,6 +1334,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1292,6 +1360,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1299,6 +1368,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1324,6 +1394,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1331,6 +1402,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1356,6 +1428,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1363,6 +1436,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1388,6 +1462,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1395,6 +1470,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1420,6 +1496,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1427,6 +1504,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1452,6 +1530,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1459,6 +1538,7 @@
       "stage": "steady",
       "since": "2026-10-12T01:45:27.944849+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1484,6 +1564,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1491,6 +1572,7 @@
       "stage": "peaking",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1514,6 +1596,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1521,6 +1604,7 @@
       "stage": "peaking",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1544,6 +1628,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1551,6 +1636,7 @@
       "stage": "peaking",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1574,6 +1660,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1581,6 +1668,7 @@
       "stage": "peaking",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1604,6 +1692,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1611,6 +1700,7 @@
       "stage": "peaking",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1634,6 +1724,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1641,6 +1732,7 @@
       "stage": "peaking",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1664,6 +1756,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1671,6 +1764,7 @@
       "stage": "steady",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1694,6 +1788,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1701,6 +1796,7 @@
       "stage": "steady",
       "since": "2026-10-12T02:46:54.868540+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -1724,6 +1820,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -1731,6 +1828,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1752,6 +1850,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1759,6 +1858,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1780,6 +1880,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1787,6 +1888,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1808,6 +1910,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1815,6 +1918,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1836,6 +1940,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1843,6 +1948,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1864,6 +1970,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1871,6 +1978,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1892,6 +2000,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1899,6 +2008,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1920,6 +2030,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1927,6 +2038,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1948,6 +2060,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1955,6 +2068,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -1976,6 +2090,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -1983,6 +2098,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2004,6 +2120,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2011,6 +2128,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2032,6 +2150,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2039,6 +2158,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2060,6 +2180,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2067,6 +2188,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2088,6 +2210,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2095,6 +2218,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2116,6 +2240,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2123,6 +2248,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2144,6 +2270,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2151,6 +2278,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2172,6 +2300,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2179,6 +2308,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2200,6 +2330,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2207,6 +2338,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2228,6 +2360,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2235,6 +2368,7 @@
       "stage": "peaking",
       "since": "2026-10-12T03:47:19.257806+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2256,6 +2390,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2263,6 +2398,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2282,6 +2418,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2289,6 +2426,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2308,6 +2446,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2315,6 +2454,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2334,6 +2474,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2341,6 +2482,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2360,6 +2502,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2368,18 +2511,6 @@
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
         "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "build-your-own-decision-model": {
-      "stage": "steady",
-      "since": "2026-10-12T04:40:07.691290+00:00",
-      "ribbon": [
         "steady",
         "steady",
         "steady",
@@ -2399,6 +2530,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2406,6 +2538,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2425,6 +2558,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2432,6 +2566,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2451,6 +2586,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2458,6 +2594,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2477,18 +2614,6 @@
         "steady",
         "steady",
         "steady",
-        "steady"
-      ]
-    },
-    "breakfast-in-america-by-supertramp-the-rare-art-of": {
-      "stage": "steady",
-      "since": "2026-10-12T04:40:07.691290+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady",
         "steady",
         "steady"
       ]
@@ -2497,6 +2622,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2516,6 +2642,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2523,6 +2650,7 @@
       "stage": "steady",
       "since": "2026-10-12T04:40:07.691290+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2542,6 +2670,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2549,6 +2678,7 @@
       "stage": "steady",
       "since": "2026-10-12T05:46:26.263553+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2566,6 +2696,7 @@
         "peaking",
         "peaking",
         "peaking",
+        "peaking",
         "peaking"
       ]
     },
@@ -2573,6 +2704,7 @@
       "stage": "peaking",
       "since": "2026-10-12T05:46:26.263553+00:00",
       "ribbon": [
+        "peaking",
         "peaking",
         "peaking",
         "peaking",
@@ -2590,6 +2722,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2597,6 +2730,7 @@
       "stage": "steady",
       "since": "2026-10-12T05:46:26.263553+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2613,6 +2747,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2620,6 +2755,7 @@
       "stage": "steady",
       "since": "2026-10-12T06:59:54.905391+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2635,6 +2771,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2643,71 +2780,6 @@
       "since": "2026-10-12T06:59:54.905391+00:00",
       "ribbon": [
         "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "ayra-starr-heaven-baby-ft-zayn": {
-      "stage": "steady",
-      "since": "2026-10-12T06:59:54.905391+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "mario-the-story-behind-let-me-love-you": {
-      "stage": "steady",
-      "since": "2026-10-12T06:59:54.905391+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "will-orville-peck-ever-ditch-the-mask": {
-      "stage": "steady",
-      "since": "2026-10-12T06:59:54.905391+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "bini-blush-live-from-vevo-studios": {
-      "stage": "steady",
-      "since": "2026-10-12T06:59:54.905391+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "huddy-somebody-to-hate-live-from-vevo-studios": {
-      "stage": "steady",
-      "since": "2026-10-12T06:59:54.905391+00:00",
-      "ribbon": [
-        "steady",
-        "steady",
-        "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "master-peace-iykyk": {
-      "stage": "steady",
-      "since": "2026-10-12T06:59:54.905391+00:00",
-      "ribbon": [
         "steady",
         "steady",
         "steady",
@@ -2723,6 +2795,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2730,6 +2803,7 @@
       "stage": "steady",
       "since": "2026-10-12T08:07:19.941302+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2743,6 +2817,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2750,6 +2825,7 @@
       "stage": "steady",
       "since": "2026-10-12T08:07:19.941302+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady",
@@ -2763,6 +2839,7 @@
         "steady",
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2772,14 +2849,6 @@
       "ribbon": [
         "steady",
         "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "show-hn-ps2-games-statically-recompiled-to-webasse": {
-      "stage": "steady",
-      "since": "2026-10-12T09:57:06.712891+00:00",
-      "ribbon": [
         "steady",
         "steady",
         "steady"
@@ -2791,6 +2860,7 @@
       "ribbon": [
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2798,6 +2868,7 @@
       "stage": "steady",
       "since": "2026-10-12T09:57:06.712891+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady"
@@ -2809,6 +2880,7 @@
       "ribbon": [
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2816,6 +2888,7 @@
       "stage": "steady",
       "since": "2026-10-12T09:57:06.712891+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady"
@@ -2827,6 +2900,7 @@
       "ribbon": [
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
@@ -2834,6 +2908,7 @@
       "stage": "steady",
       "since": "2026-10-12T09:57:06.712891+00:00",
       "ribbon": [
+        "steady",
         "steady",
         "steady",
         "steady"
@@ -2845,14 +2920,6 @@
       "ribbon": [
         "steady",
         "steady",
-        "steady"
-      ]
-    },
-    "are-these-real-shows-and-movies-or-fake-ones-from-": {
-      "stage": "steady",
-      "since": "2026-10-12T09:57:06.712891+00:00",
-      "ribbon": [
-        "steady",
         "steady",
         "steady"
       ]
@@ -2862,14 +2929,6 @@
       "since": "2026-10-12T09:57:06.712891+00:00",
       "ribbon": [
         "steady",
-        "steady",
-        "steady"
-      ]
-    },
-    "nine-inch-nails-closer-industrial": {
-      "stage": "steady",
-      "since": "2026-10-12T09:57:06.712891+00:00",
-      "ribbon": [
         "steady",
         "steady",
         "steady"
@@ -2881,1232 +2940,1095 @@
       "ribbon": [
         "steady",
         "steady",
+        "steady",
         "steady"
       ]
     },
-    "fridges-and-freezers-in-french-supermarkets-hit-by": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
     "rj-mitte-actor-best-known-for-playing-walter-white": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "archbishop-of-the-us-military-says-catholic-soldie": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "mamdani-orders-review-of-nypd-s-use-of-force-polic": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "breaking-bad-star-rj-mitte-dies-aged-34": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "2026-nfl-defense-rankings-team-pass-and-rush-stats": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "excitement-builds-for-men-s-basketball-at-winter-s": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "i-was-blessed-to-be-her-mom-cheyenne-woman-starts-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "as-sports-betting-is-normalized-college-players-be": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "weekly-rankings-announced-for-fall-sports-oct-12": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "an-overlooked-sci-fi-movie-shows-how-disruption-by": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "consensus-truth-in-the-age-of-ai": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "microsoft-president-urges-global-ai-regulation-war": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "openai-s-latest-blow-to-mathematicians-they-have-a": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "imf-says-ai-investment-keeps-global-growth-around--2": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "cyber-attack-similar-to-openai-medicare-breach-see": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "intel-broadcom-ceos-warn-capital-crunch-could-beco": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "uc-santa-barbara-taking-a-base-camp-approach-to-ar": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "ua-little-rock-students-explore-the-future-through": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "how-artificial-intelligence-can-help-with-critical": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "ai-is-a-tool-using-it-well-takes-skill": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "glm-legal": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "a-modern-web-app-in-c": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "writing-a-demoscene-intro-for-the-zx-spectrum": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "phreak-ing-internet-phone-switch": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "hackers-activate-automatic-defrosting-in-supermark": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "codex-cli-installs-a-persistent-self-updating-back": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "launch-hn-agent37-yc-f26-low-cost-agent-sandboxes-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "turn-a-wifi-7-router-into-a-320msps-software-defin": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "citroen-revives-the-2cv-for-an-electric-age": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "making-big-downloads-resumable-in-firefox": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "muse-wonder": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-making-of-super-mario-64-full-giles-goddard-in": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "secret-of-orange-cats-revealed-after-60-year-searc": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "ai-coding-agents-generate-more-code-but-not-more-s": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "kevin-kelly-s-2016-ai-predictions-10-years-later": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "thinking-will-become-a-hobby": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "ai-is-not-a-tool-by-rich-hickey": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "solar-panels-that-plug-into-your-wall": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "publishers-killed-the-paperback-then-blamed-reader": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "show-hn-brickbrag-a-multiplayer-brick-building-wor": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "show-hn-atticus-hold-to-talk-voice-assistant-for-m": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "deloitte-falsified-documents-to-evade-tax-on-abram": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "qgis-enacts-moratorium-on-ai-contributions": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "zip-tie-tuning-vs-linus-tech-tips": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "this-is-an-official-sony-product": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "what-we-know-about-houthi-attacks-on-saudi-arabia-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "john-simpson-on-the-pivotal-moments-that-shaped-th": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "trump-says-you-can-t-fight-data-centres-but-many-a": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "how-ukraine-has-transformed-modern-warfare-the-sec": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-new-miami-vice-starring-michael-b-jordan-and-a": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "a-mix-of-personal-and-professional-issues-turned-b": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "bill-murray-is-back-as-a-ghostbuster": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "shadow-of-the-road-official-anime-opening-trailer-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "cozy-after-dark-2026-cozy-games-with-a-dark-side": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "up-close-with-the-avengers-doomsday-costumes-nycc-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "blind-descent-official-release-date-trailer-ign-fa": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "dissecting-the-mike-evans-trevon-diggs-trash-talk-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "kyrie-and-cade-hoops": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "they-don-t-want-to-win-perk-says-the-knicks-must-g": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "the-valkyries-secret-weapon-has-been-crucial-to-fi": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "what-are-your-expectations-for-marvin-harrison-jr-": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "swagu-couldn-t-believe-it": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "rich-still-got-it": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "the-story-behind-and-won-t": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "tyla-a-pop-vevo-official-live-performance": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "how-to-protect-your-identity-from-ai-deepfakes-mel": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "why-new-medicines-take-so-long-alex-epstein-tedxbo": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "can-money-buy-a-cure-for-cancer-kat-kajderowicz-te": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-cost-of-being-seen-why-visibility-isn-t-everyt": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "cotaland-water-park-restaurant-news-6-trending-aus": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "trending-stocks-this-week-as-investors-weigh-fed-o": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-2026-all-about-the-jersey-top-25-under-25-tren": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "artificial-intelligence-ai-is-watching-us-and-know": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "meta-says-new-ai-model-is-state-of-the-art-will-ma": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "5-ps2-video-games-that-are-worth-a-fortune-today": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "epic-games-delays-disney-project-asks-developers-t": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "gta-6-leaker-fully-reveals-lucia-the-game-build-si": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "my-friends-and-i-found-this-obscure-swedish-golf-v": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "aream-co-games-industry-m-a-generates-57-8-bn-in-q": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "pok-mon-pokopia-version-2-0-0-adds-new-quality-of-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "the-beatles-biopics-producer-says-releasing-all-fo": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "mort-la-r-volution-why-uk-film-loves-a-failed-rebe": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "5-horror-movie-locations-to-get-you-in-the-hallowe": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-18-best-halloween-movies-on-netflix": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "fans-choose-troye-sivan-s-she-s-the-best-as-this-w": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "new-music-from-the-dryes-mud-room": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "agawam-flower-stand-goes-viral-on-tiktok": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "federal-agents-searched-rep-ilhan-omar-s-home-as-p": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "judge-warns-jurors-as-russell-brand-prepares-for-r": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "teen-accused-of-mixing-toxic-chemicals-in-cafeteri": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "air-strikes-kill-at-least-200-at-gold-mine-near-su": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "french-supermarkets-suffer-refrigerator-shutdown-a": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "selma-blair-arrested-after-alleged-altercation-on-": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "a-sixth-measles-related-death-is-reported-in-penns": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "dan-levy-slams-shane-gillis-snl-monologue-speechle": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "amanda-seyfried-rejects-sex-scenes-and-turned-down": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "a-massive-cartoon-network-leak-exposes-decades-of-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "common-side-effects-season-2-teaser-january-24-adu": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "collin-gosselin-discusses-alleged-abuse-by-mom-kat": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "here-s-what-happened-inside-the-weirdly-stealth-30": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-lowdown-season-2-review-betty-gilpin-tommy-lee": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "breaking-bad-star-rj-mitte-s-heartbreaking-perform": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "bloomberg-epic-games-has-delayed-an-unannounced-sh": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "geralt-we-re-at-a-funeral": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "vice-city-blimp-is-upon-us": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "game-industry-asks-u-s-to-flag-denuvo-cracker-voic": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "playing-fallout-3-having-a-blast": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "uhhh-yenn-i-think-you-forgot-something": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "was-there-a-classic-game-that-had-a-genuinely-obtu": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "super-mario-64-running-on-the-atari-jaguar": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "diddy-rushed-out-of-prison-after-medical-emergency": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "harry-styles-uses-madison-square-garden-show-to-ho": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "furnace-fest-merch-seemingly-designed-by-ai-looks-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "james-hetfield-at-sphere-metallica-is-not-here-to-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "foo-fighters-everlong-alt-rock": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "strange-fruit-meaning-the-powerful-story-behind-bi": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "church-of-the-cosmic-skull-evil-in-your-eye-progre": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "breaking-bad-star-rj-mitte-dead-at-34-his-film-rol": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "official-poster-for-greta-gerwig-s-narnia-the-magi": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "hello-reddit-i-m-oscar-winning-director-alex-gibne": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "first-images-of-michael-b-jordan-and-austin-butler": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "russia-s-top-grossing-movie-in-september-was-twili": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "first-poster-for-river": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "derek-cianfrance-to-adapt-gary-paulsen-s-survival-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "hate-those-vids-sooo-much": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "wait-they-did": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "anyone-else-noticed-how-so-many-non-ai-channels-ar": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "is-the-fix-bedrock-mojang-really-that-bad-to-make-": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "i-got-50-subscribers-by-doing-nothing-exept-commen": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "can-we-stop-with-the-obvious-clickbait-titles": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "zelensky-links-strikes-to-fewer-bots": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "ilhan-omar-home-search-reports": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "tedxplaka": {
-      "stage": "building",
+      "stage": "peaking",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "bbc-on-front-line-in-yemen-s-desert-war-middleeast": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "republican-attempts-to-trip-up-james-talarico-keep": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "peaking",
+        "peaking",
+        "peaking"
       ]
     },
     "trump-says-he-s-looking-at-firing-kimberly-guilfoy": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "who-is-vfmaddrnd231pd": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "ign-fan-fest-2026-fall-edition-livestream-dragon-b": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "epic-reportedly-delays-its-disney-video-game-so-it": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "top-50-classic-horror-movies": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "why-social-reckoning-went-silent-as-more-tech-movi": {
-      "stage": "building",
+      "stage": "igniting",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "10-new-movies-to-watch-this-weekend-on-netflix-pri": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "igniting",
+        "igniting",
+        "igniting"
       ]
     },
     "visitor-dies-after-accident-on-goliath-at-six-flag": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "the-sugarcubes-birthday-dreampop": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "anyone-randomly-got-this": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "we-can-t-be-doing-this-youtube": {
-      "stage": "building",
+      "stage": "steady",
       "since": "2026-10-12T22:49:01.408645+00:00",
       "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "ken-paxton-s-texas-senate-campaign": {
-      "stage": "building",
-      "since": "2026-10-12T22:49:01.408645+00:00",
-      "ribbon": [
-        "building",
-        "building"
-      ]
-    },
-    "us-actress-selma-blair-arrested-after-allegedly-at": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "us-immigration-authorities-raid-home-of-democratic": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "trump-s-russia-deal-leaves-gop-candidates-with-a-p": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "emergency-help-was-delayed-by-confusion-after-fail": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "mike-vrabel-there-s-a-chance-a-j-brown-returns-thi": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
+        "steady",
+        "steady",
+        "steady"
       ]
     },
     "viral-report-on-mcdonald-s-ai-pricing-raises-conce": {
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4114,6 +4036,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4121,6 +4044,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4128,6 +4052,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4135,6 +4060,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4142,6 +4068,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4149,13 +4076,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
-        "building"
-      ]
-    },
-    "gta-6-is-sold-out-on-amazon-despite-being-a-digita": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4163,20 +4084,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
-        "building"
-      ]
-    },
-    "other-mommy-s-box-office-success-proves-one-thing-": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "country-music-trio-the-castellows-hint-at-somethin": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4184,6 +4092,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4191,6 +4100,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4198,6 +4108,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4205,6 +4116,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4212,6 +4124,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4219,6 +4132,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4226,6 +4140,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4233,27 +4148,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
-        "building"
-      ]
-    },
-    "why-users-stay-on-twitter": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "tna-deletes-max-caster-clips": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
-        "building"
-      ]
-    },
-    "melania-musk-denaturalization-calls": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4261,13 +4156,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
-        "building"
-      ]
-    },
-    "topic": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4275,6 +4164,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4282,6 +4172,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4289,6 +4180,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4296,6 +4188,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4303,6 +4196,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4310,6 +4204,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4317,6 +4212,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4324,6 +4220,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4331,6 +4228,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4338,6 +4236,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4345,6 +4244,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4352,6 +4252,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4359,6 +4260,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4366,6 +4268,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4373,6 +4276,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4380,6 +4284,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4387,6 +4292,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4394,13 +4300,7 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
-        "building"
-      ]
-    },
-    "columbusday": {
-      "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
-      "ribbon": [
+        "building",
         "building"
       ]
     },
@@ -4408,54 +4308,419 @@
       "stage": "building",
       "since": "2026-10-12T23:29:56.865132+00:00",
       "ribbon": [
+        "building",
         "building"
       ]
     },
-    "person-dies-at-six-flags-over-georgia-video-shows-": {
+    "topic-2": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]
     },
-    "california-beaches-homes-slammed-by-waves-from-tro": {
+    "mountainmonday": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]
     },
-    "wizards-practice-notebook-keefe-says-sarr-is-trend": {
+    "set-the-mood-with-chl-e-shorts": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]
     },
-    "fibermaxxing-is-trending-here-s-what-the-science-s": {
+    "trump-defends-russia-diesel-deal-as-lawmakers-from": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]
     },
-    "trending-on-kalb-com-10-12-26": {
+    "megyn-kelly-doubles-down-on-crackpot-claims-about-": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]
     },
-    "apple-opens-apple-music-hall-a-state-of-the-art-li": {
+    "zelenskyy-says-russia-strikes-energy-facilities-de": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]
     },
-    "your-pretty-face-is-going-to-hell-was-one-of-the-b": {
+    "iran-war-updates-deadly-houthi-attacks-keep-saudi-": {
       "stage": "building",
-      "since": "2026-10-12T23:29:56.865132+00:00",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "1-dead-others-hurt-at-six-flags-over-georgia-as-gu": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "911-call-transcript-from-botched-christa-pike-exec": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "david-pocock-concerned-senior-albanese-adviser-vet": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "what-s-dragging-down-a-i-efficiency-the-verificati": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "is-attention-the-essence-of-intelligence": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "blood-cells-from-80-year-old-donor-become-stem-cel": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "gpt-6-astra-helped-me-jailbreak-my-kindle": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "the-baffling-intelligence-of-a-single-cell-2024": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "intel-d270-gpu-ai-accelerator-up-to-480-gb-lpddr5x": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "janas-run-llms-larger-than-ram-by-streaming-expert": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "a-shared-verifiable-fix-database-that-ai-agents-re": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "show-hn-an-experimental-pattern-first-daw-that-sup": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "why-aren-t-ai-companies-being-charged-for-hacking": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "trump-is-all-in-on-data-centres-americans-are-not-": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "does-president-trump-s-energy-ceasefire-actually-e": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "saudia-arabia-vows-serious-response-to-houthi-atta": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "indian-opposition-leaders-march-to-top-court-to-de": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "former-chelsea-owner-roman-abramovich-s-offshore-s": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "aaron-rodgers-was-in-a-zone-pat-mcafee-praises-ste": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "i-m-back-the-playmaker-s-top-playmakers-of-week-5-": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "dan-orlovsky-says-the-patriots-are-still-super-bow": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "does-georgia-deserve-to-be-ranked-no-1-in-the-ap-p": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "stephen-a-says-dan-quinn-s-time-in-washington-is-o": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "dscvr-artists-to-watch-2026": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "chet-and-drew-aka-somethingoutwest-s-go-to-emojis-": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "theweeknd-cry-for-me": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "sierra-spirit-the-story-behind-bleed-you": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "thuy-makes-some-tough-decisions-in-iykyk": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "bradley-simpson-s-play-skip-repeat": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "vevo-pop-video-weekly-this-week-s-biggest-hits-ep-": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "arizona-is-trending-for-one-of-the-nation-s-best-s": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "blackhawks-star-connor-bedard-trending-toward-seas": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "trending-video-actress-shows-bruises-on-body-after": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "artificial-intelligence-answers-what-is-the-expect": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "cyberleek-drops-more-nsfw-lucia-videos-threatens-t": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "playing-for-the-win-meet-the-philly-orchestra-devo": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "the-beatles-biopics-producer-on-releasing-all-four": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "new-stephen-king-like-horror-movie-is-officially-t": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "nobody-would-read-his-script-then-he-got-the-call-": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "what-to-watch-this-week-new-shows-and-movies-to-st": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "new-music-friday-jessie-reyez-car-n-le-n-ryan-cast": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "we-want-to-keep-his-name-alive-power-trip-are-hono": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "jessica-lange-fx-was-too-cheap-to-pay-for-cars-hom": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "the-dead-milkmen-tiny-town-punk-rock-1985": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "nothing-but-thieves-if-i-get-high-alt-rock": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "raye-this-music-may-contain-hope-pop": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "my-neutral-yt-account-is-being-spammed-by-politica": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "cozy-after-dark-showcase-goes-live": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "trump-comments-on-jon-husted-s-body": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "death-of-rj-mitte-reported": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "gop-pac-targets-oregon-in-maine-race": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
+      "ribbon": [
+        "building"
+      ]
+    },
+    "midterm-get-out-the-vote-push": {
+      "stage": "building",
+      "since": "2026-10-13T00:24:50.489500+00:00",
       "ribbon": [
         "building"
       ]

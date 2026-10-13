@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T23:30:05.883309+00:00",
+  "generated_at": "2026-10-13T00:24:52.830218+00:00",
   "sample": true,
   "source_count": 93,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
@@ -32,13 +32,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 92,
         "latest_velocity": 92,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -68,13 +68,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 91,
         "latest_velocity": 91,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 91 when tracking started (Oct 11, 2026), 91 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 91 when tracking started (Oct 11, 2026), 91 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -105,13 +105,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 90,
         "latest_velocity": 90,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -141,13 +141,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 90,
         "latest_velocity": 90,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 11, 2026), 90 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -177,13 +177,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 88,
         "latest_velocity": 88,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 88 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 88 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -211,13 +211,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 86,
         "latest_velocity": 86,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 11, 2026), 86 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 11, 2026), 86 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -246,13 +246,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 86,
         "latest_velocity": 86,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 12, 2026), 86 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 12, 2026), 86 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -284,13 +284,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 85,
         "latest_velocity": 85,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 85 when tracking started (Oct 11, 2026), 85 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 85 when tracking started (Oct 11, 2026), 85 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -320,13 +320,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 85,
         "latest_velocity": 85,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 85 when tracking started (Oct 12, 2026), 85 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 85 when tracking started (Oct 12, 2026), 85 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -355,13 +355,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 84,
         "latest_velocity": 84,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 12, 2026), 84 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 12, 2026), 84 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -389,13 +389,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 84,
         "latest_velocity": 84,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 12, 2026), 84 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 12, 2026), 84 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -424,13 +424,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 83,
         "latest_velocity": 83,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 83 when tracking started (Oct 12, 2026), 83 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 83 when tracking started (Oct 12, 2026), 83 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -461,13 +461,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 82,
         "latest_velocity": 82,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -495,13 +495,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 82,
         "latest_velocity": 82,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -532,13 +532,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 82,
         "latest_velocity": 82,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -568,13 +568,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 81,
         "latest_velocity": 81,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 81 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 81 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -606,13 +606,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 81,
         "latest_velocity": 81,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 12, 2026), 81 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 12, 2026), 81 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -644,13 +644,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -679,13 +679,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 79,
         "latest_velocity": 79,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 12, 2026), 79 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 12, 2026), 79 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -714,13 +714,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 79,
         "latest_velocity": 79,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 12, 2026), 79 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 12, 2026), 79 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -753,13 +753,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 79,
         "latest_velocity": 79,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 12, 2026), 79 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 12, 2026), 79 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -788,13 +788,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -823,13 +823,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -859,13 +859,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -894,13 +894,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "bluesky": {
             "snapshots": 3,
@@ -936,13 +936,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 77,
         "latest_velocity": 77,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 77 when tracking started (Oct 12, 2026), 77 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 77 when tracking started (Oct 12, 2026), 77 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -974,13 +974,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 77,
         "latest_velocity": 77,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 77 when tracking started (Oct 12, 2026), 77 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 77 when tracking started (Oct 12, 2026), 77 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1011,13 +1011,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 76,
         "latest_velocity": 76,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1046,13 +1046,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 76,
         "latest_velocity": 76,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1082,13 +1082,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 75,
         "latest_velocity": 75,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 11, 2026), 75 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 11, 2026), 75 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1119,13 +1119,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 75,
         "latest_velocity": 75,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 12, 2026), 75 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 12, 2026), 75 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1156,13 +1156,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 75,
         "latest_velocity": 75,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 12, 2026), 75 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 12, 2026), 75 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1191,13 +1191,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 75,
         "latest_velocity": 75,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 12, 2026), 75 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 75 when tracking started (Oct 12, 2026), 75 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1226,13 +1226,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1261,13 +1261,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 74 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1296,13 +1296,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1333,13 +1333,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1370,13 +1370,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1406,13 +1406,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1443,13 +1443,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 73,
         "latest_velocity": 73,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 11, 2026), 73 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 11, 2026), 73 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1481,13 +1481,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 73,
         "latest_velocity": 73,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 12, 2026), 73 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 12, 2026), 73 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1517,13 +1517,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 73,
         "latest_velocity": 73,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 12, 2026), 73 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 73 when tracking started (Oct 12, 2026), 73 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1553,13 +1553,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 72,
         "latest_velocity": 72,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 11, 2026), 72 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 11, 2026), 72 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1590,13 +1590,13 @@
       "trend_type": "format",
       "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 72,
         "latest_velocity": 72,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 72 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 72 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1625,13 +1625,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 72,
         "latest_velocity": 72,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 72 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 72 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1661,13 +1661,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 71,
         "latest_velocity": 71,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 11, 2026), 71 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 11, 2026), 71 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1696,13 +1696,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 71,
         "latest_velocity": 71,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 12, 2026), 71 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 12, 2026), 71 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1734,13 +1734,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 71,
         "latest_velocity": 71,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 12, 2026), 71 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 71 when tracking started (Oct 12, 2026), 71 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1769,13 +1769,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 70,
         "latest_velocity": 70,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 11, 2026), 70 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 11, 2026), 70 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1807,13 +1807,13 @@
       "trend_type": "format",
       "format_family": "pov-setup",
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 70,
         "latest_velocity": 70,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1842,13 +1842,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 70,
         "latest_velocity": 70,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1877,13 +1877,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 69,
         "latest_velocity": 69,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 69 when tracking started (Oct 11, 2026), 69 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 69 when tracking started (Oct 11, 2026), 69 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1912,13 +1912,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 68,
         "latest_velocity": 68,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 11, 2026), 68 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 11, 2026), 68 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1948,13 +1948,13 @@
       "trend_type": "format",
       "format_family": "transition",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 68,
         "latest_velocity": 68,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 12, 2026), 68 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 68 when tracking started (Oct 12, 2026), 68 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -1983,13 +1983,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 66,
         "latest_velocity": 66,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 11, 2026), 66 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 11, 2026), 66 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2020,13 +2020,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 66,
         "latest_velocity": 66,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 66 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 66 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2054,13 +2054,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 64,
         "latest_velocity": 64,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 64 when tracking started (Oct 12, 2026), 64 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 64 when tracking started (Oct 12, 2026), 64 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2088,13 +2088,13 @@
       "trend_type": "topic",
       "format_family": "transition",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 62,
         "latest_velocity": 62,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 62 when tracking started (Oct 12, 2026), 62 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 62 when tracking started (Oct 12, 2026), 62 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2127,13 +2127,13 @@
       "trend_type": "topic",
       "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 93,
         "latest_velocity": 93,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 93 when tracking started (Oct 11, 2026), 93 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 93 when tracking started (Oct 11, 2026), 93 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2167,13 +2167,13 @@
       "trend_type": "format",
       "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 92,
         "latest_velocity": 92,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 92 when tracking started (Oct 12, 2026), 92 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 92 when tracking started (Oct 12, 2026), 92 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2204,13 +2204,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 60,
         "latest_velocity": 60,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 60 when tracking started (Oct 12, 2026), 60 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 60 when tracking started (Oct 12, 2026), 60 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2240,13 +2240,13 @@
       "trend_type": "topic",
       "format_family": "deadpan-debate",
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 88,
         "latest_velocity": 90,
         "delta": 2,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 90 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,4.0 44.7,4.0 54.9,4.0 65.1,4.0 75.3,4.0 85.5,4.0 95.6,4.0 105.8,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 11, 2026), 90 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,4.0 41.3,4.0 50.7,4.0 60.0,4.0 69.3,4.0 78.7,4.0 88.0,4.0 97.3,4.0 106.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2279,13 +2279,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 90,
         "latest_velocity": 90,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 12, 2026), 90 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 90 when tracking started (Oct 12, 2026), 90 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2317,19 +2317,19 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 76,
         "latest_velocity": 89,
         "delta": 13,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 89 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,4.0 44.7,4.0 54.9,4.0 65.1,4.0 75.3,4.0 85.5,4.0 95.6,4.0 105.8,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 89 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,4.0 41.3,4.0 50.7,4.0 60.0,4.0 69.3,4.0 78.7,4.0 88.0,4.0 97.3,4.0 106.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "youtube": {
-            "snapshots": 10,
-            "latest_velocity": 89,
-            "delta": 44,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 89 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,4.0 28.9,24.0 41.3,14.0 53.8,24.0 66.2,14.0 78.7,4.0 91.1,4.4 103.6,6.4 116.0,6.4\" fill=\"none\"/></svg>"
+            "snapshots": 11,
+            "latest_velocity": 88,
+            "delta": 43,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 88 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,4.0 26.4,24.0 37.6,14.0 48.8,24.0 60.0,14.0 71.2,4.0 82.4,4.4 93.6,6.4 104.8,6.4 116.0,6.8\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -2362,13 +2362,13 @@
       "trend_type": "format",
       "format_family": "dance-hook",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 88,
         "latest_velocity": 88,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 12, 2026), 88 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 88 when tracking started (Oct 12, 2026), 88 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2400,13 +2400,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 87,
         "latest_velocity": 87,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 87 when tracking started (Oct 11, 2026), 87 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 87 when tracking started (Oct 11, 2026), 87 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2439,13 +2439,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 86,
         "latest_velocity": 86,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 12, 2026), 86 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 86 when tracking started (Oct 12, 2026), 86 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2476,13 +2476,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 84,
         "latest_velocity": 84,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 11, 2026), 84 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 11, 2026), 84 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2515,13 +2515,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 84,
         "latest_velocity": 84,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 12, 2026), 84 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 84 when tracking started (Oct 12, 2026), 84 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2551,25 +2551,25 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 74,
         "latest_velocity": 83,
         "delta": 9,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 83 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,4.0 44.7,4.0 54.9,4.0 65.1,4.0 75.3,4.0 85.5,4.0 95.6,4.0 105.8,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 11, 2026), 83 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,4.0 41.3,4.0 50.7,4.0 60.0,4.0 69.3,4.0 78.7,4.0 88.0,4.0 97.3,4.0 106.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "x": {
-            "snapshots": 10,
+            "snapshots": 11,
             "latest_velocity": 89,
             "delta": 44,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 89 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,14.0 28.9,24.0 41.3,14.0 53.8,24.0 66.2,14.0 78.7,4.0 91.1,4.0 103.6,6.0 116.0,6.4\" fill=\"none\"/></svg>"
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 89 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,14.0 26.4,24.0 37.6,14.0 48.8,24.0 60.0,14.0 71.2,4.0 82.4,4.0 93.6,6.0 104.8,6.4 116.0,6.4\" fill=\"none\"/></svg>"
           },
           "youtube": {
-            "snapshots": 10,
+            "snapshots": 11,
             "latest_velocity": 89,
             "delta": 44,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 89 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,14.0 28.9,24.0 41.3,14.0 53.8,24.0 66.2,14.0 78.7,4.0 91.1,4.0 103.6,6.0 116.0,6.4\" fill=\"none\"/></svg>"
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 89 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,14.0 26.4,24.0 37.6,14.0 48.8,24.0 60.0,14.0 71.2,4.0 82.4,4.0 93.6,6.0 104.8,6.4 116.0,6.4\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -2604,13 +2604,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 82,
         "latest_velocity": 82,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2641,13 +2641,13 @@
       "trend_type": "topic",
       "format_family": "audio-skit",
       "velocity_trend": {
-        "snapshots": 6,
+        "snapshots": 7,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 82,
         "latest_velocity": 82,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,24.0 48.8,24.0 71.2,24.0 93.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 12, 2026), 82 at the latest snapshot (7 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 22.7,24.0 41.3,24.0 60.0,24.0 78.7,24.0 97.3,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2678,13 +2678,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 11, 2026), 80 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 11, 2026), 80 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2716,13 +2716,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2751,13 +2751,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 9,
+        "snapshots": 10,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2789,13 +2789,13 @@
       "trend_type": "format",
       "format_family": "pov-setup",
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2827,13 +2827,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2866,13 +2866,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 6,
+        "snapshots": 7,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 80,
         "latest_velocity": 80,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,24.0 48.8,24.0 71.2,24.0 93.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 80 when tracking started (Oct 12, 2026), 80 at the latest snapshot (7 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 22.7,24.0 41.3,24.0 60.0,24.0 78.7,24.0 97.3,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2903,13 +2903,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 79,
         "latest_velocity": 79,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 11, 2026), 79 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 79 when tracking started (Oct 11, 2026), 79 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2940,13 +2940,13 @@
       "trend_type": "topic",
       "format_family": "prop-illusion",
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 76,
         "latest_velocity": 78,
         "delta": 2,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 78 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,4.0 24.4,4.0 34.5,4.0 44.7,4.0 54.9,4.0 65.1,4.0 75.3,4.0 85.5,4.0 95.6,4.0 105.8,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 11, 2026), 78 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,4.0 22.7,4.0 32.0,4.0 41.3,4.0 50.7,4.0 60.0,4.0 69.3,4.0 78.7,4.0 88.0,4.0 97.3,4.0 106.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -2976,13 +2976,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 11, 2026), 78 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 11, 2026), 78 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,24.0 22.7,24.0 32.0,24.0 41.3,24.0 50.7,24.0 60.0,24.0 69.3,24.0 78.7,24.0 88.0,24.0 97.3,24.0 106.7,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3014,13 +3014,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 78,
         "latest_velocity": 78,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 78 when tracking started (Oct 12, 2026), 78 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3054,19 +3054,19 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 76,
         "latest_velocity": 76,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "bluesky": {
-            "snapshots": 6,
+            "snapshots": 7,
             "latest_velocity": 64,
             "delta": 19,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 64 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 26.4,14.0 48.8,4.0 71.2,14.0 93.6,16.0 116.0,16.4\" fill=\"none\"/></svg>"
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 64 at the latest snapshot (7 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 22.7,14.0 41.3,4.0 60.0,14.0 78.7,16.0 97.3,16.4 116.0,16.4\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3098,13 +3098,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 76,
         "latest_velocity": 76,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 76 when tracking started (Oct 12, 2026), 76 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3134,13 +3134,13 @@
       "trend_type": "topic",
       "format_family": "mood-bed",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 74,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 74 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3170,19 +3170,19 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 72,
         "latest_velocity": 72,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 72 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 72 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "bluesky": {
-            "snapshots": 8,
+            "snapshots": 9,
             "latest_velocity": 95,
             "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,14.0 36.0,24.0 52.0,14.0 68.0,4.0 84.0,4.0 100.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,14.0 32.0,24.0 46.0,14.0 60.0,4.0 74.0,4.0 88.0,4.0 102.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3216,19 +3216,19 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 8,
+        "snapshots": 9,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 70,
         "latest_velocity": 70,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (8 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 20.0,24.0 36.0,24.0 52.0,24.0 68.0,24.0 84.0,24.0 100.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 70 when tracking started (Oct 12, 2026), 70 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,24.0 32.0,24.0 46.0,24.0 60.0,24.0 74.0,24.0 88.0,24.0 102.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {
           "bluesky": {
-            "snapshots": 6,
+            "snapshots": 7,
             "latest_velocity": 95,
             "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (6 snapshots).\" focusable=\"false\"><polyline points=\"4.0,23.6 26.4,24.0 48.8,24.0 71.2,13.8 93.6,4.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (7 snapshots).\" focusable=\"false\"><polyline points=\"4.0,23.6 22.7,24.0 41.3,24.0 60.0,13.8 78.7,4.0 97.3,4.0 116.0,4.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3260,13 +3260,13 @@
       "trend_type": "format",
       "format_family": "carousel-story",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 66,
         "latest_velocity": 66,
         "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 66 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 15.2,24.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 66 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,24.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3295,13 +3295,13 @@
       "trend_type": "topic",
       "format_family": "callout-copy",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 72,
         "latest_velocity": 58,
         "delta": -14,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 58 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 15.2,4.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 72 when tracking started (Oct 12, 2026), 58 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 14.2,4.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3332,13 +3332,13 @@
       "trend_type": "format",
       "format_family": "chaos-caption",
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 74,
         "latest_velocity": 58,
         "delta": -16,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 58 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 15.2,4.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 74 when tracking started (Oct 12, 2026), 58 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 14.2,4.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3369,13 +3369,13 @@
       "trend_type": "format",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 11,
+        "snapshots": 12,
         "state": "ready",
         "since": "Oct 12, 2026",
         "first_velocity": 66,
         "latest_velocity": 58,
         "delta": -8,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 58 at the latest snapshot (11 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 15.2,4.0 26.4,24.0 37.6,24.0 48.8,24.0 60.0,24.0 71.2,24.0 82.4,24.0 93.6,24.0 104.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 66 when tracking started (Oct 12, 2026), 58 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 14.2,4.0 24.4,24.0 34.5,24.0 44.7,24.0 54.9,24.0 65.1,24.0 75.3,24.0 85.5,24.0 95.6,24.0 105.8,24.0 116.0,24.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3411,13 +3411,13 @@
       "trend_type": "format",
       "format_family": "costume-walk",
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 81,
         "latest_velocity": 90,
         "delta": 9,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 90 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,4.0 24.4,4.0 34.5,4.0 44.7,4.0 54.9,4.0 65.1,4.0 75.3,4.0 85.5,4.0 95.6,4.0 105.8,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 81 when tracking started (Oct 11, 2026), 90 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,4.0 22.7,4.0 32.0,4.0 41.3,4.0 50.7,4.0 60.0,4.0 69.3,4.0 78.7,4.0 88.0,4.0 97.3,4.0 106.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     },
@@ -3449,13 +3449,13 @@
       "trend_type": "topic",
       "format_family": null,
       "velocity_trend": {
-        "snapshots": 12,
+        "snapshots": 13,
         "state": "ready",
         "since": "Oct 11, 2026",
         "first_velocity": 82,
         "latest_velocity": 84,
         "delta": 2,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 11, 2026), 84 at the latest snapshot (12 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 14.2,4.0 24.4,4.0 34.5,4.0 44.7,4.0 54.9,4.0 65.1,4.0 75.3,4.0 85.5,4.0 95.6,4.0 105.8,4.0 116.0,4.0\" fill=\"none\"/></svg>",
+        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 82 when tracking started (Oct 11, 2026), 84 at the latest snapshot (13 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 13.3,4.0 22.7,4.0 32.0,4.0 41.3,4.0 50.7,4.0 60.0,4.0 69.3,4.0 78.7,4.0 88.0,4.0 97.3,4.0 106.7,4.0 116.0,4.0\" fill=\"none\"/></svg>",
         "per_platform": {}
       }
     }
