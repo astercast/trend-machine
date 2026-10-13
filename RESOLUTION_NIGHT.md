@@ -44,6 +44,18 @@ end-to-end in a sandbox copy (verdicts written, scorecard flipped to
 "live", counts reconciled), and the scorecard page was screenshot-
 verified in its "building history" state with zero console errors.*
 
+*Wave-24 pre-gate check (2026-10-13 03:19 UTC, ~22.4h before the gate):
+the gate was re-proved once more — `--run` refused with exit 2 and the
+ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was byte-identical
+before and after. Readiness held at **271/290 overall (268/286 batch
+1)**; counts reconcile 290 recorded = 290 pending + 0 resolved + 0
+unverifiable, scorecard still "building history" with `hit_rate`
+null, screenshot-verified with zero console errors. No refresh ran:
+wave 23's last refresh already occupies the 03:00Z hourly snapshot
+bucket and this check sat in the same bucket. Refreshes resume on the
+hourly cadence from the 04:00Z bucket onward, per the WAVELOG
+handoff step (0).*
+
 ## 2. The sequence
 
 One command runs the whole night:
