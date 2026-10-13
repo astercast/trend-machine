@@ -106,6 +106,34 @@ section { scroll-margin-top: 110px; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ---- cross-document view transitions (Fleet Commons canonical
+   v1.0.0, adopted wave 35) ----
+   Site-wide MPA navigation, from this one file: every page loads
+   base.css (root pages directly, the 393 dossiers via TOPIC_TMPL,
+   404.html included), so the opt-in finally covers the dossiers the
+   wave-9 comment claimed but its five-page stylesheet never reached.
+   War-room idiom: opacity only, no travel, no scale — a page change
+   reads as a panel refresh, never as old data sliding away. The
+   durations sit at the fast end of the site's own scale (120ms out /
+   180ms in) so a snapshot of the previous page is never on screen
+   long enough to be read as current data.
+   THE GUARD IS THE PATTERN: everything lives inside
+   @media (prefers-reduced-motion: no-preference). Reduced-motion
+   visitors navigate unanimated; browsers without cross-document
+   view transitions ignore the rule and navigate as before.
+   Deliberately not adopted: view-transition-name shared-element
+   pairings (duplicate-name risk across 393 generated dossiers —
+   the same reason film declined them), and same-document
+   transitions on the live board / Live Wire / Streamer Desk /
+   Oracle Board fetch-renders (see WAVELOG wave 35). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: tm-vt-out 120ms ease-in both; }
+  ::view-transition-new(root) { animation: tm-vt-in 180ms ease-out both; }
+}
+@keyframes tm-vt-out { to { opacity: 0; } }
+@keyframes tm-vt-in { from { opacity: 0; } }
+
 /* ---- reduced motion: everything calms down ---- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -91,15 +91,12 @@
   --tm-ease-decelerate: cubic-bezier(0, 0, 0, 1);
 }
 
-/* cross-document view transitions: dossiers <-> scorecard <-> formats.
-   Round-2 correction: a view transition IS motion — gate the opt-in behind
-   prefers-reduced-motion (no-preference). Reduced-motion users get instant
-   navigation. Progressive enhancement: no-op where unsupported. */
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition {
-    navigation: auto;
-  }
-}
+/* cross-document view transitions: the opt-in lived here in waves 9–34,
+   guarded by prefers-reduced-motion (no-preference) — but this sheet loads
+   on only five root pages, so the dossiers it named never opted in.
+   Wave 35 moved the rule to assets/css/base.css (Fleet Commons canonical
+   v1.0.0, war-room opacity-only idiom), which every page loads. There is
+   deliberately no second @view-transition rule here: one source only. */
 
 /* typography craft: balanced headings on the new pages */
 #sc-title, #fmt-title,
