@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T12:18:13.710Z",
+  "generated_at": "2026-10-13T18:40:42.176Z",
   "curated_at": "2026-10-13",
   "method": "Hand-curated for the Streamer Desk (wave 29 / rotation 12) from ordinary web search on 2026-10-13. Directory facts carry at least one credible source each; drama-timeline entries carry two or more independent sources per event or are not printed as verified. Rosters are dated claims ('as of'), never eternal facts. No viewership or follower numbers are printed unless a source states them for a dated event. Wave 34 (rotation 13) follow-through: three items carried by the research streamer beat (multi-source-verified in its rounds through 2026-10-13) were added — the Jynxzi tournament and Kyedae return events and the Esports Awards 2026 nominees update; the beat's held single-source items (TwitchCon safety withdrawals, ComplexCon suspensions, a FaZe/100 Thieves event item) were NOT promoted.",
   "sourcing_standard": {
@@ -1142,7 +1142,7 @@
       "kind": "return stream",
       "location": "Twitch",
       "name": "Kyedae's Twitch return",
-      "note": "Kyedae's confirmed return to Twitch on Oct 20, 2026, after an ~18-month hiatus (since April 2025). The date was reconfirmed in the research beat's Oct 13, 2026 crawls; nothing about the return stream itself is recorded before it happens.",
+      "note": "Kyedae's confirmed return to Twitch on Oct 20, 2026, after an ~18-month hiatus (since April 2025). The date was reconfirmed in the research beat's Oct 13, 2026 crawls (rounds 127–128 add a third carried source, Sportskeeda); nothing about the return stream itself is recorded before it happens.",
       "sources": [
         {
           "name": "TalkEsport — Kyedae Twitch return date",
@@ -1151,6 +1151,10 @@
         {
           "name": "Dexerto — Kyedae confirms Twitch return date",
           "url": "https://www.dexerto.com/twitch/kyedae-finally-confirms-twitch-return-date-after-18-month-hiatus-3412956/"
+        },
+        {
+          "name": "Sportskeeda — Tectone comments on Kyedae's return to livestreaming",
+          "url": "https://www.sportskeeda.com/us/streamers/news-after-tenz-sacrificed-bones-blood-career-i-hope-finally-found-herself-tectone-comments-kyedae-s-return-livestreaming"
         }
       ],
       "start": "2026-10-20",

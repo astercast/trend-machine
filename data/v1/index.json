@@ -99,7 +99,7 @@
       "path": "data/v1/streamer-desk.json",
       "description": "Wave 29: the Streamer Desk — sourced streamer directory, dated updates, a drama tracker that prints only multi-source-verified timelines (unverified claims quarantined with reasons), streamer houses with dated rosters, and an events calendar whose past/upcoming status is computed from dates.",
       "schema": "data/v1/schema/streamer-desk.json",
-      "updated": "2026-10-13T12:18:13.710Z",
+      "updated": "2026-10-13T18:40:42.176Z",
       "records": 23,
       "notes": "Written by scripts/build_streamer_desk.js (runs after build_live_wire.js in refresh.sh); human-readable on streamer-desk.html."
     },
