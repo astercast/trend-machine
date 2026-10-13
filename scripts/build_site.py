@@ -1039,6 +1039,133 @@ def main():
                             "n_points": {"type": "integer", "minimum": 0}}}},
             },
         },
+        "streamer-desk": {
+            "$schema": DRAFT,
+            "title": "trend-machine Streamer Desk",
+            "description": ("Wave 29: the Streamer Desk payload, built by "
+                            "scripts/build_streamer_desk.js from the curated "
+                            "data/streamer_desk.json. Directory profiles and "
+                            "houses carry named sources; drama timelines are "
+                            "verified only when their events trace to 2+ "
+                            "distinct source domains (the generator refuses "
+                            "to publish otherwise); unverified claims are "
+                            "quarantined with their reason; rosters are "
+                            "dated as-of claims; event status (past / "
+                            "happening-now / upcoming) is computed from "
+                            "dates at build time."),
+            "type": "object",
+            "required": ["generated_at", "curated_at", "method",
+                         "sourcing_standard", "honesty", "provenance",
+                         "counts", "streamers", "updates", "drama",
+                         "unverified", "houses", "events", "feeds"],
+            "properties": {
+                "generated_at": {"type": "string"},
+                "curated_at": {"type": ["string", "null"]},
+                "method": {"type": "string"},
+                "sourcing_standard": {"type": "object"},
+                "honesty": {"type": "string"},
+                "provenance": {"type": "object"},
+                "counts": {"type": "object",
+                    "required": ["streamers", "houses", "updates",
+                                 "drama_verified", "unverified",
+                                 "drama_source_domains", "events",
+                                 "events_upcoming", "events_past",
+                                 "feeds_skip_by_design"],
+                    "properties": {
+                        "streamers": {"type": "integer", "minimum": 0},
+                        "houses": {"type": "integer", "minimum": 0},
+                        "updates": {"type": "integer", "minimum": 0},
+                        "drama_verified": {"type": "integer", "minimum": 0},
+                        "unverified": {"type": "integer", "minimum": 0},
+                        "drama_source_domains": {"type": "integer", "minimum": 0},
+                        "events": {"type": "integer", "minimum": 0},
+                        "events_upcoming": {"type": "integer", "minimum": 0},
+                        "events_past": {"type": "integer", "minimum": 0},
+                        "feeds_skip_by_design": {"type": "integer", "minimum": 0}}},
+                "streamers": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "name", "platforms", "categories",
+                                 "note", "as_of", "sources"],
+                    "properties": {
+                        "id": {"type": "string"}, "name": {"type": "string"},
+                        "platforms": {"type": "array", "items": {"type": "string"}},
+                        "categories": {"type": "array", "items": {"type": "string"}},
+                        "crew": {"type": ["string", "null"]},
+                        "note": {"type": "string"},
+                        "as_of": {"type": "string"},
+                        "sources": {"$ref": "#/definitions/sources"}}}},
+                "updates": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "date", "kind", "title", "summary",
+                                 "streamer_ids", "sources"],
+                    "properties": {
+                        "id": {"type": "string"}, "date": {"type": "string"},
+                        "kind": {"type": "string"}, "title": {"type": "string"},
+                        "summary": {"type": "string"},
+                        "streamer_ids": {"type": "array", "items": {"type": "string"}},
+                        "sources": {"$ref": "#/definitions/sources"}}}},
+                "drama": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "title", "status", "note", "timeline"],
+                    "properties": {
+                        "id": {"type": "string"}, "title": {"type": "string"},
+                        "status": {"const": "verified"},
+                        "note": {"type": "string"},
+                        "timeline": {"type": "array", "items": {"type": "object",
+                            "required": ["date", "event", "sources"],
+                            "properties": {
+                                "date": {"type": "string"},
+                                "event": {"type": "string"},
+                                "sources": {"$ref": "#/definitions/sources"}}}}}}},
+                "unverified": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "title", "status", "claim",
+                                 "why_unverified", "sources"],
+                    "properties": {
+                        "id": {"type": "string"}, "title": {"type": "string"},
+                        "status": {"const": "unverified"},
+                        "claim": {"type": "string"},
+                        "why_unverified": {"type": "string"},
+                        "sources": {"$ref": "#/definitions/sources"}}}},
+                "houses": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "name", "full_name", "base", "founded",
+                                 "status", "members_as_of", "members",
+                                 "content", "sources"],
+                    "properties": {
+                        "id": {"type": "string"}, "name": {"type": "string"},
+                        "full_name": {"type": "string"},
+                        "base": {"type": "string"},
+                        "founded": {"type": "string"},
+                        "status": {"type": "string"},
+                        "members_as_of": {"type": "string"},
+                        "members": {"type": "array", "items": {"type": "string"}},
+                        "former_members": {"type": "array", "items": {"type": "string"}},
+                        "content": {"type": "string"},
+                        "sources": {"$ref": "#/definitions/sources"}}}},
+                "events": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "name", "kind", "start", "end",
+                                 "location", "note", "sources", "status"],
+                    "properties": {
+                        "id": {"type": "string"}, "name": {"type": "string"},
+                        "kind": {"type": "string"},
+                        "start": {"type": "string"}, "end": {"type": "string"},
+                        "location": {"type": "string"},
+                        "note": {"type": "string"},
+                        "status": {"type": "string",
+                                   "enum": ["past", "happening-now", "upcoming"]},
+                        "sources": {"$ref": "#/definitions/sources"}}}},
+                "feeds": {"type": "array", "items": {"type": "object",
+                    "required": ["id", "label", "status", "detail"],
+                    "properties": {
+                        "id": {"type": "string"}, "label": {"type": "string"},
+                        "status": {"type": "string", "enum": ["skip-by-design"]},
+                        "detail": {"type": "string"}}}},
+            },
+            "definitions": {
+                "sources": {"type": "array", "minItems": 1,
+                    "items": {"type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string", "format": "uri"}}}},
+            },
+        },
         # self-describing manifest itself
         "index": {
             "$schema": DRAFT,
@@ -1230,6 +1357,16 @@ def main():
                  "stored velocity snapshots only."),
                 schema_path("live-wire"), None,
                 "Written by scripts/build_live_wire.js (runs after build_oracle_board.js in refresh.sh); human-readable on live-wire.html."),
+            "streamer_desk": endpoint(
+                "data/v1/streamer-desk.json",
+                ("Wave 29: the Streamer Desk — sourced streamer directory, "
+                 "dated updates, a drama tracker that prints only "
+                 "multi-source-verified timelines (unverified claims "
+                 "quarantined with reasons), streamer houses with dated "
+                 "rosters, and an events calendar whose past/upcoming "
+                 "status is computed from dates."),
+                schema_path("streamer-desk"), None,
+                "Written by scripts/build_streamer_desk.js (runs after build_live_wire.js in refresh.sh); human-readable on streamer-desk.html."),
             "schemas": endpoint(
                 "data/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
@@ -1328,7 +1465,7 @@ def main():
               "", "## API", "- [data/v1/index.json](data/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
               "- [data/v1/trends.json](data/v1/trends.json) — all topics, full dossiers", "- [data/v1/trends.flat.json](data/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)",
               "- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)", "- [data/v1/forecasts.json](data/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
-              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)", "- [data/v1/oracle-board.json](data/v1/oracle-board.json) — the Oracle Board: every recorded forecast with its stored trajectory, 48h window state (ready/short), and verdict when one exists", "- [data/v1/live-wire.json](data/v1/live-wire.json) — the Live Wire: every pipeline lane with its recorded hit count + health (live/degraded/stale-skip/skip-by-design) and the hour's top movers from stored snapshots only",
+              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)", "- [data/v1/oracle-board.json](data/v1/oracle-board.json) — the Oracle Board: every recorded forecast with its stored trajectory, 48h window state (ready/short), and verdict when one exists", "- [data/v1/live-wire.json](data/v1/live-wire.json) — the Live Wire: every pipeline lane with its recorded hit count + health (live/degraded/stale-skip/skip-by-design) and the hour's top movers from stored snapshots only", "- [data/v1/streamer-desk.json](data/v1/streamer-desk.json) — the Streamer Desk: sourced streamer directory, dated updates, multi-source-verified drama timelines, houses with dated rosters, events calendar",
               "- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the Oracle's ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)",
               "- [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
               "- [data/v1/hashtags.json](data/v1/hashtags.json) — tag index", "- [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint",
@@ -1337,6 +1474,7 @@ def main():
               "- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)",
               "- [oracle-board.html](oracle-board.html) — the Oracle Board: a forecast-explorer over the ledger — every recorded call with its real stored trajectory, window readiness, and (after Resolution Night) its verdict",
               "- [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only",
+              "- [streamer-desk.html](streamer-desk.html) — the Streamer Desk: streamer directory, dated updates, multi-source-verified drama timelines (unverified quarantined), houses with dated rosters, events calendar",
               "- [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join",
               "- [launch-plan.html](launch-plan.html) — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",
               "## Algorithm mechanics (Oct 2026)", "- [algorithms.html](algorithms.html) — what TikTok, YouTube Shorts, and Instagram Reels reward right now: signal hierarchies, the Oct 1 Shorts originality update, cross-platform breakout consensus; sourced and dated", "",

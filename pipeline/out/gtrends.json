@@ -1,6 +1,18 @@
 [
   {
-    "title": "lakers news",
+    "title": "mensik",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078357+00:00"
+  },
+  {
+    "title": "bangladesh vs afghanistan",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -9,7 +21,79 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T06:30:13.018694+00:00"
+    "fetched_at": "2026-10-13T07:57:31.078438+00:00"
+  },
+  {
+    "title": "sorana cirstea",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078468+00:00"
+  },
+  {
+    "title": "diana shnaider",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~1000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078486+00:00"
+  },
+  {
+    "title": "mayar sherif",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078504+00:00"
+  },
+  {
+    "title": "maja chwalińska",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078524+00:00"
+  },
+  {
+    "title": "inundación",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~100+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078542+00:00"
+  },
+  {
+    "title": "lakers news",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-13T07:57:31.078558+00:00"
   },
   {
     "title": "kate winslet",
@@ -21,102 +105,18 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T06:30:13.018763+00:00"
+    "fetched_at": "2026-10-13T07:57:31.078572+00:00"
   },
   {
     "title": "a20 lite",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018786+00:00"
-  },
-  {
-    "title": "hunger games movies",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018805+00:00"
-  },
-  {
-    "title": "arthur gea",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018839+00:00"
-  },
-  {
-    "title": "little village",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018857+00:00"
-  },
-  {
-    "title": "apple iphone duo",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
     "summary": "~200+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T06:30:13.018873+00:00"
-  },
-  {
-    "title": "dungeon crawler carl live action",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018889+00:00"
-  },
-  {
-    "title": "carrie season 2",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~200+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018905+00:00"
-  },
-  {
-    "title": "jakub mensik",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~500+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T06:30:13.018920+00:00"
+    "fetched_at": "2026-10-13T07:57:31.078588+00:00"
   }
 ]

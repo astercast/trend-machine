@@ -1,0 +1,437 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine Streamer Desk",
+  "description": "Wave 29: the Streamer Desk payload, built by scripts/build_streamer_desk.js from the curated data/streamer_desk.json. Directory profiles and houses carry named sources; drama timelines are verified only when their events trace to 2+ distinct source domains (the generator refuses to publish otherwise); unverified claims are quarantined with their reason; rosters are dated as-of claims; event status (past / happening-now / upcoming) is computed from dates at build time.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "curated_at",
+    "method",
+    "sourcing_standard",
+    "honesty",
+    "provenance",
+    "counts",
+    "streamers",
+    "updates",
+    "drama",
+    "unverified",
+    "houses",
+    "events",
+    "feeds"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "curated_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": "string"
+    },
+    "sourcing_standard": {
+      "type": "object"
+    },
+    "honesty": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "streamers",
+        "houses",
+        "updates",
+        "drama_verified",
+        "unverified",
+        "drama_source_domains",
+        "events",
+        "events_upcoming",
+        "events_past",
+        "feeds_skip_by_design"
+      ],
+      "properties": {
+        "streamers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "houses": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "updates": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "drama_verified": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unverified": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "drama_source_domains": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "events": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "events_upcoming": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "events_past": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "feeds_skip_by_design": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "streamers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "platforms",
+          "categories",
+          "note",
+          "as_of",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crew": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "as_of": {
+            "type": "string"
+          },
+          "sources": {
+            "$ref": "#/definitions/sources"
+          }
+        }
+      }
+    },
+    "updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "date",
+          "kind",
+          "title",
+          "summary",
+          "streamer_ids",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "streamer_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sources": {
+            "$ref": "#/definitions/sources"
+          }
+        }
+      }
+    },
+    "drama": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "status",
+          "note",
+          "timeline"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "const": "verified"
+          },
+          "note": {
+            "type": "string"
+          },
+          "timeline": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "date",
+                "event",
+                "sources"
+              ],
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "event": {
+                  "type": "string"
+                },
+                "sources": {
+                  "$ref": "#/definitions/sources"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "unverified": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "status",
+          "claim",
+          "why_unverified",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "const": "unverified"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "why_unverified": {
+            "type": "string"
+          },
+          "sources": {
+            "$ref": "#/definitions/sources"
+          }
+        }
+      }
+    },
+    "houses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "full_name",
+          "base",
+          "founded",
+          "status",
+          "members_as_of",
+          "members",
+          "content",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "base": {
+            "type": "string"
+          },
+          "founded": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "members_as_of": {
+            "type": "string"
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "former_members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "content": {
+            "type": "string"
+          },
+          "sources": {
+            "$ref": "#/definitions/sources"
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "kind",
+          "start",
+          "end",
+          "location",
+          "note",
+          "sources",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "past",
+              "happening-now",
+              "upcoming"
+            ]
+          },
+          "sources": {
+            "$ref": "#/definitions/sources"
+          }
+        }
+      }
+    },
+    "feeds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "status",
+          "detail"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "skip-by-design"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}

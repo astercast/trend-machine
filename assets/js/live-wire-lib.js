@@ -49,8 +49,9 @@ var TM_LiveWire = (function () {
         '<span class="lw-hits-note">ran this refresh, recorded nothing</span>';
     }
     if (lane.status === "stale-skip") {
+      var storedDay = lane.newest_fetched_at || lane.file_written_at;
       return '<span class="num lw-hits">' + lane.hits + " hits</span>" +
-        '<span class="lw-hits-note">stored ' + fmtDay(lane.newest_fetched_at) +
+        '<span class="lw-hits-note">stored ' + fmtDay(storedDay) +
         " — NOT this refresh, excluded from the current total</span>";
     }
     return '<span class="num lw-hits">—</span>' +
@@ -97,6 +98,7 @@ var TM_LiveWire = (function () {
 
   function moversHTML(wire) {
     var mv = wire.movers || { gainers: [], fallers: [] };
+    var c = wire.counts || {};
     var gain = (mv.gainers || []).map(function (m) {
       return moverRowHTML(m, "up");
     }).join("");
@@ -108,13 +110,22 @@ var TM_LiveWire = (function () {
         "about an hour yet — the wire shows movement only when the " +
         "snapshots themselves prove it.</p>";
     }
+    // Wave 29 audit fix: the payload caps each list at 10 while the
+    // banner counts every mover — the headings must disclose the cap
+    // ("top 10 of 21"), never let 10 rows pose as the whole count.
+    function capNote(shown, total) {
+      return (typeof total === "number" && total > shown)
+        ? " — top " + shown + " of " + total : "";
+    }
     return '<div class="lw-movers">' +
       '<section aria-label="Top gainers"><h3 class="lw-movers-h is-up">' +
-      "▲ Climbing</h3>" + (gain ||
+      "▲ Climbing" + capNote((mv.gainers || []).length, c.gainers) +
+      "</h3>" + (gain ||
         '<p class="lw-empty">Nothing climbed on a proven ~1h pair.</p>') +
       "</section>" +
       '<section aria-label="Top fallers"><h3 class="lw-movers-h is-down">' +
-      "▼ Cooling</h3>" + (fall ||
+      "▼ Cooling" + capNote((mv.fallers || []).length, c.fallers) +
+      "</h3>" + (fall ||
         '<p class="lw-empty">Nothing cooled on a proven ~1h pair.</p>') +
       "</section></div>";
   }

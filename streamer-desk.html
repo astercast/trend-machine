@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streamer Desk — directory, timelines, houses, calendar — Trend Machine</title>
+<meta name="description" content="The Streamer Desk: a sourced streamer directory, dated updates, a drama tracker that prints only multi-source-verified timelines (unverified claims are quarantined and labeled), streamer houses with dated rosters, and an events calendar. Nothing invented.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b0f0e'/%3E%3Cpath d='M9 1 L3 9 h4 l-1 6 7-9 H8 z' fill='%2339ff88'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/wave3.css">
+<link rel="stylesheet" href="assets/css/wave9.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/wave12.css">
+<link rel="stylesheet" href="assets/css/wave18.css">
+<link rel="stylesheet" href="assets/css/streamer-desk.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="head-inner">
+<a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<span class="kicker">🎙 the streamer desk</span>
+</div></header>
+
+<main id="main" class="wrap">
+<nav aria-label="Breadcrumb" style="margin:20px 0 0">
+<a href="index.html" style="font-size:13px">&larr; all trends</a> ·
+<a href="live-wire.html" style="font-size:13px">the live wire</a> ·
+<a href="oracle-board.html" style="font-size:13px">the oracle board</a> ·
+<a href="forecast-accuracy.html" style="font-size:13px">forecast accuracy</a>
+</nav>
+
+<section class="oracle-hero sd-hero" aria-labelledby="sd-title">
+<p class="kicker">war room · the streamer beat</p>
+<h1 id="sd-title">🎙 The Streamer Desk</h1>
+<p class="sd-lede">
+  Who streams where, what they're up to, which houses they run with — and a
+  drama tracker with a hard rule: <strong>a timeline prints only what two or
+  more independent sources verify</strong>. Anything weaker sits in
+  quarantine, badged unverified, with the reason on the record. Rosters are
+  dated claims, not eternal facts. <strong>No invented numbers, ever.</strong>
+</p>
+<p class="kicker" id="sd-stamp">Loading the desk…</p>
+</section>
+
+<div id="sd-status" role="status" aria-live="polite"></div>
+<div id="sd-summary"></div>
+
+<h2 class="sd-section-h">The directory</h2>
+<p class="sd-section-sub">Major streamers: platforms, main games and categories, crews and houses. Every profile carries its sources; facts are dated as of the curation stamp.</p>
+<div id="sd-streamers"></div>
+
+<h2 class="sd-section-h">What they're up to</h2>
+<p class="sd-section-sub">Dated entries only: records, platform moves, events, collabs. Newest first.</p>
+<div id="sd-updates"></div>
+
+<h2 class="sd-section-h">Drama tracker — verified timelines</h2>
+<p class="sd-section-sub">
+  Timeline format, neutral tone, every event sourced and timestamped.
+  "Verified" means two or more independent credible sources report the
+  event. Allegations are reported as allegations, with who made them.
+</p>
+<div id="sd-drama"></div>
+
+<h2 class="sd-section-h">Quarantine — unverified</h2>
+<p class="sd-section-sub">
+  Claims in circulation that do <strong>not</strong> meet the bar. They are
+  printed here — labeled, with the reason — so nobody mistakes their
+  absence from the timelines for ignorance, or their presence here for fact.
+</p>
+<div id="sd-unverified"></div>
+
+<h2 class="sd-section-h">Streamer houses</h2>
+<p class="sd-section-sub">The crews and orgs: membership as of a stated date, what they produce, and who has left. A house that closed stays listed — as closed.</p>
+<div id="sd-houses"></div>
+
+<h2 class="sd-section-h">Events calendar</h2>
+<p class="sd-section-sub">Conventions, awards, charity marathons, subathons. Past and upcoming are computed from the dates at build time — a past event never poses as upcoming.</p>
+<div id="sd-events"></div>
+
+<h2 class="sd-section-h">Desk feeds — the honest lanes</h2>
+<p class="sd-section-sub">
+  The Desk's one live lane runs on the <a href="live-wire.html">Live Wire</a>
+  (the streamer-beat news lane, real recorded hits only). The directory
+  APIs below cannot be fed honestly with the credentials this project
+  holds, so they ship skip-by-design — no live status, no follower
+  counts, nothing faked.
+</p>
+<div id="sd-feeds"></div>
+
+<section class="sd-method" aria-labelledby="sd-method-title">
+<h2 id="sd-method-title">How this desk works</h2>
+<p>
+  The payload (<code>data/v1/streamer-desk.json</code>) is built by
+  <code>scripts/build_streamer_desk.js</code> from a hand-curated record
+  (<code>data/streamer_desk.json</code>). The generator enforces the
+  sourcing standard in code: a profile or house with no source, a drama
+  timeline whose events trace to fewer than two distinct source domains,
+  an undated roster, or an unverified item with no stated reason makes
+  the build <strong>fail</strong> — the Desk would rather not publish
+  than launder a claim. Directory facts need one credible source;
+  drama needs two.
+</p>
+</section>
+</main>
+
+<footer class="site-foot"><div class="wrap foot-grid">
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+</div></footer>
+
+<script src="assets/js/streamer-desk-lib.js"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function init() {
+    fetch("data/v1/streamer-desk.json").then(function (r) {
+      if (!r.ok) { throw new Error("streamer-desk"); }
+      return r.json();
+    }).then(function (desk) {
+      $("sd-status").hidden = true;
+      $("sd-summary").innerHTML = TM_StreamerDesk.summaryHTML(desk);
+      $("sd-streamers").innerHTML = TM_StreamerDesk.streamersHTML(desk);
+      $("sd-updates").innerHTML = TM_StreamerDesk.updatesHTML(desk);
+      $("sd-drama").innerHTML = TM_StreamerDesk.dramaHTML(desk);
+      $("sd-unverified").innerHTML = TM_StreamerDesk.unverifiedHTML(desk);
+      $("sd-houses").innerHTML = TM_StreamerDesk.housesHTML(desk);
+      $("sd-events").innerHTML = TM_StreamerDesk.eventsHTML(desk);
+      $("sd-feeds").innerHTML = TM_StreamerDesk.feedsHTML(desk);
+      $("sd-stamp").textContent = "Desk: " + desk.counts.streamers +
+        " streamers · " + desk.counts.houses + " houses · " +
+        desk.counts.drama_verified + " verified timelines · curated " +
+        desk.curated_at + " · built " + desk.generated_at;
+    }).catch(function () {
+      $("sd-status").innerHTML =
+        '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the desk</h2>' +
+        "<p>This page needs data/v1/streamer-desk.json (built by " +
+        "scripts/build_streamer_desk.js). Run pipeline/refresh.sh or check " +
+        "the connection.</p></div>";
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else { init(); }
+})();
+</script>
+</body>
+</html>

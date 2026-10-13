@@ -1,0 +1,79 @@
+/* ============================================================
+   TREND MACHINE — wave 29 · the Streamer Desk
+   War-room identity, editorial grade: an engraved banner, a
+   six-card evidence strip, ruled rows per section. Badges carry
+   the honesty language: verified = signal green, unverified =
+   alarm amber (quarantine), past/skip = quiet steel.
+   ============================================================ */
+
+.sd-hero h1 { letter-spacing: -.01em; }
+.sd-lede { max-width: 62ch; font-size: 1.06rem; color: var(--ink-dim); }
+.sd-lede strong { color: var(--ink); }
+
+.sd-strip {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;
+  margin: 22px 0 8px;
+}
+.sd-card {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 12px 14px;
+}
+.sd-card .k {
+  font-family: var(--font-display); font-size: var(--fs-tiny);
+  text-transform: uppercase; letter-spacing: .09em; color: var(--ink-dim);
+}
+.sd-card .v { font-family: var(--font-data); font-size: 1.55rem; color: var(--ink); }
+.sd-curated { font-size: var(--fs-tiny); color: var(--ink-faint); margin: 0 0 10px; }
+
+.sd-section-h {
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: .05em; margin: 30px 0 8px;
+}
+.sd-section-sub { color: var(--ink-dim); font-size: var(--fs-small); max-width: 78ch; margin: 0 0 12px; }
+
+.sd-row {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 14px 16px; margin: 0 0 10px;
+}
+.sd-row h3 { margin: 0 0 4px; font-size: 1rem; }
+.sd-row p { margin: 4px 0; max-width: 78ch; }
+.sd-meta, .sd-crew { font-size: var(--fs-tiny); color: var(--ink-faint); }
+.sd-date {
+  font-family: var(--font-data); font-size: var(--fs-tiny);
+  color: var(--ink-dim); margin: 0; text-transform: uppercase; letter-spacing: .06em;
+}
+.sd-srcs { font-size: var(--fs-tiny); color: var(--ink-faint); display: block; margin-top: 6px; }
+.sd-srcs a { color: var(--ink-dim); }
+.sd-note { font-size: var(--fs-small); color: var(--ink-dim); }
+
+.sd-drama {
+  background: var(--panel); border: 1px solid var(--line);
+  border-left: 4px solid var(--signal); border-radius: var(--r);
+  padding: 16px 18px; margin: 0 0 14px;
+}
+.sd-drama h3 { margin: 0 0 8px; }
+.sd-timeline { margin: 0; padding-left: 20px; }
+.sd-timeline li { margin: 0 0 12px; }
+.sd-timeline p { margin: 2px 0; max-width: 78ch; }
+
+.sd-unv { border-left: 4px solid var(--alarm); }
+.sd-badge {
+  font-family: var(--font-display); font-size: var(--fs-tiny);
+  text-transform: uppercase; letter-spacing: .07em; white-space: nowrap;
+  padding: 3px 8px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-bright); color: var(--ink-dim);
+  display: inline-block; vertical-align: middle;
+}
+.sd-badge.ok { color: #06130b; background: var(--live); border-color: var(--live); }
+.sd-badge.warn { color: var(--alarm); border-color: var(--alarm); }
+.sd-badge.dim { color: var(--ink-dim); }
+
+.sd-method {
+  border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--panel); padding: 16px 18px; margin: 30px 0 10px;
+}
+.sd-method p { max-width: 78ch; }
+
+@media (max-width: 760px) {
+  .sd-strip { grid-template-columns: repeat(2, 1fr); }
+}

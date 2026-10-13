@@ -90,3 +90,124 @@ Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 - First `-live` push blocked 2026-10-11 23:52 PDT by GitHub secondary rate
   limit (403 on repo creation) — retry `gh.py create-repo trend-machine-live`
   then `gh-push.py ~/workspace/trend-machine-live`.
+
+## Free-tier / best-pattern audit (wave 29 — rotation 12, 2026-10-13)
+
+Audited as ordered: real numbers, stated assumptions, the Live Wire
+treated as the fleet's health model.
+
+### Function count vs the ≤12 cap
+
+**5 functions** (cap 12, headroom 7), all explicit paths in
+`vercel.json`, each `{"maxDuration": 10}`, no `runtime` key anywhere:
+
+| function | kind | work per call |
+|---|---|---|
+| `api/health.js` | GET | reads bundled JSON stamps, SLA verdicts; never 5xx |
+| `api/trends.js` | GET | serves one precomputed file (bundle, or GitHub Contents when a token is set) |
+| `api/velocity.js` | GET | same pattern, per-topic filter |
+| `api/forecasts.js` | GET | same pattern |
+| `api/cron/wire.js` | cron only | the daily heartbeat (below) |
+
+Wave 29's Streamer Desk added **zero functions**: it is a precomputed
+static payload (`data/v1/streamer-desk.json`, 44K) + a static page —
+the static-first rule applied to the flagship itself.
+
+### Estimated monthly invocations (assumptions stated)
+
+Assumption: the live snapshot serves a niche audience — **5,000 page
+views/month**. Pages are static and fetch `data/v1/*.json` (static
+files, **not** function invocations), so page traffic does not consume
+the invocation budget at all. Functions are reached only by API
+consumers, health checks, and the one cron:
+
+| source | math | /month |
+|---|---|---|
+| cron wire | 1/day (`0 13 * * *`) | ~31 |
+| health | assumed 10 checks/day | ~300 |
+| GET APIs (trends/velocity/forecasts) | assumed 20 calls/day total | ~600 |
+| **total** | | **~950/month** |
+
+That is **~1% of the Hobby budget (100,000 function invocations/mo)**.
+Stress case: 100× the assumed API traffic (2,000 calls/day) still
+lands at ~61k/month — under the cap, and the SWR headers below mean
+real consumers rarely re-invoke at that rate anyway. Bandwidth: the
+largest payload is `data/v1/forecasts.json` at ~692K; even 5,000 full
+page loads pulling ~2MB of JSON/CSS/fonts each is ~10GB of the 100GB
+Hobby bandwidth budget.
+
+### Worst-case duration vs the 10s ceiling
+
+- GET handlers: one file read + JSON parse + envelope. Sub-second by
+  construction (largest file ~692K); the GitHub-Contents path adds
+  one API round-trip, still ≪ 10s.
+- **Worst case is the cron wire**, and it is bounded by design:
+  7 keyless sources fetched in parallel (`Promise.allSettled`),
+  4,000ms per-source timeout (`WIRE_FETCH_TIMEOUT_MS`, spec default
+  kept in production), HN item fan-out under the same timeout, then a
+  pure-function recompute. Fetch phase ≤ ~4s even if every source
+  hangs; the commit-back phase (only when `GITHUB_REPO_TOKEN` is set)
+  is a handful of Contents API calls. Observed headroom is
+  comfortable, but this is the first duration risk if source latency
+  or the commit-back chain grows — it is the number to watch, and the
+  timeout is a single env override away from tightening.
+
+### First degradation point
+
+In order: **(1)** the wire cron's duration under a slow-source day
+(bounded above; degrades to partial results per source, never a
+hang — `allSettled` + per-source timeouts); **(2)** invocation volume
+only under programmatic polling of `/api/*` that ignores the SWR
+headers (~100k/mo needs ~3,200 uncached API calls/day, 160× the
+assumed rate); **(3)** bandwidth at ~50× assumed traffic. Static
+pages and `data/v1/*.json` do not degrade at all — they are files.
+
+### Best-pattern alignment (verified in code, not asserted)
+
+- **Static-first**: every page renders from precomputed
+  `data/v1/*.json`; functions are a convenience layer over the same
+  files, never the only path.
+- **SWR caching**: `lib/envelope.js` sets
+  `public, s-maxage=600, stale-while-revalidate=86400` on GET
+  envelopes; health overrides to `s-maxage=60` + SWR; the cron is
+  `no-store`. Coalescing: parallel fetch with per-source timeouts in
+  the wire; refresh generators are idempotent and dedupe by design
+  (24h per-topic forecast dedupe; lane files rewritten atomically per
+  run).
+- **Honest failure fallbacks**: health never 5xx (degrades to a
+  `"degraded"` status payload); the wire runs read-only without a
+  token and says so in its envelope; the pipeline's lanes degrade in
+  the open (below).
+
+### The Live Wire as the health model — audit + fixes (wave 29)
+
+The Wire (`data/v1/live-wire.json`, 13 lanes after wave 29) is the
+fleet's health surface: every lane's health is the pipeline's own
+recorded outcome. This wave audited it as such and fixed two places
+where its reporting overstated reality:
+
+1. **Movers cap disclosure (fixed).** The banner counts every mover
+   (this run: 4 climbing / 21 cooling / 463 flat) but the board lists
+   only the top 10 per direction — the headings said nothing about
+   the other 11 fallers, so 10 rows silently posed as the whole
+   board. `assets/js/live-wire-lib.js` now prints the cap on the
+   heading ("Cooling — top 10 of 21") whenever the list is shorter
+   than the count; pinned by a new `test_live_wire.js` check.
+2. **Dateless stale rows (fixed).** A stale-skip lane whose stored
+   hits carry no `fetched_at` rendered "stored —" with no date; the
+   row now falls back to the file's write date, so a stale claim is
+   always dated.
+3. **Copy drift (fixed).** `live-wire.html` and the payload method
+   string still said "ten file-writing lanes" after the streamer
+   lane landed; both now say eleven (13 lanes = 11 file-writing +
+   TikTok/X skip-by-design — and the validator still pins the
+   skip-by-design set to exactly `{tiktok, x}`).
+
+Lane health after this run, exactly as recorded: **9 live** (incl.
+the new Streamer Desk wire lane, 32 real Google News RSS hits on its
+first run), **1 degraded** (reddit direct, 403s), **1 stale-skip**
+(YouTube Invidious/direct: 25 old hits dated 2026-10-12 and excluded
+from the 419 current hits), **2 skip-by-design**. Mastodon recovered
+to live this run after wave 28's stale-skip — the board shows both
+states across runs without smoothing either.
+

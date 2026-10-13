@@ -369,6 +369,71 @@ def main():
     else:
         print("[validate] live-wire.json absent (node step skipped) — not validated")
 
+    # wave 29: streamer-desk.json — schema + the sourcing standard,
+    # re-audited independently of the generator that published it
+    sd_path = os.path.join(API, "streamer-desk.json")
+    if os.path.exists(sd_path):
+        sd = validate_doc("streamer-desk.json", sd_path, "streamer-desk.json")
+        sc = sd.get("counts", {})
+
+        def _domains(sources):
+            from urllib.parse import urlparse
+            return {(urlparse(s.get("url", "")).hostname or "")
+                    .removeprefix("www.")
+                    for s in sources or []}
+
+        check("streamer-desk counts reconcile",
+              sc.get("streamers", -1) == len(sd.get("streamers", []))
+              and sc.get("houses", -1) == len(sd.get("houses", []))
+              and sc.get("updates", -1) == len(sd.get("updates", []))
+              and sc.get("drama_verified", -1) == len(sd.get("drama", []))
+              and sc.get("unverified", -1) == len(sd.get("unverified", []))
+              and sc.get("events", -1) == len(sd.get("events", []))
+              and sc.get("events_upcoming", -2)
+              == sum(1 for e in sd.get("events", [])
+                     if e.get("status") == "upcoming")
+              and sc.get("events_past", -3)
+              == sum(1 for e in sd.get("events", [])
+                     if e.get("status") == "past"),
+              f"counts={sc}")
+        check("streamer-desk every profile + house is sourced + dated",
+              all(p.get("sources") and p.get("as_of")
+                  for p in sd.get("streamers", []))
+              and all(h.get("sources") and h.get("members_as_of")
+                      for h in sd.get("houses", [])),
+              "directory facts carry >= 1 source; rosters carry an as-of date")
+        check("streamer-desk verified drama is multi-source",
+              all(d.get("status") == "verified"
+                  and len(_domains([s for ev in d.get("timeline", [])
+                                    for s in ev.get("sources", [])])) >= 2
+                  and all(ev.get("sources") and ev.get("date")
+                          for ev in d.get("timeline", []))
+                  and [ev.get("date") for ev in d.get("timeline", [])]
+                  == sorted(ev.get("date")
+                            for ev in d.get("timeline", []))
+                  for d in sd.get("drama", []))
+              and sc.get("drama_source_domains", 0) >= 2,
+              "every verified timeline: >= 2 distinct source domains, "
+              "every event sourced + dated, chronological")
+        check("streamer-desk unverified stays quarantined",
+              all(u.get("status") == "unverified"
+                  and u.get("why_unverified") and u.get("sources")
+                  for u in sd.get("unverified", []))
+              and not ({u.get("id") for u in sd.get("unverified", [])}
+                       & {d.get("id") for d in sd.get("drama", [])}),
+              "unverified items carry status + reason + sources and "
+              "never share an id with a verified timeline")
+        check("streamer-desk event status honest vs dates",
+              all((e.get("status") == "past") == (e.get("end", "") <
+                  sd.get("generated_at", "")[:10])
+                  or e.get("status") in ("happening-now",)
+                  for e in sd.get("events", []))
+              and all(e.get("start", "") <= e.get("end", "")
+                      for e in sd.get("events", [])),
+              "an event whose end precedes the build date is 'past'")
+    else:
+        print("[validate] streamer-desk.json absent (node step skipped) — not validated")
+
     # manifest self-consistency
     # 2026-10-12: resolve vercel.json rewrites first — the manifest advertises
     # public URLs (e.g. /data/v1/trends.flat.js), which may rewrite to a file

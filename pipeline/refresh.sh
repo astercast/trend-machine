@@ -5,7 +5,7 @@
 set -u
 cd "$(dirname "$0")/.." || exit 1
 echo "=== refresh $(date -u +%FT%TZ) ==="
-for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_bluesky fetch_youtube fetch_youtube_rss fetch_tiktok fetch_x; do
+for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_bluesky fetch_youtube fetch_youtube_rss fetch_streamers fetch_tiktok fetch_x; do
   python3 "pipeline/$f.py"
 done
 python3 pipeline/normalize.py
@@ -17,6 +17,7 @@ if command -v node >/dev/null 2>&1; then
   node scripts/build_forecasts.js
   node scripts/build_oracle_board.js
   node scripts/build_live_wire.js
+  node scripts/build_streamer_desk.js
 else
   echo "[forecasts] node unavailable — skipping data/v1/forecasts.json"
 fi

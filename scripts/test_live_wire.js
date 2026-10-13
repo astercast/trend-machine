@@ -30,7 +30,7 @@ function laneFiles(over) {
   G.LANES.forEach(d => { base[d.id] = null; });
   // file lanes default: fresh file, 5 hits at 06:25Z
   ["gtrends", "news", "news_search", "reddit_rss", "hn", "mastodon",
-   "bluesky", "youtube_rss"].forEach(id => {
+   "bluesky", "youtube_rss", "streamers"].forEach(id => {
     base[id] = { hits: 5, sources: ["src-" + id],
                  newest_fetched_at: "2026-10-13T06:25:00.000Z",
                  mtime: "2026-10-13T06:25:30.000Z" };
@@ -62,8 +62,8 @@ var wire = G.buildLiveWire(new Date(REFRESH), REFRESH, laneFiles(), hist, store)
 var byId = {};
 wire.lanes.forEach(l => { byId[l.id] = l; });
 
-check("registry covers every refresh.sh fetcher (12 lanes)",
-      wire.lanes.length === 12 &&
+check("registry covers every refresh.sh fetcher (13 lanes)",
+      wire.lanes.length === 13 &&
       byId.gtrends && byId.news_search && byId.reddit_rss &&
       byId.youtube_rss && byId.tiktok && byId.x);
 check("fresh lane with hits is live and counts its hits as current",
@@ -82,7 +82,7 @@ check("lane totals reconcile",
       wire.counts.lanes_stale_skip + wire.counts.lanes_skip_by_design
       === wire.counts.lanes);
 check("current_hits excludes the stale file's 25",
-      wire.counts.current_hits === 8 * 5 &&
+      wire.counts.current_hits === 9 * 5 &&
       wire.counts.stale_hits_excluded === 25);
 
 // old-but-present file for a normally-live lane also goes stale-skip
@@ -125,7 +125,7 @@ check("movers: off-board topic renders its id as title, not live",
 // --- rendering (lib) ----------------------------------------------------------
 var sum = L.summaryHTML(wire);
 check("summary names current hits and the excluded stale hits",
-      sum.indexOf("40 hits") >= 0 && sum.indexOf("25 old hits") >= 0);
+      sum.indexOf("45 hits") >= 0 && sum.indexOf("25 old hits") >= 0);
 var ytRow = L.laneRowHTML(byId.youtube);
 check("stale row says NOT this refresh + excluded",
       ytRow.indexOf("Stale · skip") >= 0 &&
@@ -145,6 +145,12 @@ check("movers render the real span, never a bare '1h'",
 var empty = L.moversHTML({ movers: { gainers: [], fallers: [] } });
 check("empty movers render the honest no-pair state",
       empty.indexOf("No topic holds a stored pair") >= 0);
+var capped = L.moversHTML({ counts: { gainers: 1, fallers: 21 },
+  movers: wire.movers });
+check("movers headings disclose the list cap against banner counts",
+      capped.indexOf("top 1 of 21") >= 0 &&
+      capped.indexOf("Climbing — top") < 0,
+      capped.slice(0, 200));
 
 console.log(FAILS.length ? ("[test_live_wire] " + FAILS.length + " FAILURES")
                          : "[test_live_wire] all checks passed");

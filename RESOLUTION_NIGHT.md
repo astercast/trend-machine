@@ -86,6 +86,31 @@ same run; the one command in §2 is unchanged. The link check ran
 internal-only this wave (6,050 checked / 0 broken) — its external
 probing was skipped under the standing fetch rule.*
 
+*Wave-29 pre-gate check (2026-10-13 07:50–08:12 UTC, ~17.9h before
+the gate): the gate was re-proved once — `--run` refused with exit 2
+and the ledger md5 (`a81bcd99129a71ac091168ddecd762e3`, the md5 wave
+28's refresh left) was byte-identical before and after. A full
+refresh then ran (exit 0, 393 topics live, forecasts built
+2026-10-13T08:00:35Z) and recorded +0 new forecasts — the ledger md5
+was unchanged start to end. Readiness held at **271/315 overall
+(268/286 batch 1)**; the 44 short are the same 19 as before plus the
+25 wave-28 batch-2 windows still maturing toward Oct-15 horizons;
+the audit ends ALL INVARIANTS HOLD, counts reconcile 315 recorded =
+315 pending + 0 resolved + 0 unverifiable, and the scorecard stays
+"building history" with `hit_rate` null, screenshot-verified with
+zero console errors. This wave also built the **Streamer Desk**
+(`streamer-desk.html` / `data/v1/streamer-desk.json`): sourced
+directory, dated updates, a drama tracker that prints only
+multi-source-verified timelines (2 claims quarantined as unverified
+with reasons), houses with dated rosters, and a computed-status
+events calendar — plus a 13th Live Wire lane (the Streamer Desk
+wire, live with 32 real hits) and the free-tier audit in
+LIVE_CHECKLIST.md (5 functions vs the ≤12 cap, ~950 estimated
+invocations/month at stated assumptions, first degradation point:
+the cron wire's bounded duration). The link check ran internal-only
+this wave (6,084 checked / 0 broken) — its external probing was
+skipped under the standing fetch rule.*
+
 *Wave-28 pre-gate check (2026-10-13 06:28–06:52 UTC, ~19.3h before
 the gate): the gate was re-proved once — `--run` refused with exit 2
 and the ledger md5 (`09d2e8ef7751671e25e0cafb981115a5`) was

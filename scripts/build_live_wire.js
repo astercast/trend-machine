@@ -92,6 +92,9 @@ const LANES = [
     detail: "YouTube trending via Invidious public instances, direct scrape fallback (official Data API when YT_API_KEY is set). When every path fails the fetcher prints SKIP and writes nothing — the stored file then ages, and this board labels it stale-skip instead of counting old hits as new." },
   { id: "youtube_rss", label: "YouTube (channel RSS)", fetcher: "pipeline/fetch_youtube_rss.py",
     file: "youtube_rss.json", detail: "YouTube channel RSS with channel-page fallback — the lane that carries YouTube." },
+  { id: "streamers", label: "Streamer Desk wire", fetcher: "pipeline/fetch_streamers.py",
+    file: "streamers.json",
+    detail: "Wave 29: the Streamer Desk's live lane — Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts — those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live." },
   { id: "tiktok", label: "TikTok", fetcher: "pipeline/fetch_tiktok.py",
     file: null,
     detail: "SKIP by design: no vetted keyless TikTok trending source exists (research in PIPELINE.md) and TikTok data is never faked. The lane is covered by seed topics + cross-platform corroboration." },
@@ -240,7 +243,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
     generated_at: now.toISOString(),
     refresh_at: refreshStamp || null,
     method: "Lanes: one row per fetcher wired into pipeline/refresh.sh. " +
-      "The 10 file-writing lanes read pipeline/out/<lane>.json — hit count " +
+      "The 11 file-writing lanes read pipeline/out/<lane>.json — hit count " +
       "is that file's array length, source labels are the hits' own " +
       "recorded `source` values, and freshness compares the file's newest " +
       "fetched_at (or, for an empty file, its write time) with " +
