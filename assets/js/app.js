@@ -27,6 +27,32 @@
   }
 
   /* wave 8: velocity snapshots for the Trend sparkline column (best-effort) */
+  /* wave 37: the Oracle's phase calls for the Phase filter — best-effort
+     like the velocity load. If the payload never arrives the phase
+     select stays disabled (its title says why) and the board is
+     otherwise untouched: a missing call set is shown, not improvised. */
+  function loadForecasts() {
+    if (!BF) return;
+    fetchDeadline("data/v1/forecasts.json").then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    }).then(function (data) {
+      state.phases = BF.buildPhaseMap(data);
+      renderPhaseFilter();
+      renderTable();
+    }).catch(function () { /* select stays disabled — honest degradation */ });
+  }
+
+  function renderPhaseFilter() {
+    var sf = document.getElementById("f-phase");
+    if (!sf || !state.phases) return;
+    sf.innerHTML = BF.phaseOptionsHTML(BF.phaseCounts(state.phases, state.topics));
+    if (!BF.isPhase(state.phase)) state.phase = "all";
+    sf.value = state.phase;
+    sf.disabled = false;
+    sf.removeAttribute("title");
+  }
+
   function loadVelocity(i) {
     i = i || 0;
     if (i >= VELOCITY_URLS.length) { renderTable(); return; }
@@ -70,7 +96,25 @@
     return list.map(function (x) { return '<span class="chip' + (cls ? " " + cls : "") + '">' + esc(x) + "</span>"; }).join("");
   }
 
-  var state = { topics: [], velocity: {}, sort: "opportunity", dir: -1, platform: "all", category: "all", q: "" };
+  var BF = (typeof TM_BoardFilter !== "undefined") ? TM_BoardFilter : null;
+  var state = { topics: [], velocity: {}, sort: "opportunity", dir: -1, platform: "all", category: "all", q: "", phase: "all", phases: null };
+  /* wave 37 · shareable filtered views (wave-11 follow-up #3): an inbound
+     link's query string seeds the filter state; every later change is
+     written back with replaceState, so the address bar always holds a
+     link to the exact view on screen. phases stays null until the
+     Oracle's forecasts arrive — the phase filter never guesses. */
+  if (BF) {
+    var patch = BF.parseQuery(window.location.search);
+    ["phase", "platform", "category", "q", "sort", "dir"].forEach(function (k) {
+      if (patch[k] !== undefined) state[k] = patch[k];
+    });
+  }
+  function syncURL() {
+    if (!BF || !window.history || !window.history.replaceState) return;
+    var qs = BF.toQuery(state);
+    var url = window.location.pathname + (qs ? "?" + qs : "") + window.location.hash;
+    try { window.history.replaceState(null, "", url); } catch (e) { /* file:// etc. */ }
+  }
   /* wave 12 · war-room: GET epoch (data run time) for the mission clock */
   var getEpoch = null;
   function lampTest(on) {
@@ -83,6 +127,7 @@
     var list = state.topics.filter(function (t) {
       if (state.platform !== "all" && t.platforms.indexOf(state.platform) < 0) return false;
       if (state.category !== "all" && t.category !== state.category) return false;
+      if (state.phase !== "all" && state.phases && BF && !BF.matchesPhase(state.phases, t.id, state.phase)) return false;
       if (state.q) {
         var q = state.q.toLowerCase();
         var hay = (t.title + " " + t.summary + " " + t.hashtags.join(" ")).toLowerCase();
@@ -247,6 +292,12 @@
       Object.keys(plats).sort().map(function (p) { return '<option value="' + p + '">' + p + "</option>"; }).join("");
     if (cf) cf.innerHTML = '<option value="all">all categories</option>' +
       Object.keys(cats).sort().map(function (c) { return '<option value="' + c + '">' + c + "</option>"; }).join("");
+    /* wave 37: restore the view an inbound link asked for. A platform or
+       category the current data no longer carries falls back to "all" —
+       the link degrades to the plain board, never to an empty one. */
+    if (pf) { pf.value = state.platform; if (pf.value !== state.platform) { state.platform = "all"; pf.value = "all"; } }
+    if (cf) { cf.value = state.category; if (cf.value !== state.category) { state.category = "all"; cf.value = "all"; } }
+    renderPhaseFilter();
   }
 
   function tickClock() {
@@ -332,6 +383,7 @@
     armWatchdog(); /* wave 30 · VP-0001 */
     load();
     loadVelocity();
+    loadForecasts();
     tickClock(); setInterval(tickClock, 1000);
     var retry = document.getElementById("load-retry");
     if (retry) retry.addEventListener("click", function () {
@@ -346,14 +398,18 @@
     var pf = document.getElementById("f-platform");
     var cf = document.getElementById("f-category");
     var q = document.getElementById("f-search");
-    if (pf) pf.addEventListener("change", function () { state.platform = pf.value; renderTable(); });
-    if (cf) cf.addEventListener("change", function () { state.category = cf.value; renderTable(); });
-    if (q) q.addEventListener("input", function () { state.q = q.value.trim(); renderTable(); });
+    var sf = document.getElementById("f-phase");
+    if (q && state.q) q.value = state.q; /* wave 37: inbound ?q= shows in the box */
+    if (pf) pf.addEventListener("change", function () { state.platform = pf.value; syncURL(); renderTable(); });
+    if (cf) cf.addEventListener("change", function () { state.category = cf.value; syncURL(); renderTable(); });
+    if (sf) sf.addEventListener("change", function () { state.phase = sf.value; syncURL(); renderTable(); });
+    if (q) q.addEventListener("input", function () { state.q = q.value.trim(); syncURL(); renderTable(); });
     document.querySelectorAll("[data-sort]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var k = btn.getAttribute("data-sort");
         if (state.sort === k) state.dir *= -1; else { state.sort = k; state.dir = -1; }
         updateSortUI();
+        syncURL();
         renderTable();
       });
     });

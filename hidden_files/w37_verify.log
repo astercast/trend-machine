@@ -1,0 +1,80 @@
+payload phase counts: {'peaking': 1, 'rising': 0, 'fading': 2, 'steady': 230, 'nocall': 160}
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59382)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/usr/lib/python3.12/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.12/http/server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59398)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/usr/lib/python3.12/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.12/http/server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+  FAIL: plain (first attempt) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html", waiting until "load"\n')
+  .. browser relaunch and one improved retry of this case
+  FAIL: plain (retry) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html", waiting until "load"\n')
+  FAIL: interact (first attempt) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html", waiting until "load"\n')
+  .. browser relaunch and one improved retry of this case
+  FAIL: interact (retry) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html", waiting until "load"\n')
+  FAIL: phase-peaking (first attempt) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html?phase=peaking", waiting until "load"\n')
+  .. browser relaunch and one improved retry of this case
+  FAIL: phase-peaking (retry) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html?phase=peaking", waiting until "load"\n')
+  FAIL: phase-rising (first attempt) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html?phase=rising", waiting until "load"\n')
+  .. browser relaunch and one improved retry of this case
+  FAIL: phase-rising (retry) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html?phase=rising", waiting until "load"\n')
+  FAIL: phase-fading (first attempt) — TargetClosedError('Page.goto: Page crashed\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.html?phase=fading", waiting until "load"\n')
+  .. browser relaunch and one improved retry of this case
+  ok: ?phase=fading rows == 2
+  ok: ?phase=fading select restored
+  ok: ?phase=fading zero errors
+  FAIL: phase-steady (first attempt) — Error('Page.goto: net::ERR_INSUFFICIENT_RESOURCES at http://127.0.0.1:3177/index.html?phase=steady\nCall log:\n  - navigating to "http://127.0.0.1:3177/index.ht
+  .. browser relaunch and one improved retry of this case
+  FAIL: phase-steady (retry) — TimeoutError('Page.wait_for_function: Timeout 30000ms exceeded.')
+  ok: ?phase=nocall rows == 160
+  ok: ?phase=nocall select restored
+  ok: ?phase=nocall zero errors
+  FAIL: bogus (first attempt) — Error('Page.wait_for_function: Target crashed ')
+  .. browser relaunch and one improved retry of this case
+  ok: ?phase=bogus -> plain board (393 rows)
+  ok: ?phase=bogus -> select shows all
+  ok: ?phase=steady&sort=velocity rows == steady count
+w37 verify: 9/21 pass

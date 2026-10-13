@@ -1,0 +1,9 @@
+[build] 393 topic pages (0 orphans removed)
+[build] home fallback: 5 hot / 10 radar / 30 table rows baked into index.html
+[build] robots.txt written
+[build] data/v1/velocity.json (393 topics)
+[build] data/v1/platform-velocity.json (307 topics)
+[build] data/v1/meme-formats.json (13 families, 16 topic links)
+[build] 16 endpoint schemas -> data/v1/schema/
+[build] data/v1/index.json manifest v0.7.0
+[build] data/v1 + llms.txt + llms-full.txt done

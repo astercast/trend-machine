@@ -1,0 +1,15 @@
+[resolution-night] now (UTC):        2026-10-13T17:40:35Z
+[resolution-night] next verdicts due: 2026-10-14T01:45:28.760Z
+[resolution-night] PREVIEW — dry run only, nothing will be written.
+[check-resolutions] DRY RUN — ledger entries: 315, already resolved: 0, pending: 315, newly terminal: 0 (hit=0, miss=0, unverifiable=0)
+[check-resolutions] oldest unresolved: six-seven-meme (forecast 2026-10-12T01:45:28.760Z), resolution due 2026-10-14T01:45:28.760Z
+[check-resolutions] wrote nothing (--dry-run)
+[audit-batch2] pending forecasts: 315 (live store 65, archive 228, both 22, neither 0)
+[audit-batch2] windows already holding 2+ actuals: 274/315 (87%)
+[audit-batch2] honestly short so far (41): yandex=1, rachel-downgraded-from-tropical-storm-but-strong-w=0, the-ram-shortage-is-bringing-back-ddr4=1, trump-warns-call-ai-super-intelligence-or-face-ene=1, marvin-harrison-jr-trade-market-on-kalshi-continue=1, cineplexity-when-your-partner-doesn-t-like-the-sam=0, flip-a-coin-i-guess-exam-studygram-studying=1, 5-video-games-from-1985-that-changed-gaming-foreve=0, azealia-banks-confirms-move-to-israel-says-she-s-w=1, olivia-rodrigo-pop=1, is-anyone-seeing-a-rise-in-political-ads-on-youtub=0, governments-are-mishandling-the-affordability-cris=1, wildwood-review-laika-s-epic-stop-motion-wonder-la=1, from-cardi-b-to-an-eminem-collab-troye-sivan-which=1, hello-darling-pm-s-shock-appearance-stuns=1, nicolas-cage-says-he-s-probably-not-working-with-a=1, hashicorp-archives-the-boundary-open-source-repo=1, david-oyelowo-is-most-excited-to-share-his-movie-c=1, mondaymotivation=1, fotomontag=1, mondog=0, mondayrandom10=0, blackhawks-star-connor-bedard-trending-toward-seas=1, ken-paxton-s-texas-senate-campaign=1, last-to-leave-mansion-keeps-it=0, i-granted-100-kids-their-biggest-wish=0, survive-30-days-chained-to-a-stranger-win-250-000=0, 50-youtube-legends-fight-for-1-000-000=0, trump-is-all-in-on-data-centres-americans-are-not-=0, does-president-trump-s-energy-ceasefire-actually-e=0, saudia-arabia-vows-serious-response-to-houthi-atta=0, indian-opposition-leaders-march-to-top-court-to-de=0, extras-i-spent-over-10-hours-upgrading-my-controll=0, up-close-with-the-avengers-doomsday-costumes-nycc-=0, blind-descent-official-release-date-trailer-ign-fa=0, station-58-official-announce-trailer=0, anno-117-pax-romana-official-pyramids-trailer-ign-=0, sifu-official-mobile-launch-trailer=0, dragon-s-dogma-2-dark-arisen-official-burn-the-sky=0, dan-levy-criticizes-shane-gillis-monologue=0, christopher-columbus-s-legacy=0
+[audit-batch2] payload resolution_readiness matches the audit
+[audit-batch2] archive: 250 topics, 1830 points; topics with no ledger entry in the 7d window: 0; points older than 14d: 0
+[audit-batch2] batch-2 gate: first topics unlock at 2026-10-13T01:45:28.760Z (24h dedupe, per topic); topics decisive in the latest forecast build: 3 — batch 2 forms gradually from the gate, it is not a single drop, and a topic records only while decisive.
+[audit-batch2] ALL INVARIANTS HOLD
+[resolution-night] preview done. When the due time above has passed,
+[resolution-night] publish with: scripts/resolution_night.sh --run

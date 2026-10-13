@@ -1,0 +1,43 @@
+== 1. health ==
+ok   health 200
+ok   health envelope ok
+ok   health schema
+ok   health functions == roster
+ok   health cache s-maxage=60
+== 2. roster endpoints: envelope ok:true ==
+ok   envelope trends
+ok   schema trends
+ok   cache trends s-maxage=600
+ok   envelope forecasts
+ok   schema forecasts
+ok   cache forecasts s-maxage=600
+== 3. site-specific payload checks ==
+ok   health status ok/degraded
+ok   payload trends fields
+ok   payload trends?limit=5&platform=tiktok
+ok   payload forecasts fields
+ok   payload velocity?topic_id=
+ok   schema velocity?topic_id=
+ok   cron authed 200 read-only
+ok   bad input limit=abc
+ok   bad input limit=999
+ok   bad input velocity no topic_id
+ok   velocity unknown topic 404
+ok   static JSONP twin file + rewrite
+ok   vercel.json site shape
+== 4. cron auth gates ==
+ok   cron 401 no secret
+ok   cron 401 no secret envelope
+ok   cron 401 bad secret
+ok   cron no-store
+== 5. static fallback present ==
+ok   static /data/v1/trends.flat.json
+ok   static /data/v1/forecasts.json
+ok   static /data/v1/velocity.json
+ok   static schema envelope.json
+== 6. vercel.json lint ==
+ok   vercel.json valid json
+ok   cron daily-or-slower (<=1)
+ok   functions: maxDuration only, no runtime key
+
+pass=35 fail=0

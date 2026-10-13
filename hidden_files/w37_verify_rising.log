@@ -1,0 +1,7 @@
+MemAvailable at launch: 2655 MB
+  ok: ?phase=rising rows == 0 (honest empty view)
+  ok: ?phase=rising meta reads '0 of 393 topics'
+  ok: ?phase=rising select restored
+  ok: rising option carries the honest (0) count
+  FAIL: ?phase=rising zero console/page errors — ['Failed to load resource: net::ERR_FAILED', 'Failed to load resource: net::ERR_FAILED', 'Failed to load resource: net::ERR_FAILED']
+w37 rising verify: FAIL

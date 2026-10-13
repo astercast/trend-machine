@@ -1,0 +1,2 @@
+usage: check_links.py [-h] [--changed-only]
+check_links.py: error: unrecognized arguments: --internal-only

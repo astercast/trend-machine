@@ -213,6 +213,10 @@
       <select id="f-platform"></select>
       <label for="f-category">Category</label>
       <select id="f-category"></select>
+      <label for="f-phase">Phase</label>
+      <select id="f-phase" disabled title="Phase calls load with the Oracle forecasts">
+        <option value="all">all phases</option>
+      </select>
     </div>
     <div class="table-shell"><div class="table-scroll">
     <table class="dtable" id="dtable" aria-busy="false">
@@ -273,6 +277,7 @@
 </div></footer>
 
 <script src="assets/js/sparkline-lib.js"></script>
+<script src="assets/js/board-filter-lib.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/makeover.js"></script>
 </body>
