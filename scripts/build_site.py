@@ -96,6 +96,8 @@ TOPIC_TMPL = """<!doctype html>
 <meta name="twitter:title" content="{title} — Trend Machine">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
+<link rel="canonical" href="https://trend-machine-live.vercel.app/topics/{tid}.html">
+<script type="application/ld+json">{jsonld}</script>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -226,9 +228,23 @@ def build_topic(t, history_pts=None, plat_hist=None):
     stale_note = ('<p><span class="stale-badge">STALE</span> '
                   '<span style="font-size:13px;color:var(--ink-faint)">No corroboration in 72h+ — treat as cooling.</span></p>'
                   if t.get("stale") else "")
+    # Commons round 10: honest Article JSON-LD from the topic record's own
+    # fields only (title / summary / first_seen / last_seen) — no ratings,
+    # no metrics, nothing the record does not already hold.
+    _art = {"@context": "https://schema.org", "@type": "Article",
+            "headline": t["title"], "description": t["summary"][:150],
+            "url": "https://trend-machine-live.vercel.app/topics/"
+                   + t["id"] + ".html",
+            "publisher": {"@type": "Organization", "name": "Trend Machine",
+                          "url": "https://trend-machine-live.vercel.app/"}}
+    if t.get("first_seen"):
+        _art["datePublished"] = t["first_seen"]
+    if t.get("last_seen"):
+        _art["dateModified"] = t["last_seen"]
+    jsonld = json.dumps(_art, ensure_ascii=False).replace("</", "<\\/")
     return TOPIC_TMPL.format(
         title=esc(t["title"]), desc=esc(t["summary"][:150]),
-        tid=esc(t["id"]),
+        tid=esc(t["id"]), jsonld=jsonld,
         kicker=esc(t.get("category", "trend")) + " · dossier",
         summary=esc(t["summary"]), tier=tier, fcls=fcls, pulse=pulse, age=age,
         ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, tchip=tchip, cats=cats,
@@ -440,6 +456,117 @@ def inject_root_head_meta():
         print(f"[build] head-meta wired {name}")
 
 
+LIVE_BASE = "https://trend-machine-live.vercel.app"
+
+
+def _ld_script(obj):
+    return ('<script type="application/ld+json">'
+            + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+            + "</script>")
+
+
+def _read_json(rel):
+    try:
+        with open(os.path.join(ROOT, rel)) as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def inject_canonical_jsonld(topics):
+    # Commons round 10: self-referential ABSOLUTE canonical on the live
+    # domain for every generator-owned page — 404.html deliberately gets
+    # none (a 404 has no canonical self) — plus honest JSON-LD built ONLY
+    # from fields the site's own data already holds:
+    #   topics/*.html  Article, in TOPIC_TMPL/build_topic (headline /
+    #     description / datePublished / dateModified from the record).
+    #   index.html     ItemList — the board's top 30 in the same
+    #     opportunity order the VP-0001 static fallback bakes
+    #     (position / name / dossier URL per item, nothing else).
+    #   streamer-desk  ItemList of Person(name) from the curated desk
+    #     source's streamers[] — names only; no metrics exist to claim.
+    #   live-wire      ItemList of lane labels from the wire payload.
+    #   oracle-board / forecast-accuracy  Dataset — name, the page's own
+    #     meta description verbatim, canonical URL, dateModified = the
+    #     payload's generated_at. NO performance properties: the
+    #     scorecard's hit_rate is null ("building history"), and a null
+    #     never becomes a number here.
+    import re
+    for name in ROOT_PAGES:
+        if name == "404.html":
+            continue
+        path = os.path.join(ROOT, name)
+        if not os.path.exists(path):
+            continue
+        with open(path) as f:
+            page = f.read()
+        if 'rel="canonical"' in page:
+            continue  # idempotent
+        md = re.search(r'<meta name="description" content="(.*?)">', page, re.S)
+        desc = md.group(1) if md else ""
+        canon = LIVE_BASE + "/" + ("" if name == "index.html" else name)
+        extra = ['<link rel="canonical" href="' + canon + '">']
+        ld = None
+        if name == "index.html":
+            by_opp = sorted(topics,
+                            key=lambda t: -(t.get("opportunity_score") or 0))
+            ld = {"@context": "https://schema.org", "@type": "ItemList",
+                  "name": "Trend Machine board - top topics by opportunity",
+                  "numberOfItems": min(30, len(by_opp)),
+                  "itemListElement": [
+                      {"@type": "ListItem", "position": i + 1,
+                       "name": t["title"],
+                       "url": LIVE_BASE + "/topics/" + t["id"] + ".html"}
+                      for i, t in enumerate(by_opp[:30])]}
+        elif name == "streamer-desk.html":
+            src = _read_json(os.path.join("data", "streamer_desk.json")) or {}
+            names = [s.get("name") for s in src.get("streamers", [])
+                     if s.get("name")]
+            if names:
+                ld = {"@context": "https://schema.org", "@type": "ItemList",
+                      "name": "Streamer Desk - streamer directory",
+                      "numberOfItems": len(names),
+                      "itemListElement": [
+                          {"@type": "ListItem", "position": i + 1,
+                           "item": {"@type": "Person", "name": n}}
+                          for i, n in enumerate(names)]}
+        elif name == "live-wire.html":
+            wire = _read_json(os.path.join("data", "v1", "live-wire.json")) or {}
+            labels = [l.get("label") for l in wire.get("lanes", [])
+                      if l.get("label")]
+            if labels:
+                ld = {"@context": "https://schema.org", "@type": "ItemList",
+                      "name": "Live Wire - source lanes",
+                      "numberOfItems": len(labels),
+                      "itemListElement": [
+                          {"@type": "ListItem", "position": i + 1, "name": n}
+                          for i, n in enumerate(labels)]}
+        elif name in ("oracle-board.html", "forecast-accuracy.html"):
+            rel = ("oracle-board.json" if name == "oracle-board.html"
+                   else "forecast-accuracy.json")
+            payload = _read_json(os.path.join("data", "v1", rel)) or {}
+            ld = {"@context": "https://schema.org", "@type": "Dataset",
+                  "name": ("Oracle Board - every recorded forecast"
+                           if name == "oracle-board.html"
+                           else "Forecast accuracy - the Oracle's scorecard"),
+                  "description": desc, "url": canon,
+                  "creator": {"@type": "Organization",
+                              "name": "Trend Machine",
+                              "url": LIVE_BASE + "/"}}
+            if payload.get("generated_at"):
+                ld["dateModified"] = payload["generated_at"]
+        if ld:
+            extra.append(_ld_script(ld))
+        anchor = '<link rel="icon" href="/favicon.ico"'
+        if anchor not in page:
+            print(f"[build] canonical SKIP {name}: icon anchor not found")
+            continue
+        page = page.replace(anchor, "\n".join(extra) + "\n" + anchor, 1)
+        with open(path, "w") as f:
+            f.write(page)
+        print(f"[build] canonical wired {name}")
+
+
 def write_robots_txt():
     # Commons round 8 (robots.txt): the fleet census found robots.txt in
     # ZERO of 9 repos. Minimal allow-all; this repo publishes no sitemap,
@@ -501,6 +628,8 @@ def main():
     inject_root_head_meta()
     # Commons round 8: robots.txt, regenerated every build
     write_robots_txt()
+    # Commons round 10: canonical + honest JSON-LD on the root pages
+    inject_canonical_jsonld(topics)
     tags = {}
     for t in topics:
         for h in t.get("hashtags", []):
