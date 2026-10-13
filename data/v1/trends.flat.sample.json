@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T08:00:34.358057+00:00",
+  "generated_at": "2026-10-13T08:52:37.810151+00:00",
   "sample": true,
   "source_count": 93,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
@@ -2561,15 +2561,15 @@
         "per_platform": {
           "x": {
             "snapshots": 18,
-            "latest_velocity": 86,
-            "delta": 41,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 86 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,7.6\" fill=\"none\"/></svg>"
+            "latest_velocity": 85,
+            "delta": 40,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 85 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,8.0\" fill=\"none\"/></svg>"
           },
           "youtube": {
             "snapshots": 18,
-            "latest_velocity": 86,
-            "delta": 41,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 86 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,7.6\" fill=\"none\"/></svg>"
+            "latest_velocity": 85,
+            "delta": 40,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 85 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,8.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3073,9 +3073,9 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 14,
-            "latest_velocity": 61,
-            "delta": 16,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 61 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,4.0 29.8,14.0 38.5,16.0 47.1,16.4 55.7,16.4 64.3,16.8 72.9,16.8 81.5,17.2 90.2,17.2 98.8,17.2 107.4,17.6 116.0,17.6\" fill=\"none\"/></svg>"
+            "latest_velocity": 60,
+            "delta": 15,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 60 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,4.0 29.8,14.0 38.5,16.0 47.1,16.4 55.7,16.4 64.3,16.8 72.9,16.8 81.5,17.2 90.2,17.2 98.8,17.2 107.4,17.6 116.0,18.0\" fill=\"none\"/></svg>"
           }
         }
       }

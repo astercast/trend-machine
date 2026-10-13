@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-13T08:07:55.292Z",
-  "refresh_at": "2026-10-13T08:00:27.720078+00:00",
+  "generated_at": "2026-10-13T08:52:40.529Z",
+  "refresh_at": "2026-10-13T08:52:21.001663+00:00",
   "method": "Lanes: one row per fetcher wired into pipeline/refresh.sh. The 11 file-writing lanes read pipeline/out/<lane>.json — hit count is that file's array length, source labels are the hits' own recorded `source` values, and freshness compares the file's newest fetched_at (or, for an empty file, its write time) with data/trends.json's generated_at from the same refresh. TikTok and X write no file and are skip-by-design. Movers: per topic, latest stored velocity vs the latest stored point at or before 1h earlier, over the live velocity store merged with the resolution archive (scripts/resolution-lib.js mergeHistory); only pairs spanning 0.5–3h count, and the real span is published per mover.",
   "honesty": "Zero invented data: a lane that recorded nothing says so, a file the latest refresh did not rewrite is labeled stale-skip with its hits excluded from the current total, skip-by-design lanes claim no hits, and movers are computed only from stored snapshot points — a topic with no ~1h pair is not a mover, however hot it looks.",
   "provenance": {
@@ -15,13 +15,13 @@
     "lanes_degraded": 1,
     "lanes_stale_skip": 1,
     "lanes_skip_by_design": 2,
-    "current_hits": 419,
+    "current_hits": 395,
     "stale_hits_excluded": 25,
     "topics_live": 393,
-    "movers_with_hour_pair": 488,
-    "gainers": 4,
-    "fallers": 21,
-    "flat": 463
+    "movers_with_hour_pair": 454,
+    "gainers": 5,
+    "fallers": 20,
+    "flat": 429
   },
   "lanes": [
     {
@@ -35,8 +35,8 @@
       "sources": [
         "google-trends"
       ],
-      "newest_fetched_at": "2026-10-13T07:57:31.078588+00:00",
-      "file_written_at": "2026-10-13T07:57:31.088Z",
+      "newest_fetched_at": "2026-10-13T08:48:38.769036+00:00",
+      "file_written_at": "2026-10-13T08:48:38.787Z",
       "detail": "Google Trends daily RSS (US)."
     },
     {
@@ -54,8 +54,8 @@
         "gnews-technology",
         "gnews-top"
       ],
-      "newest_fetched_at": "2026-10-13T07:57:48.790932+00:00",
-      "file_written_at": "2026-10-13T07:57:48.816Z",
+      "newest_fetched_at": "2026-10-13T08:48:49.597023+00:00",
+      "file_written_at": "2026-10-13T08:48:49.613Z",
       "detail": "Google News RSS — top / tech / entertainment / sports / AI feeds."
     },
     {
@@ -75,8 +75,8 @@
         "gnews-q:video games",
         "gnews-top"
       ],
-      "newest_fetched_at": "2026-10-13T07:58:15.026745+00:00",
-      "file_written_at": "2026-10-13T07:58:16.045Z",
+      "newest_fetched_at": "2026-10-13T08:49:12.709620+00:00",
+      "file_written_at": "2026-10-13T08:49:13.848Z",
       "detail": "Google News RSS topic searches."
     },
     {
@@ -89,7 +89,7 @@
       "current_hits": 0,
       "sources": [],
       "newest_fetched_at": null,
-      "file_written_at": "2026-10-13T07:58:23.585Z",
+      "file_written_at": "2026-10-13T08:49:26.111Z",
       "detail": "Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok). PIPELINE.md records this lane as often 403 from datacenters — it skips gracefully; an empty rewritten file is the degraded record, never faked."
     },
     {
@@ -98,18 +98,16 @@
       "fetcher": "pipeline/fetch_reddit_rss.py",
       "output_file": "pipeline/out/reddit_rss.json",
       "status": "live",
-      "hits": 72,
-      "current_hits": 72,
+      "hits": 48,
+      "current_hits": 48,
       "sources": [
-        "reddit-rss:r/Music",
-        "reddit-rss:r/YouTube",
         "reddit-rss:r/gaming",
         "reddit-rss:r/movies",
         "reddit-rss:r/news",
         "reddit-rss:r/television"
       ],
-      "newest_fetched_at": "2026-10-13T07:58:50.647240+00:00",
-      "file_written_at": "2026-10-13T07:58:52.655Z",
+      "newest_fetched_at": "2026-10-13T08:49:46.347000+00:00",
+      "file_written_at": "2026-10-13T08:49:49.866Z",
       "detail": "Reddit subreddit RSS feeds — the lane that carries Reddit when the direct JSON lane is degraded."
     },
     {
@@ -123,8 +121,8 @@
       "sources": [
         "hackernews"
       ],
-      "newest_fetched_at": "2026-10-13T07:59:43.589588+00:00",
-      "file_written_at": "2026-10-13T07:59:43.602Z",
+      "newest_fetched_at": "2026-10-13T08:51:11.851089+00:00",
+      "file_written_at": "2026-10-13T08:51:11.862Z",
       "detail": "Hacker News top/best stories (public Firebase API)."
     },
     {
@@ -138,8 +136,8 @@
       "sources": [
         "mastodon-trends"
       ],
-      "newest_fetched_at": "2026-10-13T07:59:45.182047+00:00",
-      "file_written_at": "2026-10-13T07:59:45.183Z",
+      "newest_fetched_at": "2026-10-13T08:51:14.099971+00:00",
+      "file_written_at": "2026-10-13T08:51:14.107Z",
       "detail": "Mastodon fediverse trending hashtags (/api/v1/trends/tags — repaired wave 20)."
     },
     {
@@ -153,8 +151,8 @@
       "sources": [
         "bluesky-trending"
       ],
-      "newest_fetched_at": "2026-10-13T07:59:45.908998+00:00",
-      "file_written_at": "2026-10-13T07:59:45.909Z",
+      "newest_fetched_at": "2026-10-13T08:51:17.145405+00:00",
+      "file_written_at": "2026-10-13T08:51:17.150Z",
       "detail": "Bluesky trending topics (keyless public API)."
     },
     {
@@ -192,8 +190,8 @@
         "yt-rss:VEVO",
         "yt-rss:pewdiepie"
       ],
-      "newest_fetched_at": "2026-10-13T08:00:16.156768+00:00",
-      "file_written_at": "2026-10-13T08:00:17.175Z",
+      "newest_fetched_at": "2026-10-13T08:52:03.098955+00:00",
+      "file_written_at": "2026-10-13T08:52:04.130Z",
       "detail": "YouTube channel RSS with channel-page fallback — the lane that carries YouTube."
     },
     {
@@ -210,8 +208,8 @@
         "gnews-q:Twitch streamer",
         "gnews-q:streamer subathon OR TwitchCon"
       ],
-      "newest_fetched_at": "2026-10-13T08:00:26.482072+00:00",
-      "file_written_at": "2026-10-13T08:00:27.483Z",
+      "newest_fetched_at": "2026-10-13T08:52:17.748445+00:00",
+      "file_written_at": "2026-10-13T08:52:18.763Z",
       "detail": "Wave 29: the Streamer Desk's live lane — Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts — those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live."
     },
     {
@@ -244,24 +242,39 @@
   "movers": {
     "window": "latest stored point vs latest stored point at or before 1h earlier (accepted span 0.5–3h, published per mover)",
     "topics_with_series": 619,
-    "with_hour_pair": 488,
+    "with_hour_pair": 454,
     "gainers": [
       {
         "topic_id": "blackhawks-star-connor-bedard-trending-toward-seas",
-        "title": "blackhawks-star-connor-bedard-trending-toward-seas",
-        "topic_live": false,
-        "platforms": [],
-        "from_velocity": 45,
-        "to_velocity": 70,
+        "title": "Blackhawks star Connor Bedard 'trending toward' season debut Tuesday",
+        "topic_live": true,
+        "platforms": [
+          "google"
+        ],
+        "from_velocity": 70,
+        "to_velocity": 95,
         "delta": 25,
-        "from_ts": "2026-10-13T05:25:51.552587+00:00",
-        "to_ts": "2026-10-13T06:36:35.127509+00:00",
-        "span_hours": 1.2,
-        "n_points": 7
+        "from_ts": "2026-10-13T06:36:35.127509+00:00",
+        "to_ts": "2026-10-13T08:52:31.636476+00:00",
+        "span_hours": 2.3,
+        "n_points": 8
       },
       {
         "topic_id": "fotomontag",
-        "title": "#Fotomontag",
+        "title": "fotomontag",
+        "topic_live": false,
+        "platforms": [],
+        "from_velocity": 46,
+        "to_velocity": 47,
+        "delta": 1,
+        "from_ts": "2026-10-13T06:36:35.127509+00:00",
+        "to_ts": "2026-10-13T08:00:30.479347+00:00",
+        "span_hours": 1.4,
+        "n_points": 9
+      },
+      {
+        "topic_id": "mondaymotivation",
+        "title": "#MondayMotivation",
         "topic_live": true,
         "platforms": [
           "mastodon"
@@ -270,8 +283,8 @@
         "to_velocity": 47,
         "delta": 1,
         "from_ts": "2026-10-13T06:36:35.127509+00:00",
-        "to_ts": "2026-10-13T08:00:30.479347+00:00",
-        "span_hours": 1.4,
+        "to_ts": "2026-10-13T08:52:31.636476+00:00",
+        "span_hours": 2.3,
         "n_points": 9
       },
       {
@@ -285,8 +298,8 @@
         "to_velocity": 47,
         "delta": 1,
         "from_ts": "2026-10-13T06:36:35.127509+00:00",
-        "to_ts": "2026-10-13T08:00:30.479347+00:00",
-        "span_hours": 1.4,
+        "to_ts": "2026-10-13T08:52:31.636476+00:00",
+        "span_hours": 2.3,
         "n_points": 8
       },
       {
@@ -300,25 +313,12 @@
         "to_velocity": 47,
         "delta": 1,
         "from_ts": "2026-10-13T06:36:35.127509+00:00",
-        "to_ts": "2026-10-13T08:00:30.479347+00:00",
-        "span_hours": 1.4,
+        "to_ts": "2026-10-13T08:52:31.636476+00:00",
+        "span_hours": 2.3,
         "n_points": 9
       }
     ],
     "fallers": [
-      {
-        "topic_id": "mondaymotivation",
-        "title": "mondaymotivation",
-        "topic_live": false,
-        "platforms": [],
-        "from_velocity": 47,
-        "to_velocity": 46,
-        "delta": -1,
-        "from_ts": "2026-10-13T05:25:51.552587+00:00",
-        "to_ts": "2026-10-13T06:36:35.127509+00:00",
-        "span_hours": 1.2,
-        "n_points": 8
-      },
       {
         "topic_id": "mondayrandom10",
         "title": "mondayrandom10",
@@ -426,6 +426,19 @@
       {
         "topic_id": "dragon-s-dogma-2-dark-arisen-official-burn-the-sky",
         "title": "dragon-s-dogma-2-dark-arisen-official-burn-the-sky",
+        "topic_live": false,
+        "platforms": [],
+        "from_velocity": 45,
+        "to_velocity": 44,
+        "delta": -1,
+        "from_ts": "2026-10-13T05:25:51.552587+00:00",
+        "to_ts": "2026-10-13T06:36:35.127509+00:00",
+        "span_hours": 1.2,
+        "n_points": 4
+      },
+      {
+        "topic_id": "extras-i-spent-over-10-hours-upgrading-my-controll",
+        "title": "extras-i-spent-over-10-hours-upgrading-my-controll",
         "topic_live": false,
         "platforms": [],
         "from_velocity": 45,

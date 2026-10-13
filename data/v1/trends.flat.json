@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T08:00:33.814885+00:00",
+  "generated_at": "2026-10-13T08:52:37.456215+00:00",
   "sample": false,
   "source_count": 393,
   "trends": [
@@ -2125,6 +2125,46 @@
       }
     },
     {
+      "id": "blackhawks-star-connor-bedard-trending-toward-seas",
+      "title": "Blackhawks star Connor Bedard 'trending toward' season debut Tuesday",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5WMTU0eG1XLXhLUUd1djJ0ZUlFTFZpM1dPbzZhb2VKQnRmbTZxOVVqOTlTb0FpbzJIbW5lcVdFTHlPaTRGSlFaX2UzZ2tmT2NHVVVoOVBGOWVzR21YQXliN2lSUDlNSG1USUE0Ql9n?oc=5",
+      "velocity": 95,
+      "opportunity_score": 62,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.625987+00:00",
+      "summary": "Raleigh News & Observer · Mon, 12 Oct 2026 21:13:07 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending",
+        "gnews-q:trending",
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 95,
+        "latest_velocity": 95,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 95,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
       "id": "ceiling-fan-wipe",
       "title": "Ceiling-fan wipe transitions",
       "source": "Lightreel",
@@ -2621,15 +2661,15 @@
         "per_platform": {
           "x": {
             "snapshots": 18,
-            "latest_velocity": 86,
-            "delta": 41,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 86 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,7.6\" fill=\"none\"/></svg>"
+            "latest_velocity": 85,
+            "delta": 40,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"x velocity trend: 45 when tracking started (Oct 12, 2026), 85 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,8.0\" fill=\"none\"/></svg>"
           },
           "youtube": {
             "snapshots": 18,
-            "latest_velocity": 86,
-            "delta": 41,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 86 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,7.6\" fill=\"none\"/></svg>"
+            "latest_velocity": 85,
+            "delta": 40,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 85 at the latest snapshot (18 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 10.6,14.0 17.2,24.0 23.8,14.0 30.4,24.0 36.9,14.0 43.5,4.0 50.1,4.0 56.7,6.0 63.3,6.4 69.9,6.4 76.5,6.8 83.1,6.8 89.6,7.2 96.2,7.2 102.8,7.2 109.4,7.6 116.0,8.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3128,8 +3168,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -3170,7 +3210,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3212,7 +3252,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3259,9 +3299,9 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 14,
-            "latest_velocity": 61,
-            "delta": 16,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 61 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,4.0 29.8,14.0 38.5,16.0 47.1,16.4 55.7,16.4 64.3,16.8 72.9,16.8 81.5,17.2 90.2,17.2 98.8,17.2 107.4,17.6 116.0,17.6\" fill=\"none\"/></svg>"
+            "latest_velocity": 60,
+            "delta": 15,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 45 when tracking started (Oct 12, 2026), 60 at the latest snapshot (14 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 12.6,14.0 21.2,4.0 29.8,14.0 38.5,16.0 47.1,16.4 55.7,16.4 64.3,16.8 72.9,16.8 81.5,17.2 90.2,17.2 98.8,17.2 107.4,17.6 116.0,18.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -3337,8 +3377,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -3456,8 +3496,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -3496,8 +3536,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -3515,46 +3555,6 @@
       ],
       "detected_at": "2026-10-12T23:28:53.089995+00:00",
       "summary": "30 recent uses across the fediverse",
-      "category": "culture",
-      "platforms": [
-        "mastodon"
-      ],
-      "format_tags": [],
-      "sources": [
-        "mastodon-trends"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 9,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 47,
-        "latest_velocity": 47,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 47 when tracking started (Oct 12, 2026), 47 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,4.0 18.0,4.0 32.0,4.0 46.0,4.0 60.0,4.0 74.0,4.0 88.0,4.0 102.0,24.0 116.0,4.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "mastodon": {
-            "snapshots": 9,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"mastodon velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,14.0 32.0,4.0 46.0,4.0 60.0,4.0 74.0,4.0 88.0,4.0 102.0,4.4 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
-      "id": "fotomontag",
-      "title": "#Fotomontag",
-      "source": "mastodon-trends",
-      "url": "https://mastodon.social/tags/Fotomontag",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#Fotomontag"
-      ],
-      "detected_at": "2026-10-12T23:28:53.090020+00:00",
-      "summary": "58 recent uses across the fediverse",
       "category": "culture",
       "platforms": [
         "mastodon"
@@ -3624,46 +3624,6 @@
       }
     },
     {
-      "id": "topic",
-      "title": "#バーガータワー",
-      "source": "mastodon-trends",
-      "url": "https://mastodon.social/tags/%E3%83%90%E3%83%BC%E3%82%AC%E3%83%BC%E3%82%BF%E3%83%AF%E3%83%BC",
-      "velocity": 47,
-      "opportunity_score": 47,
-      "hashtags": [
-        "#バーガータワー"
-      ],
-      "detected_at": "2026-10-13T07:59:45.181826+00:00",
-      "summary": "311 recent uses across the fediverse",
-      "category": "culture",
-      "platforms": [
-        "mastodon"
-      ],
-      "format_tags": [],
-      "sources": [
-        "mastodon-trends"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 47,
-        "latest_velocity": 47,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "mastodon": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
       "id": "prankaneighborbooks",
       "title": "#PrankANeighborBooks",
       "source": "mastodon-trends",
@@ -3696,7 +3656,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3736,7 +3696,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3776,7 +3736,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3816,7 +3776,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3856,7 +3816,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3896,7 +3856,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3936,7 +3896,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -3976,7 +3936,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4016,7 +3976,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4056,7 +4016,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4096,7 +4056,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4136,7 +4096,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4176,7 +4136,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4216,7 +4176,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4256,7 +4216,7 @@
         "per_platform": {
           "mastodon": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4275,6 +4235,86 @@
       ],
       "detected_at": "2026-10-13T07:59:45.182024+00:00",
       "summary": "55 recent uses across the fediverse",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "format_tags": [],
+      "sources": [
+        "mastodon-trends"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 47,
+        "latest_velocity": 47,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "mastodon": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "topic-2",
+      "title": "#バーガータワー",
+      "source": "mastodon-trends",
+      "url": "https://mastodon.social/tags/%E3%83%90%E3%83%BC%E3%82%AC%E3%83%BC%E3%82%BF%E3%83%AF%E3%83%BC",
+      "velocity": 47,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#バーガータワー"
+      ],
+      "detected_at": "2026-10-13T08:51:14.099716+00:00",
+      "summary": "317 recent uses across the fediverse",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "format_tags": [],
+      "sources": [
+        "mastodon-trends"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 47,
+        "latest_velocity": 47,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "mastodon": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "mondaymotivation",
+      "title": "#MondayMotivation",
+      "source": "mastodon-trends",
+      "url": "https://mastodon.social/tags/mondaymotivation",
+      "velocity": 47,
+      "opportunity_score": 47,
+      "hashtags": [
+        "#MondayMotivation"
+      ],
+      "detected_at": "2026-10-13T08:51:14.099971+00:00",
+      "summary": "43 recent uses across the fediverse",
       "category": "culture",
       "platforms": [
         "mastodon"
@@ -4657,7 +4697,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 70,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -4696,7 +4736,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 70,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -7358,58 +7398,6 @@
       }
     },
     {
-      "id": "top-50-classic-horror-movies",
-      "title": "Top 50 Classic Horror Movies",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1QcV9YcWl0SVZMbTBGV1hydXQ4ejNTcnlvcEwzdkQxZW44VzRPY25hU3l1RC1sdlY2OFZLWnhCMkpDVE53UkZscF9CMzdvN1NJY3FZbHZ2NzZPalppRFhpcHNOUkFwQlRD?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-12T22:46:25.542403+00:00",
-      "summary": "Deadline · Mon, 12 Oct 2026 14:00:00 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "youtube",
-        "tiktok",
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 10,
-        "state": "ready",
-        "since": "Oct 12, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 12, 2026), 45 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,24.0 28.9,24.0 41.3,24.0 53.8,24.0 66.2,24.0 78.7,24.0 91.1,24.0 103.6,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "google": {
-            "snapshots": 9,
-            "latest_velocity": 95,
-            "delta": 50,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"google velocity trend: 45 when tracking started (Oct 12, 2026), 95 at the latest snapshot (9 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 18.0,14.0 32.0,4.0 46.0,4.0 60.0,4.0 74.0,4.0 88.0,4.0 102.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          },
-          "tiktok": {
-            "snapshots": 10,
-            "latest_velocity": 66,
-            "delta": 21,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"tiktok velocity trend: 45 when tracking started (Oct 12, 2026), 66 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,4.0 28.9,4.0 41.3,4.8 53.8,4.8 66.2,5.6 78.7,5.6 91.1,6.4 103.6,6.4 116.0,7.2\" fill=\"none\"/></svg>"
-          },
-          "youtube": {
-            "snapshots": 10,
-            "latest_velocity": 66,
-            "delta": 21,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 12, 2026), 66 at the latest snapshot (10 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 16.4,4.0 28.9,4.0 41.3,4.8 53.8,4.8 66.2,5.6 78.7,5.6 91.1,6.4 103.6,6.4 116.0,7.2\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "yemen-frontline-fighting-the-houthi-rebels-targeti",
       "title": "Yemen frontline: fighting the Houthi rebels targeting Saudi Arabia | BBC News",
       "source": "yt-rss:BBCNews",
@@ -8174,44 +8162,6 @@
       }
     },
     {
-      "id": "palmer-luckey-s-post-on-death",
-      "title": "Palmer Luckey's post on death",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Palmer+Luckey%27s+post+on+death",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T03:02:13.702146+00:00",
-      "summary": "Anduril co-founder wrote on X that celebrating deaths of those who \"deserve it\" is normal and good.",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 5,
-        "state": "ready",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"Velocity trend: 45 when tracking started (Oct 13, 2026), 45 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,24.0 60.0,24.0 88.0,24.0 116.0,24.0\" fill=\"none\"/></svg>",
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 5,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"bluesky velocity trend: 70 when tracking started (Oct 13, 2026), 95 at the latest snapshot (5 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 32.0,4.0 60.0,4.0 88.0,4.0 116.0,4.0\" fill=\"none\"/></svg>"
-          }
-        }
-      }
-    },
-    {
       "id": "ray-dalio-says-this-is-when-the-artificial-intelli",
       "title": "Ray Dalio Says This Is When the Artificial Intelligence (AI) Bubble Could Pop",
       "source": "gnews-ai",
@@ -8698,9 +8648,9 @@
         "per_platform": {
           "youtube": {
             "snapshots": 3,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 13, 2026), 70 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,4.0\" fill=\"none\"/></svg>"
+            "latest_velocity": 95,
+            "delta": 50,
+            "sparkline_svg": "<svg class=\"spark spark-mini\" viewBox=\"0 0 120 28\" role=\"img\" aria-label=\"youtube velocity trend: 45 when tracking started (Oct 13, 2026), 95 at the latest snapshot (3 snapshots).\" focusable=\"false\"><polyline points=\"4.0,24.0 60.0,24.0 116.0,4.0\" fill=\"none\"/></svg>"
           }
         }
       }
@@ -8820,44 +8770,6 @@
       }
     },
     {
-      "id": "as-us-medical-debt-grows-ai-will-be-used-more-to-c",
-      "title": "As US medical debt grows, AI will be used more to collect it",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0zRlJJZG52aE9WN2JVLVVmcWxIcmtwZnFKNXl4NjNrdnlOVFRybk83dlFpeHI3eFRQYk9VeUtCbFlqMHlMdHlnWTNuRVdVSW5HWnQzY1EwT01pY21YYUs2UDNmVWtqWVB0TEJERnJsRy1KQW9aYnhmSUExUQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:30:29.843437+00:00",
-      "summary": "The Guardian · Mon, 12 Oct 2026 12:03:00 GMT",
-      "category": "tech",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 95,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
       "id": "show-hn-solidcraft-open-source-parametric-cad-in-r",
       "title": "Show HN: SolidCraft – Open-Source Parametric CAD in Rust (With MCP Support)",
       "source": "hackernews",
@@ -8888,8 +8800,8 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -8926,8 +8838,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -8964,8 +8876,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9002,8 +8914,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9040,8 +8952,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9078,8 +8990,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9116,8 +9028,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9154,8 +9066,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9192,8 +9104,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9230,8 +9142,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9268,8 +9180,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9306,8 +9218,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9344,8 +9256,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9382,8 +9294,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9420,8 +9332,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9458,8 +9370,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9496,8 +9408,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9534,8 +9446,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9572,8 +9484,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9610,8 +9522,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9648,8 +9560,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9686,46 +9598,8 @@
         "per_platform": {
           "youtube": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "how-supernatural-napoleonic-wars-story-valor-morti",
-      "title": "How Supernatural-Napoleonic Wars Story ‘Valor Mortis’ Became Lyrical Games’ First Release: ‘A Setting Nobody Else Is Touching’",
-      "source": "gnews-q:video games",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSERiNGxYTjlnVEUzUUU5T2Z2UkxHUlFiS0NOUENkSGxMdURPT21Yb29iN19xVm13VFBNUHVaZE1hbG5iWEI0V3NIbGlMSjRBY3lPYkgwU25HbjkyMFhUOUZkbUFHcll4Ty1HdkhJR0tvb3RKVGVLWHlfeEtOOXdVb0FfTXNCbDliMTBPdTA1Um5MNUdwR2VrWFNBNEFCcXN6SHdwR1NmUUp1NzlRZjBLR0kzT3g?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:30:48.637685+00:00",
-      "summary": "Variety · Mon, 12 Oct 2026 14:00:00 GMT",
-      "category": "gaming",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:video games"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9762,8 +9636,8 @@
         "per_platform": {
           "google": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9800,8 +9674,8 @@
         "per_platform": {
           "google": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -9838,464 +9712,8 @@
         "per_platform": {
           "google": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "diddy-rushed-out-of-prison-after-medical-emergency",
-      "title": "Diddy Rushed Out of Prison After Medical Emergency",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x45op7/diddy_rushed_out_of_prison_after_medical_emergency/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429810+00:00",
-      "summary": "u//u/MarvelsGrantMan136 · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "harry-styles-uses-madison-square-garden-show-to-ho",
-      "title": "Harry Styles uses Madison Square Garden show to honor man shot by ICE",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x46hd9/harry_styles_uses_madison_square_garden_show_to/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429876+00:00",
-      "summary": "u//u/ebradio · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "furnace-fest-merch-seemingly-designed-by-ai-looks-",
-      "title": "Furnace Fest merch, seemingly designed by AI, looks like AI stickers were placed on top of Kid Rock's Rock The Country mugs and sold for $50!!!",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4aypj/furnace_fest_merch_seemingly_designed_by_ai_looks/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429901+00:00",
-      "summary": "u//u/imatmydesknow · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "james-hetfield-at-sphere-metallica-is-not-here-to-",
-      "title": "James Hetfield at Sphere: \"Metallica Is Not Here... To Influence You with Their Bullsh*t\"",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x45ong/james_hetfield_at_sphere_metallica_is_not_here_to/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429930+00:00",
-      "summary": "u//u/NatashaRomanova7 · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "strange-fruit-meaning-the-powerful-story-behind-bi",
-      "title": "Strange Fruit Meaning: The Powerful Story Behind Billie Holiday’s Most Haunting Song",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4d0x2/strange_fruit_meaning_the_powerful_story_behind/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429956+00:00",
-      "summary": "u//u/Illustrious_Oil_3200 · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "rihanna-reveals-she-has-over-170-songs-in-her-musi",
-      "title": "Rihanna reveals she has over 170 songs in her music vault waiting to be released",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x3wmbp/rihanna_reveals_she_has_over_170_songs_in_her/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429973+00:00",
-      "summary": "u//u/dailymail · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "the-dead-milkmen-tiny-town-punk-rock-1985",
-      "title": "The Dead Milkmen - Tiny Town [Punk Rock] (1985)",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4h4n9/the_dead_milkmen_tiny_town_punk_rock_1985/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.429990+00:00",
-      "summary": "u//u/dragonoid296 · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "foo-fighters-everlong-alt-rock",
-      "title": "Foo Fighters - Everlong [alt rock]",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4eh3n/foo_fighters_everlong_alt_rock/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.430005+00:00",
-      "summary": "u//u/ConstructorWin · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "the-sugarcubes-birthday-dreampop",
-      "title": "The Sugarcubes - Birthday [DreamPop]",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4e29g/the_sugarcubes_birthday_dreampop/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.431525+00:00",
-      "summary": "u//u/MorchellaAmericana · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "nothing-but-thieves-if-i-get-high-alt-rock",
-      "title": "Nothing But Thieves - If I Get High [Alt Rock]",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4h97z/nothing_but_thieves_if_i_get_high_alt_rock/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.431566+00:00",
-      "summary": "u//u/ElephantShip · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "greatest-hits-before-they-released-their-biggest-h",
-      "title": "greatest hits before they released their biggest hit",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4h1rq/greatest_hits_before_they_released_their_biggest/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.431591+00:00",
-      "summary": "u//u/CaptainResponsible78 · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "raye-this-music-may-contain-hope-pop",
-      "title": "RAYE - THIS MUSIC MAY CONTAIN HOPE. [Pop]",
-      "source": "reddit-rss:r/Music",
-      "url": "https://www.reddit.com/r/Music/comments/1x4gikj/raye_this_music_may_contain_hope_pop/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:31:21.431612+00:00",
-      "summary": "u//u/Ok_Percentage8893 · r/Music · 2026-10-12",
-      "category": "music",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/Music"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10332,8 +9750,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10370,8 +9788,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10408,8 +9826,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10446,8 +9864,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10484,8 +9902,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10522,8 +9940,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10560,8 +9978,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10598,8 +10016,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10636,8 +10054,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10674,8 +10092,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10712,8 +10130,8 @@
         "per_platform": {
           "reddit": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10750,8 +10168,8 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10788,46 +10206,8 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "french-supermarket-fridge-failures",
-      "title": "French supermarket fridge failures",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=French+supermarket+fridge+failures",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T06:33:33.216240+00:00",
-      "summary": "Fridges defrosted in hundreds of stores amid reports of a cyberattack and major food losses.",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 2,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 2,
-            "latest_velocity": 70,
-            "delta": 25,
+            "latest_velocity": 95,
+            "delta": 50,
             "sparkline_svg": null
           }
         }
@@ -10864,83 +10244,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "ntt-to-build-first-data-center-for-anthropic-in-ja",
-      "title": "NTT to build first data center for Anthropic in Japan",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOenFDdHNMWmRNV2pKZ3RNT3dnZzhfLWpVVkwxRnRiT01DS1dKSnNGU181QlN1NUV4MG04M0R1R1JWYjlST1YxRVpHX0pibWw3amRMZkF3QXlwaGg2VFpHUlJGMHVMQjBNU3o1TTRPZ1pEUjdIem1xZGE4M0pHZWc2UjBwWnJHdGNzYTlRSTloVXFHWHFCS3loVGRlOXRfeGNfc0swZHBXMTgwVzZHRTBFaGE0cVFPNWkwT2NVSEpR?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:57:48.787872+00:00",
-      "summary": "Nikkei Asia · Tue, 13 Oct 2026 02:00:00 GMT",
-      "category": "tech",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 70,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "what-s-dragging-down-a-i-efficiency-the-verificati",
-      "title": "What’s Dragging Down A.I. Efficiency? The ‘Verification Tax.’",
-      "source": "gnews-ai",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPM2UzSkk1YUFJR0dkcktxMWlmdVh3LUhRV3htQlJUYUlWbmowV2NPZEp4SnBWQllPc09JSTRsSVlFRERXdXRaZ0VDSHJfVHk4SGZzTWhiT2ZrSk1uQVl0TGJBUGtTNnprZFJsdDM3ejNNaW9od1A2X2dLbDZQY05KYkhCT3c0cldYNndYMQ?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:57:48.787934+00:00",
-      "summary": "The New York Times · Sat, 10 Oct 2026 12:00:03 GMT",
-      "category": "tech",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-ai"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 70,
+            "latest_velocity": 95,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -10978,7 +10282,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11016,7 +10320,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11054,7 +10358,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11092,7 +10396,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11130,7 +10434,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11168,7 +10472,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11206,7 +10510,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11244,7 +10548,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11282,45 +10586,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "3rd-yandex-cloud-data-center-was-hit",
-      "title": "3rd Yandex Cloud Data Center Was Hit",
-      "source": "hackernews",
-      "url": "https://status.yandex.cloud/en/incidents/2136",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:59:25.325970+00:00",
-      "summary": "631 points · 778 comments",
-      "category": "tech",
-      "platforms": [
-        "hackernews"
-      ],
-      "format_tags": [],
-      "sources": [
-        "hackernews"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "hackernews": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11358,7 +10624,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11396,7 +10662,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11434,7 +10700,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11472,7 +10738,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11510,7 +10776,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11548,7 +10814,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11586,7 +10852,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11624,7 +10890,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11662,7 +10928,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11700,7 +10966,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11738,7 +11004,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11776,7 +11042,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11814,7 +11080,7 @@
         "per_platform": {
           "hackernews": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11852,7 +11118,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11890,7 +11156,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11928,7 +11194,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -11966,7 +11232,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12006,7 +11272,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12044,7 +11310,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12082,7 +11348,7 @@
         "per_platform": {
           "youtube": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12120,45 +11386,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "ben-affleck-blasts-high-school-bullying-of-digger-",
-      "title": "Ben Affleck Blasts 'High School Bullying' of 'Digger,' Says We Shouldn't 'Punish Movies That Take Risks'",
-      "source": "gnews-q:movies",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSXBrVkFRa2JvaTU0LXRmeHh3djFKakFmeC1wM0tnYTBvLXBUdDZRTEt1LXpWWDdJRi1UQW55SzY4UTdIVHhZU2R1UTdBVGhQaDc5b3Bmemd2YUJ3eUN5SzRHWmFubXJaT3VTWHF5eHJaSTBfa2ZrQ1lhQmdXc3ZUYlpwd0tPRkNjYzN2UE5YZ003NDItYm9uV2lNZG1teXRNUmZWbXJWOXg?oc=5",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:02.932205+00:00",
-      "summary": "TheWrap · Mon, 12 Oct 2026 18:19:55 GMT",
-      "category": "entertainment",
-      "platforms": [
-        "google"
-      ],
-      "format_tags": [],
-      "sources": [
-        "gnews-q:movies"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "google": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12196,7 +11424,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12234,7 +11462,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12272,7 +11500,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12310,7 +11538,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12348,7 +11576,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12386,7 +11614,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12424,7 +11652,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12462,7 +11690,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12500,7 +11728,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12538,7 +11766,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12576,7 +11804,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12614,7 +11842,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12652,7 +11880,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12690,7 +11918,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12728,7 +11956,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12766,7 +11994,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12804,7 +12032,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12842,7 +12070,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12880,7 +12108,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12918,7 +12146,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12956,7 +12184,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -12994,7 +12222,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13032,7 +12260,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13070,7 +12298,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13108,7 +12336,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13146,7 +12374,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13184,7 +12412,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13222,7 +12450,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13260,7 +12488,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13298,7 +12526,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13336,7 +12564,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13374,7 +12602,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13412,7 +12640,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13450,463 +12678,7 @@
         "per_platform": {
           "reddit": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "everyone-on-youtube-using-ai-slop-for-thumbnails-n",
-      "title": "Everyone on Youtube using AI slop for thumbnails now?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x4jdhq/everyone_on_youtube_using_ai_slop_for_thumbnails/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.646966+00:00",
-      "summary": "u//u/Stock-Fox-771 · r/YouTube · 2026-10-13",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "hate-those-vids-sooo-much",
-      "title": "Hate those vids sooo much.",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x437cf/hate_those_vids_sooo_much/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647032+00:00",
-      "summary": "u//u/ApprehensiveRoll5655 · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "ai-scripts-really-annoy-me",
-      "title": "AI scripts REALLY annoy me",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x4g2t5/ai_scripts_really_annoy_me/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647057+00:00",
-      "summary": "u//u/SargeHD1231080p · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "wait-they-did",
-      "title": "WAIT THEY DID!?!",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3x27p/wait_they_did/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647072+00:00",
-      "summary": "u//u/Formal-Cicada8309 · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "youtube-ruined-it",
-      "title": "YouTube Ruined It!",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3qscc/youtube_ruined_it/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647086+00:00",
-      "summary": "u//u/Unlikely_Affect2264 · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "my-yt-account-of-9-years-with-no-content-whatsoeve",
-      "title": "My yt account of 9 years with no content whatsoever was banned today.",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3vlx2/my_yt_account_of_9_years_with_no_content/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647102+00:00",
-      "summary": "u//u/HargaCult · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "psa-do-not-send-links-unless-you-remove-the-tracke",
-      "title": "PSA - DO NOT send links unless you remove the tracker, YouTube is showing the account you are using",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x3rsvh/psa_do_not_send_links_unless_you_remove_the/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647135+00:00",
-      "summary": "u//u/kittyidiot · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "does-anyone-know-what-the-hell-is-this-and-why-me-",
-      "title": "Does anyone know what the hell is this and why me and many others where mentioned by this bot?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x4j5lb/does_anyone_know_what_the_hell_is_this_and_why_me/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647156+00:00",
-      "summary": "u//u/Silvered_Knight · r/YouTube · 2026-10-13",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "concerning-ed-community-on-yt",
-      "title": "concerning ED community on YT",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x4k46j/concerning_ed_community_on_yt/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647178+00:00",
-      "summary": "u//u/janeaustenreader99 · r/YouTube · 2026-10-13",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "can-we-stop-with-the-obvious-clickbait-titles",
-      "title": "Can we stop with the obvious clickbait titles?",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x46vr0/can_we_stop_with_the_obvious_clickbait_titles/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647194+00:00",
-      "summary": "u//u/EntrepreneurMuch621 · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "anyone-else-noticed-how-so-many-non-ai-channels-ar",
-      "title": "Anyone else noticed how so many \"non AI channels\" are using AI to polish their scripts",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x48pbl/anyone_else_noticed_how_so_many_non_ai_channels/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647223+00:00",
-      "summary": "u//u/NovaTheoretically · r/YouTube · 2026-10-12",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "when-gifs-finally-roll-out-to-everyone-so-i-go-to-",
-      "title": "when GIFS finally roll out to everyone so i go to watch a video and i scroll to the comments just to get flashbanged by a shit ton of gore and porn:",
-      "source": "reddit-rss:r/YouTube",
-      "url": "https://www.reddit.com/r/youtube/comments/1x4i4p3/when_gifs_finally_roll_out_to_everyone_so_i_go_to/",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:58:50.647240+00:00",
-      "summary": "u//u/InternationalPut8271 · r/YouTube · 2026-10-13",
-      "category": "entertainment",
-      "platforms": [
-        "reddit"
-      ],
-      "format_tags": [],
-      "sources": [
-        "reddit-rss:r/YouTube"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "reddit": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13944,7 +12716,7 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -13982,45 +12754,7 @@
         "per_platform": {
           "bluesky": {
             "snapshots": 1,
-            "latest_velocity": 45,
-            "delta": 0,
-            "sparkline_svg": null
-          }
-        }
-      }
-    },
-    {
-      "id": "epic-games-delays-disney-shooter",
-      "title": "Epic Games delays Disney shooter",
-      "source": "bluesky-trending",
-      "url": "https://bsky.app/search?q=Epic+Games+delays+Disney+shooter",
-      "velocity": 45,
-      "opportunity_score": 45,
-      "hashtags": [],
-      "detected_at": "2026-10-13T07:59:45.908998+00:00",
-      "summary": "The unannounced Star Wars and Marvel game is moving to AI-generated code and art, staff were told.",
-      "category": "news",
-      "platforms": [
-        "bluesky"
-      ],
-      "format_tags": [],
-      "sources": [
-        "bluesky-trending"
-      ],
-      "trend_type": "topic",
-      "format_family": null,
-      "velocity_trend": {
-        "snapshots": 1,
-        "state": "building",
-        "since": "Oct 13, 2026",
-        "first_velocity": 45,
-        "latest_velocity": 45,
-        "delta": 0,
-        "sparkline_svg": null,
-        "per_platform": {
-          "bluesky": {
-            "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14058,7 +12792,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14096,7 +12830,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14134,7 +12868,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14172,7 +12906,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14210,7 +12944,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14248,7 +12982,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14286,7 +13020,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14324,7 +13058,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14362,7 +13096,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14400,7 +13134,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14438,7 +13172,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14476,7 +13210,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14514,7 +13248,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14552,7 +13286,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14590,7 +13324,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14628,7 +13362,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14666,7 +13400,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14704,7 +13438,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14744,7 +13478,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14782,7 +13516,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14820,7 +13554,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14858,7 +13592,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14896,7 +13630,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14934,7 +13668,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -14972,7 +13706,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15010,7 +13744,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15048,7 +13782,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15086,7 +13820,7 @@
         "per_platform": {
           "google": {
             "snapshots": 1,
-            "latest_velocity": 45,
+            "latest_velocity": 70,
             "delta": 0,
             "sparkline_svg": null
           }
@@ -15123,6 +13857,1260 @@
         "sparkline_svg": null,
         "per_platform": {
           "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "saudi-warning-system-stayed-silent-before-deadly-a",
+      "title": "Saudi warning system stayed silent before deadly airport attacks",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcGUtWGlRWGVfTVVCaFlXbDQ3UTA4bmlUN2QxdV9yT19EOUZGTkhKNW5xR2hQcDJmaE1pX1F1Tmg4TEZ6VTMxcWl5QzdHdVdZa2U1ZDF5Vm5ONGhhNDFPd00xLXZKNXVSaXJGYTB2QVV6dkJ6WmtBS29uMTNyNko5dlptaEdjWngxR2gxa3FfNTc4bzdmaElUOHVzZTVfN0oxeXhwdExKLWxycEpBRGNna0QzM2N5NGRfaVE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.745487+00:00",
+      "summary": "Reuters · Mon, 12 Oct 2026 23:39:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "immigration-agents-search-congresswoman-ilhan-omar",
+      "title": "Immigration agents search congresswoman Ilhan Omar's home",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nMXdITGJwRFVwSXB0SHIwS3pRM000X3phc2l3Z3lBckxlVkljNk9NRkZuUTNUYTFVbXNObjdSd2czd1p3STZtRzFKcDZsZGtqQ2w5UVdSRzl1VTQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.752911+00:00",
+      "summary": "BBC · Mon, 12 Oct 2026 22:05:31 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trump-s-russia-deal-leaves-gop-candidates-with-a-p",
+      "title": "Trump's Russia deal leaves GOP candidates with a Putin problem",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPOVZDbTdjTHE1M3JpM0xVXzdlblZPOXZpTXktVlFlQWdNZDMxSVBuMU9fUUVNQ1dWZmRqYVdyVEpEdnI1cElTdjFNWl8zZTNQdktyWldONnBrUTVqOGp1dUQyM3RuN1psMHdYbFFzNHp6OTFTRFA5MUNRRFYzMnhqU0RnOFY?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.752944+00:00",
+      "summary": "Axios · Mon, 12 Oct 2026 22:27:02 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "talarico-was-at-home-in-texas-during-campaign-trai",
+      "title": "Talarico was at home in Texas during campaign trail absence, photos appear to show",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWFFXaHBxcnowaFdweTZ6TzJjNlEtUU5MbUlYel9Wdy1JZEd5b1JkRHMtNEVkM3FpM3JIeURLa1NxdXhNbnJfdWFYbWxmbmZEUmhkbVBrbE5oS1RLNVQtc3paNGxBVEdLU1RTd2VqMURmNmcwZUtoV3lqcW11bEdQYl9VLUs2eExUUkZ5OW1yQlYtMF9lS3JlenUxcw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.752969+00:00",
+      "summary": "CBS News · Tue, 13 Oct 2026 02:37:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "u-s-and-nato-commander-vows-to-thwart-moscow-warns",
+      "title": "U.S. and NATO commander vows to thwart Moscow, warns Kyiv over refinery strikes",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOVIwNmNCdG1jLWtWYkNTZW9EOGM1MnozMGlWTXNBVEFiaWlXU28yc3NjWVlXMkF0SXJJXzFlSllzZ24tRWVTTHhRcFN0RTk1NHlHWEwwQWN1SG5lWExtc1paNHhHNHhxa01uekw3Zk9BR3ZMNzQ0T0k1YkZlNXpVelU1MVB3VTl2c3dwWlZSOFRvNnhRWXZlTHpORXZoYnlCS2s3RXB5c2s1QXFwN1E?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.752993+00:00",
+      "summary": "The Washington Post · Tue, 13 Oct 2026 04:51:50 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trump-looking-at-firing-athens-ambassador-guilfoyl",
+      "title": "Trump ‘looking at’ firing Athens ambassador Guilfoyle over alleged plea for cash",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWXJwcDJLVk1nSThGSHJicG1NM0xhWldGMExVSkNCTlZFQXgxTl9aZEpLR2tzMnRGdWVUMUxzSGdfak5ONVo5S2o4VThLeTJKUTIyczdNSzdsYmdOMGhxcTNsWDdiRGVHSmFvSkxmcFJHZHFQNFFtNzc1N2NkRlBRNVhvOFRLUkdncHB3OVRPQXJGd2plYVNoWQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.753020+00:00",
+      "summary": "Politico · Mon, 12 Oct 2026 23:38:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "six-flags-closes-9-rides-after-1-person-dies-in-an",
+      "title": "Six Flags closes 9 rides after 1 person dies in an incident involving a roller coaster in Georgia",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTXhBNGpZX2xJNWNMNFpOZm9SeHM0ZDBWWWlwNGZIT3VkZ3c0TDF3cnhMT0tZNC1UbURkNUZVZTdWMVBkbm9HNjlEdXNlN1I3bjVrd3ZjWktRNGZhQWVldnJMY1lkTHlIdjZ5OGp5Qk5NX3JuWl9EN2lLekVvOUVZMUtqX2NDcTduRWs1N0pJMzF0Y1pM?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.753045+00:00",
+      "summary": "AP News · Tue, 13 Oct 2026 05:55:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "us-archbishop-says-catholics-in-army-should-not-pa",
+      "title": "US archbishop says Catholics in army should not participate in firing squad",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSkxHQjJJd1QtTVN5b2VWNElOTG0yV3M1Zzd3cDVSYjdBNThablQza2V1RnlhMFJ3NGpYVVpVbzNQSVZVem9SYlFGLS1YRzdUSWVEaXFWSEtRRHp2V3Y1b3M0V1hUVUhNbk85b2lFdHRBaERhV0F6dDdlQnZQS3ZLVzBmM29mWXdOZTE0UW5rTXlGcFM4YnVEc0ZITWFLZy1DTzNWS3FTWmJTZEhxS1poTTBXeEY2NUVi0gG-AUFVX3lxTFBHRVE2Q0JHN1hQZkM4MFR6REVnV1lNS05taF9mWVBjOHJKTWtyUlFLbDFIZXpMcHFvT2U0VWd6T252ZW41b0l5c1VhUG9oaGYzYjd0Vm5qZGpvXzZNX0l3T3BmSWF4alVDbXNCQ2ZrZVB0dUZQVmUybFFvWlRaSWxiMnpINUx2TXQ3QTlOOGo3WERFekd3bmJUWDRMQ0xtXzlvUkFVUWgxb2tTWkpiakczRjZaN05sVHNSY2VSUEE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.753073+00:00",
+      "summary": "Al Jazeera · Mon, 12 Oct 2026 23:27:48 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "calls-show-how-confusion-delayed-emergency-respons",
+      "title": "Calls Show How Confusion Delayed Emergency Response for Christa Pike",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1uMXdSNDZfV3VIUVotOVZIT2I2VFNEa3k3UjJjNEdLU0RKRGRwWG9saENiNHNnYndER216eDd4a3UtcS1ldDVTSjIyUG1aUVJaOXVqNjFxUDY3NzR1cG8xWGJ1dVVmYlRyQmJ4eTNaRW5iR0NkalFQMy1VQXBJdlE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.753094+00:00",
+      "summary": "The New York Times · Tue, 13 Oct 2026 00:13:41 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "exclusive-ken-paxton-partied-in-dubai-with-fugitiv",
+      "title": "Exclusive | Ken Paxton Partied in Dubai With Fugitives Ahead of High-Stakes Texas Senate Race",
+      "source": "gnews-top",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcnp4SzJLZDczcjFGUXVmemxyQS1abFdTbEh1T3NWY3pXVEdHcDdGUG1CRDMyQy1Tcm4xNzNSZTFpaEs4NEhyeUFwc21ubzNiUWdyLVpuUmhWTmFIYWhoLVVuMnM1LXFkamZXMGtXbjRZRW1qSkJ0RTZOTVRBbzdKSlhwcy1JQQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:41.753115+00:00",
+      "summary": "WSJ · Tue, 13 Oct 2026 01:00:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-top"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-mlb-playoff-bracket-schedule-scores-for-brewe",
+      "title": "2026 MLB playoff bracket: Schedule, scores for Brewers vs. Dodgers and Rays vs. Guardians",
+      "source": "gnews-sports",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOX3pxZzFTUmJrLVBBdUNvYzJQa1VTcUdac2NyN1l4d1hZcHAzRkFGbXdPR2NBUlladEZ1b2R5YzQ5dExlbUNJWlVONzhmZlpuc2x5UVJuQ2VrMFV5dHdjLVBwcVZoaUlYY3ZDbk92SjBoMmtrSTk2Vkh3U3VMMjU3ZWd2WXBORjdJVmVuYkF5UEpjY0lxQnZhaU1XU2xvdw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:47.279872+00:00",
+      "summary": "CBS Sports · Tue, 13 Oct 2026 03:06:00 GMT",
+      "category": "sports",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-sports"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "artificial-intelligence-answers-what-is-the-expect",
+      "title": "Artificial intelligence answers: what is the expected result of the Liverpool v Manchester City match?",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVTBfMHRwa2FRUlNmbF9EaVZWRlFYaVhORG9pT3d4bkk0c2M1VTMtX1ZNNVYzZlk5SU9wVGkwWE9PbHRQMUpiME5pLU9qTDgwNGhzam83aG1Gb2JyVkRuNFZSTU9nam1lSm54NE51S3pmTWtua0dadGNYRVVzSC0zM25YZUtiNE1vbHhjakI4RnBJWHpWbEp6MXJoVVpwSG1Zc2FLX241bGtMamQ0c1dleWZRNTFSd19sa0hkTkVRcHBRVU95SDNTaklSY1NrQkVIekh4S2pBWkYwTl9mUldwQVBzMXg4Uno2cmc?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596611+00:00",
+      "summary": "Goal.com · Tue, 13 Oct 2026 00:13:28 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "brutal-session-for-chip-stocks-shows-ai-trade-is-t",
+      "title": "'Brutal session' for chip stocks shows AI trade is turning",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPM1RJWWJHTmtIMnhaYWVyeFFpYV8wZndZMUFOVXM2NkpJdUNfRGlyQzdHeVcwMXkxcXkyWFFZQ3hXS3RpM0NqZUtNcmxNd3NkSGZETmlvTjRRYjJ3X3BXa0FEamh0NDExSTZieGRHam9BdFBiZXdOcTBSUXRPNlFEeTVKOEtkN3JiV25QUEsyekp0OTJRaU5nVA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596676+00:00",
+      "summary": "Reuters · Tue, 13 Oct 2026 07:11:02 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "uva-doctor-says-physicians-shouldn-t-hand-treatmen",
+      "title": "UVA doctor says physicians shouldn't hand treatment decisions to AI",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZWlyNzlfQkkxTXlnWUgzcXFWYjRYNzJaQjAxUUsyNFNaQklfZ20wY1h6Sm1CZldUU3NHOGdRb2x1dS16Z3BIX1Q4cEk2Z19HSHVvUmlQdGZTYWl4ZE1iczFhbndUcWF5ckFiOG94ZTZsd01FVldsQk5fZlI5YkJoUWxUVm1Na0xKSWVCbnZST0YtZXRfVWx6U2poR2xZWGJzV2k1NFBvcmtZSk93eWstR011akNudXNWaWlKZkxDNTA?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596765+00:00",
+      "summary": "The News Leader | Staunton, VA · Tue, 13 Oct 2026 08:30:00 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "alibaba-qwen-introduces-qwengyre-elastic-reinforce",
+      "title": "Alibaba Qwen Introduces QwenGyre: Elastic Reinforcement Learning RL for XLong-Horizon Agents",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQLTRTeUVOVV9SQTZESnNsOU5WeFk0NlhfMVFpRmV1WUIzU3IzMVl2Rm1IRzBpMWx2ZTJiYl9hS3FSUDZWTERZMmdjdjhtNEJXZmE0bG4wVWl3TzVsMHg1Y1pBandzcmUxSkItS0Vsd3doZ01EVmhkVzNsNi1LTVd2MTRlc1RLMTZkLXJ4d2xPdDVqWGVNVHotTkZCdGdEX2NYdHNMcGhXRXp4SUdNMGExN2hVMkM2Rm00YlY2Z2tnQjJhUTdYQ1ZkU182UEnSAcwBQVVfeXFMUC00U3lFTlVfUkE2REpzbDlOVnhZNDZYXzFRaUZldVlCM1NyMzFZdkZtSEcwaTFsdmUyYmJfYUtxUlA2VkxEWTJnY3Y4bTRCV2ZhNGxuMFVpd081bDB4NWNaQWp3c3JlMUpCLUtFbHd3aGdNRFZoZFczbDYtS01XdjE0ZXNUSzE2ZC1yeHdsT3Q1alhlTVR6LU5GQnRnRF9jWHRzTHBoV0V6eElHTTBhMTdoVTJDNkZtNGJWNmdrZ0IyYVE3WENWZFNfNlBJ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596886+00:00",
+      "summary": "MarkTechPost · Mon, 12 Oct 2026 21:41:50 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 70,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "the-artificial-intelligence-market-in-small-and-me",
+      "title": "The Artificial Intelligence Market in Small and Medium Businesses is Growing, Projections Reaching $162.7 Billion",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNldNTG9uTnZLdy1jWlFnTEtNZkRhN3FkWklmVzRUdFBjU0R6VzIzSnZ5LV94TE5acTR1M2F2YzdscFd2Rk5sRWVsaHppRWpma2VfSEpZXzdjYkhEMXcyWkxoMUhkcFJPVGdnU2EyRnFmcE5vSWgybUVCWWgzc051cU1EeXdJaUo0dERFVldmV1cwYlpiYl9qQ2NpVWhZX05zN3BQUnRYdmhsdw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596929+00:00",
+      "summary": "The National Law Review · Tue, 13 Oct 2026 06:41:21 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "uc-santa-barbara-taking-a-base-camp-approach-to-ar",
+      "title": "UC Santa Barbara taking a ‘base camp’ approach to artificial intelligence",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNy15b0hlSFVOMGZWbzJqLTBlWkl4UXhodHE4Y1hJMU96TWJocXZ2SVdpTWdkVGVad281ODNBMlpyRGNVeHppNTBGVWFKQnBLN0VaUDR2Xzc5QnFkMlhxZXdZRUNZbTNZQlNQbHB0eDRNWWpRVmN3Sjc4OHNlT2JJT2VUNUhwWGlCRzBFOXg0b0otRDlrODJ2d3FFTmpoVFRjTkE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596951+00:00",
+      "summary": "UC Santa Barbara · Mon, 12 Oct 2026 17:52:40 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "better-artificial-intelligence-stock-for-2026-inte",
+      "title": "Better Artificial Intelligence Stock for 2026: Intel vs. NVIDIA",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRFJLZDZSUVl1dkc3V0xubDlza3FBaWFKdG4yeWhWUXZacU4tMDVYRXJVeG1oYmtVdmoxYVJScHVaNlhjbUU3LV9UN0dicGphY1J2UHRoZVpDVHNrcUpIem5rck5kSDJacENKR19KZEFyZnlkbXlhVlFJVzlqWmJWZ1BuUkNSa1B5NjJDWFNTMHVVV1VrZGhvV1lzc1FwcmlVZ0k4OC1uREJpZUkzVi0ydW9Kd1I?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596978+00:00",
+      "summary": "The Motley Fool · Tue, 13 Oct 2026 05:44:00 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "ua-little-rock-students-explore-the-future-through",
+      "title": "UA Little Rock students explore the future through new artificial intelligence degree",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcThabjhNSjJHcDgtYjV1ZERFTTVoYXpXWE16SWl1WWpSalpabkRvSXg2YlVTOFc2azZMWEtkNmlWQkdYa1VaRWkwcENOR0h1SDQ3VzNhNkI1akxmVktwd2tXWkFPS2ZnSktaMEw1b1hNck9GQ1RyWFpPXzlLWHhvOUE3Rjg2WmtXbTllZ0N3emh2STdkOVRyUXFrMFZUN2JBaHhwVDd4Zk12WUViNXRhQzA5eklBVVlUbXdN?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.596999+00:00",
+      "summary": "UA Little Rock · Mon, 12 Oct 2026 17:06:03 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "artificial-intelligence-ai-is-watching-us-and-know",
+      "title": "Artificial Intelligence (AI) is watching us, and ‘knows’ Pope Leo has noticed",
+      "source": "gnews-ai",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTl9wbVJqejJPN0hXSXVJOXd6elpuQTZhcG9oVjItdHlhZkVNekR0SE5EdU1hVDd2N1NaV2lpX2MtUzk3REtaelZ0YmZKNHQ0OXV3aGVNUDNWMmhKREs3SnFLRlVTV2JFVDVfMVpWbFpHQzNCaXpwZFctU0YyazZqRFRGZXpaYnB3Y0RTYkJCYzgxMzRUNmlBcFVZR1V5RmFlV04zRTQzMzdCRW1PNmF6MXlaWG0?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:49.597023+00:00",
+      "summary": "Crux | Taking the Catholic Pulse · Mon, 12 Oct 2026 22:07:05 GMT",
+      "category": "tech",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-ai"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trending-stocks-this-week-as-investors-weigh-fed-o",
+      "title": "Trending stocks this week as investors weigh Fed outlook, AI concerns",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaTcyZEpoR2FiRGE0emcwRGZHS0pKN01tbHlGNWJ6LTZhQk92d0JhUEZrUy1WUkZKeGVzb1ZEajNsZlVZQmZNSEtyNzVVNzluNndRckk2bHFGNGhRbWJtZ1hMNEI5WWlXWnNEYnRHMldKLWJIZmdVN19kVXdjWi1RbGdUMWlwZ3hlTDMzTGZsSVdna1IyTHRmQTNjQmNNUEwtejgxQllpMXBDZw?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.625883+00:00",
+      "summary": "Seeking Alpha · Sun, 11 Oct 2026 14:22:41 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "arizona-is-trending-for-one-of-the-nation-s-best-s",
+      "title": "Arizona is trending for one of the nation's best safeties closing in on a decision",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcFM0OUtfcWZyb2F0NmoxTE5TOXhfU0N4OC1wTl9DOGdEdnBqVTYzNHM5Uk84S1EwSlN0YmU2NkRXTXRTbTlHdWJXNXVqOEFrYkpPUHlZN1BUbTlodE9HQmdwRVZ6alRqcVhFcUg0ZnlxZzRYMlpJTU9xNFZPOEktdm1oVEdUN29VRzFfa0dzWVpNRmktYm5iLTV2ejR4ZDlRamNvY3FjY3BXcDVJbjJkUzJwemE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.625948+00:00",
+      "summary": "On3 · Mon, 12 Oct 2026 02:05:40 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "buffalo-bills-trending-up-trending-down-who-bills-",
+      "title": "Buffalo Bills trending up, trending down: Who Bills need on Monday Night Football in Los Angeles",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPaEQ3Sm4yeWQwRWRWNjNkWXF4VjE5TFU3TVFKUy1zLVBxNTU5XzIzdVc0V0R1YVg2WE55M1pIbmtYdTZranpITTIxOC1EMWxVbzZXTUtzbjJ6d1JXanVkNWtSSVA0WU1UTm81azRfVWNYS0JHV0VRcHVrOVpvdF9fbF9HeDlCWFY1LVlIaHJvTGdDN21rSUIxUTg0RTRqZDd0Q2hRSG1vWW5wSFM2SllPN0FoQXFCMDFtSVZ2ZUMxQmlzSVlwZ2tQbG95SV9sNWpBNk1GZm5NV2RVSE9WeGZwU1JyQ1FQRE5WSEQ4S0FR?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.626013+00:00",
+      "summary": "Buffalo Rumblings · Sat, 10 Oct 2026 14:00:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "trending-video-actress-shows-bruises-on-body-after",
+      "title": "Trending Video: Actress Shows Bruises On Body After Arrest!",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPYW9VOXQxVUJsY3NpY25LY2JFOGVjMW1XTVBuSFJrcmZuM2JqbVloVzYwWDZ0aUhRY3BzZkUwNG1ZTkVTcndWSk56bXZFeUtpUkp1VU9vLXpEOUh4dU91dk4zMUs0N2JsRmpuRzR5dFAwYWVfQWsyQ04yb3RXSl9TNTdfUFhDcWJDcndMaWxGXzg1akk3SnRmWTR3azbSAaIBQVVfeXFMUGluRm1kajJjUmtfY3JvVTNBUXRGRTkwQURibjJFNDBQcTRKSTR2bEYtVzY4NmdwMEhvaWJtaS1aU3RpTHZsS29NT3BBT0FFYjVoQkktcUx3RXlxVzYtT0RQbVZHWHRtalp0T0ZoWVA4VFNvU2pKLW4xTEFYdFlLRHpqdU9lYWZKYWJOdE5wNkV0b2RXS1F5aHhyU1ZJVnh1THZ3?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.626036+00:00",
+      "summary": "Gulte · Mon, 12 Oct 2026 07:32:57 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "why-florida-is-trending-as-the-leader-for-4-star-w",
+      "title": "Why Florida is trending as the leader for 4-star WR Derrell Hines Jr.",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVlR3azY2bjB3OXh1Szh5endOcmc5dHoySmkxNnRkazNRVUtYb2VfTTRvTkNJUGdyZVB6OXB3QlYtLTNjanZSVW5VNzMyUE1NN0xoTjdUbnJQQTFCVkZ5bkR5UThZWWZYRmNIaUdXc2dOTVRFNlRFWUQ3MWZUeFdBZWZPU2dPTWs3d0hJRHBRdjlSQ0JmZG5GWkVDaHN3SFBYOVJacWV3NDMwblMtMTJBdUVn?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.626057+00:00",
+      "summary": "On3 · Mon, 12 Oct 2026 22:27:57 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "19-hair-trends-to-try-for-a-fresh-start-this-fall",
+      "title": "19 Hair Trends to Try for a Fresh Start This Fall",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9veEJRNVBNQjdzUTlGTFJmMEw0WGdwWWhWVnVhWGh0OGQxVE9sLWJ6MktEU3docVdIanp6cVZ3N3B3ZVpOcVZPcDV0bHFIaVJPWk5tZ0s1TUhJRmVnNGNaLQ?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.626075+00:00",
+      "summary": "Teen Vogue · Wed, 26 Aug 2026 07:00:00 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "citi-sees-oil-prices-trending-lower-to-60-to-65-pe",
+      "title": "Citi Sees Oil Prices Trending Lower to $60 to $65 Per Barrel by First Quarter of 2027",
+      "source": "gnews-q:trending",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNaGtvY0JRYTFTNGx6WWRPNlktZHl1TXNLUWpGdnhBZlJXMlFxalRjNWZqN2d0SFFzX25vWmRiVUlOeERfRUVkUXU1c0tzSkhUaW55SnJLTmowN0RoMm9qMmtleHM4eUhrQlpzU1N2QnpmY25Lb0NfRExSZ285bmY3bkVsMUExX3dMS1BxcHltYUFkSjY4bXRodHI0Y3d4aWlWel9SaUtmZFkwclM5djdDSHlJd0Y?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:48:55.626109+00:00",
+      "summary": "EnergyNow.com · Mon, 12 Oct 2026 20:05:49 GMT",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "playing-for-the-win-meet-the-philly-orchestra-devo",
+      "title": "Playing for the win: Meet the Philly orchestra devoted to video game music",
+      "source": "gnews-q:video games",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTlRibkpwTTg2cHg5YjZUbkZIdzZOQThtZWJmemtUMTg0eXpmb2VtVVdmZVVoamFjb2l1S1lzQVBsQUtNTlkydXpVUWRhb3pmSnRJWk0tYzJNX3A4d24xNFNmcGpHZ2F3M0gtTjVtTkxhU0tVN0k0cmdCZzM1ZldVOEV6cXNJN3N6RzhpcEVvRjdGQjcwU3ZVSldNbGVJSEx6eVIta2MxY01pZ3h3eHNWSk9iUFU5SHh4dkFJcVdKUmFBVGPSAcsBQVVfeXFMTVRxTEthTlZrRWdJOXhiekN4eExDR1l1RjRVNGpqU3pOcXhKaW1jNzg3RzFLLVVqM2tzQWptaHI4NURwZ2VLeGU1aDBJOVBJUGNPcE1DdUxEa1c5Y2YtQkNqbjNQenQ2R0JuOWdPdnFBcG9CclctUEp6NDlnU1IyNTAyUU5wU19LcHlCVGxoc29CcFYwMHNPWXJYcU5SSGIwVVdtT1JUQnhvM1MxVnB6YVRCYm40OEp2OW9VR0g3aUVITkRZM1FGZkFKSkk?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:49:01.814324+00:00",
+      "summary": "NBC10 Philadelphia · Mon, 12 Oct 2026 13:52:06 GMT",
+      "category": "gaming",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:video games"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "sydney-sweeney-s-extremely-nsfw-thriller-is-offici",
+      "title": "Sydney Sweeney’s Extremely NSFW Thriller Is Officially No. 1 Movie on Streaming",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT2dnN1kyeDZISVBtcVJlQ0pIQm5wZWxXbS0ydXBDWFJUUUxTc28yNk9XOVg0UEdsYjA2ckNKV295V3BGUDBlcXBwaTFwQnlseEhTd1NLNWZtd0VRVlIxcEVhY0xxQ1M3Zy0xQ0tsd2xhRUtsSDNFS21WWXctcDVVeHZMYjJvUEZDRldCc3ppRl90RE1iXzVsYTFBRkx1X0t3cDcxNTBpVzI?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:49:05.053666+00:00",
+      "summary": "Yahoo · Tue, 13 Oct 2026 08:10:39 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "10-essential-movies-of-1988-every-film-fan-should-",
+      "title": "10 Essential Movies of 1988 Every Film Fan Should See",
+      "source": "gnews-q:movies",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE05SmlrRmhpbEdjWWJyamZfVEZuX3Bfc3ZPUFhDOG5SRThrWGVvSllGdmdsTk1sRFlHd01qNTBEWVFOOThjVDJqMk1wd0xwaG1KbGpIR0ljUmtFYjIybkE?oc=5",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:49:05.053820+00:00",
+      "summary": "No Film School · Tue, 13 Oct 2026 02:23:52 GMT",
+      "category": "entertainment",
+      "platforms": [
+        "google"
+      ],
+      "format_tags": [],
+      "sources": [
+        "gnews-q:movies"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "google": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "reform-uk-s-hardline-asylum-plans",
+      "title": "Reform UK's hardline asylum plans",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Reform+UK%27s+hardline+asylum+plans",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:51:17.145244+00:00",
+      "summary": "Nigel Farage vows a five-year asylum ban, and Robert Jenrick urges Royal Marines in the Channel.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "death-of-rj-mitte-reported",
+      "title": "Death of RJ Mitte reported",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Death+of+RJ+Mitte+reported",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:51:17.145343+00:00",
+      "summary": "TMZ says the actor who played Walter White Jr. on \"Breaking Bad\" has died at age 34.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
+            "snapshots": 1,
+            "latest_velocity": 45,
+            "delta": 0,
+            "sparkline_svg": null
+          }
+        }
+      }
+    },
+    {
+      "id": "ilhan-omar-home-search-reports",
+      "title": "Ilhan Omar home search reports",
+      "source": "bluesky-trending",
+      "url": "https://bsky.app/search?q=Ilhan+Omar+home+search+reports",
+      "velocity": 45,
+      "opportunity_score": 45,
+      "hashtags": [],
+      "detected_at": "2026-10-13T08:51:17.145405+00:00",
+      "summary": "Posts discuss unconfirmed reports of a federal search at Rep. Ilhan Omar's DC residence.",
+      "category": "news",
+      "platforms": [
+        "bluesky"
+      ],
+      "format_tags": [],
+      "sources": [
+        "bluesky-trending"
+      ],
+      "trend_type": "topic",
+      "format_family": null,
+      "velocity_trend": {
+        "snapshots": 1,
+        "state": "building",
+        "since": "Oct 13, 2026",
+        "first_velocity": 45,
+        "latest_velocity": 45,
+        "delta": 0,
+        "sparkline_svg": null,
+        "per_platform": {
+          "bluesky": {
             "snapshots": 1,
             "latest_velocity": 45,
             "delta": 0,
