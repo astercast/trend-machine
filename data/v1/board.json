@@ -1,0 +1,365 @@
+{
+  "generated_at": "2026-10-13T10:15:48.270927+00:00",
+  "score": {
+    "name": "Opportunity index",
+    "unit": "index, 0–100",
+    "formula": "opportunity = round(velocity × (1 − saturation penalty)); penalties: low 0, medium 0.35, high 0.6 (pipeline/normalize.py)",
+    "velocity": "0–100 spread speed. Auto topics: min(100, 25 × corroborating sources + 15 × recency boost + hashtag bonus). Seeded topics carry documented editorial estimates.",
+    "saturation": "How crowded the lane already is — high when 4+ sources track the same topic.",
+    "honesty": "An index for ranking what to make first. It is not a percentage, not a rise, and it promises no views — the board prints evidence chips, never an uplift figure."
+  },
+  "merges": [
+    {
+      "canonical_id": "six-seven-meme",
+      "canonical_title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "absorbed": [
+        {
+          "id": "seis-sete-dance",
+          "title": "\"Six Seven\" (Seis Sete) funk dance"
+        }
+      ],
+      "rule": "One phenomenon tracked under two titles; the build folds the absorbed listing into the canonical row and combines its evidence. The canonical store (data/trends.json) keeps both records — the merge is a view, re-derived on every build."
+    }
+  ],
+  "counts": {
+    "tracked": 393,
+    "phenomena": 392,
+    "makeable_shown": 7,
+    "news_shown": 3
+  },
+  "note": "392 phenomena from 393 tracked topics — \"6-7\" — Gen Alpha's defining brainrot joke + \"Six Seven\" (Seis Sete) funk dance read as one phenomenon (six-seven-meme). The full unfiltered record — every forecast, the Oracle, all 393 rows — stays one layer down: the desk below and data/v1/trends.json.",
+  "make_now": [
+    {
+      "rank": 1,
+      "id": "six-seven-meme",
+      "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "aka": [
+        "\"Six Seven\" (Seis Sete) funk dance"
+      ],
+      "merged_from": [
+        "seis-sete-dance"
+      ],
+      "url": "topics/six-seven-meme.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 92,
+      "velocity": 92,
+      "saturation": "low",
+      "platforms": [
+        "tiktok",
+        "youtube"
+      ],
+      "hashtags": [
+        "#67",
+        "#sixseven",
+        "#brainrot",
+        "#seissete",
+        "#dancechallenge"
+      ],
+      "format": "meme",
+      "angle": "Explain the meme to millennials/parents (reaction gold)",
+      "evidence": [
+        "velocity 92/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "sources: Wikipedia + Lightreel",
+        "#67",
+        "#sixseven"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 2,
+      "id": "gta6-robberies",
+      "title": "GTA 6: robberies and partner getaways detailed",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/gta6-robberies.html",
+      "kind": "makeable",
+      "category": "gaming",
+      "opportunity_score": 91,
+      "velocity": 91,
+      "saturation": "low",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "x"
+      ],
+      "hashtags": [
+        "#gta6",
+        "#rockstar"
+      ],
+      "format": "gaming",
+      "angle": "What the robbery system tells us about the story",
+      "evidence": [
+        "velocity 91/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: Game8",
+        "#gta6",
+        "#rockstar"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 3,
+      "id": "nba-tiktok-surge",
+      "title": "#nba explodes on TikTok (+493%)",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/nba-tiktok-surge.html",
+      "kind": "makeable",
+      "category": "sports",
+      "opportunity_score": 86,
+      "velocity": 86,
+      "saturation": "low",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#nba",
+        "#basketball"
+      ],
+      "format": "sports",
+      "angle": "The play that broke basketball TikTok this week",
+      "evidence": [
+        "velocity 86/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: Revid",
+        "#nba",
+        "#basketball"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 4,
+      "id": "we-fell-in-love-in-october",
+      "title": "\"we fell in love in october\" — girl in red",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/we-fell-in-love-in-october.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 86,
+      "velocity": 86,
+      "saturation": "low",
+      "platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "hashtags": [
+        "#wefellinloveinoctober",
+        "#octobermood"
+      ],
+      "format": "meme",
+      "angle": "Pumpkin-patch date montage that isn't generic",
+      "evidence": [
+        "velocity 86/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: SocialPilot",
+        "#wefellinloveinoctober",
+        "#octobermood"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 5,
+      "id": "nana-patekar-tributes",
+      "title": "Nana Patekar dies at 75 — meme legend tributes",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/nana-patekar-tributes.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 85,
+      "velocity": 85,
+      "saturation": "low",
+      "platforms": [
+        "x",
+        "instagram",
+        "youtube"
+      ],
+      "hashtags": [
+        "#nanapatekar",
+        "#riplegend"
+      ],
+      "format": "meme",
+      "angle": "A respectful supercut: his 10 most-memed moments",
+      "evidence": [
+        "velocity 85/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: Face of Malawi",
+        "#nanapatekar",
+        "#riplegend"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 6,
+      "id": "dip-on-em",
+      "title": "\"DIP ON EM\" — early-stage dance sound",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/dip-on-em.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 85,
+      "velocity": 85,
+      "saturation": "low",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#diponem",
+        "#dancechallenge"
+      ],
+      "format": "dance",
+      "angle": "Clean one-take before it blows up",
+      "evidence": [
+        "velocity 85/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: SocialPilot",
+        "#diponem",
+        "#dancechallenge"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 7,
+      "id": "insomniac-lofi",
+      "title": "\"Insomniac\" — Memo Boy's lo-fi bed",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/insomniac-lofi.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 84,
+      "velocity": 84,
+      "saturation": "low",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#insomniac",
+        "#lofi",
+        "#fallvibes"
+      ],
+      "format": "meme",
+      "angle": "Slow Halloween decor pan on the Insomniac bed",
+      "evidence": [
+        "velocity 84/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: SocialPilot",
+        "#insomniac",
+        "#lofi"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    }
+  ],
+  "news_watch": [
+    {
+      "rank": 1,
+      "id": "trump-rally-nobel",
+      "title": "Trump roasts rally protester; Nobel Prize outrage",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/trump-rally-nobel.html",
+      "kind": "news",
+      "category": "news",
+      "opportunity_score": 90,
+      "velocity": 90,
+      "saturation": "low",
+      "platforms": [
+        "x",
+        "youtube",
+        "tiktok"
+      ],
+      "hashtags": [
+        "#trump",
+        "#nobelprize"
+      ],
+      "format": "news",
+      "angle": "The 30-second clip, zero commentary (let comments cook)",
+      "evidence": [
+        "velocity 90/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: RedWaveFeed",
+        "#trump",
+        "#nobelprize"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 2,
+      "id": "houthi-riyadh-strike",
+      "title": "Houthi missile strike on Riyadh airport",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/houthi-riyadh-strike.html",
+      "kind": "news",
+      "category": "news",
+      "opportunity_score": 88,
+      "velocity": 88,
+      "saturation": "low",
+      "platforms": [
+        "youtube",
+        "x"
+      ],
+      "hashtags": [
+        "#riyadh",
+        "#middleeast",
+        "#breaking"
+      ],
+      "format": "news",
+      "angle": "What happened in 3 minutes (map + timeline)",
+      "evidence": [
+        "velocity 88/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: NewsWatchmen",
+        "#riyadh",
+        "#middleeast"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    },
+    {
+      "rank": 3,
+      "id": "hurricane-isaias",
+      "title": "Hurricane Isaias makes landfall",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/hurricane-isaias.html",
+      "kind": "news",
+      "category": "news",
+      "opportunity_score": 81,
+      "velocity": 81,
+      "saturation": "low",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "x"
+      ],
+      "hashtags": [
+        "#hurricaneisaias",
+        "#weather"
+      ],
+      "format": "news",
+      "angle": "Storm prep checklist (before the next one)",
+      "evidence": [
+        "velocity 81/100",
+        "saturation low — lane uncrowded",
+        "holding steady across 8 snapshots",
+        "source: NewsWatchmen",
+        "#hurricaneisaias",
+        "#weather"
+      ],
+      "last_seen": "2026-10-11T19:30:00-07:00"
+    }
+  ]
+}

@@ -307,12 +307,19 @@ def _fb_region(page, name, inner):
     return pat.sub(lambda m: m.group(1) + inner + m.group(2), page, count=1)
 
 
-def write_home_fallback(topics, generated_at):
+def write_home_fallback(topics, generated_at, merged=None, board=None):
     path = os.path.join(ROOT, "index.html")
     with open(path) as f:
         page = f.read()
     ref = _fb_parse(generated_at)
     by_opp = sorted(topics, key=lambda t: -(t.get("opportunity_score") or 0))
+    # wave 39 (VP-0011): the phenomenon-merged view drives the board,
+    # ticker, radar and desk fallback; hot5 stays the RAW stored top 5 —
+    # validate_api.py pins it to the canonical record, and the section is
+    # labelled as exactly that (the unfiltered record, one layer down).
+    merged = merged if merged is not None else topics
+    by_opp_m = sorted(merged, key=lambda t: (-(t.get("opportunity_score") or 0),
+                                             -(t.get("velocity") or 0)))
 
     hot = []
     for i, t in enumerate(by_opp[:5]):
@@ -327,7 +334,7 @@ def write_home_fallback(topics, generated_at):
                _fb_score(t.get("opportunity_score")), _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "hot5", "".join(hot))
 
-    memes = sorted((t for t in topics if t.get("category") == "meme"),
+    memes = sorted((t for t in merged if t.get("category") == "meme"),
                    key=lambda t: -(t.get("velocity") or 0))[:10]
     radar = []
     for i, t in enumerate(memes):
@@ -343,11 +350,16 @@ def write_home_fallback(topics, generated_at):
                       "%d meme signals tracked · static snapshot" % len(memes))
 
     rows = []
-    for i, t in enumerate(by_opp[:TMFB_TABLE_ROWS]):
+    for i, t in enumerate(by_opp_m[:TMFB_TABLE_ROWS]):
         stale = bool(t.get("stale"))
+        aka = ""
+        if t.get("merged_from"):
+            aka = ('<div class="topic-aka">also tracked as: %s — one phenomenon, '
+                   'evidence combined</div>'
+                   % esc(" · ".join(x["title"] for x in t["merged_from"])))
         rows.append(
             '<tr%s style="--i:%d"><td data-label="Topic"><a class="topic-link" href="topics/%s.html">%s</a>%s'
-            '<div class="topic-cat">%s</div></td>'
+            '<div class="topic-cat">%s</div>%s</td>'
             '<td data-label="Platforms">%s</td>'
             '<td data-label="Opportunity">%s</td>'
             '<td data-label="Velocity">%s</td>'
@@ -356,20 +368,33 @@ def write_home_fallback(topics, generated_at):
             % (' class="is-stale rise"' if stale else ' class="rise"', min(i, 12),
                esc(t["id"]), esc(t.get("title")),
                ' <span class="stale-badge">STALE</span>' if stale else "",
-               esc(t.get("category")),
+               esc(t.get("category")), aka,
                "".join('<span class="chip plat">%s</span>' % esc(p)
                        for p in (t.get("platforms") or [])),
                _fb_score(t.get("opportunity_score")), _fb_score(t.get("velocity")),
                _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "table", "".join(rows))
     page = _fb_region(page, "tablemeta",
-                      "%d of %d topics · static snapshot — the live board replaces this on load"
-                      % (min(TMFB_TABLE_ROWS, len(topics)), len(topics)))
+                      "%d of %d phenomena · %d topics tracked · static snapshot — the live board replaces this on load"
+                      % (min(TMFB_TABLE_ROWS, len(merged)), len(merged), len(topics)))
 
+    # wave 39 (VP-0011): the ticker prints the score WITH its unit — an
+    # opportunity index out of 100, never a bare ▲ that reads as a rise.
     tick = '<span class="tk-sep">·</span>'.join(
-        "<b>▲ %s</b> %s" % (t.get("opportunity_score") or 0, esc(t.get("title")))
-        for t in by_opp[:12])
+        "<b>%s/100</b> %s" % (t.get("opportunity_score") or 0, esc(t.get("title")))
+        for t in by_opp_m[:12])
     page = _fb_region(page, "ticker", tick + '<span class="tk-sep">·</span>' + tick)
+
+    # wave 39 (VP-0011): the One-Look Creator Board, baked as the first
+    # screen's static fallback (assets/js/board.js re-renders it from
+    # data/v1/board.json when the live payload lands).
+    if board is not None:
+        page = _fb_region(page, "board",
+                          "".join(_fb_board_row(e) for e in board["make_now"]))
+        page = _fb_region(page, "boardnews",
+                          "".join(_fb_board_row(e) for e in board["news_watch"]))
+        page = _fb_region(page, "boardnote", esc(board["note"]))
+        page = _fb_region(page, "hsmakenow", str(board["counts"]["makeable_shown"]))
 
     if ref is not None:
         stamp = ref.strftime("%b %-d, %Y, %-I:%M %p UTC")
@@ -387,6 +412,228 @@ def write_home_fallback(topics, generated_at):
         f.write(page)
     print("[build] home fallback: %d hot / %d radar / %d table rows baked into index.html"
           % (min(5, len(topics)), len(memes), min(TMFB_TABLE_ROWS, len(topics))))
+
+
+# ---------------------------------------------------------------------------
+# Wave 39 (rotation 20 · VP-0011): the One-Look Creator Board.
+# The home's first screen is a ranked "make now" list: each entry carries
+# the topic, the evidence it is rising (chips derived from the stored
+# record — platforms, velocity, saturation, the Oracle's own snapshot
+# count/state, source names, hashtags), and the angle a creator would
+# make (the topic's stored first angle + its format). This builder is
+# the Python mirror of assets/js/board-lib.js; both implement the same
+# two rules and scripts/test_board_lib.js pins the JS half:
+#   1. PHENOMENON_MERGES — one phenomenon, one row, evidence combined,
+#      score recomputed with the pipeline's own formula. The canonical
+#      store is never rewritten; the merge is re-derived every build.
+#   2. kind: category "news" is straight news — labelled, listed apart,
+#      never mixed into the make-now ranking.
+# The score's honest name (printed on the board itself): the
+# OPPORTUNITY INDEX, 0-100 = round(velocity x (1 - saturation penalty))
+# — velocity is spread speed (pipeline/normalize.py: corroboration +
+# recency; seeded topics carry documented editorial estimates),
+# saturation discounts lanes already crowded with creators. It is not
+# a percentage rise and it promises no views: per the rotation-20
+# research rule, view-pull evidence is thin, so the board prints
+# evidence chips, never an uplift figure.
+PHENOMENON_MERGES = {"seis-sete-dance": "six-seven-meme"}
+_SAT_PEN = {"low": 0.0, "medium": 0.35, "high": 0.6}
+_SAT_LABEL = {"low": "saturation low — lane uncrowded",
+              "medium": "saturation medium — lane filling",
+              "high": "saturation high — lane crowded"}
+BOARD_MAKE_CAP = 7
+BOARD_NEWS_CAP = 3
+
+
+def _union(a, b, key=None):
+    out, seen = [], set()
+    for x in list(a or []) + list(b or []):
+        k = key(x) if key else x
+        if k not in seen:
+            seen.add(k)
+            out.append(x)
+    return out
+
+
+def merge_phenomena(topics):
+    """Fold each absorbed topic into its canonical row (evidence
+    combined, velocity = max, saturation = the less crowded of the
+    pair, opportunity recomputed by formula). A merge whose canonical
+    id is absent leaves the absorbed topic in place — a merge never
+    deletes data. Mirrors TM_BoardLib.mergeTopics."""
+    by_id = {t["id"]: t for t in topics}
+    absorbed = {a: c for a, c in PHENOMENON_MERGES.items()
+                if a in by_id and c in by_id and a != c}
+    if not absorbed:
+        return list(topics)
+    out = []
+    for t in topics:
+        if t["id"] in absorbed:
+            continue
+        abs_ids = [a for a, c in absorbed.items() if c == t["id"]]
+        if not abs_ids:
+            out.append(t)
+            continue
+        m = dict(t)
+        m["merged_from"] = []
+        for abs_id in abs_ids:
+            a = by_id[abs_id]
+            m["merged_from"].append({"id": a["id"], "title": a.get("title")})
+            m["platforms"] = _union(m.get("platforms"), a.get("platforms"))
+            m["hashtags"] = _union(m.get("hashtags"), a.get("hashtags"))
+            m["sources"] = _union(m.get("sources"), a.get("sources"),
+                                  key=lambda s: s.get("name"))
+            m["angles"] = _union(m.get("angles"), a.get("angles"))
+            m["hooks"] = _union(m.get("hooks"), a.get("hooks"))
+            m["format_tags"] = _union(m.get("format_tags"), a.get("format_tags"))
+            m["velocity"] = max(m.get("velocity") or 0, a.get("velocity") or 0)
+            sat = m.get("saturation")
+            if _SAT_PEN.get(a.get("saturation"), 0) < _SAT_PEN.get(sat, 0):
+                sat = a.get("saturation")
+            m["saturation"] = sat
+            if (a.get("last_seen") or "") > (m.get("last_seen") or ""):
+                m["last_seen"] = a.get("last_seen")
+        m["opportunity_score"] = round((m.get("velocity") or 0)
+                                       * (1 - _SAT_PEN.get(m.get("saturation"), 0)))
+        out.append(m)
+    return out
+
+
+def _board_forecast_chip(proj):
+    if not proj:
+        return "no Oracle call yet — too few snapshots"
+    n = proj.get("n_snapshots") or 0
+    state = proj.get("state")
+    if state == "peaking":
+        return "Oracle projection: peaking in ~%gh · %d snapshots" % (
+            proj.get("peak_in_hours") or 0, n)
+    if state == "fading":
+        return "Oracle projection: cooling off · %d snapshots" % n
+    if state == "steady":
+        return "holding steady across %d snapshots" % n
+    return "forecast building — %d snapshots so far" % n
+
+
+def _board_entry(t, rank, proj):
+    names = [s.get("name") for s in (t.get("sources") or []) if s.get("name")]
+    evidence = ["velocity %d/100" % (t.get("velocity") or 0),
+                _SAT_LABEL.get(t.get("saturation"),
+                               "saturation %s" % t.get("saturation")),
+                _board_forecast_chip(proj)]
+    if len(names) == 1:
+        evidence.append("source: %s" % names[0])
+    elif names:
+        evidence.append("sources: %s" % " + ".join(names[:3]))
+    evidence.extend((t.get("hashtags") or [])[:2])
+    if t.get("verification") and t.get("verification") != "verified":
+        evidence.append("verification: %s — confirm live before building on it"
+                        % t["verification"])
+    fmt = (t.get("format_tags") or [None])[0] or t.get("category")
+    return {
+        "rank": rank, "id": t["id"], "title": t.get("title"),
+        "aka": [x["title"] for x in (t.get("merged_from") or [])],
+        "merged_from": [x["id"] for x in (t.get("merged_from") or [])],
+        "url": "topics/%s.html" % t["id"],
+        "kind": "news" if t.get("category") == "news" else "makeable",
+        "category": t.get("category"),
+        "opportunity_score": t.get("opportunity_score") or 0,
+        "velocity": t.get("velocity") or 0,
+        "saturation": t.get("saturation"),
+        "platforms": t.get("platforms") or [],
+        "hashtags": t.get("hashtags") or [],
+        "format": fmt,
+        "angle": (t.get("angles") or [None])[0],
+        "evidence": evidence,
+        "last_seen": t.get("last_seen"),
+    }
+
+
+def build_board(topics, merged, forecasts, generated_at):
+    projs = (forecasts or {}).get("projections") or {}
+    live = [t for t in merged if not t.get("stale")]
+    by_score = lambda t: (-(t.get("opportunity_score") or 0),
+                          -(t.get("velocity") or 0))
+    make = sorted((t for t in live if t.get("category") != "news"),
+                  key=by_score)[:BOARD_MAKE_CAP]
+    news = sorted((t for t in live if t.get("category") == "news"),
+                  key=by_score)[:BOARD_NEWS_CAP]
+    merges = []
+    for t in merged:
+        if t.get("merged_from"):
+            merges.append({
+                "canonical_id": t["id"], "canonical_title": t.get("title"),
+                "absorbed": t["merged_from"],
+                "rule": ("One phenomenon tracked under two titles; the build "
+                         "folds the absorbed listing into the canonical row "
+                         "and combines its evidence. The canonical store "
+                         "(data/trends.json) keeps both records — the merge "
+                         "is a view, re-derived on every build.")})
+    merge_txt = "; ".join(
+        "%s + %s read as one phenomenon (%s)"
+        % (m["canonical_title"],
+           " · ".join(x["title"] for x in m["absorbed"]),
+           m["canonical_id"]) for m in merges)
+    note = ("%d phenomena from %d tracked topics%s. "
+            "The full unfiltered record — every forecast, the Oracle, all "
+            "%d rows — stays one layer down: the desk below and "
+            "data/v1/trends.json."
+            % (len(merged), len(topics),
+               (" — " + merge_txt) if merge_txt else "", len(topics)))
+    return {
+        "generated_at": generated_at,
+        "score": {
+            "name": "Opportunity index",
+            "unit": "index, 0–100",
+            "formula": ("opportunity = round(velocity × (1 − saturation "
+                        "penalty)); penalties: low 0, medium 0.35, high 0.6 "
+                        "(pipeline/normalize.py)"),
+            "velocity": ("0–100 spread speed. Auto topics: min(100, "
+                         "25 × corroborating sources + 15 × recency boost "
+                         "+ hashtag bonus). Seeded topics carry documented "
+                         "editorial estimates."),
+            "saturation": ("How crowded the lane already is — high when "
+                           "4+ sources track the same topic."),
+            "honesty": ("An index for ranking what to make first. It is "
+                        "not a percentage, not a rise, and it promises no "
+                        "views — the board prints evidence chips, never an "
+                        "uplift figure."),
+        },
+        "merges": merges,
+        "counts": {"tracked": len(topics), "phenomena": len(merged),
+                   "makeable_shown": len(make), "news_shown": len(news)},
+        "note": note,
+        "make_now": [_board_entry(t, i + 1, projs.get(t["id"]))
+                     for i, t in enumerate(make)],
+        "news_watch": [_board_entry(t, i + 1, projs.get(t["id"]))
+                       for i, t in enumerate(news)],
+    }
+
+
+def _fb_board_row(e):
+    chips = "".join('<span class="chip plat">%s</span>' % esc(p)
+                    for p in e["platforms"])
+    chips += "".join('<span class="chip ev">%s</span>' % esc(c)
+                     for c in e["evidence"])
+    aka = ""
+    if e.get("aka"):
+        aka = ('<span class="board-aka">also tracked as: %s — one phenomenon, '
+               'evidence combined</span>' % esc(" · ".join(e["aka"])))
+    badge = ""
+    make = ""
+    if e["kind"] == "news":
+        badge = '<span class="board-newsbadge">News · watch</span> '
+    elif e.get("angle"):
+        make = ('<p class="board-angle"><span class="board-make">Make</span> %s'
+                '<span class="board-fmt"> · format: %s</span></p>'
+                % (esc(e["angle"]), esc(e["format"])))
+    return ('<li class="board-row rise%s"><span class="board-rank num">%02d</span>'
+            '<div class="board-main">%s<a class="board-title" href="%s">%s</a>%s%s'
+            '<div class="board-chips">%s</div></div>'
+            '<div class="board-score"><span class="num">%d</span>'
+            '<span class="board-unit">opp /100</span></div></li>'
+            % (" news" if e["kind"] == "news" else "", e["rank"], badge,
+               esc(e["url"]), esc(e["title"]), aka, make, chips,
+               e["opportunity_score"]))
 
 
 # wave 32 (Foundry round 2; round-11 placement packet): the root pages are
@@ -622,8 +869,27 @@ def main():
     with open(os.path.join(api, "trends.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "count": len(topics),
                    "topics": topics}, f, indent=2, ensure_ascii=False)
+    # wave 39 (VP-0011): the One-Look Creator Board payload. Forecasts are
+    # read from the on-disk payload the previous pipeline step wrote (the
+    # same pattern the manifest uses for oracle-board/live-wire/desk —
+    # build_forecasts.js runs after this script in refresh.sh).
+    _fc_for_board = {}
+    try:
+        with open(os.path.join(api, "forecasts.json")) as f:
+            _fc_for_board = json.load(f)
+    except Exception:
+        _fc_for_board = {}
+    merged_topics = merge_phenomena(topics)
+    board = build_board(topics, merged_topics, _fc_for_board,
+                        data["generated_at"])
+    with open(os.path.join(api, "board.json"), "w") as f:
+        json.dump(board, f, indent=2, ensure_ascii=False)
+    print(f"[build] data/v1/board.json ({board['counts']['makeable_shown']} make-now / "
+          f"{board['counts']['news_shown']} news / {board['counts']['phenomena']} phenomena "
+          f"from {board['counts']['tracked']} topics)")
     # VP-0001: bake the homepage static fallback rows from the same payload
-    write_home_fallback(topics, data["generated_at"])
+    write_home_fallback(topics, data["generated_at"],
+                        merged=merged_topics, board=board)
     # wave 32: OG / theme-color / favicon head wiring on the root pages
     inject_root_head_meta()
     # Commons round 8: robots.txt, regenerated every build
@@ -1602,6 +1868,81 @@ def main():
         },
     }
 
+    # wave 39 (VP-0011): the Creator Board payload's schema.
+    SCHEMAS["board"] = {
+        "$schema": DRAFT,
+        "title": "trend-machine Creator Board",
+        "description": ("Wave 39 (VP-0011): the One-Look Creator Board — the "
+                        "homepage's first screen as data. make_now: the ranked "
+                        "creator-makeable picks (top 7, stale excluded, news "
+                        "excluded), each with its evidence chips and the "
+                        "angle to make. news_watch: straight-news topics, "
+                        "labelled and listed apart (top 3). merges: the "
+                        "phenomenon dedupe the build applied (one phenomenon, "
+                        "one row, evidence combined; the canonical store "
+                        "keeps both records). score: the opportunity index's "
+                        "honest definition — an index 0-100, never a "
+                        "percentage or a view promise."),
+        "type": "object",
+        "required": ["generated_at", "score", "merges", "counts", "note",
+                     "make_now", "news_watch"],
+        "properties": {
+            "generated_at": {"type": "string"},
+            "score": {"type": "object",
+                      "required": ["name", "unit", "formula", "velocity",
+                                   "saturation", "honesty"],
+                      "properties": {
+                          "name": {"type": "string"},
+                          "unit": {"type": "string"},
+                          "formula": {"type": "string"},
+                          "velocity": {"type": "string"},
+                          "saturation": {"type": "string"},
+                          "honesty": {"type": "string"}}},
+            "merges": {"type": "array",
+                       "items": {"type": "object",
+                                 "properties": {
+                                     "canonical_id": {"type": "string"},
+                                     "canonical_title": {"type": "string"},
+                                     "absorbed": {"type": "array",
+                                                  "items": {"type": "object"}},
+                                     "rule": {"type": "string"}}}},
+            "counts": {"type": "object",
+                       "required": ["tracked", "phenomena", "makeable_shown",
+                                    "news_shown"],
+                       "properties": {
+                           "tracked": {"type": "integer", "minimum": 0},
+                           "phenomena": {"type": "integer", "minimum": 0},
+                           "makeable_shown": {"type": "integer", "minimum": 0},
+                           "news_shown": {"type": "integer", "minimum": 0}}},
+            "note": {"type": "string"},
+            "make_now": {"type": "array", "items": {"$ref": "#/definitions/board_entry"}},
+            "news_watch": {"type": "array", "items": {"$ref": "#/definitions/board_entry"}},
+        },
+        "definitions": {"board_entry": {
+            "type": "object",
+            "required": ["rank", "id", "title", "url", "kind", "category",
+                         "opportunity_score", "velocity", "platforms",
+                         "format", "angle", "evidence"],
+            "properties": {
+                "rank": {"type": "integer", "minimum": 1},
+                "id": {"type": "string"},
+                "title": {"type": "string"},
+                "aka": {"type": "array", "items": {"type": "string"}},
+                "merged_from": {"type": "array", "items": {"type": "string"}},
+                "url": {"type": "string"},
+                "kind": {"type": "string", "enum": ["makeable", "news"]},
+                "category": {"type": "string"},
+                "opportunity_score": {"type": "integer", "minimum": 0, "maximum": 100},
+                "velocity": {"type": "integer", "minimum": 0, "maximum": 100},
+                "saturation": {"type": ["string", "null"]},
+                "platforms": {"type": "array", "items": {"type": "string"}},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "format": {"type": "string"},
+                "angle": {"type": ["string", "null"]},
+                "evidence": {"type": "array", "items": {"type": "string"}},
+                "last_seen": {"type": ["string", "null"]}}}},
+    }
+
     for sname, sdoc in SCHEMAS.items():
         with open(os.path.join(api, "schema", sname + ".json"), "w") as f:
             json.dump(sdoc, f, indent=2)
@@ -1758,6 +2099,19 @@ def main():
                 (_board_disk.get("counts") or {}).get("recorded"),
                 "Written by scripts/build_oracle_board.js (runs after build_forecasts.js in refresh.sh and in resolution_night.sh step 3); human-readable on oracle-board.html.",
                 updated=_board_disk.get("generated_at"), js_order=True),
+            "board": endpoint(
+                "data/v1/board.json",
+                ("Wave 39 (VP-0011): the One-Look Creator Board — the "
+                 "homepage's first screen as data: the ranked make-now "
+                 "picks (creator-makeable, stale excluded) with evidence "
+                 "chips and the angle to make, straight news labelled and "
+                 "listed apart, the phenomenon merges the build applied, "
+                 "and the opportunity index's honest definition (an "
+                 "index 0-100 — velocity discounted by saturation — "
+                 "never a percentage or a view promise)."),
+                schema_path("board"),
+                board["counts"]["makeable_shown"] + board["counts"]["news_shown"],
+                "Derived from the canonical store every build; the store itself (data/v1/trends.json) keeps all tracked topics, merged listings included."),
             "live_wire": endpoint(
                 "data/v1/live-wire.json",
                 ("Wave 28: the Live Wire — a command view over the pipeline's "
@@ -1815,7 +2169,11 @@ def main():
                 updated=_acc_disk.get("generated_at"), js_order=True),
         },
         "deprecated": [],
-        "changelog": ("0.7.0 (2026-10-12): Wave 17 — Oracle layer 2. New data/v1/lifecycle.json endpoint: "
+        "changelog": ("0.7.0 (2026-10-13): Wave 39 — the One-Look Creator Board. New data/v1/board.json endpoint: "
+                      "the homepage's first screen as data — ranked make-now picks with evidence chips and angles, "
+                      "straight news labelled apart, phenomenon merges (additive view only; the canonical store "
+                      "keeps every tracked topic). Additive only, no shape changes to existing endpoints. "
+                      "0.7.0 (2026-10-12): Wave 17 — Oracle layer 2. New data/v1/lifecycle.json endpoint: "
                       "every topic's ignition/burnout lifecycle stage (building/steady/warming/igniting/peaking/cooling/burned-out) "
                       "classified from its real velocity snapshots with the classifier's own thresholds (ignition line v=70, "
                       "rise/fall ±1.5/hr) — readouts, not predictions; per-topic stage ribbons; last-24h ignitions/burnouts boards. "

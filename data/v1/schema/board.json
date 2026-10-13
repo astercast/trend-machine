@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "trend-machine Creator Board",
+  "description": "Wave 39 (VP-0011): the One-Look Creator Board \u2014 the homepage's first screen as data. make_now: the ranked creator-makeable picks (top 7, stale excluded, news excluded), each with its evidence chips and the angle to make. news_watch: straight-news topics, labelled and listed apart (top 3). merges: the phenomenon dedupe the build applied (one phenomenon, one row, evidence combined; the canonical store keeps both records). score: the opportunity index's honest definition \u2014 an index 0-100, never a percentage or a view promise.",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "score",
+    "merges",
+    "counts",
+    "note",
+    "make_now",
+    "news_watch"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "score": {
+      "type": "object",
+      "required": [
+        "name",
+        "unit",
+        "formula",
+        "velocity",
+        "saturation",
+        "honesty"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "formula": {
+          "type": "string"
+        },
+        "velocity": {
+          "type": "string"
+        },
+        "saturation": {
+          "type": "string"
+        },
+        "honesty": {
+          "type": "string"
+        }
+      }
+    },
+    "merges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "canonical_id": {
+            "type": "string"
+          },
+          "canonical_title": {
+            "type": "string"
+          },
+          "absorbed": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "rule": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "tracked",
+        "phenomena",
+        "makeable_shown",
+        "news_shown"
+      ],
+      "properties": {
+        "tracked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "phenomena": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "makeable_shown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "news_shown": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "note": {
+      "type": "string"
+    },
+    "make_now": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/board_entry"
+      }
+    },
+    "news_watch": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/board_entry"
+      }
+    }
+  },
+  "definitions": {
+    "board_entry": {
+      "type": "object",
+      "required": [
+        "rank",
+        "id",
+        "title",
+        "url",
+        "kind",
+        "category",
+        "opportunity_score",
+        "velocity",
+        "platforms",
+        "format",
+        "angle",
+        "evidence"
+      ],
+      "properties": {
+        "rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "aka": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "merged_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "url": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "makeable",
+            "news"
+          ]
+        },
+        "category": {
+          "type": "string"
+        },
+        "opportunity_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "saturation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hashtags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "format": {
+          "type": "string"
+        },
+        "angle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "last_seen": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

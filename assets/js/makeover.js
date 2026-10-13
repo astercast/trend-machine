@@ -25,9 +25,13 @@
   }
   function heroStats() {
     var tb = fetch("data/v1/trends.json").then(function (r) { return r.json(); }).catch(function () { return null; });
-    var fb = fetch("data/v1/forecasts.json").then(function (r) { return r.json(); }).catch(function () { return null; });
-    Promise.all([withDeadline(tb), withDeadline(fb)]).then(function (res) {
-      var trends = res[0], fc = res[1];
+    /* wave 39 (VP-0011): the "peaking now" stat is gone — a lone count of
+       peaking topics contradicted the board it sat above (393 tracked,
+       "1 peaking" told a creator nothing about the other 392). The board
+       stats now speak the board's language: makeable-now is set by
+       board.js from data/v1/board.json; topics/platforms/age stay here. */
+    Promise.all([withDeadline(tb)]).then(function (res) {
+      var trends = res[0];
       if (trends) {
         var topics = trends.topics || trends;
         setStat("hs-topics", String(topics.length));
@@ -39,10 +43,6 @@
         placeBlips(top);
         var cap = document.getElementById("scope-cap-topic");
         if (cap && top[0]) cap.textContent = "#" + top[0].title.slice(0, 34);
-      }
-      if (fc) {
-        var peaking = fc.peaking_48h || fc.counts && fc.counts.peaking_48h || [];
-        setStat("hs-peaking", String(peaking.length || 0));
       }
       var ts = document.getElementById("data-ts");
       if (ts && trends && trends.generated_at) {
