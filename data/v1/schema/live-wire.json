@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "trend-machine Live Wire",
-  "description": "Wave 28: the pipeline command view. One row per fetcher wired into pipeline/refresh.sh, with the hit count and health the pipeline itself recorded in pipeline/out/*.json \u2014 live (rewritten by the latest refresh, hits > 0), degraded (rewritten, 0 hits), stale-skip (not rewritten; stored hits dated and excluded from the current total), or skip-by-design (TikTok / X write no file and claim no hits). Plus the hour's top movers: latest stored velocity vs the latest stored point at or before 1h earlier, merged live + archive history, real span published per mover.",
+  "description": "Wave 28: the pipeline command view. One row per fetcher wired into pipeline/refresh.sh, with the hit count and health the pipeline itself recorded in pipeline/out/*.json \u2014 live (rewritten by the latest refresh, hits > 0), degraded (rewritten, 0 hits), stale-skip (not rewritten; stored hits dated and excluded from the current total), or skip-by-design (TikTok / X write no file and claim no hits), or retired (the YouTube Invidious / direct lane, closed 2026-10-13 in DATAOPS-001: out of refresh.sh, stored file deleted, reason shown, no hits). Plus the hour's top movers: latest stored velocity vs the latest stored point at or before 1h earlier, merged live + archive history, real span published per mover.",
   "type": "object",
   "required": [
     "generated_at",
@@ -40,6 +40,7 @@
         "lanes_degraded",
         "lanes_stale_skip",
         "lanes_skip_by_design",
+        "lanes_retired",
         "current_hits",
         "stale_hits_excluded",
         "topics_live",
@@ -66,6 +67,10 @@
           "minimum": 0
         },
         "lanes_skip_by_design": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lanes_retired": {
           "type": "integer",
           "minimum": 0
         },
@@ -138,7 +143,8 @@
               "live",
               "degraded",
               "stale-skip",
-              "skip-by-design"
+              "skip-by-design",
+              "retired"
             ]
           },
           "hits": {

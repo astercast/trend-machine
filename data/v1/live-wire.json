@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T08:52:40.529Z",
+  "generated_at": "2026-10-13T09:45:36.311Z",
   "refresh_at": "2026-10-13T08:52:21.001663+00:00",
-  "method": "Lanes: one row per fetcher wired into pipeline/refresh.sh. The 11 file-writing lanes read pipeline/out/<lane>.json — hit count is that file's array length, source labels are the hits' own recorded `source` values, and freshness compares the file's newest fetched_at (or, for an empty file, its write time) with data/trends.json's generated_at from the same refresh. TikTok and X write no file and are skip-by-design. Movers: per topic, latest stored velocity vs the latest stored point at or before 1h earlier, over the live velocity store merged with the resolution archive (scripts/resolution-lib.js mergeHistory); only pairs spanning 0.5–3h count, and the real span is published per mover.",
+  "method": "Lanes: one row per fetcher wired into pipeline/refresh.sh. The 11 file-writing lanes read pipeline/out/<lane>.json — hit count is that file's array length, source labels are the hits' own recorded `source` values, and freshness compares the file's newest fetched_at (or, for an empty file, its write time) with data/trends.json's generated_at from the same refresh. TikTok and X write no file and are skip-by-design. Movers: per topic, latest stored velocity vs the latest stored point at or before 1h earlier, over the live velocity store merged with the resolution archive (scripts/resolution-lib.js mergeHistory); only pairs spanning 0.5–3h count, and the real span is published per mover. The YouTube (Invidious / direct) lane is retired (2026-10-13, DATAOPS-001): out of the refresh loop, stored file deleted, shown with its reason and no hits.",
   "honesty": "Zero invented data: a lane that recorded nothing says so, a file the latest refresh did not rewrite is labeled stale-skip with its hits excluded from the current total, skip-by-design lanes claim no hits, and movers are computed only from stored snapshot points — a topic with no ~1h pair is not a mover, however hot it looks.",
   "provenance": {
     "lanes": "pipeline/out/*.json (hit counts, source labels, fetched_at stamps)",
@@ -13,10 +13,11 @@
     "lanes": 13,
     "lanes_live": 9,
     "lanes_degraded": 1,
-    "lanes_stale_skip": 1,
+    "lanes_stale_skip": 0,
     "lanes_skip_by_design": 2,
+    "lanes_retired": 1,
     "current_hits": 395,
-    "stale_hits_excluded": 25,
+    "stale_hits_excluded": 0,
     "topics_live": 393,
     "movers_with_hour_pair": 454,
     "gainers": 5,
@@ -159,16 +160,14 @@
       "id": "youtube",
       "label": "YouTube (Invidious / direct)",
       "fetcher": "pipeline/fetch_youtube.py",
-      "output_file": "pipeline/out/youtube.json",
-      "status": "stale-skip",
-      "hits": 25,
+      "output_file": null,
+      "status": "retired",
+      "hits": 0,
       "current_hits": 0,
-      "sources": [
-        "youtube-invidious"
-      ],
-      "newest_fetched_at": "2026-10-12T08:06:54.654646+00:00",
-      "file_written_at": "2026-10-12T08:06:54.655Z",
-      "detail": "YouTube trending via Invidious public instances, direct scrape fallback (official Data API when YT_API_KEY is set). When every path fails the fetcher prints SKIP and writes nothing — the stored file then ages, and this board labels it stale-skip instead of counting old hits as new."
+      "sources": [],
+      "newest_fetched_at": null,
+      "file_written_at": null,
+      "detail": "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead — all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop."
     },
     {
       "id": "youtube_rss",

@@ -141,6 +141,7 @@
         desk.counts.drama_verified + " verified timelines · curated " +
         desk.curated_at + " · built " + desk.generated_at;
     }).catch(function () {
+      $("sd-stamp").hidden = true; /* VP-0001 tidy: no loading label above the error state */
       $("sd-status").innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the desk</h2>' +
         "<p>This page needs data/v1/streamer-desk.json (built by " +

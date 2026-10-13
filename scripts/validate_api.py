@@ -313,8 +313,19 @@ def main():
               lc.get("lanes", -1) == len(lanes)
               and lc.get("lanes_live", -1) + lc.get("lanes_degraded", -2)
               + lc.get("lanes_stale_skip", -3)
-              + lc.get("lanes_skip_by_design", -4) == lc.get("lanes", -5),
+              + lc.get("lanes_skip_by_design", -4)
+              + lc.get("lanes_retired", -6) == lc.get("lanes", -5),
               f"counts={lc} lanes={len(lanes)}")
+        check("live-wire retired lane claims nothing (DATAOPS-001)",
+              all(l.get("hits", -1) == 0 and l.get("current_hits", -1) == 0
+                  and l.get("output_file") is None
+                  for l in lanes if l.get("status") == "retired")
+              and {l.get("id") for l in lanes
+                   if l.get("status") == "retired"} == {"youtube"}
+              and not os.path.exists(os.path.join(
+                  ROOT, "pipeline", "out", "youtube.json")),
+              "exactly the youtube lane is retired, with 0 hits, no "
+              "output file, and its stale stored file deleted")
         check("live-wire current hits sum only live lanes",
               lc.get("current_hits", -1)
               == sum(l.get("current_hits", 0) for l in lanes)

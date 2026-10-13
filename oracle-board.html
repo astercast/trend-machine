@@ -177,6 +177,7 @@
         });
       renderRows();
     }).catch(function () {
+      $("ob-stamp").hidden = true; /* VP-0001 tidy: no loading label above the error state */
       $("ob-status").innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the board</h2>' +
         "<p>This page needs data/v1/oracle-board.json (built by " +

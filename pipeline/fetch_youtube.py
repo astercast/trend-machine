@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
-"""YouTube trending fetcher.
+"""YouTube trending fetcher — RETIRED 2026-10-13 (DATAOPS-001, wave 31).
+
+This fetcher is OUT of pipeline/refresh.sh and its stored output
+(pipeline/out/youtube.json) is deleted. Evidence for the retirement,
+verified live on 2026-10-13 through this pipeline's own fetch paths:
+  - all three configured Invidious instances fail, three different
+    ways (nadeko: non-JSON — its registry entry now reads api: false;
+    nerdvpn: HTTP 403, also api: false; melmac: connection dropped);
+  - the official registry (api.invidious.io/instances.json) lists
+    exactly ONE API-enabled public instance (invidious.f5.si), and it
+    answers /data/v1/* with an anti-bot HTML page, not JSON;
+  - the direct-scrape target is gone: youtube.com/feed/trending
+    returns a generic ~950 KB page with ZERO videoRenderer blocks —
+    there is no trending markup left to parse.
+YouTube coverage rides pipeline/fetch_youtube_rss.py (channel RSS,
+80 hits/run). REVIVAL PATH: set YT_API_KEY (the Data API v3 path
+below still works with a key) and re-add fetch_youtube to the
+refresh.sh loop; the Live Wire lane def in scripts/build_live_wire.js
+carries the matching `retired` flag to remove.
 
 NO-KEY PATH (best effort), in order:
   1. Invidious public instances (no key, no signup): /data/v1/popular.

@@ -77,6 +77,7 @@
 .lw-badge.is-degraded { color: var(--alarm); border-color: var(--alarm); }
 .lw-badge.is-stale-skip { color: var(--alarm); border-color: var(--alarm); }
 .lw-badge.is-skip-by-design { color: var(--ink-dim); }
+.lw-badge.is-retired { color: var(--ink-dim); border-style: dashed; }
 
 .lw-hitcell { display: flex; flex-direction: column; gap: 2px; }
 .lw-hits { font-family: var(--font-data); font-size: 1.05rem; color: var(--ink); }

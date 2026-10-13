@@ -102,6 +102,7 @@ resolve, this page says "building history" — no accuracy is claimed.</p>
           c.resolved + " resolved · updated " + (acc ? acc.generated_at : "unknown");
       }
     }).catch(function () {
+      if (stampEl) { stampEl.hidden = true; } /* VP-0001 tidy: no loading label above the error state */
       statusEl.innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the ledger</h2>' +
         "<p>This page needs data/v1/forecast-accuracy.json (built by scripts/build_forecasts.js). " +

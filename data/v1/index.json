@@ -91,7 +91,7 @@
       "path": "data/v1/live-wire.json",
       "description": "Wave 28: the Live Wire — a command view over the pipeline's own stored outputs: every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design, exactly as the pipeline records it), plus the hour's top movers computed from stored velocity snapshots only.",
       "schema": "data/v1/schema/live-wire.json",
-      "updated": "2026-10-13T08:52:40.529Z",
+      "updated": "2026-10-13T09:45:36.311Z",
       "records": 13,
       "notes": "Written by scripts/build_live_wire.js (runs after build_oracle_board.js in refresh.sh); human-readable on live-wire.html."
     },

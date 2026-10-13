@@ -85,7 +85,7 @@ for consumer development only — never promote it to the live path.
 | Reddit Atom feeds (6 subs; 429s from this IP skip per-sub) | `pipeline/fetch_reddit_rss.py` | 24 |
 | Hacker News Firebase API (top + best stories) | `pipeline/fetch_hn.py` | 49 |
 | Mastodon trending hashtags | `pipeline/fetch_mastodon.py` | 20 |
-| YouTube popular via Invidious public API | `pipeline/fetch_youtube.py` | 25 |
+| YouTube popular via Invidious public API | `pipeline/fetch_youtube.py` | RETIRED 2026-10-13 (DATAOPS-001) — no-key paths dead; see WAVELOG wave 31 |
 
 **BYO-KEY** — skip cleanly with exit 0 when the key is absent, never fake data:
 

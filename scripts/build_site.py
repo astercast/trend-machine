@@ -1090,7 +1090,11 @@ def main():
                             "0 hits), stale-skip (not rewritten; stored hits "
                             "dated and excluded from the current total), or "
                             "skip-by-design (TikTok / X write no file and "
-                            "claim no hits). Plus the hour's top movers: "
+                            "claim no hits), or retired (the YouTube "
+                            "Invidious / direct lane, closed 2026-10-13 in "
+                            "DATAOPS-001: out of refresh.sh, stored file "
+                            "deleted, reason shown, no hits). Plus the "
+                            "hour's top movers: "
                             "latest stored velocity vs the latest stored "
                             "point at or before 1h earlier, merged live + "
                             "archive history, real span published per mover."),
@@ -1106,6 +1110,7 @@ def main():
                 "counts": {"type": "object",
                     "required": ["lanes", "lanes_live", "lanes_degraded",
                                  "lanes_stale_skip", "lanes_skip_by_design",
+                                 "lanes_retired",
                                  "current_hits", "stale_hits_excluded",
                                  "topics_live", "movers_with_hour_pair",
                                  "gainers", "fallers", "flat"],
@@ -1115,6 +1120,7 @@ def main():
                         "lanes_degraded": {"type": "integer", "minimum": 0},
                         "lanes_stale_skip": {"type": "integer", "minimum": 0},
                         "lanes_skip_by_design": {"type": "integer", "minimum": 0},
+                        "lanes_retired": {"type": "integer", "minimum": 0},
                         "current_hits": {"type": "integer", "minimum": 0},
                         "stale_hits_excluded": {"type": "integer", "minimum": 0},
                         "topics_live": {"type": "integer", "minimum": 0},
@@ -1136,7 +1142,8 @@ def main():
                             "status": {"type": "string",
                                        "enum": ["live", "degraded",
                                                 "stale-skip",
-                                                "skip-by-design"]},
+                                                "skip-by-design",
+                                                "retired"]},
                             "hits": {"type": "integer", "minimum": 0},
                             "current_hits": {"type": "integer", "minimum": 0},
                             "sources": {"type": "array",

@@ -307,6 +307,8 @@
         });
       });
     }).catch(function () {
+      var countsEl = document.getElementById("oracle-counts");
+      if (countsEl) { countsEl.hidden = true; } /* VP-0001 tidy: no loading label above the error state */
       statusEl.innerHTML =
         '<div class="oracle-fallback" role="alert"><h2>Couldn\'t load the data</h2>' +
         "<p>The Oracle needs data/v1/trends.json and data/velocity_history.json. " +

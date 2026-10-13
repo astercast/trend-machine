@@ -30,7 +30,8 @@ var TM_LiveWire = (function () {
     "live": "Live",
     "degraded": "Degraded",
     "stale-skip": "Stale · skip",
-    "skip-by-design": "Skip by design"
+    "skip-by-design": "Skip by design",
+    "retired": "Retired"
   };
 
   function statusBadge(lane) {
@@ -53,6 +54,10 @@ var TM_LiveWire = (function () {
       return '<span class="num lw-hits">' + lane.hits + " hits</span>" +
         '<span class="lw-hits-note">stored ' + fmtDay(storedDay) +
         " — NOT this refresh, excluded from the current total</span>";
+    }
+    if (lane.status === "retired") {
+      return '<span class="num lw-hits">—</span>' +
+        '<span class="lw-hits-note">retired — out of the refresh loop, no hits claimed</span>';
     }
     return '<span class="num lw-hits">—</span>' +
       '<span class="lw-hits-note">no output file, no hits claimed</span>';
@@ -139,7 +144,8 @@ var TM_LiveWire = (function () {
       "same board: " + c.lanes_degraded + " degraded, " +
       c.lanes_stale_skip + " stale-skip (" + c.stale_hits_excluded +
       " old hits dated and excluded), " + c.lanes_skip_by_design +
-      " skip-by-design. " + c.topics_live + " topics on the board; " +
+      " skip-by-design, " + (c.lanes_retired || 0) + " retired. " +
+      c.topics_live + " topics on the board; " +
       c.movers_with_hour_pair + " hold a proven ~1h movement pair (" +
       c.gainers + " climbing, " + c.fallers + " cooling, " + c.flat +
       " flat).</p></div>";
@@ -149,6 +155,7 @@ var TM_LiveWire = (function () {
       ["Degraded", c.lanes_degraded, "ran, recorded 0 — shown as degraded"],
       ["Stale · skip", c.lanes_stale_skip, "not rewritten last refresh — hits dated, excluded"],
       ["Skip by design", c.lanes_skip_by_design, "TikTok + X — no data, never faked"],
+      ["Retired", c.lanes_retired || 0, "YouTube (Invidious / direct) — closed 2026-10-13, reason on its row"],
       ["Movers", c.gainers + c.fallers, "proven ~1h pairs: " + c.gainers + " up · " + c.fallers + " down · " + c.flat + " flat"]
     ].map(function (card) {
       return '<div class="lw-card"><span class="lw-card-num num">' + card[1] +

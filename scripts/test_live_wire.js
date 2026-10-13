@@ -7,10 +7,13 @@
      - a lane not rewritten by the latest refresh is STALE-SKIP:
        its hits are shown but excluded from the current total
      - TikTok / X are SKIP-BY-DESIGN with no hits claimed
+     - the YouTube (Invidious / direct) lane is RETIRED (wave 31,
+       DATAOPS-001): it claims nothing even if a stored file
+       somehow reappears — retired beats file state
      - movers need a stored pair spanning 0.5–3h around the 1h
        mark; the real span is published; flat is counted
-     - lane totals reconcile: live+degraded+stale+skip = lanes,
-       current_hits sums only live lanes' current_hits
+     - lane totals reconcile: live+degraded+stale+skip+retired
+       = lanes, current_hits sums only live lanes' current_hits
    Run: node scripts/test_live_wire.js   (exit 0 = all pass) */
 "use strict";
 var L = require("../assets/js/live-wire-lib.js");
@@ -38,7 +41,9 @@ function laneFiles(over) {
   // reddit direct: rewritten this refresh, 0 hits (degraded)
   base.reddit = { hits: 0, sources: [], newest_fetched_at: null,
                   mtime: "2026-10-13T06:24:00.000Z" };
-  // youtube direct: NOT rewritten — file still holds yesterday's hits
+  // youtube direct: RETIRED — the fixture still hands the builder
+  // its old stored file (25 hits from 2026-10-12) on purpose: a
+  // retired lane must ignore the file entirely and claim nothing
   base.youtube = { hits: 25, sources: ["youtube-invidious"],
                    newest_fetched_at: "2026-10-12T08:06:54.000Z",
                    mtime: "2026-10-12T08:06:54.000Z" };
@@ -71,19 +76,21 @@ check("fresh lane with hits is live and counts its hits as current",
 check("rewritten empty lane is degraded with 0 current",
       byId.reddit.status === "degraded" && byId.reddit.hits === 0 &&
       byId.reddit.current_hits === 0);
-check("unrewritten lane is stale-skip: hits shown, none current",
-      byId.youtube.status === "stale-skip" && byId.youtube.hits === 25 &&
-      byId.youtube.current_hits === 0);
+check("retired lane ignores its stored file and claims nothing",
+      byId.youtube.status === "retired" && byId.youtube.hits === 0 &&
+      byId.youtube.current_hits === 0 && byId.youtube.output_file === null &&
+      byId.youtube.sources.length === 0);
 check("tiktok + x are skip-by-design with no hits claimed",
       byId.tiktok.status === "skip-by-design" && byId.tiktok.hits === 0 &&
       byId.x.status === "skip-by-design" && byId.x.output_file === null);
 check("lane totals reconcile",
       wire.counts.lanes_live + wire.counts.lanes_degraded +
-      wire.counts.lanes_stale_skip + wire.counts.lanes_skip_by_design
-      === wire.counts.lanes);
-check("current_hits excludes the stale file's 25",
+      wire.counts.lanes_stale_skip + wire.counts.lanes_skip_by_design +
+      wire.counts.lanes_retired === wire.counts.lanes &&
+      wire.counts.lanes_retired === 1);
+check("retired lane contributes nothing: no current, no stale",
       wire.counts.current_hits === 9 * 5 &&
-      wire.counts.stale_hits_excluded === 25);
+      wire.counts.stale_hits_excluded === 0);
 
 // old-but-present file for a normally-live lane also goes stale-skip
 var wire2 = G.buildLiveWire(new Date(REFRESH), REFRESH,
@@ -103,7 +110,7 @@ var wire3 = G.buildLiveWire(new Date(REFRESH), REFRESH,
 var ma3 = wire3.lanes.filter(l => l.id === "mastodon")[0];
 check("previous-hour file (75 min old) is stale-skip, not live",
       ma3.status === "stale-skip" && ma3.current_hits === 0 &&
-      wire3.counts.stale_hits_excluded === 45);
+      wire3.counts.stale_hits_excluded === 20);
 
 // --- movers (generator) ------------------------------------------------------
 check("movers: gainers ranked by real delta, span published",
@@ -124,13 +131,19 @@ check("movers: off-board topic renders its id as title, not live",
 
 // --- rendering (lib) ----------------------------------------------------------
 var sum = L.summaryHTML(wire);
-check("summary names current hits and the excluded stale hits",
-      sum.indexOf("45 hits") >= 0 && sum.indexOf("25 old hits") >= 0);
+check("summary names current hits and the retired lane",
+      sum.indexOf("45 hits") >= 0 && sum.indexOf("1 retired") >= 0 &&
+      sum.indexOf("Retired") >= 0);
 var ytRow = L.laneRowHTML(byId.youtube);
+check("retired row says Retired, claims no hits, shows the reason",
+      ytRow.indexOf("Retired") >= 0 &&
+      ytRow.indexOf("no hits claimed") >= 0 &&
+      ytRow.indexOf("RETIRED 2026-10-13") >= 0 &&
+      ytRow.indexOf("NOT this refresh") < 0);
+var hnRow = L.laneRowHTML(hn2);
 check("stale row says NOT this refresh + excluded",
-      ytRow.indexOf("Stale · skip") >= 0 &&
-      ytRow.indexOf("NOT this refresh, excluded") >= 0 &&
-      ytRow.indexOf("2026-10-12") >= 0);
+      hnRow.indexOf("Stale · skip") >= 0 &&
+      hnRow.indexOf("NOT this refresh, excluded") >= 0);
 var rdRow = L.laneRowHTML(byId.reddit);
 check("degraded row renders Degraded with its real 0",
       rdRow.indexOf("Degraded") >= 0 && rdRow.indexOf("0 hits") >= 0);

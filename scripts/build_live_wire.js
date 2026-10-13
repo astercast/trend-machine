@@ -23,6 +23,18 @@
             DESIGN, exactly as their fetchers log it (no vetted
             keyless TikTok source exists; X needs a bearer token
             that is not set). No hits are claimed for them, ever.
+          - One lane is RETIRED (wave 31, DATAOPS-001): YouTube
+            (Invidious / direct). Every no-key path died — the
+            configured Invidious instances fail three different
+            ways and the official registry holds exactly one
+            API-enabled public instance, itself behind a bot
+            wall; the direct scrape's target (YouTube's trending
+            page) no longer serves trending markup at all. The
+            lane is out of refresh.sh, its stored file is
+            deleted, and the board shows it as retired with the
+            reason — never as stale data awaiting a refresh that
+            will not come. YouTube coverage rides the channel
+            RSS lane. Revival path: YT_API_KEY (Data API v3).
         "Latest refresh" is anchored to data/trends.json's
         generated_at — the stamp the same refresh leaves when it
         finishes — never to the wall clock, so a later standalone
@@ -88,8 +100,8 @@ const LANES = [
   { id: "bluesky", label: "Bluesky", fetcher: "pipeline/fetch_bluesky.py",
     file: "bluesky.json", detail: "Bluesky trending topics (keyless public API)." },
   { id: "youtube", label: "YouTube (Invidious / direct)", fetcher: "pipeline/fetch_youtube.py",
-    file: "youtube.json",
-    detail: "YouTube trending via Invidious public instances, direct scrape fallback (official Data API when YT_API_KEY is set). When every path fails the fetcher prints SKIP and writes nothing — the stored file then ages, and this board labels it stale-skip instead of counting old hits as new." },
+    file: "youtube.json", retired: "2026-10-13",
+    detail: "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead — all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop." },
   { id: "youtube_rss", label: "YouTube (channel RSS)", fetcher: "pipeline/fetch_youtube_rss.py",
     file: "youtube_rss.json", detail: "YouTube channel RSS with channel-page fallback — the lane that carries YouTube." },
   { id: "streamers", label: "Streamer Desk wire", fetcher: "pipeline/fetch_streamers.py",
@@ -132,6 +144,18 @@ function summarizeLane(def, file) {
   // file: null (no stored output) or
   // { hits: n, sources: [...], newest_fetched_at: iso|null,
   //   mtime: iso|null }
+  if (def.retired) {
+    // Retired lanes are closed, not starved: the fetcher is out of
+    // refresh.sh, the stored file is deleted, and any file that
+    // somehow reappears is ignored — a retired lane claims nothing.
+    return {
+      id: def.id, label: def.label, fetcher: def.fetcher,
+      output_file: null,
+      status: "retired", hits: 0, current_hits: 0,
+      sources: [], newest_fetched_at: null, file_written_at: null,
+      detail: def.detail
+    };
+  }
   if (!def.file || !file) {
     return {
       id: def.id, label: def.label, fetcher: def.fetcher,
@@ -154,7 +178,7 @@ function summarizeLane(def, file) {
 }
 
 function classifyLane(lane, refreshMs) {
-  if (lane.status === "skip-by-design") { return lane; }
+  if (lane.status === "skip-by-design" || lane.status === "retired") { return lane; }
   const evidence = lane.newest_fetched_at || lane.file_written_at;
   const evMs = evidence ? Date.parse(evidence) : NaN;
   const fresh = isFinite(evMs) && isFinite(refreshMs) &&
@@ -232,7 +256,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
   const topicsById = {};
   ((store && store.topics) || []).forEach(t => { topicsById[t.id] = t; });
   const movers = computeMovers(mergedHistory, topicsById);
-  const byStatus = { live: 0, degraded: 0, "stale-skip": 0, "skip-by-design": 0 };
+  const byStatus = { live: 0, degraded: 0, "stale-skip": 0, "skip-by-design": 0, retired: 0 };
   let currentHits = 0, staleHits = 0;
   lanes.forEach(l => {
     byStatus[l.status]++;
@@ -252,7 +276,10 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
       "stored velocity vs the latest stored point at or before 1h " +
       "earlier, over the live velocity store merged with the resolution " +
       "archive (scripts/resolution-lib.js mergeHistory); only pairs " +
-      "spanning 0.5–3h count, and the real span is published per mover.",
+      "spanning 0.5–3h count, and the real span is published per mover. " +
+      "The YouTube (Invidious / direct) lane is retired (2026-10-13, " +
+      "DATAOPS-001): out of the refresh loop, stored file deleted, " +
+      "shown with its reason and no hits.",
     honesty: "Zero invented data: a lane that recorded nothing says so, " +
       "a file the latest refresh did not rewrite is labeled stale-skip " +
       "with its hits excluded from the current total, skip-by-design " +
@@ -271,6 +298,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
       lanes_degraded: byStatus.degraded,
       lanes_stale_skip: byStatus["stale-skip"],
       lanes_skip_by_design: byStatus["skip-by-design"],
+      lanes_retired: byStatus.retired,
       current_hits: currentHits,
       stale_hits_excluded: staleHits,
       topics_live: ((store && store.topics) || []).length,
@@ -330,7 +358,8 @@ function main() {
   console.log("[live-wire] " + wire.counts.lanes + " lanes (" +
     wire.counts.lanes_live + " live, " + wire.counts.lanes_degraded +
     " degraded, " + wire.counts.lanes_stale_skip + " stale-skip, " +
-    wire.counts.lanes_skip_by_design + " skip-by-design), " +
+    wire.counts.lanes_skip_by_design + " skip-by-design, " +
+    wire.counts.lanes_retired + " retired), " +
     wire.counts.current_hits + " current hits, movers " +
     wire.counts.gainers + " up / " + wire.counts.fallers + " down -> " + OUT);
 
@@ -342,7 +371,7 @@ function main() {
       manifest.endpoints.live_wire = {
         path: "data/v1/live-wire.json",
         description: prev.description ||
-          "The Live Wire: a command view over the pipeline's own stored outputs — every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design, exactly as the pipeline records it), plus the hour's top movers computed from stored velocity snapshots only. Stale hits are dated and excluded from the current total; skip-by-design lanes (TikTok, X) claim no hits.",
+          "The Live Wire: a command view over the pipeline's own stored outputs — every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design / retired, exactly as the pipeline records it), plus the hour's top movers computed from stored velocity snapshots only. Stale hits are dated and excluded from the current total; skip-by-design lanes (TikTok, X) claim no hits; the retired YouTube (Invidious / direct) lane is closed with its reason shown (DATAOPS-001).",
         schema: "data/v1/schema/live-wire.json",
         updated: wire.generated_at,
         records: wire.counts.lanes,
