@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T02:16:11.938Z",
+  "generated_at": "2026-10-13T03:05:07.636Z",
   "status": "building history",
   "method": "Each refresh records the Oracle's decisive forecasts (peaking / accelerating / rising / fading) in data/forecast_ledger.json. 48h later the forecast is compared with the actual velocity history and scored hit/miss; when the 48h window holds fewer than 2 actual snapshots the call is marked unverifiable (data gap — not a miss) with its reason recorded. Nothing is backfilled — the log starts 2026-10-11, so the first resolutions land 48h after that.",
   "horizon_hours": 48,
@@ -29,8 +29,8 @@
   "next_resolution_at": "2026-10-14T01:45:28.760Z",
   "resolution_readiness": {
     "pending": 290,
-    "with_sufficient_data": 269,
-    "awaiting_data": 21
+    "with_sufficient_data": 271,
+    "awaiting_data": 19
   },
   "recorded_per_day": [
     {
