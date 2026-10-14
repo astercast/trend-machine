@@ -430,10 +430,17 @@
 }
 .section-head h2 { font-size: var(--fs-h2); margin: 0; display: flex; align-items: center; gap: 10px; }
 .section-head h2 .sec-no {
-  font-family: var(--mono); font-size: var(--fs-tiny); font-weight: 700;
-  color: var(--live); border: 1px solid var(--line-bright);
-  border-radius: var(--r-sm); padding: 3px 8px; letter-spacing: .1em;
-  background: var(--bg-0);
+  /* rotation 24 (D2): section numerals join the wire-room discipline —
+     display face, ink, no chip (no border, no fill, no radius, no
+     glow). Green (--live) means "spreading now" and appears nowhere
+     else. This is the cascade's winning .sec-no rule (it outranks
+     wave12.css's .section-head .sec-no and wave41.css's .sec-no);
+     all three rules now state this same setting. */
+  font-family: var(--font-display); font-synthesis-weight: none;
+  font-size: inherit; font-weight: 700;
+  color: var(--ink-ghost); border: 0;
+  border-radius: 0; padding: 0; letter-spacing: 0;
+  background: transparent; text-shadow: none; box-shadow: none;
 }
 .section-head .kicker { color: var(--ink-faint); text-align: right; }
 

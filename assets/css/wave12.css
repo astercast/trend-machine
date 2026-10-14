@@ -278,16 +278,21 @@ svg.spark circle, svg.spark-mini circle, svg.mini-spark circle {
   border-radius: 8px;
 }
 .section-head .sec-no {
+  /* rotation 24 (D2): aligned with components.css's winning rule and
+     wave41.css's intent — display face, ink-ghost, no chip. The old
+     cyan plate chip (fill, border, glow) is gone at this source too,
+     so no cascade layer states a different discipline. */
   font-family: var(--font-display);
+  font-synthesis-weight: none;
   font-weight: 700;
-  background: var(--plate);
-  border: 1px solid var(--line-bright);
-  border-radius: 6px;
-  padding: 2px 9px;
-  color: var(--signal);
-  text-shadow: 0 0 8px rgba(83, 233, 255, .4);
-  box-shadow: inset 0 1px 0 var(--bezel-hi);
-  margin-right: 10px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  color: var(--ink-ghost);
+  text-shadow: none;
+  box-shadow: none;
+  margin-right: 0;
 }
 .section-head h2 { font-weight: 700; }
 
@@ -462,7 +467,8 @@ body.tm-alarm-1202 .blip-ring { animation: none; opacity: 0; }
    dossier they are square press tags in ink, one setting for every
    kind (platform, format, family, hashtag alike). */
 .topic-hero .chip, .topic-hero .tag {
-  border-radius: 2px; background: transparent;
+  /* rotation 24 (D3): square means square — 0px, not 2px. */
+  border-radius: 0; background: transparent;
   border-color: var(--line-bright); color: var(--ink-dim);
 }
 .topic-hero .chip.plat, .topic-hero .chip.type,

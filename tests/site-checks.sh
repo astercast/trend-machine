@@ -118,6 +118,11 @@ rw={(r['source'],r['destination']) for r in v.get('rewrites',[])}
 assert ('/api/v1/trends.flat.js','/static/v1/trends.flat.js') in rw, rw
 "
 
+# rotation 24 (D1): every shipped client JS file must parse — the
+# board.js mismatched-quote SyntaxError shipped under a green battery
+# in r23 because no check ever parsed the client files as scripts.
+chk "js parse: shipped client JS" node scripts/test_js_parse.js
+
 # vercel.json site shape (beyond the canonical lint): build pins + the
 # explicit function roster (the map is not an allowlist — every .js under
 # api/ deploys, so the roster must stay exactly these four)

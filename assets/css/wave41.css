@@ -230,6 +230,20 @@ h1, h2, h3, .board-title, .sd-section-h {
   .broadsheet { padding: var(--s5) var(--s4) var(--s6); }
   .board-folio { font-size: .68rem; letter-spacing: .14em; }
   .board-row { grid-template-columns: 44px minmax(0, 1fr) auto; gap: var(--s2); }
+  /* rotation 24 (cosmetic, the r23 carry): the splash title wrapped in
+     a 153px column at 390 (105px at 320 — five and eight lines) because
+     the rank and score columns starved the story column on the one row
+     whose title is set largest. Phone-only anatomy: rank and score
+     share a top line, the story takes the row's full width beneath —
+     the desktop three-column composition is untouched. */
+  .board-row.splash {
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-areas: "rank score" "main main";
+    row-gap: var(--s2);
+  }
+  .board-row.splash .board-rank { grid-area: rank; }
+  .board-row.splash .board-main { grid-area: main; min-width: 0; }
+  .board-row.splash .board-score { grid-area: score; justify-self: end; }
   .board-rank { font-size: 2rem; }
   .board-row.splash .board-rank { font-size: 2.9rem; }
   .board-title { overflow-wrap: break-word; }

@@ -87,14 +87,14 @@
         '<div class="board-main">' + badge + titleHTML(e) + record +
         make + marg + chart + "</div>" +
         '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-        '<span class="board-unit">worth making / 100</span></div></li>";
+        '<span class="board-unit">worth making / 100</span></div></li>';
     }
     return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
       '<div class="board-main">' + badge + titleHTML(e) + record +
       aka + make + marg + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-      '<span class="board-unit">worth making / 100</span></div></li>";
+      '<span class="board-unit">worth making / 100</span></div></li>';
   }
   function catchupRowHTML(e) {
     return '<li class="catchup-row"><div class="board-main">' + titleHTML(e) +
