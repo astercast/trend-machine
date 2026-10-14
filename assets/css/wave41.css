@@ -77,10 +77,17 @@ h1, h2, h3, .board-title, .sd-section-h {
 }
 .wire-meta { display: flex; gap: var(--s2); align-items: baseline; }
 .wire-time { color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 400; flex: none; font-family: var(--font-data); font-size: .92em; }
-/* steer 2: the item is a complete credited sentence now; it wraps to
-   two lines (clamped) instead of truncating to a fragment. The
-   teleprinter step (the item reveal) is untouched. */
-.wire-item a { color: var(--ink-dim); text-decoration: none; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+/* rotation 26 (VP-0019): the item is a complete credited sentence
+   and prints in full. There is no line clamp on this rule: the
+   earlier 3-line clamp cut the longest sentences mid-sentence in
+   the paint (measured by natural-vs-clamped height, never by text
+   comparison: 4 of 14 items cut at 1440, 3 of 14 at 320, 0 of 14
+   at 390, on base 967ace6). The anchor is a plain block, so each
+   item wraps to as many lines as its sentence needs; per-item
+   height varies, which is native to a wire list. Completeness is
+   verified by the same height instrument (landing-trend-r26.md).
+   The teleprinter step (the item reveal) is untouched. */
+.wire-item a { color: var(--ink-dim); text-decoration: none; display: block; }
 .wire-item a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .wire-foot { margin-top: auto; padding-top: var(--s6); }
 .wire-foot a { font-family: var(--text); font-size: .85rem; display: inline-flex; align-items: center; min-height: 44px; }
