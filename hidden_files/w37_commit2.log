@@ -1,0 +1,15 @@
+[master 0b48401] Wave 37 (Rotation 16): Resolution gate still ahead — pre-gate half only (preview 17:40Z, 0 newly terminal, ALL INVARIANTS HOLD, readiness 274/315, ledger md5 a81bcd99129a71ac091168ddecd762e3 identical start/end, execution armed for first post-gate pass); Streamer Desk follow-through audit of research rounds 120-125 (third itemized honest zero-delta — Desk unchanged at 18/5/7/4/2/9, Jynxzi pre-event hold, Kyedae third source not invented, held items stay held); board phase filters + URL state — shareable filtered views (wave-11 follow-up #3 closed: new board-filter-lib.js + 24-check suite, phase counts 1/0/2/230/160 from forecasts.json, replaceState URL sync, headless-verified per-phase row counts); dossier freshness restamp churn reverted pre-commit after first push attempt died on a GitHub blob 500 (slim push — wave files only); 17 suites green, validate 125/125, api.test.sh 35/35, manifest v0.7.0 byte-stable, OG 404/404 canonical 403/404 JSON-LD 398 valid
+ 16 files changed, 1144 insertions(+), 4 deletions(-)
+ create mode 100644 assets/js/board-filter-lib.js
+ create mode 100644 hidden_files/w37_apitest.log
+ create mode 100644 hidden_files/w37_build.log
+ create mode 100644 hidden_files/w37_commit.log
+ create mode 100644 hidden_files/w37_links.log
+ create mode 100644 hidden_files/w37_placement_links.log
+ create mode 100644 hidden_files/w37_preview.log
+ create mode 100644 hidden_files/w37_push.log
+ create mode 100644 hidden_files/w37_verify.log
+ create mode 100644 hidden_files/w37_verify.py
+ create mode 100644 hidden_files/w37_verify_rising.log
+ create mode 100644 hidden_files/w37_verify_rising.py
+ create mode 100644 scripts/test_board_filter.js

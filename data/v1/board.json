@@ -60,14 +60,14 @@
       "format": "meme",
       "angle": "Explain the meme to millennials/parents (reaction gold)",
       "evidence": [
-        "velocity 92/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "sources: Wikipedia + Lightreel",
         "#67",
-        "#sixseven",
-        "last seen 2d ago"
+        "#sixseven"
       ],
+      "source_name": "Wikipedia",
+      "source_count": 2,
+      "record": "velocity 92 · last seen 1 day ago · 2 sources",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": true,
@@ -97,14 +97,14 @@
       "format": "gaming",
       "angle": "What the robbery system tells us about the story",
       "evidence": [
-        "velocity 91/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "source: Game8",
         "#gta6",
-        "#rockstar",
-        "last seen 2d ago"
+        "#rockstar"
       ],
+      "source_name": "Game8",
+      "source_count": 1,
+      "record": "velocity 91 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -132,14 +132,14 @@
       "format": "sports",
       "angle": "The play that broke basketball TikTok this week",
       "evidence": [
-        "velocity 86/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "source: Revid",
         "#nba",
-        "#basketball",
-        "last seen 2d ago"
+        "#basketball"
       ],
+      "source_name": "Revid",
+      "source_count": 1,
+      "record": "velocity 86 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -168,14 +168,14 @@
       "format": "meme",
       "angle": "Pumpkin-patch date montage that isn't generic",
       "evidence": [
-        "velocity 86/100",
         "saturation low: lane uncrowded",
         "tracked across 18 velocity snapshots",
-        "source: SocialPilot",
         "#wefellinloveinoctober",
-        "#octobermood",
-        "last seen 2d ago"
+        "#octobermood"
       ],
+      "source_name": "SocialPilot",
+      "source_count": 1,
+      "record": "velocity 86 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -205,14 +205,14 @@
       "format": "meme",
       "angle": "A respectful supercut: his 10 most-memed moments",
       "evidence": [
-        "velocity 85/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "source: Face of Malawi",
         "#nanapatekar",
-        "#riplegend",
-        "last seen 2d ago"
+        "#riplegend"
       ],
+      "source_name": "Face of Malawi",
+      "source_count": 1,
+      "record": "velocity 85 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -240,14 +240,14 @@
       "format": "dance",
       "angle": "Clean one-take before it blows up",
       "evidence": [
-        "velocity 85/100",
         "saturation low: lane uncrowded",
         "tracked across 18 velocity snapshots",
-        "source: SocialPilot",
         "#diponem",
-        "#dancechallenge",
-        "last seen 2d ago"
+        "#dancechallenge"
       ],
+      "source_name": "SocialPilot",
+      "source_count": 1,
+      "record": "velocity 85 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -276,14 +276,14 @@
       "format": "meme",
       "angle": "Slow Halloween decor pan on the Insomniac bed",
       "evidence": [
-        "velocity 84/100",
         "saturation low: lane uncrowded",
         "tracked across 18 velocity snapshots",
-        "source: SocialPilot",
         "#insomniac",
-        "#lofi",
-        "last seen 2d ago"
+        "#lofi"
       ],
+      "source_name": "SocialPilot",
+      "source_count": 1,
+      "record": "velocity 84 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -315,14 +315,14 @@
       "format": "news",
       "angle": "The 30-second clip, zero commentary (let comments cook)",
       "evidence": [
-        "velocity 90/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "source: RedWaveFeed",
         "#trump",
-        "#nobelprize",
-        "last seen 2d ago"
+        "#nobelprize"
       ],
+      "source_name": "RedWaveFeed",
+      "source_count": 1,
+      "record": "velocity 90 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -352,14 +352,14 @@
       "format": "news",
       "angle": "What happened in 3 minutes (map + timeline)",
       "evidence": [
-        "velocity 88/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "source: NewsWatchmen",
         "#riyadh",
-        "#middleeast",
-        "last seen 2d ago"
+        "#middleeast"
       ],
+      "source_name": "NewsWatchmen",
+      "source_count": 1,
+      "record": "velocity 88 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -389,18 +389,130 @@
       "format": "news",
       "angle": "Storm prep checklist (before the next one)",
       "evidence": [
-        "velocity 81/100",
         "saturation low: lane uncrowded",
         "tracked across 21 velocity snapshots",
-        "source: NewsWatchmen",
         "#hurricaneisaias",
-        "#weather",
-        "last seen 2d ago"
+        "#weather"
       ],
+      "source_name": "NewsWatchmen",
+      "source_count": 1,
+      "record": "velocity 81 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
       "spark_svg": null
+    }
+  ],
+  "catchup": [
+    {
+      "rank": 0,
+      "id": "be-ok",
+      "title": "\"Be OK\": happy dance over chaos",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/be-ok.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 38,
+      "velocity": 58,
+      "saturation": "medium",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#beok",
+        "#ingridmichaelson"
+      ],
+      "format": "dance",
+      "angle": "Dance through your Monday chaos, caption the mess",
+      "evidence": [
+        "saturation medium: lane filling",
+        "tracked across 20 velocity snapshots",
+        "#beok",
+        "#ingridmichaelson",
+        "verification: unverified, confirm live before building on it"
+      ],
+      "source_name": "New Engen",
+      "source_count": 2,
+      "record": "velocity 58 after a peak of 74 · last seen 1 day ago · 2 sources",
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "movement": null,
+      "splash": false,
+      "spark_svg": null,
+      "peak": 74
+    },
+    {
+      "rank": 0,
+      "id": "text-from-a",
+      "title": "Text From \"-A\": the Pretty Little Liars call-out",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/text-from-a.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 38,
+      "velocity": 58,
+      "saturation": "medium",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#textfroma",
+        "#prettylittleliars"
+      ],
+      "format": "meme",
+      "angle": "Confess your niche's guilty habit as -A watches",
+      "evidence": [
+        "saturation medium: lane filling",
+        "tracked across 20 velocity snapshots",
+        "#textfroma",
+        "#prettylittleliars",
+        "verification: unverified, confirm live before building on it"
+      ],
+      "source_name": "MediaNug",
+      "source_count": 2,
+      "record": "velocity 58 after a peak of 72 · last seen 1 day ago · 2 sources",
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "movement": null,
+      "splash": false,
+      "spark_svg": null,
+      "peak": 72
+    },
+    {
+      "rank": 0,
+      "id": "there-she-goes",
+      "title": "\"There She Goes\" shimmy dance",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/there-she-goes.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 38,
+      "velocity": 58,
+      "saturation": "medium",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#thereshegoes",
+        "#shimmydance"
+      ],
+      "format": "dance",
+      "angle": "Shimmy into your niche's hot take",
+      "evidence": [
+        "saturation medium: lane filling",
+        "tracked across 20 velocity snapshots",
+        "#thereshegoes",
+        "#shimmydance"
+      ],
+      "source_name": "SocialBee",
+      "source_count": 2,
+      "record": "velocity 58 after a peak of 66 · last seen 1 day ago · 2 sources",
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "movement": null,
+      "splash": false,
+      "spark_svg": null,
+      "peak": 66
     }
   ]
 }

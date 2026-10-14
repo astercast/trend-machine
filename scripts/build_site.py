@@ -190,6 +190,36 @@ TOPIC_TMPL = """<!doctype html>
 </html>
 """
 
+def _age_words(mins):
+    """Age stated in words (rotation 22, TREND-STUDY §4.1: Hacker News
+    states every age in words; no ranked or wire surface prints an
+    abbreviated or bare timestamp age)."""
+    if mins < 1:
+        return "just now"
+    if mins < 60:
+        m = max(1, round(mins))
+        return "%d minute%s ago" % (m, "s" if m != 1 else "")
+    if mins < 1440:
+        h = round(mins / 60)
+        return "%d hour%s ago" % (h, "s" if h != 1 else "")
+    d = round(mins / 1440)
+    return "%d day%s ago" % (d, "s" if d != 1 else "")
+
+
+def age_words(iso, ref=None):
+    """Age of an ISO stamp in words, against ref (default: now)."""
+    dt = _fb_parse(iso)
+    if dt is None:
+        return "at an unrecorded time"
+    if ref is None:
+        ref = datetime.datetime.now(datetime.timezone.utc)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=datetime.timezone.utc)
+    if ref.tzinfo is None:
+        ref = ref.replace(tzinfo=datetime.timezone.utc)
+    return _age_words(max(0.0, (ref - dt).total_seconds() / 60.0))
+
+
 def age_label(iso):
     try:
         dt = datetime.datetime.fromisoformat(iso)
@@ -199,10 +229,64 @@ def age_label(iso):
         dt = dt.replace(tzinfo=datetime.timezone.utc)
     mins = max(0, (datetime.datetime.now(datetime.timezone.utc) - dt).total_seconds() / 60)
     if mins < 60:
-        return f"{max(1, round(mins))}m ago", "f-live", " pulse"
+        return _age_words(mins), "f-live", " pulse"
     if mins < 1440:
-        return f"{round(mins/60)}h ago", "f-warm", ""
-    return f"{round(mins/1440)}d ago", "f-dead", ""
+        return _age_words(mins), "f-warm", ""
+    return _age_words(mins), "f-dead", ""
+
+
+_PUB_HEAD = re.compile(r"^(.{2,60}?) \u00b7 (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),")
+
+
+def _lane_credit(name):
+    """A recorded fetcher-lane label in its plain name, for credits.
+    Publication names pass through untouched. A recorded name carrying
+    a parenthetical provenance rider (the 'source URL not found'
+    re-check note) credits by its head: the credit sits inside
+    parentheses of its own and must not nest the rider."""
+    n = str(name or "")
+    if " (" in n:
+        n = n.split(" (", 1)[0].strip()
+    if n.startswith("gnews-"):
+        return "Google News"
+    if n.startswith("reddit-rss:"):
+        sub = n.split(":", 1)[1]
+        return "Reddit (%s)" % sub if sub else "Reddit"
+    if n.startswith("yt-rss:"):
+        ch = n.split(":", 1)[1]
+        return "YouTube (%s)" % ch if ch else "YouTube"
+    if n == "hackernews":
+        return "Hacker News"
+    if n == "mastodon-trends":
+        return "Mastodon trends"
+    if n == "bluesky-trending":
+        return "Bluesky trending"
+    return disp_text(n)
+
+
+def credit_name(t):
+    """The primary source credited for a topic, from the record itself:
+    the publication named at the head of the record's summary where the
+    fetcher stored one (the RSS credit line), else the first recorded
+    source in its plain name. Nothing is invented; an empty record
+    credits nothing."""
+    m = _PUB_HEAD.match(str(t.get("summary") or "").strip())
+    if m:
+        return disp_text(m.group(1).strip())
+    names = [s.get("name") for s in (t.get("sources") or []) if s.get("name")]
+    if not names:
+        return ""
+    return _lane_credit(names[0])
+
+
+def record_line(t, ref):
+    """The one record subline of TREND-STUDY §4.1, shared by every ranked
+    row: heat figure, age in words, the count of sources carrying the
+    topic."""
+    n = len(t.get("sources") or [])
+    return ("velocity %d \u00b7 last seen %s \u00b7 %d source%s"
+            % (t.get("velocity") or 0, age_words(t.get("last_seen"), ref),
+               n, "s" if n != 1 else ""))
 
 def build_topic(t, history_pts=None, plat_hist=None):
     age, fcls, pulse = age_label(t.get("last_seen", ""))
@@ -210,7 +294,7 @@ def build_topic(t, history_pts=None, plat_hist=None):
     tier = "is-hot" if opp >= 70 else ("is-warm" if opp >= 40 else "")
     ocls = "hot-v" if opp >= 70 else ("warm-v" if opp >= 40 else "live-v")
     plats = "".join(f'<span class="chip plat">{esc(p)}</span>' for p in t.get("platforms", []))
-    nplat = len(t.get("platforms", [])) or "—"
+    nplat = len(t.get("platforms", [])) or 0
     cats = f'<span class="chip">{esc(t.get("category",""))}</span>'
     tt = esc(t.get("trend_type", "topic"))
     ticon = {"format": "⧉", "topic": "◉", "format+topic": "⧉◉"}.get(t.get("trend_type", "topic"), "◉")
@@ -228,14 +312,23 @@ def build_topic(t, history_pts=None, plat_hist=None):
                f'⧉ family: {esc(fam_names.get(fam_id, fam_id))}</a>'
                if fam_id else "")
     tags = "".join(f'<span class="tag">{esc(disp_text(h))}</span>' for h in t.get("hashtags", [])[:10])
-    spark = sparkline_html(history_pts or [], t.get("id", ""), plat_hist)
+    # rotation 22 (§4.3): the dossier's ONE drawn evidence piece, its
+    # annotation written inside the drawing; per-platform movers ride
+    # as text lines, never a second chart.
+    spark = sparkline_prep.evidence_block_html(
+        history_pts or [], t.get("id", ""), plat_hist)
     payload = export_payload_json(t)
     def src_li(s):
         nm, url = esc(disp_text(s.get("name", "source"))), esc(s.get("url", ""))
+        # rotation 22 (§4.3): sources print as Hacker News sublines —
+        # the source, the record's age in words, the figure it carries.
+        rec = (' <span class="src-rec">\u00b7 last seen %s \u00b7 velocity %s</span>'
+               % (age, vel))
         # wave 7: name-only sources (unverified seeds) render as plain text
         if url:
-            return f'<li><a href="{url}">{nm}</a></li>'
-        return f'<li><span class="src-name">{nm}</span> <em class="src-unverified">(unverified, confirm live)</em></li>'
+            return f'<li class="src-line"><a href="{url}">{nm}</a>{rec}</li>'
+        return (f'<li class="src-line"><span class="src-name">{nm}</span> '
+                f'<em class="src-unverified">(unverified, confirm live)</em>{rec}</li>')
     sources = "".join(src_li(s) for s in t.get("sources", [])) or "<li>No public sources captured yet.</li>"
     angles = "".join(
         f'<div class="angle"><span class="idx num">{i+1:02d}</span><p>{esc(disp_text(a))}</p></div>'
@@ -301,11 +394,12 @@ def _fb_fresh(iso, ref):
         return '<span class="fresh f-dead"><span class="dot" aria-hidden="true"></span>—</span>'
     m = max(0.0, (ref - t).total_seconds() / 60.0)
     if m < 60:
-        cls, label = "f-live", "%dm ago" % max(1, round(m))
+        cls = "f-live"
     elif m < 1440:
-        cls, label = "f-warm", "%dh ago" % round(m / 60)
+        cls = "f-warm"
     else:
-        cls, label = "f-dead", "%dd ago" % round(m / 1440)
+        cls = "f-dead"
+    label = _age_words(m)
     pulse = " pulse" if cls == "f-live" else ""
     return ('<span class="fresh %s"><span class="dot%s" aria-hidden="true"></span>%s</span>'
             % (cls, pulse, label))
@@ -335,9 +429,14 @@ def _fb_wire_items(topics, generated_at):
     for t in newest:
         dt = _fb_parse(t.get("last_seen"))
         stamp = dt.strftime("%b %-d · %H:%M") if dt else "no stamp"
+        # rotation 22 (§4.2, Reuters): the source is credited INSIDE the
+        # line; the stamp stays in the wire's mono. Mirrors wire.js.
+        credit = credit_name(t)
+        credit_html = (' <span class="wire-credit">(%s)</span>' % esc(credit)) if credit else ""
         out.append('<li class="wire-item" style="--wi:%d"><span class="wire-time">%s</span>'
-                   '<a href="topics/%s.html">%s</a></li>'
-                   % (len(out), stamp, esc(t["id"]), esc(disp_title(t.get("title")))))
+                   '<a href="topics/%s.html">%s</a>%s</li>'
+                   % (len(out), stamp, esc(t["id"]), esc(disp_title(t.get("title"))),
+                      credit_html))
     return "".join(out)
 
 
@@ -358,17 +457,23 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     hot = []
     for i, t in enumerate(by_opp[:5]):
         leader = i == 0
+        # rotation 22 (§4.1): ranked rows everywhere carry the board's
+        # anatomy — title with the primary source in parentheses, then
+        # the one record subline. Mirrors app.js renderHot5.
+        credit = credit_name(t)
+        src_span = (' <span class="board-src">(%s)</span>' % esc(credit)) if credit else ""
         hot.append(
             '<a class="hot-row%s" href="topics/%s.html">'
             '<span class="board-rank">%d</span>'
-            '<span class="hot-main"><h3>%s</h3><p>%s</p>'
+            '<span class="hot-main"><h3>%s%s</h3><p>%s</p>'
             '<span class="hot-meta">%s%s</span></span>'
             '<span class="board-score"><span class="score-num">%d</span>'
             '<span class="board-unit">opportunity / 100</span></span></a>'
             % (" leader" if leader else "", esc(t["id"]), i + 1,
-               esc(disp_title(t.get("title"))), esc(disp_text(t.get("summary"))),
+               esc(disp_title(t.get("title"))), src_span,
+               esc(disp_text(t.get("summary"))),
                "breaking · " if leader else "",
-               _fb_fresh(t.get("last_seen"), ref),
+               esc(record_line(t, ref)),
                t.get("opportunity_score") or 0))
     page = _fb_region(page, "hot5", "".join(hot))
 
@@ -428,6 +533,14 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
         page = _fb_region(page, "boardnews",
                           "".join(_fb_board_row(e) for e in board["news_watch"]))
         page = _fb_region(page, "boardnote", esc(disp_title(board["note"])))
+        # rotation 22 (§4.1): the catch-up rail at the board's foot.
+        if board.get("catchup"):
+            catch_html = "".join(_fb_catchup_row(e) for e in board["catchup"])
+        else:
+            catch_html = ('<li class="catchup-none">Nothing on the record '
+                          'has cooled yet: no tracked topic\u2019s latest '
+                          'velocity sits below its window peak.</li>')
+        page = _fb_region(page, "catchup", catch_html)
         page = _fb_region(page, "hsmakenow", str(board["counts"]["makeable_shown"]))
 
     if ref is not None:
@@ -558,20 +671,17 @@ def _board_movement(pts):
 
 
 def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
-                 spark_svg=None):
-    names = [s.get("name") for s in (t.get("sources") or []) if s.get("name")]
-    evidence = ["velocity %d/100" % (t.get("velocity") or 0),
-                _SAT_LABEL.get(t.get("saturation"),
+                 spark_svg=None, ref=None):
+    # rotation 22 (TREND-STUDY §4.1): the velocity figure, the primary
+    # source and the last-seen age move OUT of the marginalia into the
+    # row's anatomy — the source in parentheses in the title line, the
+    # rest in the one record subline (record_line). The marginalia keep
+    # what is left: saturation, the snapshot count, hashtags, and any
+    # verification rider. Nothing is deleted from the row.
+    evidence = [_SAT_LABEL.get(t.get("saturation"),
                                "saturation %s" % t.get("saturation")),
                 _board_snapshot_chip(n_snapshots)]
-    if len(names) == 1:
-        evidence.append("source: %s" % names[0])
-    elif names:
-        evidence.append("sources: %s" % " + ".join(names[:3]))
     evidence.extend((t.get("hashtags") or [])[:2])
-    age, _, _ = age_label(t.get("last_seen", ""))
-    if age != "unknown":
-        evidence.append("last seen %s" % age)
     if t.get("verification") and t.get("verification") != "verified":
         evidence.append("verification: %s, confirm live before building on it"
                         % t["verification"])
@@ -591,6 +701,9 @@ def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
         "format": fmt,
         "angle": (t.get("angles") or [None])[0],
         "evidence": evidence,
+        "source_name": credit_name(t),
+        "source_count": len(t.get("sources") or []),
+        "record": record_line(t, ref),
         "last_seen": t.get("last_seen"),
         "movement": movement,
         "splash": splash,
@@ -646,7 +759,39 @@ def build_board(topics, merged, generated_at, history=None):
                 svg = svg.replace("<polyline", '<polyline pathLength="1" class="splash-line"', 1)
         return _board_entry(t, i + 1, len(pts),
                             movement=_board_movement(pts),
-                            splash=(t["id"] == splash_id), spark_svg=svg)
+                            splash=(t["id"] == splash_id), spark_svg=svg,
+                            ref=_fb_parse(generated_at))
+
+    # rotation 22 (§4.1, Reuters): the catch-up rail at the board's
+    # foot — what moved earlier and cooled. A topic qualifies only on
+    # the stored record: not on the board, not stale, at least 3
+    # snapshots, and its latest velocity strictly below its window
+    # peak. Biggest fall first; capped at 5.
+    shown = {t["id"] for t in make} | {t["id"] for t in news}
+    cooled = []
+    for t in merged:
+        if t["id"] in shown or t.get("stale"):
+            continue
+        pts = history.get(t["id"]) or []
+        if len(pts) < 3:
+            continue
+        vals = [p[1] for p in pts]
+        if vals[-1] < max(vals):
+            cooled.append((max(vals) - vals[-1], t, max(vals)))
+    cooled.sort(key=lambda x: (-x[0], -(x[1].get("velocity") or 0)))
+    catchup = []
+    for drop, t, peak in cooled[:5]:
+        e = _board_entry(t, 0, len(history.get(t["id"]) or []),
+                         ref=_fb_parse(generated_at))
+        e["peak"] = peak
+        e["record"] = ("velocity %d after a peak of %d \u00b7 last seen %s "
+                       "\u00b7 %d source%s"
+                       % (t.get("velocity") or 0, peak,
+                          age_words(t.get("last_seen"),
+                                    _fb_parse(generated_at)),
+                          e["source_count"],
+                          "s" if e["source_count"] != 1 else ""))
+        catchup.append(e)
 
     return {
         "generated_at": generated_at,
@@ -674,7 +819,18 @@ def build_board(topics, merged, generated_at, history=None):
         "splash_id": splash_id,
         "make_now": [_entry(t, i) for i, t in enumerate(make)],
         "news_watch": [_entry(t, i) for i, t in enumerate(news)],
+        "catchup": catchup,
     }
+
+
+def _fb_title_html(e):
+    """Title line in the §4.1 anatomy: the title with its primary
+    source in parentheses inside the line. Mirrors board.js."""
+    src = ""
+    if e.get("source_name"):
+        src = ' <span class="board-src">(%s)</span>' % esc(e["source_name"])
+    return ('<a class="board-title" href="%s">%s%s</a>'
+            % (esc(e["url"]), esc(disp_title(e["title"])), src))
 
 
 def _fb_board_row(e):
@@ -697,6 +853,7 @@ def _fb_board_row(e):
         make = ('<p class="board-angle"><span class="board-make">Make</span> %s'
                 '<span class="board-fmt"> · format: %s</span></p>'
                 % (esc(disp_text(e["angle"])), esc(e["format"])))
+    record = '<p class="board-record">%s</p>' % esc(e["record"])
     splash = bool(e.get("splash"))
     move = ""
     if e.get("movement"):
@@ -706,19 +863,30 @@ def _fb_board_row(e):
         if e.get("spark_svg"):
             chart = '<figure class="splash-fig">%s</figure>' % e["spark_svg"]
         return ('<li class="board-row splash"><span class="board-rank">%d</span>'
-                '<div class="board-main">%s<a class="board-title" href="%s">%s</a>%s%s</div>'
+                '<div class="board-main">%s%s%s%s%s</div>'
                 '<div class="board-score"><span class="score-num">%d</span>'
                 '<span class="board-unit">opportunity / 100</span>%s</div></li>'
-                % (e["rank"], badge, esc(e["url"]), esc(e["title"]), make, chart,
+                % (e["rank"], badge, _fb_title_html(e), record, make, chart,
                    e["opportunity_score"], move))
     return ('<li class="board-row%s"><span class="board-rank">%d</span>'
-            '<div class="board-main">%s<a class="board-title" href="%s">%s</a>%s%s'
+            '<div class="board-main">%s%s%s%s%s'
             '%s</div>'
             '<div class="board-score"><span class="score-num">%d</span>'
             '<span class="board-unit">opportunity / 100</span>%s</div></li>'
             % (" news" if e["kind"] == "news" else "",
-               e["rank"], badge, esc(e["url"]), esc(disp_title(e["title"])), aka, make, marg,
+               e["rank"], badge, _fb_title_html(e), record, aka, make, marg,
                e["opportunity_score"], move))
+
+
+def _fb_catchup_row(e):
+    """Catch-up rail row (§4.1): the board's anatomy without a rank —
+    the rail is a record of what cooled, not a ranking. The numeral is
+    the topic's current velocity; its peak rides in the record line."""
+    return ('<li class="catchup-row"><div class="board-main">%s'
+            '<p class="board-record">%s</p></div>'
+            '<div class="board-score"><span class="score-num">%d</span>'
+            '<span class="board-unit">velocity now</span></div></li>'
+            % (_fb_title_html(e), esc(e["record"]), e["velocity"]))
 
 
 # wave 32 (Foundry round 2; round-11 placement packet): the root pages are

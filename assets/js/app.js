@@ -56,13 +56,50 @@
     if (isNaN(t)) return Infinity;
     return Math.max(0, (Date.now() - t) / 60000);
   }
+  /* rotation 22 (§4.1/§4.2): ages state in words on every surface.
+     Mirrors _age_words() in build_site.py. */
+  function ageWords(m) {
+    if (m < 1) return "just now";
+    if (m < 60) { var mm = Math.max(1, Math.round(m)); return mm + " minute" + (mm !== 1 ? "s" : "") + " ago"; }
+    if (m < 1440) { var h = Math.round(m / 60); return h + " hour" + (h !== 1 ? "s" : "") + " ago"; }
+    var d = Math.round(m / 1440); return d + " day" + (d !== 1 ? "s" : "") + " ago";
+  }
   function freshHTML(iso) {
-    var m = minsSince(iso), cls, label;
-    if (m < 60) { cls = "f-live"; label = Math.max(1, Math.round(m)) + "m ago"; }
-    else if (m < 1440) { cls = "f-warm"; label = Math.round(m / 60) + "h ago"; }
-    else { cls = "f-dead"; label = Math.round(m / 1440) + "d ago"; }
+    var m = minsSince(iso), cls;
+    if (m < 60) { cls = "f-live"; }
+    else if (m < 1440) { cls = "f-warm"; }
+    else { cls = "f-dead"; }
     var pulse = cls === "f-live" ? " pulse" : "";
-    return '<span class="fresh ' + cls + '"><span class="dot' + pulse + '" aria-hidden="true"></span>' + label + "</span>";
+    return '<span class="fresh ' + cls + '"><span class="dot' + pulse + '" aria-hidden="true"></span>' + ageWords(m) + "</span>";
+  }
+  /* The primary source credited for a topic, from the record itself.
+     Mirrors credit_name() in build_site.py (and wire.js). */
+  var PUB_HEAD = /^(.{2,60}?) \u00b7 (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),/;
+  function laneCredit(name) {
+    var n = String(name || "");
+    if (n.indexOf(" (") > -1) n = n.split(" (")[0].replace(/\s+$/, "");
+    if (n.indexOf("gnews-") === 0) return "Google News";
+    if (n.indexOf("reddit-rss:") === 0) { var sub = n.split(":")[1]; return sub ? "Reddit (" + sub + ")" : "Reddit"; }
+    if (n.indexOf("yt-rss:") === 0) { var ch = n.split(":")[1]; return ch ? "YouTube (" + ch + ")" : "YouTube"; }
+    if (n === "hackernews") return "Hacker News";
+    if (n === "mastodon-trends") return "Mastodon trends";
+    if (n === "bluesky-trending") return "Bluesky trending";
+    return normT(n);
+  }
+  function creditName(t) {
+    var m = PUB_HEAD.exec(String(t.summary || "").replace(/^\s+/, ""));
+    if (m) return normT(m[1].replace(/\s+$/, ""));
+    var names = (t.sources || []).filter(function (s) { return s && s.name; });
+    if (!names.length) return "";
+    return laneCredit(names[0].name);
+  }
+  /* The one record subline (§4.1): heat figure, age in words, source
+     count. Mirrors record_line() in build_site.py (live ages run
+     against now; the baked fallback runs against the snapshot). */
+  function recordLine(t) {
+    var n = (t.sources || []).length;
+    return "velocity " + (t.velocity || 0) + " · last seen " + ageWords(minsSince(t.last_seen)) +
+      " · " + n + " source" + (n !== 1 ? "s" : "");
   }
   function normT(s) {
     /* display normalization: tracked titles render dash-free (data stays byte-true) */
@@ -158,11 +195,16 @@
     var top = topics.slice().sort(function (a, b) { return b.opportunity_score - a.opportunity_score; }).slice(0, 5);
     el.innerHTML = top.map(function (t, i) {
       var leader = i === 0;
+      /* rotation 22 (§4.1): ranked rows carry the board's anatomy —
+         source in parentheses in the title line, the record subline
+         as the meta line. Mirrors write_home_fallback in build_site.py. */
+      var credit = creditName(t);
+      var src = credit ? ' <span class="board-src">(' + esc(credit) + ")</span>" : "";
       return '<a class="hot-row' + (leader ? " leader" : "") + '" href="topics/' + t.id + '.html">' +
         '<span class="board-rank">' + (i + 1) + "</span>" +
-        '<span class="hot-main"><h3>' + esc(normT(t.title)) + "</h3>" +
+        '<span class="hot-main"><h3>' + esc(normT(t.title)) + src + "</h3>" +
         "<p>" + esc(normT(t.summary)) + "</p>" +
-        '<span class="hot-meta">' + (leader ? "breaking · " : "") + freshHTML(t.last_seen) + "</span></span>" +
+        '<span class="hot-meta">' + (leader ? "breaking · " : "") + esc(recordLine(t)) + "</span></span>" +
         '<span class="board-score"><span class="score-num">' + t.opportunity_score + "</span>" +
         '<span class="board-unit">opportunity / 100</span></span></a>';
     }).join("");

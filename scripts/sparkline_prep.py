@@ -179,6 +179,135 @@ def sparkline_figure_html(pts, topic_id, per_platform=None):
         f"{body}{plats_html}</figure>")
 
 
+def _dlabel(iso):
+    """Short date label for annotation sentences: 'Oct 12'."""
+    try:
+        dt = datetime.datetime.fromisoformat(str(iso))
+        return dt.strftime("%b ") + str(dt.day)
+    except Exception:
+        return "the first snapshot"
+
+
+def movement_sentences(pts):
+    """Wire sentences composed from the series itself (rotation 22,
+    TREND-STUDY §4.3): the dossier's one drawn evidence piece is
+    annotated inside the drawing in complete sentences that state only
+    what the stored snapshots hold. No sentence is printed that the
+    data cannot carry."""
+    vals = [p[1] for p in pts or []]
+    if len(vals) < 2:
+        return []
+    n = len(vals)
+    first, last = vals[0], vals[-1]
+    d1, d2 = _dlabel(pts[0][0]), _dlabel(pts[-1][0])
+    out = []
+    if len(set(vals)) == 1:
+        out.append("Velocity held at %d across all %d snapshots, %s to %s."
+                   % (first, n, d1, d2))
+    elif last > first:
+        out.append("Velocity rose from %d on %s to %d on %s across %d snapshots."
+                   % (first, d1, last, d2, n))
+    elif last < first:
+        out.append("Velocity fell from %d on %s to %d on %s across %d snapshots."
+                   % (first, d1, last, d2, n))
+    else:
+        out.append("Velocity ended where it started, at %d, across %d snapshots, %s to %s."
+                   % (last, n, d1, d2))
+    peak = max(vals)
+    if peak > max(first, last):
+        out.append("It peaked at %d on %s." % (peak, _dlabel(pts[vals.index(peak)][0])))
+    return out
+
+
+def _wrap_words(text, width):
+    lines, cur = [], ""
+    for w in text.split():
+        if cur and len(cur) + 1 + len(w) > width:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = (cur + " " + w) if cur else w
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def evidence_block_html(pts, topic_id, per_platform=None):
+    """Rotation 22 (TREND-STUDY §4.3): the dossier's ONE drawn evidence
+    piece — the topic's velocity across its stored window, annotated
+    inside the drawing in wire sentences — followed by the per-platform
+    movers as text sublines (never a second drawing). A series thinner
+    than MIN_POINTS draws nothing and prints the honest line: the
+    sources below are the record."""
+    pts = list(pts or [])
+    prep = prep_series(pts, width=560, height=150, pad=12)
+    head = ('<figure class="sig-hist ev-fig"><figcaption class="hist-label">'
+            'Evidence <span class="hist-note">\u00b7 velocity across the '
+            'stored window</span></figcaption>')
+    if prep["ready"]:
+        sentences = movement_sentences(pts)
+        lines = _wrap_words(" ".join(sentences), 84)
+        if len(lines) > 3 and len(sentences) > 1:
+            lines = _wrap_words(sentences[0], 84)
+        anno_h = 14 + 17 * len(lines) + 8
+        lo = min(p[1] for p in pts)
+        hi = max(p[1] for p in pts)
+        span = max(1, hi - lo)
+        top, bottom = anno_h, 150 - 12
+        coords = []
+        for i, p in enumerate(pts):
+            x = 12 + (i * (560 - 24) / (len(pts) - 1))
+            y = bottom - ((p[1] - lo) / span) * (bottom - top)
+            coords.append("%.1f,%.1f" % (x, y))
+        last_x, last_y = coords[-1].split(",")
+        texts = "".join(
+            '<text class="ev-anno" x="12" y="%d">%s</text>'
+            % (16 + 17 * i, esc(line)) for i, line in enumerate(lines))
+        aria = ("Velocity evidence: %s when tracking started (%s), %s at "
+                "the latest snapshot (%d snapshots)."
+                % (prep["first"], prep["since"], prep["last"], prep["n"]))
+        svg = ('<svg class="spark ev-svg" viewBox="0 0 560 150" role="img" '
+               'aria-label="%s" focusable="false">%s'
+               '<polyline points="%s" fill="none"/>'
+               '<circle cx="%s" cy="%s" r="3.2"/></svg>'
+               % (esc(aria), texts, " ".join(coords), last_x, last_y))
+        delta = prep["delta"]
+        arrow = "\u25b2" if delta > 0 else ("\u25bc" if delta < 0 else "\u25cf")
+        caption = (
+            '<p class="hist-cap">Velocity tracked since %s \u00b7 '
+            '%d snapshot%s \u00b7 <span class="num">%s %+d</span> since '
+            'tracking started</p>'
+            % (esc(prep["since"]), prep["n"],
+               "s" if prep["n"] != 1 else "", esc(arrow), delta))
+        body = svg + caption + data_table_html(
+            pts, "spark-data-%s" % esc(topic_id),
+            "Velocity snapshots for this topic")
+    else:
+        body = (
+            '<p class="ev-none">The record holds %d velocity snapshot%s '
+            'for this topic, too few to draw honestly, so no chart is '
+            'drawn. The sources below are the record.</p>'
+            % (prep["n"], "s" if prep["n"] != 1 else ""))
+    movers = ""
+    if per_platform:
+        rows = []
+        for plat in sorted(per_platform.keys()):
+            ppts = per_platform[plat]
+            pp = prep_series(ppts)
+            if pp["ready"] or pp["n"] >= 2:
+                rows.append(
+                    "<li>%s \u00b7 velocity %s to %s across %d snapshots</li>"
+                    % (esc(plat), pp["first"], pp["last"], pp["n"]))
+            else:
+                rows.append(
+                    "<li>%s \u00b7 history building, %d snapshot%s so far</li>"
+                    % (esc(plat), pp["n"], "s" if pp["n"] != 1 else ""))
+        if rows:
+            movers = ('<div class="movers"><p class="movers-h">Movers, by '
+                      'platform</p><ul>' + "".join(rows) + "</ul></div>")
+    return head + body + "</figure>" + movers
+
+
 def flat_velocity_trend(topic_id, history, phist):
     """Compact velocity-trend summary for the flat consumer feed.
 

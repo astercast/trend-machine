@@ -1,0 +1,8 @@
+remote HEAD: f6fa1c0965e4868b94f5fb0fe26950e3415bef36
+remote blobs: 614
+local blobs: 614
+paths in wave-37 commit: 16
+pyc exception differs: True
+FOREIGN diffs (parallel base commit, not this wave): []
+DEFECT diffs (wave paths differing remotely): []
+VERDICT: PASS

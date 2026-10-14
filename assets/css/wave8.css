@@ -89,6 +89,26 @@
   .dtable .spark-mini { width: 96px; }
 }
 
+/* ---------- 05 · rotation 22: the dossier's one evidence piece ----------
+   One drawing per dossier, annotated inside the drawing in wire
+   sentences (SVG text in the data voice). Movers and sources print
+   as record lines, never as second charts. */
+.sig-hist.ev-fig { max-width: 592px; }
+.topic-hero svg.spark.ev-svg { height: auto; max-height: none; aspect-ratio: 560 / 150; }
+.ev-anno { font-family: var(--font-data); font-size: 12.5px; fill: var(--ink-dim); }
+.ev-none { color: var(--ink-dim); font-size: .95rem; line-height: 1.55; max-width: 62ch; }
+.movers { margin: 2px 0 10px; }
+.movers-h {
+  font-family: var(--font-data); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-ghost); margin: 0 0 4px;
+}
+.movers ul { list-style: none; margin: 0; padding: 0; }
+.movers li {
+  font-family: var(--font-data); font-size: .78rem; line-height: 1.65;
+  color: var(--ink-dim); font-variant-numeric: tabular-nums;
+}
+.src-rec { font-family: var(--font-data); font-size: .8rem; color: var(--ink-faint); }
+
 /* ---------- 04 · reduced motion: sparklines are static SVG ---------- */
 @media (prefers-reduced-motion: reduce) {
   .spark, .spark-mini { animation: none; transition: none; }

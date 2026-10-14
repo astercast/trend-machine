@@ -241,6 +241,44 @@ h1, h2, h3, .board-title, .sd-section-h {
   .hot-row .score-num { font-size: 1.5rem; }
 }
 
+/* ---------- rotation 22 (build 7): the HN record anatomy ----------
+   Ranked rows carry the primary source in parentheses inside the
+   title line and ONE record subline (heat figure, age in words,
+   source count) in the wire's mono. The catch-up rail closes the
+   board at its foot. The wire credits its source inside the line.
+   The desk opens on its remit line. */
+.board-src { color: var(--ink-faint); font-weight: 400; font-size: .8em; white-space: nowrap; }
+.board-record {
+  font-family: var(--font-data); font-size: .78rem; line-height: 1.5;
+  color: var(--ink-dim); margin: var(--s2) 0 0; font-variant-numeric: tabular-nums;
+}
+.wire-item a { flex: 1 1 auto; min-width: 0; }
+.wire-credit { color: var(--ink-ghost); flex: none; white-space: nowrap; }
+.catchup { margin-top: var(--s8); border-top: 3px double var(--line-bright); padding-top: var(--s4); }
+.catchup-h {
+  font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none;
+  font-size: 1.3rem; letter-spacing: -.01em; margin: 0 0 2px;
+}
+.catchup-sub { color: var(--ink-faint); font-size: .85rem; line-height: 1.5; margin: 0 0 var(--s3); max-width: 62ch; }
+.catchup-list { list-style: none; margin: 0; padding: 0; }
+.catchup-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--s4); align-items: start;
+  padding: var(--s3) var(--s1); border-top: 1px solid var(--line);
+}
+.catchup-row .board-title { font-size: 1.05rem; }
+.catchup-row .score-num {
+  display: block; font-family: var(--font-display); font-weight: 700;
+  font-synthesis-weight: none; font-size: 1.6rem; line-height: .95;
+  color: var(--warm); text-align: right;
+}
+.catchup-none { color: var(--ink-faint); font-size: .9rem; padding: var(--s3) 0; }
+.sd-remit {
+  font-family: var(--font-data); font-size: .92rem; line-height: 1.55;
+  color: var(--ink); border-left: 3px solid var(--signal);
+  padding-left: var(--s3); margin: var(--s4) 0 0; max-width: 68ch;
+}
+
 /* launch planner recomposed in the board's language (ROUND-006):
    flat grounds, ruled sections, display numerals, no card shade. */
 .timing-context, .saved-plan {

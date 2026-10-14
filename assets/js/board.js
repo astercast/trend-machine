@@ -23,6 +23,12 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  function titleHTML(e) {
+    /* rotation 22 (§4.1): the primary source in parentheses inside the
+       title line. Mirrors _fb_title_html() in build_site.py. */
+    var src = e.source_name ? ' <span class="board-src">(' + esc(normT(e.source_name)) + ")</span>" : "";
+    return '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + src + "</a>";
+  }
   function rowHTML(e) {
     var plats = (e.platforms || []).map(esc).join(" · ");
     var marg = "";
@@ -44,31 +50,42 @@
       make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(normT(e.angle)) +
         '<span class="board-fmt"> · format: ' + esc(e.format) + "</span></p>";
     }
+    var record = e.record ? '<p class="board-record">' + esc(e.record) + "</p>" : "";
     var splash = !!e.splash;
     var move = e.movement ? '<span class="board-move">' + esc(e.movement) + "</span>" : "";
     if (splash) {
       var chart = e.spark_svg ? '<figure class="splash-fig">' + e.spark_svg + "</figure>" : "";
       return '<li class="board-row splash">' +
         '<span class="board-rank">' + e.rank + "</span>" +
-        '<div class="board-main">' + badge +
-        '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + "</a>" +
+        '<div class="board-main">' + badge + titleHTML(e) + record +
         make + chart + "</div>" +
         '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
         '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
     }
     return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
-      '<div class="board-main">' + badge +
-      '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + "</a>" +
+      '<div class="board-main">' + badge + titleHTML(e) + record +
       aka + make + marg + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
       '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
+  }
+  function catchupRowHTML(e) {
+    return '<li class="catchup-row"><div class="board-main">' + titleHTML(e) +
+      '<p class="board-record">' + esc(e.record) + '</p></div>' +
+      '<div class="board-score"><span class="score-num">' + e.velocity + "</span>" +
+      '<span class="board-unit">velocity now</span></div></li>';
   }
   function render(board) {
     var list = document.getElementById("board-list");
     if (list && board.make_now) list.innerHTML = board.make_now.map(rowHTML).join("");
     var news = document.getElementById("board-news");
     if (news && board.news_watch) news.innerHTML = board.news_watch.map(rowHTML).join("");
+    var catchup = document.getElementById("catchup-list");
+    if (catchup && board.catchup) {
+      catchup.innerHTML = board.catchup.length
+        ? board.catchup.map(catchupRowHTML).join("")
+        : '<li class="catchup-none">Nothing on the record has cooled yet: no tracked topic\u2019s latest velocity sits below its window peak.</li>';
+    }
     var note = document.getElementById("board-note");
     if (note && board.note) note.textContent = normT(board.note);
     var mk = document.getElementById("hs-makenow");
