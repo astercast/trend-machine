@@ -214,7 +214,7 @@
         "<p>" + esc(normT(t.summary)) + "</p>" +
         '<span class="hot-meta">' + (leader ? "breaking · " : "") + esc(recordLine(t)) + "</span></span>" +
         '<span class="board-score"><span class="score-num">' + t.opportunity_score + "</span>" +
-        '<span class="board-unit">opportunity / 100</span></span></a>';
+        '<span class="board-unit">worth making / 100</span></span></a>';
     }).join("");
     clearLoading("hot5");
   }

@@ -68,20 +68,20 @@
         '<div class="board-main">' + badge + titleHTML(e) + record +
         make + chart + "</div>" +
         '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-        '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
+        '<span class="board-unit">worth making / 100</span>' + move + "</div></li>";
     }
     return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
       '<div class="board-main">' + badge + titleHTML(e) + record +
       aka + make + marg + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-      '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
+      '<span class="board-unit">worth making / 100</span>' + move + "</div></li>";
   }
   function catchupRowHTML(e) {
     return '<li class="catchup-row"><div class="board-main">' + titleHTML(e) +
       '<p class="board-record">' + esc(e.record) + '</p></div>' +
       '<div class="board-score"><span class="score-num">' + e.velocity + "</span>" +
-      '<span class="board-unit">velocity now</span></div></li>';
+      '<span class="board-unit">spreading now</span></div></li>';
   }
   function render(board) {
     var list = document.getElementById("board-list");

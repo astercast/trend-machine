@@ -34,6 +34,12 @@ h1, h2, h3, .board-title, .sd-section-h {
   margin: 0 auto;
   align-items: stretch;
 }
+/* Rotation 23 fitting: the DOM now leads with the broadsheet (the board
+   is the page's main job at every width, and phone reading order must
+   match source order), so desktop placement is explicit: wire rail in
+   column 1, broadsheet in column 2, exactly as before. */
+.wire-rail { grid-column: 1; grid-row: 1; }
+.broadsheet { grid-column: 2; grid-row: 1; }
 .wire-rail {
   border-right: 1px solid var(--line);
   padding: var(--s6) var(--s4) var(--s8) var(--s5);
@@ -143,10 +149,11 @@ h1, h2, h3, .board-title, .sd-section-h {
 .sd-badge { border-radius: 2px; }
 .sd-method { background: transparent; border: 0; border-top: 3px double var(--line-bright); border-radius: 0; padding: var(--s4) 2px; }
 
-/* ---------- mobile: the wire rides on top, the board keeps the page ---------- */
+/* ---------- mobile: the board leads, the wire follows (rotation 23) ---------- */
 @media (max-width: 860px) {
   .board-shell { grid-template-columns: minmax(0, 1fr); }
-  .wire-rail { border-right: 0; border-bottom: 1px solid var(--line); padding: var(--s5) var(--s4) var(--s4); }
+  .broadsheet { grid-column: 1; grid-row: 1; }
+  .wire-rail { grid-column: 1; grid-row: 2; border-right: 0; border-bottom: 0; border-top: 1px solid var(--line); padding: var(--s5) var(--s4) var(--s4); }
   .wire-list { max-height: 264px; overflow-y: auto; }
   .wire-foot { padding-top: var(--s4); }
   .broadsheet { padding: var(--s5) var(--s4) var(--s6); }

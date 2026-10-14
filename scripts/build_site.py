@@ -496,7 +496,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
             '<span class="hot-main"><h3>%s%s</h3><p>%s</p>'
             '<span class="hot-meta">%s%s</span></span>'
             '<span class="board-score"><span class="score-num">%d</span>'
-            '<span class="board-unit">opportunity / 100</span></span></a>'
+            '<span class="board-unit">worth making / 100</span></span></a>'
             % (" leader" if leader else "", esc(t["id"]), i + 1,
                esc(disp_title(t.get("title"))), src_span,
                esc(disp_text(t.get("summary"))),
@@ -892,14 +892,14 @@ def _fb_board_row(e):
         return ('<li class="board-row splash"><span class="board-rank">%d</span>'
                 '<div class="board-main">%s%s%s%s%s</div>'
                 '<div class="board-score"><span class="score-num">%d</span>'
-                '<span class="board-unit">opportunity / 100</span>%s</div></li>'
+                '<span class="board-unit">worth making / 100</span>%s</div></li>'
                 % (e["rank"], badge, _fb_title_html(e), record, make, chart,
                    e["opportunity_score"], move))
     return ('<li class="board-row%s"><span class="board-rank">%d</span>'
             '<div class="board-main">%s%s%s%s%s'
             '%s</div>'
             '<div class="board-score"><span class="score-num">%d</span>'
-            '<span class="board-unit">opportunity / 100</span>%s</div></li>'
+            '<span class="board-unit">worth making / 100</span>%s</div></li>'
             % (" news" if e["kind"] == "news" else "",
                e["rank"], badge, _fb_title_html(e), record, aka, make, marg,
                e["opportunity_score"], move))
@@ -912,7 +912,7 @@ def _fb_catchup_row(e):
     return ('<li class="catchup-row"><div class="board-main">%s'
             '<p class="board-record">%s</p></div>'
             '<div class="board-score"><span class="score-num">%d</span>'
-            '<span class="board-unit">velocity now</span></div></li>'
+            '<span class="board-unit">spreading now</span></div></li>'
             % (_fb_title_html(e), esc(e["record"]), e["velocity"]))
 
 
