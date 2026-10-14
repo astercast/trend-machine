@@ -16,7 +16,15 @@
     return Promise.race([got, deadline]);
   }
   function normT(s) {
-    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+    var out = String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+    /* user order 2026-10-14 (absolute): no percentage uplift in
+       presented copy, not even inside a recorded title. Display layer
+       only; the stored record stays byte-true. Mirrors _strip_uplift. */
+    out = out.replace(/\(\s*(?:up\s*)?\+\d[\d,]*(?:\.\d+)?%[^)]*\)/gi, "")
+      .replace(/\s\+\d[\d,]*(?:\.\d+)?%/g, "")
+      .replace(/\bup\s+\d[\d,]*(?:\.\d+)?%/gi, "")
+      .replace(/\s{2,}/g, " ").replace(/^\s+|\s+$/g, "").replace(/[\s\u00b7]+$/, "");
+    return out;
   }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {

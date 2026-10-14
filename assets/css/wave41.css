@@ -253,7 +253,8 @@ h1, h2, h3, .board-title, .sd-section-h {
   color: var(--ink-dim); margin: var(--s2) 0 0; font-variant-numeric: tabular-nums;
 }
 .wire-item a { flex: 1 1 auto; min-width: 0; }
-.wire-credit { color: var(--ink-ghost); flex: none; white-space: nowrap; }
+.wire-credit { color: var(--ink-dim); font-weight: 600; }
+.wire-age { color: var(--ink-faint); flex: none; white-space: nowrap; font-size: .92em; }
 .catchup { margin-top: var(--s8); border-top: 3px double var(--line-bright); padding-top: var(--s4); }
 .catchup-h {
   font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none;

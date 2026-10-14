@@ -10,7 +10,15 @@
   "use strict";
   var DEADLINE_MS = 10000;
   function normT(s) {
-    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+    var out = String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+    /* user order 2026-10-14 (absolute): no percentage uplift in
+       presented copy, not even inside a recorded title. Display layer
+       only; the stored record stays byte-true. Mirrors _strip_uplift. */
+    out = out.replace(/\(\s*(?:up\s*)?\+\d[\d,]*(?:\.\d+)?%[^)]*\)/gi, "")
+      .replace(/\s\+\d[\d,]*(?:\.\d+)?%/g, "")
+      .replace(/\bup\s+\d[\d,]*(?:\.\d+)?%/gi, "")
+      .replace(/\s{2,}/g, " ").replace(/^\s+|\s+$/g, "").replace(/[\s\u00b7]+$/, "");
+    return out;
   }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -53,6 +61,12 @@
     if (!names.length) return "";
     return laneCredit(names[0].name);
   }
+  function ageWords(m) {
+    if (m < 1) return "just now";
+    if (m < 60) { var mm = Math.max(1, Math.round(m)); return mm + " minute" + (mm !== 1 ? "s" : "") + " ago"; }
+    if (m < 1440) { var h = Math.round(m / 60); return h + " hour" + (h !== 1 ? "s" : "") + " ago"; }
+    var d = Math.round(m / 1440); return d + " day" + (d !== 1 ? "s" : "") + " ago";
+  }
   function render(topics) {
     var el = document.getElementById("wire-list");
     if (!el || !topics || !topics.length) return;
@@ -61,9 +75,11 @@
     }).slice(0, 14);
     el.innerHTML = newest.map(function (t, i) {
       var credit = creditName(t);
-      var creditHTML = credit ? ' <span class="wire-credit">(' + esc(credit) + ")</span>" : "";
+      var frame = credit ? '<span class="wire-credit">' + esc(credit) + " reported:</span> " : "";
+      var mins = (Date.now() - new Date(t.last_seen).getTime()) / 60000;
+      var age = isNaN(mins) ? "" : ' <span class="wire-age">\u00b7 ' + esc(ageWords(mins)) + "</span>";
       return '<li class="wire-item" style="--wi:' + i + '"><span class="wire-time">' + esc(stamp(t.last_seen)) +
-        '</span><a href="topics/' + esc(t.id) + '.html">' + esc(normT(t.title)) + "</a>" + creditHTML + "</li>";
+        '</span><a href="topics/' + esc(t.id) + '.html">' + frame + esc(normT(t.title)) + "</a>" + age + "</li>";
     }).join("");
   }
   document.addEventListener("DOMContentLoaded", function () {

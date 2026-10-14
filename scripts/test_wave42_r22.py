@@ -82,6 +82,28 @@ check("sentence peak", sp.movement_sentences(peaked) ==
       ["Spreading rose from 50 on Oct 11 to 60 on Oct 13 across 3 readings.",
        "It peaked at 88 on Oct 12."])
 
+# --- uplift strip + wire sentence form (steer 2, user order 2026-10-14) --
+check("uplift strip: parenthetical signed percent removed",
+      bs.disp_title("#nba explodes on TikTok (+493%)") ==
+      "#nba explodes on TikTok")
+check("uplift strip: bare signed percent token removed",
+      bs.disp_title("Stocks rally +20% today") == "Stocks rally today")
+check("uplift strip: 'up N%' clause removed",
+      bs.disp_title("NBA TikTok is up 493% this week") ==
+      "NBA TikTok is this week")
+check("uplift strip: plain percent without sign survives",
+      bs.disp_title("100% Orange Juice, the sequel") ==
+      "100% Orange Juice, the sequel")
+_wt = {"id": "w1", "title": "Some headline here",
+       "last_seen": "2026-10-13T10:15:00+00:00",
+       "summary": "TMZ \u00b7 Tue, Oct 13, 2026 \u00b7 body",
+       "sources": [{"name": "TMZ"}]}
+_wire_html = bs._fb_wire_items([_wt], "2026-10-14T10:15:00+00:00")
+check("wire item is a credited sentence with age in words",
+      "TMZ reported:</span>" in _wire_html
+      and "Some headline here</a>" in _wire_html
+      and "1 day ago" in _wire_html)
+
 # --- evidence block -----------------------------------------------------
 html = sp.evidence_block_html(fell, "t-fell", {"tiktok": fell})
 check("evidence one svg", html.count("<svg") == 1)

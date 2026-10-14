@@ -10,7 +10,7 @@ Generated: 2026-10-13T10:15:48.270927+00:00 · 393 topics.
 - ["Six Seven" (Seis Sete) funk dance](topics/seis-sete-dance.html) (opportunity 90, velocity 90)
 - [Trump roasts rally protester; Nobel Prize outrage](topics/trump-rally-nobel.html) (opportunity 90, velocity 90)
 - [Houthi missile strike on Riyadh airport](topics/houthi-riyadh-strike.html) (opportunity 88, velocity 88)
-- [#nba explodes on TikTok (+493%)](topics/nba-tiktok-surge.html) (opportunity 86, velocity 86)
+- [#nba explodes on TikTok](topics/nba-tiktok-surge.html) (opportunity 86, velocity 86)
 - ["we fell in love in october": girl in red](topics/we-fell-in-love-in-october.html) (opportunity 86, velocity 86)
 - [Nana Patekar dies at 75, meme legend tributes](topics/nana-patekar-tributes.html) (opportunity 85, velocity 85)
 - ["DIP ON EM": early-stage dance sound](topics/dip-on-em.html) (opportunity 85, velocity 85)

@@ -26,6 +26,25 @@ LINK_PREFIX = {
 _FAMILY_NAMES = {}
 
 
+_UPLIFT_RE = re.compile(
+    r"\(\s*(?:up\s*)?\+\d[\d,]*(?:\.\d+)?%[^)]*\)"
+    r"|\s\+\d[\d,]*(?:\.\d+)?%"
+    r"|\bup\s+\d[\d,]*(?:\.\d+)?%", re.I)
+
+
+def _strip_uplift(s):
+    """User order (2026-10-14, absolute): no percentage uplift figure
+    prints in presented copy, no exceptions, not even inside a recorded
+    third-party title. The stored record stays byte-true in data/; the
+    strip happens here, at the display layer only, on title positions:
+    a parenthetical that leads with a signed percentage, a bare signed
+    percentage token, or an 'up N%' clause is removed and the spacing
+    repaired."""
+    s = _UPLIFT_RE.sub("", s)
+    s = re.sub(r"\s{2,}", " ", s).strip()
+    return re.sub(r"[\s\u00b7]+$", "", s)
+
+
 def disp_title(s):
     """Display normalization (rotation 21, parent ruling): a tracked
     title is a third-party name, stored byte-true in data/ and never
@@ -36,7 +55,8 @@ def disp_title(s):
     this function is only ever applied to title positions."""
     s = str(s or "")
     s = re.sub(r"\s+[\u2014\u2013]\s+", ", ", s)
-    return s.replace("\u2014", "-").replace("\u2013", "-")
+    s = s.replace("\u2014", "-").replace("\u2013", "-")
+    return _strip_uplift(s)
 
 
 def disp_text(s):
@@ -428,14 +448,22 @@ def _fb_wire_items(topics, generated_at):
     for t in newest:
         dt = _fb_parse(t.get("last_seen"))
         stamp = dt.strftime("%b %-d · %H:%M") if dt else "no stamp"
-        # rotation 22 (§4.2, Reuters): the source is credited INSIDE the
-        # line; the stamp stays in the wire's mono. Mirrors wire.js.
+        # rotation 22 (§4.2, Reuters) as corrected by the plain-person
+        # bar (aesthetics round 25): every item is a complete credited
+        # SENTENCE: the source speaks first ("TMZ reported:"), the
+        # recorded headline follows verbatim (display-normalized only),
+        # and the item's age prints IN WORDS in the line. The stamp
+        # stays in the wire's mono. Mirrors wire.js.
         credit = credit_name(t)
-        credit_html = (' <span class="wire-credit">(%s)</span>' % esc(credit)) if credit else ""
+        frame = ('<span class="wire-credit">%s reported:</span> '
+                 % esc(credit)) if credit else ""
+        ref = _fb_parse(generated_at)
+        age = (' <span class="wire-age">\u00b7 %s</span>'
+               % esc(age_words(t.get("last_seen"), ref))) if ref else ""
         out.append('<li class="wire-item" style="--wi:%d"><span class="wire-time">%s</span>'
-                   '<a href="topics/%s.html">%s</a>%s</li>'
-                   % (len(out), stamp, esc(t["id"]), esc(disp_title(t.get("title"))),
-                      credit_html))
+                   '<a href="topics/%s.html">%s%s</a>%s</li>'
+                   % (len(out), stamp, esc(t["id"]), frame,
+                      esc(disp_title(t.get("title"))), age))
     return "".join(out)
 
 

@@ -363,7 +363,11 @@ def main():
         check("vp0001 fallback hot5 has 5 static rows", _hot.count("hot-row") >= 5)
         def _disp(t):
             t = _re.sub(r"\s+[\u2014\u2013]\s+", ", ", t)
-            return t.replace("\u2014", "-").replace("\u2013", "-")
+            t = t.replace("\u2014", "-").replace("\u2013", "-")
+            t = _re.sub(r"\(\s*(?:up\s*)?\+\d[\d,]*(?:\.\d+)?%[^)]*\)|\s\+\d[\d,]*(?:\.\d+)?%|\bup\s+\d[\d,]*(?:\.\d+)?%",
+                        "", t, flags=_re.I)
+            t = _re.sub(r"\s{2,}", " ", t).strip()
+            return _re.sub(r"[\s\u00b7]+$", "", t)
         check("vp0001 fallback hot5 = stored top 5 (display-normalized titles)",
               all(_html.escape(_disp(t["title"]), quote=True) in _hot for t in _top5))
         _tbl = _region("table") or ""
