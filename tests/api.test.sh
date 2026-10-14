@@ -18,12 +18,12 @@ set -euo pipefail
 
 # ============================ SITE CONFIG ============================
 # Fill these in when adopting. Everything below is fleet-generic.
-ROSTER_FUNCS="health trends forecasts velocity cron/wire"            # expected data.functions from /api/health (any order)
-READ_ENDPOINTS="trends forecasts"                # GET endpoints: envelope + schema + cache, e.g. "models-status models-pricing"
+ROSTER_FUNCS="health trends velocity cron/wire"            # expected data.functions from /api/health (any order)
+READ_ENDPOINTS="trends"                # GET endpoints: envelope + schema + cache, e.g. "models-status models-pricing"
 READ_CACHE_S=600                 # expected s-maxage on READ_ENDPOINTS (health is always 60)
 CRON_PATH="cron/wire"                     # e.g. "cron/watchtower" — auth-gate section runs when set
-STATIC_FILES="trends.flat.json forecasts.json velocity.json"                  # files that must exist under /data/v1/, e.g. "models.json pricing.json"
-RL_ENDPOINT=""                   # left unset on purpose: trend's public bucket (lib/ratelimit.js) is one shared 60/min bucket across trends/forecasts/velocity, and the authed-cron payload section spends from it too — a 70-burst probe would be order-dependent, not a contract check. The 429 envelope itself is pinned by the unit suites.
+STATIC_FILES="trends.flat.json velocity.json"                  # files that must exist under /data/v1/, e.g. "models.json pricing.json"
+RL_ENDPOINT=""                   # left unset on purpose: trend's public bucket (lib/ratelimit.js) is one shared 60/min bucket across trends/velocity, and the authed-cron payload section spends from it too — a 70-burst probe would be order-dependent, not a contract check. The 429 envelope itself is pinned by the unit suites.
 RL_BURST=70                      # requests to fire at RL_ENDPOINT expecting a 429
 # =====================================================================
 

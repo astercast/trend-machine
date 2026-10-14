@@ -167,7 +167,8 @@ fetchers, TikTok hashtag trackers like Revid via seed research).
   forecasts (peaking / accelerating / rising / fading) in
   `data/forecast_ledger.json`; 48h later each is judged against the actual
   velocity history (same ±1.5/hr thresholds the classifier uses) and
-  published as `data/v1/forecast-accuracy.json`. Status stays
+  published as the forecast accuracy payload (retired 2026-10-13 —
+  no longer served; the ledger stays archived in the repo). Status stays
   "building history" (hit_rate: null) until 10+ forecasts resolve —
   the log starts 2026-10-11, nothing is backfilled.
 - **Resolution archive (wave 18):** a topic can churn out of the store

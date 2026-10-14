@@ -27,31 +27,12 @@
   }
 
   /* wave 8: velocity snapshots for the Trend sparkline column (best-effort) */
-  /* wave 37: the Oracle's phase calls for the Phase filter — best-effort
-     like the velocity load. If the payload never arrives the phase
-     select stays disabled (its title says why) and the board is
-     otherwise untouched: a missing call set is shown, not improvised. */
-  function loadForecasts() {
-    if (!BF) return;
-    fetchDeadline("data/v1/forecasts.json").then(function (r) {
-      if (!r.ok) throw new Error(r.status);
-      return r.json();
-    }).then(function (data) {
-      state.phases = BF.buildPhaseMap(data);
-      renderPhaseFilter();
-      renderTable();
-    }).catch(function () { /* select stays disabled — honest degradation */ });
-  }
-
-  function renderPhaseFilter() {
-    var sf = document.getElementById("f-phase");
-    if (!sf || !state.phases) return;
-    sf.innerHTML = BF.phaseOptionsHTML(BF.phaseCounts(state.phases, state.topics));
-    if (!BF.isPhase(state.phase)) state.phase = "all";
-    sf.value = state.phase;
-    sf.disabled = false;
-    sf.removeAttribute("title");
-  }
+  /* Retirement (2026-10-13): the Phase filter's call set came from the
+     retired forecast payload, so the phase select was removed from the
+     board rather than left permanently disabled. TM_BoardFilter (the
+     pure lib + its URL-state handling) is unchanged: a ?phase= value in
+     an old shared link still parses, it simply has no calls to match
+     against, and the desk below is otherwise untouched. */
 
   function loadVelocity(i) {
     i = i || 0;
@@ -100,15 +81,15 @@
   var state = { topics: [], merged: null, velocity: {}, sort: "opportunity", dir: -1, platform: "all", category: "all", q: "", phase: "all", phases: null };
   /* wave 39 (VP-0011): the phenomenon-merged view (TM_BoardLib — one
      phenomenon, one row, evidence combined). state.topics stays the raw
-     canonical record (phase counts reconcile against forecasts.json's
-     own counts, and Hot right now is the raw top 5 by design); the
+     canonical record (Hot right now is the raw top 5 by design); the
      ticker, radar and desk render from state.merged. */
   function mergedTopics() { return state.merged || state.topics; }
   /* wave 37 · shareable filtered views (wave-11 follow-up #3): an inbound
      link's query string seeds the filter state; every later change is
      written back with replaceState, so the address bar always holds a
-     link to the exact view on screen. phases stays null until the
-     Oracle's forecasts arrive — the phase filter never guesses. */
+     link to the exact view on screen. phases stays null — its call set
+     retired with the forecast payload (2026-10-13), so a phase value
+     in a link is carried, never guessed at. */
   if (BF) {
     var patch = BF.parseQuery(window.location.search);
     ["phase", "platform", "category", "q", "sort", "dir"].forEach(function (k) {
@@ -307,7 +288,6 @@
        the link degrades to the plain board, never to an empty one. */
     if (pf) { pf.value = state.platform; if (pf.value !== state.platform) { state.platform = "all"; pf.value = "all"; } }
     if (cf) { cf.value = state.category; if (cf.value !== state.category) { state.category = "all"; cf.value = "all"; } }
-    renderPhaseFilter();
   }
 
   function tickClock() {
@@ -395,7 +375,6 @@
     armWatchdog(); /* wave 30 · VP-0001 */
     load();
     loadVelocity();
-    loadForecasts();
     tickClock(); setInterval(tickClock, 1000);
     var retry = document.getElementById("load-retry");
     if (retry) retry.addEventListener("click", function () {

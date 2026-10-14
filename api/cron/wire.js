@@ -11,11 +11,9 @@
         pipeline/normalize.py) → server-side velocity + opportunity scoring
         (same formula as the repo pipeline — deterministic, no deps)
      3. append one snapshot per topic (hourly bucket, 30-day retention —
-        §5.1), recompute the Oracle's forecasts from the real snapshots via
-        assets/js/trajectory.js (the SAME classifier as oracle.html — the
-        forecasts are computed from real snapshots, not static seeds)
+        §5.1)
      4. rebuild trends.json, trends.flat.json, trends.flat.js (JSONP twin,
-        same `trendsCallback(...)` contract), forecasts.json, velocity.json;
+        same `trendsCallback(...)` contract), velocity.json;
         commit only on real change (generated_at excluded from the compare,
         so identical upstream data → byte-identical output → no commit)
 
@@ -24,11 +22,10 @@
        (pipeline/refresh.sh, 12 fetchers incl. tiktok/x which stay repo-side,
        topic-page rebuilds, format families, seed backfills) keeps its own
        cadence in the wave engine and does the deep work.
-     - The wire does NOT touch: data/forecast_ledger.json or
-       data/v1/forecast-accuracy.json (the resolution-check workflow —
-       scripts/resolution-lib.js hit/miss/unverifiable semantics — stays
-       repo-side in scripts/build_forecasts.js + scripts/check_resolutions.js),
-       data/v1/index.json (manifest), data/v1/trends.flat.sample.json.
+     - The wire does NOT touch: data/forecast_ledger.json (the archived
+       forecast record — the prediction layer was retired 2026-10-13 and
+       nothing in the served site reads it), data/v1/index.json
+       (manifest), data/v1/trends.flat.sample.json.
      - Derived-artifact fields the wire cannot recompute byte-identically
        (flat feed `velocity_trend` sparkline SVGs) are PRESERVED from the
        current file for existing topics; new topics get the honest
@@ -38,8 +35,8 @@
    HONESTY (§6): X/Twitter has no free passive aggregator (verified across 3
    research rounds) — there is deliberately NO X source entry. A source that
    fails is listed in meta.upstream with ok:false and the error; degraded
-   data is still served with real timestamps. The job never invents a model,
-   a trend, or a forecast.
+   data is still served with real timestamps. The job never invents a model
+   or a trend.
 
    PENDING TOKEN: GITHUB_REPO_TOKEN (fine-grained PAT, contents:write) is
    still awaiting the user's decision (spec §14.1). Until it is set, the job
@@ -54,7 +51,6 @@ const envelope = require("../../lib/envelope.js");
 const { fetchTimeout } = require("../../lib/fetchx.js");
 const { assertCron } = require("../../lib/cronauth.js");
 const github = require("../../lib/github.js");
-const T = require("../../assets/js/trajectory.js"); // UMD — same classifier, no drift
 
 const SERVICE = "trend-wire";
 const VERSION = "1.0.0";
@@ -66,7 +62,6 @@ const FILES = {
   flatJs: "static/v1/trends.flat.js", // 2026-10-12: outside api/ — Vercel
   // deploys every .js under api/ as a function (functions map is not an
   // allowlist); public URL /data/v1/trends.flat.js preserved via rewrite
-  forecasts: "data/v1/forecasts.json",
   velocity: "data/v1/velocity.json",
   platformVelocity: "data/v1/platform-velocity.json",
   memeFormats: "data/v1/meme-formats.json",
@@ -388,7 +383,7 @@ function readStore(name) {
 }
 
 // ---------------------------------------------------------------------------
-// merge / score / snapshot / forecast (ports of normalize.py + build_forecasts.js)
+// merge / score / snapshot (ports of pipeline/normalize.py)
 // ---------------------------------------------------------------------------
 
 function mergeHits(topics, hits, families, now) {
@@ -491,64 +486,6 @@ function snapshotVelocity(vel, topics, nowMs) {
   for (const tid of Object.keys(vel)) if (!topics[tid]) delete vel[tid];
 }
 
-// Port of scripts/build_forecasts.js record() — same classifier, no drift.
-function recordForecast(tid, title, enriched) {
-  const a = enriched.analysis;
-  return {
-    id: tid, title: title, state: a.state, n_snapshots: a.n,
-    latest_velocity: a.latestVelocity,
-    slope_per_hour: Math.round(a.slopePerHour * 100) / 100,
-    accel: Math.round(a.accel * 100) / 100,
-    peak_in_hours: isFinite(a.peakInHours) ? Math.round(a.peakInHours * 10) / 10 : null,
-    summary: a.summary,
-    label: "Projection from " + a.n + " snapshot" + (a.n === 1 ? "" : "s") + " — not a guarantee.",
-    confidence: enriched.confidence, signals: enriched.signals,
-    per_platform: enriched.per_platform,
-  };
-}
-
-function buildForecasts(vel, pvel, topics, existing, nowMs) {
-  const enriched = {};
-  for (const tid of Object.keys(vel)) {
-    const t = topics[tid] || {};
-    enriched[tid] = T.enrich(
-      { id: tid, title: t.title || tid, platforms: t.platforms || [],
-        platform_points: (pvel && pvel[tid]) || {} },
-      vel[tid], nowMs);
-  }
-  const results = Object.keys(enriched).map((tid) => ({
-    topic: { id: tid, title: (topics[tid] || {}).title || tid },
-    analysis: enriched[tid].analysis,
-  }));
-  const lists = T.rankLists(results);
-  const toRec = (r) => recordForecast(r.topic.id, r.topic.title, enriched[r.topic.id]);
-  const steady = results.filter((r) => r.analysis.state === "steady")
-    .sort((a, b) => b.analysis.latestVelocity - a.analysis.latestVelocity).map(toRec);
-  const projections = {};
-  results.forEach((r) => { projections[r.topic.id] = toRec(r); });
-  const insufficient = results.filter((r) => r.analysis.state === "insufficient").length;
-  const prior = (existing && typeof existing === "object") ? existing : {};
-  return {
-    generated_at: new Date(nowMs).toISOString(),
-    method: prior.method ||
-      "assets/js/trajectory.js analyze() + rankLists() + enrich() — the same classifier as the oracle.html dashboard",
-    honesty: prior.honesty ||
-      "Every forecast is a projection from N real velocity snapshots, never a guarantee. " +
-      "Topics with fewer than 3 snapshots are excluded from the forecast lists. " +
-      "confidence.basis names the evidence behind each call (snapshot count + fit quality), " +
-      "never a probability of being right.",
-    counts: {
-      peaking_48h: lists.peaking.length, rising_fast: lists.rising.length,
-      cooling_off: lists.cooling.length, steady: steady.length, insufficient: insufficient,
-    },
-    peaking_48h: lists.peaking.map(toRec),
-    rising_fast: lists.rising.map(toRec),
-    cooling_off: lists.cooling.map(toRec),
-    steady: steady,
-    projections: projections,
-  };
-}
-
 // Port of pipeline/aggregate.py flat(). velocity_trend is preserved from the
 // current flat file for existing topics (the pipeline's aggregate.py rebuilds
 // the SVG sparklines on its own cadence); new topics get the honest
@@ -646,13 +583,13 @@ module.exports = async (req, res) => {
 
     // 1) read current store files (GitHub = source of truth when the token
     //    exists; bundle otherwise — §4.2)
-    const [curTrends, curVel, curPvel, curFormats, curFlat, curFc] = await Promise.all([
+    const [curTrends, curVel, curPvel, curFormats, curFlat] = await Promise.all([
       readStore(FILES.trends), readStore(FILES.velocity), readStore(FILES.platformVelocity),
-      readStore(FILES.memeFormats), readStore(FILES.flat), readStore(FILES.forecasts),
+      readStore(FILES.memeFormats), readStore(FILES.flat),
     ]);
     for (const [name, r] of [[FILES.trends, curTrends], [FILES.velocity, curVel],
                              [FILES.platformVelocity, curPvel], [FILES.memeFormats, curFormats],
-                             [FILES.flat, curFlat], [FILES.forecasts, curFc]]) {
+                             [FILES.flat, curFlat]]) {
       upstream.push({ source: (github.tokenConfigured() ? "github-contents:" : "bundle:") + name,
         ok: r.ok, checked_at: envelope.nowIso(),
         ...(r.ok ? { latency_ms: Date.now() - t0 } : { error: r.error }) });
@@ -683,10 +620,8 @@ module.exports = async (req, res) => {
     const topicList = Object.values(topics)
       .sort((a, b) => (b.opportunity_score || 0) - (a.opportunity_score || 0));
 
-    // 4) snapshots (30d retention) + forecasts from the real snapshots
+    // 4) snapshots (30d retention)
     snapshotVelocity(vel, topics, nowMs);
-    const forecasts = buildForecasts(vel, pvel, topics,
-      (curFc.ok && curFc.data) || null, nowMs);
     const flat = buildFlat(topics, (curFlat.ok && curFlat.data) || null, now);
     const flatJs = "trendsCallback(" + JSON.stringify(flat) + ");";
     // NOTE: the repo pipeline writes the JSONP twin with Python's default
@@ -707,18 +642,15 @@ module.exports = async (req, res) => {
       flat: (curFlat.ok && curFlat.data &&
              { sample: curFlat.data.sample, source_count: curFlat.data.source_count,
                trends: curFlat.data.trends }) || null,
-      forecasts: (curFc.ok && curFc.data && canonExcept(curFc.data, ["generated_at"])) || null,
     };
     const want = {
       trends: { count: trendsPayload.count, topics: trendsPayload.topics },
       flat: { sample: flat.sample, source_count: flat.source_count, trends: flat.trends },
-      forecasts: canonExcept(forecasts, ["generated_at"]),
       velocity: github.canonicalJson(vel),
     };
     const changed = {
       trends: !cur.trends || github.canonicalJson(cur.trends) !== github.canonicalJson(want.trends),
       flat: !cur.flat || github.canonicalJson(cur.flat) !== github.canonicalJson(want.flat),
-      forecasts: !cur.forecasts || cur.forecasts !== want.forecasts,
       velocity: true, // snapshots always append — the daily heartbeat's own pulse
     };
     // velocity: compare against the actual current file to avoid a pointless
@@ -728,7 +660,7 @@ module.exports = async (req, res) => {
         changed.velocity = github.canonicalJson(curVel.data) !== want.velocity;
       } catch (e) { /* keep true */ }
     }
-    const anyChanged = changed.trends || changed.flat || changed.forecasts || changed.velocity;
+    const anyChanged = changed.trends || changed.flat || changed.velocity;
     const changedFiles = Object.keys(changed).filter((k) => changed[k]);
 
     // 6) commit — or read-only mode when the PAT is still pending (§14.1)
@@ -752,8 +684,6 @@ module.exports = async (req, res) => {
         github.writeJsonIfChanged(FILES.flat, flat, msg)]);
       if (changed.flat) jobs.push(["trends.flat.js",
         github.writeTextIfChanged(FILES.flatJs, flatJs, msg)]);
-      if (changed.forecasts) jobs.push(["forecasts.json",
-        github.writeJsonIfChanged(FILES.forecasts, forecasts, msg)]);
       if (changed.velocity) jobs.push(["velocity.json",
         github.writeJsonIfChanged(FILES.velocity, vel, msg)]);
       const outs = await Promise.all(jobs.map(([, p]) => p));
@@ -791,13 +721,6 @@ module.exports = async (req, res) => {
       sources_ok: sourcesOk + "/" + results.length,
       trends_count: topicList.length,
       new_count: newCount,
-      forecasts: {
-        peaking_48h: forecasts.counts.peaking_48h,
-        rising_fast: forecasts.counts.rising_fast,
-        cooling_off: forecasts.counts.cooling_off,
-        steady: forecasts.counts.steady,
-        insufficient: forecasts.counts.insufficient,
-      },
     }, {
       source: "live",
       degraded: anySourceFailed,

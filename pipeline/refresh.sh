@@ -28,14 +28,14 @@ fi
 python3 pipeline/normalize.py
 python3 scripts/build_site.py
 python3 pipeline/aggregate.py
-# wave 5: precomputed Oracle forecasts (needs node; skips honestly without it —
-# the manifest only advertises forecasts.json when this step actually writes it)
+# node-built payloads (Live Wire + Streamer Desk). The forecast and
+# forecast-board builders were retired with the prediction layer on
+# 2026-10-13 — their scripts stay in the repo as archived machinery but
+# are no longer part of the build.
 if command -v node >/dev/null 2>&1; then
-  node scripts/build_forecasts.js
-  node scripts/build_oracle_board.js
   node scripts/build_live_wire.js
   node scripts/build_streamer_desk.js
 else
-  echo "[forecasts] node unavailable — skipping data/v1/forecasts.json"
+  echo "[wire/desk] node unavailable — skipping data/v1/live-wire.json + data/v1/streamer-desk.json"
 fi
 echo "=== done ==="

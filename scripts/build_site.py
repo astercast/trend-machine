@@ -131,7 +131,6 @@ TOPIC_TMPL = """<!doctype html>
 <div style="margin-bottom:4px">{plats}{tchip}{cats}{formats}{tags}</div>
 {spark}
 {stale_note}
-<p style="margin:14px 0 0;font-size:14px"><a href="../oracle.html">🔮 See this topic's 48h forecast in the Oracle</a></p>
 </article>
 <section aria-labelledby="why"><div class="section-head"><h2 id="why"><span class="sec-no">01</span>Why it's trending</h2></div>
 <p style="max-width:68ch;font-size:1.05rem">{summary_long}</p>
@@ -418,8 +417,8 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
 # Wave 39 (rotation 20 · VP-0011): the One-Look Creator Board.
 # The home's first screen is a ranked "make now" list: each entry carries
 # the topic, the evidence it is rising (chips derived from the stored
-# record — platforms, velocity, saturation, the Oracle's own snapshot
-# count/state, source names, hashtags), and the angle a creator would
+# record — platforms, velocity, saturation, the topic's own snapshot
+# count, source names, hashtags), and the angle a creator would
 # make (the topic's stored first angle + its format). This builder is
 # the Python mirror of assets/js/board-lib.js; both implement the same
 # two rules and scripts/test_board_lib.js pins the JS half:
@@ -499,27 +498,22 @@ def merge_phenomena(topics):
     return out
 
 
-def _board_forecast_chip(proj):
-    if not proj:
-        return "no Oracle call yet — too few snapshots"
-    n = proj.get("n_snapshots") or 0
-    state = proj.get("state")
-    if state == "peaking":
-        return "Oracle projection: peaking in ~%gh · %d snapshots" % (
-            proj.get("peak_in_hours") or 0, n)
-    if state == "fading":
-        return "Oracle projection: cooling off · %d snapshots" % n
-    if state == "steady":
-        return "holding steady across %d snapshots" % n
-    return "forecast building — %d snapshots so far" % n
+def _board_snapshot_chip(n):
+    # Retirement (2026-10-13): the board's third evidence chip used to be
+    # the Oracle's forecast call for the topic. The prediction layer is
+    # retired; the chip is now a pure readout — how many real velocity
+    # snapshots stand behind the row.
+    if not n:
+        return "no velocity snapshots yet"
+    return "tracked across %d velocity snapshots" % n
 
 
-def _board_entry(t, rank, proj):
+def _board_entry(t, rank, n_snapshots):
     names = [s.get("name") for s in (t.get("sources") or []) if s.get("name")]
     evidence = ["velocity %d/100" % (t.get("velocity") or 0),
                 _SAT_LABEL.get(t.get("saturation"),
                                "saturation %s" % t.get("saturation")),
-                _board_forecast_chip(proj)]
+                _board_snapshot_chip(n_snapshots)]
     if len(names) == 1:
         evidence.append("source: %s" % names[0])
     elif names:
@@ -548,8 +542,8 @@ def _board_entry(t, rank, proj):
     }
 
 
-def build_board(topics, merged, forecasts, generated_at):
-    projs = (forecasts or {}).get("projections") or {}
+def build_board(topics, merged, generated_at, history=None):
+    history = history or {}
     live = [t for t in merged if not t.get("stale")]
     by_score = lambda t: (-(t.get("opportunity_score") or 0),
                           -(t.get("velocity") or 0))
@@ -574,7 +568,7 @@ def build_board(topics, merged, forecasts, generated_at):
            " · ".join(x["title"] for x in m["absorbed"]),
            m["canonical_id"]) for m in merges)
     note = ("%d phenomena from %d tracked topics%s. "
-            "The full unfiltered record — every forecast, the Oracle, all "
+            "The full unfiltered record — all "
             "%d rows — stays one layer down: the desk below and "
             "data/v1/trends.json."
             % (len(merged), len(topics),
@@ -602,9 +596,9 @@ def build_board(topics, merged, forecasts, generated_at):
         "counts": {"tracked": len(topics), "phenomena": len(merged),
                    "makeable_shown": len(make), "news_shown": len(news)},
         "note": note,
-        "make_now": [_board_entry(t, i + 1, projs.get(t["id"]))
+        "make_now": [_board_entry(t, i + 1, len(history.get(t["id"]) or []))
                      for i, t in enumerate(make)],
-        "news_watch": [_board_entry(t, i + 1, projs.get(t["id"]))
+        "news_watch": [_board_entry(t, i + 1, len(history.get(t["id"]) or []))
                        for i, t in enumerate(news)],
     }
 
@@ -651,8 +645,7 @@ def _fb_board_row(e):
 # verbatim, colors token-harmonized (--bg field, --live ring/dot), files at
 # the repo root — favicon.svg, favicon.ico (16/32/48), icon-192.png,
 # icon-512.png, apple-touch-icon.png (full-bleed field for the iOS mask).
-ROOT_PAGES = ["index.html", "oracle.html", "oracle-board.html",
-              "live-wire.html", "streamer-desk.html", "forecast-accuracy.html",
+ROOT_PAGES = ["index.html", "live-wire.html", "streamer-desk.html",
               "formats.html", "launch-plan.html", "algorithms.html",
               "api-docs.html", "404.html"]
 OG_IMAGE_URL = "https://trend-machine-live.vercel.app/assets/og-card.png"
@@ -733,11 +726,6 @@ def inject_canonical_jsonld(topics):
     #   streamer-desk  ItemList of Person(name) from the curated desk
     #     source's streamers[] — names only; no metrics exist to claim.
     #   live-wire      ItemList of lane labels from the wire payload.
-    #   oracle-board / forecast-accuracy  Dataset — name, the page's own
-    #     meta description verbatim, canonical URL, dateModified = the
-    #     payload's generated_at. NO performance properties: the
-    #     scorecard's hit_rate is null ("building history"), and a null
-    #     never becomes a number here.
     import re
     for name in ROOT_PAGES:
         if name == "404.html":
@@ -788,20 +776,6 @@ def inject_canonical_jsonld(topics):
                       "itemListElement": [
                           {"@type": "ListItem", "position": i + 1, "name": n}
                           for i, n in enumerate(labels)]}
-        elif name in ("oracle-board.html", "forecast-accuracy.html"):
-            rel = ("oracle-board.json" if name == "oracle-board.html"
-                   else "forecast-accuracy.json")
-            payload = _read_json(os.path.join("data", "v1", rel)) or {}
-            ld = {"@context": "https://schema.org", "@type": "Dataset",
-                  "name": ("Oracle Board - every recorded forecast"
-                           if name == "oracle-board.html"
-                           else "Forecast accuracy - the Oracle's scorecard"),
-                  "description": desc, "url": canon,
-                  "creator": {"@type": "Organization",
-                              "name": "Trend Machine",
-                              "url": LIVE_BASE + "/"}}
-            if payload.get("generated_at"):
-                ld["dateModified"] = payload["generated_at"]
         if ld:
             extra.append(_ld_script(ld))
         anchor = '<link rel="icon" href="/favicon.ico"'
@@ -869,19 +843,13 @@ def main():
     with open(os.path.join(api, "trends.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "count": len(topics),
                    "topics": topics}, f, indent=2, ensure_ascii=False)
-    # wave 39 (VP-0011): the One-Look Creator Board payload. Forecasts are
-    # read from the on-disk payload the previous pipeline step wrote (the
-    # same pattern the manifest uses for oracle-board/live-wire/desk —
-    # build_forecasts.js runs after this script in refresh.sh).
-    _fc_for_board = {}
-    try:
-        with open(os.path.join(api, "forecasts.json")) as f:
-            _fc_for_board = json.load(f)
-    except Exception:
-        _fc_for_board = {}
+    # wave 39 (VP-0011): the One-Look Creator Board payload. Evidence
+    # chips carry each topic's real snapshot count from the velocity
+    # history loaded above (the prediction layer was retired 2026-10-13 —
+    # the board makes no forward calls).
     merged_topics = merge_phenomena(topics)
-    board = build_board(topics, merged_topics, _fc_for_board,
-                        data["generated_at"])
+    board = build_board(topics, merged_topics, data["generated_at"],
+                        history=history)
     with open(os.path.join(api, "board.json"), "w") as f:
         json.dump(board, f, indent=2, ensure_ascii=False)
     print(f"[build] data/v1/board.json ({board['counts']['makeable_shown']} make-now / "
@@ -902,7 +870,7 @@ def main():
             tags.setdefault(h, []).append(t["id"])
     with open(os.path.join(api, "hashtags.json"), "w") as f:
         json.dump({"generated_at": data["generated_at"], "tags": tags}, f, indent=2)
-    # data/v1/velocity.json — Oracle input: hourly velocity snapshots, the exact
+    # data/v1/velocity.json — hourly velocity snapshots, the exact
     # same shape as data/velocity_history.json ({topic_id: [[iso, vel, opp]]}).
     # (data/velocity_history.json is the pipeline working copy; api/v1 is the
     # public contract. Shape is identical so the dashboard math ports 1:1.)
@@ -1064,55 +1032,6 @@ def main():
                 "description": "Wave 9: curated format-family id (see data/v1/meme-formats.json), or null."},
             "sources": {"type": "array", "items": {"type": "string"}},
             "velocity_trend": VELOCITY_TREND,
-        },
-    }
-
-    FORECAST = {
-        "type": "object",
-        "required": ["id", "title", "state", "n_snapshots",
-                     "latest_velocity", "slope_per_hour", "accel",
-                     "peak_in_hours", "summary", "label"],
-        "properties": {
-            "id": {"type": "string"}, "title": {"type": "string"},
-            "state": {"type": "string", "enum": ["accelerating", "rising",
-                      "peaking", "fading", "steady", "insufficient"]},
-            "n_snapshots": {"type": "integer", "minimum": 0},
-            "latest_velocity": {"type": "integer"},
-            "slope_per_hour": {"type": "number"},
-            "accel": {"type": "number"},
-            "peak_in_hours": {"type": ["number", "null"],
-                              "description": "null when no peak is projected in the 48h window"},
-            "summary": {"type": "string"},
-            "label": {"type": "string",
-                      "description": "Honest human label: always 'projection from N snapshots — not a guarantee'."},
-            "confidence": {"type": "object",
-                "description": "Wave 6: the evidence basis behind the forecast (snapshot count + fit quality). Never a probability of being right.",
-                "properties": {
-                    "level": {"type": "string", "enum": ["high", "medium", "low"]},
-                    "n": {"type": "integer", "minimum": 0},
-                    "r2": {"type": "number"},
-                    "basis": {"type": "string"}}},
-            "signals": {"type": "object",
-                "description": "Wave 6: which signals drive the trajectory call — velocity delta, slope, accel, recency, cross-platform spread, and the classifier thresholds that fired (drivers).",
-                "properties": {
-                    "velocity_delta": {"type": "number"},
-                    "slope_per_hour": {"type": "number"},
-                    "accel": {"type": "number"},
-                    "recency_hours": {"type": ["number", "null"]},
-                    "platform_spread": {"type": "integer", "minimum": 0},
-                    "platforms": {"type": "array", "items": {"type": "string"}},
-                    "drivers": {"type": "array", "items": {"type": "string"}}}},
-            "per_platform": {"type": "object",
-                "description": "Wave 6: per-platform trajectory classifications, where the data supports it (3+ per-platform snapshots). Platforms with fewer get the honest 'insufficient' label.",
-                "additionalProperties": {"type": "object",
-                    "properties": {
-                        "state": {"type": "string", "enum": ["accelerating", "rising",
-                                  "peaking", "fading", "steady", "insufficient"]},
-                        "n": {"type": "integer", "minimum": 0},
-                        "latest_velocity": {"type": "integer"},
-                        "slope_per_hour": {"type": "number"},
-                        "peak_in_hours": {"type": ["number", "null"]},
-                        "summary": {"type": "string"}}}},
         },
     }
 
@@ -1296,7 +1215,7 @@ def main():
         },
         "lifecycle": {
             "$schema": DRAFT,
-            "title": "trend-machine Oracle lifecycle layer",
+            "title": "trend-machine lifecycle layer",
             "description": ("Wave 17: ignition/burnout lifecycle stages for every "
                             "topic, classified from real velocity snapshots by "
                             "assets/js/lifecycle-lib.js using the classifier's own "
@@ -1353,7 +1272,7 @@ def main():
         "velocity": {
             "$schema": DRAFT,
             "title": "trend-machine velocity snapshots",
-            "description": "Oracle input: per-topic hourly velocity/opportunity snapshots, ascending by timestamp. Points are [iso_ts, velocity, opportunity].",
+            "description": "Per-topic hourly velocity/opportunity snapshots, ascending by timestamp. Points are [iso_ts, velocity, opportunity].",
             "type": "object",
             "additionalProperties": {
                 "type": "array",
@@ -1380,194 +1299,6 @@ def main():
                               "items": [{"type": "string"},
                                         {"type": "integer", "minimum": 0, "maximum": 100}]},
                 },
-            },
-        },
-        "forecast-accuracy": {
-            "$schema": DRAFT,
-            "title": "trend-machine forecast accuracy log",
-            "description": ("Wave 6: the Oracle's own forecast-vs-actual scorecard. "
-                            "Decisive forecasts are recorded in a ledger and scored "
-                            "hit/miss after a 48h horizon; wave 14 adds a terminal "
-                            "'unverifiable' verdict (48h passed, <2 actual snapshots "
-                            "— counted separately, never in the hit rate). Status is "
-                            "'building history' until 10+ forecasts resolve decisively; "
-                            "hit_rate is null before that. Wave 18: resolutions grade "
-                            "against live history plus the resolution archive (series "
-                            "of store-dropped topics), each verdict carries its "
-                            "observed window coverage, and the payload reports "
-                            "next_resolution_at + resolution_readiness."),
-            "type": "object",
-            "required": ["generated_at", "status", "method", "horizon_hours",
-                         "resolution_rules", "counts", "hit_rate",
-                         "hit_rate_note", "by_state", "recent"],
-            "properties": {
-                "generated_at": {"type": "string"},
-                "status": {"type": "string", "enum": ["building history", "live"]},
-                "method": {"type": "string"},
-                "horizon_hours": {"type": "integer", "const": 48},
-                "resolution_rules": {"type": "object",
-                    "properties": {
-                        "rising_accelerating": {"type": "string"},
-                        "peaking": {"type": "string"},
-                        "fading": {"type": "string"},
-                        "unverifiable": {"type": "string"}}},
-                "counts": {"type": "object",
-                    "properties": {
-                        "recorded": {"type": "integer", "minimum": 0},
-                        "pending": {"type": "integer", "minimum": 0},
-                        "resolved": {"type": "integer", "minimum": 0},
-                        "unverifiable": {"type": "integer", "minimum": 0},
-                        "hits": {"type": "integer", "minimum": 0}}},
-                "hit_rate": {"type": ["number", "null"]},
-                "hit_rate_note": {"type": "string"},
-                "by_state": {"type": "object",
-                    "additionalProperties": {"type": "object",
-                        "properties": {
-                            "resolved": {"type": "integer", "minimum": 0},
-                            "hits": {"type": "integer", "minimum": 0}}}},
-                "recent": {"type": "array",
-                    "items": {"type": "object",
-                        "properties": {
-                            "topic_id": {"type": "string"},
-                            "title": {"type": "string"},
-                            "forecast_at": {"type": "string"},
-                            "state": {"type": "string"},
-                            "peak_in_hours": {"type": ["number", "null"]},
-                            "verdict": {"type": "string", "enum": ["hit", "miss", "unverifiable"]},
-                            "reason": {"type": "string"},
-                            "actual_slope": {"type": ["number", "null"]},
-                            "actual_end_velocity": {"type": ["number", "null"]},
-                            "actual_max_velocity": {"type": ["number", "null"]},
-                            "n_actual_points": {"type": ["integer", "null"]},
-                            # wave 18: observed coverage of the 48h window
-                            "actual_first_ts": {"type": ["string", "null"]},
-                            "actual_last_ts": {"type": ["string", "null"]},
-                            "window_coverage_hours": {"type": ["number", "null"]},
-                            "topic_live": {"type": "boolean"},
-                            "n_snapshots": {"type": "integer", "minimum": 0}}}},
-                # wave 18: resolution-night readiness (real ledger + snapshot evidence)
-                "next_resolution_at": {"type": ["string", "null"],
-                    "description": "Exact ISO time the oldest pending forecast crosses its 48h horizon; null when nothing is pending."},
-                "resolution_readiness": {"type": "object",
-                    "description": "Pending forecasts split by whether their 48h window already holds the 2+ actual snapshots a decisive verdict needs (live store + resolution archive), as of generated_at.",
-                    "properties": {
-                        "pending": {"type": "integer", "minimum": 0},
-                        "with_sufficient_data": {"type": "integer", "minimum": 0},
-                        "awaiting_data": {"type": "integer", "minimum": 0}}},
-                # wave 9: resolution timeline, ledger activity, calibration
-                "upcoming_resolutions": {"type": "array",
-                    "description": "Pending forecasts grouped by the day their 48h horizon lands (real ledger dates).",
-                    "items": {"type": "object",
-                        "properties": {
-                            "date": {"type": "string"},
-                            "pending": {"type": "integer", "minimum": 0}}}},
-                "recorded_per_day": {"type": "array",
-                    "description": "Forecasts recorded per day (the ledger's own pulse, from real timestamps).",
-                    "items": {"type": "object",
-                        "properties": {
-                            "date": {"type": "string"},
-                            "recorded": {"type": "integer", "minimum": 0}}}},
-                "by_confidence": {"type": "object",
-                    "description": "Wave 9: hit rate by the confidence level claimed at forecast time. Rows are honest — no rate until that level has 10+ resolved.",
-                    "properties": {
-                        "high": {"$ref": "#/properties/by_state/additionalProperties"},
-                        "medium": {"$ref": "#/properties/by_state/additionalProperties"},
-                        "low": {"$ref": "#/properties/by_state/additionalProperties"}}},
-            },
-        },
-        "oracle-board": {
-            "$schema": DRAFT,
-            "title": "trend-machine Oracle Board",
-            "description": ("Wave 27: the forecast-explorer payload. One row per "
-                            "forecast in data/forecast_ledger.json — call type, "
-                            "forecast-time velocity, the topic's full stored "
-                            "velocity trajectory (live store merged with the "
-                            "resolution archive, points as recorded), its 48h "
-                            "window state (actual snapshots, coverage, slope, "
-                            "ready/short), due time, and the verdict when one "
-                            "exists. Pending stays pending; a window under 2 "
-                            "actuals is labeled short. Status and hit_rate are "
-                            "read from forecast-accuracy.json, never recomputed."),
-            "type": "object",
-            "required": ["generated_at", "status", "horizon_hours", "method",
-                         "honesty", "counts", "next_resolution_at", "by_state",
-                         "due_per_day", "entries"],
-            "properties": {
-                "generated_at": {"type": "string"},
-                "status": {"type": "string", "enum": ["building history", "live"]},
-                "horizon_hours": {"type": "integer", "const": 48},
-                "method": {"type": "string"},
-                "honesty": {"type": "string"},
-                "counts": {"type": "object",
-                    "required": ["recorded", "pending", "resolved",
-                                 "unverifiable", "hits", "hit_rate", "ready",
-                                 "short"],
-                    "properties": {
-                        "recorded": {"type": "integer", "minimum": 0},
-                        "pending": {"type": "integer", "minimum": 0},
-                        "resolved": {"type": "integer", "minimum": 0},
-                        "unverifiable": {"type": "integer", "minimum": 0},
-                        "hits": {"type": "integer", "minimum": 0},
-                        "hit_rate": {"type": ["number", "null"]},
-                        "ready": {"type": "integer", "minimum": 0},
-                        "short": {"type": "integer", "minimum": 0}}},
-                "next_resolution_at": {"type": ["string", "null"]},
-                "by_state": {"type": "object",
-                    "additionalProperties": {"type": "object",
-                        "properties": {
-                            "recorded": {"type": "integer", "minimum": 0},
-                            "pending": {"type": "integer", "minimum": 0},
-                            "resolved": {"type": "integer", "minimum": 0},
-                            "hits": {"type": "integer", "minimum": 0},
-                            "unverifiable": {"type": "integer", "minimum": 0},
-                            "ready": {"type": "integer", "minimum": 0},
-                            "short": {"type": "integer", "minimum": 0}}}},
-                "due_per_day": {"type": "array",
-                    "items": {"type": "object",
-                        "properties": {
-                            "date": {"type": "string"},
-                            "pending": {"type": "integer", "minimum": 0}}}},
-                "entries": {"type": "array",
-                    "items": {"type": "object",
-                        "required": ["topic_id", "title", "state",
-                                     "forecast_at", "due_at",
-                                     "forecast_velocity", "topic_live",
-                                     "status", "verdict", "window",
-                                     "trajectory", "trajectory_n"],
-                        "properties": {
-                            "topic_id": {"type": "string"},
-                            "title": {"type": "string"},
-                            "state": {"type": "string"},
-                            "forecast_at": {"type": "string"},
-                            "due_at": {"type": "string"},
-                            "forecast_velocity": {"type": "number"},
-                            "peak_in_hours": {"type": ["number", "null"]},
-                            "n_snapshots_at_forecast": {"type": ["integer", "null"]},
-                            "confidence": {"type": ["string", "null"]},
-                            "topic_live": {"type": "boolean"},
-                            "platforms": {"type": "array",
-                                          "items": {"type": "string"}},
-                            "status": {"type": "string",
-                                       "enum": ["pending", "hit", "miss",
-                                                "unverifiable"]},
-                            "verdict": {"type": ["object", "null"]},
-                            "window": {"type": "object",
-                                "required": ["n_actual_points", "first_ts",
-                                             "last_ts", "coverage_hours",
-                                             "slope_per_hour", "ready"],
-                                "properties": {
-                                    "n_actual_points": {"type": "integer", "minimum": 0},
-                                    "first_ts": {"type": ["string", "null"]},
-                                    "last_ts": {"type": ["string", "null"]},
-                                    "coverage_hours": {"type": "number", "minimum": 0},
-                                    "slope_per_hour": {"type": ["number", "null"]},
-                                    "ready": {"type": "boolean"}}},
-                            "trajectory": {"type": "array",
-                                "items": {"type": "array", "minItems": 2,
-                                          "maxItems": 2,
-                                          "items": [{"type": "string"},
-                                                    {"type": "number"}]}},
-                            "trajectory_n": {"type": "integer", "minimum": 0}}}},
             },
         },
         "live-wire": {
@@ -1836,36 +1567,6 @@ def main():
                 },
             },
         },
-        "forecasts": {
-            "$schema": DRAFT,
-            "title": "trend-machine Oracle forecasts",
-            "description": ("Precomputed trajectory classifications from assets/js/trajectory.js "
-                            "(the same classifier as the Oracle dashboard). Every forecast is a "
-                            "projection from N snapshots — never a guarantee."),
-            "type": "object",
-            "required": ["generated_at", "method", "honesty", "counts",
-                         "peaking_48h", "rising_fast", "cooling_off",
-                         "steady", "projections"],
-            "properties": {
-                "generated_at": {"type": "string"},
-                "method": {"type": "string"},
-                "honesty": {"type": "string"},
-                "counts": {"type": "object",
-                           "properties": {
-                               "peaking_48h": {"type": "integer"},
-                               "rising_fast": {"type": "integer"},
-                               "cooling_off": {"type": "integer"},
-                               "steady": {"type": "integer"},
-                               "insufficient": {"type": "integer"}}},
-                "peaking_48h": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
-                "rising_fast": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
-                "cooling_off": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
-                "steady": {"type": "array", "items": {"$ref": "#/definitions/forecast"}},
-                "projections": {"type": "object",
-                                "additionalProperties": {"$ref": "#/definitions/forecast"}},
-            },
-            "definitions": {"forecast": FORECAST},
-        },
     }
 
     # wave 39 (VP-0011): the Creator Board payload's schema.
@@ -1971,20 +1672,13 @@ def main():
             e["notes"] = notes
         return e
 
-    # Wave 34 (manifest-drift fix): this generator owns the WHOLE manifest.
-    # Until now it wrote v0.6.0 with no forecasts/forecast-accuracy entries
-    # and the lifecycle entry in its short form, and scripts/
-    # build_forecasts.js silently patched the file up to v0.7.0 afterwards
-    # (version + changelog head + three endpoint entries + a JS re-encode
-    # that also un-escaped the unicode). A standalone build_site.py run
-    # therefore REGRESSED the committed manifest and it had to be
-    # hand-restored (flagged wave 32). Now build_site.py emits the v0.7.0
-    # manifest directly — including the entries the downstream builders own
-    # the payloads for, whose records/updated are read from the payload
-    # files already on disk (the same values the downstream patchers
-    # re-stamp with fresh ones when they run later in refresh.sh; their
-    # patch code stays as an idempotent refresh of its own entries, and
-    # its version bump is a no-op against 0.7.0).
+    # Wave 34 (manifest-drift fix): this generator owns the WHOLE
+    # manifest. It emits the current version directly — including the
+    # entries whose payloads the downstream builders own, whose
+    # records/updated are read from the payload files already on disk
+    # (the same values the downstream patchers re-stamp with fresh
+    # ones when they run later in refresh.sh). A standalone
+    # build_site.py run therefore never regresses the manifest.
     def _on_disk(name):
         try:
             with open(os.path.join(api, name)) as f:
@@ -1992,16 +1686,13 @@ def main():
         except Exception:
             return {}
 
-    _fc_disk = _on_disk("forecasts.json")
-    _acc_disk = _on_disk("forecast-accuracy.json")
     _life_disk = _on_disk("lifecycle.json")
-    _board_disk = _on_disk("oracle-board.json")
     _wire_disk = _on_disk("live-wire.json")
     _desk_disk = _on_disk("streamer-desk.json")
 
     manifest = {
         "name": "trend-machine",
-        "version": "0.7.0",
+        "version": "0.8.0",
         "generated_at": stamp,
         "base": ("data/v1/ relative to the site root. Works on any static host; "
                  "no auth, no keys, no rate limits."),
@@ -2038,12 +1729,11 @@ def main():
                 schema_path("hashtags"), len(tags)),
             "velocity": endpoint(
                 "data/v1/velocity.json",
-                ("Oracle input: hourly velocity/opportunity snapshots per topic, "
+                ("Hourly velocity/opportunity snapshots per topic, "
                  "ascending by timestamp. Classify with assets/js/trajectory.js "
-                 "(UMD — loadable in node) or read the precomputed "
-                 "data/v1/forecasts.json."),
+                 "(UMD — loadable in node)."),
                 schema_path("velocity"), len(history),
-                "Snapshots are real pipeline observations; topics with <3 snapshots get no forecast."),
+                "Snapshots are real pipeline observations; topics with <3 snapshots are still building history."),
             "platform_velocity": endpoint(
                 "data/v1/platform-velocity.json",
                 ("Wave 6: per-platform hourly velocity series per topic "
@@ -2085,20 +1775,8 @@ def main():
                  "readouts, not predictions."),
                 schema_path("lifecycle"),
                 len(_life_disk.get("topics", {})) or len(topics),
-                "Stages are computed from the same snapshots as forecasts.json; the boards show transitions that actually happened in the last 24h.",
+                "Stages are computed from the same velocity snapshots as data/v1/velocity.json; the boards show transitions that actually happened in the last 24h.",
                 updated=_life_disk.get("generated_at"), js_order=True),
-            "oracle_board": endpoint(
-                "data/v1/oracle-board.json",
-                ("Wave 27: the Oracle Board — every recorded forecast as an "
-                 "explorable row: call type, forecast-time velocity, the "
-                 "topic's full stored velocity trajectory, its 48h window "
-                 "state (actual snapshots, coverage, slope, ready/short), "
-                 "due time, and the verdict when one exists. Pending stays "
-                 "pending; short windows are labeled short."),
-                schema_path("oracle-board"),
-                (_board_disk.get("counts") or {}).get("recorded"),
-                "Written by scripts/build_oracle_board.js (runs after build_forecasts.js in refresh.sh and in resolution_night.sh step 3); human-readable on oracle-board.html.",
-                updated=_board_disk.get("generated_at"), js_order=True),
             "board": endpoint(
                 "data/v1/board.json",
                 ("Wave 39 (VP-0011): the One-Look Creator Board — the "
@@ -2122,7 +1800,7 @@ def main():
                  "stored velocity snapshots only."),
                 schema_path("live-wire"),
                 (_wire_disk.get("counts") or {}).get("lanes"),
-                "Written by scripts/build_live_wire.js (runs after build_oracle_board.js in refresh.sh); human-readable on live-wire.html.",
+                "Written by scripts/build_live_wire.js (runs in refresh.sh after build_site.py); human-readable on live-wire.html.",
                 updated=_wire_disk.get("generated_at"), js_order=True),
             "streamer_desk": endpoint(
                 "data/v1/streamer-desk.json",
@@ -2141,35 +1819,15 @@ def main():
                 "data/v1/schema/",
                 "JSON Schema (draft-07) for every endpoint.",
                 None, len(SCHEMAS)),
-            "forecasts": endpoint(
-                "data/v1/forecasts.json",
-                ("Oracle output: precomputed trajectory classifications "
-                 "(peaking_48h / rising_fast / cooling_off / steady) from the "
-                 "same classifier as the dashboard. Every forecast is a "
-                 "projection from N snapshots — never a guarantee. Wave 6 "
-                 "adds confidence basis, signal attribution, and per-platform "
-                 "trajectories."),
-                schema_path("forecasts"),
-                len(_fc_disk.get("projections", {})) or None,
-                "Topics with fewer than 3 snapshots are excluded from the lists (counts.insufficient). Additive-only changes; no payload-shape breaks.",
-                updated=_fc_disk.get("generated_at"), js_order=True),
-            "forecast_accuracy": endpoint(
-                "data/v1/forecast-accuracy.json",
-                ("The Oracle's own scorecard: forecast-vs-actual ledger "
-                 "(hit/miss per forecast after a 48h horizon; unverifiable "
-                 "counted separately). Hit rate shown only after 10+ "
-                 "forecasts resolve; before that the status is 'building "
-                 "history'. Wave 18 adds next_resolution_at, "
-                 "resolution_readiness (pending forecasts whose 48h window "
-                 "already holds 2+ actual snapshots, live store + resolution "
-                 "archive), and per-resolution window-coverage evidence."),
-                schema_path("forecast-accuracy"),
-                (_acc_disk.get("counts") or {}).get("recorded"),
-                "Started 2026-10-11 — first resolutions land 48h later. Nothing backfilled.",
-                updated=_acc_disk.get("generated_at"), js_order=True),
         },
         "deprecated": [],
-        "changelog": ("0.7.0 (2026-10-13): Wave 39 — the One-Look Creator Board. New data/v1/board.json endpoint: "
+        "changelog": ("0.8.0 (2026-10-13): Prediction layer RETIRED by direct order — the Oracle pages, "
+                      "the scorecard page, the forecast-explorer board page, the forecast endpoints, "
+                      "their data payloads and their schemas are removed from the served site and "
+                      "the build; the site now tracks ongoing hype only (the creator board, the "
+                      "Live Wire, the Streamer Desk, lifecycle stage readouts). The forecast ledger "
+                      "file stays in the repo as an archived record, unlinked. "
+                      "0.7.0 (2026-10-13): Wave 39 — the One-Look Creator Board. New data/v1/board.json endpoint: "
                       "the homepage's first screen as data — ranked make-now picks with evidence chips and angles, "
                       "straight news labelled apart, phenomenon merges (additive view only; the canonical store "
                       "keeps every tracked topic). Additive only, no shape changes to existing endpoints. "
@@ -2190,9 +1848,9 @@ def main():
                       "healthy / stale-source / stale-untracked / flaky-warning with per-source probe results. "
                       "Additive only. "
                       "0.5.0 (2026-10-11): Wave 9 — Oracle accuracy scorecard becomes a full page "
-                      "(forecast-accuracy.html): honest pre-resolution states, per-horizon accuracy table, "
+                      "(the scorecard page): honest pre-resolution states, per-horizon accuracy table, "
                       "by-call breakdown, recent resolutions, current 48h projections, and the resolution "
-                      "method — all rendered live from data/v1/forecast-accuracy.json, with the hit rate "
+                      "method — all rendered live from the forecast accuracy payload, with the hit rate "
                       "shown only after 10+ forecasts resolve. New meme-format family tracking: "
                       "data/meme_formats.json curates 12 hand-researched Oct-2026 format families "
                       "(verified/single-source flags kept honest), pipeline/format_families.py matches "
@@ -2227,15 +1885,13 @@ def main():
                       "attribution (velocity delta, slope, accel, recency, "
                       "cross-platform spread, fired thresholds), and per-platform "
                       "trajectories (additive only, no shape changes). New "
-                      "data/v1/platform-velocity.json and data/v1/forecast-accuracy.json "
-                      "(the Oracle's own forecast-vs-actual log; 'building history' "
+                      "data/v1/platform-velocity.json and the forecast accuracy "
+                      "payload (the Oracle's own forecast-vs-actual log; 'building history' "
                       "until 10+ forecasts resolve). 0.2.0 (2026-10-11): index.json "
                       "endpoints are now objects "
                       "{path, description, schema, updated, records, notes} (was plain "
                       "path strings). Added flat-feed, JSONP, velocity entries; "
-                      "draft-07 schemas for every endpoint under data/v1/schema/. "
-                      "data/v1/forecasts.json is added by the post-build forecast step "
-                      "(scripts/build_forecasts.js) when present."),
+                      "draft-07 schemas for every endpoint under data/v1/schema/."),
         "usage": ("GET data/v1/trends.json, sort by opportunity_score desc for the "
                   "hottest plays. Start at data/v1/index.json for the full endpoint map."),
     }
@@ -2269,16 +1925,13 @@ def main():
               f"{len(topics) - nfmt - nmix} topics — every dossier and the flat feed carry trend_type (format = reusable template to join; topic = subject to cover).",
               "", "## API", "- [data/v1/index.json](data/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts",
               "- [data/v1/trends.json](data/v1/trends.json) — all topics, full dossiers", "- [data/v1/trends.flat.json](data/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)",
-              "- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)", "- [data/v1/forecasts.json](data/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)",
-              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)", "- [data/v1/oracle-board.json](data/v1/oracle-board.json) — the Oracle Board: every recorded forecast with its stored trajectory, 48h window state (ready/short), and verdict when one exists", "- [data/v1/live-wire.json](data/v1/live-wire.json) — the Live Wire: every pipeline lane with its recorded hit count + health (live/degraded/stale-skip/skip-by-design) and the hour's top movers from stored snapshots only", "- [data/v1/streamer-desk.json](data/v1/streamer-desk.json) — the Streamer Desk: sourced streamer directory, dated updates, multi-source-verified drama timelines, houses with dated rosters, events calendar",
-              "- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the Oracle's ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)",
+              "- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic",
+              "- [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)", "- [data/v1/live-wire.json](data/v1/live-wire.json) — the Live Wire: every pipeline lane with its recorded hit count + health (live/degraded/stale-skip/skip-by-design) and the hour's top movers from stored snapshots only", "- [data/v1/streamer-desk.json](data/v1/streamer-desk.json) — the Streamer Desk: sourced streamer directory, dated updates, multi-source-verified drama timelines, houses with dated rosters, events calendar",
+              "- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)",
               "- [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
               "- [data/v1/hashtags.json](data/v1/hashtags.json) — tag index", "- [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint",
               "- [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)", "",
-              "## Oracle (flagship)", "- [oracle.html](oracle.html) — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic",
-              "- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)",
-              "- [oracle-board.html](oracle-board.html) — the Oracle Board: a forecast-explorer over the ledger — every recorded call with its real stored trajectory, window readiness, and (after Resolution Night) its verdict",
-              "- [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only",
+              "## Pages",               "- [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only",
               "- [streamer-desk.html](streamer-desk.html) — the Streamer Desk: streamer directory, dated updates, multi-source-verified drama timelines (unverified quarantined), houses with dated rosters, events calendar",
               "- [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join",
               "- [launch-plan.html](launch-plan.html) — 7-day content battle plans from each topic's own angles/hooks/hashtags (printable, copy-as-text)", "",

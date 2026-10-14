@@ -107,7 +107,7 @@
         if (j !== null) { e.preventDefault(); select(tabNodes[j], true); }
       });
     });
-    // deep link: #station-oracle etc.
+    // deep link: #station-wire etc.
     var hash = (location.hash || "").slice(1);
     var linked = hash && tabNodes.filter(function (t) { return t.id === hash; })[0];
     select(linked || tabNodes[0], false);

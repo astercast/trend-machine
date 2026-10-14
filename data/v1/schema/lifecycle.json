@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "trend-machine Oracle lifecycle layer",
+  "title": "trend-machine lifecycle layer",
   "description": "Wave 17: ignition/burnout lifecycle stages for every topic, classified from real velocity snapshots by assets/js/lifecycle-lib.js using the classifier's own thresholds (ignition line v=70, rise/fall \u00b11.5/hr). Stages are readouts, never predictions. Topics with fewer than 3 snapshots report 'building'.",
   "type": "object",
   "required": [

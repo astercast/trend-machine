@@ -16,8 +16,9 @@
      2. Window evidence is accumulating: per pending entry, the
         merged history (resolution-lib mergeHistory — the graders'
         own merge) already holds the actual snapshots its verdict
-        will read. The >=2 count must match the published
-        resolution_readiness in data/v1/forecast-accuracy.json.
+        will read. (Retirement 2026-10-13: the published readiness
+        payload this used to cross-check against was retired with
+        the prediction layer; the audit now reports its own count.)
      3. The archive obeys its retention: every archived topic still
         has a ledger entry inside the 7-day window, and no archived
         point is older than the 14-day history window. Anything else
@@ -27,8 +28,7 @@
         (build_forecasts.js dedupe), so batch 2 opens topic-by-topic
         as each batch-1 entry ages past 24h, and only for topics the
         classifier still calls decisive at that refresh. The audit
-        prints when the gate first opens and how many topics are
-        decisive right now.
+        prints when the gate first opens.
 
    Read-only. Writes nothing, resolves nothing. Exit 0 = every
    invariant holds; exit 1 = a failure above (fix before resolution
@@ -52,8 +52,6 @@ function main() {
   const ledger = readJSON(path.join(ROOT, "data", "forecast_ledger.json"), null);
   const live = readJSON(path.join(ROOT, "data", "velocity_history.json"), {});
   const archive = readJSON(path.join(ROOT, "data", "velocity_archive.json"), {});
-  const accuracy = readJSON(path.join(ROOT, "data", "v1", "forecast-accuracy.json"), null);
-  const forecasts = readJSON(path.join(ROOT, "data", "v1", "forecasts.json"), null);
   if (!ledger || !Array.isArray(ledger.entries)) {
     console.error("[audit-batch2] ERROR: ledger unreadable");
     return 1;
@@ -97,17 +95,8 @@ function main() {
                 short.map(function (s) { return s.topic_id + "=" + s.in_window; })
                      .join(", "));
   }
-  const ready = accuracy && accuracy.resolution_readiness;
-  if (!ready) {
-    failures.push("forecast-accuracy.json carries no resolution_readiness");
-  } else if (ready.with_sufficient_data !== sufficient ||
-             ready.pending !== pending.length) {
-    failures.push("readiness mismatch: audit counts " + sufficient + "/" +
-                  pending.length + " ready, payload says " +
-                  ready.with_sufficient_data + "/" + ready.pending);
-  } else {
-    console.log("[audit-batch2] payload resolution_readiness matches the audit");
-  }
+  console.log("[audit-batch2] (readiness payload retired 2026-10-13 — " +
+              "audit count above stands on its own)");
 
   // 3) archive retention ---------------------------------------------------
   const ledgerCutoff = nowMs - R.MAX_LEDGER_AGE_D * 24 * 3600000;
@@ -142,14 +131,9 @@ function main() {
     const opens = Date.parse(e.forecast_at) + 24 * 3600000;
     if (gateMs === null || opens < gateMs) { gateMs = opens; }
   });
-  const decisiveNow = forecasts
-    ? forecasts.counts.peaking_48h + forecasts.counts.rising_fast +
-      forecasts.counts.cooling_off
-    : 0;
   console.log("[audit-batch2] batch-2 gate: first topics unlock at " +
               new Date(gateMs).toISOString() +
-              " (24h dedupe, per topic); topics decisive in the latest " +
-              "forecast build: " + decisiveNow +
+              " (24h dedupe, per topic)" +
               " — batch 2 forms gradually from the gate, it is not a " +
               "single drop, and a topic records only while decisive.");
 

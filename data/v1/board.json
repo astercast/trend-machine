@@ -27,7 +27,7 @@
     "makeable_shown": 7,
     "news_shown": 3
   },
-  "note": "392 phenomena from 393 tracked topics — \"6-7\" — Gen Alpha's defining brainrot joke + \"Six Seven\" (Seis Sete) funk dance read as one phenomenon (six-seven-meme). The full unfiltered record — every forecast, the Oracle, all 393 rows — stays one layer down: the desk below and data/v1/trends.json.",
+  "note": "392 phenomena from 393 tracked topics — \"6-7\" — Gen Alpha's defining brainrot joke + \"Six Seven\" (Seis Sete) funk dance read as one phenomenon (six-seven-meme). The full unfiltered record — all 393 rows — stays one layer down: the desk below and data/v1/trends.json.",
   "make_now": [
     {
       "rank": 1,
@@ -61,7 +61,7 @@
       "evidence": [
         "velocity 92/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "sources: Wikipedia + Lightreel",
         "#67",
         "#sixseven"
@@ -94,7 +94,7 @@
       "evidence": [
         "velocity 91/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "source: Game8",
         "#gta6",
         "#rockstar"
@@ -125,7 +125,7 @@
       "evidence": [
         "velocity 86/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "source: Revid",
         "#nba",
         "#basketball"
@@ -157,7 +157,7 @@
       "evidence": [
         "velocity 86/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 18 velocity snapshots",
         "source: SocialPilot",
         "#wefellinloveinoctober",
         "#octobermood"
@@ -190,7 +190,7 @@
       "evidence": [
         "velocity 85/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "source: Face of Malawi",
         "#nanapatekar",
         "#riplegend"
@@ -221,7 +221,7 @@
       "evidence": [
         "velocity 85/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 18 velocity snapshots",
         "source: SocialPilot",
         "#diponem",
         "#dancechallenge"
@@ -253,7 +253,7 @@
       "evidence": [
         "velocity 84/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 18 velocity snapshots",
         "source: SocialPilot",
         "#insomniac",
         "#lofi"
@@ -288,7 +288,7 @@
       "evidence": [
         "velocity 90/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "source: RedWaveFeed",
         "#trump",
         "#nobelprize"
@@ -321,7 +321,7 @@
       "evidence": [
         "velocity 88/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "source: NewsWatchmen",
         "#riyadh",
         "#middleeast"
@@ -354,7 +354,7 @@
       "evidence": [
         "velocity 81/100",
         "saturation low — lane uncrowded",
-        "holding steady across 8 snapshots",
+        "tracked across 21 velocity snapshots",
         "source: NewsWatchmen",
         "#hurricaneisaias",
         "#weather"

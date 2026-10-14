@@ -1,5 +1,12 @@
 # RESOLUTION_NIGHT.md — the first Oracle verdicts, published with zero improvisation
 
+> **RETIRED (2026-10-13):** the prediction layer this procedure served was
+> retired by the user's direct order — the Oracle, scorecard and
+> forecast-board surfaces are removed from the served site and the build,
+> and no verdicts will be published. This document stays in the repo as
+> the historical record of the plan; the executor machinery under
+> `scripts/` and `hidden_files/resolution_executor/` is archived, not run.
+
 The Oracle's first 286 forecasts resolve on **2026-10-14 (UTC)**. This is
 the exact procedure. The executable half is `scripts/resolution_night.sh`;
 this document is why each step exists, what numbers to expect, and what

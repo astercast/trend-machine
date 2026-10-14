@@ -6,7 +6,6 @@ Checks:
   - all N topics in trends.json pass the trend schema (N/341 baseline)
   - manifest (index.json) is self-consistent: every listed path/schema exists
   - flat-feed <-> dossier consistency (ids, counts)
-  - forecasts projections cover all topics
 
 Exit 0 when everything validates, 1 otherwise.
 """
@@ -176,132 +175,6 @@ def main():
                                    "flaky-warning") for s in sf.get("seeds", [])))
     else:
         print("[validate] seed-freshness.json absent (sweep not run) — not validated")
-
-    # wave 9: forecast-accuracy rich-dashboard fields (additive, honest)
-    fa_path2 = os.path.join(API, "forecast-accuracy.json")
-    if os.path.exists(fa_path2):
-        fa2 = load(fa_path2)
-        c2 = fa2.get("counts", {})
-        tl = fa2.get("upcoming_resolutions", [])
-        check("upcoming_resolutions sums to pending",
-              sum(r.get("pending", 0) for r in tl) == c2.get("pending", 0),
-              f"timeline={sum(r.get('pending', 0) for r in tl)} pending={c2.get('pending')}")
-        rp = fa2.get("recorded_per_day", [])
-        check("recorded_per_day sums to recorded",
-              sum(r.get("recorded", 0) for r in rp) == c2.get("recorded", 0),
-              f"activity={sum(r.get('recorded', 0) for r in rp)} recorded={c2.get('recorded')}")
-        bc = fa2.get("by_confidence", {})
-        check("by_confidence levels honest",
-              set(bc.keys()) <= {"high", "medium", "low"} and
-              all(set(v.keys()) == {"resolved", "hits"} for v in bc.values()))
-
-    fc_path = os.path.join(API, "forecasts.json")
-    if os.path.exists(fc_path):
-        fc = validate_doc("forecasts.json", fc_path, "forecasts.json")
-        check("forecasts projections cover all topics",
-              set(fc.get("projections", {}).keys()) == topic_ids,
-              f"missing={len(topic_ids - set(fc.get('projections', {}).keys()))}")
-        lists = (fc.get("peaking_48h", []) + fc.get("rising_fast", [])
-                 + fc.get("cooling_off", []) + fc.get("steady", []))
-        states_ok = all(
-            (r["id"] in fc["projections"] and fc["projections"][r["id"]]["state"] == r["state"])
-            for r in lists)
-        check("forecast lists match projections", states_ok)
-    else:
-        print("[validate] forecasts.json absent (node step skipped) — not validated")
-
-    fa_path = os.path.join(API, "forecast-accuracy.json")
-    if os.path.exists(fa_path):
-        fa = validate_doc("forecast-accuracy.json", fa_path, "forecast-accuracy.json")
-        c = fa.get("counts", {})
-        # wave 14: unverifiable is counted separately, never in the hit rate
-        check("accuracy counts consistent",
-              c.get("recorded", -1) == c.get("pending", -2) + c.get("resolved", -3)
-              + c.get("unverifiable", 0)
-              and c.get("hits", 999) <= c.get("resolved", -1),
-              f"counts={c}")
-        check("accuracy hit_rate honest",
-              (c.get("resolved", 0) >= 10 and fa.get("hit_rate") is not None) or
-              (c.get("resolved", 0) < 10 and fa.get("hit_rate") is None
-               and fa.get("status") == "building history"),
-              f"status={fa.get('status')} hit_rate={fa.get('hit_rate')} resolved={c.get('resolved')}")
-        check("accuracy verdicts honest enum",
-              all(r.get("verdict") in ("hit", "miss", "unverifiable")
-                  for r in fa.get("recent", [])),
-              "recent verdicts must be hit/miss/unverifiable")
-        check("every resolution carries its evidence",
-              all(isinstance(r.get("reason"), str) and r.get("reason")
-                  and isinstance(r.get("n_actual_points"), int)
-                  for r in fa.get("recent", [])),
-              "recent entries must carry reason + n_actual_points")
-        # wave 18: readiness + coverage evidence, computed from real data
-        rd = fa.get("resolution_readiness", {})
-        check("resolution readiness sums to pending",
-              rd.get("pending", -1) == c.get("pending", -2)
-              and rd.get("with_sufficient_data", -1)
-              + rd.get("awaiting_data", -2) == rd.get("pending", -3),
-              f"readiness={rd} pending={c.get('pending')}")
-        check("next_resolution_at consistent with the queue",
-              (c.get("pending", 0) == 0 and fa.get("next_resolution_at") is None)
-              or (c.get("pending", 0) > 0
-                  and isinstance(fa.get("next_resolution_at"), str)
-                  and fa["next_resolution_at"][:10]
-                  == (fa.get("upcoming_resolutions") or [{}])[0].get("date")),
-              f"next={fa.get('next_resolution_at')} "
-              f"upcoming={fa.get('upcoming_resolutions')}")
-        check("resolution coverage evidence sane",
-              all(r.get("window_coverage_hours") is None
-                  or 0 <= r["window_coverage_hours"] <= 48
-                  for r in fa.get("recent", [])),
-              "coverage must be null (pre-wave-18) or within the 48h window")
-    else:
-        print("[validate] forecast-accuracy.json absent (node step skipped) — not validated")
-
-    # wave 27: oracle-board.json — schema + ledger consistency, honest states
-    ob_path = os.path.join(API, "oracle-board.json")
-    if os.path.exists(ob_path):
-        ob = validate_doc("oracle-board.json", ob_path, "oracle-board.json")
-        oc = ob.get("counts", {})
-        entries = ob.get("entries", [])
-        check("oracle-board counts reconcile",
-              oc.get("recorded", -1) == len(entries)
-              and oc.get("recorded", -2) == oc.get("pending", -3)
-              + oc.get("resolved", -4) + oc.get("unverifiable", -5)
-              and oc.get("hits", 999) <= oc.get("resolved", -1),
-              f"counts={oc} entries={len(entries)}")
-        check("oracle-board readiness sums to pending",
-              oc.get("ready", -1) + oc.get("short", -2) == oc.get("pending", -3),
-              f"ready={oc.get('ready')} short={oc.get('short')} pending={oc.get('pending')}")
-        check("oracle-board status + hit_rate match the scorecard contract",
-              (ob.get("status") == "live" and oc.get("hit_rate") is not None)
-              or (ob.get("status") == "building history"
-                  and oc.get("hit_rate") is None),
-              f"status={ob.get('status')} hit_rate={oc.get('hit_rate')}")
-        check("oracle-board entries honest",
-              all(e.get("status") in ("pending", "hit", "miss", "unverifiable")
-                  and (e.get("status") == "pending") == (e.get("verdict") is None)
-                  and e.get("trajectory_n") == len(e.get("trajectory", []))
-                  and e.get("window", {}).get("ready")
-                  == (e.get("window", {}).get("n_actual_points", 0) >= 2)
-                  for e in entries),
-              "pending <=> no verdict; trajectory_n matches; ready <=> 2+ actuals")
-        check("oracle-board windows + trajectories are real stored points",
-              all(e.get("due_at", "")[:10] >= e.get("forecast_at", "")[:10]
-                  and all(isinstance(p, list) and len(p) == 2
-                          and isinstance(p[0], str)
-                          and isinstance(p[1], (int, float))
-                          for p in e.get("trajectory", []))
-                  and [p[0] for p in e.get("trajectory", [])]
-                  == sorted(p[0] for p in e.get("trajectory", []))
-                  for e in entries),
-              "trajectory points are [iso, number] pairs, ascending")
-        check("oracle-board due_per_day sums to pending",
-              sum(r.get("pending", 0) for r in ob.get("due_per_day", []))
-              == oc.get("pending", 0),
-              f"due={sum(r.get('pending', 0) for r in ob.get('due_per_day', []))} "
-              f"pending={oc.get('pending')}")
-    else:
-        print("[validate] oracle-board.json absent (node step skipped) — not validated")
 
     # wave 28: live-wire.json — schema + lane/mover honesty vs stored outputs
     lw_path = os.path.join(API, "live-wire.json")
@@ -500,11 +373,8 @@ def main():
               "static snapshot" in (_region("tablemeta") or ""))
         for _fname, _marker in [("assets/js/app.js", "armWatchdog"),
                                 ("assets/js/makeover.js", "withDeadline"),
-                                ("assets/js/oracle.js", "deadline"),
                                 ("live-wire.html", "deadline"),
-                                ("streamer-desk.html", "deadline"),
-                                ("oracle-board.html", "deadline"),
-                                ("forecast-accuracy.html", "deadline")]:
+                                ("streamer-desk.html", "deadline")]:
             _src = open(os.path.join(ROOT, _fname)).read()
             check(f"vp0001 loading deadline wired in {_fname}",
                   _marker in _src and "VP-0001" in _src)

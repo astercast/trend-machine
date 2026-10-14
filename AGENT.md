@@ -84,57 +84,17 @@ When you need the raw series, `data/v1/velocity.json` (all platforms) and
 **3. Hashtag index — `data/v1/hashtags.json`**
 `{generated_at, tags: {"#tag": [topic-id, ...]}}` — reverse lookup.
 
-**4. Oracle input — `data/v1/velocity.json`**
+**4. Velocity snapshots — `data/v1/velocity.json`**
 `{topic-id: [[iso_ts, velocity, opportunity], ...]}` — hourly velocity
 snapshots per topic, ascending by time. Classify them with
 `assets/js/trajectory.js` (UMD — `require()` it in node) into
 `accelerating | rising | peaking | fading | steady | insufficient`.
-
-**5. Oracle output — `data/v1/forecasts.json`**
-Precomputed trajectory classifications from the same classifier the
-dashboard uses: `peaking_48h[]`, `rising_fast[]`, `cooling_off[]`,
-`steady[]`, plus `projections` keyed by topic id. Each record carries
-`state, n_snapshots, latest_velocity, slope_per_hour, accel,
-peak_in_hours, summary, label` — plus (wave 6, additive): `confidence`
-(`level` high/medium/low + `basis` naming the evidence: snapshot count
-and R² fit quality — never a probability of being right), `signals`
-(the "why this is peaking" attribution: `velocity_delta`,
-`slope_per_hour`, `accel`, `recency_hours`, `platform_spread`,
-`platforms`, and `drivers` — the classifier thresholds that fired), and
-`per_platform` (each platform's own trajectory where it has 3+
-snapshots; thinner series get the honest `insufficient` label). The
-`label` is always the honest one: "Projection from N snapshots — not a
-guarantee."
 
 **5b. Per-platform input — `data/v1/platform-velocity.json`** (wave 6)
 `{topic-id: {platform: [[iso_ts, velocity], ...]}}` — per-platform
 hourly velocity series. Starting points: series begin empty and build
 one snapshot per refresh; treat missing/thin series as "still building
 history", never a guess.
-
-**5c. Oracle scorecard — `data/v1/forecast-accuracy.json`** (wave 6; wave 9: full dashboard page)
-The Oracle's own forecast-vs-actual log: decisive forecasts recorded in
-`data/forecast_ledger.json` and scored hit/miss after a 48h horizon
-(same ±1.5/hr thresholds the classifier uses). `status` stays
-`"building history"` with `hit_rate: null` until 10+ forecasts resolve —
-the log starts 2026-10-11, nothing backfilled. Wave 9 adds
-`upcoming_resolutions[]` (pending forecasts grouped by the day their 48h
-horizon lands — a queue schedule, not a prediction), `recorded_per_day[]`
-(the ledger's own pulse), and `by_confidence` (hit rate by the confidence
-level claimed at forecast time; rows read "awaiting data" until that level
-has 10+ resolved). Wave 18 adds `next_resolution_at` (exact time the
-oldest pending forecast crosses its horizon), `resolution_readiness`
-(pending forecasts split by whether their window already holds the 2+
-actual snapshots a decisive verdict needs), and per-resolution coverage
-evidence on `recent[]` (`actual_first_ts` / `actual_last_ts` /
-`window_coverage_hours`, plus `topic_live` — false when the topic has
-left the board and its dossier is gone). Grading reads the live velocity
-store merged with `data/velocity_archive.json` — the series of topics
-that churned out of the store before their horizon (see PIPELINE.md);
-the public velocity/forecast payloads stay store-scoped. Human-readable
-at `forecast-accuracy.html`. Resolution procedure: `RESOLUTION_NIGHT.md`
-(runner `scripts/resolution_night.sh` — `--run` refuses before
-`next_resolution_at`; never grade a forecast before its 48h horizon).
 
 **5d. Meme format families — `data/v1/meme-formats.json`** (wave 9)
 The tracked meme format families: hand-curated from Oct-2026 web research
@@ -151,7 +111,7 @@ ranks families by tracked-topic opportunity (the format leaderboard).
 **6. Schemas — `data/v1/schema/`**
 Draft-07 for every endpoint: `trends.json`, `trends-flat.json`,
 `trends-flat-sample.json`, `hashtags.json`, `velocity.json`,
-`platform-velocity.json`, `forecast-accuracy.json`, `forecasts.json`,
+`platform-velocity.json`,
 `meme-formats.json`, `trend.json` (one dossier), `seed-freshness.json` (wave 14:
 seed-staleness audit — verdicts healthy / stale-source / stale-untracked /
 flaky-warning per seeded topic), `lifecycle.json` (wave 17: ignition/burnout
@@ -223,35 +183,7 @@ Day 7  Costume reveal timed to the Ramalama drop      + "Wait for the reveal"
 The same plan is one click in the dashboard: any topic dossier has a
 "7-day battle plan" button (launch-plan.html).
 
-### Workflow 3 — What's peaking in the next 48h
-
-Goal: catch trends at their crest, not after it.
-
-1. `GET data/v1/forecasts.json`.
-2. Read `peaking_48h[]` — each record has `peak_in_hours` (hours until
-   the projected crest; `null` = no peak projected in the window),
-   `latest_velocity`, `slope_per_hour`, and the honest `label`.
-3. `rising_fast[]` is your "post today" list; `cooling_off[]` is the
-   "only with a retrospective angle" list.
-4. If all three lists are empty, check `counts.insufficient` — the
-   Oracle needs 3+ hourly snapshots per topic before it forecasts.
-   That's the honest fallback, not missing data: come back after the
-   next refreshes.
-
-Fallback (no forecasts.json — e.g. an older snapshot): load
-`data/v1/velocity.json` and classify locally:
-
-```js
-const T = require('./assets/js/trajectory.js');
-const hist = require('./data/v1/velocity.json');
-for (const [id, pts] of Object.entries(hist)) {
-  const a = T.analyze(pts);
-  if (a.state === 'peaking' && a.peakInHours <= T.PEAK_WINDOW_H)
-    console.log(id, 'peaks in ~' + a.peakInHours.toFixed(1) + 'h —', a.label);
-}
-```
-
-### Workflow 4 — Everything riding one hashtag
+### Workflow 3 — Everything riding one hashtag
 
 Goal: find every topic a hashtag touches.
 
@@ -260,7 +192,7 @@ Goal: find every topic a hashtag touches.
 2. Join against `data/v1/trends.json` dossiers for titles, scores,
    and angles. Sort by `opportunity_score` desc.
 
-### Workflow 5 — Weave 2–5 trends into one battle week
+### Workflow 4 — Weave 2–5 trends into one battle week
 
 Goal: a single 7-day campaign across multiple trends, exportable and
 trackable against reality.
@@ -283,8 +215,7 @@ trackable against reality.
    it freezes opportunity, velocity, trajectory state, and the newest
    forecast-ledger reference (`findLedgerRef`) at plan time.
 5. Later, compare `snapshot.topics[].velocity` against the current
-   `data/velocity_history.json` and the ledger record's outcome on
-   `forecast-accuracy.html` — that's the plan-vs-reality check-in.
+   `data/velocity_history.json` — that's the plan-vs-reality check-in.
 
 ## Rates, expectations, and honesty rules
 
@@ -305,9 +236,11 @@ trackable against reality.
 - **Topic figures are reported ranges, not exacts.** Velocities and
   opportunity scores are 0–100 indices computed from corroboration
   count, recency decay, and hashtag breadth — directional, not precise.
-- **Forecasts are projections.** Every Oracle output is labeled
-  "projection from N snapshots — not a guarantee." Topics with <3
-  snapshots get no forecast rather than a guess.
+- **No predictions.** The Oracle forecast layer was retired on
+  2026-10-13 by direct order: the site tracks ongoing hype (current
+  velocity, opportunity, lifecycle stage readouts) and makes no
+  forward calls. The forecast ledger stays in the repo as an
+  archived record (`data/forecast_ledger.json`), unlinked.
 - **Stale means cooling.** `stale:true` = no corroboration in 72h+.
   Cover only with a retrospective angle.
 - **No auth, no keys, no rate limits** — but be a good citizen: fetch
@@ -318,8 +251,7 @@ trackable against reality.
 
 Six content skills ship in `skills/` (`trend-spotting`,
 `velocity-reading`, `remix-ideation`, `angle-generation`,
-`hashtag-research`, `launch-planning`) plus `forecast-reader` (Oracle
-trajectories) — each a standalone playbook in the standard format. Pair
-them with the workflows above: workflow 1 → `remix-ideation`, workflow
-2 → `launch-planning` (and `angle-generation`), workflow 3 →
-`forecast-reader`, workflow 4 → `hashtag-research`.
+`hashtag-research`, `launch-planning`) — each a standalone playbook
+in the standard format. Pair them with the workflows above:
+workflow 1 → `remix-ideation`, workflow 2 → `launch-planning`
+(and `angle-generation`), workflow 3 → `hashtag-research`.

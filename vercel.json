@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "python3 scripts/build_site.py && node scripts/build_forecasts.js",
+  "buildCommand": "python3 scripts/build_site.py",
   "cleanUrls": true,
   "crons": [
     {
@@ -19,9 +19,6 @@
       "maxDuration": 10
     },
     "api/trends.js": {
-      "maxDuration": 10
-    },
-    "api/forecasts.js": {
       "maxDuration": 10
     },
     "api/velocity.js": {

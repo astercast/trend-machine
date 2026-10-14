@@ -110,4 +110,5 @@ Rules (all unit-tested in `scripts/test_launch_battle.js`):
   `localStorage` (`tm_plans_v1`, 12 most recent); "Check progress"
   compares plan-time velocity against the live
   `data/velocity_history.json` and links the topic's ledger record to
-  the forecast-accuracy scorecard.
+  the archived forecast ledger record (the scorecard page retired
+  with the prediction layer on 2026-10-13).

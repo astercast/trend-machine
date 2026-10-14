@@ -15,9 +15,9 @@ const VERSION = "1.0.0";
 const SLA_S = 86400; // §7.2 freshness SLA: 24h
 
 const STARTED_AT = envelope.nowIso();
-const FUNCTIONS = ["health", "trends", "forecasts", "velocity", "cron/wire"];
+const FUNCTIONS = ["health", "trends", "velocity", "cron/wire"];
 const DEPS = ["data/v1/trends.json", "data/v1/trends.flat.json",
-              "data/v1/forecasts.json", "data/v1/velocity.json"];
+              "data/v1/velocity.json"];
 
 function readDep(name) {
   // Prefer the GitHub read when the commit-back token is configured

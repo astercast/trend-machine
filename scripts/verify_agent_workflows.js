@@ -1,10 +1,14 @@
 /* ============================================================
    TREND MACHINE — verify_agent_workflows.js (wave 5, wave 7: passes trend_type)
-   Executes the 3 end-to-end workflows from AGENT.md against the
+   Executes the end-to-end workflows from AGENT.md against the
    REAL local api/v1 JSON files and asserts they work.
 
    Run: node scripts/verify_agent_workflows.js
-   Exit 0 = all three workflows proven working.
+   Exit 0 = all workflows proven working.
+
+   Retirement (2026-10-13): the former Workflow 3 ("peaking in the
+   next 48h") ran on the retired forecast payload and was removed
+   with the prediction layer — Workflows 1 and 2 are what remain.
    ============================================================ */
 "use strict";
 const fs = require("fs");
@@ -62,36 +66,5 @@ assert(plan.days[0].day === 1 && plan.days[6].day === 7, "days 1..7 in order");
 console.log("   day 1: \"" + plan.days[0].angle.slice(0, 50) + "\" / \"" + plan.days[0].hook + "\"");
 console.log("   day 7: \"" + plan.days[6].angle.slice(0, 50) + "\" / \"" + plan.days[6].hook + "\"");
 
-console.log("== Workflow 3: peaking in the next 48h ==");
-const fcPath = path.join(API, "forecasts.json");
-assert(fs.existsSync(fcPath), "forecasts.json exists");
-if (fs.existsSync(fcPath)) {
-  const fc = read(fcPath);
-  assert(Array.isArray(fc.peaking_48h), "peaking_48h list present");
-  assert(typeof fc.counts.insufficient === "number", "counts.insufficient present");
-  const honest = fc.peaking_48h.concat(fc.rising_fast, fc.cooling_off, fc.steady)
-    .every(r => /not a guarantee/.test(r.label));
-  assert(honest, "every forecast carries the honest label");
-  const inWindow = fc.peaking_48h.every(r => r.peak_in_hours === null || r.peak_in_hours <= 48);
-  assert(inWindow, "peaking list within the 48h window");
-  // Independent recompute: classify velocity.json with the real classifier
-  // and confirm the same topics land in the peaking bucket.
-  const T = require("../assets/js/trajectory.js");
-  const hist = read(path.join(API, "velocity.json"));
-  const recomputed = Object.keys(hist).filter(id => {
-    const a = T.analyze(hist[id]);
-    return a.state === "peaking" && a.peakInHours <= T.PEAK_WINDOW_H;
-  });
-  const served = new Set(fc.peaking_48h.map(r => r.id));
-  const match = recomputed.every(id => served.has(id)) &&
-                fc.peaking_48h.every(r => recomputed.includes(r.id));
-  assert(match, "forecasts.json matches an independent trajectory.js recompute",
-    { recomputed: recomputed.length, served: fc.peaking_48h.length });
-  console.log("   peaking_48h=" + fc.peaking_48h.length +
-    " rising=" + fc.rising_fast.length +
-    " cooling=" + fc.cooling_off.length +
-    " insufficient=" + fc.counts.insufficient);
-}
-
-console.log(failed ? "\nRESULT: " + failed + " FAILURES" : "\nRESULT: all 3 workflows proven working");
+console.log(failed ? "\nRESULT: " + failed + " FAILURES" : "\nRESULT: all workflows proven working");
 process.exit(failed ? 1 : 0);

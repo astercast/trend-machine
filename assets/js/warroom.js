@@ -6,11 +6,16 @@
    Data (all real, all from the pipeline):
      data/v1/forecasts.json        — contact lists + projections
      data/velocity_history.json   — real past snapshot trails
-     data/v1/forecast-accuracy.json — resolution queue countdowns
 
    Pure geometry lives in warroom-lib.js (unit-tested). This file is the
    DOM layer: SVG scope + HTML blips, the sweep cursor, pings, LEDs,
-   mission clock, contacts table, resolution queue.
+   mission clock, contacts table.
+
+   Retirement note (2026-10-13): the scorecard payload and the
+   resolution queue that read it were retired with the prediction
+   layer; the queue panel and its countdowns are gone from this file.
+   (This DOM layer's only host page was retired at the same time; the
+   pure geometry lib and its tests remain.)
 
    Honesty contract: blip/trajectory POSITIONS are data. The sweep and
    pings are illustrative motion only and are labeled as such.
@@ -22,7 +27,6 @@
 
   var FORECASTS_URL = "data/v1/forecasts.json";
   var HIST_URL = "data/velocity_history.json"; // same URL oracle.js uses
-  var ACC_URL = "data/v1/forecast-accuracy.json";
   var LIFE_URL = "data/v1/lifecycle.json"; // wave 17, best-effort
 
   var SWEEP_PERIOD_MS = 14000;
@@ -301,8 +305,6 @@
       " · " + esc(generatedAt.slice(0, 16).replace("T", " ")) + "Z</span>" +
       '<span class="wr-led ' + (sweepOn ? "wr-led-ok wr-blink" : "wr-led-hold") + '"><i></i>' +
       (sweepOn ? "SWEEP ACTIVE" : "SWEEP HOLD · reduced motion") + "</span>" +
-      '<span class="wr-led wr-led-warn"><i></i>RESOLUTIONS · ' +
-      (counts.pending || 0) + " pending · " + (counts.resolved || 0) + " resolved</span>" +
       '<span class="wr-led wr-led-ok"><i></i>CONTACTS · ' +
       (counts.peaking || 0) + " peaking · " + (counts.rising || 0) + " rising · " +
       (counts.cooling || 0) + " cooling</span>" +
@@ -408,29 +410,6 @@
       "newest.</p></div>";
   }
 
-  /* ---------- resolution queue ---------- */
-
-  function queueHTML(acc) {
-    if (!acc || !acc.upcoming_resolutions || !acc.upcoming_resolutions.length) {
-      return '<p class="wr-queue-empty">No resolution windows on the board yet.</p>';
-    }
-    var nowMs = Date.now();
-    var rows = acc.upcoming_resolutions.map(function (u) {
-      var closeMs = Date.parse(u.date + "T00:00:00Z");
-      var cd = W.countdown(closeMs - nowMs);
-      return '<div class="wr-queue-row"><span class="wr-queue-date num">' +
-        esc(u.date) + '</span><span class="wr-queue-n num">' + u.pending +
-        ' forecasts come due</span><span class="wr-queue-cd">' + esc(cd) + "</span></div>";
-    }).join("");
-    var c = acc.counts || {};
-    return '<div class="wr-queue" role="list" aria-label="Forecast resolution queue">' +
-      rows + "</div>" +
-      '<p class="wr-queue-note">Each forecast is judged against the actual ' +
-      "velocity 48h after recording: hit, miss, or unverifiable. " +
-      (c.recorded || 0) + " recorded · " + (c.resolved || 0) + " resolved · " +
-      '<a href="forecast-accuracy.html">open the full scorecard →</a></p>';
-  }
-
   /* ---------- init ---------- */
 
   function fail(msg, retry) {
@@ -459,10 +438,10 @@
       return null;
     });
 
-    Promise.all([getJSON(FORECASTS_URL), getJSON(HIST_URL), getJSON(ACC_URL), lifeP])
+    Promise.all([getJSON(FORECASTS_URL), getJSON(HIST_URL), lifeP])
       .then(function (res) {
-        var fc = res[0], hist = res[1] || {}, acc = res[2] || null;
-        var life = res[3];
+        var fc = res[0], hist = res[1] || {};
+        var life = res[2];
         if ((!life || !life.topics) && LC) {
           var s = LC.summarize(hist, Date.now());
           life = { generated_at: new Date().toISOString(), counts: s.counts,
@@ -487,8 +466,6 @@
           peaking: (fc.peaking_48h || []).length,
           rising: (fc.rising_fast || []).length,
           cooling: (fc.cooling_off || []).length,
-          pending: acc && acc.counts ? acc.counts.pending : 0,
-          resolved: acc && acc.counts ? acc.counts.resolved : 0,
           // wave 17: the wire's own health, straight from the snapshot store
           topics: Object.keys(hist).length,
           snapshots: Object.keys(hist).reduce(function (n, k) {
@@ -521,8 +498,7 @@
           (reduced ? "motion is off for you, and nothing is hidden: " : "") +
           "the full numbers are in the table below.</p>" +
           lifecycleBoardHTML(life) +
-          '<h3 class="wr-sub">Contacts on scope</h3>' + contactsTable(contacts, life) +
-          '<h3 class="wr-sub">Resolution queue</h3>' + queueHTML(acc);
+          '<h3 class="wr-sub">Contacts on scope</h3>' + contactsTable(contacts, life);
 
         missionClock(fc.generated_at || "");
         if (!reduced) { startSweep(root, contacts, sc); }

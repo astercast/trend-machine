@@ -27,23 +27,17 @@ culture, entertainment, gaming, meme, music, news, sports, streaming, tech
 - [data/v1/index.json](data/v1/index.json) — manifest: every endpoint with description, schema URL, updated timestamp, record counts
 - [data/v1/trends.json](data/v1/trends.json) — all topics, full dossiers
 - [data/v1/trends.flat.json](data/v1/trends.flat.json) — flat opportunity-ranked feed (stale excluded)
-- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic (Oracle input)
-- [data/v1/forecasts.json](data/v1/forecasts.json) — precomputed 48h trajectory forecasts (Oracle output: confidence basis, signal attribution, per-platform trajectories)
+- [data/v1/velocity.json](data/v1/velocity.json) — hourly velocity snapshots per topic
 - [data/v1/platform-velocity.json](data/v1/platform-velocity.json) — per-platform hourly velocity series (per-platform trajectories input)
-- [data/v1/forecast-accuracy.json](data/v1/forecast-accuracy.json) — the Oracle's own forecast-vs-actual scorecard (building history; hit rate appears after 10+ forecasts resolve)
-- [data/v1/oracle-board.json](data/v1/oracle-board.json) — the Oracle Board: every recorded forecast with its stored trajectory, 48h window state (ready/short), and verdict when one exists
 - [data/v1/live-wire.json](data/v1/live-wire.json) — the Live Wire: every pipeline lane with its recorded hit count + health (live/degraded/stale-skip/skip-by-design) and the hour's top movers from stored snapshots only
 - [data/v1/streamer-desk.json](data/v1/streamer-desk.json) — the Streamer Desk: sourced streamer directory, dated updates, multi-source-verified drama timelines, houses with dated rosters, events calendar
-- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the Oracle's ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)
+- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)
 - [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links
 - [data/v1/hashtags.json](data/v1/hashtags.json) — tag index
 - [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint
 - [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)
 
-## Oracle (flagship)
-- [oracle.html](oracle.html) — 48h peak forecasts: projections from hourly velocity snapshots, honestly labeled; forecasts unlock after 3 snapshots per topic
-- [forecast-accuracy.html](forecast-accuracy.html) — the Oracle's own scorecard: per-horizon accuracy, by-call breakdown, recent resolutions, current 48h projections; hit rate appears only after 10+ forecasts resolve (honest 'building history' before that)
-- [oracle-board.html](oracle-board.html) — the Oracle Board: a forecast-explorer over the ledger — every recorded call with its real stored trajectory, window readiness, and (after Resolution Night) its verdict
+## Pages
 - [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only
 - [streamer-desk.html](streamer-desk.html) — the Streamer Desk: streamer directory, dated updates, multi-source-verified drama timelines (unverified quarantined), houses with dated rosters, events calendar
 - [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join

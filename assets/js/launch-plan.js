@@ -8,7 +8,10 @@
    rotation, each trend keeps its own pacing).
    Exports: copy-as-text, download .md / .json, print. Saved plans
    (localStorage) support plan-vs-reality check-ins against
-   data/velocity_history.json + the forecast ledger.
+   data/velocity_history.json + the archived forecast ledger
+   (data/forecast_ledger.json — a frozen record since the prediction
+   layer retired on 2026-10-13; the scorecard page it linked to is
+   gone, and the ledger reference now renders as plain provenance).
    ============================================================ */
 (function () {
   "use strict";
@@ -60,9 +63,8 @@
     var status = ref.resolved
       ? "resolved" + (ref.hit === true ? " — hit" : ref.hit === false ? " — miss" : "")
       : "resolves ~48h after recording";
-    return '<span class="provenance">Oracle ledger: <strong>' + esc(ref.state || "—") +
-      "</strong> recorded " + when + " UTC · " + esc(status) +
-      ' · <a href="forecast-accuracy.html">scorecard</a></span>';
+    return '<span class="provenance">Archived ledger: <strong>' + esc(ref.state || "—") +
+      "</strong> recorded " + when + " UTC · " + esc(status) + "</span>";
   }
 
   function tipBox(tip) {
@@ -227,7 +229,7 @@
     storeSaved(list.slice(0, 12)); // cap: keep the 12 most recent
     renderSaved();
     var s = document.getElementById("plan-save-status");
-    if (s) { s.textContent = "Plan saved — check back after the forecast window to compare against reality."; }
+    if (s) { s.textContent = "Plan saved — check back later to compare its velocities against reality."; }
   }
 
   function latestVelocity(id) {
@@ -249,9 +251,9 @@
       var cls = delta == null ? "" : (delta > 0 ? "up" : delta < 0 ? "down" : "flat");
       var ref = t.ledger_ref;
       var refNote = ref
-        ? "Oracle: " + ref.state + " (recorded " + String(ref.forecast_at).slice(0, 16).replace("T", " ") +
+        ? "Archived ledger: " + ref.state + " (recorded " + String(ref.forecast_at).slice(0, 16).replace("T", " ") +
           " UTC" + (ref.resolved ? ", resolved" + (ref.hit === true ? " — hit" : ref.hit === false ? " — miss" : "") : ", ~48h window") + ")"
-        : "no Oracle forecast recorded at plan time";
+        : "no archived ledger record at plan time";
       return '<div class="checkin-row">' +
         '<span class="checkin-title">' + esc(t.title) + "</span>" +
         '<span class="checkin-vel num ' + cls + '">' + arrow + " " +
@@ -262,8 +264,7 @@
     host.innerHTML = '<div class="checkin-result" role="status">' +
       '<p><strong>Plan-vs-reality check</strong> — velocity at plan time vs now:</p>' +
       rows +
-      '<p class="provenance">Compare against the Oracle\'s recorded forecasts on the ' +
-      '<a href="forecast-accuracy.html">scorecard</a>. ' +
+      '<p class="provenance">Ledger references are the archived record frozen at plan time. ' +
       "Saved " + esc(String(snap.generated_at).slice(0, 16).replace("T", " ")) + " UTC.</p></div>";
     host.hidden = false;
     btn.disabled = false;

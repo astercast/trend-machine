@@ -10,12 +10,14 @@ Pins the shape of the adoption so a later edit cannot quietly break it:
   3. Single source: no other stylesheet re-declares @view-transition.
   4. Every page loads base.css, so the opt-in is genuinely site-wide
      (root pages + the generated dossiers + 404.html).
-  5. Same-document discipline: the three existing startViewTransition
-     call sites (scorecard, formats, launch-plan) each carry both
+  5. Same-document discipline: the two existing startViewTransition
+     call sites (formats, launch-plan) each carry both
      canonical gates — the feature detect and the reduced-motion
      check — and NO other JS/HTML file uses startViewTransition
-     (the live board / Live Wire / Streamer Desk / Oracle Board
+     (the live board / Live Wire / Streamer Desk
      fetch-renders stay direct swaps; WAVELOG wave 35 records why).
+     (The third wave-35 call site was the retired scorecard page,
+     removed with the prediction layer on 2026-10-13.)
   6. No view-transition-name shared-element pairings anywhere except
      the launch-plan plan-grid pairing that predates this wave
      (wave10.css, itself inside the no-preference guard).
@@ -94,8 +96,8 @@ pages = (glob.glob(os.path.join(ROOT, "*.html")) +
 missing = [os.path.relpath(p, ROOT) for p in pages if "assets/css/base.css" not in read(os.path.relpath(p, ROOT))]
 check(f"all {len(pages)} pages load base.css", not missing, str(missing[:5]))
 
-# 5 — same-document call sites: exactly the three known, both gates each
-allowed = {"forecast-accuracy.html", "formats.html", "assets/js/launch-plan.js"}
+# 5 — same-document call sites: exactly the two known, both gates each
+allowed = {"formats.html", "assets/js/launch-plan.js"}
 found = {}
 for path in (glob.glob(os.path.join(ROOT, "*.html")) +
              glob.glob(os.path.join(ROOT, "assets/js/*.js"))):
@@ -103,7 +105,7 @@ for path in (glob.glob(os.path.join(ROOT, "*.html")) +
     text = read(rel)
     if "startViewTransition" in text:
         found[rel] = text
-check("startViewTransition only at the three known call sites",
+check("startViewTransition only at the two known call sites",
       set(found) == allowed, str(sorted(found)))
 for rel, text in sorted(found.items()):
     check(f"{rel}: feature detect present",

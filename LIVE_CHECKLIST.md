@@ -7,11 +7,11 @@ user "push"/"ship it" — never from wave-engine automation.
 
 ## Live repo contents (snapshot of 2026-10-11)
 
-- Static frontend at repo root: `index.html`, `oracle.html`, `formats.html`,
-  `launch-plan.html`, `algorithms.html`, `forecast-accuracy.html`,
+- Static frontend at repo root: `index.html`, `formats.html`,
+  `launch-plan.html`, `algorithms.html`,
   `api-docs.html`, `topics/*.html` (393 topic pages)
 - Static data fallback: `data/v1/` (trends.json, trends.flat.json,
-  forecasts.json, forecast-accuracy.json, velocity.json,
+  velocity.json,
   platform-velocity.json, hashtags.json, meme-formats.json, seed-freshness.json,
   schema/, manifest index.json), `static/v1/trends.flat.js` (JSONP twin —
   public URL `/api/v1/trends.flat.js` via `vercel.json` rewrite), `assets/`,
@@ -30,8 +30,7 @@ user "push"/"ship it" — never from wave-engine automation.
   1. `GET /api/health` — status + data-freshness SLA checks; never 5xx
   2. `GET /api/trends` — opportunity-ranked trends (?limit=, ?platform=)
   3. `GET /api/velocity` — per-topic 30-day snapshots (?topic_id=)
-  4. `GET /api/forecasts` — precomputed Oracle trajectories
-  5. `GET /api/cron/wire` — The Wire daily heartbeat (cron only)
+  4. `GET /api/cron/wire` — The Wire daily heartbeat (cron only)
 - **Vercel functions entries need ≥1 valid property — use `{"maxDuration": 10}`
   per explicit function path; never set `runtime` for Node (omit it); never
   broad globs** (2026-10-12: `nodejs22.x` then `nodejs20.x` both failed build
@@ -50,7 +49,7 @@ a basename-without-extension in one dir (`trends.flat.js` + `trends.flat.json`)
 fail the build with "conflicting paths or names" (this killed the
 trend-machine-live deploy on 2026-10-12). So: (1) the static JSONP twin moved
 to `static/v1/trends.flat.js` with a `rewrites` entry preserving the public
-`/data/v1/trends.flat.js` URL; (2) the `functions` map keeps the 5 real paths
+`/data/v1/trends.flat.js` URL; (2) the `functions` map keeps the 4 real paths
 explicit (never broad globs). Each entry carries `{"maxDuration": 10}` (10s
 Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 `nodejs20.x`, and empty `{}` — 2026-10-12 lessons above).
@@ -59,7 +58,7 @@ Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 
 | path | schedule | notes |
 |---|---|---|
-| `/api/cron/wire` | `0 13 * * *` UTC | bounded refresh: 7 keyless sources in parallel (4000ms/source), velocity + forecast recompute from real snapshots; commits back only on real change; **read-only until GITHUB_REPO_TOKEN is set** |
+| `/api/cron/wire` | `0 13 * * *` UTC | bounded refresh: 7 keyless sources in parallel (4000ms/source), velocity snapshots + trends/flat rebuild from real snapshots; commits back only on real change; **read-only until GITHUB_REPO_TOKEN is set** |
 
 ## Env vars (Vercel project settings)
 
@@ -73,12 +72,12 @@ Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 
 ## Known-good status (2026-10-11, pre-push verification)
 
-- Build: `scripts/build_site.py` + `scripts/build_forecasts.js` exit 0
-  (393 topic pages, 12-endpoint manifest, forecasts peaking=5/rising=5/cooling=3)
+- Build: `scripts/build_site.py` exit 0
+  (393 topic pages, endpoint manifest)
 - 10 fetcher outputs sane (all parse; reddit.json empty list)
 - All 25 `api/v1` JSON files parse; link check exit 0 (6014 internal, 0 broken;
   external timeouts are warnings only)
-- `vercel.json` valid JSON; 5 functions ≤ 12; explicit paths (JSONP file excluded)
+- `vercel.json` valid JSON; 4 functions ≤ 12; explicit paths (JSONP file excluded)
 - Function harness: 4 GET endpoints → HTTP 200 envelopes from bundled files;
   wire → 401 fail-closed without CRON_SECRET
 - Standard builds only (Turbo never — Sept 2026 invoice lesson)
@@ -98,7 +97,7 @@ treated as the fleet's health model.
 
 ### Function count vs the ≤12 cap
 
-**5 functions** (cap 12, headroom 7), all explicit paths in
+**4 functions** (cap 12, headroom 8), all explicit paths in
 `vercel.json`, each `{"maxDuration": 10}`, no `runtime` key anywhere:
 
 | function | kind | work per call |
@@ -106,7 +105,6 @@ treated as the fleet's health model.
 | `api/health.js` | GET | reads bundled JSON stamps, SLA verdicts; never 5xx |
 | `api/trends.js` | GET | serves one precomputed file (bundle, or GitHub Contents when a token is set) |
 | `api/velocity.js` | GET | same pattern, per-topic filter |
-| `api/forecasts.js` | GET | same pattern |
 | `api/cron/wire.js` | cron only | the daily heartbeat (below) |
 
 Wave 29's Streamer Desk added **zero functions**: it is a precomputed
@@ -125,21 +123,21 @@ consumers, health checks, and the one cron:
 |---|---|---|
 | cron wire | 1/day (`0 13 * * *`) | ~31 |
 | health | assumed 10 checks/day | ~300 |
-| GET APIs (trends/velocity/forecasts) | assumed 20 calls/day total | ~600 |
+| GET APIs (trends/velocity) | assumed 20 calls/day total | ~600 |
 | **total** | | **~950/month** |
 
 That is **~1% of the Hobby budget (100,000 function invocations/mo)**.
 Stress case: 100× the assumed API traffic (2,000 calls/day) still
 lands at ~61k/month — under the cap, and the SWR headers below mean
 real consumers rarely re-invoke at that rate anyway. Bandwidth: the
-largest payload is `data/v1/forecasts.json` at ~692K; even 5,000 full
+largest payload is `data/v1/trends.json` at ~646K; even 5,000 full
 page loads pulling ~2MB of JSON/CSS/fonts each is ~10GB of the 100GB
 Hobby bandwidth budget.
 
 ### Worst-case duration vs the 10s ceiling
 
 - GET handlers: one file read + JSON parse + envelope. Sub-second by
-  construction (largest file ~692K); the GitHub-Contents path adds
+  construction (largest file ~646K); the GitHub-Contents path adds
   one API round-trip, still ≪ 10s.
 - **Worst case is the cron wire**, and it is bounded by design:
   7 keyless sources fetched in parallel (`Promise.allSettled`),
@@ -172,8 +170,7 @@ pages and `data/v1/*.json` do not degrade at all — they are files.
   envelopes; health overrides to `s-maxage=60` + SWR; the cron is
   `no-store`. Coalescing: parallel fetch with per-source timeouts in
   the wire; refresh generators are idempotent and dedupe by design
-  (24h per-topic forecast dedupe; lane files rewritten atomically per
-  run).
+  (lane files rewritten atomically per run).
 - **Honest failure fallbacks**: health never 5xx (degrades to a
   `"degraded"` status payload); the wire runs read-only without a
   token and says so in its envelope; the pipeline's lanes degrade in

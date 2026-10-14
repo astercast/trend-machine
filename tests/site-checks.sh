@@ -30,12 +30,6 @@ chk "payload trends?limit=5&platform=tiktok" bash -c "curl -sf --max-time 25 '$B
 import json,sys; e=json.load(sys.stdin)
 assert e['ok'] is True and len(e['data'])<=5
 assert all('tiktok' in [p.lower() for p in t['platforms']] for t in e['data'])\""
-chk "payload forecasts fields" bash -c "curl -sf --max-time 25 '$BASE/api/forecasts' | python3 -c \"
-import json,sys; e=json.load(sys.stdin)
-assert e['ok'] is True
-d=e['data']
-for f in ('peaking_48h','rising_fast','cooling_off','steady','projections','computed_from','counts'):
-    assert f in d, f\""
 chk "payload velocity?topic_id=" bash -c "curl -sf --max-time 25 '$BASE/api/velocity?topic_id=$TOPIC_ID' | python3 -c \"
 import json,sys; e=json.load(sys.stdin)
 assert e['ok'] is True
@@ -126,15 +120,15 @@ assert ('/api/v1/trends.flat.js','/static/v1/trends.flat.js') in rw, rw
 
 # vercel.json site shape (beyond the canonical lint): build pins + the
 # explicit function roster (the map is not an allowlist — every .js under
-# api/ deploys, so the roster must stay exactly these five)
+# api/ deploys, so the roster must stay exactly these four)
 chk "vercel.json site shape" python3 -c "
 import json
 v=json.load(open('vercel.json'))
 assert v['outputDirectory']=='.'
-assert 'build_site.py' in v['buildCommand'] and 'build_forecasts.js' in v['buildCommand']
+assert v['buildCommand']=='python3 scripts/build_site.py', v['buildCommand']
 assert v['installCommand']==\"echo 'no dependencies'\"
 fns=v['functions']
-assert set(fns)=={'api/health.js','api/trends.js','api/forecasts.js','api/velocity.js','api/cron/wire.js'}, fns
+assert set(fns)=={'api/health.js','api/trends.js','api/velocity.js','api/cron/wire.js'}, fns
 assert v['cleanUrls'] is True and v['trailingSlash'] is False
 assert len(v.get('crons',[]))==1, 'exactly one cron job per site'
 "
