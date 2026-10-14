@@ -451,3 +451,42 @@ footer.site-foot {
   background: var(--bg-soft);
 }
 .foot-grid { display: flex; flex-wrap: wrap; gap: var(--s6); justify-content: space-between; align-items: start; }
+
+/* ---------- 13 · rotation 29 (SUB-44): phone tap targets ----------
+   The mobile-jumble audit's secondary count (460 at 320 / 550 at
+   390 on the pre-VP-0032 tree) breaks down into standalone chrome
+   and controls — fixed here — and links that live inside rows,
+   lists and sentences — named in the landing record and NOT
+   forced, because padding every row of the census table, the
+   Wire, the board and the Streamer Desk would change the density
+   those surfaces are. This block is phone-only: nothing here can
+   move a desktop box. Five classes grow to the 44px floor:
+   1. the brand (32px tall on every page: the mark is 32px and the
+      link box hugged it; the head's own nav links already stand
+      44px, so the bar's height does not change);
+   2. the breadcrumb line (a lone nav line at the top of every
+      non-home page, 16px tall: it takes its own 44px line, once
+      per page, no row system behind it);
+   3. .btn wherever it stands alone (Remix this 41px, the battle
+      plan link 41.7px, Fetch 30.8px, the launch planner's mode
+      tabs and plan actions 21-28px — all single controls, none of
+      them rows);
+   4. the filter and picker fields (search 37px, selects 39-43px:
+      one control row per page);
+   5. the readings disclosure on topic pages (summary at 18.6px:
+      one control line per dossier, grown with padding so the
+      marker and the line's own text keep their places).
+   Widths are untouched everywhere: every counted element in
+   these five classes failed on height (the only width failures
+   in the census sit inside the named, unforced classes), and no
+   horizontal geometry moves. */
+@media (max-width: 860px) {
+  .brand { min-height: 44px; }
+  nav[aria-label="Breadcrumb"] a {
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+  .btn { min-height: 44px; }
+  .controls select, .controls input,
+  .field select, .field input { min-height: 44px; }
+  .spark-data summary { padding-block: 13px; }
+}
