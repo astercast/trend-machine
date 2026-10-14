@@ -8,22 +8,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 92,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 92 vs forecast-time 92 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 92,
-        "actual_max_velocity": 92,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "seis-sete-dance",
@@ -33,22 +18,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 90,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 90 vs forecast-time 90 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 90,
-        "actual_max_velocity": 90,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "trump-rally-nobel",
@@ -58,22 +28,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 90,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 90 vs forecast-time 90 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 90,
-        "actual_max_velocity": 90,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nba-tiktok-surge",
@@ -83,22 +38,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 86,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 86 vs forecast-time 86 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 86,
-        "actual_max_velocity": 86,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nana-patekar-tributes",
@@ -108,22 +48,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 85,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 85 vs forecast-time 85 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 85,
-        "actual_max_velocity": 85,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "patient-zero-swift",
@@ -133,22 +58,7 @@
       "peak_in_hours": 0.7,
       "latest_velocity": 84,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 84 vs forecast-time 84 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 84,
-        "actual_max_velocity": 84,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "pumpkin-head",
@@ -158,22 +68,7 @@
       "peak_in_hours": 0.7,
       "latest_velocity": 78,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 78 vs forecast-time 78 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 78,
-        "actual_max_velocity": 78,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "october-music-drops",
@@ -183,22 +78,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 71,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 71 vs forecast-time 71 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 71,
-        "actual_max_velocity": 71,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "emily-thats-all",
@@ -208,22 +88,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 70,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 70 vs forecast-time 70 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "spooky-season",
@@ -233,22 +98,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 93,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 93 vs forecast-time 93 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 93,
-        "actual_max_velocity": 93,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "battlefield-6-gamepass",
@@ -258,22 +108,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 87,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 87 vs forecast-time 87 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 87,
-        "actual_max_velocity": 87,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ramalama-walk",
@@ -283,22 +118,7 @@
       "peak_in_hours": 0.7,
       "latest_velocity": 90,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 90 vs forecast-time 90 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 90,
-        "actual_max_velocity": 90,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "gears-eday",
@@ -308,22 +128,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 76,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "max velocity in window 89 vs forecast-time 76 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 89,
-        "actual_max_velocity": 89,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "silentsunday",
@@ -333,22 +138,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "fragrantplaces",
@@ -358,22 +148,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "comingoutday",
@@ -383,22 +158,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nationalcomingoutday",
@@ -408,22 +168,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "glucksmann",
@@ -433,22 +178,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nfl",
@@ -458,22 +188,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "comingout",
@@ -483,22 +198,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "tatort",
@@ -508,22 +208,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "jaguars",
@@ -533,22 +218,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 4,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:46:26.263553+00:00",
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "myweekcounted",
@@ -558,22 +228,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 4,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:46:26.263553+00:00",
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "rescue",
@@ -583,22 +238,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "tusk",
@@ -608,22 +248,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "yandex",
@@ -633,17 +258,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 1,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00",
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "lfc",
@@ -653,22 +268,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 47,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 4,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:46:26.263553+00:00",
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "wildwood-review",
@@ -678,22 +278,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 70,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 70 vs forecast-time 70 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "rachel-downgraded-from-tropical-storm-but-strong-w",
@@ -703,17 +288,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 0,
-        "actual_first_ts": null,
-        "actual_last_ts": null,
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "mullin-says-livestreaming-hasan-execution-is-part-",
@@ -723,22 +298,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:19:25.854040+00:00",
-        "actual_last_ts": "2026-10-12T03:47:19.257806+00:00",
-        "window_coverage_hours": 1.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "total-annihilation-rebuilt-for-modern-computers",
@@ -748,22 +308,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-gap-in-shared-understanding-of-llm-capability-",
@@ -773,22 +318,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "cartographers-of-north-korea",
@@ -798,22 +328,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "chapter-1-of-ways-of-seeing-by-john-berger",
@@ -823,22 +338,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "terence-tao-math-2-0-pdf",
@@ -848,22 +348,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nyc-s-click-to-cancel-rule-is-now-in-effect",
@@ -873,22 +358,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ircv3",
@@ -898,22 +368,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-tilde-in-your-path-may-not-be-your-home",
@@ -923,22 +378,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "lineageos-24-0",
@@ -948,22 +388,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "safe-simd-in-rust-even-on-the-inside",
@@ -973,22 +398,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-ram-shortage-is-bringing-back-ddr4",
@@ -998,17 +408,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 1,
-        "actual_first_ts": "2026-10-12T02:19:25.854040+00:00",
-        "actual_last_ts": "2026-10-12T02:19:25.854040+00:00",
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "bot-traffic-from-yandex",
@@ -1018,22 +418,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-lightbulb-computer",
@@ -1043,22 +428,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T05:09:19.111487+00:00",
-        "window_coverage_hours": 0.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "3rd-yandex-cloud-data-center-was-hit",
@@ -1068,22 +438,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 14,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T08:00:30.479347+00:00",
-        "window_coverage_hours": 27.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "a-city-building-game-in-which-the-city-would-prefe",
@@ -1093,22 +448,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "lobbying-is-corruption",
@@ -1118,22 +458,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "telegram-desktop-vulnerability-allowed-any-user-s-",
@@ -1143,22 +468,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "build-your-own-decision-model",
@@ -1168,22 +478,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T23:29:56.865132+00:00",
-        "window_coverage_hours": 18.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nitter-update-oct-10th-seeking-funding-and-legal-h",
@@ -1193,22 +488,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "123456-password-used-in-danish-cpr-data-breach",
@@ -1218,22 +498,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "bitwarden-dual-license-model",
@@ -1243,22 +508,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "documents-add-to-evidence-in-climate-deception-cas",
@@ -1268,22 +518,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "i-paid-people-to-try-and-follow-my-readme",
@@ -1293,22 +528,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "talorys-a-self-hosted-personal-ai-agent-on-cloudfl",
@@ -1318,22 +538,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "apple-macos-removed-from-official-unix-registry",
@@ -1343,22 +548,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "i-m-sorry-but-you-still-have-to-think",
@@ -1368,22 +558,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "i-would-like-the-value-of-my-home-to-rise-while-my",
@@ -1393,22 +568,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "show-hn-wallhop-12ft-io-is-gone-so-i-built-a-repla",
@@ -1418,22 +578,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "transcript-shyam-sankar-chief-technology-officer-o",
@@ -1443,22 +588,7 @@
       "peak_in_hours": null,
       "latest_velocity": 70,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope -0.5/hr vs rising threshold +1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 4,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T05:25:51.552587+00:00",
-        "window_coverage_hours": 26.6,
-        "actual_slope": -0.5,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 70,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "trump-says-anyone-who-does-not-refer-to-ai-as-supe",
@@ -1468,22 +598,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T06:59:54.905391+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "here-are-10-terms-you-need-to-know-to-understand-a",
@@ -1493,22 +608,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:14:39.005250+00:00",
-        "window_coverage_hours": 6.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ai-has-a-god-problem-stretching-from-the-vatican-t",
@@ -1518,22 +618,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "using-ai-for-just-10-minutes-erodes-your-ability-t",
@@ -1543,22 +628,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "trump-really-wants-to-make-super-intelligence-happ",
@@ -1568,22 +638,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "silicon-valley-is-falling-in-line-with-trump-s-att",
@@ -1593,22 +648,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:47:19.257806+00:00",
-        "window_coverage_hours": 1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "trump-warns-call-ai-super-intelligence-or-face-ene",
@@ -1618,17 +658,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 1,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00",
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "what-s-dragging-down-a-i-efficiency-the-verificati",
@@ -1638,22 +668,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 13,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T08:00:30.479347+00:00",
-        "window_coverage_hours": 29.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "is-local-ai-as-private-as-you-think-techlore-offic",
@@ -1663,22 +678,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "he-might-leak-the-entire-game",
@@ -1688,22 +688,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ddr3-rides-again-ft-wendell-of-level1-techs",
@@ -1713,22 +698,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "farmers-to-aoc-on-data-centers-there-could-be-noth",
@@ -1738,22 +708,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "mini-liebschti-narrates-what-it-s-like-to-use-an-h",
@@ -1763,22 +718,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "adobe-suite-on-linux-twice-flathub-says-yes-to-ai-",
@@ -1788,22 +728,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-science-that-finally-explains-the-dyatlov-pass",
@@ -1813,22 +738,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "what-is-edge-dislocation",
@@ -1838,22 +748,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "my-thoughts-on-other-mommy",
@@ -1863,22 +758,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "finishing-what-we-started-seven-years-ago",
@@ -1888,22 +768,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0.19/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0.19,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ai-keeps-pissing-off-mathematicians",
@@ -1913,22 +778,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "which-is-better-buying-or-renting-a-home-ella-feld",
@@ -1938,22 +788,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "we-finally-know-more-about-humanity-s-first-civili",
@@ -1963,22 +798,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "this-is-dumb",
@@ -1988,22 +808,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-biggest-hug",
@@ -2013,22 +818,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "a-6-3-billion-open-weight-model-just-got-embarrass",
@@ -2038,22 +828,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-strangest-place-on-the-internet",
@@ -2063,22 +838,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "below-rusted-gods",
@@ -2088,22 +848,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-logistics-of-nyc-waste-management",
@@ -2113,22 +858,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-hidden-engineering-of-pressure-regulators",
@@ -2138,22 +868,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-miserable-failure-of-disney-s-mp3-player",
@@ -2163,22 +878,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "in-this-arcade-you-drop-metal-balls-on-rich-people",
@@ -2188,22 +888,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "jeremiyah-love-trending-well-to-play-despite-ankle",
@@ -2213,22 +898,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 11,
-        "actual_first_ts": "2026-10-12T05:46:26.263553+00:00",
-        "actual_last_ts": "2026-10-13T05:25:51.552587+00:00",
-        "window_coverage_hours": 23.7,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "buffalo-bills-trending-up-trending-down-who-bills-",
@@ -2238,22 +908,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 13,
-        "actual_first_ts": "2026-10-12T05:46:26.263553+00:00",
-        "actual_last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "window_coverage_hours": 27.1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "texas-says-insurance-rates-are-trending-down-state",
@@ -2263,22 +918,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 14,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-13T06:36:35.127509+00:00",
-        "window_coverage_hours": 26.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "on-alert-for-wind-and-rain-saturday-sunday-trendin",
@@ -2288,22 +928,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 14,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-13T06:36:35.127509+00:00",
-        "window_coverage_hours": 26.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "alabama-stock-report-3-players-trending-up-after-l",
@@ -2313,22 +938,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T05:46:26.263553+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 2.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "marvin-harrison-jr-trade-market-on-kalshi-continue",
@@ -2338,17 +948,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 1,
-        "actual_first_ts": "2026-10-12T02:19:25.854040+00:00",
-        "actual_last_ts": "2026-10-12T02:19:25.854040+00:00",
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "which-cardinals-are-trending-up-4-games-in-who-nee",
@@ -2358,22 +958,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 6.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "wizards-practice-notebook-keefe-says-sarr-is-trend",
@@ -2383,22 +968,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-12T23:29:56.865132+00:00",
-        "window_coverage_hours": 19.7,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "two-steam-games-generated-560-000-across-135-000-s",
@@ -2408,22 +978,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "squadron-42-video-game-release-nears-as-cloud-impe",
@@ -2433,22 +988,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T06:59:54.905391+00:00",
-        "actual_last_ts": "2026-10-12T09:14:39.005250+00:00",
-        "window_coverage_hours": 2.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "i-made-terrible-games-with-google-s-ai-playground",
@@ -2458,22 +998,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 8,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T22:49:01.408645+00:00",
-        "window_coverage_hours": 20,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "alien-isolation-2-this-highly-anticipated-sequel-h",
@@ -2483,22 +1008,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "group-threatens-to-leak-full-gta-6-build-if-physic",
@@ -2508,22 +1018,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "wildwood-stuns-critics-laika-s-oscar-front-runner-",
@@ -2533,22 +1028,7 @@
       "peak_in_hours": 0.7,
       "latest_velocity": 70,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "hit",
-        "reason": "max velocity in window 70 vs forecast-time 70 (tolerance +2)",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "wildwood-review-laika-s-pleasingly-old-fashioned-s",
@@ -2558,22 +1038,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "cineplexity-when-your-partner-doesn-t-like-the-sam",
@@ -2583,17 +1048,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 0,
-        "actual_first_ts": null,
-        "actual_last_ts": null,
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "7-new-movies-our-critics-are-talking-about-this-we",
@@ -2603,22 +1058,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "mj-lenderman-debuts-new-music-at-good-moon-festiva",
@@ -2628,22 +1068,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "new-music-video-mozhesh-da-nye-chotshesh",
@@ -2653,22 +1078,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "rihanna-reveals-just-how-many-unreleased-songs-she",
@@ -2678,22 +1088,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "listen-power-trip-drops-first-new-music-since-2020",
@@ -2703,22 +1098,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "i-ve-learned-to-trust-myself-victoria-justice-is-e",
@@ -2728,22 +1108,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 11,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T01:49:01.926314+00:00",
-        "window_coverage_hours": 23,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-best-october-prime-day-owala-deals-the-tiktok-",
@@ -2753,22 +1118,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "full-video-apoorva-mukhija-viral-video-link-on-tik",
@@ -2778,22 +1128,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "verdict-in-trial-over-viral-racist-tiktok-rant-add",
@@ -2803,22 +1138,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "people-don-t-have-the-right-worrell-touts-orange-c",
@@ -2828,22 +1148,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 4,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:09:19.111487+00:00",
-        "window_coverage_hours": 2.4,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "viral-tiktok-hacks-do-they-actually-work",
@@ -2853,22 +1158,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "how-to-make-pizza-beans-the-saucy-cheesy-dish-taki",
@@ -2878,22 +1168,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "17-tiktok-viral-amazon-products-on-sale-ahead-of-p",
@@ -2903,22 +1178,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
@@ -2928,22 +1188,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 1.05/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 1.05,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "so-you-d-like-to-sell-your-print-issues-of-the-oni",
@@ -2953,22 +1198,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 17,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "i-guess-i-m-using-webp-now",
@@ -2978,22 +1208,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 2.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "500b-tokens-later-letting-ai-agents-decompile-a-fi",
@@ -3003,22 +1218,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T04:40:07.691290+00:00",
-        "window_coverage_hours": 1.9,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "wtf-is-a-googlebook",
@@ -3028,22 +1228,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "every-new-hallmark-christmas-movie-in-2026-dates-c",
@@ -3053,22 +1238,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 11,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T08:52:31.636476+00:00",
-        "window_coverage_hours": 30.1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "from-netflix-s-animals-to-disclosure-day-10-movies",
@@ -3078,22 +1248,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-12T04:40:07.691290+00:00",
-        "window_coverage_hours": 0.9,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "these-tiktok-viral-bags-will-get-you-through-fall",
@@ -3103,22 +1258,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 18,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "matthew-matpat-patrick-adapting-amanda-the-adventu",
@@ -3128,22 +1268,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 7,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ama-q-a-announcement-alex-gibney-monday-10-12-at-2",
@@ -3153,22 +1278,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 6,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T22:49:01.408645+00:00",
-        "window_coverage_hours": 18.1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "official-discussion-megathread-the-social-reckonin",
@@ -3178,22 +1288,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 10,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T02:16:10.462655+00:00",
-        "window_coverage_hours": 21.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "weird-al-yankovic-reveals-a-sequel-to-his-biopic-w",
@@ -3203,22 +1298,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 8,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T00:24:50.489500+00:00",
-        "window_coverage_hours": 19.7,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "musk-director-alex-gibney-confirms-universal-waver",
@@ -3228,22 +1308,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "just-watched-disclosure-day",
@@ -3253,22 +1318,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "master-and-commander-the-far-side-of-the-world-200",
@@ -3278,22 +1328,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "luca-guadagnino-s-artificial-review-thread",
@@ -3303,22 +1338,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "godzilla-minus-zero-final-trailer",
@@ -3328,22 +1348,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 5,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00",
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "ama-q-a-announcement-noel-gugliemi-tuesday-10-13-a",
@@ -3353,22 +1358,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 9,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "the-ghost-and-the-darkness-at-30-revisiting-the-hi",
@@ -3378,22 +1368,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 2,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00",
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "recursive-self-improvement-through-collective-inte",
@@ -3403,22 +1378,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 4,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00",
-        "window_coverage_hours": 3.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "fingerprints-are-the-new-cookies",
@@ -3428,22 +1388,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 15,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00",
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "google-is-illegaly-cutting-forest-to-build-data-ce",
@@ -3453,22 +1398,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 3,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00",
-        "window_coverage_hours": 2.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "rise_threshold": 1.5,
-        "fall_threshold": -1.5
-      }
+      "resolved": null
     },
     {
       "topic_id": "flip-a-coin-i-guess-exam-studygram-studying",
@@ -3478,17 +1408,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 1,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00",
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "5-video-games-from-1985-that-changed-gaming-foreve",
@@ -3498,17 +1418,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 0,
-        "actual_first_ts": null,
-        "actual_last_ts": null,
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "azealia-banks-confirms-move-to-israel-says-she-s-w",
@@ -3518,17 +1428,7 @@
       "peak_in_hours": 0,
       "latest_velocity": 45,
       "n_snapshots": 3,
-      "resolved": {
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "window_start": "2026-10-12T01:45:28.760Z",
-        "window_end": "2026-10-14T01:45:28.760Z",
-        "n_actual_points": 1,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00",
-        "window_coverage_hours": 0
-      }
+      "resolved": null
     },
     {
       "topic_id": "halloween-game-xbox",

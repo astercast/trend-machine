@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T01:52:13.857Z",
+  "generated_at": "2026-10-13T10:15:56.115Z",
   "method": "assets/js/trajectory.js analyze() + rankLists() + enrich() — the same classifier as the oracle.html dashboard",
   "honesty": "Every forecast is a projection from N real velocity snapshots, never a guarantee. Topics with fewer than 3 snapshots are excluded from the forecast lists. confidence.basis names the evidence behind each call (snapshot count + fit quality), never a probability of being right. per_platform series are starting points — they build one snapshot per refresh and only classify after 3+ snapshots.",
   "counts": {
@@ -31,7 +31,7 @@
         "velocity_delta": 25,
         "slope_per_hour": 1.55,
         "accel": -6.72,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -103,7 +103,7 @@
         "velocity_delta": 0,
         "slope_per_hour": -0.02,
         "accel": 0.03,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -144,7 +144,7 @@
         "velocity_delta": 0,
         "slope_per_hour": -0.02,
         "accel": 0.03,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -187,7 +187,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -255,7 +255,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -296,7 +296,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -330,7 +330,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -363,7 +363,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -395,7 +395,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -429,7 +429,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -461,7 +461,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "x",
@@ -495,7 +495,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -527,7 +527,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -559,7 +559,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -591,7 +591,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -634,7 +634,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -667,7 +667,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -699,7 +699,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -733,7 +733,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -765,7 +765,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -798,7 +798,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -830,7 +830,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "x",
@@ -864,7 +864,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -896,7 +896,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -928,7 +928,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -962,7 +962,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -994,7 +994,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1026,7 +1026,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1058,7 +1058,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -1108,7 +1108,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1140,7 +1140,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1173,7 +1173,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1205,7 +1205,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1237,7 +1237,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1270,7 +1270,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1303,7 +1303,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -1337,7 +1337,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1370,7 +1370,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -1403,7 +1403,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1436,7 +1436,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1468,7 +1468,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1500,7 +1500,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1533,7 +1533,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1565,7 +1565,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1597,7 +1597,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1629,7 +1629,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1661,7 +1661,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1693,7 +1693,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1726,7 +1726,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1758,7 +1758,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -1801,7 +1801,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1833,7 +1833,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1865,7 +1865,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -1898,7 +1898,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -1930,7 +1930,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "bluesky",
@@ -1972,7 +1972,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2004,7 +2004,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2036,7 +2036,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2069,7 +2069,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2101,7 +2101,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2134,7 +2134,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -2175,7 +2175,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -2208,7 +2208,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2240,7 +2240,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2272,7 +2272,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2304,7 +2304,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2337,7 +2337,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -2370,7 +2370,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2402,7 +2402,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2435,7 +2435,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2467,7 +2467,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2499,7 +2499,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "bluesky",
@@ -2532,7 +2532,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -2566,7 +2566,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2598,7 +2598,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2631,7 +2631,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -2664,7 +2664,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2697,7 +2697,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2729,7 +2729,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -2770,7 +2770,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2803,7 +2803,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -2835,7 +2835,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2868,7 +2868,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -2901,7 +2901,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -2942,7 +2942,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -3001,7 +3001,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -3042,7 +3042,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -3083,7 +3083,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -3116,7 +3116,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3148,7 +3148,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "bluesky",
@@ -3190,7 +3190,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "google",
@@ -3240,7 +3240,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -3273,7 +3273,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -3306,7 +3306,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3338,7 +3338,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -3371,7 +3371,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3403,7 +3403,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3435,7 +3435,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3467,7 +3467,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3499,7 +3499,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -3532,7 +3532,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3564,7 +3564,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3596,7 +3596,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -3628,7 +3628,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -3669,7 +3669,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -3710,7 +3710,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -3751,7 +3751,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -3792,7 +3792,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -3851,7 +3851,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -3910,7 +3910,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -3969,7 +3969,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -4028,7 +4028,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -4087,7 +4087,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -4146,7 +4146,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4196,7 +4196,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -4255,7 +4255,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4305,7 +4305,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4355,7 +4355,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4405,7 +4405,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4455,7 +4455,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4505,7 +4505,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4555,7 +4555,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -4605,7 +4605,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4646,7 +4646,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4687,7 +4687,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4728,7 +4728,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4769,7 +4769,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4810,7 +4810,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4851,7 +4851,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4892,7 +4892,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4933,7 +4933,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -4974,7 +4974,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -5015,7 +5015,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -5056,7 +5056,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -5097,7 +5097,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -5138,7 +5138,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -5179,7 +5179,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -5229,7 +5229,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -5279,7 +5279,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -5329,7 +5329,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -5379,7 +5379,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -5438,7 +5438,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -5497,7 +5497,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -5556,7 +5556,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5597,7 +5597,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5638,7 +5638,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5679,7 +5679,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5720,7 +5720,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5761,7 +5761,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5802,7 +5802,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5843,7 +5843,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5884,7 +5884,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5925,7 +5925,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -5966,7 +5966,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -6007,7 +6007,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -6057,7 +6057,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -6098,7 +6098,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -6139,7 +6139,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -6180,7 +6180,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -6221,7 +6221,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -6289,7 +6289,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -6357,7 +6357,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -6425,7 +6425,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -6484,7 +6484,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -6543,7 +6543,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -6602,7 +6602,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -6643,7 +6643,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -6684,7 +6684,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -6734,7 +6734,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -6802,7 +6802,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -6861,7 +6861,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -6902,7 +6902,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -6943,7 +6943,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -6984,7 +6984,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7025,7 +7025,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -7066,7 +7066,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -7107,7 +7107,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7148,7 +7148,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7189,7 +7189,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7230,7 +7230,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7271,7 +7271,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7312,7 +7312,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7353,7 +7353,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7394,7 +7394,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7435,7 +7435,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -7476,7 +7476,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7517,7 +7517,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7558,7 +7558,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7599,7 +7599,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -7640,7 +7640,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7681,7 +7681,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -7722,7 +7722,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7763,7 +7763,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -7804,7 +7804,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7845,7 +7845,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7886,7 +7886,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -7927,7 +7927,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -7968,7 +7968,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -8009,7 +8009,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -8050,7 +8050,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8091,7 +8091,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8132,7 +8132,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8173,7 +8173,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8214,7 +8214,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8255,7 +8255,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8296,7 +8296,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8337,7 +8337,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8378,7 +8378,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8419,7 +8419,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8460,7 +8460,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8501,7 +8501,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8542,7 +8542,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8583,7 +8583,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8624,7 +8624,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8665,7 +8665,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8706,7 +8706,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8747,7 +8747,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8788,7 +8788,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8829,7 +8829,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -8870,7 +8870,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -8911,7 +8911,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -8952,7 +8952,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -8993,7 +8993,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9034,7 +9034,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9075,7 +9075,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9116,7 +9116,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9157,7 +9157,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9198,7 +9198,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9239,7 +9239,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9280,7 +9280,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9321,7 +9321,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -9362,7 +9362,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -9403,7 +9403,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -9446,7 +9446,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -9479,7 +9479,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -9513,7 +9513,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -9545,7 +9545,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "x",
@@ -9579,7 +9579,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -9612,7 +9612,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -9644,7 +9644,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "x",
@@ -9678,7 +9678,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -9710,7 +9710,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -9744,7 +9744,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -9776,7 +9776,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -9808,7 +9808,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -9841,7 +9841,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -9874,7 +9874,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -9907,7 +9907,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -9941,7 +9941,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -9974,7 +9974,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -10007,7 +10007,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -10040,7 +10040,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -10073,7 +10073,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -10106,7 +10106,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -10139,7 +10139,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10173,7 +10173,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -10205,7 +10205,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -10239,7 +10239,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10273,7 +10273,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -10305,7 +10305,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -10338,7 +10338,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -10381,7 +10381,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -10424,7 +10424,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -10474,7 +10474,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -10515,7 +10515,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10574,7 +10574,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10633,7 +10633,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10692,7 +10692,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10751,7 +10751,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10810,7 +10810,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10869,7 +10869,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -10928,7 +10928,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -10978,7 +10978,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -11037,7 +11037,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11087,7 +11087,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11137,7 +11137,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11187,7 +11187,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11237,7 +11237,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11287,7 +11287,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11337,7 +11337,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -11387,7 +11387,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11419,7 +11419,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11451,7 +11451,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11483,7 +11483,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11515,7 +11515,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11547,7 +11547,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11579,7 +11579,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11611,7 +11611,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -11644,7 +11644,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11676,7 +11676,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11708,7 +11708,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -11740,7 +11740,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -11781,7 +11781,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -11822,7 +11822,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -11863,7 +11863,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -11904,7 +11904,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -11945,7 +11945,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -11986,7 +11986,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12027,7 +12027,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12068,7 +12068,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12109,7 +12109,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12150,7 +12150,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12191,7 +12191,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12232,7 +12232,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12273,7 +12273,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12314,7 +12314,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12355,7 +12355,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -12396,7 +12396,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -12429,7 +12429,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12461,7 +12461,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12493,7 +12493,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12525,7 +12525,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -12558,7 +12558,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12590,7 +12590,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12622,7 +12622,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -12655,7 +12655,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -12688,7 +12688,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12720,7 +12720,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -12753,7 +12753,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -12785,7 +12785,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -12835,7 +12835,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -12885,7 +12885,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -12935,7 +12935,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -12985,7 +12985,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13017,7 +13017,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13049,7 +13049,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13082,7 +13082,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13114,7 +13114,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13146,7 +13146,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13178,7 +13178,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13211,7 +13211,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13243,7 +13243,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13276,7 +13276,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13308,7 +13308,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13340,7 +13340,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13372,7 +13372,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13404,7 +13404,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13436,7 +13436,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13468,7 +13468,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13500,7 +13500,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13532,7 +13532,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "bluesky",
@@ -13565,7 +13565,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13597,7 +13597,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13630,7 +13630,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13663,7 +13663,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13695,7 +13695,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13727,7 +13727,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13760,7 +13760,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13793,7 +13793,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13825,7 +13825,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "bluesky",
@@ -13867,7 +13867,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13899,7 +13899,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13931,7 +13931,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -13963,7 +13963,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -13996,7 +13996,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -14029,7 +14029,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -14061,7 +14061,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -14093,7 +14093,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "bluesky",
@@ -14135,7 +14135,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -14168,7 +14168,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -14209,7 +14209,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -14250,7 +14250,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -14309,7 +14309,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "tiktok",
@@ -14342,7 +14342,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "tiktok"
@@ -14374,7 +14374,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -14433,7 +14433,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -14501,7 +14501,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -14560,7 +14560,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14601,7 +14601,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14642,7 +14642,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14683,7 +14683,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14724,7 +14724,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14765,7 +14765,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14806,7 +14806,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14847,7 +14847,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14888,7 +14888,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14929,7 +14929,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -14970,7 +14970,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -15011,7 +15011,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -15061,7 +15061,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -15102,7 +15102,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -15143,7 +15143,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -15184,7 +15184,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -15225,7 +15225,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -15293,7 +15293,7 @@
         "velocity_delta": 25,
         "slope_per_hour": 1.55,
         "accel": -6.72,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -15362,7 +15362,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -15430,7 +15430,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -15498,7 +15498,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "youtube",
@@ -15557,7 +15557,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -15616,7 +15616,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -15675,7 +15675,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -15716,7 +15716,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -15757,7 +15757,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -15798,7 +15798,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "youtube",
@@ -15848,7 +15848,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 4,
         "platforms": [
           "youtube",
@@ -15916,7 +15916,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 3,
         "platforms": [
           "tiktok",
@@ -15975,7 +15975,7 @@
         "velocity_delta": 0,
         "slope_per_hour": -0.02,
         "accel": 0.03,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -16016,7 +16016,7 @@
         "velocity_delta": 0,
         "slope_per_hour": -0.02,
         "accel": 0.03,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -16057,7 +16057,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16098,7 +16098,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16139,7 +16139,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16180,7 +16180,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16221,7 +16221,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16262,7 +16262,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16303,7 +16303,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -16344,7 +16344,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16385,7 +16385,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16426,7 +16426,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16467,7 +16467,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16508,7 +16508,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16549,7 +16549,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16590,7 +16590,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16631,7 +16631,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 2,
         "platforms": [
           "google",
@@ -16681,7 +16681,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16722,7 +16722,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -16763,7 +16763,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -16804,7 +16804,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -16845,7 +16845,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -16886,7 +16886,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -16927,7 +16927,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -16968,7 +16968,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -17009,7 +17009,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -17050,7 +17050,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17091,7 +17091,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17132,7 +17132,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17173,7 +17173,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -17214,7 +17214,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -17255,7 +17255,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17296,7 +17296,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17337,7 +17337,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17378,7 +17378,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17419,7 +17419,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -17460,7 +17460,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17501,7 +17501,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17542,7 +17542,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17583,7 +17583,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17624,7 +17624,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17665,7 +17665,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17706,7 +17706,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17747,7 +17747,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17788,7 +17788,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17829,7 +17829,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17870,7 +17870,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17911,7 +17911,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17952,7 +17952,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -17993,7 +17993,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18034,7 +18034,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18075,7 +18075,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18116,7 +18116,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18157,7 +18157,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18198,7 +18198,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18239,7 +18239,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18280,7 +18280,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -18321,7 +18321,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18362,7 +18362,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18403,7 +18403,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18444,7 +18444,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18485,7 +18485,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18526,7 +18526,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18567,7 +18567,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18608,7 +18608,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18649,7 +18649,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18690,7 +18690,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18731,7 +18731,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -18772,7 +18772,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -18813,7 +18813,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -18854,7 +18854,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -18895,7 +18895,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -18936,7 +18936,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -18977,7 +18977,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19018,7 +19018,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19059,7 +19059,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19100,7 +19100,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19141,7 +19141,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19182,7 +19182,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19223,7 +19223,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19264,7 +19264,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19305,7 +19305,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19346,7 +19346,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19387,7 +19387,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19428,7 +19428,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19469,7 +19469,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19510,7 +19510,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19551,7 +19551,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -19592,7 +19592,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -19633,7 +19633,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -19674,7 +19674,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19715,7 +19715,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19756,7 +19756,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19797,7 +19797,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19838,7 +19838,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19879,7 +19879,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19920,7 +19920,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -19961,7 +19961,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20002,7 +20002,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20043,7 +20043,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20084,7 +20084,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20125,7 +20125,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20166,7 +20166,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20207,7 +20207,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20248,7 +20248,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20289,7 +20289,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20330,7 +20330,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20371,7 +20371,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20412,7 +20412,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -20453,7 +20453,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20494,7 +20494,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20535,7 +20535,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20576,7 +20576,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20617,7 +20617,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20658,7 +20658,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20699,7 +20699,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -20740,7 +20740,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -20781,7 +20781,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -20822,7 +20822,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -20863,7 +20863,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -20904,7 +20904,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -20945,7 +20945,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -20986,7 +20986,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21027,7 +21027,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21068,7 +21068,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21109,7 +21109,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21150,7 +21150,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21191,7 +21191,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21232,7 +21232,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21273,7 +21273,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21314,7 +21314,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21355,7 +21355,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21396,7 +21396,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21437,7 +21437,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21478,7 +21478,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21519,7 +21519,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21560,7 +21560,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21601,7 +21601,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21642,7 +21642,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21683,7 +21683,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21724,7 +21724,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21765,7 +21765,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21806,7 +21806,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21847,7 +21847,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21888,7 +21888,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21929,7 +21929,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -21970,7 +21970,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -22011,7 +22011,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -22052,7 +22052,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -22093,7 +22093,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22134,7 +22134,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22175,7 +22175,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22216,7 +22216,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22257,7 +22257,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22298,7 +22298,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22339,7 +22339,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22380,7 +22380,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22421,7 +22421,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22462,7 +22462,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22503,7 +22503,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22544,7 +22544,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22585,7 +22585,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22626,7 +22626,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22667,7 +22667,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22708,7 +22708,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22749,7 +22749,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22790,7 +22790,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22831,7 +22831,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22872,7 +22872,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22913,7 +22913,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22954,7 +22954,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -22995,7 +22995,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23036,7 +23036,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23077,7 +23077,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23118,7 +23118,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23159,7 +23159,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23200,7 +23200,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23241,7 +23241,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23282,7 +23282,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23323,7 +23323,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -23364,7 +23364,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -23405,7 +23405,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "mastodon"
@@ -23446,7 +23446,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23487,7 +23487,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23528,7 +23528,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23569,7 +23569,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23610,7 +23610,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23651,7 +23651,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23692,7 +23692,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -23733,7 +23733,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -23774,7 +23774,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -23815,7 +23815,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -23856,7 +23856,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -23897,7 +23897,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "hackernews"
@@ -23938,7 +23938,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "youtube"
@@ -23979,7 +23979,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24020,7 +24020,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24061,7 +24061,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24102,7 +24102,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24143,7 +24143,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24184,7 +24184,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24225,7 +24225,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "google"
@@ -24266,7 +24266,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24307,7 +24307,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24348,7 +24348,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24389,7 +24389,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24430,7 +24430,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24471,7 +24471,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24512,7 +24512,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24553,7 +24553,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24594,7 +24594,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24635,7 +24635,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24676,7 +24676,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24717,7 +24717,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24758,7 +24758,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24799,7 +24799,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24840,7 +24840,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24881,7 +24881,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24922,7 +24922,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -24963,7 +24963,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25004,7 +25004,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25045,7 +25045,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25086,7 +25086,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25127,7 +25127,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25168,7 +25168,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25209,7 +25209,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25250,7 +25250,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "reddit"
@@ -25291,7 +25291,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -25332,7 +25332,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"
@@ -25373,7 +25373,7 @@
         "velocity_delta": 0,
         "slope_per_hour": 0,
         "accel": 0,
-        "recency_hours": 15.6,
+        "recency_hours": 0,
         "platform_spread": 1,
         "platforms": [
           "bluesky"

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T01:52:13.857Z",
+  "generated_at": "2026-10-13T10:15:56.115Z",
   "method": "assets/js/lifecycle-lib.js summarize() — stage-per-snapshot classification using the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr)",
   "honesty": "Stages are readouts from recorded velocity snapshots, not predictions. Topics with fewer than 3 snapshots report 'building'. The ignitions/burnouts boards list stage transitions that actually happened in the last 24h.",
   "counts": {
@@ -21,6 +21,20 @@
       "from": "steady",
       "to": "igniting",
       "ts": "2026-10-13T02:34:06.091323+00:00"
+    },
+    {
+      "id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
+      "title": "Nurses are taking on TikTok’s viral health myths — here’s how they’re fighting back",
+      "from": "igniting",
+      "to": "peaking",
+      "ts": "2026-10-12T23:29:56.865132+00:00"
+    },
+    {
+      "id": "nurses-are-taking-on-tiktok-s-viral-health-myths-h",
+      "title": "Nurses are taking on TikTok’s viral health myths — here’s how they’re fighting back",
+      "from": "steady",
+      "to": "igniting",
+      "ts": "2026-10-12T22:49:01.408645+00:00"
     }
   ],
   "burnouts": [],

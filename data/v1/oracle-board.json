@@ -1,53 +1,53 @@
 {
-  "generated_at": "2026-10-14T01:52:14.290Z",
-  "status": "live",
+  "generated_at": "2026-10-13T10:15:57.430Z",
+  "status": "building history",
   "horizon_hours": 48,
   "method": "One row per forecast in data/forecast_ledger.json. Trajectories are the topic's stored velocity snapshots (live store merged with the resolution archive via scripts/resolution-lib.js mergeHistory — live store wins per hour bucket), kept as recorded. Window evidence is resolution-lib.js actualsInWindow() over the forecast's own 48h window — the same evidence the graders use. Status and hit_rate are read from data/v1/forecast-accuracy.json, never recomputed here.",
   "honesty": "Zero invented data: every trajectory point is a stored snapshot, every window count is counted from those points, pending calls render as pending, and a window holding fewer than 2 actual snapshots is labeled short — it grades unverifiable with evidence at its horizon, never folded into the hit rate. While the scorecard status is \"building history\", hit_rate is null and no accuracy is claimed.",
   "counts": {
     "recorded": 315,
-    "pending": 172,
-    "resolved": 134,
-    "unverifiable": 9,
-    "hits": 14,
-    "hit_rate": 0.104,
-    "ready": 140,
-    "short": 32
+    "pending": 315,
+    "resolved": 0,
+    "unverifiable": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ready": 274,
+    "short": 41
   },
-  "next_resolution_at": "2026-10-14T02:11:34.070Z",
+  "next_resolution_at": "2026-10-14T01:45:28.760Z",
   "by_state": {
     "peaking": {
       "recorded": 30,
-      "pending": 15,
-      "resolved": 15,
-      "hits": 14,
+      "pending": 30,
+      "resolved": 0,
+      "hits": 0,
       "unverifiable": 0,
-      "ready": 15,
+      "ready": 30,
       "short": 0
     },
     "accelerating": {
       "recorded": 9,
-      "pending": 8,
-      "resolved": 1,
+      "pending": 9,
+      "resolved": 0,
       "hits": 0,
       "unverifiable": 0,
-      "ready": 6,
+      "ready": 7,
       "short": 2
     },
     "fading": {
       "recorded": 276,
-      "pending": 149,
-      "resolved": 118,
+      "pending": 276,
+      "resolved": 0,
       "hits": 0,
-      "unverifiable": 9,
-      "ready": 119,
-      "short": 30
+      "unverifiable": 0,
+      "ready": 237,
+      "short": 39
     }
   },
   "due_per_day": [
     {
       "date": "2026-10-14",
-      "pending": 143
+      "pending": 286
     },
     {
       "date": "2026-10-15",
@@ -71,19 +71,8 @@
         "instagram",
         "youtube"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 93 vs forecast-time 93 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 93,
-        "actual_max_velocity": 93,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -195,19 +184,8 @@
         "tiktok",
         "youtube"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 92 vs forecast-time 92 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 92,
-        "actual_max_velocity": 92,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -318,19 +296,8 @@
       "platforms": [
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 90 vs forecast-time 90 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 90,
-        "actual_max_velocity": 90,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -443,19 +410,8 @@
         "youtube",
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 90 vs forecast-time 90 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 90,
-        "actual_max_velocity": 90,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -566,19 +522,8 @@
       "platforms": [
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 90 vs forecast-time 90 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 90,
-        "actual_max_velocity": 90,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -691,19 +636,8 @@
         "twitch",
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 87 vs forecast-time 87 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 87,
-        "actual_max_velocity": 87,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -814,19 +748,8 @@
       "platforms": [
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 86 vs forecast-time 86 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 86,
-        "actual_max_velocity": 86,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -939,19 +862,8 @@
         "instagram",
         "youtube"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 85 vs forecast-time 85 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 85,
-        "actual_max_velocity": 85,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1062,19 +974,8 @@
       "platforms": [
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 84 vs forecast-time 84 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 84,
-        "actual_max_velocity": 84,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1185,19 +1086,8 @@
       "platforms": [
         "tiktok"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 78 vs forecast-time 78 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 78,
-        "actual_max_velocity": 78,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1310,19 +1200,8 @@
         "twitch",
         "tiktok"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "max velocity in window 89 vs forecast-time 76 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 89,
-        "actual_max_velocity": 89,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1434,19 +1313,8 @@
         "tiktok",
         "youtube"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 71 vs forecast-time 71 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 71,
-        "actual_max_velocity": 71,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1558,19 +1426,8 @@
         "tiktok",
         "instagram"
       ],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 70 vs forecast-time 70 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1679,19 +1536,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 70 vs forecast-time 70 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1756,19 +1602,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope -0.5/hr vs rising threshold +1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 4,
-        "window_coverage_hours": 26.6,
-        "actual_slope": -0.5,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 70,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T05:25:51.552587+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 4,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1821,19 +1656,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "hit",
-      "verdict": {
-        "verdict": "hit",
-        "reason": "max velocity in window 70 vs forecast-time 70 (tolerance +2)",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -1900,19 +1724,8 @@
       "platforms": [
         "mastodon"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2009,19 +1822,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2082,19 +1884,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2155,19 +1946,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2228,19 +2008,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2301,19 +2070,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2374,19 +2132,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2443,19 +2190,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2512,19 +2248,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 4,
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:46:26.263553+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 4,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2577,19 +2302,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 4,
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:46:26.263553+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 4,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2642,19 +2356,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2711,19 +2414,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2784,19 +2476,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 1,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 1,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2837,19 +2518,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 4,
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 47,
-        "actual_max_velocity": 47,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:46:26.263553+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 4,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -2902,19 +2572,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 0,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": null,
-        "actual_last_ts": null
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 0,
         "first_ts": null,
@@ -2951,19 +2610,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 1.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:19:25.854040+00:00",
-        "actual_last_ts": "2026-10-12T03:47:19.257806+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:19:25.854040+00:00",
@@ -3010,19 +2658,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3109,19 +2746,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3206,19 +2832,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -3263,19 +2878,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -3322,19 +2926,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3421,19 +3014,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3520,19 +3102,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3617,19 +3188,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -3674,19 +3234,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -3731,19 +3280,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -3788,19 +3326,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 1,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": "2026-10-12T02:19:25.854040+00:00",
-        "actual_last_ts": "2026-10-12T02:19:25.854040+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 1,
         "first_ts": "2026-10-12T02:19:25.854040+00:00",
@@ -3843,19 +3370,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3940,19 +3456,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T05:09:19.111487+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -3985,19 +3490,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 14,
-        "window_coverage_hours": 27.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T08:00:30.479347+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 14,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4078,19 +3572,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4135,19 +3618,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4192,19 +3664,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -4249,19 +3710,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 18.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T23:29:56.865132+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4316,19 +3766,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4413,19 +3852,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4470,19 +3898,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4529,19 +3946,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4628,19 +4034,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4725,19 +4120,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4782,19 +4166,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4841,19 +4214,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4938,19 +4300,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -4995,19 +4346,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5072,19 +4412,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T06:59:54.905391+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T06:59:54.905391+00:00",
@@ -5121,19 +4450,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 6.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:14:39.005250+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5198,19 +4516,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5267,19 +4574,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5344,19 +4640,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5405,19 +4690,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:47:19.257806+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5462,19 +4736,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 1,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 1,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5515,19 +4778,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 13,
-        "window_coverage_hours": 29.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T08:00:30.479347+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 13,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5616,19 +4868,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5689,19 +4930,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5762,19 +4992,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5835,19 +5054,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5908,19 +5116,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -5981,19 +5178,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6054,19 +5240,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6127,19 +5302,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6200,19 +5364,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6275,19 +5428,8 @@
       "platforms": [
         "youtube"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0.19/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0.19,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6396,19 +5538,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6469,19 +5600,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6542,19 +5662,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6615,19 +5724,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6688,19 +5786,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6761,19 +5848,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6834,19 +5910,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6907,19 +5972,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -6980,19 +6034,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -7053,19 +6096,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -7126,19 +6158,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -7199,19 +6220,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -7272,19 +6282,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 11,
-        "window_coverage_hours": 23.7,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T05:46:26.263553+00:00",
-        "actual_last_ts": "2026-10-13T05:25:51.552587+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 11,
         "first_ts": "2026-10-12T05:46:26.263553+00:00",
@@ -7353,19 +6352,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 13,
-        "window_coverage_hours": 27.1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T05:46:26.263553+00:00",
-        "actual_last_ts": "2026-10-13T08:52:31.636476+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 13,
         "first_ts": "2026-10-12T05:46:26.263553+00:00",
@@ -7442,19 +6430,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 14,
-        "window_coverage_hours": 26.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-13T06:36:35.127509+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 14,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
@@ -7535,19 +6512,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 14,
-        "window_coverage_hours": 26.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-13T06:36:35.127509+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 14,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
@@ -7628,19 +6594,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 2.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T05:46:26.263553+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T05:46:26.263553+00:00",
@@ -7677,19 +6632,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 1,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": "2026-10-12T02:19:25.854040+00:00",
-        "actual_last_ts": "2026-10-12T02:19:25.854040+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 1,
         "first_ts": "2026-10-12T02:19:25.854040+00:00",
@@ -7730,19 +6674,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 6.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
@@ -7787,19 +6720,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 19.7,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-12T23:29:56.865132+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
@@ -7836,19 +6758,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -7913,19 +6824,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 2.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T06:59:54.905391+00:00",
-        "actual_last_ts": "2026-10-12T09:14:39.005250+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T06:59:54.905391+00:00",
@@ -7962,19 +6862,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 8,
-        "window_coverage_hours": 20,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T22:49:01.408645+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 8,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8043,19 +6932,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8120,19 +6998,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8189,19 +7056,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8266,19 +7122,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 0,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": null,
-        "actual_last_ts": null
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 0,
         "first_ts": null,
@@ -8315,19 +7160,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8396,19 +7230,8 @@
         "youtube",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8521,19 +7344,8 @@
         "youtube",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8646,19 +7458,8 @@
         "youtube",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8767,19 +7568,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8844,19 +7634,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 11,
-        "window_coverage_hours": 23,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T01:49:01.926314+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 11,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -8941,19 +7720,8 @@
         "instagram",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9066,19 +7834,8 @@
         "instagram",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9187,19 +7944,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 4.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9256,19 +8002,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 4,
-        "window_coverage_hours": 2.4,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T05:09:19.111487+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 4,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9321,19 +8056,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9402,19 +8126,8 @@
         "instagram",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9527,19 +8240,8 @@
         "instagram",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9652,19 +8354,8 @@
         "instagram",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 1.05/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 1.05,
-        "actual_end_velocity": 70,
-        "actual_max_velocity": 70,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9775,19 +8466,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 17,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 17,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -9892,19 +8572,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 2.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -9941,19 +8610,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 1.9,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T04:40:07.691290+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -10005,19 +8663,8 @@
         "youtube",
         "x"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -10126,19 +8773,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 11,
-        "window_coverage_hours": 30.1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T08:52:31.636476+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 11,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -10219,19 +8855,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.9,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T03:47:19.257806+00:00",
-        "actual_last_ts": "2026-10-12T04:40:07.691290+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T03:47:19.257806+00:00",
@@ -10268,19 +8893,8 @@
         "instagram",
         "google"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 18,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 18,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -10389,19 +9003,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 7,
-        "window_coverage_hours": 7.2,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 7,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -10466,19 +9069,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 6,
-        "window_coverage_hours": 18.1,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T22:49:01.408645+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 6,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10527,19 +9119,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 10,
-        "window_coverage_hours": 21.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T02:16:10.462655+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 10,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10604,19 +9185,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 8,
-        "window_coverage_hours": 19.7,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T00:24:50.489500+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 8,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10673,19 +9243,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10730,19 +9289,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10787,19 +9335,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10844,19 +9381,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10901,19 +9427,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 5,
-        "window_coverage_hours": 5.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T09:57:06.712891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 5,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -10960,19 +9475,8 @@
       "platforms": [
         "reddit"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 9,
-        "window_coverage_hours": 31.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 9,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -11045,19 +9549,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 2,
-        "window_coverage_hours": 0.8,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T03:33:40.022891+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 2,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -11102,19 +9595,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 4,
-        "window_coverage_hours": 3.5,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T08:07:19.941302+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 4,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -11157,19 +9639,8 @@
       "platforms": [
         "hackernews"
       ],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 15,
-        "window_coverage_hours": 29.6,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-13T10:15:52.754276+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 15,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -11254,19 +9725,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "miss",
-      "verdict": {
-        "verdict": "miss",
-        "reason": "actual slope 0/hr vs falling threshold -1.5/hr",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 3,
-        "window_coverage_hours": 2.3,
-        "actual_slope": 0,
-        "actual_end_velocity": 45,
-        "actual_max_velocity": 45,
-        "actual_first_ts": "2026-10-12T04:40:07.691290+00:00",
-        "actual_last_ts": "2026-10-12T06:59:54.905391+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 3,
         "first_ts": "2026-10-12T04:40:07.691290+00:00",
@@ -11303,19 +9763,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 1,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 1,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
@@ -11356,19 +9805,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 0,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": null,
-        "actual_last_ts": null
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 0,
         "first_ts": null,
@@ -11405,19 +9843,8 @@
       "confidence": null,
       "topic_live": false,
       "platforms": [],
-      "status": "unverifiable",
-      "verdict": {
-        "verdict": "unverifiable",
-        "reason": "48h horizon passed but the window holds fewer than 2 actual velocity snapshots — data gap (topic dropped, series pruned, or fetch outage). No honest comparison is possible.",
-        "resolved_at": "2026-10-14T01:52:13.638Z",
-        "n_actual_points": 1,
-        "window_coverage_hours": 0,
-        "actual_slope": null,
-        "actual_end_velocity": null,
-        "actual_max_velocity": null,
-        "actual_first_ts": "2026-10-12T02:46:54.868540+00:00",
-        "actual_last_ts": "2026-10-12T02:46:54.868540+00:00"
-      },
+      "status": "pending",
+      "verdict": null,
       "window": {
         "n_actual_points": 1,
         "first_ts": "2026-10-12T02:46:54.868540+00:00",
