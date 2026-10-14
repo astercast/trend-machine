@@ -21,8 +21,11 @@ h1, h2, h3, .board-title, .sd-section-h {
 /* ---------- slim head: brand and section links, nothing else ---------- */
 .head-nav { display: flex; gap: var(--s5); align-items: baseline; flex-wrap: wrap; }
 .head-nav a {
-  font-family: var(--font-data); font-size: var(--fs-tiny);
+  /* rotation 23: nav is reading, not data — text face, and every
+     link is a full 44px tap target at every width. */
+  font-family: var(--text); font-size: .8rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: .12em; color: var(--ink-dim);
+  display: inline-flex; align-items: center; min-height: 44px;
 }
 .head-nav a:hover { color: var(--ink); text-decoration: none; }
 
@@ -41,7 +44,9 @@ h1, h2, h3, .board-title, .sd-section-h {
 .wire-rail { grid-column: 1; grid-row: 1; }
 .broadsheet { grid-column: 2; grid-row: 1; }
 .wire-rail {
-  border-right: 1px solid var(--line);
+  /* rotation 23: the column rule between the Wire and the board is a
+     broadsheet column rule — a double rule, not a hairline divider. */
+  border-right: 3px double var(--line-bright);
   padding: var(--s6) var(--s4) var(--s8) var(--s5);
   display: flex; flex-direction: column;
 }
@@ -51,24 +56,48 @@ h1, h2, h3, .board-title, .sd-section-h {
   font-synthesis-weight: none;
 }
 .wire-sub { color: var(--ink-faint); font-size: .8rem; margin: 0 0 var(--s4); line-height: 1.45; }
+/* rotation 23 press furniture for the rail: a slugline over a double
+   rule names the desk that filed the rail, the way a wire slug names
+   a dispatch. The slug is the desk's own name — no invented facts. */
+.wire-slugline {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: var(--s3); margin: 0 0 var(--s3); padding-bottom: var(--s2);
+  border-bottom: 3px double var(--line-bright);
+  font-family: var(--text); font-size: .72rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--ink-dim);
+}
+.wire-slugline .wire-desk { color: var(--ink-faint); font-weight: 400; }
 .wire-list { list-style: none; margin: 0; padding: 0; }
 .wire-item {
   display: flex; flex-direction: column; gap: 1px; padding: 7px 0;
   border-top: 1px solid var(--line-soft);
-  font-family: var(--font-data); font-size: .78rem; line-height: 1.4;
+  /* rotation 23: wire sentences are reading, set in the text face;
+     mono survives on the timestamp line only (.wire-time). */
+  font-family: var(--text); font-size: .82rem; line-height: 1.45;
 }
 .wire-meta { display: flex; gap: var(--s2); align-items: baseline; }
-.wire-time { color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 400; flex: none; }
+.wire-time { color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 400; flex: none; font-family: var(--font-data); font-size: .92em; }
 /* steer 2: the item is a complete credited sentence now; it wraps to
    two lines (clamped) instead of truncating to a fragment. The
    teleprinter step (the item reveal) is untouched. */
 .wire-item a { color: var(--ink-dim); text-decoration: none; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .wire-item a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .wire-foot { margin-top: auto; padding-top: var(--s6); }
-.wire-foot a { font-family: var(--font-data); font-size: .78rem; }
-.wire-lanes { color: var(--ink-ghost); font-family: var(--font-data); font-size: .72rem; line-height: 1.6; margin: var(--s2) 0 0; }
+.wire-foot a { font-family: var(--text); font-size: .85rem; display: inline-flex; align-items: center; min-height: 44px; }
+.wire-lanes { color: var(--ink-ghost); font-family: var(--text); font-size: .78rem; line-height: 1.6; margin: var(--s2) 0 0; }
 
 .broadsheet { padding: var(--s6) var(--s6) var(--s8); min-width: 0; }
+/* rotation 23 folio line: the masthead opens with the paper's own
+   furniture — the section's name on the left, the desk on the right,
+   over the double rule every broadsheet masthead carries. */
+.board-folio {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: var(--s3); margin: 0 0 var(--s3); padding-bottom: var(--s2);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--text); font-size: .72rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--ink-dim);
+}
+.board-folio .board-folio-desk { color: var(--ink-faint); font-weight: 400; }
 .board-masthead { border-bottom: 3px double var(--line-bright); padding-bottom: var(--s4); }
 .board-masthead h1 {
   font-size: clamp(2.1rem, 4.4vw, 3.2rem); font-weight: 700;
@@ -76,9 +105,11 @@ h1, h2, h3, .board-title, .sd-section-h {
 }
 .board-sub { margin: 0; max-width: 62ch; }
 .board-facts {
-  font-family: var(--font-data); font-size: .8rem; color: var(--ink-dim);
+  font-family: var(--text); font-size: .85rem; color: var(--ink-dim);
   margin: var(--s3) 0 0; line-height: 1.7;
 }
+/* the updated stamp inside the facts line is a timestamp — mono. */
+.board-facts #data-ts, .board-facts #data-ts .num { font-family: var(--font-data); font-size: .8rem; }
 .board-facts .num, .board-facts span { font-variant-numeric: tabular-nums; }
 
 /* ---------- board rows: rank, entry, score ---------- */
@@ -97,30 +128,51 @@ h1, h2, h3, .board-title, .sd-section-h {
 .board-row.news .board-rank { color: var(--ink-ghost); }
 .board-title { font-size: 1.28rem; font-weight: 600; line-height: 1.25; }
 .board-score { text-align: right; }
+/* rotation 23: scores are headline numerals in ink — the numeral is
+   the headline, not a signal light. Green (--live) appears on this
+   board only where the words "spreading now" appear: the catch-up
+   rail's numerals (below) and the splash line, which is a drawing
+   of spreading itself. News rows are ink too; nothing on the board
+   is amber or green for decoration. */
 .board-score .score-num {
   display: block; font-family: var(--font-display); font-weight: 700;
   font-synthesis-weight: none;
-  font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: .95; color: var(--live);
+  font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: .95; color: var(--ink);
 }
-.board-row.news .board-score .score-num { color: var(--warm); }
+.board-row.news .board-score .score-num { color: var(--ink); }
 .board-unit { margin-top: 5px; }
 
-/* the splash: one item a day, double height, full width of the field */
+/* the splash: one item a day, double height, full width of the field.
+   Rotation 23 kills the rank-1 card: the lead story is an OPEN ruled
+   row like every other rank — no panel, no border box, no coloured
+   edge. A broadsheet marks its lead with air and a double rule
+   above and below, not with a card. The extra height and the drawn
+   spreading line stay; the box leaves. */
 .board-row.splash {
-  background: var(--panel);
-  border: 1px solid var(--line-bright);
-  border-left: 4px solid var(--live);
-  padding: var(--s8) var(--s5); margin: var(--s4) 0;
+  background: transparent;
+  border: 0; border-top: 3px double var(--line-bright);
+  border-bottom: 3px double var(--line-bright);
+  border-radius: 0;
+  padding: var(--s8) var(--s1); margin: var(--s4) 0;
 }
 .board-row.splash .board-rank { font-size: clamp(3.6rem, 6.5vw, 5.6rem); }
 .board-row.splash .board-title { font-size: clamp(1.6rem, 3vw, 2.15rem); line-height: 1.15; }
 .board-row.splash .board-score .score-num { font-size: clamp(3.4rem, 6vw, 5rem); }
 
-/* evidence as marginalia: small mono lines under the entry, no pills */
+/* evidence as marginalia: small lines under the entry, no pills.
+   Rotation 23: marginalia are sentences a reader reads, so they are
+   set in the text face — mono is for timestamps, not for evidence. */
 .board-marg { list-style: none; margin: var(--s3) 0 0; padding: 0 0 0 var(--s3); border-left: 1px solid var(--line); }
 .board-marg li, .board-marg-plats {
-  font-family: var(--font-data); font-size: .76rem; line-height: 1.65;
+  font-family: var(--text); font-size: .82rem; line-height: 1.6;
   color: var(--ink-faint); margin: 0;
+}
+/* the movement sentence: the row's spreading, stated as a sentence
+   in the marginalia, never as a one-word label under the score. */
+.board-move {
+  font-family: var(--text); font-size: .82rem; line-height: 1.6;
+  color: var(--ink-faint); margin: var(--s2) 0 0; padding-left: var(--s3);
+  border-left: 1px solid var(--line);
 }
 .board-marg-plats { color: var(--ink-dim); margin-top: var(--s3); }
 .board-chips { display: none; }
@@ -128,14 +180,14 @@ h1, h2, h3, .board-title, .sd-section-h {
 /* section heads below the board read as broadsheet rules, not eyebrows */
 .section-head { border-bottom: 1px solid var(--line-bright); }
 .section-head h2 { font-weight: 700; font-synthesis-weight: none; }
-.sec-no { font-family: var(--font-data); color: var(--ink-ghost); }
+.sec-no { font-family: var(--font-display); font-synthesis-weight: none; color: var(--ink-ghost); }
 
 /* ---------- Streamer Desk in the same language ---------- */
 .sd-facts {
   display: flex; flex-wrap: wrap; gap: var(--s2) var(--s6);
   border-top: 3px double var(--line-bright); border-bottom: 1px solid var(--line);
   padding: var(--s4) 0; margin: var(--s5) 0 var(--s2);
-  font-family: var(--font-data); font-size: .82rem; color: var(--ink-dim);
+  font-family: var(--text); font-size: .88rem; color: var(--ink-dim);
 }
 .sd-fact-v {
   font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none;
@@ -145,7 +197,7 @@ h1, h2, h3, .board-title, .sd-section-h {
   background: transparent; border: 0; border-top: 1px solid var(--line);
   border-radius: 0; padding: var(--s4) 2px;
 }
-.sd-drama { background: transparent; border: 0; border-top: 1px solid var(--line); border-left: 3px solid var(--signal); border-radius: 0; }
+.sd-drama { background: transparent; border: 0; border-top: 1px solid var(--line); border-left: 3px double var(--line-bright); border-radius: 0; }
 .sd-badge { border-radius: 2px; }
 .sd-method { background: transparent; border: 0; border-top: 3px double var(--line-bright); border-radius: 0; padding: var(--s4) 2px; }
 
@@ -164,6 +216,32 @@ h1, h2, h3, .board-title, .sd-section-h {
   .board-title { font-size: 1.12rem; }
   .board-score .score-num { font-size: 1.9rem; }
   .board-row.splash .board-score .score-num { font-size: 2.8rem; }
+}
+
+/* ---------- rotation 23 phone finish: 390 and 320 are composed, not
+   shrunk. The broadsheet becomes ONE ruled column: rank, story and
+   headline numeral keep their desktop floors (rank never under
+   2rem, score never under 1.9rem, title never under 1.12rem, body
+   and marginalia never under .82rem), the score sits under its unit
+   in the same column it holds on desktop, and nothing is allowed to
+   push sideways. Tap targets on the board's own furniture are 44px. */
+@media (max-width: 480px) {
+  .board-shell { max-width: 100%; }
+  .broadsheet { padding: var(--s5) var(--s4) var(--s6); }
+  .board-folio { font-size: .68rem; letter-spacing: .14em; }
+  .board-row { grid-template-columns: 44px minmax(0, 1fr) auto; gap: var(--s2); }
+  .board-rank { font-size: 2rem; }
+  .board-row.splash .board-rank { font-size: 2.9rem; }
+  .board-title { overflow-wrap: break-word; }
+  .board-unit { font-size: .68rem; max-width: 9ch; }
+  .wire-item a { min-height: 0; }
+  .station-tab { min-height: 44px; }
+  .catchup-row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--s3); }
+}
+@media (max-width: 340px) {
+  .board-row { grid-template-columns: 42px minmax(0, 1fr) auto; gap: var(--s2); }
+  .board-score .score-num { font-size: 1.9rem; }
+  .board-row.splash .board-score .score-num { font-size: 2.6rem; }
 }
 
 /* P12 motion signature (ROUND-004): two motions only.
@@ -196,6 +274,12 @@ h1, h2, h3, .board-title, .sd-section-h {
    and the mobile wire shows five lines with the rest on scroll. */
 .splash-chart polyline { stroke: var(--live); stroke-width: 2.5; fill: none; }
 .splash-chart circle { fill: var(--live); }
+/* rotation 23: the splash drawing leaves the oscilloscope glass too —
+   a printed line on the page, no reticle, no bezel, no glow. */
+svg.spark.splash-chart {
+  background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0;
+}
+svg.spark.splash-chart polyline, svg.spark.splash-chart circle { filter: none; }
 @media (max-width: 860px) {
   .head-inner { flex-wrap: wrap; gap: var(--s2) var(--s4); }
   .head-nav { flex-direction: row; flex-wrap: wrap; gap: var(--s2) var(--s4); }
@@ -215,12 +299,15 @@ h1, h2, h3, .board-title, .sd-section-h {
 .hot-row .board-rank { font-size: 2.2rem; }
 .hot-main h3 { font-size: 1.08rem; margin: 0 0 4px; font-weight: 600; }
 .hot-main p { color: var(--ink-dim); font-size: .92rem; line-height: 1.5; margin: 0; max-width: 68ch; }
-.hot-meta { display: block; margin-top: var(--s2); font-family: var(--font-data); font-size: .76rem; color: var(--ink-faint); }
+.hot-meta { display: block; margin-top: var(--s2); font-family: var(--text); font-size: .82rem; color: var(--ink-faint); }
 .hot-row .score-num {
   display: block; font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none;
-  font-size: 2rem; line-height: .95; color: var(--live); text-align: right;
+  font-size: 2rem; line-height: .95; color: var(--ink); text-align: right;
 }
-.radar { background: var(--bg-soft); }
+/* rotation 23: the radar loses its violet dashboard frame — it is a
+   ruled section of the paper, square and borderless like the rest. */
+.radar { background: transparent; border: 0; border-top: 3px double var(--line-bright); border-radius: 0; }
+.radar::before { display: none; }
 .radar-strip { display: block; }
 .meme-row {
   display: flex; justify-content: space-between; align-items: baseline; gap: var(--s4);
@@ -232,7 +319,7 @@ h1, h2, h3, .board-title, .sd-section-h {
 .meme-main { display: inline-flex; gap: var(--s3); align-items: baseline; min-width: 0; }
 .meme-main .fmt { color: var(--ink-ghost); font-size: .72rem; white-space: nowrap; }
 .meme-main h4 { margin: 0; font-size: 1rem; font-weight: 600; }
-.meme-meta { font-family: var(--font-data); font-size: .76rem; color: var(--ink-faint); white-space: nowrap; }
+.meme-meta { font-family: var(--text); font-size: .82rem; color: var(--ink-faint); white-space: nowrap; }
 .station-card {
   background: transparent; border: 0; border-top: 3px double var(--line-bright);
   border-radius: 0; padding: var(--s4) 2px;
@@ -259,7 +346,10 @@ h1, h2, h3, .board-title, .sd-section-h {
    The desk opens on its remit line. */
 .board-src { color: var(--ink-faint); font-weight: 400; font-size: .8em; white-space: nowrap; }
 .board-record {
-  font-family: var(--font-data); font-size: .78rem; line-height: 1.5;
+  /* rotation 23: the record line is a sentence ("spreading 92 of
+     100 · last seen 1 day ago · 2 sources") — set in the text face.
+     Its figures are tabular inside the text face. */
+  font-family: var(--text); font-size: .85rem; line-height: 1.5;
   color: var(--ink-dim); margin: var(--s2) 0 0; font-variant-numeric: tabular-nums;
 }
 .wire-item a { min-width: 0; }
@@ -281,12 +371,14 @@ h1, h2, h3, .board-title, .sd-section-h {
 .catchup-row .score-num {
   display: block; font-family: var(--font-display); font-weight: 700;
   font-synthesis-weight: none; font-size: 1.6rem; line-height: .95;
-  color: var(--warm); text-align: right;
+  /* rotation 23: this numeral's unit IS "spreading now" — the one
+     place green is allowed to mean exactly that. */
+  color: var(--live); text-align: right;
 }
 .catchup-none { color: var(--ink-faint); font-size: .9rem; padding: var(--s3) 0; }
 .sd-remit {
-  font-family: var(--font-data); font-size: .92rem; line-height: 1.55;
-  color: var(--ink); border-left: 3px solid var(--signal);
+  font-family: var(--text); font-size: .98rem; line-height: 1.55;
+  color: var(--ink); border-left: 3px double var(--line-bright);
   padding-left: var(--s3); margin: var(--s4) 0 0; max-width: 68ch;
 }
 

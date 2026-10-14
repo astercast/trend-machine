@@ -212,7 +212,7 @@
         '<span class="board-rank">' + (i + 1) + "</span>" +
         '<span class="hot-main"><h3>' + esc(normT(t.title)) + src + "</h3>" +
         "<p>" + esc(normT(t.summary)) + "</p>" +
-        '<span class="hot-meta">' + (leader ? "breaking · " : "") + esc(recordLine(t)) + "</span></span>" +
+        '<span class="hot-meta">' + esc(recordLine(t)) + "</span></span>" +
         '<span class="board-score"><span class="score-num">' + t.opportunity_score + "</span>" +
         '<span class="board-unit">worth making / 100</span></span></a>';
     }).join("");
@@ -226,7 +226,7 @@
       .sort(function (a, b) { return b.velocity - a.velocity; }).slice(0, 10);
     el.innerHTML = memes.map(function (t) {
       return '<a class="meme-row" href="topics/' + t.id + '.html">' +
-        '<span class="meme-main"><span class="fmt num">MEME · v' + t.velocity + "</span>" +
+        '<span class="meme-main"><span class="fmt num">Meme · spreading ' + t.velocity + " of 100</span>" +
         "<h4>" + esc(normT(t.title)) + "</h4></span>" +
         '<span class="meme-meta">' + esc((t.hashtags || []).slice(0, 3).join(" ")) +
         " · " + freshHTML(t.last_seen) + "</span></a>";

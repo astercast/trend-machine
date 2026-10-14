@@ -64,7 +64,9 @@
   max-width: 72ch;
 }
 .board-make {
-  color: var(--live);
+  /* rotation 23: "Make" is an instruction, not a spreading signal —
+     ink, not green. Green means spreading now, and only that. */
+  color: var(--ink);
   font-weight: 700;
   text-transform: uppercase;
   font-size: .72rem;
@@ -90,7 +92,7 @@
   line-height: 1;
   color: var(--live);
 }
-.board-row.news .board-score .num { color: var(--warm); }
+.board-row.news .board-score .num { color: var(--ink); }
 .board-unit {
   display: block;
   color: var(--ink-ghost);
@@ -100,8 +102,10 @@
   margin-top: 3px;
 }
 .board-newsbadge {
-  color: var(--warm);
-  border: 1px solid var(--warm);
+  /* rotation 23: the news badge is a classification in ink — amber
+     no longer decorates the board. */
+  color: var(--ink-dim);
+  border: 1px solid var(--line-bright);
   border-radius: 3px;
   font-size: .66rem;
   font-weight: 700;

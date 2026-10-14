@@ -125,7 +125,7 @@ TOPIC_TMPL = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} · Trend Machine</title>
 <meta name="description" content="{desc}">
-<meta name="theme-color" content="#0a0c10">
+<meta name="theme-color" content="#070a08">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title} · Trend Machine">
 <meta property="og:description" content="{desc}">
@@ -164,8 +164,8 @@ TOPIC_TMPL = """<!doctype html>
 <p class="lede">{summary}</p>
 <p class="topic-facts" aria-label="Signal facts">
 <span class="tf"><span class="tf-k">Last seen</span> <span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></span>
-<span class="tf"><span class="tf-k">Opportunity</span> <span class="tf-num {ocls}">{opp}</span></span>
-<span class="tf"><span class="tf-k">Velocity</span> <span class="tf-num">{vel}</span></span>
+<span class="tf"><span class="tf-k">Worth making</span> <span class="tf-num {ocls}">{opp}</span></span>
+<span class="tf"><span class="tf-k">Spreading</span> <span class="tf-num">{vel}</span></span>
 <span class="tf"><span class="tf-k">Platforms</span> <span class="tf-num">{nplat}</span></span>
 </p>
 <div style="margin-bottom:4px">{plats}{tchip}{cats}{formats}{tags}</div>
@@ -500,7 +500,9 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
             % (" leader" if leader else "", esc(t["id"]), i + 1,
                esc(disp_title(t.get("title"))), src_span,
                esc(disp_text(t.get("summary"))),
-               "breaking · " if leader else "",
+               # rotation 23: the "breaking" label leaves — rank 1 and
+               # its record sentence already say everything it said.
+               "",
                esc(record_line(t, ref)),
                t.get("opportunity_score") or 0))
     page = _fb_region(page, "hot5", "".join(hot))
@@ -511,7 +513,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     for i, t in enumerate(memes):
         radar.append(
             '<a class="meme-row" href="topics/%s.html">'
-            '<span class="meme-main"><span class="fmt num">MEME · v%s</span>'
+            '<span class="meme-main"><span class="fmt num">Meme · spreading %s of 100</span>'
             '<h4>%s</h4></span>'
             '<span class="meme-meta">%s · %s</span></a>'
             % (esc(t["id"]), t.get("velocity") or 0,
@@ -613,9 +615,9 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
 # evidence chips, never an uplift figure.
 PHENOMENON_MERGES = {"seis-sete-dance": "six-seven-meme"}
 _SAT_PEN = {"low": 0.0, "medium": 0.35, "high": 0.6}
-_SAT_LABEL = {"low": "lane still uncrowded",
-              "medium": "lane filling up",
-              "high": "lane crowded"}
+_SAT_LABEL = {"low": "The lane is still uncrowded.",
+              "medium": "The lane is filling up.",
+              "high": "The lane is crowded."}
 BOARD_MAKE_CAP = 7
 BOARD_NEWS_CAP = 3
 
@@ -680,8 +682,8 @@ def _board_snapshot_chip(n):
     # retired; the chip is now a pure readout — how many real velocity
     # snapshots stand behind the row.
     if not n:
-        return "not checked yet"
-    return "seen in %d checks so far" % n
+        return "We have not checked it yet."
+    return "We have seen it in %d checks so far." % n
 
 
 def _board_movement(pts):
@@ -707,12 +709,12 @@ def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
     # what is left: saturation, the snapshot count, hashtags, and any
     # verification rider. Nothing is deleted from the row.
     evidence = [_SAT_LABEL.get(t.get("saturation"),
-                               "saturation %s" % t.get("saturation")),
+                               "How crowded the lane is was not recorded."),
                 _board_snapshot_chip(n_snapshots)]
     evidence.extend((t.get("hashtags") or [])[:2])
     if t.get("verification") and t.get("verification") != "verified":
-        evidence.append("not yet verified, confirm it is still live "
-                        "before building on it")
+        evidence.append("It is not yet verified, so confirm it is still "
+                        "live before building on it.")
     fmt = (t.get("format_tags") or [None])[0] or t.get("category")
     return {
         "rank": rank, "id": t["id"], "title": t.get("title"),
@@ -860,14 +862,48 @@ def _fb_title_html(e):
             % (esc(e["url"]), esc(disp_title(e["title"])), src))
 
 
+# rotation 23 (the wire room): marginalia are sentences, never
+# one-word labels. The stored movement token (rising / cooling /
+# steady) is a data value; the sentence is its display form, here
+# and in the board.js mirror. "Steady" was the named test case.
+_MOVE_SENTENCE = {
+    "rising": "Its spreading is rising since the last check.",
+    "cooling": "Its spreading is cooling since the last check.",
+    "steady": "Its spreading is holding steady since the last check.",
+}
+
+
+def _move_sentence(movement):
+    return _MOVE_SENTENCE.get(movement or "", "")
+
+
+def _plats_sentence(platforms):
+    """The platforms line as a sentence: 'Seen on youtube, tiktok
+    and x.' Mirrors board.js platsSentence."""
+    names = [str(p) for p in (platforms or [])]
+    if not names:
+        return ""
+    if len(names) == 1:
+        joined = esc(names[0])
+    elif len(names) == 2:
+        joined = "%s and %s" % (esc(names[0]), esc(names[1]))
+    else:
+        joined = "%s, and %s" % (", ".join(esc(n) for n in names[:-1]),
+                                  esc(names[-1]))
+    return "Seen on %s." % joined
+
+
 def _fb_board_row(e):
-    plats = " · ".join(esc(p) for p in e["platforms"])
+    plats = _plats_sentence(e["platforms"])
     ev = "".join("<li>%s</li>" % esc(disp_text(c)) for c in e["evidence"])
     marg = ""
     if plats:
-        marg += '<p class="board-marg board-marg-plats">On: %s</p>' % plats
+        marg += '<p class="board-marg board-marg-plats">%s</p>' % plats
     if ev:
         marg += '<ul class="board-marg">%s</ul>' % ev
+    move_s = _move_sentence(e.get("movement"))
+    if move_s:
+        marg += '<p class="board-move">%s</p>' % esc(move_s)
     aka = ""
     if e.get("aka"):
         aka = ('<span class="board-aka">Also tracked as: %s. Same trend, '
@@ -878,31 +914,28 @@ def _fb_board_row(e):
         badge = '<span class="board-newsbadge">News, watch</span> '
     elif e.get("angle"):
         make = ('<p class="board-angle"><span class="board-make">Make</span> %s'
-                '<span class="board-fmt"> · format: %s</span></p>'
+                '<span class="board-fmt"> The format is %s.</span></p>'
                 % (esc(disp_text(e["angle"])), esc(e["format"])))
     record = '<p class="board-record">%s</p>' % esc(e["record"])
     splash = bool(e.get("splash"))
-    move = ""
-    if e.get("movement"):
-        move = '<span class="board-move">%s</span>' % esc(e["movement"])
     if splash:
         chart = ""
         if e.get("spark_svg"):
             chart = '<figure class="splash-fig">%s</figure>' % e["spark_svg"]
         return ('<li class="board-row splash"><span class="board-rank">%d</span>'
-                '<div class="board-main">%s%s%s%s%s</div>'
+                '<div class="board-main">%s%s%s%s%s%s</div>'
                 '<div class="board-score"><span class="score-num">%d</span>'
-                '<span class="board-unit">worth making / 100</span>%s</div></li>'
-                % (e["rank"], badge, _fb_title_html(e), record, make, chart,
-                   e["opportunity_score"], move))
+                '<span class="board-unit">worth making / 100</span></div></li>'
+                % (e["rank"], badge, _fb_title_html(e), record, make, marg,
+                   chart, e["opportunity_score"]))
     return ('<li class="board-row%s"><span class="board-rank">%d</span>'
             '<div class="board-main">%s%s%s%s%s'
             '%s</div>'
             '<div class="board-score"><span class="score-num">%d</span>'
-            '<span class="board-unit">worth making / 100</span>%s</div></li>'
+            '<span class="board-unit">worth making / 100</span></div></li>'
             % (" news" if e["kind"] == "news" else "",
                e["rank"], badge, _fb_title_html(e), record, aka, make, marg,
-               e["opportunity_score"], move))
+               e["opportunity_score"]))
 
 
 def _fb_catchup_row(e):
@@ -935,7 +968,7 @@ ROOT_PAGES = ["index.html", "live-wire.html", "streamer-desk.html",
               "formats.html", "launch-plan.html", "algorithms.html",
               "api-docs.html", "404.html"]
 OG_IMAGE_URL = "https://trend-machine-live.vercel.app/assets/og-card.png"
-THEME_COLOR = "#0a0c10"  # assets/css/tokens.css --bg
+THEME_COLOR = "#070a08"  # assets/css/tokens.css --bg (rotation 23 green-black)
 
 
 def inject_root_head_meta():

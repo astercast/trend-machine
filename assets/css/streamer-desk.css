@@ -22,7 +22,7 @@
   font-family: var(--font-display); font-size: var(--fs-tiny);
   text-transform: uppercase; letter-spacing: .09em; color: var(--ink-dim);
 }
-.sd-card .v { font-family: var(--font-data); font-size: 1.55rem; color: var(--ink); }
+.sd-card .v { font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none; font-size: 1.55rem; color: var(--ink); }
 .sd-curated { font-size: var(--fs-tiny); color: var(--ink-faint); margin: 0 0 10px; }
 
 .sd-section-h {

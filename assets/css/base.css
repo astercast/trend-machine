@@ -15,8 +15,9 @@ body {
   font-family: var(--sans);
   font-size: var(--fs-body);
   line-height: 1.55;
-  /* instrument-panel texture: hairline scanlines, barely there */
-  background-image: repeating-linear-gradient(0deg, transparent 0 31px, rgba(255, 255, 255, .022) 31px 32px);
+  /* rotation 23: the terminal scanline texture is gone — a
+     broadsheet page carries no screen texture; its rules and rules
+     of type are the surface. */
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,7 +35,7 @@ p { margin: 0 0 1em; }
 a { color: var(--signal); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-::selection { background: var(--hot); color: #0a0c10; }
+::selection { background: var(--ink); color: #070a08; }
 
 :focus-visible {
   outline: 2px solid var(--signal);
@@ -54,12 +55,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 img { max-width: 100%; }
 
 .kicker {
-  font-family: var(--mono);
+  /* rotation 23: kickers are press labels, set in the text face —
+     mono is reserved for timestamps and datelines. */
+  font-family: var(--text);
   font-size: var(--fs-micro);
   letter-spacing: .24em;
   text-transform: uppercase;
   color: var(--ink-dim);
-  font-weight: 600;
+  font-weight: 700;
 }
 .num {
   font-family: var(--mono);

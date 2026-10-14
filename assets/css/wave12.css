@@ -76,14 +76,15 @@ h1, h2 { font-weight: 700; }
   letter-spacing: .03em;
   text-transform: uppercase;
 }
-/* brand mark → VU meter: tiered bars, still equalizer-pulsed */
+/* brand mark (rotation 23): the VU meter's coloured, glowing bars
+   were dashboard chrome — the mark is now four ink column rules on
+   the green-black ground, no glow, no pulse. */
 .brand-mark {
-  background: #04060a;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, .8), 0 0 0 1px #000;
+  background: var(--bg-0);
+  box-shadow: none;
 }
-.brand-mark i:nth-child(1), .brand-mark i:nth-child(2) { background: var(--live); box-shadow: 0 0 6px rgba(65, 255, 138, .7); }
-.brand-mark i:nth-child(3) { background: var(--warm); box-shadow: 0 0 6px rgba(255, 178, 36, .7); }
-.brand-mark i:nth-child(4) { background: var(--hot);  box-shadow: 0 0 6px rgba(255, 84, 104, .7); }
+.brand-mark i:nth-child(1), .brand-mark i:nth-child(2),
+.brand-mark i:nth-child(3), .brand-mark i:nth-child(4) { background: var(--ink); box-shadow: none; }
 
 /* ---------- 04 · radar scope ----------
    Real radar instrument: range rings, crosshair, rotating sweep,
@@ -457,9 +458,19 @@ body.tm-alarm-1202 .blip-ring { animation: none; opacity: 0; }
   padding: var(--s4) 0; margin: var(--s4) 0 var(--s5);
   align-items: baseline;
 }
+/* rotation 23: dossier chips stop being coloured pills — on the
+   dossier they are square press tags in ink, one setting for every
+   kind (platform, format, family, hashtag alike). */
+.topic-hero .chip, .topic-hero .tag {
+  border-radius: 2px; background: transparent;
+  border-color: var(--line-bright); color: var(--ink-dim);
+}
+.topic-hero .chip.plat, .topic-hero .chip.type,
+.topic-hero .chip.format, .topic-hero .chip.family { color: var(--ink-dim); background: transparent; border-color: var(--line-bright); }
 .tf { display: inline-flex; gap: var(--s2); align-items: baseline; }
 .tf-k {
-  font-family: var(--font-data); font-size: var(--fs-tiny);
+  /* rotation 23: fact labels are press labels — text face. */
+  font-family: var(--text); font-size: var(--fs-tiny); font-weight: 700;
   text-transform: uppercase; letter-spacing: .1em; color: var(--ink-faint);
 }
 .tf-num {

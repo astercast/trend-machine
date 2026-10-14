@@ -34,7 +34,7 @@
   border-radius: var(--r); padding: 12px 14px;
   display: flex; flex-direction: column; gap: 2px;
 }
-.lw-card-num { font-family: var(--font-data); font-size: 1.55rem; color: var(--ink); }
+.lw-card-num { font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none; font-size: 1.55rem; color: var(--ink); }
 .lw-card-label {
   font-family: var(--font-display); font-size: var(--fs-tiny);
   text-transform: uppercase; letter-spacing: .09em; color: var(--ink);
@@ -80,7 +80,7 @@
 .lw-badge.is-retired { color: var(--ink-dim); border-style: dashed; }
 
 .lw-hitcell { display: flex; flex-direction: column; gap: 2px; }
-.lw-hits { font-family: var(--font-data); font-size: 1.05rem; color: var(--ink); }
+.lw-hits { font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none; font-size: 1.05rem; color: var(--ink); }
 .lw-hits-note { font-size: var(--fs-tiny); color: var(--ink-faint); }
 .lw-srccell { display: flex; flex-direction: column; gap: 2px; }
 .lw-sources { font-size: var(--fs-tiny); color: var(--ink-dim); word-break: break-word; }
@@ -107,7 +107,7 @@
 .lw-mover h4 { margin: 0 0 2px; font-size: .92rem; font-weight: 600; line-height: 1.35; }
 .lw-mover h4 a { color: var(--ink); text-decoration: none; }
 .lw-mover h4 a:hover { text-decoration: underline; }
-.lw-delta { font-family: var(--font-data); font-size: 1.25rem; white-space: nowrap; }
+.lw-delta { font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none; font-size: 1.25rem; white-space: nowrap; }
 .lw-delta.is-up { color: var(--live); }
 .lw-delta.is-down { color: var(--hot); }
 

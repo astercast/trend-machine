@@ -37,45 +37,64 @@
     var src = e.source_name ? ' <span class="board-src">(' + esc(normT(e.source_name)) + ")</span>" : "";
     return '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + src + "</a>";
   }
+  /* rotation 23: marginalia are sentences — mirrors _plats_sentence
+     and _move_sentence in build_site.py. The stored movement token
+     stays a token in board.json; the sentence is display only. */
+  var MOVE_SENTENCE = {
+    rising: "Its spreading is rising since the last check.",
+    cooling: "Its spreading is cooling since the last check.",
+    steady: "Its spreading is holding steady since the last check."
+  };
+  function platsSentence(platforms) {
+    var names = (platforms || []).map(String);
+    if (!names.length) return "";
+    var joined;
+    if (names.length === 1) joined = esc(names[0]);
+    else if (names.length === 2) joined = esc(names[0]) + " and " + esc(names[1]);
+    else joined = names.slice(0, -1).map(esc).join(", ") + ", and " + esc(names[names.length - 1]);
+    return "Seen on " + joined + ".";
+  }
   function rowHTML(e) {
-    var plats = (e.platforms || []).map(esc).join(" · ");
+    var plats = platsSentence(e.platforms);
     var marg = "";
-    if (plats) marg += '<p class="board-marg board-marg-plats">On: ' + plats + "</p>";
+    if (plats) marg += '<p class="board-marg board-marg-plats">' + plats + "</p>";
     if (e.evidence && e.evidence.length) {
       marg += '<ul class="board-marg">' + e.evidence.map(function (c) {
         return "<li>" + esc(normT(c)) + "</li>";
       }).join("") + "</ul>";
     }
+    if (e.movement && MOVE_SENTENCE[e.movement]) {
+      marg += '<p class="board-move">' + esc(MOVE_SENTENCE[e.movement]) + "</p>";
+    }
     var aka = "";
     if (e.aka && e.aka.length) {
       aka = '<span class="board-aka">Also tracked as: ' + esc(e.aka.map(normT).join(" · ")) +
-        ". One phenomenon, evidence combined.</span>";
+        ". Same trend, evidence combined.</span>";
     }
     var badge = "", make = "";
     if (e.kind === "news") {
       badge = '<span class="board-newsbadge">News, watch</span> ';
     } else if (e.angle) {
       make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(normT(e.angle)) +
-        '<span class="board-fmt"> · format: ' + esc(e.format) + "</span></p>";
+        '<span class="board-fmt"> The format is ' + esc(e.format) + ".</span></p>";
     }
     var record = e.record ? '<p class="board-record">' + esc(e.record) + "</p>" : "";
     var splash = !!e.splash;
-    var move = e.movement ? '<span class="board-move">' + esc(e.movement) + "</span>" : "";
     if (splash) {
       var chart = e.spark_svg ? '<figure class="splash-fig">' + e.spark_svg + "</figure>" : "";
       return '<li class="board-row splash">' +
         '<span class="board-rank">' + e.rank + "</span>" +
         '<div class="board-main">' + badge + titleHTML(e) + record +
-        make + chart + "</div>" +
+        make + marg + chart + "</div>" +
         '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-        '<span class="board-unit">worth making / 100</span>' + move + "</div></li>";
+        '<span class="board-unit">worth making / 100</span></div></li>";
     }
     return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
       '<div class="board-main">' + badge + titleHTML(e) + record +
       aka + make + marg + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-      '<span class="board-unit">worth making / 100</span>' + move + "</div></li>";
+      '<span class="board-unit">worth making / 100</span></div></li>";
   }
   function catchupRowHTML(e) {
     return '<li class="catchup-row"><div class="board-main">' + titleHTML(e) +
@@ -92,7 +111,7 @@
     if (catchup && board.catchup) {
       catchup.innerHTML = board.catchup.length
         ? board.catchup.map(catchupRowHTML).join("")
-        : '<li class="catchup-none">Nothing on the record has cooled yet: no tracked topic\u2019s latest velocity sits below its window peak.</li>';
+        : '<li class="catchup-none">Nothing on the record has cooled yet: no tracked topic is spreading more slowly now than at its fastest in the record.</li>';
     }
     var note = document.getElementById("board-note");
     if (note && board.note) note.textContent = normT(board.note);

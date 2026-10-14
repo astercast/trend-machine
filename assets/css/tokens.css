@@ -4,22 +4,24 @@
    live = bright + breathing · warm = amber · stale = dimming
    ============================================================ */
 :root {
-  /* ---- surfaces (near-black, layered — never flat gradients) ---- */
-  --bg-0:        #06080c;
-  --bg:          #0a0c10;
-  --bg-soft:     #0e1117;
-  --panel:       #11141c;
-  --panel-2:     #161a24;
-  --panel-3:     #1c2130;
-  --line:        #232b3c;
-  --line-soft:   #181e2a;
-  --line-bright: #33415e;
+  /* ---- surfaces (rotation 23, the wire room: the near-black is
+     tinted toward green-black — a coloured dark, never black with a
+     blue/purple wash; layered, never flat gradients) ---- */
+  --bg-0:        #040705;
+  --bg:          #070a08;
+  --bg-soft:     #0a0f0b;
+  --panel:       #0d120e;
+  --panel-2:     #111711;
+  --panel-3:     #182218;
+  --line:        #243528;
+  --line-soft:   #182419;
+  --line-bright: #3a5240;
 
-  /* ---- ink ---- */
-  --ink:         #eef1f6;
-  --ink-dim:     #a7b0c2;
-  --ink-faint:   #6b7488;
-  --ink-ghost:   #454d61;
+  /* ---- ink (a green-tinted newsprint white, not blue-grey) ---- */
+  --ink:         #eef3ec;
+  --ink-dim:     #a9b8a9;
+  --ink-faint:   #71826f;
+  --ink-ghost:   #49584a;
 
   /* ---- signal tiers ---- */
   --live:        #41ff8a;
@@ -39,9 +41,13 @@
   --violet-dim:  rgba(180, 140, 255, .12);
   --violet-glow: 0 0 22px rgba(180, 140, 255, .30);
 
-  /* ---- type ---- */
+  /* ---- type (rotation 23: three voices, three jobs — Chakra Petch
+     sets headlines and headline numerals; Libre Franklin, a chosen
+     self-hosted text face, sets everything a person reads; Space
+     Mono sets timestamps and datelines only) ---- */
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
-  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --sans: "Libre Franklin", "Libre Franklin Fallback", Georgia, serif;
+  --text: "Libre Franklin", "Libre Franklin Fallback", Georgia, serif;
   --display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
 
   /* type scale */
@@ -88,15 +94,16 @@
   --mono: "Space Mono", "Space Mono Fallback", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   --display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
 
-  /* instrument-panel furniture */
-  --plate:        #0b0e14;   /* engraved plate surface */
-  --plate-ink:    #8b93a7;   /* engraved label ink (decorative only) */
-  --rivet:        #2b3345;   /* screw-head metal */
-  --rivet-slot:   #05070b;   /* screw slot */
+  /* press furniture (rotation 23: the instrument plate becomes the
+     press plate — same tokens, green-black tints) */
+  --plate:        #0a0e0a;   /* press plate surface */
+  --plate-ink:    #8b9a8b;   /* plate label ink (decorative only) */
+  --rivet:        #2b3a2d;   /* press furniture metal */
+  --rivet-slot:   #040604;   /* slot */
   --bezel-hi:     rgba(255, 255, 255, .07);
-  --scope-bg:     #04060a;   /* oscilloscope / radar glass */
+  --scope-bg:     #040604;   /* wire glass */
   --reticle:      rgba(83, 233, 255, .08);
-  --tape-bg:      #0a0d13;   /* ticker tape */
+  --tape-bg:      #090c09;   /* ticker tape */
   --alarm:        #ffb224;   /* 1202 alarm amber */
   --alarm-deep:   #8a5a00;
 }

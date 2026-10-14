@@ -7,10 +7,10 @@
 
 /* ---------- 01 · header ---------- */
 .site-head {
-  border-bottom: 1px solid var(--line);
-  background: rgba(14, 17, 23, .92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* rotation 23: no glass — the head is a solid press bar with a
+     double rule under it, like a newspaper nameplate rule. */
+  border-bottom: 3px double var(--line-bright);
+  background: var(--bg);
   position: sticky; top: 0; z-index: var(--z-head);
 }
 .head-inner {
@@ -24,15 +24,16 @@
 .brand:hover { text-decoration: none; }
 /* signal-bars mark: 4 bars, live-green, equalizer pulse */
 .brand-mark {
-  width: 32px; height: 32px; border-radius: 9px;
+  width: 32px; height: 32px; border-radius: 2px;
   border: 1px solid var(--line-bright);
   background: var(--bg-0);
   display: flex; align-items: flex-end; justify-content: center;
   gap: 3px; padding: 7px 0;
 }
+/* rotation 23: the equalizer pulse is dashboard motion; the mark is
+   now a static set of column rules in ink — press furniture, still. */
 .brand-mark i {
-  width: 3px; border-radius: 2px; background: var(--live);
-  animation: eq 1.3s var(--ease-snap) infinite;
+  width: 3px; border-radius: 0; background: var(--ink);
 }
 .brand-mark i:nth-child(1) { height: 40%; animation-delay: 0s; }
 .brand-mark i:nth-child(2) { height: 85%; animation-delay: .18s; }
@@ -345,12 +346,12 @@
 
 /* ---------- 10 · topic dossier ---------- */
 .topic-hero { padding: var(--s10) 0 var(--s4); position: relative; }
-.topic-hero::before { /* signal edge */
+.topic-hero::before { /* rotation 23: the dossier's edge is a press
+   rule in ink, not a glowing signal bar */
   content: ""; position: absolute; left: 0; top: var(--s8); bottom: var(--s4);
-  width: 3px; border-radius: 2px; background: var(--live);
-  box-shadow: var(--live-glow);
+  width: 3px; border-radius: 0; background: var(--line-bright);
 }
-.topic-hero.is-hot::before { background: var(--hot); box-shadow: var(--hot-glow); }
+.topic-hero.is-hot::before { background: var(--line-bright); }
 .topic-hero.is-warm::before { background: var(--warm); }
 .topic-hero { padding-left: var(--s6); }
 .topic-hero h1 { font-size: var(--fs-hero); max-width: 22ch; margin-bottom: var(--s3); }

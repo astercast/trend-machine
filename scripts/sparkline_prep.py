@@ -281,7 +281,7 @@ def evidence_block_html(pts, topic_id, per_platform=None):
                "s" if prep["n"] != 1 else "", esc(arrow), delta))
         body = svg + caption + data_table_html(
             pts, "spark-data-%s" % esc(topic_id),
-            "Velocity snapshots for this topic")
+            "Spreading readings for this topic")
     else:
         body = (
             '<p class="ev-none">The record holds %d reading%s '
