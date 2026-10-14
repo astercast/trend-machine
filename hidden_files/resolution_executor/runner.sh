@@ -18,7 +18,13 @@ STATE="/home/hatch/workspace/fleet-ops/trend-resolution"
 PUSHLOGS="/home/hatch/workspace/fleet-ops/push-logs"
 SHOTS="/home/hatch/workspace/progress-archive/trend-machine/rotation-017"
 GATE="2026-10-14T01:45:28.760Z"
-CHROME="/opt/meta-chromium/chrome"
+CHROME="/home/hatch/workspace/.browser/chrome-headless-shell-linux64/chrome-headless-shell"
+# ^ FIX 2026-10-14 (wave-engine, Resolution Night incident): the full
+# /opt/meta-chromium/chrome --headless=new silently emits 0-byte captures
+# in this environment (exit 0, no DOM, no PNG) — the first post-gate run
+# graded 143 verdicts, then BLOCKED on the banner check asserting against
+# an empty DOM. chrome-headless-shell (the fleet's proven capture binary)
+# renders the same pages correctly; it takes no --headless=new flag.
 mkdir -p "$STATE/runs" "$PUSHLOGS" "$SHOTS"
 cd "$REPO" || exit 1
 
@@ -28,7 +34,13 @@ heartbeat() { date -u +%FT%TZ > "$STATE/heartbeat.txt"; }
 blocked() { status "BLOCKED $*"; heartbeat; exit 1; }
 epoch() { python3 -c "from datetime import datetime,timezone; print(int(datetime.fromisoformat('$1'.replace('Z','+00:00')).timestamp()))"; }
 sleep_until() { # $1 = ISO time; heartbeat at least every ~4 min while waiting
-  local target; target=$(epoch "$1")
+  # +2s epsilon FIX 2026-10-14 (wave-engine, Resolution Night incident):
+  # epoch() truncates the horizon to its whole second, so the runner used
+  # to fire up to 999ms BEFORE a sub-second horizon (gate .760) and
+  # resolution_night.sh — correctly, at full precision — REFUSED as
+  # grading-before-horizon. Fire 2s past the truncated second instead:
+  # always >= ~1s after the true horizon, never early.
+  local target; target=$(( $(epoch "$1") + 2 ))
   while [ "$(date -u +%s)" -lt "$target" ]; do
     heartbeat; local remain=$(( target - $(date -u +%s) ))
     status "WAITING target=$1 gate=$GATE now=$(date -u +%FT%TZ) seconds_remaining=$remain"
@@ -78,13 +90,13 @@ ThreadingHTTPServer(('127.0.0.1', 8791), SimpleHTTPRequestHandler).serve_forever
 " > "$STATE/httpserver.log" 2>&1 & echo $! > "$STATE/httpserver.pid")
   sleep 2
   for page in forecast-accuracy oracle-board; do
-    "$CHROME" --headless=new --disable-gpu --no-sandbox --hide-scrollbars \
+    "$CHROME" --disable-gpu --no-sandbox --hide-scrollbars \
       --force-prefers-reduced-motion --window-size=1440,1100 \
       --virtual-time-budget=10000 \
       --screenshot="$SHOTS/$page.png" "http://127.0.0.1:8791/$page.html" \
       >> "$STATE/executor.log" 2>&1 || log "screenshot $page: chromium exit $?"
     # DOM evidence: the live banner must carry the real hit rate
-    "$CHROME" --headless=new --disable-gpu --no-sandbox \
+    "$CHROME" --disable-gpu --no-sandbox \
       --force-prefers-reduced-motion --virtual-time-budget=10000 \
       --dump-dom "http://127.0.0.1:8791/$page.html" > "$SHOTS/$page.dom.html" 2>/dev/null || true
   done

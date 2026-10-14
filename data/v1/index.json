@@ -75,7 +75,7 @@
       "path": "data/v1/lifecycle.json",
       "description": "Ignition/burnout lifecycle layer: every topic's current lifecycle stage (building/steady/warming/igniting/peaking/cooling/burned-out) classified from its real velocity snapshots, per-topic stage ribbons, and the last-24h ignitions/burnouts boards. Stages use the classifier's own thresholds (ignition line v=70, rise/fall ±1.5/hr) — readouts, not predictions.",
       "schema": "data/v1/schema/lifecycle.json",
-      "updated": "2026-10-13T10:15:56.115Z",
+      "updated": "2026-10-14T01:52:13.857Z",
       "records": 393,
       "notes": "Stages are computed from the same snapshots as forecasts.json; the boards show transitions that actually happened in the last 24h."
     },
@@ -83,7 +83,7 @@
       "path": "data/v1/oracle-board.json",
       "description": "Wave 27: the Oracle Board — every recorded forecast as an explorable row: call type, forecast-time velocity, the topic's full stored velocity trajectory, its 48h window state (actual snapshots, coverage, slope, ready/short), due time, and the verdict when one exists. Pending stays pending; short windows are labeled short.",
       "schema": "data/v1/schema/oracle-board.json",
-      "updated": "2026-10-13T10:15:57.430Z",
+      "updated": "2026-10-14T01:52:14.290Z",
       "records": 315,
       "notes": "Written by scripts/build_oracle_board.js (runs after build_forecasts.js in refresh.sh and in resolution_night.sh step 3); human-readable on oracle-board.html."
     },
@@ -121,7 +121,7 @@
       "path": "data/v1/forecasts.json",
       "description": "Oracle output: precomputed trajectory classifications (peaking_48h / rising_fast / cooling_off / steady) from the same classifier as the dashboard. Every forecast is a projection from N snapshots — never a guarantee. Wave 6 adds confidence basis, signal attribution, and per-platform trajectories.",
       "schema": "data/v1/schema/forecasts.json",
-      "updated": "2026-10-13T10:15:56.115Z",
+      "updated": "2026-10-14T01:52:13.857Z",
       "records": 393,
       "notes": "Topics with fewer than 3 snapshots are excluded from the lists (counts.insufficient). Additive-only changes; no payload-shape breaks."
     },
@@ -129,7 +129,7 @@
       "path": "data/v1/forecast-accuracy.json",
       "description": "The Oracle's own scorecard: forecast-vs-actual ledger (hit/miss per forecast after a 48h horizon; unverifiable counted separately). Hit rate shown only after 10+ forecasts resolve; before that the status is 'building history'. Wave 18 adds next_resolution_at, resolution_readiness (pending forecasts whose 48h window already holds 2+ actual snapshots, live store + resolution archive), and per-resolution window-coverage evidence.",
       "schema": "data/v1/schema/forecast-accuracy.json",
-      "updated": "2026-10-13T10:15:56.115Z",
+      "updated": "2026-10-14T01:52:13.857Z",
       "records": 315,
       "notes": "Started 2026-10-11 — first resolutions land 48h later. Nothing backfilled."
     }
