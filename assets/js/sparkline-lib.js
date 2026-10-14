@@ -1,9 +1,9 @@
-/* trend-machine — wave 8: pure client-side sparkline lib.
+/* trend-machine, wave 8: pure client-side sparkline lib.
    Same math + honesty contract as scripts/sparkline_prep.py (Python):
    series need >= MIN_POINTS snapshots to draw; fewer render the honest
-   "building" text — never a fake line. Static SVG (no animation) so it is
+   "building" text, never a fake line. Static SVG (no animation) so it is
    reduced-motion safe; role="img" + data-grounded aria-label.
-   Pure functions, no DOM — unit-tested with pinned fixtures
+   Pure functions, no DOM, unit-tested with pinned fixtures
    (scripts/test_sparkline_lib.js). Node-safe: exports when module exists. */
 var TM_Sparkline = (function () {
   "use strict";

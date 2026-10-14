@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>API docs — Trend Machine</title>
+<title>API docs, Trend Machine</title>
 <meta name="description" content="Trend Machine agent API: every endpoint, its schema, and an interactive console to try them.">
 <meta name="theme-color" content="#0a0c10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="API docs — Trend Machine">
+<meta property="og:title" content="API docs, Trend Machine">
 <meta property="og:description" content="Trend Machine agent API: every endpoint, its schema, and an interactive console to try them.">
 <meta property="og:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="API docs — Trend Machine">
+<meta name="twitter:title" content="API docs, Trend Machine">
 <meta name="twitter:description" content="Trend Machine agent API: every endpoint, its schema, and an interactive console to try them.">
 <meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <link rel="canonical" href="https://trend-machine-live.vercel.app/api-docs.html">
@@ -65,7 +65,7 @@
 <section aria-labelledby="api-title">
 <p class="kicker">for agents &amp; integrations</p>
 <h1 id="api-title">API docs</h1>
-<p style="max-width:68ch">Everything is static JSON under <code>data/v1/</code> — no auth, no keys, no rate limits.
+<p style="max-width:68ch">Everything is static JSON under <code>data/v1/</code>, no auth, no keys, no rate limits.
 Start at the <a href="data/v1/index.json">manifest</a>: every endpoint with its description, schema URL,
 <code>updated</code> timestamp, and record counts. Schemas are draft-07 under
 <a href="data/v1/schema/">data/v1/schema/</a>. The full agent guide (workflows included) is
@@ -75,18 +75,18 @@ Start at the <a href="data/v1/index.json">manifest</a>: every endpoint with its 
 <table class="ep-table" aria-label="API endpoints">
 <thead><tr><th scope="col">Endpoint</th><th scope="col">What it is</th><th scope="col">Schema</th></tr></thead>
 <tbody id="ep-body">
-<tr><td><code>data/v1/trends.json</code></td><td>All topics, full dossiers — sort by <code>opportunity_score</code> desc for the hottest plays; each topic now carries <code>trend_type</code> (format/topic/format+topic) and seeded <code>verification</code> flags</td><td><code>data/v1/schema/trends.json</code></td></tr>
-<tr><td><code>data/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded; includes <code>trend_type</code> and <code>velocity_trend</code> (wave 8: snapshot count, delta, since label, ready-made inline SVG sparkline, per-platform mini-summaries — <code>state: "building"</code> with <code>sparkline_svg: null</code> when fewer than 3 snapshots: no fake lines)</td><td><code>data/v1/schema/trends-flat.json</code></td></tr>
-<tr><td><code>data/v1/trends.flat.sample.json</code></td><td>Labeled <code>sample:true</code> twin — development only</td><td><code>data/v1/schema/trends-flat-sample.json</code></td></tr>
-<tr><td><code>data/v1/trends.flat.js</code></td><td>JSONP twin (<code>trendsCallback(...)</code>) — CORS-safe for pure static hosts. File lives at <code>static/v1/trends.flat.js</code> (no static <code>.js</code> under <code>api/</code> — Vercel would deploy it as a function); this public URL is preserved by a <code>vercel.json</code> rewrite</td><td>same as flat feed</td></tr>
+<tr><td><code>data/v1/trends.json</code></td><td>All topics, full dossiers, sort by <code>opportunity_score</code> desc for the hottest plays; each topic now carries <code>trend_type</code> (format/topic/format+topic) and seeded <code>verification</code> flags</td><td><code>data/v1/schema/trends.json</code></td></tr>
+<tr><td><code>data/v1/trends.flat.json</code></td><td>Flat consumer feed: opportunity-ranked, stale excluded; includes <code>trend_type</code> and <code>velocity_trend</code> (wave 8: snapshot count, delta, since label, ready-made inline SVG sparkline, per-platform mini-summaries, <code>state: "building"</code> with <code>sparkline_svg: null</code> when fewer than 3 snapshots: no fake lines)</td><td><code>data/v1/schema/trends-flat.json</code></td></tr>
+<tr><td><code>data/v1/trends.flat.sample.json</code></td><td>Labeled <code>sample:true</code> twin, development only</td><td><code>data/v1/schema/trends-flat-sample.json</code></td></tr>
+<tr><td><code>data/v1/trends.flat.js</code></td><td>JSONP twin (<code>trendsCallback(...)</code>), CORS-safe for pure static hosts. File lives at <code>static/v1/trends.flat.js</code> (no static <code>.js</code> under <code>api/</code>, Vercel would deploy it as a function); this public URL is preserved by a <code>vercel.json</code> rewrite</td><td>same as flat feed</td></tr>
 <tr><td><code>data/v1/hashtags.json</code></td><td>Tag → topic-id index</td><td><code>data/v1/schema/hashtags.json</code></td></tr>
 <tr><td><code>data/v1/velocity.json</code></td><td>Hourly velocity snapshots per topic</td><td><code>data/v1/schema/velocity.json</code></td></tr>
 <tr><td><code>data/v1/platform-velocity.json</code></td><td>Per-platform hourly velocity series per topic</td><td><code>data/v1/schema/platform-velocity.json</code></td></tr>
-<tr><td><code>data/v1/live-wire.json</code></td><td>Wave 28: the Live Wire — a command view over the pipeline's own stored outputs: every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design — TikTok and X claim no hits), plus the hour's top movers computed from stored velocity snapshots only, real span printed per mover — human-readable at <code>live-wire.html</code></td><td><code>data/v1/schema/live-wire.json</code></td></tr>
-<tr><td><code>data/v1/streamer-desk.json</code></td><td>Wave 29: the Streamer Desk — sourced streamer directory, dated updates, a drama tracker printing only multi-source-verified timelines (unverified claims quarantined with reasons), houses with dated rosters, and an events calendar with computed past/upcoming status — human-readable at <code>streamer-desk.html</code></td><td><code>data/v1/schema/streamer-desk.json</code></td></tr>
-<tr><td><code>data/v1/meme-formats.json</code></td><td>Wave 9: the tracked meme format families — hand-curated from Oct-2026 research (verified/single-source flags), each with current examples, evidence URLs, and live <code>tracked_topics</code> links; human-readable at <code>formats.html</code> (format leaderboard included)</td><td><code>data/v1/schema/meme-formats.json</code></td></tr>
-<tr><td><code>data/v1/seed-freshness.json</code></td><td>Wave 14: seed-freshness audit — every seeded topic's staleness verdict (healthy / stale-source / stale-untracked / flaky-warning) with per-source probe results, corroboration age, and snapshot counts</td><td><code>data/v1/schema/seed-freshness.json</code></td></tr>
-<tr><td><code>data/v1/lifecycle.json</code></td><td>Wave 17: ignition/burnout lifecycle layer — every topic's current stage (<code>building</code>/<code>steady</code>/<code>warming</code>/<code>igniting</code>/<code>peaking</code>/<code>cooling</code>/<code>burned-out</code>) classified from real velocity snapshots with the classifier's own thresholds; per-topic stage ribbons; last-24h ignitions/burnouts boards. Stages are readouts, not predictions</td><td><code>data/v1/schema/lifecycle.json</code></td></tr>
+<tr><td><code>data/v1/live-wire.json</code></td><td>Wave 28: the Live Wire, a command view over the pipeline's own stored outputs: every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design, TikTok and X claim no hits), plus the hour's top movers computed from stored velocity snapshots only, real span printed per mover, human-readable at <code>live-wire.html</code></td><td><code>data/v1/schema/live-wire.json</code></td></tr>
+<tr><td><code>data/v1/streamer-desk.json</code></td><td>Wave 29: the Streamer Desk, sourced streamer directory, dated updates, a drama tracker printing only multi-source-verified timelines (unverified claims quarantined with reasons), houses with dated rosters, and an events calendar with computed past/upcoming status, human-readable at <code>streamer-desk.html</code></td><td><code>data/v1/schema/streamer-desk.json</code></td></tr>
+<tr><td><code>data/v1/meme-formats.json</code></td><td>Wave 9: the tracked meme format families, hand-curated from Oct-2026 research (verified/single-source flags), each with current examples, evidence URLs, and live <code>tracked_topics</code> links; human-readable at <code>formats.html</code> (format leaderboard included)</td><td><code>data/v1/schema/meme-formats.json</code></td></tr>
+<tr><td><code>data/v1/seed-freshness.json</code></td><td>Wave 14: seed-freshness audit, every seeded topic's staleness verdict (healthy / stale-source / stale-untracked / flaky-warning) with per-source probe results, corroboration age, and snapshot counts</td><td><code>data/v1/schema/seed-freshness.json</code></td></tr>
+<tr><td><code>data/v1/lifecycle.json</code></td><td>Wave 17: ignition/burnout lifecycle layer, every topic's current stage (<code>building</code>/<code>steady</code>/<code>warming</code>/<code>igniting</code>/<code>peaking</code>/<code>cooling</code>/<code>burned-out</code>) classified from real velocity snapshots with the classifier's own thresholds; per-topic stage ribbons; last-24h ignitions/burnouts boards. Stages are readouts, not predictions</td><td><code>data/v1/schema/lifecycle.json</code></td></tr>
 <tr><td><code>data/v1/index.json</code></td><td>Self-describing manifest of all endpoints</td><td><code>data/v1/schema/index.json</code></td></tr>
 </tbody>
 </table>
@@ -103,19 +103,19 @@ large payloads are pretty-printed and truncated for display.</p>
 <div class="field">
 <label for="ep-picker">Endpoint</label>
 <select id="ep-picker" name="endpoint">
-<option value="data/v1/index.json">index.json — manifest</option>
-<option value="data/v1/trends.json">trends.json — all dossiers</option>
-<option value="data/v1/trends.flat.json">trends.flat.json — flat feed</option>
-<option value="data/v1/trends.flat.sample.json">trends.flat.sample.json — labeled sample</option>
-<option value="data/v1/trends.flat.js">trends.flat.js — JSONP twin (text)</option>
-<option value="data/v1/hashtags.json">hashtags.json — tag index</option>
-<option value="data/v1/velocity.json">velocity.json — snapshots</option>
-<option value="data/v1/platform-velocity.json">platform-velocity.json — per-platform series</option>
-<option value="data/v1/live-wire.json">live-wire.json — Live Wire</option>
-<option value="data/v1/streamer-desk.json">streamer-desk.json — Streamer Desk</option>
-<option value="data/v1/meme-formats.json">meme-formats.json — format families</option>
-<option value="data/v1/seed-freshness.json">seed-freshness.json — seed audit</option>
-<option value="data/v1/lifecycle.json">lifecycle.json — ignition/burnout stages</option>
+<option value="data/v1/index.json">index.json, manifest</option>
+<option value="data/v1/trends.json">trends.json, all dossiers</option>
+<option value="data/v1/trends.flat.json">trends.flat.json, flat feed</option>
+<option value="data/v1/trends.flat.sample.json">trends.flat.sample.json, labeled sample</option>
+<option value="data/v1/trends.flat.js">trends.flat.js, JSONP twin (text)</option>
+<option value="data/v1/hashtags.json">hashtags.json, tag index</option>
+<option value="data/v1/velocity.json">velocity.json, snapshots</option>
+<option value="data/v1/platform-velocity.json">platform-velocity.json, per-platform series</option>
+<option value="data/v1/live-wire.json">live-wire.json, Live Wire</option>
+<option value="data/v1/streamer-desk.json">streamer-desk.json, Streamer Desk</option>
+<option value="data/v1/meme-formats.json">meme-formats.json, format families</option>
+<option value="data/v1/seed-freshness.json">seed-freshness.json, seed audit</option>
+<option value="data/v1/lifecycle.json">lifecycle.json, ignition/burnout stages</option>
 </select>
 </div>
 <div class="field">
@@ -181,7 +181,7 @@ for t in sorted(d['topics'], key=lambda t: t['opportunity_score'], reverse=True)
         try {
           shown = JSON.stringify(JSON.parse(text), null, 2);
         } catch (e) {
-          // not JSON (e.g. the JSONP twin) — show raw text instead
+          // not JSON (e.g. the JSONP twin), show raw text instead
         }
         var total = shown.length;
         if (total > MAX_CHARS) {
@@ -191,12 +191,12 @@ for t in sorted(d['topics'], key=lambda t: t['opportunity_score'], reverse=True)
           trunc.hidden = false;
         }
         out.textContent = shown;
-        setStatus("OK — " + url + " (" + total.toLocaleString() + " chars).", false);
+        setStatus("OK, " + url + " (" + total.toLocaleString() + " chars).", false);
       });
     }).catch(function (err) {
       var hint = "";
       if (window.location.protocol === "file:") {
-        hint = " You're viewing this page from file:// — fetch() is blocked there. Serve the repo over HTTP (e.g. python3 -m http.server) or open the deployed site.";
+        hint = " You're viewing this page from file://, fetch() is blocked there. Serve the repo over HTTP (e.g. python3 -m http.server) or open the deployed site.";
       }
       setStatus("Couldn't fetch " + url + ": " + err.message + "." + hint, true);
     }).finally(function () {

@@ -9,6 +9,9 @@
 (function () {
   "use strict";
   var DEADLINE_MS = 10000;
+  function normT(s) {
+    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -27,9 +30,9 @@
     var newest = topics.slice().sort(function (a, b) {
       return String(b.last_seen || "").localeCompare(String(a.last_seen || ""));
     }).slice(0, 14);
-    el.innerHTML = newest.map(function (t) {
-      return '<li class="wire-item"><span class="wire-time">' + esc(stamp(t.last_seen)) +
-        '</span><a href="topics/' + esc(t.id) + '.html">' + esc(t.title) + "</a></li>";
+    el.innerHTML = newest.map(function (t, i) {
+      return '<li class="wire-item" style="--wi:' + i + '"><span class="wire-time">' + esc(stamp(t.last_seen)) +
+        '</span><a href="topics/' + esc(t.id) + '.html">' + esc(normT(t.title)) + "</a></li>";
     }).join("");
   }
   document.addEventListener("DOMContentLoaded", function () {

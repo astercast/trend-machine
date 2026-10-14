@@ -29,6 +29,9 @@
   var currentPlan = null;
   var currentTopics = []; // dossiers behind the current plan
 
+  function normT(s) {
+    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -136,7 +139,7 @@
     currentTopics = [topic];
     document.getElementById("plan-status").innerHTML = "";
     var html =
-      planHeader('<a href="topics/' + esc(topic.id) + '.html">' + esc(topic.title) + "</a>",
+      planHeader('<a href="topics/' + esc(topic.id) + '.html">' + esc(normT(topic.title)) + "</a>",
                  trajStateLine(traj), ledgerLine(plan.meta.ledger_ref)) +
       '<div class="mission-grid" role="list">' +
       plan.days.map(function (d) { return dayCard(d, false); }).join("") +
@@ -165,15 +168,15 @@
     document.getElementById("plan-status").innerHTML = "";
     var chips = plan.meta.topics.map(function (t) {
       return '<span class="battle-topic-chip"><a href="topics/' + esc(t.id) + '.html">' +
-        esc(t.title) + "</a> · opp " + t.opportunity + "</span>";
+        esc(normT(t.title)) + "</a> · opp " + t.opportunity + "</span>";
     }).join(" ");
     var ledgerRows = plan.meta.topics.map(function (t) {
-      return '<p class="plan-ledger"><strong>' + esc(t.title) + ":</strong> " + ledgerLine(t.ledger_ref) + "</p>";
+      return '<p class="plan-ledger"><strong>' + esc(normT(t.title)) + ":</strong> " + ledgerLine(t.ledger_ref) + "</p>";
     }).join("");
     var html =
       '<div class="plan-head">' +
       '<p class="kicker">7-day battle plan · ' + plan.meta.topics.length + " trends</p>" +
-      '<h2>' + plan.meta.topics.map(function (t) { return esc(t.title); }).join(" × ") + "</h2>" +
+      '<h2>' + plan.meta.topics.map(function (t) { return esc(normT(t.title)); }).join(" × ") + "</h2>" +
       '<p class="battle-order">' + chips + "</p>" +
       ledgerRows + "</div>" +
       '<div class="mission-grid" role="list">' +
@@ -255,7 +258,7 @@
           " UTC" + (ref.resolved ? ", resolved" + (ref.hit === true ? " — hit" : ref.hit === false ? " — miss" : "") : ", ~48h window") + ")"
         : "no archived ledger record at plan time";
       return '<div class="checkin-row">' +
-        '<span class="checkin-title">' + esc(t.title) + "</span>" +
+        '<span class="checkin-title">' + esc(normT(t.title)) + "</span>" +
         '<span class="checkin-vel num ' + cls + '">' + arrow + " " +
         (then == null ? "—" : then) + " → " + (now == null ? "—" : now) +
         (delta == null ? "" : " (" + (delta > 0 ? "+" : "") + delta + ")") + "</span>" +
@@ -280,7 +283,7 @@
       return;
     }
     host.innerHTML = list.map(function (snap, i) {
-      var titles = snap.topics.map(function (t) { return t.title; }).join(" × ");
+      var titles = snap.topics.map(function (t) { return normT(t.title); }).join(" × ");
       return '<div class="saved-plan">' +
         '<div><strong>' + esc(titles) + "</strong><br>" +
         '<span class="provenance">' + esc(snap.type) + " · saved " +
@@ -355,7 +358,7 @@
     sorted.forEach(function (t) {
       var opt = document.createElement("option");
       opt.value = t.id;
-      opt.textContent = t.title + " (opp " + t.opportunity_score + ")";
+      opt.textContent = normT(t.title) + " (opp " + t.opportunity_score + ")";
       frag.appendChild(opt);
     });
     select.appendChild(frag);
@@ -380,7 +383,7 @@
       if (i < 3) { cb.checked = true; } // start with the top 3
       label.appendChild(cb);
       var span = document.createElement("span");
-      span.innerHTML = "<strong>" + esc(t.title) + "</strong> <span class='num'>opp " +
+      span.innerHTML = "<strong>" + esc(normT(t.title)) + "</strong> <span class='num'>opp " +
         esc(t.opportunity_score) + "</span>";
       label.appendChild(span);
       frag2.appendChild(label);

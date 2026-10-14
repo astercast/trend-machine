@@ -26,6 +26,26 @@ LINK_PREFIX = {
 _FAMILY_NAMES = {}
 
 
+def disp_title(s):
+    """Display normalization (rotation 21, parent ruling): a tracked
+    title is a third-party name, stored byte-true in data/ and never
+    rewritten there. At render time, a dash inside the title becomes
+    punctuation that fits the title's own grammar: a spaced em or en
+    dash becomes a comma, an unspaced dash (range or compound) becomes
+    a plain hyphen. Authored copy is dash-free at the source already;
+    this function is only ever applied to title positions."""
+    s = str(s or "")
+    s = re.sub(r"\s+[\u2014\u2013]\s+", ", ", s)
+    return s.replace("\u2014", "-").replace("\u2013", "-")
+
+
+def disp_text(s):
+    """Display normalization for any data-carried text (Release 188):
+    descriptions, angles, hooks and names render dash-free exactly as
+    titles do. The stored record is never rewritten."""
+    return disp_title(s)
+
+
 def esc(s):
     return html.escape(str(s or ""), quote=True)
 
@@ -122,12 +142,12 @@ TOPIC_TMPL = """<!doctype html>
 <p class="kicker">{kicker}</p>
 <h1>{title}</h1>
 <p class="lede">{summary}</p>
-<div class="stat-grid" role="list" aria-label="Signal stats">
-<div class="stat" role="listitem"><div class="k">Detected</div><div class="v"><span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></div></div>
-<div class="stat" role="listitem"><div class="k">Opportunity</div><div class="v {ocls} num">{opp}</div></div>
-<div class="stat" role="listitem"><div class="k">Velocity</div><div class="v num">{vel}</div></div>
-<div class="stat" role="listitem"><div class="k">Platforms</div><div class="v num">{nplat}</div></div>
-</div>
+<p class="topic-facts" aria-label="Signal facts">
+<span class="tf"><span class="tf-k">Detected</span> <span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></span>
+<span class="tf"><span class="tf-k">Opportunity</span> <span class="tf-num {ocls}">{opp}</span></span>
+<span class="tf"><span class="tf-k">Velocity</span> <span class="tf-num">{vel}</span></span>
+<span class="tf"><span class="tf-k">Platforms</span> <span class="tf-num">{nplat}</span></span>
+</p>
 <div style="margin-bottom:4px">{plats}{tchip}{cats}{formats}{tags}</div>
 {spark}
 {stale_note}
@@ -207,21 +227,21 @@ def build_topic(t, history_pts=None, plat_hist=None):
                f'title="Wave 9: tracked format family — see its current examples and evidence">'
                f'⧉ family: {esc(fam_names.get(fam_id, fam_id))}</a>'
                if fam_id else "")
-    tags = "".join(f'<span class="tag">{esc(h)}</span>' for h in t.get("hashtags", [])[:10])
+    tags = "".join(f'<span class="tag">{esc(disp_text(h))}</span>' for h in t.get("hashtags", [])[:10])
     spark = sparkline_html(history_pts or [], t.get("id", ""), plat_hist)
     payload = export_payload_json(t)
     def src_li(s):
-        nm, url = esc(s.get("name", "source")), esc(s.get("url", ""))
+        nm, url = esc(disp_text(s.get("name", "source"))), esc(s.get("url", ""))
         # wave 7: name-only sources (unverified seeds) render as plain text
         if url:
             return f'<li><a href="{url}">{nm}</a></li>'
         return f'<li><span class="src-name">{nm}</span> <em class="src-unverified">(unverified, confirm live)</em></li>'
     sources = "".join(src_li(s) for s in t.get("sources", [])) or "<li>No public sources captured yet.</li>"
     angles = "".join(
-        f'<div class="angle"><span class="idx num">{i+1:02d}</span><p>{esc(a)}</p></div>'
+        f'<div class="angle"><span class="idx num">{i+1:02d}</span><p>{esc(disp_text(a))}</p></div>'
         for i, a in enumerate(t.get("angles", []))) or "<p>No angles yet. Check back after the next refresh.</p>"
-    hooks = "".join(f'<div class="hook">&ldquo;{esc(h)}&rdquo;</div>' for h in t.get("hooks", []))
-    watch = esc(", ".join(t.get("who_to_watch", [])) or "—")
+    hooks = "".join(f'<div class="hook">&ldquo;{esc(disp_text(h))}&rdquo;</div>' for h in t.get("hooks", []))
+    watch = esc(disp_text(", ".join(t.get("who_to_watch", []))) or "-")
     guide = "".join(f'<li><a href="{esc(u)}">{esc(l)}</a></li>' for u, l in guide_links(t.get("guide_links"))) \
         or '<li><a href="' + esc(GUIDE_BASE) + '">Creator Growth Empire guide</a></li>'
     stale_note = ('<p><span class="stale-badge">STALE</span> '
@@ -231,7 +251,7 @@ def build_topic(t, history_pts=None, plat_hist=None):
     # fields only (title / summary / first_seen / last_seen) — no ratings,
     # no metrics, nothing the record does not already hold.
     _art = {"@context": "https://schema.org", "@type": "Article",
-            "headline": t["title"], "description": t["summary"][:150],
+            "headline": disp_title(t["title"]), "description": disp_text(t["summary"][:150]),
             "url": "https://trend-machine-live.vercel.app/topics/"
                    + t["id"] + ".html",
             "publisher": {"@type": "Organization", "name": "Trend Machine",
@@ -242,14 +262,14 @@ def build_topic(t, history_pts=None, plat_hist=None):
         _art["dateModified"] = t["last_seen"]
     jsonld = json.dumps(_art, ensure_ascii=False).replace("</", "<\\/")
     return TOPIC_TMPL.format(
-        title=esc(t["title"]), desc=esc(t["summary"][:150]),
+        title=esc(disp_title(t["title"])), desc=esc(disp_text(t["summary"][:150])),
         tid=esc(t["id"]), jsonld=jsonld,
         kicker=esc(t.get("category", "trend")) + " · dossier",
-        summary=esc(t["summary"]), tier=tier, fcls=fcls, pulse=pulse, age=age,
+        summary=esc(disp_text(t["summary"])), tier=tier, fcls=fcls, pulse=pulse, age=age,
         ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, tchip=tchip, cats=cats,
         formats=formats + famchip, spark=spark, payload=payload,
         tags=tags,
-        stale_note=stale_note, summary_long=esc(t["summary"]),
+        stale_note=stale_note, summary_long=esc(disp_text(t["summary"])),
         sources=sources, angles=angles, hooks=hooks, watch=watch,
         guide=guide, ts=esc(t.get("last_seen", "")))
 
@@ -315,9 +335,9 @@ def _fb_wire_items(topics, generated_at):
     for t in newest:
         dt = _fb_parse(t.get("last_seen"))
         stamp = dt.strftime("%b %-d · %H:%M") if dt else "no stamp"
-        out.append('<li class="wire-item"><span class="wire-time">%s</span>'
+        out.append('<li class="wire-item" style="--wi:%d"><span class="wire-time">%s</span>'
                    '<a href="topics/%s.html">%s</a></li>'
-                   % (stamp, esc(t["id"]), esc(t.get("title"))))
+                   % (len(out), stamp, esc(t["id"]), esc(disp_title(t.get("title")))))
     return "".join(out)
 
 
@@ -339,13 +359,17 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     for i, t in enumerate(by_opp[:5]):
         leader = i == 0
         hot.append(
-            '<a class="hot-card%s" style="--i:%d" href="topics/%s.html">%s'
-            '<span class="rank num">0%d</span><div><h3>%s</h3><p>%s</p></div>'
-            '<div class="card-foot">%s%s</div></a>'
-            % (" leader" if leader else "", i, esc(t["id"]),
-               '<span class="badge-breaking">Breaking</span>' if leader else "",
-               i + 1, esc(t.get("title")), esc(t.get("summary")),
-               _fb_score(t.get("opportunity_score")), _fb_fresh(t.get("last_seen"), ref)))
+            '<a class="hot-row%s" href="topics/%s.html">'
+            '<span class="board-rank">%d</span>'
+            '<span class="hot-main"><h3>%s</h3><p>%s</p>'
+            '<span class="hot-meta">%s%s</span></span>'
+            '<span class="board-score"><span class="score-num">%d</span>'
+            '<span class="board-unit">opportunity / 100</span></span></a>'
+            % (" leader" if leader else "", esc(t["id"]), i + 1,
+               esc(disp_title(t.get("title"))), esc(disp_text(t.get("summary"))),
+               "breaking · " if leader else "",
+               _fb_fresh(t.get("last_seen"), ref),
+               t.get("opportunity_score") or 0))
     page = _fb_region(page, "hot5", "".join(hot))
 
     memes = sorted((t for t in merged if t.get("category") == "meme"),
@@ -353,10 +377,12 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     radar = []
     for i, t in enumerate(memes):
         radar.append(
-            '<a class="meme-card" style="--i:%d" href="topics/%s.html">'
-            '<div class="fmt num">◉ MEME · v%s</div><h4>%s</h4>'
-            '<div class="mhash">%s</div>%s</a>'
-            % (i, esc(t["id"]), t.get("velocity") or 0, esc(t.get("title")),
+            '<a class="meme-row" href="topics/%s.html">'
+            '<span class="meme-main"><span class="fmt num">MEME · v%s</span>'
+            '<h4>%s</h4></span>'
+            '<span class="meme-meta">%s · %s</span></a>'
+            % (esc(t["id"]), t.get("velocity") or 0,
+               esc(disp_title(t.get("title"))),
                " ".join(esc(h) for h in (t.get("hashtags") or [])[:3]),
                _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "radar", "".join(radar))
@@ -370,17 +396,17 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
         if t.get("merged_from"):
             aka = ('<div class="topic-aka">also tracked as: %s. One phenomenon, '
                    'evidence combined</div>'
-                   % esc(" · ".join(x["title"] for x in t["merged_from"])))
+                   % esc(" · ".join(disp_title(x["title"]) for x in t["merged_from"])))
         rows.append(
             '<tr%s style="--i:%d"><td data-label="Topic"><a class="topic-link" href="topics/%s.html">%s</a>%s'
             '<div class="topic-cat">%s</div>%s</td>'
             '<td data-label="Platforms">%s</td>'
             '<td data-label="Opportunity">%s</td>'
             '<td data-label="Velocity">%s</td>'
-            '<td data-label="Trend">—</td>'
+            '<td data-label="Trend">·</td>'
             '<td data-label="Detected">%s</td></tr>'
             % (' class="is-stale"' if stale else '', min(i, 12),
-               esc(t["id"]), esc(t.get("title")),
+               esc(t["id"]), esc(disp_title(t.get("title"))),
                ' <span class="stale-badge">STALE</span>' if stale else "",
                esc(t.get("category")), aka,
                "".join('<span class="chip plat">%s</span>' % esc(p)
@@ -401,7 +427,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                           "".join(_fb_board_row(e) for e in board["make_now"]))
         page = _fb_region(page, "boardnews",
                           "".join(_fb_board_row(e) for e in board["news_watch"]))
-        page = _fb_region(page, "boardnote", esc(board["note"]))
+        page = _fb_region(page, "boardnote", esc(disp_title(board["note"])))
         page = _fb_region(page, "hsmakenow", str(board["counts"]["makeable_shown"]))
 
     if ref is not None:
@@ -617,6 +643,7 @@ def build_board(topics, merged, generated_at, history=None):
                 svg = sparkline_prep.sparkline_svg(
                     prep, css_class="splash-chart",
                     label_prefix="Velocity from stored snapshots")
+                svg = svg.replace("<polyline", '<polyline pathLength="1" class="splash-line"', 1)
         return _board_entry(t, i + 1, len(pts),
                             movement=_board_movement(pts),
                             splash=(t["id"] == splash_id), spark_svg=svg)
@@ -652,7 +679,7 @@ def build_board(topics, merged, generated_at, history=None):
 
 def _fb_board_row(e):
     plats = " · ".join(esc(p) for p in e["platforms"])
-    ev = "".join("<li>%s</li>" % esc(c) for c in e["evidence"])
+    ev = "".join("<li>%s</li>" % esc(disp_text(c)) for c in e["evidence"])
     marg = ""
     if plats:
         marg += '<p class="board-marg board-marg-plats">On: %s</p>' % plats
@@ -661,7 +688,7 @@ def _fb_board_row(e):
     aka = ""
     if e.get("aka"):
         aka = ('<span class="board-aka">Also tracked as: %s. One phenomenon, '
-               'evidence combined.</span>' % esc(" · ".join(e["aka"])))
+               'evidence combined.</span>' % esc(" · ".join(disp_title(a) for a in e["aka"])))
     badge = ""
     make = ""
     if e["kind"] == "news":
@@ -669,7 +696,7 @@ def _fb_board_row(e):
     elif e.get("angle"):
         make = ('<p class="board-angle"><span class="board-make">Make</span> %s'
                 '<span class="board-fmt"> · format: %s</span></p>'
-                % (esc(e["angle"]), esc(e["format"])))
+                % (esc(disp_text(e["angle"])), esc(e["format"])))
     splash = bool(e.get("splash"))
     move = ""
     if e.get("movement"):
@@ -690,7 +717,7 @@ def _fb_board_row(e):
             '<div class="board-score"><span class="score-num">%d</span>'
             '<span class="board-unit">opportunity / 100</span>%s</div></li>'
             % (" news" if e["kind"] == "news" else "",
-               e["rank"], badge, esc(e["url"]), esc(e["title"]), aka, make, marg,
+               e["rank"], badge, esc(e["url"]), esc(disp_title(e["title"])), aka, make, marg,
                e["opportunity_score"], move))
 
 
@@ -814,7 +841,7 @@ def inject_canonical_jsonld(topics):
                   "numberOfItems": min(30, len(by_opp)),
                   "itemListElement": [
                       {"@type": "ListItem", "position": i + 1,
-                       "name": t["title"],
+                       "name": disp_title(t["title"]),
                        "url": LIVE_BASE + "/topics/" + t["id"] + ".html"}
                       for i, t in enumerate(by_opp[:30])]}
         elif name == "streamer-desk.html":
@@ -850,6 +877,33 @@ def inject_canonical_jsonld(topics):
         with open(path, "w") as f:
             f.write(page)
         print(f"[build] canonical wired {name}")
+
+
+def normalize_index_jsonld():
+    """The index ItemList JSON-LD was injected once (idempotent step);
+    display normalization re-renders its name fields from the stored
+    titles on every build so the block stays dash-free in title
+    positions while data/ stays byte-true."""
+    path = os.path.join(ROOT, "index.html")
+    with open(path) as f:
+        page = f.read()
+    m = re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)', page, re.S)
+    if not m:
+        return
+    try:
+        ld = json.loads(m.group(2))
+    except Exception:
+        return
+    if ld.get("@type") != "ItemList":
+        return
+    for el in ld.get("itemListElement", []):
+        if el.get("name"):
+            el["name"] = disp_title(el["name"])
+    new = m.group(1) + json.dumps(ld, ensure_ascii=False) + m.group(3)
+    page = page[:m.start()] + new + page[m.end():]
+    with open(path, "w") as f:
+        f.write(page)
+    print("[build] index JSON-LD names display-normalized")
 
 
 def write_robots_txt():
@@ -928,6 +982,7 @@ def main():
     write_robots_txt()
     # Commons round 10: canonical + honest JSON-LD on the root pages
     inject_canonical_jsonld(topics)
+    normalize_index_jsonld()
     tags = {}
     for t in topics:
         for h in t.get("hashtags", []):
@@ -1970,7 +2025,7 @@ def main():
              f"Generated: {data['generated_at']} · {len(topics)} topics.", "",
              "## Hottest right now"]
     for t in topics[:10]:
-        lines.append(f"- [{t['title']}](topics/{t['id']}.html) (opportunity {t['opportunity_score']}, velocity {t['velocity']})")
+        lines.append(f"- [{disp_title(t['title'])}](topics/{t['id']}.html) (opportunity {t['opportunity_score']}, velocity {t['velocity']})")
     nfmt = sum(1 for t in topics if t.get("trend_type") == "format")
     nmix = sum(1 for t in topics if t.get("trend_type") == "format+topic")
     nfam = {}
@@ -2004,19 +2059,19 @@ def main():
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
 
-    full = ["# Trend Machine — full briefing", f"Generated {data['generated_at']}", ""]
+    full = ["# Trend Machine: full briefing", f"Generated {data['generated_at']}", ""]
     for t in topics:
-        full.append(f"## {t['title']}")
+        full.append(f"## {disp_title(t['title'])}")
         full.append(f"Category: {t['category']} | Platforms: {', '.join(t['platforms'])} | "
                     f"Opportunity {t['opportunity_score']} | Velocity {t['velocity']} | "
                     f"Last seen {t['last_seen']}" + (" | STALE" if t.get("stale") else ""))
-        full.append(t["summary"])
+        full.append(disp_text(t["summary"]))
         if t.get("hashtags"):
             full.append("Hashtags: " + " ".join(t["hashtags"]))
         for i, a in enumerate(t.get("angles", []), 1):
-            full.append(f"Angle {i}: {a}")
+            full.append(f"Angle {i}: {disp_text(a)}")
         for h in t.get("hooks", []):
-            full.append(f'Hook: "{h}"')
+            full.append(f'Hook: "{disp_text(h)}"')
         full.append("")
     with open(os.path.join(ROOT, "llms-full.txt"), "w") as f:
         f.write("\n".join(full))

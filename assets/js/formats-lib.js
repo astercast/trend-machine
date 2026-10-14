@@ -7,6 +7,9 @@
 var TM_Formats = (function () {
   "use strict";
 
+  function normT(s) {
+    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+  }
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -28,8 +31,8 @@ var TM_Formats = (function () {
     if (f.verification === "single-source") {
       var note = f.verification_note || "one source";
       return '<span class="chip fmt-verify fmt-single" title="Single source: ' +
-        esc(note) + '">⚠ single-source</span>' +
-        '<p class="fmt-flag-note">' + esc(note) + "</p>";
+        esc(normT(note)) + '">⚠ single-source</span>' +
+        '<p class="fmt-flag-note">' + esc(normT(note)) + "</p>";
     }
     return '<span class="chip fmt-verify fmt-verified">✓ verified</span>';
   }
@@ -37,13 +40,13 @@ var TM_Formats = (function () {
   function exampleHTML(ex) {
     var srcs = (ex.sources || []).map(function (s) {
       return s.url
-        ? '<a href="' + esc(s.url) + '">' + esc(s.name) + "</a>"
-        : "<span>" + esc(s.name) + "</span>";
+        ? '<a href="' + esc(s.url) + '">' + esc(normT(s.name)) + "</a>"
+        : "<span>" + esc(normT(s.name)) + "</span>";
     }).join(" · ");
     var flag = ex.verification === "single-source"
       ? ' <span class="chip fmt-verify fmt-single">single-source</span>' : "";
-    return '<li><strong>' + esc(ex.name) + "</strong>" + flag +
-      (ex.evidence ? "<br>" + esc(ex.evidence) : "") +
+    return '<li><strong>' + esc(normT(ex.name)) + "</strong>" + flag +
+      (ex.evidence ? "<br>" + esc(normT(ex.evidence)) : "") +
       (srcs ? "<br><span class=\"fmt-sources\">Sources: " + srcs + "</span>" : "") +
       "</li>";
   }
@@ -52,10 +55,10 @@ var TM_Formats = (function () {
     var examples = (f.examples || []).map(exampleHTML).join("");
     var topics = (f.tracked_topics || []).map(function (tid) {
       var title = (topicTitles || {})[tid] || tid;
-      return '<li><a href="topics/' + esc(tid) + '.html">' + esc(title) + "</a></li>";
+      return '<li><a href="topics/' + esc(tid) + '.html">' + esc(normT(title)) + "</a></li>";
     }).join("");
     return '<article class="fmt-card" id="family-' + esc(f.id) + '" role="listitem">' +
-      '<div class="fmt-top"><h2>' + esc(f.name) + "</h2>" +
+      '<div class="fmt-top"><h2>' + esc(normT(f.name)) + "</h2>" +
       statusChip(f) + verificationBadge(f) + "</div>" +
       '<p class="fmt-desc">' + esc(f.description) + "</p>" +
       (f.status_note ? '<p class="fmt-status-note">' + esc(f.status_note) + "</p>" : "") +

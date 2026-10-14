@@ -1,11 +1,11 @@
-"""trend-machine — wave 8: pure sparkline data prep + SVG builders.
+"""trend-machine, wave 8: pure sparkline data prep + SVG builders.
 
 Everything here is a pure function of the snapshot points (no I/O, no DOM)
 so the math is unit-testable with pinned fixtures (scripts/test_sparkline_prep.py).
 
 Honesty contract (wave-8 mandate):
   - A series needs >= MIN_POINTS snapshots to draw a line. Fewer than that
-    renders the "history building" state — never a fake two-point line.
+    renders the "history building" state, never a fake two-point line.
   - All SVGs are static (no <animate>, no JS) so they are reduced-motion safe.
   - Every SVG gets role="img" + a data-grounded aria-label.
   - Every rendered sparkline ships with a screen-reader data-table
@@ -65,7 +65,7 @@ def sparkline_svg(prep, css_class="spark", label_prefix="Velocity trend",
                   last_dot=True):
     """Inline SVG polyline from a prepped series. Static, no animation.
 
-    Returns "" when the series is not ready — callers must render the
+    Returns "" when the series is not ready, callers must render the
     honest empty state instead.
     """
     if not prep["ready"] or not prep["coords"]:
@@ -86,10 +86,10 @@ def sparkline_svg(prep, css_class="spark", label_prefix="Velocity trend",
 
 
 def empty_state_html(n, what="velocity"):
-    """Honest 'history building' state — never a fake line."""
+    """Honest 'history building' state, never a fake line."""
     more = max(0, MIN_POINTS - n)
     return (
-        f'<p class="hist-empty" role="note">History building — {what} tracking '
+        f'<p class="hist-empty" role="note">History building: {what} tracking '
         f'started recently ({n} snapshot{"s" if n != 1 else ""} so far). '
         f'A sparkline appears after {more} more hourly refresh'
         f'{"es" if more != 1 else ""}. No line drawn until the data is real.</p>'
@@ -183,7 +183,7 @@ def flat_velocity_trend(topic_id, history, phist):
     """Compact velocity-trend summary for the flat consumer feed.
 
     Adds a pre-rendered mini sparkline SVG (ready series only) plus
-    per-platform mini-summaries — all from real snapshot data.
+    per-platform mini-summaries, all from real snapshot data.
     """
     pts = (history or {}).get(topic_id, [])
     prep = prep_series(pts, width=120, height=28, pad=4)

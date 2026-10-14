@@ -1,16 +1,16 @@
 /* ============================================================
-   TREND MACHINE — build_live_wire.js (wave 28 / rotation 11)
+   TREND MACHINE, build_live_wire.js (wave 28 / rotation 11)
    The Live Wire payload: a command view over the pipeline's OWN
-   stored outputs — nothing else. Two panels:
+   stored outputs, nothing else. Two panels:
 
-     1. LANES — every fetcher wired into pipeline/refresh.sh, with
+     1. LANES, every fetcher wired into pipeline/refresh.sh, with
         the hit count and health the pipeline itself recorded:
           - the 10 lanes that write a stored output file
             (pipeline/out/<lane>.json) carry that file's real hit
             count, its distinct recorded source labels, and the
             newest fetched_at stamp inside the file;
           - a lane whose file was rewritten by the latest refresh
-            with 0 hits is DEGRADED (it ran, it recorded nothing —
+            with 0 hits is DEGRADED (it ran, it recorded nothing , 
             e.g. the Reddit public-JSON lane, recorded in
             PIPELINE.md as often 403 from datacenters);
           - a lane whose file was NOT rewritten by the latest
@@ -19,12 +19,12 @@
             never counted as current (e.g. the YouTube
             Invidious/direct lane, whose fetcher prints SKIP and
             writes nothing when every path fails);
-          - TikTok and X write no output file at all — SKIP BY
+          - TikTok and X write no output file at all, SKIP BY
             DESIGN, exactly as their fetchers log it (no vetted
             keyless TikTok source exists; X needs a bearer token
             that is not set). No hits are claimed for them, ever.
           - One lane is RETIRED (wave 31, DATAOPS-001): YouTube
-            (Invidious / direct). Every no-key path died — the
+            (Invidious / direct). Every no-key path died, the
             configured Invidious instances fail three different
             ways and the official registry holds exactly one
             API-enabled public instance, itself behind a bot
@@ -32,21 +32,21 @@
             page) no longer serves trending markup at all. The
             lane is out of refresh.sh, its stored file is
             deleted, and the board shows it as retired with the
-            reason — never as stale data awaiting a refresh that
+            reason, never as stale data awaiting a refresh that
             will not come. YouTube coverage rides the channel
             RSS lane. Revival path: YT_API_KEY (Data API v3).
         "Latest refresh" is anchored to data/trends.json's
-        generated_at — the stamp the same refresh leaves when it
-        finishes — never to the wall clock, so a later standalone
+        generated_at, the stamp the same refresh leaves when it
+        finishes, never to the wall clock, so a later standalone
         rebuild cannot relabel an old file as fresh.
 
-     2. TOP MOVERS — the hour's movement computed ONLY from stored
+     2. TOP MOVERS, the hour's movement computed ONLY from stored
         snapshot history (live velocity store merged with the
         resolution archive via resolution-lib.js mergeHistory,
         the board's own merge rule): for each topic, the latest
         stored velocity vs the latest stored point at or before
         one hour earlier. A topic enters only when that pair spans
-        0.5–3h (the actual span is published per mover — never
+        0.5 to 3h (the actual span is published per mover, never
         rounded to "1h" silently). Gainers and fallers are ranked
         by the real delta; flat topics are counted, not hidden.
 
@@ -85,42 +85,42 @@ const LANES = [
   { id: "gtrends", label: "Google Trends", fetcher: "pipeline/fetch_gtrends.py",
     file: "gtrends.json", detail: "Google Trends daily RSS (US)." },
   { id: "news", label: "Google News", fetcher: "pipeline/fetch_news.py",
-    file: "news.json", detail: "Google News RSS — top / tech / entertainment / sports / AI feeds." },
+    file: "news.json", detail: "Google News RSS: top / tech / entertainment / sports / AI feeds." },
   { id: "news_search", label: "Google News Search", fetcher: "pipeline/fetch_news_search.py",
     file: "news_search.json", detail: "Google News RSS topic searches." },
   { id: "reddit", label: "Reddit (direct JSON)", fetcher: "pipeline/fetch_reddit.py",
     file: "reddit.json",
-    detail: "Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok). PIPELINE.md records this lane as often 403 from datacenters — it skips gracefully; an empty rewritten file is the degraded record, never faked." },
+    detail: "Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok). PIPELINE.md records this lane as often 403 from datacenters, it skips gracefully; an empty rewritten file is the degraded record, never faked." },
   { id: "reddit_rss", label: "Reddit (RSS)", fetcher: "pipeline/fetch_reddit_rss.py",
-    file: "reddit_rss.json", detail: "Reddit subreddit RSS feeds — the lane that carries Reddit when the direct JSON lane is degraded." },
+    file: "reddit_rss.json", detail: "Reddit subreddit RSS feeds, the lane that carries Reddit when the direct JSON lane is degraded." },
   { id: "hn", label: "Hacker News", fetcher: "pipeline/fetch_hn.py",
     file: "hn.json", detail: "Hacker News top/best stories (public Firebase API)." },
   { id: "mastodon", label: "Mastodon", fetcher: "pipeline/fetch_mastodon.py",
-    file: "mastodon.json", detail: "Mastodon fediverse trending hashtags (/api/v1/trends/tags — repaired wave 20)." },
+    file: "mastodon.json", detail: "Mastodon fediverse trending hashtags (/api/v1/trends/tags, repaired wave 20)." },
   { id: "bluesky", label: "Bluesky", fetcher: "pipeline/fetch_bluesky.py",
     file: "bluesky.json", detail: "Bluesky trending topics (keyless public API)." },
   { id: "youtube", label: "YouTube (Invidious / direct)", fetcher: "pipeline/fetch_youtube.py",
     file: "youtube.json", retired: "2026-10-13",
-    detail: "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead — all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop." },
+    detail: "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead: all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop." },
   { id: "youtube_rss", label: "YouTube (channel RSS)", fetcher: "pipeline/fetch_youtube_rss.py",
-    file: "youtube_rss.json", detail: "YouTube channel RSS with channel-page fallback — the lane that carries YouTube." },
+    file: "youtube_rss.json", detail: "YouTube channel RSS with channel-page fallback, the lane that carries YouTube." },
   { id: "streamers", label: "Streamer Desk wire", fetcher: "pipeline/fetch_streamers.py",
     file: "streamers.json",
-    detail: "Wave 29: the Streamer Desk's live lane — Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts — those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live." },
+    detail: "Wave 29: the Streamer Desk's live lane: Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts, those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live." },
   { id: "tiktok", label: "TikTok", fetcher: "pipeline/fetch_tiktok.py",
     file: null,
     detail: "SKIP by design: no vetted keyless TikTok trending source exists (research in PIPELINE.md) and TikTok data is never faked. The lane is covered by seed topics + cross-platform corroboration." },
   { id: "x", label: "X", fetcher: "pipeline/fetch_x.py",
     file: null,
-    detail: "SKIP by design: the X API v2 path needs X_BEARER_TOKEN, which is not set — the fetcher logs its SKIP and writes nothing. X data is never faked." }
+    detail: "SKIP by design: the X API v2 path needs X_BEARER_TOKEN, which is not set. The fetcher logs its SKIP and writes nothing. X data is never faked." }
 ];
 
 // A stored file counts as written by the latest refresh when its
 // newest evidence stamp lands within 45 minutes before the
 // refresh stamp. The fetch phase of a full refresh takes minutes
-// (lane stamps land 0–10 minutes before the stamp on observed
+// (lane stamps land 0 to 10 minutes before the stamp on observed
 // runs), while the previous hourly refresh's stamps sit a full
-// cadence earlier (~65–75 minutes before the new stamp) — 45
+// cadence earlier (~65 to 75 minutes before the new stamp), 45
 // minutes separates the two with margin on both sides. This
 // matters: a lane whose fetcher timed out on the latest run
 // (its SKIP path writes nothing) still holds the previous run's
@@ -138,7 +138,7 @@ function writeJSON(p, obj) {
 
 function round1(x) { return Math.round(x * 10) / 10; }
 
-/* Summarize one stored lane file (pure — inputs are plain values
+/* Summarize one stored lane file (pure, inputs are plain values
    so tests can pin the rules without touching the filesystem). */
 function summarizeLane(def, file) {
   // file: null (no stored output) or
@@ -147,7 +147,7 @@ function summarizeLane(def, file) {
   if (def.retired) {
     // Retired lanes are closed, not starved: the fetcher is out of
     // refresh.sh, the stored file is deleted, and any file that
-    // somehow reappears is ignored — a retired lane claims nothing.
+    // somehow reappears is ignored, a retired lane claims nothing.
     return {
       id: def.id, label: def.label, fetcher: def.fetcher,
       output_file: null,
@@ -190,7 +190,7 @@ function classifyLane(lane, refreshMs) {
   } else {
     // The file on disk was not written by the latest refresh: the
     // fetcher's SKIP path (it writes nothing on failure). Its hits
-    // are real but old — shown, dated, and excluded from current.
+    // are real but old, shown, dated, and excluded from current.
     lane.status = "stale-skip"; lane.current_hits = 0;
   }
   return lane;
@@ -267,7 +267,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
     generated_at: now.toISOString(),
     refresh_at: refreshStamp || null,
     method: "Lanes: one row per fetcher wired into pipeline/refresh.sh. " +
-      "The 11 file-writing lanes read pipeline/out/<lane>.json — hit count " +
+      "The 11 file-writing lanes read pipeline/out/<lane>.json. Hit count " +
       "is that file's array length, source labels are the hits' own " +
       "recorded `source` values, and freshness compares the file's newest " +
       "fetched_at (or, for an empty file, its write time) with " +
@@ -276,7 +276,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
       "stored velocity vs the latest stored point at or before 1h " +
       "earlier, over the live velocity store merged with the resolution " +
       "archive (scripts/resolution-lib.js mergeHistory); only pairs " +
-      "spanning 0.5–3h count, and the real span is published per mover. " +
+      "spanning 0.5 to 3h count, and the real span is published per mover. " +
       "The YouTube (Invidious / direct) lane is retired (2026-10-13, " +
       "DATAOPS-001): out of the refresh loop, stored file deleted, " +
       "shown with its reason and no hits.",
@@ -284,7 +284,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
       "a file the latest refresh did not rewrite is labeled stale-skip " +
       "with its hits excluded from the current total, skip-by-design " +
       "lanes claim no hits, and movers are computed only from stored " +
-      "snapshot points — a topic with no ~1h pair is not a mover, " +
+      "snapshot points. A topic with no ~1h pair is not a mover, " +
       "however hot it looks.",
     provenance: {
       lanes: "pipeline/out/*.json (hit counts, source labels, fetched_at stamps)",
@@ -309,7 +309,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
     },
     lanes: lanes,
     movers: {
-      window: "latest stored point vs latest stored point at or before 1h earlier (accepted span 0.5–3h, published per mover)",
+      window: "latest stored point vs latest stored point at or before 1h earlier (accepted span 0.5 to 3h, published per mover)",
       topics_with_series: movers.counts.topics_with_series,
       with_hour_pair: movers.counts.with_hour_pair,
       gainers: movers.gainers,
@@ -344,7 +344,7 @@ function main() {
   const store = readJSON(TRENDS_FILE, null);
   const history = readJSON(HIST_FILE, null);
   if (!store || !history) {
-    console.log("[live-wire] SKIP: trends store or velocity history missing — run pipeline/refresh.sh first.");
+    console.log("[live-wire] SKIP: trends store or velocity history missing, run pipeline/refresh.sh first.");
     return;
   }
   const archive = readJSON(ARCHIVE_FILE, {});
@@ -371,7 +371,7 @@ function main() {
       manifest.endpoints.live_wire = {
         path: "data/v1/live-wire.json",
         description: prev.description ||
-          "The Live Wire: a command view over the pipeline's own stored outputs — every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design / retired, exactly as the pipeline records it), plus the hour's top movers computed from stored velocity snapshots only. Stale hits are dated and excluded from the current total; skip-by-design lanes (TikTok, X) claim no hits; the retired YouTube (Invidious / direct) lane is closed with its reason shown (DATAOPS-001).",
+          "The Live Wire: a command view over the pipeline's own stored outputs, every refresh lane with its real recorded hit count and health (live / degraded / stale-skip / skip-by-design / retired, exactly as the pipeline records it), plus the hour's top movers computed from stored velocity snapshots only. Stale hits are dated and excluded from the current total; skip-by-design lanes (TikTok, X) claim no hits; the retired YouTube (Invidious / direct) lane is closed with its reason shown (DATAOPS-001).",
         schema: "data/v1/schema/live-wire.json",
         updated: wire.generated_at,
         records: wire.counts.lanes,

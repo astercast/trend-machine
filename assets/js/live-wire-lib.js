@@ -1,19 +1,22 @@
-/* trend-machine — wave 28: pure Live Wire rendering lib.
+/* trend-machine, wave 28: pure Live Wire rendering lib.
    Reads data/v1/live-wire.json (built by scripts/build_live_wire.js
    from the pipeline's own stored outputs) and renders the command
    view: lane health + the hour's movers. Honest by construction:
-     - a degraded lane renders DEGRADED with its real 0 — never
+     - a degraded lane renders DEGRADED with its real 0, never
        smoothed into "quiet"
      - a stale-skip lane renders its stored hits DATED and marked
-       excluded from the current total — old hits never pose as new
+       excluded from the current total, old hits never pose as new
      - skip-by-design lanes claim no hits and say why
      - movers show their real comparison span (never rounded to a
        fake "1h") and link only when the topic is on the board
-   Pure functions, no DOM — unit-tested with pinned fixtures
+   Pure functions, no DOM, unit-tested with pinned fixtures
    (scripts/test_live_wire.js). Node-safe: exports when module exists. */
 var TM_LiveWire = (function () {
   "use strict";
 
+  function normT(s) {
+    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+  }
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -21,10 +24,10 @@ var TM_LiveWire = (function () {
   }
 
   function fmtTime(iso) {
-    return iso ? String(iso).slice(0, 16).replace("T", " ") + " UTC" : "—";
+    return iso ? String(iso).slice(0, 16).replace("T", " ") + " UTC" : ", ";
   }
 
-  function fmtDay(iso) { return iso ? String(iso).slice(0, 10) : "—"; }
+  function fmtDay(iso) { return iso ? String(iso).slice(0, 10) : ", "; }
 
   var STATUS_LABEL = {
     "live": "Live",
@@ -53,13 +56,13 @@ var TM_LiveWire = (function () {
       var storedDay = lane.newest_fetched_at || lane.file_written_at;
       return '<span class="num lw-hits">' + lane.hits + " hits</span>" +
         '<span class="lw-hits-note">stored ' + fmtDay(storedDay) +
-        " — NOT this refresh, excluded from the current total</span>";
+        ", NOT this refresh, excluded from the current total</span>";
     }
     if (lane.status === "retired") {
-      return '<span class="num lw-hits">—</span>' +
-        '<span class="lw-hits-note">retired — out of the refresh loop, no hits claimed</span>';
+      return '<span class="num lw-hits">, </span>' +
+        '<span class="lw-hits-note">retired, out of the refresh loop, no hits claimed</span>';
     }
-    return '<span class="num lw-hits">—</span>' +
+    return '<span class="num lw-hits">, </span>' +
       '<span class="lw-hits-note">no output file, no hits claimed</span>';
   }
 
@@ -89,8 +92,8 @@ var TM_LiveWire = (function () {
 
   function moverRowHTML(m, dir) {
     var title = m.topic_live
-      ? '<a href="topics/' + esc(m.topic_id) + '.html">' + esc(m.title) + "</a>"
-      : esc(m.title) + ' <span class="lw-offboard">(left the board)</span>';
+      ? '<a href="topics/' + esc(m.topic_id) + '.html">' + esc(normT(m.title)) + "</a>"
+      : esc(normT(m.title)) + ' <span class="lw-offboard">(left the board)</span>';
     var delta = (m.delta > 0 ? "+" : "") + m.delta;
     return '<article class="lw-mover" data-topic="' + esc(m.topic_id) + '">' +
       '<div class="lw-mover-main"><h4>' + title + "</h4>" +
@@ -112,15 +115,15 @@ var TM_LiveWire = (function () {
     }).join("");
     if (!gain && !fall) {
       return '<p class="lw-empty">No topic holds a stored pair spanning ' +
-        "about an hour yet — the wire shows movement only when the " +
+        "about an hour yet, the wire shows movement only when the " +
         "snapshots themselves prove it.</p>";
     }
     // Wave 29 audit fix: the payload caps each list at 10 while the
-    // banner counts every mover — the headings must disclose the cap
+    // banner counts every mover, the headings must disclose the cap
     // ("top 10 of 21"), never let 10 rows pose as the whole count.
     function capNote(shown, total) {
       return (typeof total === "number" && total > shown)
-        ? " — top " + shown + " of " + total : "";
+        ? ", top " + shown + " of " + total : "";
     }
     return '<div class="lw-movers">' +
       '<section aria-label="Top gainers"><h3 class="lw-movers-h is-up">' +
@@ -140,7 +143,7 @@ var TM_LiveWire = (function () {
     var banner = '<div class="lw-banner" role="status"><h2>The wire at ' +
       fmtTime(wire.refresh_at) + "</h2><p><strong>" + c.current_hits +
       " hits</strong> recorded by the latest refresh across <strong>" +
-      c.lanes_live + " live lanes</strong> — with the failures on the " +
+      c.lanes_live + " live lanes</strong>, with the failures on the " +
       "same board: " + c.lanes_degraded + " degraded, " +
       c.lanes_stale_skip + " stale-skip (" + c.stale_hits_excluded +
       " old hits dated and excluded), " + c.lanes_skip_by_design +
@@ -152,10 +155,10 @@ var TM_LiveWire = (function () {
     var cards = [
       ["Current hits", c.current_hits, "recorded by the latest refresh only"],
       ["Live lanes", c.lanes_live, "of " + c.lanes + " lanes wired into refresh.sh"],
-      ["Degraded", c.lanes_degraded, "ran, recorded 0 — shown as degraded"],
-      ["Stale · skip", c.lanes_stale_skip, "not rewritten last refresh — hits dated, excluded"],
-      ["Skip by design", c.lanes_skip_by_design, "TikTok + X — no data, never faked"],
-      ["Retired", c.lanes_retired || 0, "YouTube (Invidious / direct) — closed 2026-10-13, reason on its row"],
+      ["Degraded", c.lanes_degraded, "ran, recorded 0, shown as degraded"],
+      ["Stale · skip", c.lanes_stale_skip, "not rewritten last refresh, hits dated, excluded"],
+      ["Skip by design", c.lanes_skip_by_design, "TikTok + X, no data, never faked"],
+      ["Retired", c.lanes_retired || 0, "YouTube (Invidious / direct), closed 2026-10-13, reason on its row"],
       ["Movers", c.gainers + c.fallers, "proven ~1h pairs: " + c.gainers + " up · " + c.fallers + " down · " + c.flat + " flat"]
     ].map(function (card) {
       return '<div class="lw-card"><span class="lw-card-num num">' + card[1] +

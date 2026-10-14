@@ -1,5 +1,5 @@
 /* ============================================================
-   TREND MACHINE — build_streamer_desk.js (wave 29 / rotation 12)
+   TREND MACHINE, build_streamer_desk.js (wave 29 / rotation 12)
    The Streamer Desk payload: generator-owned, built from the
    hand-curated record data/streamer_desk.json (the meme-formats
    pattern: a curated source file, a generator that refuses to
@@ -14,11 +14,11 @@
      - every update carries >= 1 source and a real date;
      - every event carries >= 1 source and start <= end;
      - unverified items must say WHY they are unverified.
-   A seed that breaks the bar makes this build FAIL — the Desk
+   A seed that breaks the bar makes this build FAIL, the Desk
    would rather not publish than launder a claim.
 
    Event status (past / upcoming / happening now) is computed
-   from the event dates against the build clock — never stored,
+   from the event dates against the build clock, never stored,
    so a past event can never pose as upcoming.
 
    Input : data/streamer_desk.json
@@ -167,12 +167,12 @@ function buildDesk(seed, now) {
       "unverified with the reason, or omitted. Rosters are dated 'as of' " +
       "claims. No follower, viewership or revenue numbers appear except " +
       "where a named source states them for a dated event. Event status " +
-      "is computed from dates at build time — a past event never poses " +
+      "is computed from dates at build time, a past event never poses " +
       "as upcoming.",
     provenance: {
       seed: "data/streamer_desk.json (hand-curated, wave 29)",
       generator: "scripts/build_streamer_desk.js (refuses to publish a seed that breaks the sourcing standard)",
-      live_lane: "pipeline/out/streamers.json via pipeline/fetch_streamers.py (the Desk's Live Wire lane — real recorded hits only)"
+      live_lane: "pipeline/out/streamers.json via pipeline/fetch_streamers.py (the Desk's Live Wire lane, real recorded hits only)"
     },
     counts: {
       streamers: (seed.streamers || []).length,
@@ -206,7 +206,7 @@ function main() {
   }
   const errs = auditSeed(seed);
   if (errs.length) {
-    console.error("[streamer-desk] REFUSED — seed breaks the sourcing standard:");
+    console.error("[streamer-desk] REFUSED, seed breaks the sourcing standard:");
     errs.forEach(e => console.error("  - " + e));
     process.exit(1);
   }

@@ -156,12 +156,95 @@ h1, h2, h3, .board-title, .sd-section-h {
   .board-row.splash .board-score .score-num { font-size: 2.8rem; }
 }
 
-/* motion: reserved for the day's splash item only (ROUND-002 rule).
-   Board rows never reveal; live data updates, it does not fade in. */
+/* P12 motion signature (ROUND-004): two motions only.
+   1. splash-line-draw: the day's splash chart line draws itself left
+      to right, once. The name is the behavior: stroke-dashoffset runs
+      the full normalized pathLength in one pass. Under reduced motion
+      there is no animation and the line sits present and fully drawn:
+      a published value is present instantly and stays present (the
+      M5 residence clause). No other board element moves, ever: rows,
+      rank numerals, opportunity figures and timestamps never animate.
+   2. wire-step: the rail's teleprinter step. Each wire item steps in
+      hard, in order, with steps(1): no fade, a step. */
+.splash-line { stroke-dasharray: 1; stroke-dashoffset: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .board-row.splash .score-num { animation: splash-breathe 3.2s ease-in-out infinite; }
+  .splash-line { animation: splash-line-draw 1.5s ease-out both; }
+  .wire-item { animation: wire-step .01s steps(1, end) both; animation-delay: calc(var(--wi, 0) * 110ms); }
 }
-@keyframes splash-breathe {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .78; }
+@keyframes splash-line-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
 }
+@keyframes wire-step {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* capture fixes (rotation 21, after-v3 first shoot): the splash chart
+   needs its own stroke (the dossier spark class does not load here),
+   the mobile head stacks as one row of links instead of a column,
+   and the mobile wire shows five lines with the rest on scroll. */
+.splash-chart polyline { stroke: var(--live); stroke-width: 2.5; fill: none; }
+.splash-chart circle { fill: var(--live); }
+@media (max-width: 860px) {
+  .head-inner { flex-wrap: wrap; gap: var(--s2) var(--s4); }
+  .head-nav { flex-direction: row; flex-wrap: wrap; gap: var(--s2) var(--s4); }
+  .wire-list { max-height: 196px; }
+}
+
+/* ---------- undertow sections in the board's grammar (ROUND-004 B) ---------- */
+.hot5 { display: block; }
+.hot-row {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr) auto;
+  gap: var(--s4); align-items: start;
+  padding: var(--s4) var(--s1); border-top: 1px solid var(--line);
+  text-decoration: none; color: var(--ink);
+}
+.hot-row:hover { text-decoration: none; }
+.hot-row:hover h3 { color: var(--signal); }
+.hot-row .board-rank { font-size: 2.2rem; }
+.hot-main h3 { font-size: 1.08rem; margin: 0 0 4px; font-weight: 600; }
+.hot-main p { color: var(--ink-dim); font-size: .92rem; line-height: 1.5; margin: 0; max-width: 68ch; }
+.hot-meta { display: block; margin-top: var(--s2); font-family: var(--font-data); font-size: .76rem; color: var(--ink-faint); }
+.hot-row .score-num {
+  display: block; font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none;
+  font-size: 2rem; line-height: .95; color: var(--live); text-align: right;
+}
+.radar { background: var(--bg-soft); }
+.radar-strip { display: block; }
+.meme-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--s4);
+  padding: var(--s3) var(--s1); border-top: 1px solid var(--line);
+  text-decoration: none; color: var(--ink);
+}
+.meme-row:hover { text-decoration: none; }
+.meme-row:hover h4 { color: var(--signal); }
+.meme-main { display: inline-flex; gap: var(--s3); align-items: baseline; min-width: 0; }
+.meme-main .fmt { color: var(--ink-ghost); font-size: .72rem; white-space: nowrap; }
+.meme-main h4 { margin: 0; font-size: 1rem; font-weight: 600; }
+.meme-meta { font-family: var(--font-data); font-size: .76rem; color: var(--ink-faint); white-space: nowrap; }
+.station-card {
+  background: transparent; border: 0; border-top: 3px double var(--line-bright);
+  border-radius: 0; padding: var(--s4) 2px;
+}
+.how-list { list-style: none; margin: 0; padding: 0; }
+.how-row {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr);
+  gap: var(--s4); padding: var(--s4) var(--s1); border-top: 1px solid var(--line);
+}
+.how-row .board-rank { font-size: 2.2rem; }
+.how-row h4 { margin: 0 0 4px; font-size: 1.05rem; }
+.how-row p { color: var(--ink-dim); margin: 0; max-width: 72ch; line-height: 1.55; }
+@media (max-width: 640px) {
+  .meme-row { flex-direction: column; gap: 2px; }
+  .hot-row { grid-template-columns: 44px minmax(0, 1fr) auto; }
+  .hot-row .score-num { font-size: 1.5rem; }
+}
+
+/* launch planner recomposed in the board's language (ROUND-006):
+   flat grounds, ruled sections, display numerals, no card shade. */
+.timing-context, .saved-plan {
+  background: var(--bg-soft); border: 0; border-top: 3px double var(--line-bright);
+  border-radius: 0;
+}
+#planner-title { font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none; }

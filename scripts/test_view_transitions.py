@@ -71,15 +71,17 @@ for b in blocks:
 check("no @view-transition outside the guard in base.css",
       "@view-transition" not in unguarded)
 
-# 2 — opacity only, no travel
+# 2 — ROUND-004 (M6): the universal crossfade is replaced by the wire
+# cut. The old tm-vt keyframes must NOT exist, and both transition
+# pseudo-elements must carry animation: none (a hard step, no fade,
+# no travel, no scale).
 for kf in ("tm-vt-out", "tm-vt-in"):
-    m = re.search(r"@keyframes " + kf + r" \{([^}]*)\}", base)
-    check(f"@keyframes {kf} exists", m is not None)
-    if m:
-        body = m.group(1)
-        check(f"@keyframes {kf} is opacity-only",
-              "opacity" in body and not re.search(r"transform|translate|scale", body),
-              body.strip())
+    check(f"@keyframes {kf} removed (M6 wire cut)", f"@keyframes {kf}" not in base)
+for pseudo in ("::view-transition-old(root)", "::view-transition-new(root)"):
+    m = re.search(re.escape(pseudo) + r" \{([^}]*)\}", base)
+    check(f"{pseudo} is the wire cut (animation: none)",
+          m is not None and "animation: none" in m.group(1),
+          m.group(1).strip() if m else "missing")
 
 # 3 — single source across stylesheets
 others = []

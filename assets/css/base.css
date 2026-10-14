@@ -112,11 +112,9 @@ section { scroll-margin-top: 110px; }
    base.css (root pages directly, the 393 dossiers via TOPIC_TMPL,
    404.html included), so the opt-in finally covers the dossiers the
    wave-9 comment claimed but its five-page stylesheet never reached.
-   War-room idiom: opacity only, no travel, no scale — a page change
-   reads as a panel refresh, never as old data sliding away. The
-   durations sit at the fast end of the site's own scale (120ms out /
-   180ms in) so a snapshot of the previous page is never on screen
-   long enough to be read as current data.
+   War-room idiom: a hard cut, no fade, no travel, no scale (the
+   ROUND-004 signature transition below). A page change reads as a
+   panel refresh, never as old data sliding away.
    THE GUARD IS THE PATTERN: everything lives inside
    @media (prefers-reduced-motion: no-preference). Reduced-motion
    visitors navigate unanimated; browsers without cross-document
@@ -128,11 +126,12 @@ section { scroll-margin-top: 110px; }
    Oracle Board fetch-renders (see WAVELOG wave 35). */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
-  ::view-transition-old(root) { animation: tm-vt-out 120ms ease-in both; }
-  ::view-transition-new(root) { animation: tm-vt-in 180ms ease-out both; }
+  /* ROUND-004 (M6): Trend's navigation transition is the wire cut, a
+     hard step with no crossfade. The universal opacity crossfade that
+     lived here is gone; pages cut, the way the wire steps. */
+  ::view-transition-old(root) { animation: none; }
+  ::view-transition-new(root) { animation: none; }
 }
-@keyframes tm-vt-out { to { opacity: 0; } }
-@keyframes tm-vt-in { from { opacity: 0; } }
 
 /* ---- reduced motion: everything calms down ---- */
 @media (prefers-reduced-motion: reduce) {

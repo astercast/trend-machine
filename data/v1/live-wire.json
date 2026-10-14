@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-13T10:15:57.852Z",
+  "generated_at": "2026-10-14T06:13:18.061Z",
   "refresh_at": "2026-10-13T10:15:48.270927+00:00",
-  "method": "Lanes: one row per fetcher wired into pipeline/refresh.sh. The 11 file-writing lanes read pipeline/out/<lane>.json — hit count is that file's array length, source labels are the hits' own recorded `source` values, and freshness compares the file's newest fetched_at (or, for an empty file, its write time) with data/trends.json's generated_at from the same refresh. TikTok and X write no file and are skip-by-design. Movers: per topic, latest stored velocity vs the latest stored point at or before 1h earlier, over the live velocity store merged with the resolution archive (scripts/resolution-lib.js mergeHistory); only pairs spanning 0.5–3h count, and the real span is published per mover. The YouTube (Invidious / direct) lane is retired (2026-10-13, DATAOPS-001): out of the refresh loop, stored file deleted, shown with its reason and no hits.",
-  "honesty": "Zero invented data: a lane that recorded nothing says so, a file the latest refresh did not rewrite is labeled stale-skip with its hits excluded from the current total, skip-by-design lanes claim no hits, and movers are computed only from stored snapshot points — a topic with no ~1h pair is not a mover, however hot it looks.",
+  "method": "Lanes: one row per fetcher wired into pipeline/refresh.sh. The 11 file-writing lanes read pipeline/out/<lane>.json. Hit count is that file's array length, source labels are the hits' own recorded `source` values, and freshness compares the file's newest fetched_at (or, for an empty file, its write time) with data/trends.json's generated_at from the same refresh. TikTok and X write no file and are skip-by-design. Movers: per topic, latest stored velocity vs the latest stored point at or before 1h earlier, over the live velocity store merged with the resolution archive (scripts/resolution-lib.js mergeHistory); only pairs spanning 0.5 to 3h count, and the real span is published per mover. The YouTube (Invidious / direct) lane is retired (2026-10-13, DATAOPS-001): out of the refresh loop, stored file deleted, shown with its reason and no hits.",
+  "honesty": "Zero invented data: a lane that recorded nothing says so, a file the latest refresh did not rewrite is labeled stale-skip with its hits excluded from the current total, skip-by-design lanes claim no hits, and movers are computed only from stored snapshot points. A topic with no ~1h pair is not a mover, however hot it looks.",
   "provenance": {
     "lanes": "pipeline/out/*.json (hit counts, source labels, fetched_at stamps)",
     "refresh_stamp": "data/trends.json generated_at",
@@ -57,7 +57,7 @@
       ],
       "newest_fetched_at": "2026-10-13T10:12:48.735444+00:00",
       "file_written_at": "2026-10-13T10:12:48.743Z",
-      "detail": "Google News RSS — top / tech / entertainment / sports / AI feeds."
+      "detail": "Google News RSS: top / tech / entertainment / sports / AI feeds."
     },
     {
       "id": "news_search",
@@ -91,7 +91,7 @@
       "sources": [],
       "newest_fetched_at": null,
       "file_written_at": "2026-10-13T10:13:15.853Z",
-      "detail": "Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok). PIPELINE.md records this lane as often 403 from datacenters — it skips gracefully; an empty rewritten file is the degraded record, never faked."
+      "detail": "Reddit public JSON (r/popular, r/memes, r/gaming, r/Music, r/tiktok). PIPELINE.md records this lane as often 403 from datacenters, it skips gracefully; an empty rewritten file is the degraded record, never faked."
     },
     {
       "id": "reddit_rss",
@@ -111,7 +111,7 @@
       ],
       "newest_fetched_at": "2026-10-13T10:13:40.926612+00:00",
       "file_written_at": "2026-10-13T10:13:42.940Z",
-      "detail": "Reddit subreddit RSS feeds — the lane that carries Reddit when the direct JSON lane is degraded."
+      "detail": "Reddit subreddit RSS feeds, the lane that carries Reddit when the direct JSON lane is degraded."
     },
     {
       "id": "hn",
@@ -141,7 +141,7 @@
       ],
       "newest_fetched_at": "2026-10-13T10:15:07.457196+00:00",
       "file_written_at": "2026-10-13T10:15:07.458Z",
-      "detail": "Mastodon fediverse trending hashtags (/api/v1/trends/tags — repaired wave 20)."
+      "detail": "Mastodon fediverse trending hashtags (/api/v1/trends/tags, repaired wave 20)."
     },
     {
       "id": "bluesky",
@@ -169,7 +169,7 @@
       "sources": [],
       "newest_fetched_at": null,
       "file_written_at": null,
-      "detail": "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead — all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop."
+      "detail": "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead: all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop."
     },
     {
       "id": "youtube_rss",
@@ -193,7 +193,7 @@
       ],
       "newest_fetched_at": "2026-10-13T10:15:35.523115+00:00",
       "file_written_at": "2026-10-13T10:15:36.534Z",
-      "detail": "YouTube channel RSS with channel-page fallback — the lane that carries YouTube."
+      "detail": "YouTube channel RSS with channel-page fallback, the lane that carries YouTube."
     },
     {
       "id": "streamers",
@@ -211,7 +211,7 @@
       ],
       "newest_fetched_at": "2026-10-13T10:15:46.369176+00:00",
       "file_written_at": "2026-10-13T10:15:47.404Z",
-      "detail": "Wave 29: the Streamer Desk's live lane — Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts — those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live."
+      "detail": "Wave 29: the Streamer Desk's live lane: Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts, those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live."
     },
     {
       "id": "tiktok",
@@ -237,11 +237,11 @@
       "sources": [],
       "newest_fetched_at": null,
       "file_written_at": null,
-      "detail": "SKIP by design: the X API v2 path needs X_BEARER_TOKEN, which is not set — the fetcher logs its SKIP and writes nothing. X data is never faked."
+      "detail": "SKIP by design: the X API v2 path needs X_BEARER_TOKEN, which is not set. The fetcher logs its SKIP and writes nothing. X data is never faked."
     }
   ],
   "movers": {
-    "window": "latest stored point vs latest stored point at or before 1h earlier (accepted span 0.5–3h, published per mover)",
+    "window": "latest stored point vs latest stored point at or before 1h earlier (accepted span 0.5 to 3h, published per mover)",
     "topics_with_series": 621,
     "with_hour_pair": 555,
     "gainers": [

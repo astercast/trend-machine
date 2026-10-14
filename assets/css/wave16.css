@@ -1,57 +1,4 @@
-/* ============================================================
-   TREND MACHINE — wave 16 · "extreme makeover"
-   First-visit hierarchy: one hero, one action, everything else
-   reveals progressively. War-room identity kept — presentation
-   rebuilt. No gradients-as-decoration, no template grids.
-   Motion: transform/opacity only. All animation gated behind
-   prefers-reduced-motion (content is complete without it).
-   ============================================================ */
 
-/* ---------- hero ---------- */
-.hero {
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid var(--line-soft);
-  background:
-    radial-gradient(1100px 420px at 78% -60px, rgba(65, 255, 138, .055), transparent 62%),
-    var(--bg-0);
-}
-.hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-  gap: var(--s10);
-  align-items: center;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: clamp(48px, 8vh, 96px) var(--s6) clamp(40px, 6vh, 72px);
-}
-.hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: var(--s3);
-  margin-bottom: var(--s5);
-}
-.hero-kicker .kicker { letter-spacing: .22em; }
-.hero h1 {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(2.6rem, 6.4vw, 5rem);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
-  margin: 0 0 var(--s5);
-  color: var(--ink);
-  text-wrap: balance;
-}
-.hero h1 .strike-live { color: var(--live); }
-.hero-sub {
-  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
-  line-height: 1.65;
-  color: var(--ink-dim);
-  max-width: 46ch;
-  margin: 0 0 var(--s6);
-}
-.hero-sub strong { color: var(--ink); font-weight: 650; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: var(--s3); align-items: center; }
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -91,94 +38,7 @@
   transition: border-color .18s ease, color .18s ease, transform .18s ease;
 }
 .btn-ghost:hover { border-color: var(--signal); color: var(--signal); transform: translateY(-2px); }
-
-/* hero live stat strip */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line-soft);
-  border: 1px solid var(--line-soft);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: var(--s8);
-  max-width: 640px;
-}
-.hero-stat { background: var(--bg-soft); padding: var(--s4) var(--s4) var(--s3); }
-.hero-stat .num {
-  font-family: var(--mono);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-.hero-stat .num em { font-style: normal; color: var(--live); font-size: 1rem; }
-.hero-stat .lbl {
-  font-family: var(--mono);
-  font-size: var(--fs-micro);
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-top: 2px;
-}
-
-/* hero scope visual — radar sweep + live sparkline */
-.hero-scope {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  max-height: 460px;
-  width: 100%;
-  justify-self: center;
-  border: 1px solid var(--line-soft);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, transparent 58%, rgba(65, 255, 138, .05) 59%, transparent 60%),
-    radial-gradient(circle, transparent 38%, rgba(65, 255, 138, .06) 39%, transparent 40%),
-    radial-gradient(circle, transparent 18%, rgba(65, 255, 138, .07) 19%, transparent 20%),
-    var(--bg-soft);
-  overflow: hidden;
-}
-.hero-scope::before,
-.hero-scope::after {
-  content: "";
-  position: absolute;
-  inset: -50%;
-  background: conic-gradient(from 0deg, rgba(65,255,138,.28), transparent 18%);
-  animation: sweep 7s linear infinite;
-  pointer-events: none;
-}
-.hero-scope::after {
-  animation-duration: 11s;
-  animation-direction: reverse;
-  opacity: .35;
-  background: conic-gradient(from 0deg, rgba(83,233,255,.20), transparent 14%);
-}
 @keyframes sweep { to { transform: rotate(360deg); } }
-.hero-scope .scope-cross { position: absolute; inset: 0; pointer-events: none; }
-.hero-scope .scope-cross::before,
-.hero-scope .scope-cross::after {
-  content: ""; position: absolute; background: var(--line-soft);
-}
-.hero-scope .scope-cross::before { left: 50%; top: 0; bottom: 0; width: 1px; }
-.hero-scope .scope-cross::after { top: 50%; left: 0; right: 0; height: 1px; }
-.hero-scope-cap {
-  position: absolute;
-  left: var(--s4); right: var(--s4); bottom: var(--s3);
-  display: flex; justify-content: space-between; align-items: baseline;
-  font-family: var(--mono); font-size: var(--fs-micro);
-  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
-}
-.hero-scope-cap .num { color: var(--live); font-size: .8rem; }
-.hero-blips { position: absolute; inset: 0; pointer-events: none; }
-.hero-blip {
-  position: absolute;
-  width: 10px; height: 10px; margin: -5px;
-  border-radius: 50%;
-  background: var(--live);
-  box-shadow: var(--live-glow);
-}
-.hero-blip.warm { background: var(--warm); box-shadow: 0 0 14px rgba(255,178,36,.4); }
-.hero-blip.hot { background: var(--hot); box-shadow: var(--hot-glow); }
 
 /* ---------- stations (tabbed progressive disclosure) ---------- */
 .stations { margin-top: var(--s16); }
@@ -318,12 +178,6 @@ html.js .station-panel.is-active { display: block; animation: panel-in .32s ease
 .dtable tbody tr:hover { background: rgba(65, 255, 138, .045); }
 .dtable tbody tr:hover .t-title { color: var(--live); }
 a { transition: color .15s ease; }
-.hot-card { transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
-.hot-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--line-bright);
-  box-shadow: 0 14px 36px rgba(0,0,0,.4);
-}
 ::selection { background: rgba(65, 255, 138, .28); color: var(--ink); }
 
 /* scroll reveal — prepared → revealed.

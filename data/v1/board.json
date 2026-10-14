@@ -11,7 +11,7 @@
   "merges": [
     {
       "canonical_id": "six-seven-meme",
-      "canonical_title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "canonical_title": "\"6-7\": Gen Alpha's defining brainrot joke",
       "absorbed": [
         {
           "id": "seis-sete-dance",
@@ -27,13 +27,13 @@
     "makeable_shown": 7,
     "news_shown": 3
   },
-  "note": "392 phenomena from 393 tracked topics — \"6-7\" — Gen Alpha's defining brainrot joke + \"Six Seven\" (Seis Sete) funk dance read as one phenomenon (six-seven-meme). The full unfiltered record, all 393 rows, stays one layer down: the desk below and data/v1/trends.json.",
+  "note": "392 phenomena from 393 tracked topics — \"6-7\": Gen Alpha's defining brainrot joke + \"Six Seven\" (Seis Sete) funk dance read as one phenomenon (six-seven-meme). The full unfiltered record, all 393 rows, stays one layer down: the desk below and data/v1/trends.json.",
   "splash_id": "six-seven-meme",
   "make_now": [
     {
       "rank": 1,
       "id": "six-seven-meme",
-      "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "title": "\"6-7\": Gen Alpha's defining brainrot joke",
       "aka": [
         "\"Six Seven\" (Seis Sete) funk dance"
       ],
@@ -71,7 +71,7 @@
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": true,
-      "spark_svg": "<svg class=\"splash-chart\" viewBox=\"0 0 560 110\" role=\"img\" aria-label=\"Velocity from stored snapshots: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (21 snapshots).\" focusable=\"false\"><polyline points=\"6.0,104.0 33.4,104.0 60.8,104.0 88.2,104.0 115.6,104.0 143.0,104.0 170.4,104.0 197.8,104.0 225.2,104.0 252.6,104.0 280.0,104.0 307.4,104.0 334.8,104.0 362.2,104.0 389.6,104.0 417.0,104.0 444.4,104.0 471.8,104.0 499.2,104.0 526.6,104.0 554.0,104.0\" fill=\"none\"/><circle cx=\"554.0\" cy=\"104.0\" r=\"3.2\"/></svg>"
+      "spark_svg": "<svg class=\"splash-chart\" viewBox=\"0 0 560 110\" role=\"img\" aria-label=\"Velocity from stored snapshots: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (21 snapshots).\" focusable=\"false\"><polyline pathLength=\"1\" class=\"splash-line\" points=\"6.0,104.0 33.4,104.0 60.8,104.0 88.2,104.0 115.6,104.0 143.0,104.0 170.4,104.0 197.8,104.0 225.2,104.0 252.6,104.0 280.0,104.0 307.4,104.0 334.8,104.0 362.2,104.0 389.6,104.0 417.0,104.0 444.4,104.0 471.8,104.0 499.2,104.0 526.6,104.0 554.0,104.0\" fill=\"none\"/><circle cx=\"554.0\" cy=\"104.0\" r=\"3.2\"/></svg>"
     },
     {
       "rank": 2,
@@ -148,7 +148,7 @@
     {
       "rank": 4,
       "id": "we-fell-in-love-in-october",
-      "title": "\"we fell in love in october\" — girl in red",
+      "title": "\"we fell in love in october\": girl in red",
       "aka": [],
       "merged_from": [],
       "url": "topics/we-fell-in-love-in-october.html",
@@ -184,7 +184,7 @@
     {
       "rank": 5,
       "id": "nana-patekar-tributes",
-      "title": "Nana Patekar dies at 75 — meme legend tributes",
+      "title": "Nana Patekar dies at 75, meme legend tributes",
       "aka": [],
       "merged_from": [],
       "url": "topics/nana-patekar-tributes.html",
@@ -221,7 +221,7 @@
     {
       "rank": 6,
       "id": "dip-on-em",
-      "title": "\"DIP ON EM\" — early-stage dance sound",
+      "title": "\"DIP ON EM\": early-stage dance sound",
       "aka": [],
       "merged_from": [],
       "url": "topics/dip-on-em.html",
@@ -256,7 +256,7 @@
     {
       "rank": 7,
       "id": "insomniac-lofi",
-      "title": "\"Insomniac\" — Memo Boy's lo-fi bed",
+      "title": "\"Insomniac\": Memo Boy's lo-fi bed",
       "aka": [],
       "merged_from": [],
       "url": "topics/insomniac-lofi.html",

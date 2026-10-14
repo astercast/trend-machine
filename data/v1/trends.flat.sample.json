@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-13T10:15:55.428232+00:00",
+  "generated_at": "2026-10-14T06:15:25.288517+00:00",
   "sample": true,
   "source_count": 93,
   "note": "Clearly-labeled SAMPLE derived from editorial seed topics (data/trends.json). Not live data — for consumer development only.",
   "trends": [
     {
       "id": "six-seven-meme",
-      "title": "\"6-7\" — Gen Alpha's defining brainrot joke",
+      "title": "\"6-7\": Gen Alpha's defining brainrot joke",
       "source": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/6-7_(meme)",
       "velocity": 92,
@@ -223,7 +223,7 @@
     },
     {
       "id": "we-fell-in-love-in-october",
-      "title": "\"we fell in love in october\" — girl in red",
+      "title": "\"we fell in love in october\": girl in red",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 86,
@@ -258,7 +258,7 @@
     },
     {
       "id": "nana-patekar-tributes",
-      "title": "Nana Patekar dies at 75 — meme legend tributes",
+      "title": "Nana Patekar dies at 75, meme legend tributes",
       "source": "Face of Malawi",
       "url": "https://www.faceofmalawi.com/2026/10/09/nana-patekar-dies-at-75-the-viral-meme-legend-whose-hilarious-reactions-took-over-the-internet/",
       "velocity": 85,
@@ -296,7 +296,7 @@
     },
     {
       "id": "dip-on-em",
-      "title": "\"DIP ON EM\" — early-stage dance sound",
+      "title": "\"DIP ON EM\": early-stage dance sound",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 85,
@@ -332,7 +332,7 @@
     },
     {
       "id": "insomniac-lofi",
-      "title": "\"Insomniac\" — Memo Boy's lo-fi bed",
+      "title": "\"Insomniac\": Memo Boy's lo-fi bed",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 84,
@@ -401,7 +401,7 @@
     },
     {
       "id": "shrinking-pine-cone",
-      "title": "SHRINKING PINE CONE — oddly-satisfying timelapse",
+      "title": "SHRINKING PINE CONE: oddly-satisfying timelapse",
       "source": "Revid",
       "url": "https://www.revid.ai/tiktok-viral-trends-today",
       "velocity": 83,
@@ -618,7 +618,7 @@
     },
     {
       "id": "hard-times-paramore",
-      "title": "Paramore \"Hard Times\" — relatable-struggle edits",
+      "title": "Paramore \"Hard Times\": relatable-struggle edits",
       "source": "SocialBee",
       "url": "https://socialbee.com/blog/trending-tiktok-songs/",
       "velocity": 80,
@@ -656,7 +656,7 @@
     },
     {
       "id": "young-hearts-run-free",
-      "title": "Sped-up \"Young Hearts Run Free\" — prom & glow-up sound",
+      "title": "Sped-up \"Young Hearts Run Free\": prom & glow-up sound",
       "source": "Anijam",
       "url": "https://www.anijam.ai/blog/tiktok-trends/",
       "velocity": 79,
@@ -691,7 +691,7 @@
     },
     {
       "id": "ai-misunderstanding",
-      "title": "AI misunderstanding scenarios — comedy skits",
+      "title": "AI misunderstanding scenarios: comedy skits",
       "source": "Anijam",
       "url": "https://www.anijam.ai/blog/tiktok-trends/",
       "velocity": 79,
@@ -800,7 +800,7 @@
     },
     {
       "id": "and-i-love-her",
-      "title": "Santo & Johnny \"And I Love Her\" — dreamy transition bed",
+      "title": "Santo & Johnny \"And I Love Her\": dreamy transition bed",
       "source": "SocialBee",
       "url": "https://socialbee.com/blog/trending-tiktok-songs/",
       "velocity": 78,
@@ -913,7 +913,7 @@
     },
     {
       "id": "like-a-prayer-remix",
-      "title": "\"Like a Prayer\" house remix — emotional montage bed",
+      "title": "\"Like a Prayer\" house remix: emotional montage bed",
       "source": "Anijam",
       "url": "https://www.anijam.ai/blog/tiktok-trends/",
       "velocity": 77,
@@ -948,7 +948,7 @@
     },
     {
       "id": "its-a-clock",
-      "title": "\"It's a clock\" — deadpan realization + sound drop",
+      "title": "\"It's a clock\": deadpan realization + sound drop",
       "source": "genznewz",
       "url": "https://genznewz.com/october-on-tiktok-halloween-takes-over-your-feed",
       "velocity": 77,
@@ -1023,7 +1023,7 @@
     },
     {
       "id": "scott-street-slowed",
-      "title": "\"Scott Street\" (Slowed) — Phoebe Bridgers nostalgic-letdown bed",
+      "title": "\"Scott Street\" (Slowed): Phoebe Bridgers nostalgic-letdown bed",
       "source": "SocialBee",
       "url": "https://socialbee.com/blog/trending-tiktok-songs/",
       "velocity": 76,
@@ -1131,7 +1131,7 @@
     },
     {
       "id": "shop-with-confidence",
-      "title": "#shopwithconfidence — TikTok Shop official hauls",
+      "title": "#shopwithconfidence: TikTok Shop official hauls",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 75,
@@ -1382,7 +1382,7 @@
     },
     {
       "id": "digger-film",
-      "title": "Tom Cruise's \"Digger\" — Iñárritu climate satire splits viewers",
+      "title": "Tom Cruise's \"Digger\": Iñárritu climate satire splits viewers",
       "source": "Bluesky trending",
       "url": "https://bsky.app",
       "velocity": 74,
@@ -1493,7 +1493,7 @@
     },
     {
       "id": "breast-cancer-awareness",
-      "title": "#breastcancerawarenessmonth — October giveback",
+      "title": "#breastcancerawarenessmonth: October giveback",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 73,
@@ -1819,7 +1819,7 @@
     },
     {
       "id": "i-did-nothing",
-      "title": "\"I Did Nothing...\" — nothing-to-say skits",
+      "title": "\"I Did Nothing...\": nothing-to-say skits",
       "source": "MediaNug",
       "url": "https://www.medianug.com/tiktok-trending-report",
       "velocity": 70,
@@ -2100,7 +2100,7 @@
     },
     {
       "id": "spooky-season",
-      "title": "#spookyseason peaks — Halloween is a Saturday",
+      "title": "#spookyseason peaks: Halloween is a Saturday",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 93,
@@ -2252,7 +2252,7 @@
     },
     {
       "id": "mini-dramas",
-      "title": "Mini-dramas — TikTok's fastest-growing NEW category",
+      "title": "Mini-dramas: TikTok's fastest-growing NEW category",
       "source": "MediaPost",
       "url": "https://www.Mediapost.Com/publications/article/413505/microdramas-drove-in-app-revenue-of-11b-worldwide.html",
       "velocity": 90,
@@ -2336,7 +2336,7 @@
     },
     {
       "id": "bow-bow-bow",
-      "title": "\"Bow Bow Bow\" — Zeddy Will's bend-and-bounce",
+      "title": "\"Bow Bow Bow\": Zeddy Will's bend-and-bounce",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 88,
@@ -2412,7 +2412,7 @@
     },
     {
       "id": "hold-it-down",
-      "title": "\"Someone's gotta hold it down\" — ADÉLA \"Ain't In LA\"",
+      "title": "\"Someone's gotta hold it down\": ADÉLA \"Ain't In LA\"",
       "source": "Virlo",
       "url": "https://virlo.ai/blog/whats-trending-on-tiktok",
       "velocity": 86,
@@ -2451,7 +2451,7 @@
     },
     {
       "id": "mlb-playoffs",
-      "title": "MLB playoffs — World Series Oct 23",
+      "title": "MLB playoffs: World Series Oct 23",
       "source": "SocialPilot",
       "url": "https://www.socialpilot.co/blog/tiktok-trends",
       "velocity": 84,
@@ -2653,7 +2653,7 @@
     },
     {
       "id": "valor-mortis",
-      "title": "Valor Mortis — the new soulslike to watch",
+      "title": "Valor Mortis: the new soulslike to watch",
       "source": "NEXTARCA",
       "url": "https://nextarca.com/news/rpgs-this-week-october-12-to-18-2026",
       "velocity": 80,
@@ -2728,7 +2728,7 @@
     },
     {
       "id": "patient-zero-hub",
-      "title": "The Patient Zero TikTok Search Hub — launch as a game",
+      "title": "The Patient Zero TikTok Search Hub: launch as a game",
       "source": "TikTokNewsHub",
       "url": "https://tiktoknewshub.com/music/patient-zero-tiktok-hub-taylor-swift/",
       "velocity": 80,
@@ -2997,7 +2997,7 @@
     },
     {
       "id": "best-for-you-kylie",
-      "title": "\"I Just Want the Best for You\" — Kylie Jenner advice audio",
+      "title": "\"I Just Want the Best for You\": Kylie Jenner advice audio",
       "source": "MediaNug",
       "url": "https://www.medianug.com/tiktok-trending-report",
       "velocity": 78,
@@ -3281,7 +3281,7 @@
     },
     {
       "id": "text-from-a",
-      "title": "Text From \"-A\" — the Pretty Little Liars call-out",
+      "title": "Text From \"-A\": the Pretty Little Liars call-out",
       "source": "MediaNug (source URL not found on 2026-10-11 re-check)",
       "url": "",
       "velocity": 58,
@@ -3316,7 +3316,7 @@
     },
     {
       "id": "be-ok",
-      "title": "\"Be OK\" — happy dance over chaos",
+      "title": "\"Be OK\": happy dance over chaos",
       "source": "New Engen (source URL not found on 2026-10-11 re-check)",
       "url": "",
       "velocity": 58,

@@ -360,13 +360,16 @@ def main():
         _top5 = sorted(_trends.get("topics", []),
                        key=lambda t: -(t.get("opportunity_score") or 0))[:5]
         _hot = _region("hot5") or ""
-        check("vp0001 fallback hot5 has 5 static cards", _hot.count("hot-card") >= 5)
-        check("vp0001 fallback hot5 = stored top 5",
-              all(_html.escape(t["title"], quote=True) in _hot for t in _top5))
+        check("vp0001 fallback hot5 has 5 static rows", _hot.count("hot-row") >= 5)
+        def _disp(t):
+            t = _re.sub(r"\s+[\u2014\u2013]\s+", ", ", t)
+            return t.replace("\u2014", "-").replace("\u2013", "-")
+        check("vp0001 fallback hot5 = stored top 5 (display-normalized titles)",
+              all(_html.escape(_disp(t["title"]), quote=True) in _hot for t in _top5))
         _tbl = _region("table") or ""
         check("vp0001 fallback table has 30 static rows", _tbl.count("<tr") >= 30)
         check("vp0001 fallback radar has 10 static cards",
-              (_region("radar") or "").count("meme-card") >= 10)
+              (_region("radar") or "").count("meme-row") >= 10)
         check("vp0001 fallback labeled as static snapshot",
               "static snapshot" in (_region("datats") or ""))
         check("vp0001 fallback table-meta labeled",

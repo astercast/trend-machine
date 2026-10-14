@@ -5,16 +5,16 @@ Machine-readable: data/v1/trends.json (sort by opportunity_score desc).
 Generated: 2026-10-13T10:15:48.270927+00:00 · 393 topics.
 
 ## Hottest right now
-- ["6-7" — Gen Alpha's defining brainrot joke](topics/six-seven-meme.html) (opportunity 92, velocity 92)
+- ["6-7": Gen Alpha's defining brainrot joke](topics/six-seven-meme.html) (opportunity 92, velocity 92)
 - [GTA 6: robberies and partner getaways detailed](topics/gta6-robberies.html) (opportunity 91, velocity 91)
 - ["Six Seven" (Seis Sete) funk dance](topics/seis-sete-dance.html) (opportunity 90, velocity 90)
 - [Trump roasts rally protester; Nobel Prize outrage](topics/trump-rally-nobel.html) (opportunity 90, velocity 90)
 - [Houthi missile strike on Riyadh airport](topics/houthi-riyadh-strike.html) (opportunity 88, velocity 88)
 - [#nba explodes on TikTok (+493%)](topics/nba-tiktok-surge.html) (opportunity 86, velocity 86)
-- ["we fell in love in october" — girl in red](topics/we-fell-in-love-in-october.html) (opportunity 86, velocity 86)
-- [Nana Patekar dies at 75 — meme legend tributes](topics/nana-patekar-tributes.html) (opportunity 85, velocity 85)
-- ["DIP ON EM" — early-stage dance sound](topics/dip-on-em.html) (opportunity 85, velocity 85)
-- ["Insomniac" — Memo Boy's lo-fi bed](topics/insomniac-lofi.html) (opportunity 84, velocity 84)
+- ["we fell in love in october": girl in red](topics/we-fell-in-love-in-october.html) (opportunity 86, velocity 86)
+- [Nana Patekar dies at 75, meme legend tributes](topics/nana-patekar-tributes.html) (opportunity 85, velocity 85)
+- ["DIP ON EM": early-stage dance sound](topics/dip-on-em.html) (opportunity 85, velocity 85)
+- ["Insomniac": Memo Boy's lo-fi bed](topics/insomniac-lofi.html) (opportunity 84, velocity 84)
 
 ## Categories
 culture, entertainment, gaming, meme, music, news, sports, streaming, tech

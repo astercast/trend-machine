@@ -15,6 +15,9 @@
     });
     return Promise.race([got, deadline]);
   }
+  function normT(s) {
+    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -26,19 +29,19 @@
     if (plats) marg += '<p class="board-marg board-marg-plats">On: ' + plats + "</p>";
     if (e.evidence && e.evidence.length) {
       marg += '<ul class="board-marg">' + e.evidence.map(function (c) {
-        return "<li>" + esc(c) + "</li>";
+        return "<li>" + esc(normT(c)) + "</li>";
       }).join("") + "</ul>";
     }
     var aka = "";
     if (e.aka && e.aka.length) {
-      aka = '<span class="board-aka">Also tracked as: ' + esc(e.aka.join(" · ")) +
+      aka = '<span class="board-aka">Also tracked as: ' + esc(e.aka.map(normT).join(" · ")) +
         ". One phenomenon, evidence combined.</span>";
     }
     var badge = "", make = "";
     if (e.kind === "news") {
       badge = '<span class="board-newsbadge">News, watch</span> ';
     } else if (e.angle) {
-      make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(e.angle) +
+      make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(normT(e.angle)) +
         '<span class="board-fmt"> · format: ' + esc(e.format) + "</span></p>";
     }
     var splash = !!e.splash;
@@ -48,7 +51,7 @@
       return '<li class="board-row splash">' +
         '<span class="board-rank">' + e.rank + "</span>" +
         '<div class="board-main">' + badge +
-        '<a class="board-title" href="' + esc(e.url) + '">' + esc(e.title) + "</a>" +
+        '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + "</a>" +
         make + chart + "</div>" +
         '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
         '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
@@ -56,7 +59,7 @@
     return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
       '<div class="board-main">' + badge +
-      '<a class="board-title" href="' + esc(e.url) + '">' + esc(e.title) + "</a>" +
+      '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + "</a>" +
       aka + make + marg + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
       '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
@@ -67,7 +70,7 @@
     var news = document.getElementById("board-news");
     if (news && board.news_watch) news.innerHTML = board.news_watch.map(rowHTML).join("");
     var note = document.getElementById("board-note");
-    if (note && board.note) note.textContent = board.note;
+    if (note && board.note) note.textContent = normT(board.note);
     var mk = document.getElementById("hs-makenow");
     if (mk && board.counts) mk.textContent = String(board.counts.makeable_shown);
   }

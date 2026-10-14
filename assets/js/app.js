@@ -64,6 +64,10 @@
     var pulse = cls === "f-live" ? " pulse" : "";
     return '<span class="fresh ' + cls + '"><span class="dot' + pulse + '" aria-hidden="true"></span>' + label + "</span>";
   }
+  function normT(s) {
+    /* display normalization: tracked titles render dash-free (data stays byte-true) */
+    return String(s == null ? "" : s).replace(/\s+[\u2014\u2013]\s+/g, ", ").replace(/[\u2014\u2013]/g, "-");
+  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -137,7 +141,7 @@
     /* wave 39 (VP-0011): the score prints WITH its unit — an opportunity
        index out of 100. A bare ▲ read as a percentage rise; it never was. */
     var items = topics.slice(0, 12).map(function (t) {
-      return "<b>" + t.opportunity_score + "/100</b> " + esc(t.title);
+      return "<b>" + t.opportunity_score + "/100</b> " + esc(normT(t.title));
     }).join('<span class="tk-sep">·</span>');
     var track = document.getElementById("ticker-track");
     if (track) track.innerHTML = items + '<span class="tk-sep">·</span>' + items;
@@ -154,13 +158,13 @@
     var top = topics.slice().sort(function (a, b) { return b.opportunity_score - a.opportunity_score; }).slice(0, 5);
     el.innerHTML = top.map(function (t, i) {
       var leader = i === 0;
-      return '<a class="hot-card' + (leader ? " leader" : "") + '" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
-        (leader ? '<span class="badge-breaking">Breaking</span>' : "") +
-        '<span class="rank num">0' + (i + 1) + "</span>" +
-        "<div><h3>" + esc(t.title) + "</h3>" +
-        "<p>" + esc(t.summary) + "</p></div>" +
-        '<div class="card-foot">' +
-        scoreHTML(t.opportunity_score, true) + freshHTML(t.last_seen) + "</div></a>";
+      return '<a class="hot-row' + (leader ? " leader" : "") + '" href="topics/' + t.id + '.html">' +
+        '<span class="board-rank">' + (i + 1) + "</span>" +
+        '<span class="hot-main"><h3>' + esc(normT(t.title)) + "</h3>" +
+        "<p>" + esc(normT(t.summary)) + "</p>" +
+        '<span class="hot-meta">' + (leader ? "breaking · " : "") + freshHTML(t.last_seen) + "</span></span>" +
+        '<span class="board-score"><span class="score-num">' + t.opportunity_score + "</span>" +
+        '<span class="board-unit">opportunity / 100</span></span></a>';
     }).join("");
     clearLoading("hot5");
   }
@@ -170,22 +174,17 @@
     if (!el) return;
     var memes = topics.filter(function (t) { return t.category === "meme"; })
       .sort(function (a, b) { return b.velocity - a.velocity; }).slice(0, 10);
-    el.innerHTML = memes.map(function (t, i) {
-      return '<a class="meme-card" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
-        '<div class="fmt num">◉ MEME · v' + t.velocity + "</div>" +
-        "<h4>" + esc(t.title) + "</h4>" +
-        '<div class="mhash">' + t.hashtags.slice(0, 3).map(esc).join(" ") + "</div>" +
-        freshHTML(t.last_seen) + "</a>";
+    el.innerHTML = memes.map(function (t) {
+      return '<a class="meme-row" href="topics/' + t.id + '.html">' +
+        '<span class="meme-main"><span class="fmt num">MEME · v' + t.velocity + "</span>" +
+        "<h4>" + esc(normT(t.title)) + "</h4></span>" +
+        '<span class="meme-meta">' + esc((t.hashtags || []).slice(0, 3).join(" ")) +
+        " · " + freshHTML(t.last_seen) + "</span></a>";
     }).join("");
+    var cnt = document.getElementById("radar-count");
+    if (cnt) cnt.textContent = memes.length + " meme signals tracked";
     clearLoading("radar-strip");
-    renderScope(memes);
-    var count = document.getElementById("radar-count");
-    if (count) count.textContent = memes.length + " meme signals tracked";
   }
-
-  /* wave 12 · radar scope: polar plot of the meme contacts.
-     Hotter opportunity = closer to center (priority contact closing in).
-     Static DOM + CSS sweep: reduced-motion users get a still scope. */
   function renderScope(memes) {
     var box = document.getElementById("radar-scope");
     if (!box || !memes.length) return;
@@ -213,11 +212,11 @@
       return '<g class="blip"><circle class="blip-ring" cx="' + x + '" cy="' + y + '" r="5" fill="none" stroke="' +
         c + '" stroke-width="1" style="animation-delay:' + (i * 0.24).toFixed(2) + 's"/>' +
         '<circle cx="' + x + '" cy="' + y + '" r="3.4" fill="' + c + '">' +
-        '<title>' + esc(t.title) + " — opportunity " + t.opportunity_score + "</title></circle></g>";
+        '<title>' + esc(normT(t.title)) + " · opportunity " + t.opportunity_score + "</title></circle></g>";
     }).join("");
     box.innerHTML =
       '<svg viewBox="0 0 200 200" role="img" aria-label="Radar scope: ' + memes.length +
-      " meme contacts tracked; closest: " + esc(memes[0].title) + '" focusable="false">' +
+      " meme contacts tracked; closest: " + esc(normT(memes[0].title)) + '" focusable="false">' +
       '<circle cx="' + CX + '" cy="' + CY + '" r="' + R + '" fill="none" stroke="rgba(83,233,255,.35)" stroke-width="1.5"/>' +
       rings + ticks +
       '<line x1="' + CX + '" y1="' + (CY - R) + '" x2="' + CX + '" y2="' + (CY + R) + '" stroke="rgba(83,233,255,.12)" stroke-width="1"/>' +
@@ -242,9 +241,9 @@
     el.innerHTML = list.map(function (t, i) {
       var stale = t.stale ? ' class="is-stale"' : '';
       var aka = (t.merged_from && t.merged_from.length)
-        ? '<div class="topic-aka">also tracked as: ' + t.merged_from.map(function (x) { return esc(x.title); }).join(" · ") + " — one phenomenon, evidence combined</div>" : "";
+        ? '<div class="topic-aka">also tracked as: ' + t.merged_from.map(function (x) { return esc(normT(x.title)); }).join(" · ") + ". One phenomenon, evidence combined</div>" : "";
       return "<tr" + stale + ' style="--i:' + Math.min(i, 12) + '">' +
-        '<td data-label="Topic"><a class="topic-link" href="topics/' + t.id + '.html">' + esc(t.title) + "</a>" +
+        '<td data-label="Topic"><a class="topic-link" href="topics/' + t.id + '.html">' + esc(normT(t.title)) + "</a>" +
         (t.stale ? ' <span class="stale-badge">STALE</span>' : "") +
         '<div class="topic-cat">' + esc(t.category) + "</div>" + aka + "</td>" +
         '<td data-label="Platforms">' + chips(t.platforms, "plat") + "</td>" +

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Live Wire — every lane, its health, the hour's movers — Trend Machine</title>
-<meta name="description" content="The Live Wire: a command view over the pipeline's own stored outputs — every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design, retired), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
+<title>Live Wire, every lane, its health, the hour's movers, Trend Machine</title>
+<meta name="description" content="The Live Wire: a command view over the pipeline's own stored outputs, every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design, retired), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
 <meta name="theme-color" content="#0a0c10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Live Wire — every lane, its health, the hour's movers — Trend Machine">
-<meta property="og:description" content="The Live Wire: a command view over the pipeline's own stored outputs — every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design, retired), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
+<meta property="og:title" content="Live Wire, every lane, its health, the hour's movers, Trend Machine">
+<meta property="og:description" content="The Live Wire: a command view over the pipeline's own stored outputs, every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design, retired), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
 <meta property="og:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Live Wire — every lane, its health, the hour's movers — Trend Machine">
-<meta name="twitter:description" content="The Live Wire: a command view over the pipeline's own stored outputs — every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design, retired), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
+<meta name="twitter:title" content="Live Wire, every lane, its health, the hour's movers, Trend Machine">
+<meta name="twitter:description" content="The Live Wire: a command view over the pipeline's own stored outputs, every source lane with its real recorded hit count and health (live, degraded, stale-skip, skip-by-design, retired), plus the hour's top movers computed from stored velocity snapshots only. Nothing invented; failures are on the board.">
 <meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <link rel="canonical" href="https://trend-machine-live.vercel.app/live-wire.html">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Live Wire - source lanes", "numberOfItems": 13, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Google Trends"}, {"@type": "ListItem", "position": 2, "name": "Google News"}, {"@type": "ListItem", "position": 3, "name": "Google News Search"}, {"@type": "ListItem", "position": 4, "name": "Reddit (direct JSON)"}, {"@type": "ListItem", "position": 5, "name": "Reddit (RSS)"}, {"@type": "ListItem", "position": 6, "name": "Hacker News"}, {"@type": "ListItem", "position": 7, "name": "Mastodon"}, {"@type": "ListItem", "position": 8, "name": "Bluesky"}, {"@type": "ListItem", "position": 9, "name": "YouTube (Invidious / direct)"}, {"@type": "ListItem", "position": 10, "name": "YouTube (channel RSS)"}, {"@type": "ListItem", "position": 11, "name": "Streamer Desk wire"}, {"@type": "ListItem", "position": 12, "name": "TikTok"}, {"@type": "ListItem", "position": 13, "name": "X"}]}</script>
@@ -48,11 +48,11 @@
 <p class="kicker">pipeline command view · the wire</p>
 <h1 id="lw-title">⚡ The Live Wire</h1>
 <p class="lw-lede">
-  What the pipeline actually did on its latest run — every lane on one board,
+  What the pipeline actually did on its latest run, every lane on one board,
   with the hit count <strong>the pipeline itself recorded</strong> and the
   health it earned: live, degraded, stale, skip-by-design, or retired. Below it, the
   hour's movers, computed <strong>only from stored snapshots</strong>.
-  Failures are not footnotes here — they are rows.
+  Failures are not footnotes here, they are rows.
 </p>
 <p class="kicker" id="lw-stamp">Loading the wire…</p>
 </section>
@@ -64,7 +64,7 @@
 <p class="lw-section-sub">
   One row per fetcher wired into <code>pipeline/refresh.sh</code>. The eleven
   file-writing lanes read their stored output in <code>pipeline/out/</code>;
-  TikTok and X write no file — they skip by design and claim no hits.
+  TikTok and X write no file, they skip by design and claim no hits.
 </p>
 <div class="lw-table" id="lw-lanes-wrap" hidden>
   <div class="lw-head" aria-hidden="true">
@@ -77,7 +77,7 @@
 <h2 class="lw-section-h">The hour's movers</h2>
 <p class="lw-section-sub">
   Latest stored velocity vs the latest stored point at or before one hour
-  earlier — the real span is printed on every row. A topic with no proven
+  earlier, the real span is printed on every row. A topic with no proven
   pair is not a mover, however hot it looks.
 </p>
 <div id="lw-movers"></div>
@@ -87,15 +87,15 @@
 <p>
   <strong>Live</strong> means the lane's stored file was written by the
   latest refresh and holds hits. <strong>Degraded</strong> means the file
-  was rewritten and holds zero — the lane ran and recorded nothing (the
+  was rewritten and holds zero, the lane ran and recorded nothing (the
   Reddit direct-JSON lane lives here: Reddit's public JSON is often
   403 from datacenters, and the RSS lane carries Reddit instead).
   <strong>Stale · skip</strong> means the latest refresh did not rewrite
-  the file at all — the fetcher's skip path writes nothing — so its hits
+  the file at all, the fetcher's skip path writes nothing, so its hits
   are shown with their real date and <em>excluded</em> from the current
   total (the YouTube Invidious/direct lane; channel RSS carries YouTube).
   <strong>Skip by design</strong> is TikTok and X: no vetted keyless
-  TikTok source exists, and X needs a bearer token that is not set —
+  TikTok source exists, and X needs a bearer token that is not set , 
   both lanes are documented in <code>PIPELINE.md</code> and neither
   one's data is ever faked.
 </p>
@@ -103,8 +103,8 @@
   Every number on this page traces to a file named in the payload's
   provenance (<code>data/v1/live-wire.json</code>, built by
   <code>scripts/build_live_wire.js</code>). Movers come from the stored
-  velocity history merged with the resolution archive — the same merge
-  rule the resolution graders use — and flat
+  velocity history merged with the resolution archive, the same merge
+  rule the resolution graders use, and flat
   topics are counted in the banner, not hidden.
 </p>
 </section>
@@ -112,7 +112,7 @@
 
 <footer class="site-foot"><div class="wrap foot-grid">
 <div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
-<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<div style="font-size:13px">Never invents trends, every signal traces to a fetcher hit or a researched source.<br>
 <span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
 </div></footer>
 
@@ -123,7 +123,7 @@
   function $(id) { return document.getElementById(id); }
   function init() {
     /* wave 30 · VP-0001: a fetch that never settles must still reach the
-       fallback alert — race the load against a 12s deadline. */
+       fallback alert, race the load against a 12s deadline. */
     var got = fetch("data/v1/live-wire.json").then(function (r) {
       if (!r.ok) { throw new Error("live-wire"); }
       return r.json();
