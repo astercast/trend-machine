@@ -42,7 +42,7 @@
   /* ---- type ---- */
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  --display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
 
   /* type scale */
   --fs-hero:     clamp(2rem, 4.6vw, 3.25rem);
@@ -82,11 +82,11 @@
 /* ---- wave 12 · war-room identity tokens (append-only) ---- */
 :root {
   /* distinctive typography of its own — shared with no other fleet site:
-     Chakra Petch = engraved plates / display; Space Mono = data readouts */
-  --font-display: "Chakra Petch", "Arial Narrow", "Helvetica Neue Condensed", sans-serif;
-  --font-data: "Space Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
-  --mono: "Space Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
-  --display: "Chakra Petch", "Arial Narrow", sans-serif;
+     Chakra Petch = display voice; Space Mono = data readouts and the wire */
+  --font-display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
+  --font-data: "Space Mono", "Space Mono Fallback", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --mono: "Space Mono", "Space Mono Fallback", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
 
   /* instrument-panel furniture */
   --plate:        #0b0e14;   /* engraved plate surface */

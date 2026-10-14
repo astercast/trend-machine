@@ -1,0 +1,167 @@
+/* ============================================================
+   wave 41 (rotation 21): THE BOARD. Composition first.
+   The homepage is one board, not a sequence of sections: a narrow
+   left rail is The Wire (a running mono list, one width, full
+   height) and the main field is a broadsheet column: today's board
+   as a single ranked list, rank numerals oversized in the display
+   voice, evidence set as marginalia under each entry, one splash
+   item per day at double height. Opportunity is a hand-sized
+   display numeral, never a pill. No ticker, no countdown pill,
+   no stat strip: the chrome layers are gone, the board is the page.
+   Type voices: Chakra Petch for display and numerals, Space Mono for
+   the wire and marginalia, system sans for reading. Synthesis is
+   off for the display voice so iOS never fakes a weight.
+   ============================================================ */
+
+h1, h2, h3, .board-title, .sd-section-h {
+  font-family: var(--font-display);
+  font-synthesis-weight: none;
+}
+
+/* ---------- slim head: brand and section links, nothing else ---------- */
+.head-nav { display: flex; gap: var(--s5); align-items: baseline; flex-wrap: wrap; }
+.head-nav a {
+  font-family: var(--font-data); font-size: var(--fs-tiny);
+  text-transform: uppercase; letter-spacing: .12em; color: var(--ink-dim);
+}
+.head-nav a:hover { color: var(--ink); text-decoration: none; }
+
+/* ---------- the board shell: wire rail + broadsheet field ---------- */
+.board-shell {
+  display: grid;
+  grid-template-columns: 288px minmax(0, 1fr);
+  max-width: 1240px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.wire-rail {
+  border-right: 1px solid var(--line);
+  padding: var(--s6) var(--s4) var(--s8) var(--s5);
+  display: flex; flex-direction: column;
+}
+.wire-head {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.3rem; letter-spacing: -.01em; margin: 0 0 2px;
+  font-synthesis-weight: none;
+}
+.wire-sub { color: var(--ink-faint); font-size: .8rem; margin: 0 0 var(--s4); line-height: 1.45; }
+.wire-list { list-style: none; margin: 0; padding: 0; }
+.wire-item {
+  display: flex; gap: var(--s2); padding: 7px 0;
+  white-space: nowrap; overflow: hidden; align-items: baseline;
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-data); font-size: .78rem; line-height: 1.4;
+}
+.wire-time { color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 400; flex: none; }
+.wire-item a { color: var(--ink-dim); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wire-item a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.wire-foot { margin-top: auto; padding-top: var(--s6); }
+.wire-foot a { font-family: var(--font-data); font-size: .78rem; }
+.wire-lanes { color: var(--ink-ghost); font-family: var(--font-data); font-size: .72rem; line-height: 1.6; margin: var(--s2) 0 0; }
+
+.broadsheet { padding: var(--s6) var(--s6) var(--s8); min-width: 0; }
+.board-masthead { border-bottom: 3px double var(--line-bright); padding-bottom: var(--s4); }
+.board-masthead h1 {
+  font-size: clamp(2.1rem, 4.4vw, 3.2rem); font-weight: 700;
+  line-height: 1.02; letter-spacing: -.015em; margin: 0 0 var(--s3);
+}
+.board-sub { margin: 0; max-width: 62ch; }
+.board-facts {
+  font-family: var(--font-data); font-size: .8rem; color: var(--ink-dim);
+  margin: var(--s3) 0 0; line-height: 1.7;
+}
+.board-facts .num, .board-facts span { font-variant-numeric: tabular-nums; }
+
+/* ---------- board rows: rank, entry, score ---------- */
+.board-list { border-top: 0; margin-top: var(--s2); }
+.board-row {
+  grid-template-columns: 92px minmax(0, 1fr) auto;
+  gap: var(--s5); padding: var(--s5) var(--s1);
+  align-items: start;
+}
+.board-rank {
+  font-family: var(--font-display); font-weight: 700;
+  font-synthesis-weight: none;
+  font-size: clamp(2.6rem, 4.5vw, 3.9rem); line-height: .9;
+  color: var(--ink); padding-top: 2px;
+}
+.board-row.news .board-rank { color: var(--ink-ghost); }
+.board-title { font-size: 1.28rem; font-weight: 600; line-height: 1.25; }
+.board-score { text-align: right; }
+.board-score .score-num {
+  display: block; font-family: var(--font-display); font-weight: 700;
+  font-synthesis-weight: none;
+  font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: .95; color: var(--live);
+}
+.board-row.news .board-score .score-num { color: var(--warm); }
+.board-unit { margin-top: 5px; }
+
+/* the splash: one item a day, double height, full width of the field */
+.board-row.splash {
+  background: var(--panel);
+  border: 1px solid var(--line-bright);
+  border-left: 4px solid var(--live);
+  padding: var(--s8) var(--s5); margin: var(--s4) 0;
+}
+.board-row.splash .board-rank { font-size: clamp(3.6rem, 6.5vw, 5.6rem); }
+.board-row.splash .board-title { font-size: clamp(1.6rem, 3vw, 2.15rem); line-height: 1.15; }
+.board-row.splash .board-score .score-num { font-size: clamp(3.4rem, 6vw, 5rem); }
+
+/* evidence as marginalia: small mono lines under the entry, no pills */
+.board-marg { list-style: none; margin: var(--s3) 0 0; padding: 0 0 0 var(--s3); border-left: 1px solid var(--line); }
+.board-marg li, .board-marg-plats {
+  font-family: var(--font-data); font-size: .76rem; line-height: 1.65;
+  color: var(--ink-faint); margin: 0;
+}
+.board-marg-plats { color: var(--ink-dim); margin-top: var(--s3); }
+.board-chips { display: none; }
+
+/* section heads below the board read as broadsheet rules, not eyebrows */
+.section-head { border-bottom: 1px solid var(--line-bright); }
+.section-head h2 { font-weight: 700; font-synthesis-weight: none; }
+.sec-no { font-family: var(--font-data); color: var(--ink-ghost); }
+
+/* ---------- Streamer Desk in the same language ---------- */
+.sd-facts {
+  display: flex; flex-wrap: wrap; gap: var(--s2) var(--s6);
+  border-top: 3px double var(--line-bright); border-bottom: 1px solid var(--line);
+  padding: var(--s4) 0; margin: var(--s5) 0 var(--s2);
+  font-family: var(--font-data); font-size: .82rem; color: var(--ink-dim);
+}
+.sd-fact-v {
+  font-family: var(--font-display); font-weight: 700; font-synthesis-weight: none;
+  font-size: 1.9rem; color: var(--ink); margin-right: 6px; vertical-align: -4px;
+}
+.sd-row {
+  background: transparent; border: 0; border-top: 1px solid var(--line);
+  border-radius: 0; padding: var(--s4) 2px;
+}
+.sd-drama { background: transparent; border: 0; border-top: 1px solid var(--line); border-left: 3px solid var(--signal); border-radius: 0; }
+.sd-badge { border-radius: 2px; }
+.sd-method { background: transparent; border: 0; border-top: 3px double var(--line-bright); border-radius: 0; padding: var(--s4) 2px; }
+
+/* ---------- mobile: the wire rides on top, the board keeps the page ---------- */
+@media (max-width: 860px) {
+  .board-shell { grid-template-columns: minmax(0, 1fr); }
+  .wire-rail { border-right: 0; border-bottom: 1px solid var(--line); padding: var(--s5) var(--s4) var(--s4); }
+  .wire-list { max-height: 264px; overflow-y: auto; }
+  .wire-foot { padding-top: var(--s4); }
+  .broadsheet { padding: var(--s5) var(--s4) var(--s6); }
+  .board-row { grid-template-columns: 52px minmax(0, 1fr) auto; gap: var(--s3); padding: var(--s4) 0; }
+  .board-rank { font-size: 2.1rem; }
+  .board-row.splash { padding: var(--s5) var(--s4); }
+  .board-row.splash .board-rank { font-size: 3rem; }
+  .board-title { font-size: 1.12rem; }
+  .board-score .score-num { font-size: 1.9rem; }
+  .board-row.splash .board-score .score-num { font-size: 2.8rem; }
+}
+
+/* motion: reserved for the day's splash item only (ROUND-002 rule).
+   Board rows never reveal; live data updates, it does not fade in. */
+@media (prefers-reduced-motion: no-preference) {
+  .board-row.splash .score-num { animation: splash-breathe 3.2s ease-in-out infinite; }
+}
+@keyframes splash-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .78; }
+}

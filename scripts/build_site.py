@@ -14,9 +14,9 @@ GUIDE_BASE = os.environ.get("GUIDE_BASE_URL", "../creator-growth-empire/")
 
 # seed guide_links prefixes -> real guide phase pages (convention; see API.md)
 GUIDE_MAP = {
-    "phase-0": ("phase-0-start-from-nothing.html", "Phase 0 — Start from nothing"),
-    "phase-1": ("phase-1-content-engine.html", "Phase 1 — The content engine"),
-    "phase-4": ("phase-4-audience-to-community.html", "Phase 4 — Audience to community"),
+    "phase-0": ("phase-0-start-from-nothing.html", "Phase 0: Start from nothing"),
+    "phase-1": ("phase-1-content-engine.html", "Phase 1: The content engine"),
+    "phase-4": ("phase-4-audience-to-community.html", "Phase 4: Audience to community"),
 }
 LINK_PREFIX = {
     "packaging/": "phase-1", "content-engine/": "phase-1",
@@ -83,17 +83,17 @@ TOPIC_TMPL = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} — Trend Machine</title>
+<title>{title} · Trend Machine</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#0a0c10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{title} — Trend Machine">
+<meta property="og:title" content="{title} · Trend Machine">
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{title} — Trend Machine">
+<meta name="twitter:title" content="{title} · Trend Machine">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <link rel="canonical" href="https://trend-machine-live.vercel.app/topics/{tid}.html">
@@ -215,17 +215,17 @@ def build_topic(t, history_pts=None, plat_hist=None):
         # wave 7: name-only sources (unverified seeds) render as plain text
         if url:
             return f'<li><a href="{url}">{nm}</a></li>'
-        return f'<li><span class="src-name">{nm}</span> <em class="src-unverified">(unverified — confirm live)</em></li>'
+        return f'<li><span class="src-name">{nm}</span> <em class="src-unverified">(unverified, confirm live)</em></li>'
     sources = "".join(src_li(s) for s in t.get("sources", [])) or "<li>No public sources captured yet.</li>"
     angles = "".join(
         f'<div class="angle"><span class="idx num">{i+1:02d}</span><p>{esc(a)}</p></div>'
-        for i, a in enumerate(t.get("angles", []))) or "<p>No angles yet — check back after the next refresh.</p>"
+        for i, a in enumerate(t.get("angles", []))) or "<p>No angles yet. Check back after the next refresh.</p>"
     hooks = "".join(f'<div class="hook">&ldquo;{esc(h)}&rdquo;</div>' for h in t.get("hooks", []))
     watch = esc(", ".join(t.get("who_to_watch", [])) or "—")
     guide = "".join(f'<li><a href="{esc(u)}">{esc(l)}</a></li>' for u, l in guide_links(t.get("guide_links"))) \
         or '<li><a href="' + esc(GUIDE_BASE) + '">Creator Growth Empire guide</a></li>'
     stale_note = ('<p><span class="stale-badge">STALE</span> '
-                  '<span style="font-size:13px;color:var(--ink-faint)">No corroboration in 72h+ — treat as cooling.</span></p>'
+                  '<span style="font-size:13px;color:var(--ink-faint)">No corroboration in 72h+. Treat as cooling.</span></p>'
                   if t.get("stale") else "")
     # Commons round 10: honest Article JSON-LD from the topic record's own
     # fields only (title / summary / first_seen / last_seen) — no ratings,
@@ -306,6 +306,21 @@ def _fb_region(page, name, inner):
     return pat.sub(lambda m: m.group(1) + inner + m.group(2), page, count=1)
 
 
+
+def _fb_wire_items(topics, generated_at):
+    def key(t):
+        return t.get("last_seen") or ""
+    newest = sorted(topics, key=key, reverse=True)[:14]
+    out = []
+    for t in newest:
+        dt = _fb_parse(t.get("last_seen"))
+        stamp = dt.strftime("%b %-d · %H:%M") if dt else "no stamp"
+        out.append('<li class="wire-item"><span class="wire-time">%s</span>'
+                   '<a href="topics/%s.html">%s</a></li>'
+                   % (stamp, esc(t["id"]), esc(t.get("title"))))
+    return "".join(out)
+
+
 def write_home_fallback(topics, generated_at, merged=None, board=None):
     path = os.path.join(ROOT, "index.html")
     with open(path) as f:
@@ -324,7 +339,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     for i, t in enumerate(by_opp[:5]):
         leader = i == 0
         hot.append(
-            '<a class="hot-card rise%s" style="--i:%d" href="topics/%s.html">%s'
+            '<a class="hot-card%s" style="--i:%d" href="topics/%s.html">%s'
             '<span class="rank num">0%d</span><div><h3>%s</h3><p>%s</p></div>'
             '<div class="card-foot">%s%s</div></a>'
             % (" leader" if leader else "", i, esc(t["id"]),
@@ -338,7 +353,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     radar = []
     for i, t in enumerate(memes):
         radar.append(
-            '<a class="meme-card rise" style="--i:%d" href="topics/%s.html">'
+            '<a class="meme-card" style="--i:%d" href="topics/%s.html">'
             '<div class="fmt num">◉ MEME · v%s</div><h4>%s</h4>'
             '<div class="mhash">%s</div>%s</a>'
             % (i, esc(t["id"]), t.get("velocity") or 0, esc(t.get("title")),
@@ -353,7 +368,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
         stale = bool(t.get("stale"))
         aka = ""
         if t.get("merged_from"):
-            aka = ('<div class="topic-aka">also tracked as: %s — one phenomenon, '
+            aka = ('<div class="topic-aka">also tracked as: %s. One phenomenon, '
                    'evidence combined</div>'
                    % esc(" · ".join(x["title"] for x in t["merged_from"])))
         rows.append(
@@ -364,7 +379,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
             '<td data-label="Velocity">%s</td>'
             '<td data-label="Trend">—</td>'
             '<td data-label="Detected">%s</td></tr>'
-            % (' class="is-stale rise"' if stale else ' class="rise"', min(i, 12),
+            % (' class="is-stale"' if stale else '', min(i, 12),
                esc(t["id"]), esc(t.get("title")),
                ' <span class="stale-badge">STALE</span>' if stale else "",
                esc(t.get("category")), aka,
@@ -374,20 +389,14 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "table", "".join(rows))
     page = _fb_region(page, "tablemeta",
-                      "%d of %d phenomena · %d topics tracked · static snapshot — the live board replaces this on load"
+                      "%d of %d phenomena · %d topics tracked · static snapshot. The live board replaces this on load"
                       % (min(TMFB_TABLE_ROWS, len(merged)), len(merged), len(topics)))
-
-    # wave 39 (VP-0011): the ticker prints the score WITH its unit — an
-    # opportunity index out of 100, never a bare ▲ that reads as a rise.
-    tick = '<span class="tk-sep">·</span>'.join(
-        "<b>%s/100</b> %s" % (t.get("opportunity_score") or 0, esc(t.get("title")))
-        for t in by_opp_m[:12])
-    page = _fb_region(page, "ticker", tick + '<span class="tk-sep">·</span>' + tick)
 
     # wave 39 (VP-0011): the One-Look Creator Board, baked as the first
     # screen's static fallback (assets/js/board.js re-renders it from
     # data/v1/board.json when the live payload lands).
     if board is not None:
+        page = _fb_region(page, "wire", _fb_wire_items(topics, generated_at))
         page = _fb_region(page, "board",
                           "".join(_fb_board_row(e) for e in board["make_now"]))
         page = _fb_region(page, "boardnews",
@@ -437,9 +446,9 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
 # evidence chips, never an uplift figure.
 PHENOMENON_MERGES = {"seis-sete-dance": "six-seven-meme"}
 _SAT_PEN = {"low": 0.0, "medium": 0.35, "high": 0.6}
-_SAT_LABEL = {"low": "saturation low — lane uncrowded",
-              "medium": "saturation medium — lane filling",
-              "high": "saturation high — lane crowded"}
+_SAT_LABEL = {"low": "saturation low: lane uncrowded",
+              "medium": "saturation medium: lane filling",
+              "high": "saturation high: lane crowded"}
 BOARD_MAKE_CAP = 7
 BOARD_NEWS_CAP = 3
 
@@ -508,7 +517,22 @@ def _board_snapshot_chip(n):
     return "tracked across %d velocity snapshots" % n
 
 
-def _board_entry(t, rank, n_snapshots):
+def _board_movement(pts):
+    if not pts or len(pts) < 2:
+        return None
+    try:
+        delta = (pts[-1][1] or 0) - (pts[-2][1] or 0)
+    except Exception:
+        return None
+    if delta >= 3:
+        return "rising"
+    if delta <= -3:
+        return "cooling"
+    return "steady"
+
+
+def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
+                 spark_svg=None):
     names = [s.get("name") for s in (t.get("sources") or []) if s.get("name")]
     evidence = ["velocity %d/100" % (t.get("velocity") or 0),
                 _SAT_LABEL.get(t.get("saturation"),
@@ -519,8 +543,11 @@ def _board_entry(t, rank, n_snapshots):
     elif names:
         evidence.append("sources: %s" % " + ".join(names[:3]))
     evidence.extend((t.get("hashtags") or [])[:2])
+    age, _, _ = age_label(t.get("last_seen", ""))
+    if age != "unknown":
+        evidence.append("last seen %s" % age)
     if t.get("verification") and t.get("verification") != "verified":
-        evidence.append("verification: %s — confirm live before building on it"
+        evidence.append("verification: %s, confirm live before building on it"
                         % t["verification"])
     fmt = (t.get("format_tags") or [None])[0] or t.get("category")
     return {
@@ -539,6 +566,9 @@ def _board_entry(t, rank, n_snapshots):
         "angle": (t.get("angles") or [None])[0],
         "evidence": evidence,
         "last_seen": t.get("last_seen"),
+        "movement": movement,
+        "splash": splash,
+        "spark_svg": spark_svg,
     }
 
 
@@ -568,20 +598,38 @@ def build_board(topics, merged, generated_at, history=None):
            " · ".join(x["title"] for x in m["absorbed"]),
            m["canonical_id"]) for m in merges)
     note = ("%d phenomena from %d tracked topics%s. "
-            "The full unfiltered record — all "
-            "%d rows — stays one layer down: the desk below and "
+            "The full unfiltered record, all "
+            "%d rows, stays one layer down: the desk below and "
             "data/v1/trends.json."
             % (len(merged), len(topics),
                (" — " + merge_txt) if merge_txt else "", len(topics)))
+    splash_id = None
+    if make and (make[0].get("opportunity_score") or 0) >= 88 \
+            and (make[0].get("velocity") or 0) >= 88:
+        splash_id = make[0]["id"]
+
+    def _entry(t, i):
+        pts = history.get(t["id"]) or []
+        svg = None
+        if t["id"] == splash_id and len(pts) >= 3:
+            prep = sparkline_prep.prep_series(pts, width=560, height=110, pad=6)
+            if prep is not None:
+                svg = sparkline_prep.sparkline_svg(
+                    prep, css_class="splash-chart",
+                    label_prefix="Velocity from stored snapshots")
+        return _board_entry(t, i + 1, len(pts),
+                            movement=_board_movement(pts),
+                            splash=(t["id"] == splash_id), spark_svg=svg)
+
     return {
         "generated_at": generated_at,
         "score": {
             "name": "Opportunity index",
-            "unit": "index, 0–100",
-            "formula": ("opportunity = round(velocity × (1 − saturation "
+            "unit": "index, 0 to 100",
+            "formula": ("opportunity = round(velocity x (1 minus saturation "
                         "penalty)); penalties: low 0, medium 0.35, high 0.6 "
                         "(pipeline/normalize.py)"),
-            "velocity": ("0–100 spread speed. Auto topics: min(100, "
+            "velocity": ("0 to 100 spread speed. Auto topics: min(100, "
                          "25 × corroborating sources + 15 × recency boost "
                          "+ hashtag bonus). Seeded topics carry documented "
                          "editorial estimates."),
@@ -589,45 +637,61 @@ def build_board(topics, merged, generated_at, history=None):
                            "4+ sources track the same topic."),
             "honesty": ("An index for ranking what to make first. It is "
                         "not a percentage, not a rise, and it promises no "
-                        "views — the board prints evidence chips, never an "
+                        "views. The board prints evidence lines, never an "
                         "uplift figure."),
         },
         "merges": merges,
         "counts": {"tracked": len(topics), "phenomena": len(merged),
                    "makeable_shown": len(make), "news_shown": len(news)},
         "note": note,
-        "make_now": [_board_entry(t, i + 1, len(history.get(t["id"]) or []))
-                     for i, t in enumerate(make)],
-        "news_watch": [_board_entry(t, i + 1, len(history.get(t["id"]) or []))
-                       for i, t in enumerate(news)],
+        "splash_id": splash_id,
+        "make_now": [_entry(t, i) for i, t in enumerate(make)],
+        "news_watch": [_entry(t, i) for i, t in enumerate(news)],
     }
 
 
 def _fb_board_row(e):
-    chips = "".join('<span class="chip plat">%s</span>' % esc(p)
-                    for p in e["platforms"])
-    chips += "".join('<span class="chip ev">%s</span>' % esc(c)
-                     for c in e["evidence"])
+    plats = " · ".join(esc(p) for p in e["platforms"])
+    ev = "".join("<li>%s</li>" % esc(c) for c in e["evidence"])
+    marg = ""
+    if plats:
+        marg += '<p class="board-marg board-marg-plats">On: %s</p>' % plats
+    if ev:
+        marg += '<ul class="board-marg">%s</ul>' % ev
     aka = ""
     if e.get("aka"):
-        aka = ('<span class="board-aka">also tracked as: %s — one phenomenon, '
-               'evidence combined</span>' % esc(" · ".join(e["aka"])))
+        aka = ('<span class="board-aka">Also tracked as: %s. One phenomenon, '
+               'evidence combined.</span>' % esc(" · ".join(e["aka"])))
     badge = ""
     make = ""
     if e["kind"] == "news":
-        badge = '<span class="board-newsbadge">News · watch</span> '
+        badge = '<span class="board-newsbadge">News, watch</span> '
     elif e.get("angle"):
         make = ('<p class="board-angle"><span class="board-make">Make</span> %s'
                 '<span class="board-fmt"> · format: %s</span></p>'
                 % (esc(e["angle"]), esc(e["format"])))
-    return ('<li class="board-row rise%s"><span class="board-rank num">%02d</span>'
+    splash = bool(e.get("splash"))
+    move = ""
+    if e.get("movement"):
+        move = '<span class="board-move">%s</span>' % esc(e["movement"])
+    if splash:
+        chart = ""
+        if e.get("spark_svg"):
+            chart = '<figure class="splash-fig">%s</figure>' % e["spark_svg"]
+        return ('<li class="board-row splash"><span class="board-rank">%d</span>'
+                '<div class="board-main">%s<a class="board-title" href="%s">%s</a>%s%s</div>'
+                '<div class="board-score"><span class="score-num">%d</span>'
+                '<span class="board-unit">opportunity / 100</span>%s</div></li>'
+                % (e["rank"], badge, esc(e["url"]), esc(e["title"]), make, chart,
+                   e["opportunity_score"], move))
+    return ('<li class="board-row%s"><span class="board-rank">%d</span>'
             '<div class="board-main">%s<a class="board-title" href="%s">%s</a>%s%s'
-            '<div class="board-chips">%s</div></div>'
-            '<div class="board-score"><span class="num">%d</span>'
-            '<span class="board-unit">opp /100</span></div></li>'
-            % (" news" if e["kind"] == "news" else "", e["rank"], badge,
-               esc(e["url"]), esc(e["title"]), aka, make, chips,
-               e["opportunity_score"]))
+            '%s</div>'
+            '<div class="board-score"><span class="score-num">%d</span>'
+            '<span class="board-unit">opportunity / 100</span>%s</div></li>'
+            % (" news" if e["kind"] == "news" else "",
+               e["rank"], badge, esc(e["url"]), esc(e["title"]), aka, make, marg,
+               e["opportunity_score"], move))
 
 
 # wave 32 (Foundry round 2; round-11 placement packet): the root pages are

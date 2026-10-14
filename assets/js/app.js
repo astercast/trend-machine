@@ -154,7 +154,7 @@
     var top = topics.slice().sort(function (a, b) { return b.opportunity_score - a.opportunity_score; }).slice(0, 5);
     el.innerHTML = top.map(function (t, i) {
       var leader = i === 0;
-      return '<a class="hot-card rise' + (leader ? " leader" : "") + '" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
+      return '<a class="hot-card' + (leader ? " leader" : "") + '" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
         (leader ? '<span class="badge-breaking">Breaking</span>' : "") +
         '<span class="rank num">0' + (i + 1) + "</span>" +
         "<div><h3>" + esc(t.title) + "</h3>" +
@@ -171,7 +171,7 @@
     var memes = topics.filter(function (t) { return t.category === "meme"; })
       .sort(function (a, b) { return b.velocity - a.velocity; }).slice(0, 10);
     el.innerHTML = memes.map(function (t, i) {
-      return '<a class="meme-card rise" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
+      return '<a class="meme-card" style="--i:' + i + '" href="topics/' + t.id + '.html">' +
         '<div class="fmt num">◉ MEME · v' + t.velocity + "</div>" +
         "<h4>" + esc(t.title) + "</h4>" +
         '<div class="mhash">' + t.hashtags.slice(0, 3).map(esc).join(" ") + "</div>" +
@@ -240,7 +240,7 @@
     var meta = document.getElementById("table-meta");
     if (meta) meta.textContent = list.length + " of " + mergedTopics().length + " phenomena · " + state.topics.length + " topics tracked";
     el.innerHTML = list.map(function (t, i) {
-      var stale = t.stale ? ' class="is-stale rise"' : ' class="rise"';
+      var stale = t.stale ? ' class="is-stale"' : '';
       var aka = (t.merged_from && t.merged_from.length)
         ? '<div class="topic-aka">also tracked as: ' + t.merged_from.map(function (x) { return esc(x.title); }).join(" · ") + " — one phenomenon, evidence combined</div>" : "";
       return "<tr" + stale + ' style="--i:' + Math.min(i, 12) + '">' +

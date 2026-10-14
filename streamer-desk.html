@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Streamer Desk — directory, timelines, houses, calendar — Trend Machine</title>
+<title>Streamer Desk · directory, timelines, houses, calendar · Trend Machine</title>
 <meta name="description" content="The Streamer Desk: a sourced streamer directory, dated updates, a drama tracker that prints only multi-source-verified timelines (unverified claims are quarantined and labeled), streamer houses with dated rosters, and an events calendar. Nothing invented.">
 <meta name="theme-color" content="#0a0c10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Streamer Desk — directory, timelines, houses, calendar — Trend Machine">
+<meta property="og:title" content="Streamer Desk · directory, timelines, houses, calendar · Trend Machine">
 <meta property="og:description" content="The Streamer Desk: a sourced streamer directory, dated updates, a drama tracker that prints only multi-source-verified timelines (unverified claims are quarantined and labeled), streamer houses with dated rosters, and an events calendar. Nothing invented.">
 <meta property="og:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Streamer Desk — directory, timelines, houses, calendar — Trend Machine">
+<meta name="twitter:title" content="Streamer Desk · directory, timelines, houses, calendar · Trend Machine">
 <meta name="twitter:description" content="The Streamer Desk: a sourced streamer directory, dated updates, a drama tracker that prints only multi-source-verified timelines (unverified claims are quarantined and labeled), streamer houses with dated rosters, and an events calendar. Nothing invented.">
 <meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <link rel="canonical" href="https://trend-machine-live.vercel.app/streamer-desk.html">
@@ -30,12 +30,15 @@
 <link rel="stylesheet" href="assets/css/wave12.css">
 <link rel="stylesheet" href="assets/css/wave18.css">
 <link rel="stylesheet" href="assets/css/streamer-desk.css">
+<link rel="stylesheet" href="assets/css/wave41.css">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/chakra-petch-700-latin.woff2">
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="head-inner">
 <a class="brand" href="index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
-<span class="kicker">🎙 the streamer desk</span>
+<nav class="head-nav" aria-label="Sections"><a href="index.html">The board</a><a href="live-wire.html">The Wire</a><a href="streamer-desk.html">Streamer Desk</a><a href="formats.html">Formats</a></nav>
 </div></header>
 
 <main id="main" class="wrap">
@@ -45,10 +48,10 @@
 </nav>
 
 <section class="oracle-hero sd-hero" aria-labelledby="sd-title">
-<p class="kicker">war room · the streamer beat</p>
-<h1 id="sd-title">🎙 The Streamer Desk</h1>
+<p class="kicker">the streamer beat</p>
+<h1 id="sd-title">The Streamer Desk</h1>
 <p class="sd-lede">
-  Who streams where, what they're up to, which houses they run with — and a
+  Who streams where, what they're up to, which houses they run with. Plus a
   drama tracker with a hard rule: <strong>a timeline prints only what two or
   more independent sources verify</strong>. Anything weaker sits in
   quarantine, badged unverified, with the reason on the record. Rosters are
@@ -68,7 +71,7 @@
 <p class="sd-section-sub">Dated entries only: records, platform moves, events, collabs. Newest first.</p>
 <div id="sd-updates"></div>
 
-<h2 class="sd-section-h">Drama tracker — verified timelines</h2>
+<h2 class="sd-section-h">Drama tracker: verified timelines</h2>
 <p class="sd-section-sub">
   Timeline format, neutral tone, every event sourced and timestamped.
   "Verified" means two or more independent credible sources report the
@@ -76,28 +79,28 @@
 </p>
 <div id="sd-drama"></div>
 
-<h2 class="sd-section-h">Quarantine — unverified</h2>
+<h2 class="sd-section-h">Quarantine: unverified</h2>
 <p class="sd-section-sub">
   Claims in circulation that do <strong>not</strong> meet the bar. They are
-  printed here — labeled, with the reason — so nobody mistakes their
+  printed here, labeled, with the reason, so nobody mistakes their
   absence from the timelines for ignorance, or their presence here for fact.
 </p>
 <div id="sd-unverified"></div>
 
 <h2 class="sd-section-h">Streamer houses</h2>
-<p class="sd-section-sub">The crews and orgs: membership as of a stated date, what they produce, and who has left. A house that closed stays listed — as closed.</p>
+<p class="sd-section-sub">The crews and orgs: membership as of a stated date, what they produce, and who has left. A house that closed stays listed, as closed.</p>
 <div id="sd-houses"></div>
 
 <h2 class="sd-section-h">Events calendar</h2>
-<p class="sd-section-sub">Conventions, awards, charity marathons, subathons. Past and upcoming are computed from the dates at build time — a past event never poses as upcoming.</p>
+<p class="sd-section-sub">Conventions, awards, charity marathons, subathons. Past and upcoming are computed from the dates at build time. A past event never poses as upcoming.</p>
 <div id="sd-events"></div>
 
-<h2 class="sd-section-h">Desk feeds — the honest lanes</h2>
+<h2 class="sd-section-h">Desk feeds: the honest lanes</h2>
 <p class="sd-section-sub">
   The Desk's one live lane runs on the <a href="live-wire.html">Live Wire</a>
   (the streamer-beat news lane, real recorded hits only). The directory
   APIs below cannot be fed honestly with the credentials this project
-  holds, so they ship skip-by-design — no live status, no follower
+  holds, so they ship skip-by-design: no live status, no follower
   counts, nothing faked.
 </p>
 <div id="sd-feeds"></div>
@@ -111,7 +114,7 @@
   sourcing standard in code: a profile or house with no source, a drama
   timeline whose events trace to fewer than two distinct source domains,
   an undated roster, or an unverified item with no stated reason makes
-  the build <strong>fail</strong> — the Desk would rather not publish
+  the build <strong>fail</strong>. The Desk would rather not publish
   than launder a claim. Directory facts need one credible source;
   drama needs two.
 </p>
@@ -120,7 +123,7 @@
 
 <footer class="site-foot"><div class="wrap foot-grid">
 <div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
-<div style="font-size:13px">Never invents trends — every signal traces to a fetcher hit or a researched source.<br>
+<div style="font-size:13px">Never invents trends. Every signal traces to a fetcher hit or a researched source.<br>
 <span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
 </div></footer>
 
@@ -131,7 +134,7 @@
   function $(id) { return document.getElementById(id); }
   function init() {
     /* wave 30 · VP-0001: a fetch that never settles must still reach the
-       fallback alert — race the load against a 12s deadline. */
+       fallback alert: race the load against a 12s deadline. */
     var got = fetch("data/v1/streamer-desk.json").then(function (r) {
       if (!r.ok) { throw new Error("streamer-desk"); }
       return r.json();
@@ -152,7 +155,7 @@
       $("sd-stamp").textContent = "Desk: " + desk.counts.streamers +
         " streamers · " + desk.counts.houses + " houses · " +
         desk.counts.drama_verified + " verified timelines · curated " +
-        desk.curated_at + " · built " + desk.generated_at;
+        desk.curated_at;
     }).catch(function () {
       $("sd-stamp").hidden = true; /* VP-0001 tidy: no loading label above the error state */
       $("sd-status").innerHTML =

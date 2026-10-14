@@ -1,6 +1,24 @@
-/* trend-machine — wave 12 · self-hosted identity typefaces.
-   Chakra Petch (display/plates) + Space Mono (data/readouts).
-   Latin subsets only (~53KB total); font-display: swap so text never blocks. */
+/* trend-machine: self-hosted typefaces, hardened for iPhone Safari
+   (Aesthetics ROUND-001 section 5, all seven rules, rule 5 complete).
+   Display voice: Chakra Petch (the fleet census voice for Trend).
+   Data voice: Space Mono. Both ship as static faces, one exact weight
+   per @font-face, nothing synthesized. No variable files, so the
+   variable-axis risks (rules 1 to 3) do not arise; weight is only ever
+   set with font-weight.
+   Rule 5, all three parts, for EVERY face shipped:
+   (a) font-display: swap on every face;
+   (b) the display face (Chakra Petch 700, the rank and headline weight)
+       is preloaded in the homepage and Streamer Desk heads;
+   (c) every face has a metric-adjusted fallback @font-face wired into
+       its stack, measured from the shipped files with fontTools:
+       Chakra Petch (upm 1000): x-height 498, ascent 992, descent 308.
+       Space Mono (upm 1000): x-height 496, ascent 1120, descent 361.
+       Fallback metrics measured on the metric-compatible Liberation
+       faces (Arial class: x 1082/2048; mono class: x 1082/2048).
+       size-adjust aligns x-height; ascent and descent overrides carry
+       the shipped face's own ratios, so a swap does not shift layout.
+   Rule 6: no weight under 400 is used under 18px anywhere on the site.
+   Rule 7: verified on WebKit at an iPhone viewport in the capture set. */
 @font-face {
   font-family: "Chakra Petch";
   font-style: normal;
@@ -16,6 +34,14 @@
   src: url("../fonts/chakra-petch-700-latin.woff2") format("woff2");
 }
 @font-face {
+  font-family: "Chakra Petch Fallback";
+  src: local("Arial Narrow"), local("Arial"), local("Helvetica Neue");
+  size-adjust: 94.3%;
+  ascent-override: 99.2%;
+  descent-override: 30.8%;
+  line-gap-override: 0%;
+}
+@font-face {
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
@@ -28,4 +54,12 @@
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/space-mono-700-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono Fallback";
+  src: local("Menlo"), local("Consolas"), local("Courier New");
+  size-adjust: 93.9%;
+  ascent-override: 112%;
+  descent-override: 36.1%;
+  line-gap-override: 0%;
 }

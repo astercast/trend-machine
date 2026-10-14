@@ -27,19 +27,18 @@
   }
   function summaryHTML(desk) {
     var c = desk.counts || {};
-    return '<div class="sd-strip" role="list" aria-label="Desk counts">' +
-      card("Streamers", c.streamers) + card("Houses", c.houses) +
-      card("Dated updates", c.updates) +
-      card("Verified timelines", c.drama_verified) +
-      card("Unverified (quarantined)", c.unverified) +
-      card("Events", c.events) + "</div>" +
+    function fact(v, label) {
+      return '<span class="sd-fact"><span class="sd-fact-v">' +
+        esc(v == null ? "0" : v) + '</span> ' + label + "</span>";
+    }
+    return '<p class="sd-facts" aria-label="Desk counts">' +
+      fact(c.streamers, "streamers") + fact(c.houses, "houses") +
+      fact(c.updates, "dated updates") +
+      fact(c.drama_verified, "Verified timelines") +
+      fact(c.unverified, "Unverified (quarantined)") +
+      fact(c.events, "events") + "</p>" +
       '<p class="sd-curated">Curated ' + esc(desk.curated_at) +
       " · built " + esc(desk.generated_at) + "</p>";
-    function card(k, v) {
-      return '<div class="sd-card" role="listitem"><div class="k">' +
-        esc(k) + '</div><div class="v num">' +
-        esc(v == null ? "—" : v) + "</div></div>";
-    }
   }
   function streamersHTML(desk) {
     var houses = {};
@@ -49,7 +48,7 @@
       return '<article class="sd-row"><div class="sd-row-main">' +
         "<h3>" + esc(p.name) + "</h3>" +
         '<p class="sd-meta">' + esc((p.platforms || []).join(" · ")) +
-        " — " + esc((p.categories || []).join(", ")) + "</p>" +
+        " · " + esc((p.categories || []).join(", ")) + "</p>" +
         "<p>" + esc(p.note) + "</p>" +
         '<p class="sd-crew">Crew: ' + esc(crew) +
         ' · roster facts as of ' + esc(p.as_of) + "</p>" +
@@ -97,13 +96,13 @@
       var members = (h.members || []).length
         ? "<p><strong>Members (as of " + esc(h.members_as_of) + "):</strong> " +
           esc(h.members.join("; ")) + "</p>"
-        : "<p><strong>No current members</strong> — roster as of " +
+        : "<p><strong>No current members</strong>. Roster as of " +
           esc(h.members_as_of) + ".</p>";
       var former = (h.former_members || []).length
         ? '<p class="sd-note">Former: ' + esc(h.former_members.join("; ")) +
           "</p>" : "";
       return '<article class="sd-row"><div class="sd-row-main">' +
-        "<h3>" + esc(h.name) + " — " + esc(h.full_name) + "</h3>" +
+        "<h3>" + esc(h.name) + ": " + esc(h.full_name) + "</h3>" +
         '<p class="sd-meta">' + esc(h.base) + " · founded " +
         esc(h.founded) + " · " + esc(h.status) + "</p>" +
         "<p>" + esc(h.content) + "</p>" + members + former +

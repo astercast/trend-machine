@@ -21,31 +21,45 @@
     });
   }
   function rowHTML(e) {
-    var chips = (e.platforms || []).map(function (p) {
-      return '<span class="chip plat">' + esc(p) + "</span>";
-    }).join("") + (e.evidence || []).map(function (c) {
-      return '<span class="chip ev">' + esc(c) + "</span>";
-    }).join("");
+    var plats = (e.platforms || []).map(esc).join(" · ");
+    var marg = "";
+    if (plats) marg += '<p class="board-marg board-marg-plats">On: ' + plats + "</p>";
+    if (e.evidence && e.evidence.length) {
+      marg += '<ul class="board-marg">' + e.evidence.map(function (c) {
+        return "<li>" + esc(c) + "</li>";
+      }).join("") + "</ul>";
+    }
     var aka = "";
     if (e.aka && e.aka.length) {
-      aka = '<span class="board-aka">also tracked as: ' + esc(e.aka.join(" · ")) +
-        " — one phenomenon, evidence combined</span>";
+      aka = '<span class="board-aka">Also tracked as: ' + esc(e.aka.join(" · ")) +
+        ". One phenomenon, evidence combined.</span>";
     }
     var badge = "", make = "";
     if (e.kind === "news") {
-      badge = '<span class="board-newsbadge">News · watch</span> ';
+      badge = '<span class="board-newsbadge">News, watch</span> ';
     } else if (e.angle) {
       make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(e.angle) +
         '<span class="board-fmt"> · format: ' + esc(e.format) + "</span></p>";
     }
-    return '<li class="board-row rise' + (e.kind === "news" ? " news" : "") + '">' +
-      '<span class="board-rank num">' + (e.rank < 10 ? "0" : "") + e.rank + "</span>" +
+    var splash = !!e.splash;
+    var move = e.movement ? '<span class="board-move">' + esc(e.movement) + "</span>" : "";
+    if (splash) {
+      var chart = e.spark_svg ? '<figure class="splash-fig">' + e.spark_svg + "</figure>" : "";
+      return '<li class="board-row splash">' +
+        '<span class="board-rank">' + e.rank + "</span>" +
+        '<div class="board-main">' + badge +
+        '<a class="board-title" href="' + esc(e.url) + '">' + esc(e.title) + "</a>" +
+        make + chart + "</div>" +
+        '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
+        '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
+    }
+    return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
+      '<span class="board-rank">' + e.rank + "</span>" +
       '<div class="board-main">' + badge +
       '<a class="board-title" href="' + esc(e.url) + '">' + esc(e.title) + "</a>" +
-      aka + make +
-      '<div class="board-chips">' + chips + "</div></div>" +
-      '<div class="board-score"><span class="num">' + e.opportunity_score + "</span>" +
-      '<span class="board-unit">opp /100</span></div></li>';
+      aka + make + marg + "</div>" +
+      '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
+      '<span class="board-unit">opportunity / 100</span>' + move + "</div></li>";
   }
   function render(board) {
     var list = document.getElementById("board-list");
