@@ -30,6 +30,36 @@
 .sc-table .is-hit { color: #3fb950; font-weight: 600; }
 .sc-table .is-miss { color: #f85149; font-weight: 600; }
 
+/* rotation 28 (VP-0032): the phone layout for this table. On desktop
+   widths the table above stands unchanged; at phone widths the
+   six-column table (496px wide at 320 and 390 in the audit — wider
+   than either phone) becomes one stacked block per row: every cell
+   prints on its own line as "label — value", the label being the
+   column name repeated per cell, so all six values of every row
+   print, nothing dropped and nothing clipped. The header row is
+   replaced by those per-cell labels. Plainer than the table, on
+   purpose: a phone reader scans one family's six facts top to
+   bottom instead of a squeezed grid. */
+@media (max-width: 560px) {
+  .sc-table { display: block; width: 100%; }
+  .sc-table thead { display: none; }
+  .sc-table tbody { display: block; }
+  .sc-table tr { display: block; padding: 10px 0 8px;
+    border-bottom: 1px solid var(--line, #223); }
+  .sc-table td { display: flex; justify-content: space-between;
+    align-items: baseline; gap: 18px; text-align: right;
+    padding: 3px 0; border-bottom: 0; overflow-wrap: anywhere; }
+  .sc-table td::before { text-align: left; flex: none;
+    font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--ink-dim, #8b949e); font-weight: 700; }
+  .sc-table td:nth-child(1)::before { content: "#"; }
+  .sc-table td:nth-child(2)::before { content: "Family"; }
+  .sc-table td:nth-child(3)::before { content: "Status"; }
+  .sc-table td:nth-child(4)::before { content: "Tracked topics"; }
+  .sc-table td:nth-child(5)::before { content: "Hottest topic"; }
+  .sc-table td:nth-child(6)::before { content: "Median"; }
+}
+
 .oc-honest { font-size: 13px; color: var(--ink-faint, #8b949e); max-width: 70ch; }
 
 /* --- format families ------------------------------------------------ */
@@ -112,7 +142,13 @@
 }
 @container (max-width: 560px) {
   .sc-counts { grid-template-columns: repeat(2, 1fr); }
-  .fmt-grid { grid-template-columns: 1fr; }
+  /* rotation 28 (VP-0032): minmax(0, 1fr), not 1fr — a plain 1fr
+     track cannot shrink below the cards' min-content, which
+     measured 460px and held the phone page 160px too wide at 320
+     (91px at 390) behind the leaderboard table's wider overflow.
+     min-width: 0 on the cards completes the same release. */
+  .fmt-grid { grid-template-columns: minmax(0, 1fr); }
+  .fmt-card { min-width: 0; }
 }
 @container (min-width: 561px) {
   .sc-counts { grid-template-columns: repeat(4, 1fr); }

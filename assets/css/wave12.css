@@ -408,6 +408,16 @@ body.tm-alarm-1202 .blip-ring { animation: none; opacity: 0; }
   .oracle-banner::before { display: none; }
   .live-clock { padding: 5px 10px; }
   .live-clock .tm-plate-label { display: none; }
+  /* rotation 28 (VP-0032): the press bar wraps at phone widths.
+     Brand + kicker on one line measured 332px at a 320px viewport
+     on algorithms.html (the kicker "algorithm mechanics" was the
+     page's only overflow, +12px): the bar now puts the kicker on
+     its own line when the two do not fit side by side, instead of
+     pushing the page sideways. Desktop widths never wrap (the
+     media query cannot reach them) and the bar's look is unchanged
+     wherever the one line already fits. */
+  .head-inner { flex-wrap: wrap; row-gap: 6px; }
+  .site-head .kicker { min-width: 0; overflow-wrap: anywhere; }
 }
 
 /* ---------- 17 · wave-10 light-fallback repairs ----------

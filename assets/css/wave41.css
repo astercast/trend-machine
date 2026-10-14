@@ -265,7 +265,19 @@ h1, h2, h3, .board-title, .sd-section-h {
   .board-rank { font-size: 2rem; }
   .board-row.splash .board-rank { font-size: 2.9rem; }
   .board-title { overflow-wrap: break-word; }
-  .board-unit { font-size: .68rem; max-width: 9ch; }
+  /* rotation 28 (VP-0032): unbroken words in the board's own lines
+     may break instead of spilling. The marginalia print raw
+     hashtags as single unbroken words ("#wefellinloveinoctober"
+     spilled +32px past its item at 320, "#hurricaneisaias" +7px);
+     the score unit's first word ("spreading", set uppercase with
+     letter-spacing) ran 4px wider than its 9ch box at both phone
+     widths. The unit box widens to 11ch — wide enough for its
+     longest word on one line — and both lines gain
+     overflow-wrap: anywhere as the safety net for the next longer
+     hashtag the board ingests. Phone only (this media block);
+     desktop presentation is untouched by these two rules. */
+  .board-marg li { overflow-wrap: anywhere; }
+  .board-unit { font-size: .68rem; max-width: 11ch; overflow-wrap: anywhere; }
   .wire-item a { min-height: 0; }
   .station-tab { min-height: 44px; }
   .catchup-row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--s3); }
