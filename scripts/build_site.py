@@ -460,10 +460,11 @@ def _fb_wire_items(topics, generated_at):
         ref = _fb_parse(generated_at)
         age = (' <span class="wire-age">\u00b7 %s</span>'
                % esc(age_words(t.get("last_seen"), ref))) if ref else ""
-        out.append('<li class="wire-item" style="--wi:%d"><span class="wire-time">%s</span>'
-                   '<a href="topics/%s.html">%s%s</a>%s</li>'
-                   % (len(out), stamp, esc(t["id"]), frame,
-                      esc(disp_title(t.get("title"))), age))
+        out.append('<li class="wire-item" style="--wi:%d">'
+                   '<a href="topics/%s.html">%s%s</a>'
+                   '<span class="wire-meta"><span class="wire-time">%s</span>%s</span></li>'
+                   % (len(out), esc(t["id"]), frame,
+                      esc(disp_title(t.get("title"))), stamp, age))
     return "".join(out)
 
 

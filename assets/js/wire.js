@@ -78,8 +78,9 @@
       var frame = credit ? '<span class="wire-credit">' + esc(credit) + " reported:</span> " : "";
       var mins = (Date.now() - new Date(t.last_seen).getTime()) / 60000;
       var age = isNaN(mins) ? "" : ' <span class="wire-age">\u00b7 ' + esc(ageWords(mins)) + "</span>";
-      return '<li class="wire-item" style="--wi:' + i + '"><span class="wire-time">' + esc(stamp(t.last_seen)) +
-        '</span><a href="topics/' + esc(t.id) + '.html">' + frame + esc(normT(t.title)) + "</a>" + age + "</li>";
+      return '<li class="wire-item" style="--wi:' + i + '">' +
+        '<a href="topics/' + esc(t.id) + '.html">' + frame + esc(normT(t.title)) + "</a>" +
+        '<span class="wire-meta"><span class="wire-time">' + esc(stamp(t.last_seen)) + "</span>" + age + "</span></li>";
     }).join("");
   }
   document.addEventListener("DOMContentLoaded", function () {
