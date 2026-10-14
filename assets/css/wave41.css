@@ -198,6 +198,17 @@ h1, h2, h3, .board-title, .sd-section-h {
   border-radius: 0; padding: var(--s4) 2px;
 }
 .sd-drama { background: transparent; border: 0; border-top: 1px solid var(--line); border-left: 3px double var(--line-bright); border-radius: 0; }
+/* rotation 25 exception, by name: .sd-badge keeps 2px — it is NOT a
+   dossier press tag. Measured at 1440/390/320 (landing-trend-r25.md
+   S6): 18 instances on the Streamer Desk only, a verification/status
+   stamp client-rendered into section headings with verdict text
+   (Verified · multi-source / Unverified / Past / Upcoming / Off on
+   purpose) in three colour-coded state variants (ok green-filled,
+   warn amber, dim). Wave41 squared its containers above (.sd-row,
+   .sd-drama, .sd-method) to 0 in this same block and set the badge
+   to 2px — a deliberate de-pilling from var(--r-pill) at its source
+   in streamer-desk.css, not a leftover. The D3 sweep (dossier
+   .topic-hero .chip/.tag → 0) does not extend to it. Do not re-flag. */
 .sd-badge { border-radius: 2px; }
 .sd-method { background: transparent; border: 0; border-top: 3px double var(--line-bright); border-radius: 0; padding: var(--s4) 2px; }
 
