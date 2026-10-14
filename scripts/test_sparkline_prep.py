@@ -79,7 +79,7 @@ p = sp.prep_series(RISING_4)
 svg = sp.sparkline_svg(p)
 check("svg has role=img", 'role="img"' in svg)
 check("svg aria-label grounded in data",
-      "40 when tracking started (Oct 11, 2026), 70 at the latest snapshot (4 snapshots)" in svg)
+      "40 when tracking started (Oct 11, 2026), 70 at the latest reading (4 readings)" in svg)
 check("svg has polyline + last dot",
       "<polyline" in svg and "<circle" in svg)
 check("svg static: no animate/script", "<animate" not in svg and "<script" not in svg)

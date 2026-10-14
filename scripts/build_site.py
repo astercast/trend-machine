@@ -143,7 +143,7 @@ TOPIC_TMPL = """<!doctype html>
 <h1>{title}</h1>
 <p class="lede">{summary}</p>
 <p class="topic-facts" aria-label="Signal facts">
-<span class="tf"><span class="tf-k">Detected</span> <span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></span>
+<span class="tf"><span class="tf-k">Last seen</span> <span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></span>
 <span class="tf"><span class="tf-k">Opportunity</span> <span class="tf-num {ocls}">{opp}</span></span>
 <span class="tf"><span class="tf-k">Velocity</span> <span class="tf-num">{vel}</span></span>
 <span class="tf"><span class="tf-k">Platforms</span> <span class="tf-num">{nplat}</span></span>
@@ -172,14 +172,13 @@ TOPIC_TMPL = """<!doctype html>
 <p style="color:var(--ink-dim)">{watch}</p>
 </section>
 <aside class="guide-cta" aria-labelledby="gcta">
-<h3 id="gcta" style="margin-top:0">Capitalize on this in the Creator Growth Empire guide</h3>
+<h3 id="gcta" style="margin-top:0">Turn this trend into a series with the Creator Growth Empire guide</h3>
 <p style="color:var(--ink-dim);font-size:14px">Playbooks for turning a trend into a content system:</p>
 <ul>{guide}</ul>
-<p style="font-size:12px;color:var(--ink-faint)">Guide base URL is configurable (see API.md); defaults to a sibling checkout.</p>
 </aside>
 </main>
 <footer class="site-foot"><div class="wrap foot-grid">
-<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trend tracking, with the evidence on every row.</span></div>
 <div class="num" style="font-size:12px">data: {ts}</div>
 </div></footer>
 <script type="application/json" id="export-payload">{payload}</script>
@@ -284,7 +283,7 @@ def record_line(t, ref):
     row: heat figure, age in words, the count of sources carrying the
     topic."""
     n = len(t.get("sources") or [])
-    return ("velocity %d \u00b7 last seen %s \u00b7 %d source%s"
+    return ("spreading %d of 100 \u00b7 last seen %s \u00b7 %d source%s"
             % (t.get("velocity") or 0, age_words(t.get("last_seen"), ref),
                n, "s" if n != 1 else ""))
 
@@ -322,7 +321,7 @@ def build_topic(t, history_pts=None, plat_hist=None):
         nm, url = esc(disp_text(s.get("name", "source"))), esc(s.get("url", ""))
         # rotation 22 (§4.3): sources print as Hacker News sublines —
         # the source, the record's age in words, the figure it carries.
-        rec = (' <span class="src-rec">\u00b7 last seen %s \u00b7 velocity %s</span>'
+        rec = (' <span class="src-rec">\u00b7 last seen %s \u00b7 spreading %s of 100</span>'
                % (age, vel))
         # wave 7: name-only sources (unverified seeds) render as plain text
         if url:
@@ -338,7 +337,7 @@ def build_topic(t, history_pts=None, plat_hist=None):
     guide = "".join(f'<li><a href="{esc(u)}">{esc(l)}</a></li>' for u, l in guide_links(t.get("guide_links"))) \
         or '<li><a href="' + esc(GUIDE_BASE) + '">Creator Growth Empire guide</a></li>'
     stale_note = ('<p><span class="stale-badge">STALE</span> '
-                  '<span style="font-size:13px;color:var(--ink-faint)">No corroboration in 72h+. Treat as cooling.</span></p>'
+                  '<span style="font-size:13px;color:var(--ink-faint)">Not seen anywhere for 3 days or more. Treat it as cooling.</span></p>'
                   if t.get("stale") else "")
     # Commons round 10: honest Article JSON-LD from the topic record's own
     # fields only (title / summary / first_seen / last_seen) — no ratings,
@@ -492,24 +491,24 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "radar", "".join(radar))
     page = _fb_region(page, "radarcount",
-                      "%d meme signals tracked · static snapshot" % len(memes))
+                      "%d memes moving now" % len(memes))
 
     rows = []
     for i, t in enumerate(by_opp_m[:TMFB_TABLE_ROWS]):
         stale = bool(t.get("stale"))
         aka = ""
         if t.get("merged_from"):
-            aka = ('<div class="topic-aka">also tracked as: %s. One phenomenon, '
+            aka = ('<div class="topic-aka">also tracked as: %s. Same trend, '
                    'evidence combined</div>'
                    % esc(" · ".join(disp_title(x["title"]) for x in t["merged_from"])))
         rows.append(
             '<tr%s style="--i:%d"><td data-label="Topic"><a class="topic-link" href="topics/%s.html">%s</a>%s'
             '<div class="topic-cat">%s</div>%s</td>'
             '<td data-label="Platforms">%s</td>'
-            '<td data-label="Opportunity">%s</td>'
-            '<td data-label="Velocity">%s</td>'
-            '<td data-label="Trend">·</td>'
-            '<td data-label="Detected">%s</td></tr>'
+            '<td data-label="Score">%s</td>'
+            '<td data-label="Spreading">%s</td>'
+            '<td data-label="Movement">·</td>'
+            '<td data-label="Last seen">%s</td></tr>'
             % (' class="is-stale"' if stale else '', min(i, 12),
                esc(t["id"]), esc(disp_title(t.get("title"))),
                ' <span class="stale-badge">STALE</span>' if stale else "",
@@ -520,7 +519,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "table", "".join(rows))
     page = _fb_region(page, "tablemeta",
-                      "%d of %d phenomena · %d topics tracked · static snapshot. The live board replaces this on load"
+                      "%d of %d trends shown · %d tracked in all · static snapshot, the live board replaces it on load"
                       % (min(TMFB_TABLE_ROWS, len(merged)), len(merged), len(topics)))
 
     # wave 39 (VP-0011): the One-Look Creator Board, baked as the first
@@ -537,9 +536,9 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
         if board.get("catchup"):
             catch_html = "".join(_fb_catchup_row(e) for e in board["catchup"])
         else:
-            catch_html = ('<li class="catchup-none">Nothing on the record '
-                          'has cooled yet: no tracked topic\u2019s latest '
-                          'velocity sits below its window peak.</li>')
+            catch_html = ('<li class="catchup-none">Nothing has cooled '
+                          'yet: no tracked trend\u2019s latest reading sits '
+                          'below its earlier peak.</li>')
         page = _fb_region(page, "catchup", catch_html)
         page = _fb_region(page, "hsmakenow", str(board["counts"]["makeable_shown"]))
 
@@ -548,7 +547,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     else:
         stamp = esc(generated_at)
     page = _fb_region(page, "datats",
-                      'data: <span class="num">%s</span> · static snapshot' % stamp)
+                      'updated <span class="num">%s</span> · static snapshot' % stamp)
     page = _fb_region(page, "hstopics", str(len(topics)))
     plats = set()
     for t in topics:
@@ -585,9 +584,9 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
 # evidence chips, never an uplift figure.
 PHENOMENON_MERGES = {"seis-sete-dance": "six-seven-meme"}
 _SAT_PEN = {"low": 0.0, "medium": 0.35, "high": 0.6}
-_SAT_LABEL = {"low": "saturation low: lane uncrowded",
-              "medium": "saturation medium: lane filling",
-              "high": "saturation high: lane crowded"}
+_SAT_LABEL = {"low": "lane still uncrowded",
+              "medium": "lane filling up",
+              "high": "lane crowded"}
 BOARD_MAKE_CAP = 7
 BOARD_NEWS_CAP = 3
 
@@ -652,8 +651,8 @@ def _board_snapshot_chip(n):
     # retired; the chip is now a pure readout — how many real velocity
     # snapshots stand behind the row.
     if not n:
-        return "no velocity snapshots yet"
-    return "tracked across %d velocity snapshots" % n
+        return "not checked yet"
+    return "seen in %d checks so far" % n
 
 
 def _board_movement(pts):
@@ -683,8 +682,8 @@ def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
                 _board_snapshot_chip(n_snapshots)]
     evidence.extend((t.get("hashtags") or [])[:2])
     if t.get("verification") and t.get("verification") != "verified":
-        evidence.append("verification: %s, confirm live before building on it"
-                        % t["verification"])
+        evidence.append("not yet verified, confirm it is still live "
+                        "before building on it")
     fmt = (t.get("format_tags") or [None])[0] or t.get("category")
     return {
         "rank": rank, "id": t["id"], "title": t.get("title"),
@@ -726,22 +725,21 @@ def build_board(topics, merged, generated_at, history=None):
             merges.append({
                 "canonical_id": t["id"], "canonical_title": t.get("title"),
                 "absorbed": t["merged_from"],
-                "rule": ("One phenomenon tracked under two titles; the build "
-                         "folds the absorbed listing into the canonical row "
-                         "and combines its evidence. The canonical store "
-                         "(data/trends.json) keeps both records — the merge "
-                         "is a view, re-derived on every build.")})
+                "rule": ("One trend tracked under two titles. The board "
+                         "folds the second listing into the first and "
+                         "combines the evidence; the stored record keeps "
+                         "both listings, and the fold is worked out again "
+                         "on every build.")})
     merge_txt = "; ".join(
-        "%s + %s read as one phenomenon (%s)"
+        "%s and %s are one trend under two names, so they share a row"
         % (m["canonical_title"],
-           " · ".join(x["title"] for x in m["absorbed"]),
-           m["canonical_id"]) for m in merges)
-    note = ("%d phenomena from %d tracked topics%s. "
-            "The full unfiltered record, all "
-            "%d rows, stays one layer down: the desk below and "
-            "data/v1/trends.json."
+           " and ".join(x["title"] for x in m["absorbed"]))
+        for m in merges)
+    note = ("%d trends from %d tracked topics%s. "
+            "Everything we track, all %d, is listed further down "
+            "this page."
             % (len(merged), len(topics),
-               (" — " + merge_txt) if merge_txt else "", len(topics)))
+               (": " + merge_txt) if merge_txt else "", len(topics)))
     splash_id = None
     if make and (make[0].get("opportunity_score") or 0) >= 88 \
             and (make[0].get("velocity") or 0) >= 88:
@@ -755,7 +753,7 @@ def build_board(topics, merged, generated_at, history=None):
             if prep is not None:
                 svg = sparkline_prep.sparkline_svg(
                     prep, css_class="splash-chart",
-                    label_prefix="Velocity from stored snapshots")
+                    label_prefix="Spreading, from stored readings")
                 svg = svg.replace("<polyline", '<polyline pathLength="1" class="splash-line"', 1)
         return _board_entry(t, i + 1, len(pts),
                             movement=_board_movement(pts),
@@ -784,7 +782,7 @@ def build_board(topics, merged, generated_at, history=None):
         e = _board_entry(t, 0, len(history.get(t["id"]) or []),
                          ref=_fb_parse(generated_at))
         e["peak"] = peak
-        e["record"] = ("velocity %d after a peak of %d \u00b7 last seen %s "
+        e["record"] = ("spreading %d of 100, peaked at %d \u00b7 last seen %s "
                        "\u00b7 %d source%s"
                        % (t.get("velocity") or 0, peak,
                           age_words(t.get("last_seen"),
@@ -843,7 +841,7 @@ def _fb_board_row(e):
         marg += '<ul class="board-marg">%s</ul>' % ev
     aka = ""
     if e.get("aka"):
-        aka = ('<span class="board-aka">Also tracked as: %s. One phenomenon, '
+        aka = ('<span class="board-aka">Also tracked as: %s. Same trend, '
                'evidence combined.</span>' % esc(" · ".join(disp_title(a) for a in e["aka"])))
     badge = ""
     make = ""

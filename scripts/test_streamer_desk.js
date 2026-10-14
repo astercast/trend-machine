@@ -141,7 +141,7 @@ check("upcoming event renders the Upcoming badge",
       events.indexOf("Upcoming") >= 0);
 var feeds = L.feedsHTML(desk);
 check("skip-by-design feed renders its reason, claims nothing live",
-      feeds.indexOf("Skip by design") >= 0 &&
+      feeds.indexOf("Off on purpose") >= 0 &&
       feeds.indexOf("no credentials held") >= 0);
 var sum = L.summaryHTML(desk);
 check("summary strip carries the desk counts",

@@ -128,7 +128,7 @@
     return (desk.feeds || []).map(function (f) {
       return '<article class="sd-row"><div class="sd-row-main">' +
         "<h3>" + esc(f.label) +
-        ' <span class="sd-badge dim">Skip by design</span></h3><p>' +
+        ' <span class="sd-badge dim">Off on purpose</span></h3><p>' +
         esc(f.detail) + "</p></div></article>";
     }).join("");
   }

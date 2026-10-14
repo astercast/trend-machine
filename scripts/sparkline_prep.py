@@ -61,7 +61,7 @@ def prep_series(pts, width=260, height=48, pad=5):
     return prep
 
 
-def sparkline_svg(prep, css_class="spark", label_prefix="Velocity trend",
+def sparkline_svg(prep, css_class="spark", label_prefix="Spreading trend",
                   last_dot=True):
     """Inline SVG polyline from a prepped series. Static, no animation.
 
@@ -72,8 +72,8 @@ def sparkline_svg(prep, css_class="spark", label_prefix="Velocity trend",
         return ""
     w, h = prep["width"], prep["height"]
     aria = (f"{label_prefix}: {prep['first']} when tracking started "
-            f"({prep['since']}), {prep['last']} at the latest snapshot "
-            f"({prep['n']} snapshots).")
+            f"({prep['since']}), {prep['last']} at the latest reading "
+            f"({prep['n']} readings).")
     last_x, last_y = prep["coords"][-1].split(",")
     dot = (f'<circle cx="{last_x}" cy="{last_y}" r="3.2"/>'
            if last_dot else "")
@@ -114,7 +114,7 @@ def data_table_html(pts, table_id, caption="Velocity snapshots"):
             f"<tr><td>{esc(ts_label)}</td>"
             f'<td class="num">{int(p[1])}</td></tr>')
     return (
-        f'<details class="spark-data"><summary>View snapshot data '
+        f'<details class="spark-data"><summary>View the readings '
         f'({len(pts)} point{"s" if len(pts) != 1 else ""})</summary>'
         f'<table id="{esc(table_id)}"><caption>{esc(caption)}</caption>'
         f"<thead><tr><th scope=\"col\">Snapshot</th>"
@@ -141,7 +141,7 @@ def sparkline_figure_html(pts, topic_id, per_platform=None):
             f'<span class="num">{esc(arrow)} {abs(delta):+d}</span> since tracking started</p>')
         body = svg + caption + data_table_html(
             pts, f"spark-data-{esc(topic_id)}",
-            "Velocity snapshots for this topic")
+            "Spread readings for this topic")
     else:
         body = empty_state_html(prep["n"])
 
@@ -202,16 +202,16 @@ def movement_sentences(pts):
     d1, d2 = _dlabel(pts[0][0]), _dlabel(pts[-1][0])
     out = []
     if len(set(vals)) == 1:
-        out.append("Velocity held at %d across all %d snapshots, %s to %s."
+        out.append("Spreading held at %d across all %d readings, %s to %s."
                    % (first, n, d1, d2))
     elif last > first:
-        out.append("Velocity rose from %d on %s to %d on %s across %d snapshots."
+        out.append("Spreading rose from %d on %s to %d on %s across %d readings."
                    % (first, d1, last, d2, n))
     elif last < first:
-        out.append("Velocity fell from %d on %s to %d on %s across %d snapshots."
+        out.append("Spreading fell from %d on %s to %d on %s across %d readings."
                    % (first, d1, last, d2, n))
     else:
-        out.append("Velocity ended where it started, at %d, across %d snapshots, %s to %s."
+        out.append("Spreading ended where it started, at %d, across %d readings, %s to %s."
                    % (last, n, d1, d2))
     peak = max(vals)
     if peak > max(first, last):
@@ -242,8 +242,8 @@ def evidence_block_html(pts, topic_id, per_platform=None):
     pts = list(pts or [])
     prep = prep_series(pts, width=560, height=150, pad=12)
     head = ('<figure class="sig-hist ev-fig"><figcaption class="hist-label">'
-            'Evidence <span class="hist-note">\u00b7 velocity across the '
-            'stored window</span></figcaption>')
+            'Evidence <span class="hist-note">\u00b7 its spread across the '
+            'tracked days</span></figcaption>')
     if prep["ready"]:
         sentences = movement_sentences(pts)
         lines = _wrap_words(" ".join(sentences), 84)
@@ -263,8 +263,8 @@ def evidence_block_html(pts, topic_id, per_platform=None):
         texts = "".join(
             '<text class="ev-anno" x="12" y="%d">%s</text>'
             % (16 + 17 * i, esc(line)) for i, line in enumerate(lines))
-        aria = ("Velocity evidence: %s when tracking started (%s), %s at "
-                "the latest snapshot (%d snapshots)."
+        aria = ("Spreading evidence: %s when tracking started (%s), %s at "
+                "the latest reading (%d readings)."
                 % (prep["first"], prep["since"], prep["last"], prep["n"]))
         svg = ('<svg class="spark ev-svg" viewBox="0 0 560 150" role="img" '
                'aria-label="%s" focusable="false">%s'
@@ -274,8 +274,8 @@ def evidence_block_html(pts, topic_id, per_platform=None):
         delta = prep["delta"]
         arrow = "\u25b2" if delta > 0 else ("\u25bc" if delta < 0 else "\u25cf")
         caption = (
-            '<p class="hist-cap">Velocity tracked since %s \u00b7 '
-            '%d snapshot%s \u00b7 <span class="num">%s %+d</span> since '
+            '<p class="hist-cap">Spreading tracked since %s \u00b7 '
+            '%d reading%s \u00b7 <span class="num">%s %+d</span> since '
             'tracking started</p>'
             % (esc(prep["since"]), prep["n"],
                "s" if prep["n"] != 1 else "", esc(arrow), delta))
@@ -284,7 +284,7 @@ def evidence_block_html(pts, topic_id, per_platform=None):
             "Velocity snapshots for this topic")
     else:
         body = (
-            '<p class="ev-none">The record holds %d velocity snapshot%s '
+            '<p class="ev-none">The record holds %d reading%s '
             'for this topic, too few to draw honestly, so no chart is '
             'drawn. The sources below are the record.</p>'
             % (prep["n"], "s" if prep["n"] != 1 else ""))
@@ -296,11 +296,11 @@ def evidence_block_html(pts, topic_id, per_platform=None):
             pp = prep_series(ppts)
             if pp["ready"] or pp["n"] >= 2:
                 rows.append(
-                    "<li>%s \u00b7 velocity %s to %s across %d snapshots</li>"
+                    "<li>%s \u00b7 spreading %s to %s across %d readings</li>"
                     % (esc(plat), pp["first"], pp["last"], pp["n"]))
             else:
                 rows.append(
-                    "<li>%s \u00b7 history building, %d snapshot%s so far</li>"
+                    "<li>%s \u00b7 still building, %d reading%s so far</li>"
                     % (esc(plat), pp["n"], "s" if pp["n"] != 1 else ""))
         if rows:
             movers = ('<div class="movers"><p class="movers-h">Movers, by '
@@ -325,7 +325,7 @@ def flat_velocity_trend(topic_id, history, phist):
             "delta": pp["delta"],
             "sparkline_svg": sparkline_svg(
                 pp, css_class="spark spark-mini",
-                label_prefix=f"{p} velocity trend",
+                label_prefix=f"{p} spreading trend",
                 last_dot=False) if pp["ready"] else None,
         }
     return {

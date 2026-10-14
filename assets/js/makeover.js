@@ -44,11 +44,9 @@
         var cap = document.getElementById("scope-cap-topic");
         if (cap && top[0]) cap.textContent = "#" + top[0].title.slice(0, 34);
       }
-      var ts = document.getElementById("data-ts");
-      if (ts && trends && trends.generated_at) {
-        var d = new Date(trends.generated_at);
-        setStat("hs-age", relAge(d));
-      }
+      /* wave 42 simplicity: the facts line carries one "updated"
+         stamp (app.js owns #data-ts); the abbreviated data-age stat
+         was cut from the line, so nothing writes it here anymore. */
     });
   }
   function relAge(d) {

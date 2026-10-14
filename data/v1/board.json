@@ -18,7 +18,7 @@
           "title": "\"Six Seven\" (Seis Sete) funk dance"
         }
       ],
-      "rule": "One phenomenon tracked under two titles; the build folds the absorbed listing into the canonical row and combines its evidence. The canonical store (data/trends.json) keeps both records — the merge is a view, re-derived on every build."
+      "rule": "One trend tracked under two titles. The board folds the second listing into the first and combines the evidence; the stored record keeps both listings, and the fold is worked out again on every build."
     }
   ],
   "counts": {
@@ -27,7 +27,7 @@
     "makeable_shown": 7,
     "news_shown": 3
   },
-  "note": "392 phenomena from 393 tracked topics — \"6-7\": Gen Alpha's defining brainrot joke + \"Six Seven\" (Seis Sete) funk dance read as one phenomenon (six-seven-meme). The full unfiltered record, all 393 rows, stays one layer down: the desk below and data/v1/trends.json.",
+  "note": "392 trends from 393 tracked topics: \"6-7\": Gen Alpha's defining brainrot joke and \"Six Seven\" (Seis Sete) funk dance are one trend under two names, so they share a row. Everything we track, all 393, is listed further down this page.",
   "splash_id": "six-seven-meme",
   "make_now": [
     {
@@ -60,18 +60,18 @@
       "format": "meme",
       "angle": "Explain the meme to millennials/parents (reaction gold)",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#67",
         "#sixseven"
       ],
       "source_name": "Wikipedia",
       "source_count": 2,
-      "record": "velocity 92 · last seen 1 day ago · 2 sources",
+      "record": "spreading 92 of 100 · last seen 1 day ago · 2 sources",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": true,
-      "spark_svg": "<svg class=\"splash-chart\" viewBox=\"0 0 560 110\" role=\"img\" aria-label=\"Velocity from stored snapshots: 92 when tracking started (Oct 11, 2026), 92 at the latest snapshot (21 snapshots).\" focusable=\"false\"><polyline pathLength=\"1\" class=\"splash-line\" points=\"6.0,104.0 33.4,104.0 60.8,104.0 88.2,104.0 115.6,104.0 143.0,104.0 170.4,104.0 197.8,104.0 225.2,104.0 252.6,104.0 280.0,104.0 307.4,104.0 334.8,104.0 362.2,104.0 389.6,104.0 417.0,104.0 444.4,104.0 471.8,104.0 499.2,104.0 526.6,104.0 554.0,104.0\" fill=\"none\"/><circle cx=\"554.0\" cy=\"104.0\" r=\"3.2\"/></svg>"
+      "spark_svg": "<svg class=\"splash-chart\" viewBox=\"0 0 560 110\" role=\"img\" aria-label=\"Spreading, from stored readings: 92 when tracking started (Oct 11, 2026), 92 at the latest reading (21 readings).\" focusable=\"false\"><polyline pathLength=\"1\" class=\"splash-line\" points=\"6.0,104.0 33.4,104.0 60.8,104.0 88.2,104.0 115.6,104.0 143.0,104.0 170.4,104.0 197.8,104.0 225.2,104.0 252.6,104.0 280.0,104.0 307.4,104.0 334.8,104.0 362.2,104.0 389.6,104.0 417.0,104.0 444.4,104.0 471.8,104.0 499.2,104.0 526.6,104.0 554.0,104.0\" fill=\"none\"/><circle cx=\"554.0\" cy=\"104.0\" r=\"3.2\"/></svg>"
     },
     {
       "rank": 2,
@@ -97,14 +97,14 @@
       "format": "gaming",
       "angle": "What the robbery system tells us about the story",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#gta6",
         "#rockstar"
       ],
       "source_name": "Game8",
       "source_count": 1,
-      "record": "velocity 91 · last seen 1 day ago · 1 source",
+      "record": "spreading 91 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -132,14 +132,14 @@
       "format": "sports",
       "angle": "The play that broke basketball TikTok this week",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#nba",
         "#basketball"
       ],
       "source_name": "Revid",
       "source_count": 1,
-      "record": "velocity 86 · last seen 1 day ago · 1 source",
+      "record": "spreading 86 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -168,14 +168,14 @@
       "format": "meme",
       "angle": "Pumpkin-patch date montage that isn't generic",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 18 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 18 checks so far",
         "#wefellinloveinoctober",
         "#octobermood"
       ],
       "source_name": "SocialPilot",
       "source_count": 1,
-      "record": "velocity 86 · last seen 1 day ago · 1 source",
+      "record": "spreading 86 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -205,14 +205,14 @@
       "format": "meme",
       "angle": "A respectful supercut: his 10 most-memed moments",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#nanapatekar",
         "#riplegend"
       ],
       "source_name": "Face of Malawi",
       "source_count": 1,
-      "record": "velocity 85 · last seen 1 day ago · 1 source",
+      "record": "spreading 85 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -240,14 +240,14 @@
       "format": "dance",
       "angle": "Clean one-take before it blows up",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 18 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 18 checks so far",
         "#diponem",
         "#dancechallenge"
       ],
       "source_name": "SocialPilot",
       "source_count": 1,
-      "record": "velocity 85 · last seen 1 day ago · 1 source",
+      "record": "spreading 85 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -276,14 +276,14 @@
       "format": "meme",
       "angle": "Slow Halloween decor pan on the Insomniac bed",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 18 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 18 checks so far",
         "#insomniac",
         "#lofi"
       ],
       "source_name": "SocialPilot",
       "source_count": 1,
-      "record": "velocity 84 · last seen 1 day ago · 1 source",
+      "record": "spreading 84 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -315,14 +315,14 @@
       "format": "news",
       "angle": "The 30-second clip, zero commentary (let comments cook)",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#trump",
         "#nobelprize"
       ],
       "source_name": "RedWaveFeed",
       "source_count": 1,
-      "record": "velocity 90 · last seen 1 day ago · 1 source",
+      "record": "spreading 90 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -352,14 +352,14 @@
       "format": "news",
       "angle": "What happened in 3 minutes (map + timeline)",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#riyadh",
         "#middleeast"
       ],
       "source_name": "NewsWatchmen",
       "source_count": 1,
-      "record": "velocity 88 · last seen 1 day ago · 1 source",
+      "record": "spreading 88 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -389,14 +389,14 @@
       "format": "news",
       "angle": "Storm prep checklist (before the next one)",
       "evidence": [
-        "saturation low: lane uncrowded",
-        "tracked across 21 velocity snapshots",
+        "lane still uncrowded",
+        "seen in 21 checks so far",
         "#hurricaneisaias",
         "#weather"
       ],
       "source_name": "NewsWatchmen",
       "source_count": 1,
-      "record": "velocity 81 · last seen 1 day ago · 1 source",
+      "record": "spreading 81 of 100 · last seen 1 day ago · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,
@@ -426,15 +426,15 @@
       "format": "dance",
       "angle": "Dance through your Monday chaos, caption the mess",
       "evidence": [
-        "saturation medium: lane filling",
-        "tracked across 20 velocity snapshots",
+        "lane filling up",
+        "seen in 20 checks so far",
         "#beok",
         "#ingridmichaelson",
-        "verification: unverified, confirm live before building on it"
+        "not yet verified, confirm it is still live before building on it"
       ],
       "source_name": "New Engen",
       "source_count": 2,
-      "record": "velocity 58 after a peak of 74 · last seen 1 day ago · 2 sources",
+      "record": "spreading 58 of 100, peaked at 74 · last seen 1 day ago · 2 sources",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": null,
       "splash": false,
@@ -463,15 +463,15 @@
       "format": "meme",
       "angle": "Confess your niche's guilty habit as -A watches",
       "evidence": [
-        "saturation medium: lane filling",
-        "tracked across 20 velocity snapshots",
+        "lane filling up",
+        "seen in 20 checks so far",
         "#textfroma",
         "#prettylittleliars",
-        "verification: unverified, confirm live before building on it"
+        "not yet verified, confirm it is still live before building on it"
       ],
       "source_name": "MediaNug",
       "source_count": 2,
-      "record": "velocity 58 after a peak of 72 · last seen 1 day ago · 2 sources",
+      "record": "spreading 58 of 100, peaked at 72 · last seen 1 day ago · 2 sources",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": null,
       "splash": false,
@@ -500,14 +500,14 @@
       "format": "dance",
       "angle": "Shimmy into your niche's hot take",
       "evidence": [
-        "saturation medium: lane filling",
-        "tracked across 20 velocity snapshots",
+        "lane filling up",
+        "seen in 20 checks so far",
         "#thereshegoes",
         "#shimmydance"
       ],
       "source_name": "SocialBee",
       "source_count": 2,
-      "record": "velocity 58 after a peak of 66 · last seen 1 day ago · 2 sources",
+      "record": "spreading 58 of 100, peaked at 66 · last seen 1 day ago · 2 sources",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": null,
       "splash": false,

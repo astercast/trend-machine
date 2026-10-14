@@ -131,33 +131,33 @@ check("movers: off-board topic renders its id as title, not live",
 
 // --- rendering (lib) ----------------------------------------------------------
 var sum = L.summaryHTML(wire);
-check("summary names current hits and the retired lane",
-      sum.indexOf("45 hits") >= 0 && sum.indexOf("1 retired") >= 0 &&
+check("summary names current finds and the retired lane",
+      sum.indexOf("45 finds") >= 0 && sum.indexOf("1 retired") >= 0 &&
       sum.indexOf("Retired") >= 0);
 var ytRow = L.laneRowHTML(byId.youtube);
-check("retired row says Retired, claims no hits, shows the reason",
+check("retired row says Retired, claims none, shows the reason",
       ytRow.indexOf("Retired") >= 0 &&
-      ytRow.indexOf("no hits claimed") >= 0 &&
+      ytRow.indexOf("claims none") >= 0 &&
       ytRow.indexOf("RETIRED 2026-10-13") >= 0 &&
       ytRow.indexOf("NOT this refresh") < 0);
 var hnRow = L.laneRowHTML(hn2);
-check("stale row says NOT this refresh + excluded",
-      hnRow.indexOf("Stale · skip") >= 0 &&
-      hnRow.indexOf("NOT this refresh, excluded") >= 0);
+check("stale row says out of date + not counted",
+      hnRow.indexOf("Out of date") >= 0 &&
+      hnRow.indexOf("not the latest check, not counted") >= 0);
 var rdRow = L.laneRowHTML(byId.reddit);
-check("degraded row renders Degraded with its real 0",
-      rdRow.indexOf("Degraded") >= 0 && rdRow.indexOf("0 hits") >= 0);
+check("degraded row renders Found nothing with its real 0",
+      rdRow.indexOf("Found nothing") >= 0 && rdRow.indexOf("0 finds") >= 0);
 var ttRow = L.laneRowHTML(byId.tiktok);
-check("skip-by-design row claims no hits",
-      ttRow.indexOf("Skip by design") >= 0 &&
-      ttRow.indexOf("no hits claimed") >= 0);
+check("off-on-purpose row claims none",
+      ttRow.indexOf("Off on purpose") >= 0 &&
+      ttRow.indexOf("claims none") >= 0);
 var mv = L.moversHTML(wire);
-check("movers render the real span, never a bare '1h'",
-      mv.indexOf("over 1h") >= 0 && mv.indexOf("+18") >= 0 &&
+check("movers render the real span in words",
+      mv.indexOf("over about an hour") >= 0 && mv.indexOf("+18") >= 0 &&
       mv.indexOf("-19") >= 0);
 var empty = L.moversHTML({ movers: { gainers: [], fallers: [] } });
 check("empty movers render the honest no-pair state",
-      empty.indexOf("No topic holds a stored pair") >= 0);
+      empty.indexOf("Nothing yet has two readings") >= 0);
 var capped = L.moversHTML({ counts: { gainers: 1, fallers: 21 },
   movers: wire.movers });
 check("movers headings disclose the list cap against banner counts",

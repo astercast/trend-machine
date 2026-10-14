@@ -63,7 +63,7 @@ check("credit strips provenance rider", bs.credit_name(
 t_rec = {"velocity": 91, "last_seen": "2026-10-11T10:15:00+00:00",
          "sources": [{"name": "Game8"}]}
 check("record line", bs.record_line(t_rec, REF) ==
-      "velocity 91 \u00b7 last seen 2 days ago \u00b7 1 source")
+      "spreading 91 of 100 \u00b7 last seen 2 days ago \u00b7 1 source")
 t_rec2 = dict(t_rec, sources=[{"name": "A"}, {"name": "B"}, {"name": "C"}])
 check("record line plural", bs.record_line(t_rec2, REF).endswith("3 sources"))
 
@@ -71,25 +71,25 @@ check("record line plural", bs.record_line(t_rec2, REF).endswith("3 sources"))
 flat = [["2026-10-11T00:00:00+00:00", 92], ["2026-10-12T00:00:00+00:00", 92],
         ["2026-10-13T00:00:00+00:00", 92]]
 check("sentence flat", sp.movement_sentences(flat) ==
-      ["Velocity held at 92 across all 3 snapshots, Oct 11 to Oct 13."])
+      ["Spreading held at 92 across all 3 readings, Oct 11 to Oct 13."])
 fell = [["2026-10-11T00:00:00+00:00", 74], ["2026-10-12T00:00:00+00:00", 66],
         ["2026-10-13T00:00:00+00:00", 58]]
 check("sentence fell", sp.movement_sentences(fell) ==
-      ["Velocity fell from 74 on Oct 11 to 58 on Oct 13 across 3 snapshots."])
+      ["Spreading fell from 74 on Oct 11 to 58 on Oct 13 across 3 readings."])
 peaked = [["2026-10-11T00:00:00+00:00", 50], ["2026-10-12T00:00:00+00:00", 88],
           ["2026-10-13T00:00:00+00:00", 60]]
 check("sentence peak", sp.movement_sentences(peaked) ==
-      ["Velocity rose from 50 on Oct 11 to 60 on Oct 13 across 3 snapshots.",
+      ["Spreading rose from 50 on Oct 11 to 60 on Oct 13 across 3 readings.",
        "It peaked at 88 on Oct 12."])
 
 # --- evidence block -----------------------------------------------------
 html = sp.evidence_block_html(fell, "t-fell", {"tiktok": fell})
 check("evidence one svg", html.count("<svg") == 1)
 check("evidence annotation inside drawing",
-      '<text class="ev-anno"' in html and "Velocity fell from 74" in html)
+      '<text class="ev-anno"' in html and "Spreading fell from 74" in html)
 check("evidence movers are text", "Movers, by platform" in html
-      and "tiktok \u00b7 velocity 74 to 58 across 3 snapshots" in html)
-check("evidence keeps data table", "View snapshot data (3 points)" in html)
+      and "tiktok \u00b7 spreading 74 to 58 across 3 readings" in html)
+check("evidence keeps data table", "View the readings (3 points)" in html)
 thin = sp.evidence_block_html(fell[:2], "t-thin", None)
 check("thin series draws nothing", "<svg" not in thin)
 check("thin series honest line",
@@ -123,10 +123,10 @@ ids = [e["id"] for e in board["catchup"]]
 check("catchup holds only the cooled", ids == ["cooled"], str(ids))
 check("catchup record names the peak",
       board["catchup"][0]["record"].startswith(
-          "velocity 58 after a peak of 74 \u00b7 last seen 1 day ago"))
+          "spreading 58 of 100, peaked at 74 \u00b7 last seen 1 day ago"))
 check("board entry anatomy fields",
       board["make_now"][0]["source_name"] == "Game8"
-      and board["make_now"][0]["record"].startswith("velocity 97 \u00b7 last seen"))
+      and board["make_now"][0]["record"].startswith("spreading 97 of 100 \u00b7 last seen"))
 check("board evidence no longer duplicates the record line",
       all(not c.startswith("velocity ") and not c.startswith("last seen")
           for c in board["make_now"][0]["evidence"]))

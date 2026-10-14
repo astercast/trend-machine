@@ -30,10 +30,10 @@ var TM_LiveWire = (function () {
   function fmtDay(iso) { return iso ? String(iso).slice(0, 10) : ", "; }
 
   var STATUS_LABEL = {
-    "live": "Live",
-    "degraded": "Degraded",
-    "stale-skip": "Stale · skip",
-    "skip-by-design": "Skip by design",
+    "live": "Working",
+    "degraded": "Found nothing",
+    "stale-skip": "Out of date",
+    "skip-by-design": "Off on purpose",
     "retired": "Retired"
   };
 
@@ -45,25 +45,25 @@ var TM_LiveWire = (function () {
 
   function laneHitsCell(lane) {
     if (lane.status === "live") {
-      return '<span class="num lw-hits">' + lane.hits + " hits</span>" +
-        '<span class="lw-hits-note">recorded this refresh</span>';
+      return '<span class="num lw-hits">' + lane.hits + " finds</span>" +
+        '<span class="lw-hits-note">found on the latest check</span>';
     }
     if (lane.status === "degraded") {
-      return '<span class="num lw-hits">0 hits</span>' +
-        '<span class="lw-hits-note">ran this refresh, recorded nothing</span>';
+      return '<span class="num lw-hits">0 finds</span>' +
+        '<span class="lw-hits-note">checked, found nothing</span>';
     }
     if (lane.status === "stale-skip") {
       var storedDay = lane.newest_fetched_at || lane.file_written_at;
-      return '<span class="num lw-hits">' + lane.hits + " hits</span>" +
-        '<span class="lw-hits-note">stored ' + fmtDay(storedDay) +
-        ", NOT this refresh, excluded from the current total</span>";
+      return '<span class="num lw-hits">' + lane.hits + " finds</span>" +
+        '<span class="lw-hits-note">from ' + fmtDay(storedDay) +
+        ", not the latest check, not counted in the totals</span>";
     }
     if (lane.status === "retired") {
-      return '<span class="num lw-hits">, </span>' +
-        '<span class="lw-hits-note">retired, out of the refresh loop, no hits claimed</span>';
+      return '<span class="num lw-hits">no finds</span>' +
+        '<span class="lw-hits-note">retired, out of the loop, claims none</span>';
     }
-    return '<span class="num lw-hits">, </span>' +
-      '<span class="lw-hits-note">no output file, no hits claimed</span>';
+    return '<span class="num lw-hits">no finds</span>' +
+      '<span class="lw-hits-note">off on purpose, claims none</span>';
   }
 
   function laneRowHTML(lane) {
@@ -71,10 +71,10 @@ var TM_LiveWire = (function () {
       ? '<span class="lw-sources num">' + esc(lane.sources.join(" · ")) + "</span>"
       : '<span class="lw-sources">no source labels recorded</span>';
     var stamp = lane.newest_fetched_at
-      ? "newest hit " + fmtTime(lane.newest_fetched_at)
+      ? "newest find " + fmtTime(lane.newest_fetched_at)
       : (lane.file_written_at
-        ? "file written " + fmtTime(lane.file_written_at)
-        : "no stored output");
+        ? "last wrote " + fmtTime(lane.file_written_at)
+        : "nothing stored");
     return '<article class="lw-row" data-lane="' + esc(lane.id) + '">' +
       '<div class="lw-cell lw-lane"><h3>' + esc(lane.label) + "</h3>" +
         '<p class="lw-meta"><code>' + esc(lane.fetcher) + "</code></p>" +
@@ -95,11 +95,13 @@ var TM_LiveWire = (function () {
       ? '<a href="topics/' + esc(m.topic_id) + '.html">' + esc(normT(m.title)) + "</a>"
       : esc(normT(m.title)) + ' <span class="lw-offboard">(left the board)</span>';
     var delta = (m.delta > 0 ? "+" : "") + m.delta;
+    var spanTxt = (m.span_hours >= 0.9 && m.span_hours <= 1.1)
+      ? "about an hour" : m.span_hours + " hours";
     return '<article class="lw-mover" data-topic="' + esc(m.topic_id) + '">' +
       '<div class="lw-mover-main"><h4>' + title + "</h4>" +
-      '<p class="lw-meta num">v' + m.from_velocity + " → v" + m.to_velocity +
-      " over " + m.span_hours + "h · " + fmtTime(m.from_ts) + " → " +
-      fmtTime(m.to_ts) + " · " + m.n_points + " stored pts</p></div>" +
+      '<p class="lw-meta num">spreading ' + m.from_velocity + " → " + m.to_velocity +
+      " over " + spanTxt + " · " + fmtTime(m.from_ts) + " → " +
+      fmtTime(m.to_ts) + " · " + m.n_points + " readings</p></div>" +
       '<span class="lw-delta is-' + dir + ' num">' + delta + "</span>" +
       "</article>";
   }
@@ -114,9 +116,9 @@ var TM_LiveWire = (function () {
       return moverRowHTML(m, "down");
     }).join("");
     if (!gain && !fall) {
-      return '<p class="lw-empty">No topic holds a stored pair spanning ' +
-        "about an hour yet, the wire shows movement only when the " +
-        "snapshots themselves prove it.</p>";
+      return '<p class="lw-empty">Nothing yet has two readings about ' +
+        "an hour apart, so nothing counts as a mover. Movement prints " +
+        "only when the readings prove it.</p>";
     }
     // Wave 29 audit fix: the payload caps each list at 10 while the
     // banner counts every mover, the headings must disclose the cap
@@ -129,12 +131,12 @@ var TM_LiveWire = (function () {
       '<section aria-label="Top gainers"><h3 class="lw-movers-h is-up">' +
       "▲ Climbing" + capNote((mv.gainers || []).length, c.gainers) +
       "</h3>" + (gain ||
-        '<p class="lw-empty">Nothing climbed on a proven ~1h pair.</p>') +
+        '<p class="lw-empty">Nothing climbed on two readings an hour apart.</p>') +
       "</section>" +
       '<section aria-label="Top fallers"><h3 class="lw-movers-h is-down">' +
       "▼ Cooling" + capNote((mv.fallers || []).length, c.fallers) +
       "</h3>" + (fall ||
-        '<p class="lw-empty">Nothing cooled on a proven ~1h pair.</p>') +
+        '<p class="lw-empty">Nothing cooled on two readings an hour apart.</p>') +
       "</section></div>";
   }
 
@@ -142,24 +144,24 @@ var TM_LiveWire = (function () {
     var c = wire.counts || {};
     var banner = '<div class="lw-banner" role="status"><h2>The wire at ' +
       fmtTime(wire.refresh_at) + "</h2><p><strong>" + c.current_hits +
-      " hits</strong> recorded by the latest refresh across <strong>" +
-      c.lanes_live + " live lanes</strong>, with the failures on the " +
-      "same board: " + c.lanes_degraded + " degraded, " +
-      c.lanes_stale_skip + " stale-skip (" + c.stale_hits_excluded +
-      " old hits dated and excluded), " + c.lanes_skip_by_design +
-      " skip-by-design, " + (c.lanes_retired || 0) + " retired. " +
-      c.topics_live + " topics on the board; " +
-      c.movers_with_hour_pair + " hold a proven ~1h movement pair (" +
+      " finds</strong> on the latest check across <strong>" +
+      c.lanes_live + " working sources</strong>, failures on the " +
+      "same board: " + c.lanes_degraded + " found nothing, " +
+      c.lanes_stale_skip + " out of date (" + c.stale_hits_excluded +
+      " old finds dated and not counted), " + c.lanes_skip_by_design +
+      " off on purpose, " + (c.lanes_retired || 0) + " retired. " +
+      c.topics_live + " trends on the board; " +
+      c.movers_with_hour_pair + " have two readings an hour apart (" +
       c.gainers + " climbing, " + c.fallers + " cooling, " + c.flat +
       " flat).</p></div>";
     var cards = [
-      ["Current hits", c.current_hits, "recorded by the latest refresh only"],
-      ["Live lanes", c.lanes_live, "of " + c.lanes + " lanes wired into refresh.sh"],
-      ["Degraded", c.lanes_degraded, "ran, recorded 0, shown as degraded"],
-      ["Stale · skip", c.lanes_stale_skip, "not rewritten last refresh, hits dated, excluded"],
-      ["Skip by design", c.lanes_skip_by_design, "TikTok + X, no data, never faked"],
+      ["Finds on the latest check", c.current_hits, "counted from the latest check only"],
+      ["Working sources", c.lanes_live, "of " + c.lanes + " sources we watch"],
+      ["Found nothing", c.lanes_degraded, "checked, came back empty"],
+      ["Out of date", c.lanes_stale_skip, "not checked last time; old finds dated, not counted"],
+      ["Off on purpose", c.lanes_skip_by_design, "TikTok + X: no honest way to read them, never faked"],
       ["Retired", c.lanes_retired || 0, "YouTube (Invidious / direct), closed 2026-10-13, reason on its row"],
-      ["Movers", c.gainers + c.fallers, "proven ~1h pairs: " + c.gainers + " up · " + c.fallers + " down · " + c.flat + " flat"]
+      ["Movers", c.gainers + c.fallers, "two readings an hour apart: " + c.gainers + " up · " + c.fallers + " down · " + c.flat + " flat"]
     ].map(function (card) {
       return '<div class="lw-card"><span class="lw-card-num num">' + card[1] +
         '</span><span class="lw-card-label">' + card[0] +

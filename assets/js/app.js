@@ -98,7 +98,7 @@
      against now; the baked fallback runs against the snapshot). */
   function recordLine(t) {
     var n = (t.sources || []).length;
-    return "velocity " + (t.velocity || 0) + " · last seen " + ageWords(minsSince(t.last_seen)) +
+    return "spreading " + (t.velocity || 0) + " of 100 · last seen " + ageWords(minsSince(t.last_seen)) +
       " · " + n + " source" + (n !== 1 ? "s" : "");
   }
   function normT(s) {
@@ -224,7 +224,7 @@
         " · " + freshHTML(t.last_seen) + "</span></a>";
     }).join("");
     var cnt = document.getElementById("radar-count");
-    if (cnt) cnt.textContent = memes.length + " meme signals tracked";
+    if (cnt) cnt.textContent = memes.length + " memes moving now";
     clearLoading("radar-strip");
   }
   function renderScope(memes) {
@@ -279,20 +279,20 @@
     if (!el) return;
     var list = filtered();
     var meta = document.getElementById("table-meta");
-    if (meta) meta.textContent = list.length + " of " + mergedTopics().length + " phenomena · " + state.topics.length + " topics tracked";
+    if (meta) meta.textContent = list.length + " of " + mergedTopics().length + " trends shown · " + state.topics.length + " tracked in all";
     el.innerHTML = list.map(function (t, i) {
       var stale = t.stale ? ' class="is-stale"' : '';
       var aka = (t.merged_from && t.merged_from.length)
-        ? '<div class="topic-aka">also tracked as: ' + t.merged_from.map(function (x) { return esc(normT(x.title)); }).join(" · ") + ". One phenomenon, evidence combined</div>" : "";
+        ? '<div class="topic-aka">also tracked as: ' + t.merged_from.map(function (x) { return esc(normT(x.title)); }).join(" · ") + ". Same trend, evidence combined</div>" : "";
       return "<tr" + stale + ' style="--i:' + Math.min(i, 12) + '">' +
         '<td data-label="Topic"><a class="topic-link" href="topics/' + t.id + '.html">' + esc(normT(t.title)) + "</a>" +
         (t.stale ? ' <span class="stale-badge">STALE</span>' : "") +
         '<div class="topic-cat">' + esc(t.category) + "</div>" + aka + "</td>" +
         '<td data-label="Platforms">' + chips(t.platforms, "plat") + "</td>" +
-        '<td data-label="Opportunity">' + scoreHTML(t.opportunity_score) + "</td>" +
-        '<td data-label="Velocity">' + scoreHTML(t.velocity) + "</td>" +
-        '<td data-label="Trend">' + trendCell(t) + "</td>" +
-        '<td data-label="Detected">' + freshHTML(t.last_seen) + "</td></tr>";
+        '<td data-label="Score">' + scoreHTML(t.opportunity_score) + "</td>" +
+        '<td data-label="Spreading">' + scoreHTML(t.velocity) + "</td>" +
+        '<td data-label="Movement">' + trendCell(t) + "</td>" +
+        '<td data-label="Last seen">' + freshHTML(t.last_seen) + "</td></tr>";
     }).join("");
     var tbl = document.getElementById("dtable");
     if (tbl) tbl.setAttribute("aria-busy", "false");
@@ -399,7 +399,7 @@
       if (gen && data.generated_at) {
         var d = new Date(data.generated_at);
         getEpoch = d.getTime();
-        gen.innerHTML = 'data: <span class="num">' + d.toLocaleString() + "</span>";
+        gen.innerHTML = 'updated <span class="num">' + d.toLocaleString() + "</span>";
       }
       lampTest(false); /* V35E complete — board is live */
       clearAlarm(wasAlarmed); wasAlarmed = false; /* GO only after an alarm */

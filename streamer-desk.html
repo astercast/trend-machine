@@ -93,39 +93,35 @@
 <div id="sd-houses"></div>
 
 <h2 class="sd-section-h">Events calendar</h2>
-<p class="sd-section-sub">Conventions, awards, charity marathons, subathons. Past and upcoming are computed from the dates at build time. A past event never poses as upcoming.</p>
+<p class="sd-section-sub">Conventions, awards, charity marathons, subathons. Past and upcoming are worked out from the dates themselves. A past event never poses as upcoming.</p>
 <div id="sd-events"></div>
 
-<h2 class="sd-section-h">Desk feeds: the honest lanes</h2>
+<h2 class="sd-section-h">Desk feeds</h2>
 <p class="sd-section-sub">
-  The Desk's one live lane runs on the <a href="live-wire.html">Live Wire</a>
-  (the streamer-beat news lane, real recorded hits only). The directory
-  APIs below cannot be fed honestly with the credentials this project
-  holds, so they ship skip-by-design: no live status, no follower
-  counts, nothing faked.
+  The desk's one working feed runs on the <a href="live-wire.html">Live Wire</a>
+  (the streamer-beat source, real finds only). The feeds below cannot be
+  filled honestly with what we have, so they are off on purpose: no live
+  status, no follower counts, nothing faked.
 </p>
 <div id="sd-feeds"></div>
 
 <section class="sd-method" aria-labelledby="sd-method-title">
 <h2 id="sd-method-title">How this desk works</h2>
 <p>
-  The payload (<code>data/v1/streamer-desk.json</code>) is built by
-  <code>scripts/build_streamer_desk.js</code> from a hand-curated record
-  (<code>data/streamer_desk.json</code>). The generator enforces the
-  sourcing standard in code: a profile or house with no source, a drama
-  timeline whose events trace to fewer than two distinct source domains,
-  an undated roster, or an unverified item with no stated reason makes
-  the build <strong>fail</strong>. The Desk would rather not publish
-  than launder a claim. Directory facts need one credible source;
-  drama needs two.
+  Every profile, house and timeline on this page carries its sources.
+  A claim with no source does not get in. A drama timeline needs two or
+  more independent sources or it sits in quarantine, labelled with the
+  reason. An undated roster does not print. The desk would rather
+  publish less than dress a guess up as fact: directory facts need one
+  credible source, drama needs two.
 </p>
 </section>
 </main>
 
 <footer class="site-foot"><div class="wrap foot-grid">
-<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trending-topic intelligence.</span></div>
-<div style="font-size:13px">Never invents trends. Every signal traces to a fetcher hit or a researched source.<br>
-<span class="num" style="font-size:12px">private · github-only · no trackers</span></div>
+<div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trend tracking, with the evidence on every row.</span></div>
+<div style="font-size:13px">Never invents trends. Every item traces to a source we checked or researched.<br>
+<span class="num" style="font-size:12px">no accounts · no trackers</span></div>
 </div></footer>
 
 <script src="assets/js/streamer-desk-lib.js"></script>
