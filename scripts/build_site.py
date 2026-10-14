@@ -224,7 +224,7 @@ def build_topic(t, history_pts=None, plat_hist=None):
     fam_id = t.get("format_family")
     fam_names = _FAMILY_NAMES
     famchip = (f'<a class="chip family" href="../formats.html#family-{esc(fam_id)}" '
-               f'title="Wave 9: tracked format family — see its current examples and evidence">'
+               f'title="Wave 9: tracked format family, see its current examples and evidence">'
                f'⧉ family: {esc(fam_names.get(fam_id, fam_id))}</a>'
                if fam_id else "")
     tags = "".join(f'<span class="tag">{esc(disp_text(h))}</span>' for h in t.get("hashtags", [])[:10])

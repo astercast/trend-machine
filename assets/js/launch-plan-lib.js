@@ -79,7 +79,7 @@
     if (!angles.length) {
       return {
         ok: false,
-        reason: "This dossier has no content angles yet — the pipeline " +
+        reason: "This dossier has no content angles yet: the pipeline " +
                 "hasn't extracted any. Check back after the next refresh; " +
                 "we won't invent angles."
       };
@@ -127,7 +127,7 @@
     rationale.push(
       "Day 1 leads with angle #1 and your first hook on " +
       (platforms.length ? platforms[0] : "your main platform") +
-      " — front-loading gives the trend the most runway."
+      ", because front-loading gives the trend the most runway."
     );
     if (opportunity >= 70) {
       rationale.push(
@@ -143,19 +143,19 @@
     }
     if (platforms.length > 1) {
       rationale.push(
-        "Best-platform order: " + platforms[0] + " gets Days 1–2 (fastest " +
+        "Best-platform order: " + platforms[0] + " gets Days 1 to 2 (fastest " +
         "feedback loop), " + platforms.slice(1).join("/") + " take the " +
         "midweek for second-wave reach."
       );
     }
     rationale.push(
-      "Angles rotate — no angle airs two days in a row, and every day " +
+      "Angles rotate: no angle airs two days in a row, and every day " +
       "pairs a different angle + hook, so the week never feels repeated."
     );
     if (formats.length) {
       rationale.push(
         "Format signals (" + formats.join(", ") + ") are baked into the " +
-        "lead days — sounds and formats rot fastest, so they go first."
+        "lead days, because sounds and formats rot fastest, so they go first."
       );
     }
     // Wave 7: trend-type-aware pacing — formats repeat, topics cover.
@@ -165,18 +165,18 @@
     var tt = p.trend_type || "topic";
     if (tt === "format") {
       rationale.push(
-        "This is a format trend — the template itself is the play: Days 1–3 " +
-        "run the canonical format to catch the wave, Days 4–7 add your own twist."
+        "This is a format trend: the template itself is the play. Days 1 to 3 " +
+        "run the canonical format to catch the wave, Days 4 to 7 add your own twist."
       );
     } else if (tt === "format+topic") {
       rationale.push(
-        "This is a format+topic trend — join the template early (Days 1–2), " +
+        "This is a format+topic trend: join the template early (Days 1 to 2), " +
         "then use the back half of the week to cover the underlying subject " +
         "with your own take."
       );
     } else {
       rationale.push(
-        "This is a topic trend — cover the subject fresh each day; the rotating " +
+        "This is a topic trend: cover the subject fresh each day; the rotating " +
         "formats keep the week from feeling repeated."
       );
     }
@@ -184,30 +184,30 @@
       if (trajectory.state === "peaking") {
         rationale.push(
           "The Oracle projects this trend's peak inside 48h (from " +
-          trajectory.n + " snapshots) — this plan is deliberately " +
+          trajectory.n + " snapshots), so this plan is deliberately " +
           "front-loaded."
         );
       } else if (trajectory.state === "fading") {
         rationale.push(
           "The Oracle shows this trend cooling (from " + trajectory.n +
-          " snapshots) — Days 6–7 work as evergreen fallback takes " +
+          " snapshots): Days 6 to 7 work as evergreen fallback takes " +
           "rather than new pushes."
         );
       } else if (trajectory.state === "accelerating" || trajectory.state === "rising") {
         rationale.push(
           "The Oracle shows this trend still climbing (from " +
-          trajectory.n + " snapshots) — the back half of the week is " +
+          trajectory.n + " snapshots), and the back half of the week is " +
           "where the biggest upside sits."
         );
       }
     } else {
       rationale.push(
-        "Forecast data is still warming up — this pacing assumes a " +
+        "Forecast data is still warming up: this pacing assumes a " +
         "rising trend and adapts automatically once 3+ hourly snapshots exist."
       );
     }
     rationale.push(
-      "Everything above comes from this topic's dossier — no angles, " +
+      "Everything above comes from this topic's dossier: no angles, " +
       "hooks, or hashtags were invented for this plan."
     );
 
@@ -241,7 +241,7 @@
                " · " + String(plan.meta.trend_type || "topic").toUpperCase());
     lines.push("");
     plan.days.forEach(function (d) {
-      lines.push("DAY " + d.day + " — " + d.date.toUpperCase());
+      lines.push("DAY " + d.day + " · " + d.date.toUpperCase());
       lines.push("  angle: " + d.angle);
       if (d.hook) { lines.push('  hook: "' + d.hook + '"'); }
       lines.push("  platform: " + d.platform + " · format: " + d.format);
@@ -251,7 +251,7 @@
     lines.push("WHY THIS ORDER:");
     plan.rationale.forEach(function (r) { lines.push("  - " + r); });
     lines.push("");
-    lines.push("— from Trend Machine Oracle · topic " + plan.meta.id);
+    lines.push("From Trend Machine Oracle · topic " + plan.meta.id);
     return lines.join("\n");
   }
 
@@ -274,15 +274,15 @@
     },
     youtube: {
       tip: "Since the Oct 1, 2026 originality update, Shorts prioritize " +
-           "original footage — add your own take; raw re-uploads get " +
+           "original footage. Add your own take; raw re-uploads get " +
            "reach-cut at the channel level.",
       source: "algorithms.html#yt",
       basis: "Announced by Creator Liaison Rene Ritchie (Oct 1, 2026)"
     },
     instagram: {
-      tip: "Sends per reach is the #1 Reels signal — make something a " +
+      tip: "Sends per reach is the #1 Reels signal: make something a " +
            "viewer wants to DM to someone specific. Discovery sweet spot " +
-           "is 7–30 seconds.",
+           "is 7 to 30 seconds.",
       source: "algorithms.html#ig",
       basis: "Per Mosseri; CreatorFlow/SocialPilot signal hierarchy"
     }
@@ -350,7 +350,7 @@
     if (entries.length < 2) {
       return {
         ok: false,
-        reason: "A battle plan needs at least two topics — pick 2–" +
+        reason: "A battle plan needs at least two topics: pick 2 to " +
                 MAX_BATTLE_TOPICS + " trends to weave into one week. " +
                 "Single-topic plans use the regular 7-day planner."
       };
@@ -421,25 +421,25 @@
       "Lead order: " + perTopic.map(function (t, k) {
         return (k + 1) + ". " + t.plan.meta.title + " (opportunity " +
                t.opportunity + "/100, Oracle: " + trajStateOf(t.trajectory).state + ")";
-      }).join(" → ") + " — the strongest opportunity opens the week."
+      }).join(" → ") + ", and the strongest opportunity opens the week."
     );
     perTopic.forEach(function (t) {
       var dayNos = days.filter(function (dd) { return dd.topicId === t.topic.id; })
                        .map(function (dd) { return dd.day; });
       rationale.push(
         t.plan.meta.title + " posts on Day" + (dayNos.length > 1 ? "s " : " ") +
-        dayNos.join("/") + " — its own 7-day pacing is preserved; its " +
+        dayNos.join("/") + ": its own 7-day pacing is preserved; its " +
         dayNos.length + (dayNos.length === 1 ? "st" : dayNos.length === 2 ? "nd" : dayNos.length === 3 ? "rd" : "th") +
         " appearance runs its own plan's Day " + dayNos.length + "."
       );
     });
     rationale.push(
-      "Days rotate the lead — no two adjacent days push the same trend, " +
+      "Days rotate the lead: no two adjacent days push the same trend, " +
       "so the week reads as a campaign, not a repeat."
     );
     rationale.push(
       "Platform tips restate the site's sourced algorithm research " +
-      "(algorithms.html) — mechanics with attribution, never invented " +
+      "(algorithms.html): mechanics with attribution, never invented " +
       "posting times or reach guarantees."
     );
     rationale.push(
@@ -449,7 +449,7 @@
       "whether reality matched the projection."
     );
     rationale.push(
-      "Everything above comes from these topics' dossiers — no angles, " +
+      "Everything above comes from these topics' dossiers: no angles, " +
       "hooks, or hashtags were invented for this battle plan."
     );
 
@@ -488,7 +488,7 @@
     }).join(" | "));
     lines.push("");
     plan.days.forEach(function (d) {
-      lines.push("DAY " + d.day + " — " + d.date.toUpperCase() + " · " + d.topicTitle.toUpperCase());
+      lines.push("DAY " + d.day + " · " + d.date.toUpperCase() + " · " + d.topicTitle.toUpperCase());
       lines.push("  angle: " + d.angle);
       if (d.hook) { lines.push('  hook: "' + d.hook + '"'); }
       lines.push("  platform: " + d.platform + " · format: " + d.format);
@@ -499,7 +499,7 @@
     lines.push("WHY THIS ORDER:");
     plan.rationale.forEach(function (r) { lines.push("  - " + r); });
     lines.push("");
-    lines.push("— from Trend Machine Oracle · battle plan");
+    lines.push("From Trend Machine Oracle · battle plan");
     return lines.join("\n");
   }
 
@@ -519,7 +519,7 @@
     if (isBattle) {
       lines.push("## Trends");
       plan.meta.topics.forEach(function (t) {
-        lines.push("- **" + t.title + "** — opportunity " + t.opportunity +
+        lines.push("- **" + t.title + "**: opportunity " + t.opportunity +
                    "/100 · velocity " + t.velocity + " · Oracle: " +
                    t.trajectory.state + " (" + t.trajectory.n + " snapshots)" +
                    " · " + t.trend_type);
@@ -533,7 +533,7 @@
     }
     lines.push("## Day-by-day");
     plan.days.forEach(function (d) {
-      var head = "### Day " + d.day + " — " + d.date;
+      var head = "### Day " + d.day + ": " + d.date;
       if (isBattle) { head += " · " + d.topicTitle; }
       lines.push(head);
       lines.push("");
@@ -543,7 +543,7 @@
       if (d.hashtags.length) { lines.push("- **Hashtags:** " + d.hashtags.join(" ")); }
       if (d.platformTip) {
         lines.push("- **Timing tip:** " + d.platformTip.tip + " _(source: " +
-                   d.platformTip.source + " — " + d.platformTip.basis + ")_");
+                   d.platformTip.source + " · " + d.platformTip.basis + ")_");
       }
       lines.push("- _Provenance:_ " + d.provenance);
       lines.push("");
@@ -553,7 +553,7 @@
     lines.push("");
     lines.push("---");
     lines.push("All angles, hooks, and hashtags come from the topics' " +
-               "dossiers — nothing invented. Trajectories are projections " +
+               "dossiers, nothing invented. Trajectories are projections " +
                "from snapshot data, not guarantees.");
     return lines.join("\n");
   }
@@ -598,7 +598,7 @@
       }),
       rationale: plan.rationale.slice(),
       honesty: "All angles, hooks, and hashtags come from the topics' " +
-               "dossiers — nothing invented. Trajectories are projections " +
+               "dossiers, nothing invented. Trajectories are projections " +
                "from snapshot data, not guarantees. Compare saved-plan " +
                "velocities against later snapshots to see whether reality " +
                "matched the plan."

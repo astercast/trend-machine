@@ -64,8 +64,8 @@ var TM_Formats = (function () {
       (f.status_note ? '<p class="fmt-status-note">' + esc(f.status_note) + "</p>" : "") +
       (examples ? '<h3>Current examples</h3><ul class="fmt-examples">' + examples + "</ul>" : "") +
       (topics ? '<h3>Tracked in the pipeline</h3><ul class="fmt-topics">' + topics + "</ul>"
-              : '<p class="oracle-empty">No live topics match this family right now — ' +
-                "the pipeline links topics automatically when their text names the family.</p>") +
+              : '<p class="oracle-empty">No live topics match this family right now. ' +
+                "The pipeline links topics automatically when their text names the family.</p>") +
       "</article>";
   }
 
@@ -74,7 +74,7 @@ var TM_Formats = (function () {
       '<h2 id="fmt-method-h">How format families are tracked</h2>' +
       '<p class="oc-honest">' + esc((doc && doc.method) || "") + "</p>" +
       '<p class="oc-honest">Curated ' + esc((doc && doc.generated_at) || "recently") +
-      " from web research — " + esc(STATUS_LABELS.rising) + " / " +
+      " from web research: " + esc(STATUS_LABELS.rising) + " / " +
       esc(STATUS_LABELS.peak) + " describe the current cycle; " +
       esc(STATUS_LABELS.established) + " and " + esc(STATUS_LABELS.evergreen) +
       " are long-lived templates tracked for completeness, not momentum.</p></section>";
@@ -131,7 +131,7 @@ var TM_Formats = (function () {
     return '<section class="fmt-leaderboard" aria-labelledby="fmt-lb-h">' +
       '<h2 id="fmt-lb-h">Format leaderboard</h2>' +
       '<p class="oc-honest">Ranked by the hottest tracked topic\u2019s ' +
-      "opportunity score — live pipeline numbers. Families with no tracked " +
+      "opportunity score, live pipeline numbers. Families with no tracked " +
       "topics get no rank, never a zero.</p>" + body + "</section>";
   }
 
@@ -139,9 +139,9 @@ var TM_Formats = (function () {
     return '<section class="fmt-method" aria-labelledby="fmt-pb-h">' +
       '<h2 id="fmt-pb-h">How to join a format</h2>' +
       '<p class="oc-honest">Formats reward speed and the twist. The pacing ' +
-      "that works across families: run the template straight for Days 1–3 " +
-      "(the audience needs the recognizable shape), then twist it on Day 4+ " +
-      "— your niche, your product, your confession. Rising families are the " +
+      "that works across families: run the template straight for Days 1 to 3 " +
+      "(the audience needs the recognizable shape), then twist it on Day 4+: " +
+      "your niche, your product, your confession. Rising families are the " +
       "join-now window; peaked families need the twist up front; " +
       "evergreen/established families are always fillable but never urgent.</p></section>";
   }
@@ -150,7 +150,7 @@ var TM_Formats = (function () {
     var fams = (doc && doc.families) || [];
     var n = fams.length;
     var cards = fams.map(function (f) { return familyCardHTML(f, topicTitles); }).join("");
-    return '<p class="fmt-lede">' + n + " format families tracked — reusable templates, " +
+    return '<p class="fmt-lede">' + n + " format families tracked: reusable templates, " +
       "not one-off trends. A family's topics are linked from the live pipeline data; " +
       "families the evidence doesn't support are flagged, never hidden.</p>" +
       leaderboardHTML(doc, topics) +

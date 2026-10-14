@@ -208,10 +208,10 @@ const baseP = {
 };
 let fmtPlan = L.buildPlan(Object.assign({}, baseP, { trend_type: "format" }));
 ok(fmtPlan.ok && fmtPlan.meta.trend_type === "format", "format trend_type passes through to plan meta", fmtPlan.meta.trend_type);
-ok(fmtPlan.rationale.some(r => /format trend/.test(r) && /Days 1–3/.test(r)),
+ok(fmtPlan.rationale.some(r => /format trend/.test(r) && /Days 1 to 3/.test(r)),
    "format pacing: canonical format early, twist later", fmtPlan.rationale.length);
 let mixPlan = L.buildPlan(Object.assign({}, baseP, { trend_type: "format+topic" }));
-ok(mixPlan.rationale.some(r => /format\+topic trend/.test(r) && /Days 1–2/.test(r)),
+ok(mixPlan.rationale.some(r => /format\+topic trend/.test(r) && /Days 1 to 2/.test(r)),
    "format+topic pacing: template early, subject coverage later", 1);
 let topPlan = L.buildPlan(Object.assign({}, baseP, { trend_type: "topic" }));
 ok(topPlan.rationale.some(r => /topic trend/.test(r) && /fresh each day/.test(r)),

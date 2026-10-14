@@ -53,20 +53,20 @@
         '<span class="provenance">projection from ' + traj.n +
         " snapshot" + (traj.n === 1 ? "" : "s") + ", not a guarantee</span>";
     }
-    return '<span class="provenance">forecasts warming up (fewer than 3 snapshots) — ' +
+    return '<span class="provenance">forecasts warming up (fewer than 3 snapshots): ' +
       "paced as if rising, adapts with history</span>";
   }
 
   function ledgerLine(ref) {
     if (!ref) {
-      return '<span class="provenance">No Oracle forecast recorded for this trend yet — ' +
+      return '<span class="provenance">No Oracle forecast recorded for this trend yet: ' +
         "the ledger starts recording once it has 3+ snapshots.</span>";
     }
     var when = esc(String(ref.forecast_at).slice(0, 16).replace("T", " "));
     var status = ref.resolved
-      ? "resolved" + (ref.hit === true ? " — hit" : ref.hit === false ? " — miss" : "")
+      ? "resolved" + (ref.hit === true ? ", hit" : ref.hit === false ? ", miss" : "")
       : "resolves ~48h after recording";
-    return '<span class="provenance">Archived ledger: <strong>' + esc(ref.state || "—") +
+    return '<span class="provenance">Archived ledger: <strong>' + esc(ref.state || "unknown") +
       "</strong> recorded " + when + " UTC · " + esc(status) + "</span>";
   }
 
@@ -89,7 +89,7 @@
       (isBattle ? '<span class="battle-topic-chip">' + esc(d.topicTitle) + "</span>" : "") +
       "</header>" +
       '<h3 class="mc-angle">' + esc(d.angle) + "</h3>" +
-      '<p class="mc-hook">&ldquo;' + esc(d.hook || "No hook line yet — write one in the moment.") + "&rdquo;</p>" +
+      '<p class="mc-hook">&ldquo;' + esc(d.hook || "No hook line yet. Write one in the moment.") + "&rdquo;</p>" +
       meta + tipBox(d.platformTip) +
       '<p class="mc-src provenance">' + esc(d.provenance) + "</p>" +
       "</article>";
@@ -232,7 +232,7 @@
     storeSaved(list.slice(0, 12)); // cap: keep the 12 most recent
     renderSaved();
     var s = document.getElementById("plan-save-status");
-    if (s) { s.textContent = "Plan saved — check back later to compare its velocities against reality."; }
+    if (s) { s.textContent = "Plan saved. Check back later to compare its velocities against reality."; }
   }
 
   function latestVelocity(id) {
@@ -250,22 +250,22 @@
       var now = latestVelocity(t.id);
       var then = t.velocity;
       var delta = (now == null || then == null) ? null : now - then;
-      var arrow = delta == null ? "—" : (delta > 0 ? "▲" : delta < 0 ? "▼" : "●");
+      var arrow = delta == null ? "·" : (delta > 0 ? "▲" : delta < 0 ? "▼" : "●");
       var cls = delta == null ? "" : (delta > 0 ? "up" : delta < 0 ? "down" : "flat");
       var ref = t.ledger_ref;
       var refNote = ref
         ? "Archived ledger: " + ref.state + " (recorded " + String(ref.forecast_at).slice(0, 16).replace("T", " ") +
-          " UTC" + (ref.resolved ? ", resolved" + (ref.hit === true ? " — hit" : ref.hit === false ? " — miss" : "") : ", ~48h window") + ")"
+          " UTC" + (ref.resolved ? ", resolved" + (ref.hit === true ? ", hit" : ref.hit === false ? ", miss" : "") : ", ~48h window") + ")"
         : "no archived ledger record at plan time";
       return '<div class="checkin-row">' +
         '<span class="checkin-title">' + esc(normT(t.title)) + "</span>" +
         '<span class="checkin-vel num ' + cls + '">' + arrow + " " +
-        (then == null ? "—" : then) + " → " + (now == null ? "—" : now) +
+        (then == null ? "n/a" : then) + " → " + (now == null ? "n/a" : now) +
         (delta == null ? "" : " (" + (delta > 0 ? "+" : "") + delta + ")") + "</span>" +
         '<span class="provenance">' + esc(refNote) + "</span></div>";
     }).join("");
     host.innerHTML = '<div class="checkin-result" role="status">' +
-      '<p><strong>Plan-vs-reality check</strong> — velocity at plan time vs now:</p>' +
+      '<p><strong>Plan-vs-reality check</strong>: velocity at plan time vs now:</p>' +
       rows +
       '<p class="provenance">Ledger references are the archived record frozen at plan time. ' +
       "Saved " + esc(String(snap.generated_at).slice(0, 16).replace("T", " ")) + " UTC.</p></div>";
@@ -278,7 +278,7 @@
     if (!host) { return; }
     var list = loadSaved();
     if (!list.length) {
-      host.innerHTML = '<p class="provenance">No saved plans yet — generate a plan and hit ' +
+      host.innerHTML = '<p class="provenance">No saved plans yet. Generate a plan and hit ' +
         "“Save this plan”. Plans are stored in this browser only.</p>";
       return;
     }
@@ -484,7 +484,7 @@
         renderSingle(byId[id]);
       } else {
         status.innerHTML = '<p class="oracle-empty">Pick a topic and hit ' +
-          "<strong>Generate plan</strong> — or switch to <strong>Battle mode</strong> to weave " +
+          "<strong>Generate plan</strong>, or switch to <strong>Battle mode</strong> to weave " +
           "up to 5 trends into one week.</p>";
       }
     }).catch(function () {
