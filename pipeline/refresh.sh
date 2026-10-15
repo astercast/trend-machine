@@ -13,7 +13,7 @@ echo "=== refresh $(date -u +%FT%TZ) ==="
 # nothing is NAMED in a closing summary instead of passing silently
 # (the refresh still exits 0 — a dark lane is data, not a crash).
 DARK_LANES=""
-for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_bluesky fetch_youtube_rss fetch_streamers fetch_tiktok fetch_x; do
+for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_bluesky fetch_charts fetch_wiki fetch_netflix fetch_youtube_rss fetch_streamers fetch_steam fetch_tiktok fetch_x; do
   out="$(python3 "pipeline/$f.py" 2>&1)"
   printf '%s\n' "$out"
   if [ "$f" != fetch_tiktok ] && [ "$f" != fetch_x ]; then

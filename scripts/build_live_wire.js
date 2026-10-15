@@ -5,7 +5,7 @@
 
      1. LANES, every fetcher wired into pipeline/refresh.sh, with
         the hit count and health the pipeline itself recorded:
-          - the 10 lanes that write a stored output file
+          - the 14 lanes that write a stored output file
             (pipeline/out/<lane>.json) carry that file's real hit
             count, its distinct recorded source labels, and the
             newest fetched_at stamp inside the file;
@@ -99,6 +99,15 @@ const LANES = [
     file: "mastodon.json", detail: "Mastodon fediverse trending hashtags (/api/v1/trends/tags, repaired wave 20)." },
   { id: "bluesky", label: "Bluesky", fetcher: "pipeline/fetch_bluesky.py",
     file: "bluesky.json", detail: "Bluesky trending topics (keyless public API)." },
+  { id: "charts", label: "Apple Charts", fetcher: "pipeline/fetch_charts.py",
+    file: "charts.json",
+    detail: "Completeness build B1 (2026-10-15): the board's first chart lane. Apple Marketing Tools keyless JSON feeds: US most-played songs, top free apps, top podcasts, 10 rows each. Evidence type: makeable (categories music / tech / culture), a chart row is something to make, never straight news. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live." },
+  { id: "wiki", label: "Wikipedia (most read)", fetcher: "pipeline/fetch_wiki.py",
+    file: "wiki.json",
+    detail: "Completeness build B2 (2026-10-15): lookup interest, the previous day's most-read English Wikipedia articles with view counts (Wikimedia REST API, keyless, one request). Evidence type: news (category news, listed apart on the board like other straight news). Housekeeping pages are filtered out by the fetcher; on failure it saves an empty file, so the lane reads degraded rather than posing as live." },
+  { id: "netflix", label: "Netflix Top 10", fetcher: "pipeline/fetch_netflix.py",
+    file: "netflix.json",
+    detail: "Completeness build B3 (2026-10-15): streaming charts. Netflix's official all-weeks global TSV (903,899 bytes measured 2026-10-15), newest week only, top 5 of each of the four global charts, 20 hits at most. Evidence type: makeable (category entertainment). The fetcher saves an empty file on failure, so the lane reads degraded rather than posing as live." },
   { id: "youtube", label: "YouTube (Invidious / direct)", fetcher: "pipeline/fetch_youtube.py",
     file: "youtube.json", retired: "2026-10-13",
     detail: "RETIRED 2026-10-13 (DATAOPS-001): every no-key path is dead: all three configured Invidious instances fail (non-JSON, 403, dropped connection), the official instance registry holds exactly one API-enabled public instance and it answers with a bot wall, and youtube.com/feed/trending no longer serves any trending video markup (0 videoRenderer blocks in a 950 KB page). The fetcher is out of refresh.sh and its stored file is deleted, so nothing downstream can mistake its last hits (2026-10-12) for current data. YouTube coverage rides the channel RSS lane below. Revival: set YT_API_KEY (official Data API v3 path in the same fetcher) and re-add fetch_youtube to the refresh loop." },
@@ -107,6 +116,9 @@ const LANES = [
   { id: "streamers", label: "Streamer Desk wire", fetcher: "pipeline/fetch_streamers.py",
     file: "streamers.json",
     detail: "Wave 29: the Streamer Desk's live lane: Google News RSS searches for the streamer beat (Twitch streamers, the Desk's houses, tentpole events). Headlines only: this lane feeds the beat's news sense, never the Desk's directory facts, those are curated and sourced in data/streamer_desk.json. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live." },
+  { id: "steam", label: "Steam (most played)", fetcher: "pipeline/fetch_steam.py",
+    file: "steam.json",
+    detail: "Completeness wave (2026-10-15): Steam's keyless ISteamChartsService weekly rollup, names resolved via the store appdetails endpoint; the player-count lane. The fetcher ran natively on 2026-10-15 and its stored output is that run (25 games, Counter-Strike 2 on top at 1,280,126 peak players; the API rollup and Steam's official most-played chart agree at the top). The lane reads stale-skip only against the board's 2026-10-13 snapshot anchor: real hits, dated, excluded from the current total until the next full refresh." },
   { id: "tiktok", label: "TikTok", fetcher: "pipeline/fetch_tiktok.py",
     file: null,
     detail: "SKIP by design: no vetted keyless TikTok trending source exists (research in PIPELINE.md) and TikTok data is never faked. The lane is covered by seed topics + cross-platform corroboration." },
@@ -267,7 +279,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
     generated_at: now.toISOString(),
     refresh_at: refreshStamp || null,
     method: "Lanes: one row per fetcher wired into pipeline/refresh.sh. " +
-      "The 11 file-writing lanes read pipeline/out/<lane>.json. Hit count " +
+      "The 15 file-writing lanes read pipeline/out/<lane>.json. Hit count " +
       "is that file's array length, source labels are the hits' own " +
       "recorded `source` values, and freshness compares the file's newest " +
       "fetched_at (or, for an empty file, its write time) with " +
