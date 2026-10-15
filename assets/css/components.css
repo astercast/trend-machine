@@ -552,6 +552,10 @@ footer.site-foot {
 }
 @media (max-width: 860px) {
   .head-inner { flex-wrap: wrap; }
-  .head-nav { flex-basis: 100%; }
+  /* phone head composition: the kicker rides the brand row and the
+     menu takes one full row under it, instead of stacking three
+     rows (brand / menu / kicker) over the first screen. */
+  .site-head .kicker { order: 2; margin-left: auto; }
+  .head-nav { order: 3; flex-basis: 100%; }
   .topic-index { grid-template-columns: minmax(0, 1fr); }
 }
