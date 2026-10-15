@@ -154,10 +154,11 @@ TOPIC_TMPL = """<!doctype html>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="head-inner">
 <a class="brand" href="../index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
+<nav class="head-nav" aria-label="Sections"><a href="../index.html#board" aria-current="true">The board</a><a href="../live-wire.html">The Wire</a><a href="../streamer-desk.html">Streamer Desk</a><a href="../formats.html">Formats</a><a href="../algorithms.html">How it works</a></nav>
 <span class="kicker">topic dossier</span>
 </div></header>
 <main id="main" class="wrap">
-<nav aria-label="Breadcrumb" style="margin:20px 0 0"><a href="../index.html" style="font-size:13px">&larr; all trends</a></nav>
+<nav aria-label="Breadcrumb" style="margin:20px 0 0"><a href="../index.html#board" style="font-size:13px">&larr; The board</a> <span aria-hidden="true">&middot;</span> <span class="crumb-here" aria-current="page">{title}</span></nav>
 <article class="topic-hero {tier}">
 <p class="kicker">{kicker}</p>
 <h1>{title}</h1>
@@ -200,7 +201,8 @@ TOPIC_TMPL = """<!doctype html>
 <footer class="site-foot"><div class="wrap foot-grid">
 <div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trend tracking, with the evidence on every row.</span></div>
 <div class="num" style="font-size:12px">data: {ts}</div>
-</div></footer>
+</div>
+<div class="wrap"><nav class="foot-nav" aria-label="Site map"><a href="../index.html#board">The board</a><a href="../live-wire.html">The Wire</a><a href="../streamer-desk.html">Streamer Desk</a><a href="../formats.html">Formats</a><a href="../algorithms.html">How it works</a><a href="../launch-plan.html">Launch planner</a><a href="../api-docs.html">API docs</a></nav></div></footer>
 <script type="application/json" id="export-payload">{payload}</script>
 <script src="../assets/js/tm-copy.js"></script>
 <script src="../assets/js/remix-text.js"></script>
@@ -552,6 +554,19 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     page = _fb_region(page, "tablemeta",
                       "%d of %d trends shown · %d tracked in all · static snapshot, the live board replaces it on load"
                       % (min(TMFB_TABLE_ROWS, len(merged)), len(merged), len(topics)))
+
+    # VP-0038 (rotation 30): the home topic index — every topic's one
+    # primary entry, statically linked from home in title order, so
+    # no dossier depends on the board's client-side rendering to be
+    # found. The ranked lists above stay highlights; this list is
+    # the file itself, one entry per topic, each a full-size row.
+    idx = sorted(topics, key=lambda t: disp_title(t.get("title")).lower())
+    page = _fb_region(page, "topicindex", "".join(
+        '<li><a href="topics/%s.html">%s'
+        '<span class="ti-cat">%s</span></a></li>'
+        % (esc(t["id"]), esc(disp_title(t.get("title"))),
+           esc(t.get("category", "")))
+        for t in idx))
 
     # wave 39 (VP-0011): the One-Look Creator Board, baked as the first
     # screen's static fallback (assets/js/board.js re-renders it from
@@ -1015,6 +1030,104 @@ def inject_root_head_meta():
         print(f"[build] head-meta wired {name}")
 
 
+# ---------------------------------------------------------------------------
+# VP-0038 (rotation 30): persistent chrome on the root pages. The root
+# pages are hand-maintained sources (see the head-meta note above), so
+# the generator owns their header and footer map the same way it owns
+# their head block: every build rewrites the <header class="site-head">
+# block to the one canonical chrome and (re)plants the footer map,
+# idempotently. The duplication the audit flagged is resolved by
+# destination, not by dropping a label: the wordmark goes to the top
+# of the home page, THE BOARD goes to the board itself
+# (index.html#board, the board section's own anchor) — two labels,
+# two landings. Current location is marked in the markup on every
+# page: the matching primary link carries aria-current="page"; a
+# topic dossier and the launch planner live under the board, so
+# their board link carries aria-current="true" (current section),
+# and a dossier's breadcrumb names the topic itself as the current
+# page (see TOPIC_TMPL). Pages outside the primary five (launch
+# planner, API docs) are marked in the footer map instead.
+NAV_ITEMS = [("board", "The board", "index.html#board"),
+             ("wire", "The Wire", "live-wire.html"),
+             ("desk", "Streamer Desk", "streamer-desk.html"),
+             ("formats", "Formats", "formats.html"),
+             ("how", "How it works", "algorithms.html")]
+FOOT_ITEMS = NAV_ITEMS + [("planner", "Launch planner", "launch-plan.html"),
+                          ("api", "API docs", "api-docs.html")]
+CHROME_PAGES = {
+    "index.html":         {"current": "board", "kicker": None},
+    "live-wire.html":     {"current": "wire", "kicker": "⚡ the live wire"},
+    "streamer-desk.html": {"current": "desk", "kicker": None},
+    "formats.html":       {"current": "formats", "kicker": "⧉ format families"},
+    "algorithms.html":    {"current": "how", "kicker": "⚙️ algorithm mechanics"},
+    "api-docs.html":      {"current": "api", "kicker": "🤖 api docs"},
+    "launch-plan.html":   {"current": "planner", "section": "board",
+                           "kicker": "🗓 launch planner"},
+    "404.html":           {"current": None, "kicker": None},
+}
+
+
+def _nav_html(current=None, section=None):
+    out = []
+    for key, label, href in NAV_ITEMS:
+        cur = ""
+        if key == current:
+            cur = ' aria-current="page"'
+        elif key == section:
+            cur = ' aria-current="true"'
+        out.append('<a href="%s"%s>%s</a>' % (href, cur, label))
+    return ('<nav class="head-nav" aria-label="Sections">'
+            + "".join(out) + "</nav>")
+
+
+def _foot_nav_html(current=None):
+    out = []
+    for key, label, href in FOOT_ITEMS:
+        cur = ' aria-current="page"' if key == current else ""
+        out.append('<a href="%s"%s>%s</a>' % (href, cur, label))
+    return ('<nav class="foot-nav" aria-label="Site map">'
+            + "".join(out) + "</nav>")
+
+
+def _chrome_header(cfg):
+    kicker = ('<span class="kicker">%s</span>' % cfg["kicker"]
+              if cfg.get("kicker") else "")
+    return ('<header class="site-head"><div class="head-inner">'
+            '<a class="brand" href="index.html" aria-label="Trend Machine home">'
+            '<span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'
+            'Trend&nbsp;Machine</a>'
+            + _nav_html(current=cfg.get("current"), section=cfg.get("section"))
+            + kicker + "</div></header>")
+
+
+def inject_chrome():
+    import re
+    for name, cfg in CHROME_PAGES.items():
+        path = os.path.join(ROOT, name)
+        if not os.path.exists(path):
+            continue
+        with open(path) as f:
+            page = f.read()
+        page, n = re.subn(r'<header class="site-head">.*?</header>',
+                          lambda m: _chrome_header(cfg), page, count=1,
+                          flags=re.S)
+        if not n:
+            print(f"[build] chrome SKIP {name}: no site-head header found")
+            continue
+        foot = ('<div class="wrap">'
+                + _foot_nav_html(current=cfg.get("current")) + "</div>")
+        if 'class="foot-nav"' in page:
+            page = re.sub(r'<div class="wrap"><nav class="foot-nav">.*?</nav></div>',
+                          lambda m: foot, page, count=1, flags=re.S)
+        elif "</footer>" in page:
+            page = page.replace("</footer>", foot + "</footer>", 1)
+        else:
+            print(f"[build] chrome WARN {name}: no footer to hold the map")
+        with open(path, "w") as f:
+            f.write(page)
+        print(f"[build] chrome wired {name}")
+
+
 LIVE_BASE = "https://trend-machine-live.vercel.app"
 
 
@@ -1206,6 +1319,8 @@ def main():
                         merged=merged_topics, board=board)
     # wave 32: OG / theme-color / favicon head wiring on the root pages
     inject_root_head_meta()
+    # VP-0038 (rotation 30): canonical header + footer map on root pages
+    inject_chrome()
     # Commons round 8: robots.txt, regenerated every build
     write_robots_txt()
     # Commons round 10: canonical + honest JSON-LD on the root pages

@@ -490,3 +490,68 @@ footer.site-foot {
   .field select, .field input { min-height: 44px; }
   .spark-data summary { padding-block: 13px; }
 }
+
+/* ---------- 14 · rotation 30 (VP-0038): persistent chrome ----------
+   The nav-clarity audit found the five-item menu on exactly 1 of
+   401 pages, current location marked on none, and no footer map
+   anywhere. This section carries the shared chrome rules in the
+   one stylesheet every page loads (the .head-nav face itself was
+   set in wave41.css, which only three pages load — the values
+   below mirror it exactly, so those pages do not move):
+   1. the primary menu (brand + The board / The Wire / Streamer
+      Desk / Formats / How it works) renders in the header of
+      every page class, topics and guides included, at desktop
+      and phone alike — no menu control, the five destinations
+      print directly, as they already did on the home page;
+   2. the current destination carries aria-current in the markup
+      and one visible mark here: ink colour plus a live-green
+      rule under the link (green keeps its one job — here, "you
+      are on this part of the wire room");
+   3. every footer carries the same map as a .foot-nav row, so
+      the whole site is one tap from the foot of any page;
+   4. the home topic index (one primary entry per topic) sets
+      each entry as a full 44px row, so the index is a real
+      target, not a line of small print. */
+.head-nav { display: flex; gap: var(--s5); align-items: baseline; flex-wrap: wrap; }
+.head-nav a {
+  font-family: var(--text); font-size: .8rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .12em; color: var(--ink-dim);
+  display: inline-flex; align-items: center; min-height: 44px;
+}
+.head-nav a:hover { color: var(--ink); text-decoration: none; }
+.head-nav a[aria-current] {
+  color: var(--ink); box-shadow: inset 0 -2px 0 var(--live);
+}
+.crumb-here { font-size: 13px; color: var(--ink-dim); }
+.foot-nav {
+  display: flex; flex-wrap: wrap; gap: var(--s1) var(--s5);
+  margin-top: var(--s6); padding-top: var(--s4);
+  border-top: 1px solid var(--line);
+}
+.foot-nav a {
+  font-family: var(--text); font-size: .8rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .12em; color: var(--ink-dim);
+  display: inline-flex; align-items: center; min-height: 44px;
+}
+.foot-nav a:hover { color: var(--ink); text-decoration: none; }
+.foot-nav a[aria-current="page"] {
+  color: var(--ink); box-shadow: inset 0 -2px 0 var(--live);
+}
+.topic-index {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  column-gap: var(--s6);
+}
+.topic-index li { border-top: 1px solid var(--line); min-width: 0; }
+.topic-index a {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: 44px; padding: 6px 0; overflow-wrap: anywhere;
+}
+.topic-index .ti-cat {
+  font-size: 12px; color: var(--ink-faint); letter-spacing: .04em;
+}
+@media (max-width: 860px) {
+  .head-inner { flex-wrap: wrap; }
+  .head-nav { flex-basis: 100%; }
+  .topic-index { grid-template-columns: minmax(0, 1fr); }
+}
