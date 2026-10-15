@@ -37,70 +37,44 @@
     var src = e.source_name ? ' <span class="board-src">(' + esc(normT(e.source_name)) + ")</span>" : "";
     return '<a class="board-title" href="' + esc(e.url) + '">' + esc(normT(e.title)) + src + "</a>";
   }
-  /* rotation 23: marginalia are sentences — mirrors _plats_sentence
-     and _move_sentence in build_site.py. The stored movement token
-     stays a token in board.json; the sentence is display only. */
-  var MOVE_SENTENCE = {
-    rising: "Its spreading is rising since the last check.",
-    cooling: "Its spreading is cooling since the last check.",
-    steady: "Its spreading is holding steady since the last check."
-  };
-  function platsSentence(platforms) {
-    var names = (platforms || []).map(String);
-    if (!names.length) return "";
-    var joined;
-    if (names.length === 1) joined = esc(names[0]);
-    else if (names.length === 2) joined = esc(names[0]) + " and " + esc(names[1]);
-    else joined = names.slice(0, -1).map(esc).join(", ") + ", and " + esc(names[names.length - 1]);
-    return "Seen on " + joined + ".";
+  /* pro rework (2026-10-15): the row is ONE unit — rank, title, one
+     meta line, one Make line, one score. Movement is a word in the
+     meta line; the marginalia stack and the splash chart are
+     retired. Mirrors _fb_board_row / _fb_meta_line in build_site.py. */
+  var MOVE_WORD = { rising: "Rising", cooling: "Cooling", steady: "Steady" };
+  function metaLine(e) {
+    var parts = [e.record || ""];
+    if (e.movement && MOVE_WORD[e.movement]) parts.push(MOVE_WORD[e.movement]);
+    var plats = (e.platforms || []).map(String).slice(0, 3);
+    if (plats.length) parts.push(plats.join(", "));
+    return parts.filter(Boolean).join(" · ");
   }
   function rowHTML(e) {
-    var plats = platsSentence(e.platforms);
-    var marg = "";
-    if (plats) marg += '<p class="board-marg board-marg-plats">' + plats + "</p>";
-    if (e.evidence && e.evidence.length) {
-      marg += '<ul class="board-marg">' + e.evidence.map(function (c) {
-        return "<li>" + esc(normT(c)) + "</li>";
-      }).join("") + "</ul>";
-    }
-    if (e.movement && MOVE_SENTENCE[e.movement]) {
-      marg += '<p class="board-move">' + esc(MOVE_SENTENCE[e.movement]) + "</p>";
-    }
     var aka = "";
     if (e.aka && e.aka.length) {
-      aka = '<span class="board-aka">Also tracked as: ' + esc(e.aka.map(normT).join(" · ")) +
-        ". Same trend, evidence combined.</span>";
+      aka = '<p class="board-aka">Also tracked as: ' + esc(e.aka.map(normT).join(" · ")) +
+        ". Same trend, evidence combined.</p>";
     }
     var badge = "", make = "";
     if (e.kind === "news") {
       badge = '<span class="board-newsbadge">News, watch</span> ';
     } else if (e.angle) {
-      make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(normT(e.angle)) +
-        '<span class="board-fmt"> The format is ' + esc(e.format) + ".</span></p>";
+      make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(normT(e.angle)) + "</p>";
     }
-    var record = e.record ? '<p class="board-record">' + esc(e.record) + "</p>" : "";
-    var splash = !!e.splash;
-    if (splash) {
-      var chart = e.spark_svg ? '<figure class="splash-fig">' + e.spark_svg + "</figure>" : "";
-      return '<li class="board-row splash">' +
-        '<span class="board-rank">' + e.rank + "</span>" +
-        '<div class="board-main">' + badge + titleHTML(e) + record +
-        make + marg + chart + "</div>" +
-        '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-        '<span class="board-unit">worth making / 100</span></div></li>';
-    }
-    return '<li class="board-row' + (e.kind === "news" ? " news" : "") + '">' +
+    var meta = e.record ? '<p class="board-meta">' + esc(metaLine(e)) + "</p>" : "";
+    return '<li class="board-row' + (e.kind === "news" ? " news" : "") + (e.splash ? " splash" : "") + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
-      '<div class="board-main">' + badge + titleHTML(e) + record +
-      aka + make + marg + "</div>" +
+      '<div class="board-main">' + badge + titleHTML(e) + aka + meta + make + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +
-      '<span class="board-unit">worth making / 100</span></div></li>';
+      '<span class="board-unit">/ 100</span>' +
+      '<span class="score-bar" aria-hidden="true"><i style="width:' + e.opportunity_score + '%"></i></span></div></li>';
   }
   function catchupRowHTML(e) {
     return '<li class="catchup-row"><div class="board-main">' + titleHTML(e) +
-      '<p class="board-record">' + esc(e.record) + '</p></div>' +
+      '<p class="board-meta">' + esc(e.record) + '</p></div>' +
       '<div class="board-score"><span class="score-num">' + e.velocity + "</span>" +
-      '<span class="board-unit">spreading now</span></div></li>';
+      '<span class="board-unit">spreading now</span>' +
+      '<span class="score-bar" aria-hidden="true"><i style="width:' + e.velocity + '%"></i></span></div></li>';
   }
   function render(board) {
     var list = document.getElementById("board-list");

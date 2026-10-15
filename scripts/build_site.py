@@ -149,6 +149,7 @@ TOPIC_TMPL = """<!doctype html>
 <link rel="stylesheet" href="../assets/css/wave8.css">
 <link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/wave12.css">
+<link rel="stylesheet" href="../assets/css/pro.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -309,8 +310,29 @@ def record_line(t, ref):
             % (t.get("velocity") or 0, _fb_seen(t.get("last_seen")),
                n, "s" if n != 1 else ""))
 
-def build_topic(t, history_pts=None, plat_hist=None):
-    age, fcls, pulse = age_label(t.get("last_seen", ""))
+def _snapshot_age(iso, ref):
+    """Pro rework (2026-10-15): topic heroes are baked artifacts.
+    Per CRITIC-001 fix 3 (see _fb_seen), a baked surface prints the
+    recorded time itself and takes its freshness class against the
+    snapshot's generated_at — never the build machine's clock.
+    age_label's now-relative words froze a '4 days ago' onto every
+    dossier until the next build, and its class disagreed with the
+    homepage's snapshot-anchored rows."""
+    tt = _fb_parse(iso)
+    if tt is None or ref is None:
+        return "at an unrecorded time", "f-dead", ""
+    mins = max(0.0, (ref - tt).total_seconds() / 60.0)
+    if mins < 60:
+        cls = "f-live"
+    elif mins < 1440:
+        cls = "f-warm"
+    else:
+        cls = "f-dead"
+    return _fb_seen(iso), cls, ""
+
+
+def build_topic(t, history_pts=None, plat_hist=None, ref=None):
+    age, fcls, pulse = _snapshot_age(t.get("last_seen", ""), ref)
     opp, vel = t.get("opportunity_score", 0), t.get("velocity", 0)
     tier = "is-hot" if opp >= 70 else ("is-warm" if opp >= 40 else "")
     ocls = "hot-v" if opp >= 70 else ("warm-v" if opp >= 40 else "live-v")
@@ -455,6 +477,16 @@ def _fb_region(page, name, inner):
     return pat.sub(lambda m: m.group(1) + inner + m.group(2), page, count=1)
 
 
+def _fb_region_opt(page, name, inner):
+    """Pro rework (2026-10-15): regions whose sections deliberately
+    left the homepage (hot5, radar, radarcount, topicindex, wire,
+    hsplatforms) are written only when their markers survive in
+    index.html — a deliberate absence is not a build warning."""
+    if ("<!--TMFB:%s:BEGIN-->" % name) not in page:
+        return page
+    return _fb_region(page, name, inner)
+
+
 
 def _fb_wire_items(topics, generated_at):
     def key(t):
@@ -522,7 +554,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                "",
                esc(record_line(t, ref)),
                t.get("opportunity_score") or 0))
-    page = _fb_region(page, "hot5", "".join(hot))
+    page = _fb_region_opt(page, "hot5", "".join(hot))
 
     memes = sorted((t for t in merged if t.get("category") == "meme"),
                    key=lambda t: -(t.get("velocity") or 0))[:10]
@@ -537,8 +569,8 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                esc(disp_title(t.get("title"))),
                " ".join(esc(h) for h in (t.get("hashtags") or [])[:3]),
                _fb_fresh(t.get("last_seen"), ref)))
-    page = _fb_region(page, "radar", "".join(radar))
-    page = _fb_region(page, "radarcount",
+    page = _fb_region_opt(page, "radar", "".join(radar))
+    page = _fb_region_opt(page, "radarcount",
                       "%d memes moving now" % len(memes))
 
     rows = []
@@ -567,7 +599,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                _fb_fresh(t.get("last_seen"), ref)))
     page = _fb_region(page, "table", "".join(rows))
     page = _fb_region(page, "tablemeta",
-                      "%d of %d trends shown · %d tracked in all · static snapshot, the live board replaces it on load"
+                      "%d of %d trends shown · %d tracked in all · drawn from the same snapshot as the board above"
                       % (min(TMFB_TABLE_ROWS, len(merged)), len(merged), len(topics)))
 
     # VP-0038 (rotation 30): the home topic index — every topic's one
@@ -576,7 +608,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     # found. The ranked lists above stay highlights; this list is
     # the file itself, one entry per topic, each a full-size row.
     idx = sorted(topics, key=lambda t: disp_title(t.get("title")).lower())
-    page = _fb_region(page, "topicindex", "".join(
+    page = _fb_region_opt(page, "topicindex", "".join(
         '<li><a href="topics/%s.html">%s'
         '<span class="ti-cat">%s</span></a></li>'
         % (esc(t["id"]), esc(disp_title(t.get("title"))),
@@ -587,7 +619,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     # screen's static fallback (assets/js/board.js re-renders it from
     # data/v1/board.json when the live payload lands).
     if board is not None:
-        page = _fb_region(page, "wire", _fb_wire_items(topics, generated_at))
+        page = _fb_region_opt(page, "wire", _fb_wire_items(topics, generated_at))
         page = _fb_region(page, "board",
                           "".join(_fb_board_row(e) for e in board["make_now"]))
         page = _fb_region(page, "boardnews",
@@ -608,16 +640,16 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     else:
         stamp = esc(generated_at)
     page = _fb_region(page, "datats",
-                      'updated <span class="num">%s</span> · static snapshot' % stamp)
+                      'Snapshot <span class="num">%s</span>' % stamp)
     page = _fb_region(page, "hstopics", str(len(topics)))
     plats = set()
     for t in topics:
         plats.update(t.get("platforms") or [])
-    page = _fb_region(page, "hsplatforms", str(len(plats)))
+    page = _fb_region_opt(page, "hsplatforms", str(len(plats)))
 
     with open(path, "w") as f:
         f.write(page)
-    print("[build] home fallback: %d hot / %d radar / %d table rows baked into index.html"
+    print("[build] home fallback: board/news/catchup regions + %d table rows baked into index.html (hot/radar composed: %d/%d, regions retired)"
           % (min(5, len(topics)), len(memes), min(TMFB_TABLE_ROWS, len(topics))))
 
 
@@ -922,49 +954,51 @@ def _plats_sentence(platforms):
     return "Seen on %s." % joined
 
 
-def _fb_board_row(e):
-    plats = _plats_sentence(e["platforms"])
-    ev = "".join("<li>%s</li>" % esc(disp_text(c)) for c in e["evidence"])
-    marg = ""
+# pro rework (2026-10-15): the board row is ONE unit — rank, title,
+# one meta line, one Make line, one score. The marginalia stack
+# (platforms sentence, evidence bullet list, movement sentence) and
+# the splash sparkline are retired from the board: the meta line
+# carries spreading / movement / last seen / sources / platforms in
+# a single mono line, and the full evidence record lives on the
+# topic's own page. Movement is a word in the meta line, not a
+# sentence. Mirrors board.js rowHTML exactly.
+_MOVE_WORD = {"rising": "Rising", "cooling": "Cooling", "steady": "Steady"}
+
+
+def _fb_meta_line(e):
+    parts = [e["record"]]
+    w = _MOVE_WORD.get(e.get("movement") or "")
+    if w:
+        parts.append(w)
+    plats = [str(p) for p in (e.get("platforms") or [])][:3]
     if plats:
-        marg += '<p class="board-marg board-marg-plats">%s</p>' % plats
-    if ev:
-        marg += '<ul class="board-marg">%s</ul>' % ev
-    move_s = _move_sentence(e.get("movement"))
-    if move_s:
-        marg += '<p class="board-move">%s</p>' % esc(move_s)
+        parts.append(", ".join(plats))
+    return " · ".join(parts)
+
+
+def _fb_board_row(e):
     aka = ""
     if e.get("aka"):
-        aka = ('<span class="board-aka">Also tracked as: %s. Same trend, '
-               'evidence combined.</span>' % esc(" · ".join(disp_title(a) for a in e["aka"])))
+        aka = ('<p class="board-aka">Also tracked as: %s. Same trend, '
+               'evidence combined.</p>' % esc(" · ".join(disp_title(a) for a in e["aka"])))
     badge = ""
     make = ""
     if e["kind"] == "news":
         badge = '<span class="board-newsbadge">News, watch</span> '
     elif e.get("angle"):
-        make = ('<p class="board-angle"><span class="board-make">Make</span> %s'
-                '<span class="board-fmt"> The format is %s.</span></p>'
-                % (esc(disp_text(e["angle"])), esc(e["format"])))
-    record = '<p class="board-record">%s</p>' % esc(e["record"])
+        make = ('<p class="board-angle"><span class="board-make">Make</span> %s</p>'
+                % esc(disp_text(e["angle"])))
+    meta = '<p class="board-meta">%s</p>' % esc(_fb_meta_line(e))
     splash = bool(e.get("splash"))
-    if splash:
-        chart = ""
-        if e.get("spark_svg"):
-            chart = '<figure class="splash-fig">%s</figure>' % e["spark_svg"]
-        return ('<li class="board-row splash"><span class="board-rank">%d</span>'
-                '<div class="board-main">%s%s%s%s%s%s</div>'
-                '<div class="board-score"><span class="score-num">%d</span>'
-                '<span class="board-unit">worth making / 100</span></div></li>'
-                % (e["rank"], badge, _fb_title_html(e), record, make, marg,
-                   chart, e["opportunity_score"]))
-    return ('<li class="board-row%s"><span class="board-rank">%d</span>'
-            '<div class="board-main">%s%s%s%s%s'
-            '%s</div>'
+    return ('<li class="board-row%s%s"><span class="board-rank">%d</span>'
+            '<div class="board-main">%s%s%s%s%s</div>'
             '<div class="board-score"><span class="score-num">%d</span>'
-            '<span class="board-unit">worth making / 100</span></div></li>'
+            '<span class="board-unit">/ 100</span>'
+            '<span class="score-bar" aria-hidden="true"><i style="width:%d%%"></i></span></div></li>'
             % (" news" if e["kind"] == "news" else "",
-               e["rank"], badge, _fb_title_html(e), record, aka, make, marg,
-               e["opportunity_score"]))
+               " splash" if splash else "",
+               e["rank"], badge, _fb_title_html(e), aka, meta, make,
+               e["opportunity_score"], e["opportunity_score"]))
 
 
 def _fb_catchup_row(e):
@@ -972,10 +1006,12 @@ def _fb_catchup_row(e):
     the rail is a record of what cooled, not a ranking. The numeral is
     the topic's current velocity; its peak rides in the record line."""
     return ('<li class="catchup-row"><div class="board-main">%s'
-            '<p class="board-record">%s</p></div>'
+            '<p class="board-meta">%s</p></div>'
             '<div class="board-score"><span class="score-num">%d</span>'
-            '<span class="board-unit">spreading now</span></div></li>'
-            % (_fb_title_html(e), esc(e["record"]), e["velocity"]))
+            '<span class="board-unit">spreading now</span>'
+            '<span class="score-bar" aria-hidden="true"><i style="width:%d%%"></i></span></div></li>'
+            % (_fb_title_html(e), esc(e["record"]), e["velocity"],
+               e["velocity"]))
 
 
 # wave 32 (Foundry round 2; round-11 placement packet): the root pages are
@@ -997,7 +1033,7 @@ ROOT_PAGES = ["index.html", "live-wire.html", "streamer-desk.html",
               "formats.html", "launch-plan.html", "algorithms.html",
               "api-docs.html", "404.html"]
 OG_IMAGE_URL = "https://trend-machine-live.vercel.app/assets/og-card.png"
-THEME_COLOR = "#070a08"  # assets/css/tokens.css --bg (rotation 23 green-black)
+THEME_COLOR = "#0a0b0c"  # assets/css/tokens.css --bg (v3 neutral charcoal)
 
 
 def inject_root_head_meta():
@@ -1070,13 +1106,13 @@ FOOT_ITEMS = NAV_ITEMS + [("planner", "Launch planner", "launch-plan.html"),
                           ("api", "API docs", "api-docs.html")]
 CHROME_PAGES = {
     "index.html":         {"current": "board", "kicker": None},
-    "live-wire.html":     {"current": "wire", "kicker": "⚡ the live wire"},
+    "live-wire.html":     {"current": "wire", "kicker": "the wire"},
     "streamer-desk.html": {"current": "desk", "kicker": None},
-    "formats.html":       {"current": "formats", "kicker": "⧉ format families"},
-    "algorithms.html":    {"current": "how", "kicker": "⚙️ algorithm mechanics"},
-    "api-docs.html":      {"current": "api", "kicker": "🤖 api docs"},
+    "formats.html":       {"current": "formats", "kicker": "format families"},
+    "algorithms.html":    {"current": "how", "kicker": "algorithm mechanics"},
+    "api-docs.html":      {"current": "api", "kicker": "api docs"},
     "launch-plan.html":   {"current": "planner", "section": "board",
-                           "kicker": "🗓 launch planner"},
+                           "kicker": "launch planner"},
     "404.html":           {"current": None, "kicker": None},
 }
 
@@ -1301,7 +1337,8 @@ def main():
         live_ids.add(t["id"])
         with open(os.path.join(tdir, t["id"] + ".html"), "w") as f:
             f.write(build_topic(t, history.get(t["id"], []),
-                                plat_history.get(t["id"], {})))
+                                plat_history.get(t["id"], {}),
+                                ref=_fb_parse(data["generated_at"])))
     # remove orphaned pages from pruned topics
     orphans = 0
     for fn in os.listdir(tdir):

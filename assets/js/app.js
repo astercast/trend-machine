@@ -56,6 +56,15 @@
     if (isNaN(t)) return Infinity;
     return Math.max(0, (Date.now() - t) / 60000);
   }
+  /* pro rework (2026-10-15): absolute UTC stamp, format-identical
+     to the baked datats string ("%b %-d, %Y, %-I:%M %p UTC"). */
+  var TM_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function tmStampUTC(d) {
+    var h = d.getUTCHours(), ap = h >= 12 ? "PM" : "AM", h12 = h % 12 || 12;
+    var mm = ("0" + d.getUTCMinutes()).slice(-2);
+    return TM_MONTHS[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear() +
+      ", " + h12 + ":" + mm + " " + ap + " UTC";
+  }
   /* rotation 22 (§4.1/§4.2): ages state in words on every surface.
      Mirrors _age_words() in build_site.py. */
   function ageWords(m) {
@@ -421,7 +430,12 @@
       if (gen && data.generated_at) {
         var d = new Date(data.generated_at);
         getEpoch = d.getTime();
-        gen.innerHTML = 'updated <span class="num">' + d.toLocaleString() + "</span>";
+        /* pro rework (2026-10-15): the client stamp must say what
+           the baked stamp says — "Snapshot" + the absolute UTC time.
+           The old rewrite printed a bare locale date and dropped
+           the words "static snapshot", dressing a snapshot up as a
+           live feed. */
+        gen.innerHTML = 'Snapshot <span class="num">' + tmStampUTC(d) + "</span>";
       }
       lampTest(false); /* V35E complete — board is live */
       clearAlarm(wasAlarmed); wasAlarmed = false; /* GO only after an alarm */

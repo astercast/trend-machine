@@ -357,10 +357,6 @@ def main():
             return m.group(1) if m else None
 
         _trends = json.load(open(os.path.join(ROOT, "data", "v1", "trends.json")))
-        _top5 = sorted(_trends.get("topics", []),
-                       key=lambda t: -(t.get("opportunity_score") or 0))[:5]
-        _hot = _region("hot5") or ""
-        check("vp0001 fallback hot5 has 5 static rows", _hot.count("hot-row") >= 5)
         def _disp(t):
             t = _re.sub(r"\s+[\u2014\u2013]\s+", ", ", t)
             t = t.replace("\u2014", "-").replace("\u2013", "-")
@@ -368,16 +364,43 @@ def main():
                         "", t, flags=_re.I)
             t = _re.sub(r"\s{2,}", " ", t).strip()
             return _re.sub(r"[\s\u00b7]+$", "", t)
-        check("vp0001 fallback hot5 = stored top 5 (display-normalized titles)",
-              all(_html.escape(_disp(t["title"]), quote=True) in _hot for t in _top5))
+        # pro rework (2026-10-15): the fallback contract is now THE
+        # BOARD. The hot5 / radar / stations / wire-rail / topic-index
+        # sections deliberately left the homepage (the same topics
+        # four times over broke the five-second law); the pins below
+        # hold the new contract at the old strength: the baked board
+        # must equal board.json, in order, and the cut sections must
+        # stay cut.
+        _board = json.load(open(os.path.join(ROOT, "data", "v1", "board.json")))
+        _mk = _board.get("make_now", [])
+        _nw = _board.get("news_watch", [])
+        _cu = _board.get("catchup", [])
+        _breg = _region("board") or ""
+        check("pro fallback board rows == board.json make_now",
+              _breg.count('class="board-row') == len(_mk) and len(_mk) >= 1)
+        _pos = [_breg.find(_html.escape(_disp(e["title"]), quote=True)) for e in _mk]
+        check("pro fallback board titles match board.json in order",
+              all(p >= 0 for p in _pos) and _pos == sorted(_pos))
+        _nreg = _region("boardnews") or ""
+        check("pro fallback news rows == board.json news_watch",
+              _nreg.count('class="board-row news') == len(_nw))
+        _creg = _region("catchup") or ""
+        check("pro fallback catchup rows == board.json catchup",
+              _creg.count('class="catchup-row"') == len(_cu) or "catchup-none" in _creg)
+        check("pro homepage duplication stays cut",
+              'id="hot5"' not in home and 'id="radar-strip"' not in home
+              and 'class="stations"' not in home and "wire-rail" not in home
+              and "topic-index" not in home)
         _tbl = _region("table") or ""
         check("vp0001 fallback table has 30 static rows", _tbl.count("<tr") >= 30)
-        check("vp0001 fallback radar has 10 static cards",
-              (_region("radar") or "").count("meme-row") >= 10)
-        check("vp0001 fallback labeled as static snapshot",
-              "static snapshot" in (_region("datats") or ""))
-        check("vp0001 fallback table-meta labeled",
-              "static snapshot" in (_region("tablemeta") or ""))
+        check("pro fallback stamp names the snapshot with an absolute time",
+              "Snapshot" in (_region("datats") or "")
+              and _re.search(r"\b\d{4}\b", _region("datats") or "") is not None)
+        check("pro fallback table-meta names the snapshot",
+              "snapshot" in (_region("tablemeta") or ""))
+        _appjs = open(os.path.join(ROOT, "assets", "js", "app.js")).read()
+        check("pro client stamp keeps the Snapshot label",
+              'Snapshot <span class="num">' in _appjs and "tmStampUTC" in _appjs)
         for _fname, _marker in [("assets/js/app.js", "armWatchdog"),
                                 ("assets/js/makeover.js", "withDeadline"),
                                 ("live-wire.html", "deadline"),

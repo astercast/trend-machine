@@ -1,54 +1,57 @@
 /* ============================================================
-   TREND MACHINE — design tokens v2 · "mission control"
-   Signal-driven dark system. Freshness is a visual language:
-   live = bright + breathing · warm = amber · stale = dimming
+   TREND MACHINE — design tokens v3 · "the sheet" (pro rework,
+   2026-10-15). A neutral professional system: no color tint in
+   the ground, no glows, one accent that means one thing (heat).
+   Freshness is stated in words and absolute stamps, never
+   performed with pulses: the data is a snapshot, and the design
+   says so. Two type voices — Libre Franklin for everything a
+   person reads, Space Mono for stamps, ranks and numerals.
    ============================================================ */
 :root {
-  /* ---- surfaces (rotation 23, the wire room: the near-black is
-     tinted toward green-black — a coloured dark, never black with a
-     blue/purple wash; layered, never flat gradients) ---- */
-  --bg-0:        #040705;
-  --bg:          #070a08;
-  --bg-soft:     #0a0f0b;
-  --panel:       #0d120e;
-  --panel-2:     #111711;
-  --panel-3:     #182218;
-  --line:        #243528;
-  --line-soft:   #182419;
-  --line-bright: #3a5240;
+  /* ---- surfaces: true neutral charcoal, untinted ---- */
+  --bg-0:        #060708;
+  --bg:          #0a0b0c;
+  --bg-soft:     #0d0e10;
+  --panel:       #101214;
+  --panel-2:     #141619;
+  --panel-3:     #1a1c1f;
+  --line:        #232529;
+  --line-soft:   #17181b;
+  --line-bright: #3a3d42;
 
-  /* ---- ink (a green-tinted newsprint white, not blue-grey) ---- */
-  --ink:         #eef3ec;
-  --ink-dim:     #a9b8a9;
-  --ink-faint:   #71826f;
-  --ink-ghost:   #49584a;
+  /* ---- ink: neutral warm-white scale ---- */
+  --ink:         #f2f2ef;
+  --ink-dim:     #a4a7ac;
+  --ink-faint:   #6f7278;
+  --ink-ghost:   #45474c;
 
-  /* ---- signal tiers ---- */
-  --live:        #41ff8a;
-  --live-dim:    rgba(65, 255, 138, .13);
-  --live-glow:   0 0 18px rgba(65, 255, 138, .35);
-  --hot:         #ff5468;
-  --hot-deep:    #d63a50;
-  --hot-dim:     rgba(255, 84, 104, .12);
-  --hot-glow:    0 0 22px rgba(255, 84, 104, .35);
-  --warm:        #ffb224;
-  --warm-dim:    rgba(255, 178, 36, .12);
-  --dead:        #5a6272;
-  --signal:      #53e9ff;
-  --signal-dim:  rgba(83, 233, 255, .10);
-  --violet:      #b48cff;
-  --violet-deep: #7d5cd6;
-  --violet-dim:  rgba(180, 140, 255, .12);
-  --violet-glow: 0 0 22px rgba(180, 140, 255, .30);
+  /* ---- signal tiers: muted, functional, never decorative.
+     --hot is THE accent: score heat + rising movement only. ---- */
+  --live:        #46b978;
+  --live-dim:    rgba(70, 185, 120, .12);
+  --live-glow:   none;
+  --hot:         #ff5347;
+  --hot-deep:    #d63f35;
+  --hot-dim:     rgba(255, 83, 71, .10);
+  --hot-glow:    none;
+  --warm:        #dfa13c;
+  --warm-dim:    rgba(223, 161, 60, .10);
+  --dead:        #62656b;
+  --signal:      #a4a7ac;
+  --signal-dim:  rgba(164, 167, 172, .08);
+  --violet:      #a4a7ac;
+  --violet-deep: #6f7278;
+  --violet-dim:  rgba(164, 167, 172, .08);
+  --violet-glow: none;
 
-  /* ---- type (rotation 23: three voices, three jobs — Chakra Petch
-     sets headlines and headline numerals; Libre Franklin, a chosen
-     self-hosted text face, sets everything a person reads; Space
-     Mono sets timestamps and datelines only) ---- */
-  --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  /* ---- type (v3: two voices — Libre Franklin sets everything a
+     person reads, headlines included; Space Mono sets stamps,
+     ranks and data readouts. Chakra Petch is retired from the
+     presented site: its techno voice read gamer-dashboard.) ---- */
+  --mono: "Space Mono", "Space Mono Fallback", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   --sans: "Libre Franklin", "Libre Franklin Fallback", Georgia, serif;
   --text: "Libre Franklin", "Libre Franklin Fallback", Georgia, serif;
-  --display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
+  --display: "Libre Franklin", "Libre Franklin Fallback", "Arial Narrow", sans-serif;
 
   /* type scale */
   --fs-hero:     clamp(2rem, 4.6vw, 3.25rem);
@@ -85,25 +88,23 @@
   --z-ticker: 40;
 }
 
-/* ---- wave 12 · war-room identity tokens (append-only) ---- */
+/* ---- wave 12 · identity tokens (v3 harmonized: the war-room
+   plate furniture survives only as neutral surfaces; its green
+   tints and reticle glass are retired with the costume) ---- */
 :root {
-  /* distinctive typography of its own — shared with no other fleet site:
-     Chakra Petch = display voice; Space Mono = data readouts and the wire */
-  --font-display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
+  --font-display: "Libre Franklin", "Libre Franklin Fallback", "Arial Narrow", sans-serif;
   --font-data: "Space Mono", "Space Mono Fallback", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   --mono: "Space Mono", "Space Mono Fallback", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
-  --display: "Chakra Petch", "Chakra Petch Fallback", "Arial Narrow", sans-serif;
+  --display: "Libre Franklin", "Libre Franklin Fallback", "Arial Narrow", sans-serif;
 
-  /* press furniture (rotation 23: the instrument plate becomes the
-     press plate — same tokens, green-black tints) */
-  --plate:        #0a0e0a;   /* press plate surface */
-  --plate-ink:    #8b9a8b;   /* plate label ink (decorative only) */
-  --rivet:        #2b3a2d;   /* press furniture metal */
-  --rivet-slot:   #040604;   /* slot */
-  --bezel-hi:     rgba(255, 255, 255, .07);
-  --scope-bg:     #040604;   /* wire glass */
-  --reticle:      rgba(83, 233, 255, .08);
-  --tape-bg:      #090c09;   /* ticker tape */
-  --alarm:        #ffb224;   /* 1202 alarm amber */
+  --plate:        #0c0d0f;   /* plate surface */
+  --plate-ink:    #8a8d93;   /* plate label ink (decorative only) */
+  --rivet:        #2c2e33;   /* furniture metal */
+  --rivet-slot:   #060708;   /* slot */
+  --bezel-hi:     rgba(255, 255, 255, .06);
+  --scope-bg:     #060708;   /* scope glass */
+  --reticle:      rgba(164, 167, 172, .07);
+  --tape-bg:      #0a0b0c;   /* ticker tape */
+  --alarm:        #dfa13c;   /* 1202 alarm amber */
   --alarm-deep:   #8a5a00;
 }

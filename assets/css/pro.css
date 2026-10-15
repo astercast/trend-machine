@@ -1,0 +1,365 @@
+/* ============================================================
+   TREND MACHINE — pro.css · the professional rework layer
+   (2026-10-15). Loaded LAST on every page: this file is the
+   final word over the wave layers it succeeds.
+
+   The system, in one paragraph: a neutral charcoal ground with
+   no color tint; two type voices (Libre Franklin for everything
+   a person reads, Space Mono for stamps, ranks and numerals);
+   one accent, heat #ff5347, that means exactly score heat and
+   rising movement; hairline rules instead of panels, glows and
+   shadows; and no motion that performs liveness — the data is
+   a snapshot and the design says so.
+   ============================================================ */
+
+/* ---------- global discipline ---------- */
+::selection { background: var(--hot-dim); }
+:focus-visible { outline: 2px solid var(--hot); outline-offset: 2px; }
+.dot.pulse, .blink { animation: none !important; }
+.led { box-shadow: none !important; }
+
+/* ---------- chrome ---------- */
+.site-head {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+.brand {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  font-size: 1.02rem;
+}
+.brand-mark i { background: var(--ink-dim); }
+.brand-mark i:last-child { background: var(--hot); }
+.head-nav a {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: .83rem;
+  letter-spacing: .02em;
+  text-transform: none;
+  color: var(--ink-dim);
+}
+.head-nav a:hover { color: var(--ink); }
+.head-nav a[aria-current] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--hot); }
+.site-foot { border-top: 1px solid var(--line); background: var(--bg); }
+.foot-nav a { color: var(--ink-dim); }
+.foot-nav a:hover { color: var(--ink); }
+
+/* ---------- shared furniture ---------- */
+.section-head { border-bottom: 1px solid var(--line); }
+.section-head h2 {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -.01em;
+  font-size: 1.35rem;
+}
+.sec-no { font-family: var(--mono); color: var(--ink-ghost); font-size: .8em; }
+.kicker {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-size: .68rem;
+  color: var(--ink-faint);
+}
+.btn, .btn-primary, .btn-ghost {
+  border-radius: 6px;
+  box-shadow: none;
+  font-family: var(--sans);
+  font-weight: 600;
+}
+.btn-primary { background: var(--hot); border-color: var(--hot); color: #fff; }
+.btn-primary:hover { background: var(--hot-deep); border-color: var(--hot-deep); }
+
+/* ---------- the board: masthead ---------- */
+.board-hero { background: var(--bg); }
+.board-shell {
+  display: block;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.broadsheet { max-width: none; }
+.board-folio {
+  font-family: var(--mono);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.board-masthead h1, h1#board-h {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -.022em;
+  line-height: 1.04;
+  font-size: clamp(2.15rem, 5.2vw, 3.3rem);
+  margin: 18px 0 12px;
+}
+.board-sub {
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ink-dim);
+  max-width: 62ch;
+  margin: 0 0 14px;
+}
+.board-facts {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-faint);
+  border-bottom: 2px solid var(--line-bright);
+  padding-bottom: 14px;
+  margin: 0;
+}
+.board-facts .num { color: var(--ink-dim); }
+/* wave39's masthead carried its own 3px double rule under the facts
+   line; the facts line's single rule is the system now */
+.board-masthead { border-bottom: 0; padding-bottom: 0; }
+
+/* ---------- meters: the VU rainbow is retired fleet-wide ----------
+   wave12 painted .score-bar i with a green-to-red gradient under
+   !important and components.css masked it into segments. The new
+   system: one solid hairline bar; color only from the tier. */
+.score-bar {
+  height: 3px !important;
+  background: var(--line);
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+.score-bar i {
+  background: var(--ink-dim) !important;
+  box-shadow: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+.score.hot .score-bar i { background: var(--hot) !important; }
+.score.warm .score-bar i { background: var(--warm) !important; }
+.board-score .score-bar i, .catchup-row .score-bar i { background: var(--hot) !important; }
+
+/* the splash is a row like every other — bigger type, no double
+   rules, no extra box (wave41's broadsheet ceremony retired) */
+.board-row.splash {
+  border-top: 0;
+  border-bottom: 1px solid var(--line-soft);
+  padding: 20px 0 18px;
+  margin: 0;
+  background: transparent;
+}
+.board-row.splash .board-rank { font-size: 1.9rem; padding-top: 0; }
+
+/* ---------- the board: rows ---------- */
+.board-list { list-style: none; margin: 0; padding: 0; }
+.board-row {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr 7.2rem;
+  gap: 14px;
+  padding: 20px 0 18px;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: start;
+}
+.board-rank {
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: var(--ink-faint);
+  padding-top: 7px;
+}
+.board-main { min-width: 0; }
+.board-title {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.24rem;
+  line-height: 1.28;
+  letter-spacing: -.008em;
+  color: var(--ink);
+  text-decoration: none;
+}
+a.board-title:hover { text-decoration: underline; text-decoration-color: var(--hot); text-underline-offset: 3px; }
+.board-src { color: var(--ink-faint); font-weight: 400; font-size: .78em; }
+.board-aka { color: var(--ink-faint); font-size: .8rem; margin: 5px 0 0; }
+.board-meta {
+  font-family: var(--mono);
+  font-size: .72rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  margin: 7px 0 0;
+}
+.board-angle {
+  font-size: .94rem;
+  line-height: 1.45;
+  color: var(--ink-dim);
+  margin: 8px 0 0;
+}
+.board-make {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--hot);
+  margin-right: 9px;
+}
+.board-score { text-align: right; }
+.board-score .score-num {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  display: block;
+}
+.board-score .board-unit {
+  font-family: var(--mono);
+  font-size: .62rem;
+  color: var(--ink-faint);
+  display: block;
+  margin-top: 4px;
+}
+.board-score .score-bar {
+  display: block;
+  height: 3px;
+  background: var(--line);
+  margin-top: 9px;
+}
+.board-score .score-bar i {
+  display: block;
+  height: 100%;
+  background: var(--hot);
+  transform-origin: left;
+  animation: proGrow .7s var(--ease-out) both;
+}
+@keyframes proGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.board-row.splash .board-title { font-size: 1.55rem; font-weight: 800; }
+.board-row.splash .board-score .score-num { color: var(--hot); font-size: 2.5rem; }
+.board-row.splash .board-rank { color: var(--hot); }
+
+/* news block: labelled, set apart, quieter */
+.board-news-block { margin-top: 30px; }
+.board-news-h {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--ink-dim);
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin: 0 0 4px;
+}
+.board-newsbadge {
+  font-family: var(--mono);
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--warm);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2px 6px;
+  vertical-align: 3px;
+  white-space: nowrap;
+}
+.board-row.news .board-title { font-weight: 500; font-size: 1.08rem; }
+.board-row.news .board-score .score-num { color: var(--ink-dim); }
+.board-note { color: var(--ink-faint); font-size: .83rem; line-height: 1.55; max-width: 68ch; margin: 18px 0 0; }
+
+/* catch-up: the cooling rail, deliberately quiet */
+.catchup { margin-top: 34px; }
+.catchup-h { font-family: var(--sans); font-weight: 700; font-size: 1.02rem; margin: 0; }
+.catchup-sub { color: var(--ink-faint); font-size: .85rem; margin: 5px 0 0; }
+.catchup-list { list-style: none; margin: 6px 0 0; padding: 0; }
+.catchup-row {
+  display: grid;
+  grid-template-columns: 1fr 7.2rem;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: start;
+}
+.catchup-row .board-title { font-size: 1rem; font-weight: 500; }
+.catchup-row .board-score .score-num { font-size: 1.35rem; color: var(--ink-dim); }
+.catchup-none { color: var(--ink-faint); font-size: .88rem; padding: 12px 0; }
+
+/* ---------- directory: the rest of the record, one click each ---------- */
+.directory { margin-top: var(--s16); }
+.dir-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+.dir-list li { border-bottom: 1px solid var(--line-soft); padding: 15px 0 13px; }
+.dir-list a {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.dir-list a:hover { color: var(--hot); }
+.dir-list span { display: block; color: var(--ink-faint); font-size: .85rem; line-height: 1.45; margin-top: 3px; }
+
+/* ---------- the table, one layer down ---------- */
+.controls input, .controls select {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  box-shadow: none;
+}
+.dtable th {
+  font-family: var(--mono);
+  font-size: .66rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--ink-faint);
+}
+.dtable tbody tr:hover { background: var(--panel); }
+.topic-link { font-weight: 600; }
+.fresh-legend { color: var(--ink-faint); font-size: .78rem; }
+
+/* ---------- topic dossiers ---------- */
+.topic-hero h1 { font-family: var(--sans); font-weight: 800; letter-spacing: -.02em; }
+.tf-num { font-family: var(--mono); }
+
+/* ---------- phone ---------- */
+@media (max-width: 640px) {
+  .head-nav a { white-space: nowrap; }
+  h1#board-h { font-size: 1.92rem; margin: 14px 0 10px; }
+  .board-sub { font-size: .95rem; }
+  .board-shell { padding: 0 16px; }
+  .board-row { grid-template-columns: 1.5rem 1fr 4.4rem; gap: 10px; padding: 16px 0 14px; }
+  .board-row.splash { padding: 16px 0 14px; }
+  .board-row.splash .board-rank { font-size: 1.35rem; }
+  .board-rank { padding-top: 5px; font-size: .78rem; }
+  .board-title { font-size: 1.1rem; }
+  .board-row.splash .board-title { font-size: 1.28rem; }
+  .board-score .score-num { font-size: 1.45rem; }
+  .board-row.splash .board-score .score-num { font-size: 1.8rem; }
+  .board-meta { font-size: .68rem; }
+  .catchup-row { grid-template-columns: 1fr 4.4rem; gap: 10px; }
+  .dir-list { grid-template-columns: 1fr; }
+}
+
+/* wave41's 480px splash anatomy (rank+score on their own line,
+   story beneath) retired: with the splash rank and title at the
+   new sizes, the three-column row holds at phone widths and the
+   board keeps one rhythm from rank 1 to rank 7 */
+@media (max-width: 480px) {
+  .board-row.splash { grid-template-columns: 1.5rem 1fr 4.4rem; grid-template-areas: none; }
+  .board-row.splash .board-rank,
+  .board-row.splash .board-main,
+  .board-row.splash .board-score { grid-area: auto; }
+}
+
+/* ---------- reduced motion: the snapshot does not perform ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .board-score .score-bar i { animation: none; }
+  * { transition-duration: .01ms !important; }
+}
