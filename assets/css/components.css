@@ -551,11 +551,13 @@ footer.site-foot {
   font-size: 12px; color: var(--ink-faint); letter-spacing: .04em;
 }
 @media (max-width: 860px) {
-  .head-inner { flex-wrap: wrap; }
+  .head-inner { flex-wrap: wrap; gap: var(--s2); }
   /* phone head composition: the kicker rides the brand row and the
      menu takes one full row under it, instead of stacking three
-     rows (brand / menu / kicker) over the first screen. */
+     rows (brand / menu / kicker) over the first screen. The gaps
+     tighten to the wave41 phone values so the brand row fits the
+     kicker beside it and the menu wraps in two rows, not three. */
   .site-head .kicker { order: 2; margin-left: auto; }
-  .head-nav { order: 3; flex-basis: 100%; }
+  .head-nav { order: 3; flex-basis: 100%; gap: var(--s2) var(--s4); }
   .topic-index { grid-template-columns: minmax(0, 1fr); }
 }
