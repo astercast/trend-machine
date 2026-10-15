@@ -561,3 +561,28 @@ footer.site-foot {
   .head-nav { order: 3; flex-basis: 100%; gap: var(--s2) var(--s4); }
   .topic-index { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ---------- 15 · rotation 30 (S5 residue): stacked-table primary links ----------
+   The r29 pass fixed the standalone chrome and named the row, list
+   and prose classes unforced. This pass takes the one class that
+   is neither a sentence link nor a citation: the PRIMARY link of a
+   stacked phone table cell. At phone widths the home census table
+   and the formats leaderboard both stack (each cell on its own
+   line); the topic title / family name is that cell's whole
+   content and the row's main tap target, measured 17–22px tall.
+   Inside the phone block only, those links become full cell rows
+   at the 44px floor: a one-line title grows its own cell line,
+   nothing beside it moves, and no row system changes width or
+   order. Citation lines (.sd-srcs), prose and list links stay
+   named and unforced in the landing record — they are credits
+   and sentences, not targets. Desktop is untouched: every rule
+   below lives inside the phone media query. */
+@media (max-width: 860px) {
+  a.topic-link {
+    display: flex; align-items: center; min-height: 44px;
+    min-width: 0; overflow-wrap: anywhere;
+  }
+  table.sc-table td a {
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+}
