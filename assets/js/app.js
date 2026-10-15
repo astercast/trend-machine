@@ -282,12 +282,22 @@
     box.hidden = false;
   }
 
+  var TABLE_CAP = 30;
   function renderTable() {
     var el = document.getElementById("dtable-body");
     if (!el) return;
     var list = filtered();
     var meta = document.getElementById("table-meta");
     if (meta) meta.textContent = list.length + " of " + mergedTopics().length + " trends shown · " + state.topics.length + " tracked in all";
+    /* CRITIC-001 fix 2: the homepage routes, it does not dump. The
+       default view bakes/renders the top TABLE_CAP rows (the same
+       cap the static fallback uses); the full board is one tap
+       away, and any filter, search, or phase shows its full set. */
+    var defaultView = state.platform === "all" && state.category === "all" &&
+      state.phase === "all" && !state.q;
+    var capped = defaultView && !state.showAll && list.length > TABLE_CAP;
+    var totalShown = list.length;
+    if (capped) list = list.slice(0, TABLE_CAP);
     el.innerHTML = list.map(function (t, i) {
       var stale = t.stale ? ' class="is-stale"' : '';
       var aka = (t.merged_from && t.merged_from.length)
@@ -301,7 +311,11 @@
         '<td data-label="Spreading">' + scoreHTML(t.velocity) + "</td>" +
         '<td data-label="Movement">' + trendCell(t) + "</td>" +
         '<td data-label="Last seen">' + freshHTML(t.last_seen) + "</td></tr>";
-    }).join("");
+    }).join("") + (capped ?
+      '<tr class="show-all-row"><td colspan="6"><button type="button" id="show-all-trends" class="show-all-btn">Show all ' +
+      totalShown + ' trends</button></td></tr>' : "");
+    var sab = document.getElementById("show-all-trends");
+    if (sab) sab.addEventListener("click", function () { state.showAll = true; renderTable(); });
     var tbl = document.getElementById("dtable");
     if (tbl) tbl.setAttribute("aria-busy", "false");
   }
@@ -440,10 +454,10 @@
     var q = document.getElementById("f-search");
     var sf = document.getElementById("f-phase");
     if (q && state.q) q.value = state.q; /* wave 37: inbound ?q= shows in the box */
-    if (pf) pf.addEventListener("change", function () { state.platform = pf.value; syncURL(); renderTable(); });
-    if (cf) cf.addEventListener("change", function () { state.category = cf.value; syncURL(); renderTable(); });
-    if (sf) sf.addEventListener("change", function () { state.phase = sf.value; syncURL(); renderTable(); });
-    if (q) q.addEventListener("input", function () { state.q = q.value.trim(); syncURL(); renderTable(); });
+    if (pf) pf.addEventListener("change", function () { state.platform = pf.value; state.showAll = false; syncURL(); renderTable(); });
+    if (cf) cf.addEventListener("change", function () { state.category = cf.value; state.showAll = false; syncURL(); renderTable(); });
+    if (sf) sf.addEventListener("change", function () { state.phase = sf.value; state.showAll = false; syncURL(); renderTable(); });
+    if (q) q.addEventListener("input", function () { state.q = q.value.trim(); state.showAll = false; syncURL(); renderTable(); });
     document.querySelectorAll("[data-sort]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var k = btn.getAttribute("data-sort");

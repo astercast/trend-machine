@@ -63,7 +63,7 @@ check("credit strips provenance rider", bs.credit_name(
 t_rec = {"velocity": 91, "last_seen": "2026-10-11T10:15:00+00:00",
          "sources": [{"name": "Game8"}]}
 check("record line", bs.record_line(t_rec, REF) ==
-      "spreading 91 of 100 \u00b7 last seen 2 days ago \u00b7 1 source")
+      "spreading 91 of 100 \u00b7 last seen Oct 11 \u00b7 1 source")
 t_rec2 = dict(t_rec, sources=[{"name": "A"}, {"name": "B"}, {"name": "C"}])
 check("record line plural", bs.record_line(t_rec2, REF).endswith("3 sources"))
 
@@ -99,10 +99,11 @@ _wt = {"id": "w1", "title": "Some headline here",
        "summary": "TMZ \u00b7 Tue, Oct 13, 2026 \u00b7 body",
        "sources": [{"name": "TMZ"}]}
 _wire_html = bs._fb_wire_items([_wt], "2026-10-14T10:15:00+00:00")
-check("wire item is a credited sentence with age in words",
+check("wire item is a credited sentence with an absolute stamp (CRITIC-001 fix 3)",
       "TMZ reported:</span>" in _wire_html
       and "Some headline here</a>" in _wire_html
-      and "1 day ago" in _wire_html)
+      and "Oct 13" in _wire_html
+      and "ago" not in _wire_html)
 
 # --- evidence block -----------------------------------------------------
 html = sp.evidence_block_html(fell, "t-fell", {"tiktok": fell})
@@ -145,7 +146,7 @@ ids = [e["id"] for e in board["catchup"]]
 check("catchup holds only the cooled", ids == ["cooled"], str(ids))
 check("catchup record names the peak",
       board["catchup"][0]["record"].startswith(
-          "spreading 58 of 100, peaked at 74 \u00b7 last seen 1 day ago"))
+          "spreading 58 of 100, peaked at 74 \u00b7 last seen Oct 12"))
 check("board entry anatomy fields",
       board["make_now"][0]["source_name"] == "Game8"
       and board["make_now"][0]["record"].startswith("spreading 97 of 100 \u00b7 last seen"))

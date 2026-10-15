@@ -306,7 +306,7 @@ def record_line(t, ref):
     topic."""
     n = len(t.get("sources") or [])
     return ("spreading %d of 100 \u00b7 last seen %s \u00b7 %d source%s"
-            % (t.get("velocity") or 0, age_words(t.get("last_seen"), ref),
+            % (t.get("velocity") or 0, _fb_seen(t.get("last_seen")),
                n, "s" if n != 1 else ""))
 
 def build_topic(t, history_pts=None, plat_hist=None):
@@ -409,6 +409,21 @@ def _fb_parse(iso):
         return None
 
 
+def _fb_seen(iso, with_time=False):
+    """Absolute last-seen stamp for BAKED artifacts (CRITIC-001 fix 3).
+    A static snapshot must not wear relative ages: an age computed
+    against the snapshot's own generated_at reads as "just now"
+    forever. Baked surfaces print the recorded time itself; the
+    live JS renders compute real ages against now and keep the
+    relative words."""
+    t = _fb_parse(iso)
+    if t is None:
+        return "at an unrecorded time"
+    if with_time:
+        return t.strftime("%b %-d \u00b7 %H:%M")
+    return t.strftime("%b %-d")
+
+
 def _fb_fresh(iso, ref):
     t = _fb_parse(iso)
     if t is None or ref is None:
@@ -420,10 +435,9 @@ def _fb_fresh(iso, ref):
         cls = "f-warm"
     else:
         cls = "f-dead"
-    label = _age_words(m)
-    pulse = " pulse" if cls == "f-live" else ""
-    return ('<span class="fresh %s"><span class="dot%s" aria-hidden="true"></span>%s</span>'
-            % (cls, pulse, label))
+    label = _fb_seen(iso)
+    return ('<span class="fresh %s"><span class="dot" aria-hidden="true"></span>%s</span>'
+            % (cls, label))
 
 
 def _fb_score(v):
@@ -459,9 +473,10 @@ def _fb_wire_items(topics, generated_at):
         credit = credit_name(t)
         frame = ('<span class="wire-credit">%s reported:</span> '
                  % esc(credit)) if credit else ""
-        ref = _fb_parse(generated_at)
-        age = (' <span class="wire-age">\u00b7 %s</span>'
-               % esc(age_words(t.get("last_seen"), ref))) if ref else ""
+        # CRITIC-001 fix 3: no relative age in the baked wire. The
+        # absolute stamp above is the honest timestamp; the live
+        # wire.js render computes real ages against now.
+        age = ""
         out.append('<li class="wire-item" style="--wi:%d">'
                    '<a href="topics/%s.html">%s%s</a>'
                    '<span class="wire-meta"><span class="wire-time">%s</span>%s</span></li>'
@@ -831,8 +846,7 @@ def build_board(topics, merged, generated_at, history=None):
         e["record"] = ("spreading %d of 100, peaked at %d \u00b7 last seen %s "
                        "\u00b7 %d source%s"
                        % (t.get("velocity") or 0, peak,
-                          age_words(t.get("last_seen"),
-                                    _fb_parse(generated_at)),
+                          _fb_seen(t.get("last_seen")),
                           e["source_count"],
                           "s" if e["source_count"] != 1 else ""))
         catchup.append(e)
