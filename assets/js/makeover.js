@@ -24,6 +24,14 @@
     })]);
   }
   function heroStats() {
+    /* Round 2 (design consult fix H): the hero stat targets
+       (hs-topics / hs-platforms / hero-blips / scope-cap-topic) left
+       the first screen by design, so this fetch of the full 677 KB
+       trends.json filled nothing on page load. Skip the fetch while
+       no target exists on the page; if a target returns, the fetch
+       resumes unchanged. The table's own load lives in app.js. */
+    var targets = ["hs-topics", "hs-platforms", "hero-blips", "scope-cap-topic"];
+    if (!targets.some(function (id) { return document.getElementById(id); })) return;
     var tb = fetch("data/v1/trends.json").then(function (r) { return r.json(); }).catch(function () { return null; });
     /* wave 39 (VP-0011): the "peaking now" stat is gone — a lone count of
        peaking topics contradicted the board it sat above (393 tracked,

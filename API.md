@@ -50,9 +50,9 @@ who_to_watch[], guide_links[]`
 
 Topic dossiers link playbooks in the brother site (Creator Growth Empire).
 `guide_links` use phase slugs (`phase-0-start-from-nothing.html`, …).
-Base URL defaults to `../creator-growth-empire/` (sibling checkout) and is
-overridable via the `GUIDE_BASE_URL` env var at build time. If the guide
-deploys at a real domain, rebuild with `GUIDE_BASE_URL=https://…`.
+Base URL defaults to `https://creator-growth-empire-live.vercel.app/`
+(the guide's confirmed live deployment, set 2026-10-24) and is
+overridable via the `GUIDE_BASE_URL` env var at build time.
 
 **Placeholder status (2026-10-11):** the guide's HTML pages are still being
 built, so these links are an intentional documented placeholder pattern —

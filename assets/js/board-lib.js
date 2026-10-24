@@ -49,8 +49,23 @@ var TM_BoardLib = (function () {
     return Math.round((velocity || 0) * (1 - pen));
   }
 
+  /* Round 2 (2026-10-24, design consult fix E): a death report
+     carried by a single source never earns a "Make" line. It is
+     demoted to news/watch until a second source lands. Mirrors
+     make_allowed() in scripts/build_site.py. */
+  var DEATH_RE = /\b(dies|dead|death|killed|passes away|passed away)\b/i;
+
+  function makeAllowed(topic) {
+    if (!topic) return true;
+    if (DEATH_RE.test(topic.title || "") &&
+        (topic.sources || []).length < 2) return false;
+    return true;
+  }
+
   function kindOf(topic) {
-    return topic && topic.category === "news" ? "news" : "makeable";
+    if (topic && topic.category === "news") return "news";
+    if (!makeAllowed(topic)) return "news";
+    return "makeable";
   }
 
   function union(a, b) {
@@ -132,6 +147,7 @@ var TM_BoardLib = (function () {
     PHENOMENON_MERGES: PHENOMENON_MERGES,
     SATURATION_PENALTY: SATURATION_PENALTY,
     opportunity: opportunity,
+    makeAllowed: makeAllowed,
     kindOf: kindOf,
     mergeTopics: mergeTopics,
     boardSelection: boardSelection

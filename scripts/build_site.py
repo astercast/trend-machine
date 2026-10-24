@@ -10,7 +10,7 @@ import sparkline_prep
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(ROOT, "data", "trends.json")
-GUIDE_BASE = os.environ.get("GUIDE_BASE_URL", "../creator-growth-empire/")
+GUIDE_BASE = os.environ.get("GUIDE_BASE_URL", "https://creator-growth-empire-live.vercel.app/")
 
 # seed guide_links prefixes -> real guide phase pages (convention; see API.md)
 GUIDE_MAP = {
@@ -92,11 +92,12 @@ def sparkline_html(pts, topic_id="", per_platform=None):
 
 def export_payload_json(t):
     payload = {
-        "title": t.get("title", ""), "id": t.get("id", ""),
+        "title": disp_title(t.get("title", "")), "id": t.get("id", ""),
         "category": t.get("category", ""),
         "opportunity": t.get("opportunity_score", 0),
         "velocity": t.get("velocity", 0),
-        "angles": t.get("angles", []), "hooks": t.get("hooks", []),
+        "angles": [disp_text(a) for a in t.get("angles", [])],
+        "hooks": [disp_text(h) for h in t.get("hooks", [])],
         "hashtags": t.get("hashtags", []),
         "platforms": t.get("platforms", []),
         "format_tags": t.get("format_tags", []),
@@ -150,6 +151,7 @@ TOPIC_TMPL = """<!doctype html>
 <link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/wave12.css">
 <link rel="stylesheet" href="../assets/css/pro.css">
+<link rel="stylesheet" href="../assets/css/bill.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -517,7 +519,8 @@ def _fb_wire_items(topics, generated_at):
     return "".join(out)
 
 
-def write_home_fallback(topics, generated_at, merged=None, board=None):
+def write_home_fallback(topics, generated_at, merged=None, board=None,
+                        history=None):
     path = os.path.join(ROOT, "index.html")
     with open(path) as f:
         page = f.read()
@@ -573,6 +576,24 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
     page = _fb_region_opt(page, "radarcount",
                       "%d memes moving now" % len(memes))
 
+    # Round 2 (design consult fix F): the Movement column retires
+    # itself when no tracked series actually moved (first-to-last
+    # velocity delta, the sparkline's own delta). Baked cells print the
+    # real delta instead of a placeholder dot. Mirrors the hasMove
+    # check in assets/js/app.js renderTable.
+    history = history or {}
+
+    def _delta(tid):
+        pts = history.get(tid) or []
+        if len(pts) < 2:
+            return None
+        try:
+            return (pts[-1][1] or 0) - (pts[0][1] or 0)
+        except Exception:
+            return None
+
+    has_move = any((_delta(t["id"]) or 0) != 0 for t in merged)
+
     rows = []
     for i, t in enumerate(by_opp_m[:TMFB_TABLE_ROWS]):
         stale = bool(t.get("stale"))
@@ -587,7 +608,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
             '<td data-label="Platforms">%s</td>'
             '<td data-label="Score">%s</td>'
             '<td data-label="Spreading">%s</td>'
-            '<td data-label="Movement">·</td>'
+            '<td data-label="Movement"%s>%s</td>'
             '<td data-label="Last seen">%s</td></tr>'
             % (' class="is-stale"' if stale else '', min(i, 12),
                esc(t["id"]), esc(disp_title(t.get("title"))),
@@ -596,7 +617,17 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
                "".join('<span class="chip plat">%s</span>' % esc(p)
                        for p in (t.get("platforms") or [])),
                _fb_score(t.get("opportunity_score")), _fb_score(t.get("velocity")),
+               "" if has_move else " hidden",
+               ("%+d since tracking started" % _delta(t["id"]))
+               if _delta(t["id"]) is not None else "·",
                _fb_fresh(t.get("last_seen"), ref)))
+    # the Movement header follows the same rule as its cells
+    if has_move:
+        page = page.replace('<th scope="col" id="th-trend" hidden>',
+                            '<th scope="col" id="th-trend">')
+    else:
+        page = page.replace('<th scope="col" id="th-trend">',
+                            '<th scope="col" id="th-trend" hidden>')
     page = _fb_region(page, "table", "".join(rows))
     page = _fb_region(page, "tablemeta",
                       "%d of %d trends shown · %d tracked in all · drawn from the same snapshot as the board above"
@@ -691,6 +722,21 @@ _SAT_LABEL = {"low": "The lane is still uncrowded.",
               "high": "The lane is crowded."}
 BOARD_MAKE_CAP = 7
 BOARD_NEWS_CAP = 3
+
+# Round 2 (2026-10-24, design consult fix E): a death report carried by
+# a single source never earns a "Make" line — one low-trust source for
+# a death is how hoaxes get promoted. Such a topic is demoted to the
+# news/watch list (or held off the board) until a second source lands.
+# Mirrors makeAllowed() in assets/js/board-lib.js.
+_DEATH_RE = re.compile(
+    r"\b(dies|dead|death|killed|passes away|passed away)\b", re.I)
+
+
+def make_allowed(t):
+    if _DEATH_RE.search(t.get("title") or "") \
+            and len(t.get("sources") or []) < 2:
+        return False
+    return True
 
 
 def _union(a, b, key=None):
@@ -792,7 +838,8 @@ def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
         "aka": [x["title"] for x in (t.get("merged_from") or [])],
         "merged_from": [x["id"] for x in (t.get("merged_from") or [])],
         "url": "topics/%s.html" % t["id"],
-        "kind": "news" if t.get("category") == "news" else "makeable",
+        "kind": "news" if t.get("category") == "news"
+                or not make_allowed(t) else "makeable",
         "category": t.get("category"),
         "opportunity_score": t.get("opportunity_score") or 0,
         "velocity": t.get("velocity") or 0,
@@ -817,9 +864,11 @@ def build_board(topics, merged, generated_at, history=None):
     live = [t for t in merged if not t.get("stale")]
     by_score = lambda t: (-(t.get("opportunity_score") or 0),
                           -(t.get("velocity") or 0))
-    make = sorted((t for t in live if t.get("category") != "news"),
+    make = sorted((t for t in live if t.get("category") != "news"
+                   and make_allowed(t)),
                   key=by_score)[:BOARD_MAKE_CAP]
-    news = sorted((t for t in live if t.get("category") == "news"),
+    news = sorted((t for t in live if t.get("category") == "news"
+                   or not make_allowed(t)),
                   key=by_score)[:BOARD_NEWS_CAP]
     merges = []
     for t in merged:
@@ -1376,7 +1425,7 @@ def main():
           f"from {board['counts']['tracked']} topics)")
     # VP-0001: bake the homepage static fallback rows from the same payload
     write_home_fallback(topics, data["generated_at"],
-                        merged=merged_topics, board=board)
+                        merged=merged_topics, board=board, history=history)
     # wave 32: OG / theme-color / favicon head wiring on the root pages
     inject_root_head_meta()
     # VP-0038 (rotation 30): canonical header + footer map on root pages
@@ -2452,7 +2501,7 @@ def main():
               "- [data/v1/lifecycle.json](data/v1/lifecycle.json) — the ignition/burnout lifecycle layer: per-topic stage (building/steady/warming/igniting/peaking/cooling/burned-out), stage ribbons, last-24h ignitions/burnouts boards (readouts, not predictions)",
               "- [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links",
               "- [data/v1/hashtags.json](data/v1/hashtags.json) — tag index", "- [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint",
-              "- [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)", "",
+              "- [api-docs.html](api-docs.html) — how an agent uses this tracker (end-to-end workflows)", "",
               "## Pages",               "- [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only",
               "- [streamer-desk.html](streamer-desk.html) — the Streamer Desk: streamer directory, dated updates, multi-source-verified drama timelines (unverified quarantined), houses with dated rosters, events calendar",
               "- [formats.html](formats.html) — the tracked meme format families: current examples, evidence, verification flags; formats are reusable templates to join",

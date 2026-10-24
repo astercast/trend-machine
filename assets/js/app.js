@@ -1,7 +1,10 @@
 /* trend-machine dashboard */
 (function () {
   "use strict";
-  var DATA_URLS = ["data/trends.json", "data/v1/trends.json"];
+  /* Round 2: data/v1/trends.json is the published copy; the working
+     store data/trends.json is no longer published (see .vercelignore),
+     so try the published copy first and keep the store as fallback. */
+  var DATA_URLS = ["data/v1/trends.json", "data/trends.json"];
   var VELOCITY_URLS = ["data/v1/velocity.json", "data/velocity_history.json"];
 
   /* wave 30 · VP-0001: every load carries a deadline. A fetch that never
@@ -296,6 +299,12 @@
     var el = document.getElementById("dtable-body");
     if (!el) return;
     var list = filtered();
+    /* Round 2 (fix F): movement over the full filtered set, before
+       the default-view cap trims the rows on screen. */
+    var hasMove = list.some(function (t) {
+      var pts = state.velocity[t.id] || [];
+      return pts.length >= 2 && (pts[pts.length - 1][1] - pts[0][1]) !== 0;
+    });
     var meta = document.getElementById("table-meta");
     if (meta) meta.textContent = list.length + " of " + mergedTopics().length + " trends shown · " + state.topics.length + " tracked in all";
     /* CRITIC-001 fix 2: the homepage routes, it does not dump. The
@@ -323,6 +332,13 @@
     }).join("") + (capped ?
       '<tr class="show-all-row"><td colspan="6"><button type="button" id="show-all-trends" class="show-all-btn">Show all ' +
       totalShown + ' trends</button></td></tr>' : "");
+    /* Round 2 (design consult fix F): retire the Movement column
+       when no series in the view actually moved. */
+    var thTrend = document.getElementById("th-trend");
+    if (thTrend) thTrend.hidden = !hasMove;
+    el.querySelectorAll("td[data-label='Movement']").forEach(function (td) {
+      td.hidden = !hasMove;
+    });
     var sab = document.getElementById("show-all-trends");
     if (sab) sab.addEventListener("click", function () { state.showAll = true; renderTable(); });
     var tbl = document.getElementById("dtable");

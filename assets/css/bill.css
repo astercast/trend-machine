@@ -38,6 +38,11 @@
   /* old names, so the other pages follow */
   --bg-0: var(--newsprint); --bg: var(--newsprint); --bg-soft: var(--newsprint);
   --panel: #FFFFFF; --panel-2: #FFFFFF; --panel-3: var(--hair);
+  /* Round 2 (design consult fix C): the Wire summary plate and the
+     squared card corners the inner pages ask for by name */
+  --plate: #FFFFFF;
+  --r: 0;
+  --r-lg: 0;
   --line: var(--hair); --line-soft: var(--hair); --line-bright: var(--grey);
   --ink-dim: var(--grey); --ink-faint: var(--grey); --ink-ghost: var(--hair);
   --hot: var(--ink); --hot-deep: var(--ink); --live: var(--ink);
@@ -316,3 +321,58 @@ html[data-age="stale"] #data-ts::after { content: " · not fresh, last check"; c
 .site-foot { border-top: 4px solid var(--ink); padding-block: var(--s-5); }
 .foot-nav { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); }
 .foot-nav a { font: 600 .875rem/1 var(--font-read); text-decoration: none; }
+
+/* ============ 8. ROUND 2 (2026-10-24, design consult fixes A + B) ====
+   A. The top pick on phones: the splash score and Make bar must sit
+   in the splash's own single column. The paste-ready snippet named
+   ".bill .board-row .splash", which matches nothing in the real
+   markup (the splash IS the board row); this is the same rule on the
+   real selector, plus grid-column guards, because the generic row
+   rule above (.board-row .board-score) outranks the splash area at
+   narrow widths and pushed the score into an implicit second column.
+   B. A stale board must look stale: the rank line names the snapshot
+   date (the --asof custom property is set by the inline script in
+   index.html from the same data-generated stamp), the stamp becomes
+   a black bar with yellow text, and the headline dims. */
+@media (max-width: 40rem) {
+  .bill .board-row.splash {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "kick" "title" "aka" "score" "make" "meta";
+  }
+  /* the four-class form is load-bearing: the @container rule in
+     section 4 (.bill .board-row .board-score, three classes) pins
+     every row's score to grid-column 2, and at this width that
+     forced the splash score into an implicit second column that
+     squeezed the Make bar beside it. Verified in Chromium at 390 px:
+     before, score x=247 w=127 and Make w=230; after, both full row. */
+  .bill .board-row.splash .board-score {
+    justify-self: start;
+    grid-column: 1;
+    margin-top: var(--s-4);
+    max-inline-size: 100%;
+    box-sizing: border-box;
+  }
+  .bill .board-row.splash .board-angle {
+    grid-column: 1;
+    margin-top: 0;
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+    border-inline-start: 0;
+  }
+}
+html[data-age="stale"] .splash .board-rank::after {
+  content: " as of " var(--asof, "the last check");
+}
+html[data-age="stale"] .bill-flag {
+  border-block-end: 4px solid var(--ink);
+}
+html[data-age="stale"] .bill-stamp {
+  background: var(--ink);
+  color: var(--hivis);
+  padding: .35rem .6rem;
+  font-weight: 700;
+}
+html[data-age="stale"] .splash .board-title {
+  opacity: .72;
+}
+html[data-age="stale"] #data-ts::after { color: var(--hivis); }

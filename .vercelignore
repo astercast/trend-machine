@@ -1,0 +1,22 @@
+# Round 2 (2026-10-24, design consult fix H): stop publishing the
+# workshop. outputDirectory stays "." (the generator, the api/
+# functions and the cron all work from the repo root), so the private
+# and working files are kept out of the deployment here instead.
+# Named exception EXCEPTION-TR-R2-OUTPUT: the site/ output route was
+# not taken because build_site.py, api/*.js and api/cron/wire.js all
+# read and write repo-root paths; re-pointing them in this pass would
+# risk a broken build. This ignore route is the extract's own fix H.
+hidden_files/
+*.md
+!README.md
+pipeline/
+scripts/
+tests/
+skills/
+# the published copies live under data/v1/ (app.js tries v1 first);
+# the working store and its history stay unpublished
+data/trends.json
+data/velocity_history.json
+# NOT ignored on purpose: static/v1/trends.flat.js is the destination
+# of the /api/v1/trends.flat.js rewrite in vercel.json and a public
+# API contract, so it stays published.

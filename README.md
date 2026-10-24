@@ -4,7 +4,7 @@
 creators and agents: the hottest topics, memes, and hashtags right now, scored
 by opportunity (high interest + low creator saturation = easy views).
 
-Brother site of the [Creator Growth Empire](../creator-growth-empire/) guide —
+Brother site of the [Creator Growth Empire](https://creator-growth-empire-live.vercel.app/) guide:
 trends are the *what*, the guide is the *how*.
 
 ## The dashboard

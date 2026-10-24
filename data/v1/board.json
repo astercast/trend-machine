@@ -183,43 +183,6 @@
     },
     {
       "rank": 5,
-      "id": "nana-patekar-tributes",
-      "title": "Nana Patekar dies at 75, meme legend tributes",
-      "aka": [],
-      "merged_from": [],
-      "url": "topics/nana-patekar-tributes.html",
-      "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 85,
-      "velocity": 85,
-      "saturation": "low",
-      "platforms": [
-        "x",
-        "instagram",
-        "youtube"
-      ],
-      "hashtags": [
-        "#nanapatekar",
-        "#riplegend"
-      ],
-      "format": "meme",
-      "angle": "A respectful supercut: his 10 most-memed moments",
-      "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#nanapatekar",
-        "#riplegend"
-      ],
-      "source_name": "Face of Malawi",
-      "source_count": 1,
-      "record": "spreading 85 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": "steady",
-      "splash": false,
-      "spark_svg": null
-    },
-    {
-      "rank": 6,
       "id": "dip-on-em",
       "title": "\"DIP ON EM\": early-stage dance sound",
       "aka": [],
@@ -254,7 +217,7 @@
       "spark_svg": null
     },
     {
-      "rank": 7,
+      "rank": 6,
       "id": "insomniac-lofi",
       "title": "\"Insomniac\": Memo Boy's lo-fi bed",
       "aka": [],
@@ -280,6 +243,41 @@
         "We have seen it in 18 checks so far.",
         "#insomniac",
         "#lofi"
+      ],
+      "source_name": "SocialPilot",
+      "source_count": 1,
+      "record": "spreading 84 of 100 · last seen Oct 11 · 1 source",
+      "last_seen": "2026-10-11T19:30:00-07:00",
+      "movement": "steady",
+      "splash": false,
+      "spark_svg": null
+    },
+    {
+      "rank": 7,
+      "id": "spooky-skeletons-remix",
+      "title": "\"Spooky, Scary Skeletons\" House VIP Remix",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/spooky-skeletons-remix.html",
+      "kind": "makeable",
+      "category": "meme",
+      "opportunity_score": 84,
+      "velocity": 84,
+      "saturation": "low",
+      "platforms": [
+        "tiktok"
+      ],
+      "hashtags": [
+        "#spookyseason",
+        "#halloweendecor"
+      ],
+      "format": "meme",
+      "angle": "Halloween countdown with a beat",
+      "evidence": [
+        "The lane is still uncrowded.",
+        "We have seen it in 18 checks so far.",
+        "#spookyseason",
+        "#halloweendecor"
       ],
       "source_name": "SocialPilot",
       "source_count": 1,
@@ -367,36 +365,36 @@
     },
     {
       "rank": 3,
-      "id": "hurricane-isaias",
-      "title": "Hurricane Isaias makes landfall",
+      "id": "nana-patekar-tributes",
+      "title": "Nana Patekar dies at 75, meme legend tributes",
       "aka": [],
       "merged_from": [],
-      "url": "topics/hurricane-isaias.html",
+      "url": "topics/nana-patekar-tributes.html",
       "kind": "news",
-      "category": "news",
-      "opportunity_score": 81,
-      "velocity": 81,
+      "category": "meme",
+      "opportunity_score": 85,
+      "velocity": 85,
       "saturation": "low",
       "platforms": [
-        "youtube",
-        "tiktok",
-        "x"
+        "x",
+        "instagram",
+        "youtube"
       ],
       "hashtags": [
-        "#hurricaneisaias",
-        "#weather"
+        "#nanapatekar",
+        "#riplegend"
       ],
-      "format": "news",
-      "angle": "Storm prep checklist (before the next one)",
+      "format": "meme",
+      "angle": "A respectful supercut: his 10 most-memed moments",
       "evidence": [
         "The lane is still uncrowded.",
         "We have seen it in 21 checks so far.",
-        "#hurricaneisaias",
-        "#weather"
+        "#nanapatekar",
+        "#riplegend"
       ],
-      "source_name": "NewsWatchmen",
+      "source_name": "Face of Malawi",
       "source_count": 1,
-      "record": "spreading 81 of 100 · last seen Oct 11 · 1 source",
+      "record": "spreading 85 of 100 · last seen Oct 11 · 1 source",
       "last_seen": "2026-10-11T19:30:00-07:00",
       "movement": "steady",
       "splash": false,

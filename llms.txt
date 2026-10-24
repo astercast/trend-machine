@@ -35,7 +35,7 @@ beauty, culture, entertainment, food, gaming, health, meme, music, news, product
 - [data/v1/meme-formats.json](data/v1/meme-formats.json) — the tracked meme format families: curated families with current examples, evidence, verification flags, and live topic links
 - [data/v1/hashtags.json](data/v1/hashtags.json) — tag index
 - [data/v1/schema/](data/v1/schema/) — draft-07 schemas for every endpoint
-- [AGENT.md](AGENT.md) — how an agent uses this tracker (end-to-end workflows)
+- [api-docs.html](api-docs.html) — how an agent uses this tracker (end-to-end workflows)
 
 ## Pages
 - [live-wire.html](live-wire.html) — the Live Wire: a command view over the pipeline's own stored outputs — every source lane with its recorded hit count and health (live/degraded/stale-skip/skip-by-design), plus the hour's top movers from stored snapshots only
