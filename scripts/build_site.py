@@ -641,7 +641,16 @@ def write_home_fallback(topics, generated_at, merged=None, board=None):
         stamp = esc(generated_at)
     page = _fb_region(page, "datats",
                       'Snapshot <span class="num">%s</span>' % stamp)
-    page = _fb_region(page, "hstopics", str(len(topics)))
+    # The News Bill (R136, Round-367 grade T2): the freshness stamp's
+    # data-generated attribute is GENERATED from trends.json's
+    # generated_at on every build, never a literal in the shell.
+    page = re.sub(r'(<span id="data-ts")[^>]*>',
+                  r'\1 data-generated="%s">' % generated_at, page, count=1)
+    # The News Bill (R136, Round-367 grade T3): the hstopics marker
+    # ("408 trends tracked") left the first screen by design, so
+    # the region is written only when its marker survives in
+    # index.html — a deliberate absence, never a build warning.
+    page = _fb_region_opt(page, "hstopics", str(len(topics)))
     plats = set()
     for t in topics:
         plats.update(t.get("platforms") or [])
