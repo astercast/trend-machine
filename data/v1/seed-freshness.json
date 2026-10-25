@@ -1,19 +1,110 @@
 {
-  "generated_at": "2026-10-15T23:01:48.766799+00:00",
+  "generated_at": "2026-10-24T11:21:10.741845+00:00",
   "method": "Every seeded topic probed: source URL liveness (skipped — offline mode), store corroboration (last_seen <= 7d), velocity tracking (series present; a seed with <3 snapshots but a first snapshot <6h old is warming up, not stale). stale-source = dead URL (GET 404/410), never a timeout or HEAD rejection; timeouts are flaky-warning.",
   "counts": {
-    "healthy": 108,
+    "healthy": 93,
     "stale-source": 0,
-    "stale-untracked": 0,
+    "stale-untracked": 15,
     "flaky-warning": 0,
     "seeds": 108
   },
-  "stale": [],
+  "stale": [
+    {
+      "id": "booktok-romantasy",
+      "title": "BookTok and the romantasy boom",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "caitlin-clark-effect",
+      "title": "The Caitlin Clark effect: the WNBA's surge",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "chicken-jockey",
+      "title": "Chicken Jockey: the Minecraft Movie theater phenomenon",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "dubai-chocolate",
+      "title": "Dubai chocolate: the pistachio bar that ate the internet",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "fragrance-boom",
+      "title": "The fragrance boom: FragranceTok, Arab perfumes, and dupes",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "glp1-era",
+      "title": "The GLP-1 era: weight loss drugs as culture",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "grow-a-garden",
+      "title": "Grow a Garden: the Roblox game that broke the record",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "hyrox-fitness-racing",
+      "title": "HYROX and the fitness racing boom",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "jellycat-amuseables",
+      "title": "Jellycat Amuseables and the kidult plush economy",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "kpop-demon-hunters",
+      "title": "KPop Demon Hunters: the animated takeover",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "labubu-pop-mart",
+      "title": "Labubu and the Pop Mart blind box economy",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "matcha-everything",
+      "title": "Matcha everything, and the shortage behind it",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "prediction-markets",
+      "title": "Prediction markets go mainstream",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "protein-everything",
+      "title": "Protein everything: the protein maxxing era",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    },
+    {
+      "id": "switch-2",
+      "title": "Nintendo Switch 2: the fastest console launch ever",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken"
+    }
+  ],
   "seeds": [
     {
       "id": "2xko-sett",
       "title": "2XKO drops Sett as surprise champion",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -25,14 +116,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "31-days-of-halloween",
       "title": "\"31 Days of Halloween\" numbered series",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -44,8 +135,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -63,8 +154,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -82,14 +173,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
       "id": "aion2-launch",
       "title": "AION 2 launches free-to-play",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -101,8 +192,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -120,8 +211,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -139,8 +230,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -158,8 +249,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -183,8 +274,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -208,8 +299,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
@@ -233,16 +324,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "booktok-romantasy",
       "title": "BookTok and the romantasy boom",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Parade",
@@ -258,8 +349,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -283,8 +374,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
@@ -302,8 +393,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -321,16 +412,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "caitlin-clark-effect",
       "title": "The Caitlin Clark effect: the WNBA's surge",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "SportsPro",
@@ -346,8 +437,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -371,8 +462,8 @@
         }
       ],
       "last_seen": "2026-10-12T23:28:55.232754+00:00",
-      "last_seen_age_days": 2.98,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 11.49,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -390,8 +481,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -409,16 +500,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
       "id": "chicken-jockey",
       "title": "Chicken Jockey: the Minecraft Movie theater phenomenon",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Uproxx",
@@ -434,14 +525,14 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "citytastetest",
       "title": "#CityTasteTest honest local review",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -453,8 +544,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -478,8 +569,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -503,14 +594,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
       "id": "creepy-fact-storytime",
       "title": "Creepy Fact Storytime",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -522,14 +613,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
       "id": "dhurandhar2-grammy",
       "title": "Dhurandhar 2 enters the Grammy race",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -541,8 +632,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -566,8 +657,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -585,14 +676,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "dip-on-em",
       "title": "\"DIP ON EM\": early-stage dance sound",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -604,16 +695,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
       "id": "dubai-chocolate",
       "title": "Dubai chocolate: the pistachio bar that ate the internet",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Allrecipes",
@@ -629,14 +720,14 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "emily-thats-all",
       "title": "\"And Emily… that's all\" audio",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -648,8 +739,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -667,8 +758,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -686,16 +777,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "fragrance-boom",
       "title": "The fragrance boom: FragranceTok, Arab perfumes, and dupes",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Scento",
@@ -711,14 +802,14 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "fruit-love-island",
       "title": "AI \"Fruit Love Island\"",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -730,8 +821,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -755,16 +846,16 @@
         }
       ],
       "last_seen": "2026-10-12T08:06:54.654606+00:00",
-      "last_seen_age_days": 3.62,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.13,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "glp1-era",
       "title": "The GLP-1 era: weight loss drugs as culture",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Pew Research Center",
@@ -780,16 +871,16 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "grow-a-garden",
       "title": "Grow a Garden: the Roblox game that broke the record",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Wikipedia",
@@ -805,14 +896,14 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "grr-mondays",
       "title": "#GrrMondays",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -824,14 +915,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "gta6-robberies",
       "title": "GTA 6: robberies and partner getaways detailed",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -843,14 +934,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "halloween-game-xbox",
       "title": "\"Halloween: The Game\" storms the Xbox charts",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -862,8 +953,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -887,8 +978,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -906,8 +997,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -925,8 +1016,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -956,14 +1047,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "homecoming-proposal",
       "title": "Homecoming Proposal Reveal",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -975,14 +1066,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
       "id": "houthi-riyadh-strike",
       "title": "Houthi missile strike on Riyadh airport",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -994,14 +1085,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "hurricane-isaias",
       "title": "Hurricane Isaias makes landfall",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1013,16 +1104,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "hyrox-fitness-racing",
       "title": "HYROX and the fitness racing boom",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "SportsPro",
@@ -1038,8 +1129,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -1057,14 +1148,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "insomniac-lofi",
       "title": "\"Insomniac\": Memo Boy's lo-fi bed",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1076,8 +1167,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -1095,16 +1186,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "jellycat-amuseables",
       "title": "Jellycat Amuseables and the kidult plush economy",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "The Sun",
@@ -1120,16 +1211,16 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "kpop-demon-hunters",
       "title": "KPop Demon Hunters: the animated takeover",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "PR Newswire",
@@ -1145,8 +1236,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -1164,16 +1255,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "labubu-pop-mart",
       "title": "Labubu and the Pop Mart blind box economy",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Finimize",
@@ -1189,8 +1280,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -1208,14 +1299,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "mahesh-babu-director",
       "title": "Mahesh Babu's next director: Vanga vs Lokesh",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1227,8 +1318,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1246,16 +1337,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "matcha-everything",
       "title": "Matcha everything, and the shortage behind it",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "Perfect Daily Grind",
@@ -1271,8 +1362,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -1302,8 +1393,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
@@ -1327,8 +1418,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1352,14 +1443,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "nana-patekar-tributes",
       "title": "Nana Patekar dies at 75, meme legend tributes",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1371,8 +1462,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1390,14 +1481,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "nba-tiktok-surge",
       "title": "#nba explodes on TikTok (+493%)",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1409,8 +1500,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1434,8 +1525,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1453,8 +1544,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1472,14 +1563,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
       "id": "october-music-drops",
       "title": "October's stacked release calendar",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1491,8 +1582,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1516,8 +1607,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1541,8 +1632,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1566,8 +1657,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -1603,8 +1694,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1622,8 +1713,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1641,8 +1732,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1660,16 +1751,16 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "prediction-markets",
       "title": "Prediction markets go mainstream",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "CoinLaw",
@@ -1685,16 +1776,16 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
       "id": "protein-everything",
       "title": "Protein everything: the protein maxxing era",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "NorthJersey.com",
@@ -1710,8 +1801,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -1741,14 +1832,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "pumpkin-patch-season",
       "title": "Pumpkin patch season",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1760,8 +1851,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -1797,8 +1888,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1822,8 +1913,8 @@
         }
       ],
       "last_seen": "2026-10-12T09:56:20.708727+00:00",
-      "last_seen_age_days": 3.55,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.06,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1841,14 +1932,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "seis-sete-dance",
       "title": "\"Six Seven\" (Seis Sete) funk dance",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1860,8 +1951,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1879,8 +1970,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1898,8 +1989,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1917,14 +2008,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
       "id": "six-seven-meme",
       "title": "\"6-7\": Gen Alpha's defining brainrot joke",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1936,8 +2027,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -1955,8 +2046,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -1980,14 +2071,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "spooky-skeletons-remix",
       "title": "\"Spooky, Scary Skeletons\" House VIP Remix",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -1999,8 +2090,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -2024,14 +2115,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
       "id": "street-fighter-movie",
       "title": "\"Street Fighter\" hits theaters Oct 16",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -2043,8 +2134,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -2074,16 +2165,16 @@
         }
       ],
       "last_seen": "2026-10-13T10:15:10.287333+00:00",
-      "last_seen_age_days": 2.53,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 11.05,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "switch-2",
       "title": "Nintendo Switch 2: the fastest console launch ever",
       "verification": "verified",
-      "verdict": "healthy",
-      "reason": "sources live, warming up (1 snapshots, first 0.8h ago)",
+      "verdict": "stale-untracked",
+      "reason": "only 2 velocity snapshots over 205.2h — tracking broken",
       "sources": [
         {
           "name": "TechSpot",
@@ -2099,8 +2190,8 @@
         }
       ],
       "last_seen": "2026-10-15T15:12:00-07:00",
-      "last_seen_age_days": 0.03,
-      "velocity_snapshots": 1,
+      "last_seen_age_days": 8.55,
+      "velocity_snapshots": 2,
       "in_store": true
     },
     {
@@ -2124,8 +2215,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
@@ -2149,8 +2240,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
@@ -2174,8 +2265,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -2199,8 +2290,8 @@
         }
       ],
       "last_seen": "2026-10-13T10:15:10.287273+00:00",
-      "last_seen_age_days": 2.53,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 11.05,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -2224,14 +2315,14 @@
         }
       ],
       "last_seen": "2026-10-12T09:54:32.288996+00:00",
-      "last_seen_age_days": 3.55,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.06,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "trump-rally-nobel",
       "title": "Trump roasts rally protester; Nobel Prize outrage",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -2243,8 +2334,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -2268,8 +2359,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 15,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 16,
       "in_store": true
     },
     {
@@ -2293,8 +2384,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
@@ -2312,8 +2403,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 20,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 21,
       "in_store": true
     },
     {
@@ -2337,14 +2428,14 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 21,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 22,
       "in_store": true
     },
     {
       "id": "we-fell-in-love-in-october",
       "title": "\"we fell in love in october\": girl in red",
-      "verification": "verified",
+      "verification": "single-source",
       "verdict": "healthy",
       "reason": "sources live, corroborated, tracked",
       "sources": [
@@ -2356,8 +2447,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 18,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 19,
       "in_store": true
     },
     {
@@ -2375,8 +2466,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 17,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 18,
       "in_store": true
     },
     {
@@ -2400,8 +2491,8 @@
         }
       ],
       "last_seen": "2026-10-11T19:30:00-07:00",
-      "last_seen_age_days": 3.86,
-      "velocity_snapshots": 15,
+      "last_seen_age_days": 12.37,
+      "velocity_snapshots": 16,
       "in_store": true
     }
   ]

@@ -394,13 +394,13 @@ def main():
         _tbl = _region("table") or ""
         check("vp0001 fallback table has 30 static rows", _tbl.count("<tr") >= 30)
         check("pro fallback stamp names the snapshot with an absolute time",
-              "Snapshot" in (_region("datats") or "")
+              "As of" in (_region("datats") or "")
               and _re.search(r"\b\d{4}\b", _region("datats") or "") is not None)
         check("pro fallback table-meta names the snapshot",
               "snapshot" in (_region("tablemeta") or ""))
         _appjs = open(os.path.join(ROOT, "assets", "js", "app.js")).read()
-        check("pro client stamp keeps the Snapshot label",
-              'Snapshot <span class="num">' in _appjs and "tmStampUTC" in _appjs)
+        check("pro client stamp keeps the As of label",
+              'As of <span class="num">' in _appjs and "tmStampUTC" in _appjs)
         for _fname, _marker in [("assets/js/app.js", "armWatchdog"),
                                 ("assets/js/makeover.js", "withDeadline"),
                                 ("live-wire.html", "deadline"),

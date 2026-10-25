@@ -58,14 +58,14 @@ Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 
 | path | schedule | notes |
 |---|---|---|
-| `/api/cron/wire` | `0 13 * * *` UTC | bounded refresh: 7 keyless sources in parallel (4000ms/source), velocity snapshots + trends/flat rebuild from real snapshots; commits back only on real change; **read-only until GITHUB_REPO_TOKEN is set** |
+Retired 2026-10-24 (fleet-data migration): no GITHUB_REPO_TOKEN is used anywhere. Live data refreshes through the astercast/fleet-data repo; the fleet watchdog does the checking.
 
 ## Env vars (Vercel project settings)
 
 | var | required? | behavior without it |
 |---|---|---|
 | `CRON_SECRET` | yes, for the cron | wire 401s fail-closed; Vercel sends `Authorization: Bearer <CRON_SECRET>` on cron invocations |
-| `GITHUB_REPO_TOKEN` | no — pending user's decision | functions read the bundled static files; wire runs read-only (returns results in envelope, persists nothing) |
+Retired 2026-10-24 (fleet-data migration): no GITHUB_REPO_TOKEN is used anywhere. Live data refreshes through the astercast/fleet-data repo; the fleet watchdog does the checking.
 | `GITHUB_REPO` | no | `owner/name` to read/write when token set (live: `astercast/trend-machine-live`) |
 | `REPO_STATIC_PREFIX` | no | `""` for root deploys |
 | `WIRE_FETCH_TIMEOUT_MS` | no | overrides 4000ms per-source fetch timeout |
@@ -84,7 +84,7 @@ Hobby limit) and NO `runtime` key (Vercel rejects both `nodejs22.x` and
 
 ## Pending
 
-- `GITHUB_REPO_TOKEN`: awaiting user's decision (fine-grained PAT,
+Retired 2026-10-24 (fleet-data migration): no GITHUB_REPO_TOKEN is used anywhere. Live data refreshes through the astercast/fleet-data repo; the fleet watchdog does the checking.
   contents:write). Until set: wire read-only, functions serve bundled static.
 - First `-live` push blocked 2026-10-11 23:52 PDT by GitHub secondary rate
   limit (403 on repo creation) — retry `gh.py create-repo trend-machine-live`
@@ -144,7 +144,7 @@ Hobby bandwidth budget.
   4,000ms per-source timeout (`WIRE_FETCH_TIMEOUT_MS`, spec default
   kept in production), HN item fan-out under the same timeout, then a
   pure-function recompute. Fetch phase ≤ ~4s even if every source
-  hangs; the commit-back phase (only when `GITHUB_REPO_TOKEN` is set)
+Retired 2026-10-24 (fleet-data migration): no GITHUB_REPO_TOKEN is used anywhere. Live data refreshes through the astercast/fleet-data repo; the fleet watchdog does the checking.
   is a handful of Contents API calls. Observed headroom is
   comfortable, but this is the first duration risk if source latency
   or the commit-back chain grows — it is the number to watch, and the

@@ -285,6 +285,8 @@ def _lane_credit(name):
         return "Mastodon trends"
     if n == "bluesky-trending":
         return "Bluesky trending"
+    if n == "lemmy-hot":
+        return "Lemmy (hot posts)"
     return disp_text(n)
 
 
@@ -576,24 +578,13 @@ def write_home_fallback(topics, generated_at, merged=None, board=None,
     page = _fb_region_opt(page, "radarcount",
                       "%d memes moving now" % len(memes))
 
-    # Round 2 (design consult fix F): the Movement column retires
-    # itself when no tracked series actually moved (first-to-last
-    # velocity delta, the sparkline's own delta). Baked cells print the
-    # real delta instead of a placeholder dot. Mirrors the hasMove
-    # check in assets/js/app.js renderTable.
-    history = history or {}
-
-    def _delta(tid):
-        pts = history.get(tid) or []
-        if len(pts) < 2:
-            return None
-        try:
-            return (pts[-1][1] or 0) - (pts[0][1] or 0)
-        except Exception:
-            return None
-
-    has_move = any((_delta(t["id"]) or 0) != 0 for t in merged)
-
+    # Round 3: the Movement column is removed from this table. The
+    # Round 2 auto-retire kept it alive because 13 low-ranked series
+    # moved, yet every row a visitor actually sees (the score-ranked
+    # top 30) sat at "+0 since tracking started", a dead column in
+    # practice. No movement is fabricated here; real movement stays
+    # where it is read per trend: the board's movement word and each
+    # topic page's evidence sparkline. Mirrors assets/js/app.js.
     rows = []
     for i, t in enumerate(by_opp_m[:TMFB_TABLE_ROWS]):
         stale = bool(t.get("stale"))
@@ -608,7 +599,6 @@ def write_home_fallback(topics, generated_at, merged=None, board=None,
             '<td data-label="Platforms">%s</td>'
             '<td data-label="Score">%s</td>'
             '<td data-label="Spreading">%s</td>'
-            '<td data-label="Movement"%s>%s</td>'
             '<td data-label="Last seen">%s</td></tr>'
             % (' class="is-stale"' if stale else '', min(i, 12),
                esc(t["id"]), esc(disp_title(t.get("title"))),
@@ -617,17 +607,7 @@ def write_home_fallback(topics, generated_at, merged=None, board=None,
                "".join('<span class="chip plat">%s</span>' % esc(p)
                        for p in (t.get("platforms") or [])),
                _fb_score(t.get("opportunity_score")), _fb_score(t.get("velocity")),
-               "" if has_move else " hidden",
-               ("%+d since tracking started" % _delta(t["id"]))
-               if _delta(t["id"]) is not None else "·",
                _fb_fresh(t.get("last_seen"), ref)))
-    # the Movement header follows the same rule as its cells
-    if has_move:
-        page = page.replace('<th scope="col" id="th-trend" hidden>',
-                            '<th scope="col" id="th-trend">')
-    else:
-        page = page.replace('<th scope="col" id="th-trend">',
-                            '<th scope="col" id="th-trend" hidden>')
     page = _fb_region(page, "table", "".join(rows))
     page = _fb_region(page, "tablemeta",
                       "%d of %d trends shown · %d tracked in all · drawn from the same snapshot as the board above"
@@ -665,18 +645,30 @@ def write_home_fallback(topics, generated_at, merged=None, board=None,
                           'below its earlier peak.</li>')
         page = _fb_region(page, "catchup", catch_html)
         page = _fb_region(page, "hsmakenow", str(board["counts"]["makeable_shown"]))
+        # Live Board (§11.5): server-rendered first paint of the top 25.
+        page = _fb_region_opt(page, "liveboard",
+                              "".join(_fb_live_row(e) for e in board["topics"]))
+        page = _fb_region_opt(page, "liveage", "CHECKED 00:00:00 AGO")
+        _cats = []
+        for e in board["topics"]:
+            if e.get("category") and e["category"] not in _cats:
+                _cats.append(e["category"])
+        page = _fb_region_opt(page, "nichelinks", "".join(
+            '<a href="?niche=%s">%s board</a>' % (esc(c), esc(c)) for c in _cats))
 
     if ref is not None:
         stamp = ref.strftime("%b %-d, %Y, %-I:%M %p UTC")
     else:
         stamp = esc(generated_at)
     page = _fb_region(page, "datats",
-                      'Snapshot <span class="num">%s</span>' % stamp)
+                      'As of <span class="num">%s</span>' % stamp)
     # The News Bill (R136, Round-367 grade T2): the freshness stamp's
     # data-generated attribute is GENERATED from trends.json's
     # generated_at on every build, never a literal in the shell.
     page = re.sub(r'(<span id="data-ts")[^>]*>',
                   r'\1 data-generated="%s">' % generated_at, page, count=1)
+    page = re.sub(r'(<span id="freshness")[^>]*>',
+                  r'\1 data-generated="%s" aria-live="off">' % generated_at, page, count=1)
     # The News Bill (R136, Round-367 grade T3): the hstopics marker
     # ("408 trends tracked") left the first screen by design, so
     # the region is written only when its marker survives in
@@ -789,6 +781,15 @@ def merge_phenomena(topics):
                 m["last_seen"] = a.get("last_seen")
         m["opportunity_score"] = round((m.get("velocity") or 0)
                                        * (1 - _SAT_PEN.get(m.get("saturation"), 0)))
+        # Round 3: the merged row's own record is its combined evidence.
+        # When the combined sources reach the schema's 2+ bar and no
+        # constituent record was marked unverified, the merged row alone
+        # may carry "verified"; the stored records keep their own labels.
+        if (len(m.get("sources") or []) >= 2
+                and m.get("verification") != "unverified"
+                and all(by_id[a].get("verification") != "unverified"
+                        for a in abs_ids)):
+            m["verification"] = "verified"
         out.append(m)
     return out
 
@@ -850,7 +851,9 @@ def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
         "angle": (t.get("angles") or [None])[0],
         "evidence": evidence,
         "source_name": credit_name(t),
-        "source_count": len(t.get("sources") or []),
+        "source_count": (t.get("outlets") if t.get("outlets") is not None else len(t.get("sources") or [])),
+        "kinds": t.get("kinds") or [],
+        "confirmed": bool(t.get("confirmed")),
         "record": record_line(t, ref),
         "last_seen": t.get("last_seen"),
         "movement": movement,
@@ -862,7 +865,10 @@ def _board_entry(t, rank, n_snapshots, movement=None, splash=False,
 def build_board(topics, merged, generated_at, history=None):
     history = history or {}
     live = [t for t in merged if not t.get("stale")]
-    by_score = lambda t: (-(t.get("opportunity_score") or 0),
+    # strength (pipeline/rank.py) leads: how well a trend is holding up from
+    # independent sources. Room (opportunity) and velocity only break ties.
+    by_score = lambda t: (-(t.get("strength") or 0), -(t.get("outlets") or 0),
+                          -(t.get("opportunity_score") or 0),
                           -(t.get("velocity") or 0))
     make = sorted((t for t in live if t.get("category") != "news"
                    and make_allowed(t)),
@@ -941,8 +947,32 @@ def build_board(topics, merged, generated_at, history=None):
                           "s" if e["source_count"] != 1 else ""))
         catchup.append(e)
 
+    # Live Board (Claude bundle 2026-10-24 §11.5): the top 25 as one
+    # flat list, strength-led (by_score above), each row carrying its
+    # full evidence (every source + when it was seen) so the live
+    # board's drawer and the public feeds never invent anything.
+    top25 = []
+    for i, t in enumerate(sorted(live, key=by_score)[:25]):
+        top25.append({
+            "rank": i + 1, "id": t["id"], "title": t.get("title"),
+            "category": t.get("category"),
+            "platforms": t.get("platforms") or [],
+            "opportunity_score": t.get("opportunity_score") or 0,
+            "strength": t.get("strength"),
+            "velocity": t.get("velocity") or 0,
+            "last_seen": t.get("last_seen"),
+            "kinds": t.get("kinds") or [],
+            "outlets": t.get("outlets"),
+            "confirmed": bool(t.get("confirmed")),
+            "sources": [{"name": s.get("name"), "url": s.get("url"),
+                         "seen": s.get("seen")}
+                        for s in (t.get("sources") or [])],
+            "url": "topics/%s.html" % t["id"],
+        })
+
     return {
         "generated_at": generated_at,
+        "topics": top25,
         "score": {
             "name": "Opportunity index",
             "unit": "index, 0 to 100",
@@ -962,7 +992,8 @@ def build_board(topics, merged, generated_at, history=None):
         },
         "merges": merges,
         "counts": {"tracked": len(topics), "phenomena": len(merged),
-                   "makeable_shown": len(make), "news_shown": len(news)},
+                   "makeable_shown": len(make), "news_shown": len(news),
+                   "top_shown": len(top25)},
         "note": note,
         "splash_id": splash_id,
         "make_now": [_entry(t, i) for i, t in enumerate(make)],
@@ -1048,13 +1079,14 @@ def _fb_board_row(e):
                 % esc(disp_text(e["angle"])))
     meta = '<p class="board-meta">%s</p>' % esc(_fb_meta_line(e))
     splash = bool(e.get("splash"))
-    return ('<li class="board-row%s%s"><span class="board-rank">%d</span>'
+    return ('<li class="board-row%s%s" data-sources="%d"><span class="board-rank">%d</span>'
             '<div class="board-main">%s%s%s%s%s</div>'
             '<div class="board-score"><span class="score-num">%d</span>'
             '<span class="board-unit">/ 100</span>'
             '<span class="score-bar" aria-hidden="true"><i style="width:%d%%"></i></span></div></li>'
             % (" news" if e["kind"] == "news" else "",
                " splash" if splash else "",
+               int(e.get("source_count") or 0),
                e["rank"], badge, _fb_title_html(e), aka, meta, make,
                e["opportunity_score"], e["opportunity_score"]))
 
@@ -1070,6 +1102,76 @@ def _fb_catchup_row(e):
             '<span class="score-bar" aria-hidden="true"><i style="width:%d%%"></i></span></div></li>'
             % (_fb_title_html(e), esc(e["record"]), e["velocity"],
                e["velocity"]))
+
+
+def _fb_live_row(e):
+    """Live Board row (Claude bundle 2026-10-24 §11.5): server-rendered
+    first paint in exactly the markup assets/js/live.js repaints from
+    data/v1/board.json — rank, title, @property count-up score, the
+    evidence drawer (every source + its seen time) and the My Watch
+    pin. Single-source rows are dimmed and labelled, never hidden.
+    Mirrors row() in assets/js/live.js."""
+    srcs = "".join(
+        '<li><a href="%s" rel="noopener">%s</a>%s</li>'
+        % (esc(s.get("url") or ""), esc(s.get("name") or "?"),
+           (" · seen %s UTC" % esc(str(s["seen"])[:16].replace("T", " ")))
+           if s.get("seen") else "")
+        for s in (e.get("sources") or []))
+    n = len(e.get("sources") or [])
+    return ('<li class="row%s" style="view-transition-name:t-%s">'
+            '<span class="rk">%d</span>'
+            '<span class="tt"><a href="%s">%s</a></span>'
+            '<span class="sc" data-to="%d" style="--n:%d"><small>/100</small></span>'
+            '<button class="pin" type="button" data-pin="%s" aria-pressed="false">Pin</button>'
+            '<details class="ev"><summary>Evidence · %d source%s%s</summary><ul>%s</ul></details></li>'
+            % (" dim" if not e.get("confirmed") else "", esc(e["id"]),
+               e["rank"], esc(e["url"]), esc(disp_title(e["title"])),
+               e["opportunity_score"], e["opportunity_score"],
+               esc(e["id"]), n, "" if n == 1 else "s",
+               " · 1 source only, treat with care" if not e.get("confirmed") else "",
+               srcs))
+
+
+def write_live_feeds(board):
+    """Public feeds for the Live Board (§11.5): /board.json (the top 25,
+    Claude's shape) and /feed.xml (RSS of the same rows). Written at the
+    repo root so they deploy as /board.json and /feed.xml."""
+    import email.utils
+    feed = {"generated_at": board["generated_at"],
+            "topics": board["topics"]}
+    with open(os.path.join(ROOT, "board.json"), "w") as f:
+        json.dump(feed, f, indent=2, ensure_ascii=False)
+    base = "https://trend-machine-live.vercel.app/"
+    def _pub(iso):
+        try:
+            t = datetime.datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=datetime.timezone.utc)
+            return email.utils.format_datetime(t)
+        except Exception:
+            return email.utils.format_datetime(
+                datetime.datetime.now(datetime.timezone.utc))
+    items = "".join(
+        "<item><title>%s</title><link>%s</link><guid>%s</guid>"
+        "<pubDate>%s</pubDate><description>%s</description></item>"
+        % (html.escape(str(e["title"])), base + e["url"], base + e["url"],
+           _pub(e.get("last_seen") or board["generated_at"]),
+           html.escape("%d/100 · %d source%s%s · last seen %s"
+                       % (e["opportunity_score"], len(e.get("sources") or []),
+                          "" if len(e.get("sources") or []) == 1 else "s",
+                          "" if e.get("confirmed") else " (single source)",
+                          e.get("last_seen") or "?")))
+        for e in board["topics"])
+    rss = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<rss version="2.0"><channel>'
+           "<title>Trend Machine: what is rising right now, with sources</title>"
+           "<link>%s</link>"
+           "<description>The top 25 rising topics, with the sources that saw them. "
+           "Data generated %s.</description>%s</channel></rss>\n"
+           % (base, board["generated_at"], items))
+    with open(os.path.join(ROOT, "feed.xml"), "w") as f:
+        f.write(rss)
+    print("[build] board.json + feed.xml (top %d)" % len(board["topics"]))
 
 
 # wave 32 (Foundry round 2; round-11 placement packet): the root pages are
@@ -1371,6 +1473,15 @@ def main():
     with open(DATA) as f:
         data = json.load(f)
     topics = data["topics"]
+    # Round 3 correctness: the schema defines "verified" as 2+ sources,
+    # so a record carrying fewer than 2 sources must not keep the label.
+    # The canonical store was corrected the same way; this guard keeps
+    # every built output (topic pages, data/v1, the board) honest if a
+    # future store refresh reintroduces the mismatch. It changes the
+    # label only, never make_allowed()'s gate.
+    for t in topics:
+        if t.get("verification") == "verified" and len(t.get("sources") or []) < 2:
+            t["verification"] = "single-source"
     # wave 9: format-family display names for dossier chips
     global _FAMILY_NAMES
     try:
@@ -1420,6 +1531,7 @@ def main():
                         history=history)
     with open(os.path.join(api, "board.json"), "w") as f:
         json.dump(board, f, indent=2, ensure_ascii=False)
+    write_live_feeds(board)
     print(f"[build] data/v1/board.json ({board['counts']['makeable_shown']} make-now / "
           f"{board['counts']['news_shown']} news / {board['counts']['phenomena']} phenomena "
           f"from {board['counts']['tracked']} topics)")

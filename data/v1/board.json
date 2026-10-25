@@ -1,5 +1,859 @@
 {
-  "generated_at": "2026-10-13T10:15:48.270927+00:00",
+  "generated_at": "2026-10-24T13:40:52.653670+00:00",
+  "topics": [
+    {
+      "rank": 1,
+      "id": "premier-league-standings",
+      "title": "premier league standings",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.428277+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cmn0628p5rkyt",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        },
+        {
+          "name": "gtrends-news:The Guardian",
+          "url": "https://www.theguardian.com/football/2026/oct/23/ipswich-nottingham-forest-premier-league-match-report",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        },
+        {
+          "name": "gtrends-news:Sky Sports",
+          "url": "https://www.skysports.com/football/live-blog/13602310/ipswich-vs-n-forest-live-premier-league-score-updates-news-prediction-lineups-and-how-to-watch-or-stream",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        }
+      ],
+      "url": "topics/premier-league-standings.html"
+    },
+    {
+      "rank": 2,
+      "id": "erling-haaland",
+      "title": "erling haaland",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435498+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        },
+        {
+          "name": "gtrends-news:OneFootball",
+          "url": "https://onefootball.com/en/news/aston-villa-among-erling-haalands-premier-league-bogey-teams-43663974",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cj62ynzwg4pet",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        },
+        {
+          "name": "gtrends-news:ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50220422/premier-league-live-updates-aston-villa-manchester-city-arsenal-everton-chelsea-tottenham-hotspur",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        }
+      ],
+      "url": "topics/erling-haaland.html"
+    },
+    {
+      "rank": 3,
+      "id": "premier-league-table",
+      "title": "premier league table",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435575+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/articles/cw3djpg15045o",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        },
+        {
+          "name": "gtrends-news:The Guardian",
+          "url": "https://www.theguardian.com/football/2026/oct/22/nottingham-forest-oliver-glasner-time-evangelos-marinakis",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        },
+        {
+          "name": "gtrends-news:The New York Times",
+          "url": "https://www.nytimes.com/athletic/7710163/2026/10/22/oliver-glasners-false-starts-what-can-he-learn-at-forest-from-palace-and-frankfurt-struggles/",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        }
+      ],
+      "url": "topics/premier-league-table.html"
+    },
+    {
+      "rank": 4,
+      "id": "west-ham-vs-southampton",
+      "title": "west ham vs southampton",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435649+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cked35y808jjt",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        },
+        {
+          "name": "gtrends-news:West Ham United",
+          "url": "https://www.whufc.com/en/news/starting-xi-or-taty-and-walker-peters-return-for-southampton",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        },
+        {
+          "name": "gtrends-news:Daily Echo",
+          "url": "https://www.dailyecho.co.uk/sport/26658555.southamptons-azaz-opens-performances-ahead-west-ham-trip/",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        }
+      ],
+      "url": "topics/west-ham-vs-southampton.html"
+    },
+    {
+      "rank": 5,
+      "id": "como-vs",
+      "title": "como vs",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435719+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        },
+        {
+          "name": "gtrends-news:Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/nico-paz-ll-never-forget-194000202.html",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        },
+        {
+          "name": "gtrends-news:The New York Times",
+          "url": "https://www.nytimes.com/athletic/7712341/2026/10/22/fernandes-carrick-man-utd-pressing/",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        },
+        {
+          "name": "gtrends-news:CBS Sports",
+          "url": "https://www.cbssports.com/soccer/news/bruno-fernandes-rebellion-underlines-manchester-uniteds-problem/",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        }
+      ],
+      "url": "topics/como-vs.html"
+    },
+    {
+      "rank": 6,
+      "id": "blackburn-rovers-vs-wrexham",
+      "title": "blackburn rovers vs wrexham",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435784+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cj1dwqr35pxwt",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        },
+        {
+          "name": "gtrends-news:Wrexham and Flintshire News, Sport, Events | The Leader",
+          "url": "https://www.leaderlive.co.uk/news/26664354.blackburn-v-wrexham-afc--storms-spark-travel-warnings/",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        },
+        {
+          "name": "gtrends-news:Forza Football",
+          "url": "https://forzafootball.com/news/wrexham-handed-major-fitness-boost-ahead-of-blackburn-rovers-fixture-159469459",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        }
+      ],
+      "url": "topics/blackburn-rovers-vs-wrexham.html"
+    },
+    {
+      "rank": 7,
+      "id": "coventry-vs-fulham",
+      "title": "coventry vs fulham",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.443388+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cq398rj0l38mt",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        },
+        {
+          "name": "gtrends-news:Fulham Football Club",
+          "url": "https://www.fulhamfc.com/news/2026/october/23/pre-coventry-press-conference/",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        },
+        {
+          "name": "gtrends-news:Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/lampard-says-no-drama-squad-082820841.html",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        }
+      ],
+      "url": "topics/coventry-vs-fulham.html"
+    },
+    {
+      "rank": 8,
+      "id": "cancer",
+      "title": "cancer",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.443709+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        },
+        {
+          "name": "gtrends-news:NBC News",
+          "url": "https://www.nbcnews.com/politics/politics-news/vanessa-trump-cancer-free-breast-cancer-diagnosis-surgery-treatment-rcna605339",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        },
+        {
+          "name": "gtrends-news:New York Post",
+          "url": "https://nypost.com/2026/10/23/us-news/vanessa-trump-reveals-shes-cancer-free-six-months-after-receiving-devastating-diagnosis/",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        },
+        {
+          "name": "gtrends-news:People.com",
+          "url": "https://people.com/vanessa-trump-reveals-she-s-cancer-free-after-announcing-diagnosis-in-may-12190830",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        }
+      ],
+      "url": "topics/cancer.html"
+    },
+    {
+      "rank": 9,
+      "id": "matt-leinart",
+      "title": "matt leinart",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.446821+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        },
+        {
+          "name": "gtrends-news:Detroit Free Press",
+          "url": "https://www.freep.com/story/sports/college/university-michigan/wolverines/2026/10/24/tommy-carr-grandpa-lloyd-cj-jason-notre-dame-michigan/92380105007/",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        },
+        {
+          "name": "gtrends-news:Maize n Brew",
+          "url": "https://www.maizenbrew.com/football/126065/michigan-football-tommy-carr-indiana-hoosiers-big-ten",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        },
+        {
+          "name": "gtrends-news:MLive.com",
+          "url": "https://www.mlive.com/wolverines/football/2026/10/you-see-the-upside-with-michigan-qb-tommy-carr-foxs-matt-leinart-says.html",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        }
+      ],
+      "url": "topics/matt-leinart.html"
+    },
+    {
+      "rank": 10,
+      "id": "arsenal-everton",
+      "title": "arsenal - everton",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.446949+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cj62ynzwg4pet",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        },
+        {
+          "name": "gtrends-news:ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50220422/premier-league-live-updates-aston-villa-manchester-city-arsenal-everton-chelsea-tottenham-hotspur",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        },
+        {
+          "name": "gtrends-news:Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/liveblog/2026/10/24/aston-villa-vs-manchester-city-live-premier-league",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        }
+      ],
+      "url": "topics/arsenal-everton.html"
+    },
+    {
+      "rank": 11,
+      "id": "new-alien-movie-in-the-works-with-writer-aaron-guz",
+      "title": "New ‘Alien’ Movie in the Works With Writer Aaron Guzikowski (Exclusive)",
+      "category": "entertainment",
+      "platforms": [
+        "google",
+        "reddit"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:34:46.925543+00:00",
+      "kinds": [
+        "news",
+        "social"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "gnews-q:movies",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPa1RRbTdzRmYwVk1pLVUyMHRPYlBIVHp4eC1KbDB4WUFTY24wc1FaclgtRHRIYVBFT0FfaTA2NEF0T2kzM0lEVEM5N2VNWC1BTWVUem8wVThHc1I5LVN4c0t0NU95aEhEd2hETVVIaGpvX25SS2JWYWNpTVB1NlU5RFVpZXJWMVF5NUNOeUFoWklQUktLMHVn?oc=5",
+          "seen": "2026-10-24T13:33:53.514605+00:00"
+        },
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1xdqn4h/new_alien_movie_in_the_works_with_writer_aaron/",
+          "seen": "2026-10-24T13:34:46.925543+00:00"
+        }
+      ],
+      "url": "topics/new-alien-movie-in-the-works-with-writer-aaron-guz.html"
+    },
+    {
+      "rank": 12,
+      "id": "chatgpt",
+      "title": "ChatGPT",
+      "category": "tech",
+      "platforms": [
+        "apple",
+        "wikipedia"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:38:05.304096+00:00",
+      "kinds": [
+        "chart",
+        "reference"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "apple-appstore-chart",
+          "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+          "seen": null
+        },
+        {
+          "name": "wikipedia-most-read",
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "seen": "2026-10-24T13:38:05.304096+00:00"
+        }
+      ],
+      "url": "topics/chatgpt.html"
+    },
+    {
+      "rank": 13,
+      "id": "ryan-gosling-s-goth-folk-band-dead-man-s-bones-is-",
+      "title": "Ryan Gosling's goth folk band Dead Man's Bones is officially returning after 17 years",
+      "category": "music",
+      "platforms": [
+        "reddit",
+        "google"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:34:41.711817+00:00",
+      "kinds": [
+        "news",
+        "social"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1xdabqr/ryan_goslings_goth_folk_band_dead_mans_bones_is/",
+          "seen": "2026-10-24T13:34:41.711817+00:00"
+        },
+        {
+          "name": "gnews-q:new music",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYzlLdjE2amEtMTFqNGZrX1VPbXRIQmNSQzVndW9Yb2pneXBSb1hDYmdjdDd1bjJtTTJ4OWdXcVVkUTZKSENjRUlnUmcwLWo0U3VvVllrRDNTV1pkeXkyeTJfTHc0YkJuZXZzUlkxVE9IOFdFc3F1SHBhQ014S05ZM2hBbEw0YU9CM0NEVzJRblFUQlRhQm53QzFLQ2dyWVRWQzVJdFpBYm5vVlB2XzNj?oc=5",
+          "seen": "2026-10-24T13:33:58.112652+00:00"
+        }
+      ],
+      "url": "topics/ryan-gosling-s-goth-folk-band-dead-man-s-bones-is-.html"
+    },
+    {
+      "rank": 14,
+      "id": "you-can-see-everything",
+      "title": "You Can See Everything",
+      "category": "news",
+      "platforms": [
+        "wikipedia",
+        "bluesky"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:38:05.304116+00:00",
+      "kinds": [
+        "reference",
+        "social"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "wikipedia-most-read",
+          "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
+          "seen": "2026-10-24T13:38:05.304116+00:00"
+        },
+        {
+          "name": "bluesky-trending",
+          "url": "https://bsky.app/search?q=%27You+Can+See+Everything%27+premieres",
+          "seen": "2026-10-24T13:37:09.871426+00:00"
+        }
+      ],
+      "url": "topics/you-can-see-everything.html"
+    },
+    {
+      "rank": 15,
+      "id": "bbc-edits-out-pride-pins-on-university-challenge-i",
+      "title": "BBC edits out pride pins on University Challenge in ‘Orwellian’ move",
+      "category": "news",
+      "platforms": [
+        "lemmy",
+        "bluesky"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:37:15.070151+00:00",
+      "kinds": [
+        "social",
+        "web"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "lemmy-hot",
+          "url": "https://www.leicester.news/bbc-edits-out-pride-pins-on-university-challenge-in-orwellian-move/",
+          "seen": "2026-10-24T13:37:15.070151+00:00"
+        },
+        {
+          "name": "bluesky-trending",
+          "url": "https://bsky.app/search?q=BBC+edits+out+University+Challenge+pride+pins",
+          "seen": "2026-10-24T13:37:09.871362+00:00"
+        }
+      ],
+      "url": "topics/bbc-edits-out-pride-pins-on-university-challenge-i.html"
+    },
+    {
+      "rank": 16,
+      "id": "canadian-woman-living-in-u-s-dies-after-fears-of-d",
+      "title": "Canadian woman living in U.S. dies after fears of detention prevented her from seeking medical care",
+      "category": "news",
+      "platforms": [
+        "reddit",
+        "lemmy"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:37:15.070228+00:00",
+      "kinds": [
+        "social",
+        "web"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/news",
+          "url": "https://www.reddit.com/r/news/comments/1xdxc6t/canadian_woman_living_in_us_dies_after_fears_of/",
+          "seen": "2026-10-24T13:34:27.641663+00:00"
+        },
+        {
+          "name": "lemmy-hot",
+          "url": "https://www.cbc.ca/news/canada/british-columbia/paige-adamson-death-fear-immigration-deportation-9.7392450",
+          "seen": "2026-10-24T13:37:15.070228+00:00"
+        }
+      ],
+      "url": "topics/canadian-woman-living-in-u-s-dies-after-fears-of-d.html"
+    },
+    {
+      "rank": 17,
+      "id": "how-are-drones-hunting-hidden-fires-cairngorms-bbc",
+      "title": "How are drones hunting hidden fires? #Cairngorms #BBCNews",
+      "category": "news",
+      "platforms": [
+        "youtube"
+      ],
+      "opportunity_score": 49,
+      "strength": 33,
+      "velocity": 49,
+      "last_seen": "2026-10-24T13:38:36.603640+00:00",
+      "kinds": [
+        "video"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "yt-rss:BBCNews",
+          "url": "https://www.youtube.com/shorts/aFtDtCSvSz0",
+          "seen": "2026-10-24T13:38:36.603640+00:00"
+        }
+      ],
+      "url": "topics/how-are-drones-hunting-hidden-fires-cairngorms-bbc.html"
+    },
+    {
+      "rank": 18,
+      "id": "when-do-the-clocks-go-back-in-the-uk-winter-bbcnew",
+      "title": "When do the clocks go back in the UK? #Winter #BBCNews",
+      "category": "news",
+      "platforms": [
+        "youtube"
+      ],
+      "opportunity_score": 49,
+      "strength": 33,
+      "velocity": 49,
+      "last_seen": "2026-10-24T13:38:36.603660+00:00",
+      "kinds": [
+        "video"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "yt-rss:BBCNews",
+          "url": "https://www.youtube.com/shorts/QNb4aREBajI",
+          "seen": "2026-10-24T13:38:36.603660+00:00"
+        }
+      ],
+      "url": "topics/when-do-the-clocks-go-back-in-the-uk-winter-bbcnew.html"
+    },
+    {
+      "rank": 19,
+      "id": "lhp3",
+      "title": "#lhp3",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132054+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/lhp3",
+          "seen": "2026-10-24T13:37:06.132054+00:00"
+        }
+      ],
+      "url": "topics/lhp3.html"
+    },
+    {
+      "rank": 20,
+      "id": "vendredilecture",
+      "title": "#VendrediLecture",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132105+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/vendredilecture",
+          "seen": "2026-10-24T13:37:06.132105+00:00"
+        }
+      ],
+      "url": "topics/vendredilecture.html"
+    },
+    {
+      "rank": 21,
+      "id": "1980sbucketlist",
+      "title": "#1980sBucketList",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132122+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/1980sbucketlist",
+          "seen": "2026-10-24T13:37:06.132122+00:00"
+        }
+      ],
+      "url": "topics/1980sbucketlist.html"
+    },
+    {
+      "rank": 22,
+      "id": "hochwasser",
+      "title": "#hochwasser",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132096+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/hochwasser",
+          "seen": "2026-10-24T13:37:06.132096+00:00"
+        }
+      ],
+      "url": "topics/hochwasser.html"
+    },
+    {
+      "rank": 23,
+      "id": "playtime",
+      "title": "#playtime",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132170+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/playtime",
+          "seen": "2026-10-24T13:37:06.132170+00:00"
+        }
+      ],
+      "url": "topics/playtime.html"
+    },
+    {
+      "rank": 24,
+      "id": "trappes",
+      "title": "#trappes",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132186+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/trappes",
+          "seen": "2026-10-24T13:37:06.132186+00:00"
+        }
+      ],
+      "url": "topics/trappes.html"
+    },
+    {
+      "rank": 25,
+      "id": "totp",
+      "title": "#totp",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132194+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/totp",
+          "seen": "2026-10-24T13:37:06.132194+00:00"
+        }
+      ],
+      "url": "topics/totp.html"
+    }
+  ],
   "score": {
     "name": "Opportunity index",
     "unit": "index, 0 to 100",
@@ -25,264 +879,264 @@
     "tracked": 408,
     "phenomena": 407,
     "makeable_shown": 7,
-    "news_shown": 3
+    "news_shown": 3,
+    "top_shown": 25
   },
   "note": "407 trends from 408 tracked topics: \"6-7\": Gen Alpha's defining brainrot joke and \"Six Seven\" (Seis Sete) funk dance are one trend under two names, so they share a row. Everything we track, all 408, is listed further down this page.",
-  "splash_id": "six-seven-meme",
+  "splash_id": null,
   "make_now": [
     {
       "rank": 1,
-      "id": "six-seven-meme",
-      "title": "\"6-7\": Gen Alpha's defining brainrot joke",
-      "aka": [
-        "\"Six Seven\" (Seis Sete) funk dance"
-      ],
-      "merged_from": [
-        "seis-sete-dance"
-      ],
-      "url": "topics/six-seven-meme.html",
+      "id": "new-alien-movie-in-the-works-with-writer-aaron-guz",
+      "title": "New ‘Alien’ Movie in the Works With Writer Aaron Guzikowski (Exclusive)",
+      "aka": [],
+      "merged_from": [],
+      "url": "topics/new-alien-movie-in-the-works-with-writer-aaron-guz.html",
       "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 92,
-      "velocity": 92,
-      "saturation": "low",
+      "category": "entertainment",
+      "opportunity_score": 46,
+      "velocity": 70,
+      "saturation": "medium",
       "platforms": [
-        "tiktok",
-        "youtube"
+        "google",
+        "reddit"
       ],
-      "hashtags": [
-        "#67",
-        "#sixseven",
-        "#brainrot",
-        "#seissete",
-        "#dancechallenge"
-      ],
-      "format": "meme",
-      "angle": "Explain the meme to millennials/parents (reaction gold)",
+      "hashtags": [],
+      "format": "entertainment",
+      "angle": null,
       "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#67",
-        "#sixseven"
+        "The lane is filling up.",
+        "We have seen it in 2 checks so far."
       ],
-      "source_name": "Wikipedia",
+      "source_name": "The Hollywood Reporter",
       "source_count": 2,
-      "record": "spreading 92 of 100 · last seen Oct 11 · 2 sources",
-      "last_seen": "2026-10-11T19:30:00-07:00",
+      "kinds": [
+        "news",
+        "social"
+      ],
+      "confirmed": true,
+      "record": "spreading 70 of 100 · last seen Oct 24 · 2 sources",
+      "last_seen": "2026-10-24T13:34:46.925543+00:00",
       "movement": "steady",
-      "splash": true,
-      "spark_svg": "<svg class=\"splash-chart\" viewBox=\"0 0 560 110\" role=\"img\" aria-label=\"Spreading, from stored readings: 92 when tracking started (Oct 11, 2026), 92 at the latest reading (21 readings).\" focusable=\"false\"><polyline pathLength=\"1\" class=\"splash-line\" points=\"6.0,104.0 33.4,104.0 60.8,104.0 88.2,104.0 115.6,104.0 143.0,104.0 170.4,104.0 197.8,104.0 225.2,104.0 252.6,104.0 280.0,104.0 307.4,104.0 334.8,104.0 362.2,104.0 389.6,104.0 417.0,104.0 444.4,104.0 471.8,104.0 499.2,104.0 526.6,104.0 554.0,104.0\" fill=\"none\"/><circle cx=\"554.0\" cy=\"104.0\" r=\"3.2\"/></svg>"
+      "splash": false,
+      "spark_svg": null
     },
     {
       "rank": 2,
-      "id": "gta6-robberies",
-      "title": "GTA 6: robberies and partner getaways detailed",
+      "id": "chatgpt",
+      "title": "ChatGPT",
       "aka": [],
       "merged_from": [],
-      "url": "topics/gta6-robberies.html",
+      "url": "topics/chatgpt.html",
       "kind": "makeable",
-      "category": "gaming",
-      "opportunity_score": 91,
-      "velocity": 91,
-      "saturation": "low",
+      "category": "tech",
+      "opportunity_score": 46,
+      "velocity": 70,
+      "saturation": "medium",
       "platforms": [
-        "youtube",
-        "tiktok",
-        "x"
+        "apple",
+        "wikipedia"
       ],
-      "hashtags": [
-        "#gta6",
-        "#rockstar"
-      ],
-      "format": "gaming",
-      "angle": "What the robbery system tells us about the story",
+      "hashtags": [],
+      "format": "tech",
+      "angle": null,
       "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#gta6",
-        "#rockstar"
+        "The lane is filling up.",
+        "We have seen it in 2 checks so far."
       ],
-      "source_name": "Game8",
-      "source_count": 1,
-      "record": "spreading 91 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
+      "source_name": "apple-appstore-chart",
+      "source_count": 2,
+      "kinds": [
+        "chart",
+        "reference"
+      ],
+      "confirmed": true,
+      "record": "spreading 70 of 100 · last seen Oct 24 · 2 sources",
+      "last_seen": "2026-10-24T13:38:05.304096+00:00",
       "movement": "steady",
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 3,
-      "id": "nba-tiktok-surge",
-      "title": "#nba explodes on TikTok (+493%)",
+      "id": "ryan-gosling-s-goth-folk-band-dead-man-s-bones-is-",
+      "title": "Ryan Gosling's goth folk band Dead Man's Bones is officially returning after 17 years",
       "aka": [],
       "merged_from": [],
-      "url": "topics/nba-tiktok-surge.html",
+      "url": "topics/ryan-gosling-s-goth-folk-band-dead-man-s-bones-is-.html",
       "kind": "makeable",
-      "category": "sports",
-      "opportunity_score": 86,
-      "velocity": 86,
-      "saturation": "low",
+      "category": "music",
+      "opportunity_score": 46,
+      "velocity": 70,
+      "saturation": "medium",
       "platforms": [
-        "tiktok"
+        "reddit",
+        "google"
       ],
-      "hashtags": [
-        "#nba",
-        "#basketball"
-      ],
-      "format": "sports",
-      "angle": "The play that broke basketball TikTok this week",
+      "hashtags": [],
+      "format": "music",
+      "angle": null,
       "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#nba",
-        "#basketball"
+        "The lane is filling up.",
+        "We have seen it in 2 checks so far."
       ],
-      "source_name": "Revid",
-      "source_count": 1,
-      "record": "spreading 86 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": "steady",
+      "source_name": "Reddit (r/Music)",
+      "source_count": 2,
+      "kinds": [
+        "news",
+        "social"
+      ],
+      "confirmed": true,
+      "record": "spreading 70 of 100 · last seen Oct 24 · 2 sources",
+      "last_seen": "2026-10-24T13:34:41.711817+00:00",
+      "movement": "rising",
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 4,
-      "id": "we-fell-in-love-in-october",
-      "title": "\"we fell in love in october\": girl in red",
+      "id": "lhp3",
+      "title": "#lhp3",
       "aka": [],
       "merged_from": [],
-      "url": "topics/we-fell-in-love-in-october.html",
+      "url": "topics/lhp3.html",
       "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 86,
-      "velocity": 86,
+      "category": "culture",
+      "opportunity_score": 47,
+      "velocity": 47,
       "saturation": "low",
       "platforms": [
-        "tiktok",
-        "instagram"
+        "mastodon"
       ],
       "hashtags": [
-        "#wefellinloveinoctober",
-        "#octobermood"
+        "#lhp3"
       ],
-      "format": "meme",
-      "angle": "Pumpkin-patch date montage that isn't generic",
+      "format": "culture",
+      "angle": null,
       "evidence": [
         "The lane is still uncrowded.",
-        "We have seen it in 18 checks so far.",
-        "#wefellinloveinoctober",
-        "#octobermood"
+        "We have seen it in 2 checks so far.",
+        "#lhp3"
       ],
-      "source_name": "SocialPilot",
+      "source_name": "Mastodon trends",
       "source_count": 1,
-      "record": "spreading 86 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
+      "kinds": [
+        "social"
+      ],
+      "confirmed": false,
+      "record": "spreading 47 of 100 · last seen Oct 24 · 1 source",
+      "last_seen": "2026-10-24T13:37:06.132054+00:00",
       "movement": "steady",
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 5,
-      "id": "dip-on-em",
-      "title": "\"DIP ON EM\": early-stage dance sound",
+      "id": "vendredilecture",
+      "title": "#VendrediLecture",
       "aka": [],
       "merged_from": [],
-      "url": "topics/dip-on-em.html",
+      "url": "topics/vendredilecture.html",
       "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 85,
-      "velocity": 85,
+      "category": "culture",
+      "opportunity_score": 47,
+      "velocity": 47,
       "saturation": "low",
       "platforms": [
-        "tiktok"
+        "mastodon"
       ],
       "hashtags": [
-        "#diponem",
-        "#dancechallenge"
+        "#VendrediLecture"
       ],
-      "format": "dance",
-      "angle": "Clean one-take before it blows up",
+      "format": "culture",
+      "angle": null,
       "evidence": [
         "The lane is still uncrowded.",
-        "We have seen it in 18 checks so far.",
-        "#diponem",
-        "#dancechallenge"
+        "We have seen it in 2 checks so far.",
+        "#VendrediLecture"
       ],
-      "source_name": "SocialPilot",
+      "source_name": "Mastodon trends",
       "source_count": 1,
-      "record": "spreading 85 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
+      "kinds": [
+        "social"
+      ],
+      "confirmed": false,
+      "record": "spreading 47 of 100 · last seen Oct 24 · 1 source",
+      "last_seen": "2026-10-24T13:37:06.132105+00:00",
       "movement": "steady",
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 6,
-      "id": "insomniac-lofi",
-      "title": "\"Insomniac\": Memo Boy's lo-fi bed",
+      "id": "1980sbucketlist",
+      "title": "#1980sBucketList",
       "aka": [],
       "merged_from": [],
-      "url": "topics/insomniac-lofi.html",
+      "url": "topics/1980sbucketlist.html",
       "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 84,
-      "velocity": 84,
+      "category": "culture",
+      "opportunity_score": 47,
+      "velocity": 47,
       "saturation": "low",
       "platforms": [
-        "tiktok"
+        "mastodon"
       ],
       "hashtags": [
-        "#insomniac",
-        "#lofi",
-        "#fallvibes"
+        "#1980sBucketList"
       ],
-      "format": "meme",
-      "angle": "Slow Halloween decor pan on the Insomniac bed",
+      "format": "culture",
+      "angle": null,
       "evidence": [
         "The lane is still uncrowded.",
-        "We have seen it in 18 checks so far.",
-        "#insomniac",
-        "#lofi"
+        "We have seen it in 2 checks so far.",
+        "#1980sBucketList"
       ],
-      "source_name": "SocialPilot",
+      "source_name": "Mastodon trends",
       "source_count": 1,
-      "record": "spreading 84 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
+      "kinds": [
+        "social"
+      ],
+      "confirmed": false,
+      "record": "spreading 47 of 100 · last seen Oct 24 · 1 source",
+      "last_seen": "2026-10-24T13:37:06.132122+00:00",
       "movement": "steady",
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 7,
-      "id": "spooky-skeletons-remix",
-      "title": "\"Spooky, Scary Skeletons\" House VIP Remix",
+      "id": "hochwasser",
+      "title": "#hochwasser",
       "aka": [],
       "merged_from": [],
-      "url": "topics/spooky-skeletons-remix.html",
+      "url": "topics/hochwasser.html",
       "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 84,
-      "velocity": 84,
+      "category": "culture",
+      "opportunity_score": 47,
+      "velocity": 47,
       "saturation": "low",
       "platforms": [
-        "tiktok"
+        "mastodon"
       ],
       "hashtags": [
-        "#spookyseason",
-        "#halloweendecor"
+        "#hochwasser"
       ],
-      "format": "meme",
-      "angle": "Halloween countdown with a beat",
+      "format": "culture",
+      "angle": null,
       "evidence": [
         "The lane is still uncrowded.",
-        "We have seen it in 18 checks so far.",
-        "#spookyseason",
-        "#halloweendecor"
+        "We have seen it in 2 checks so far.",
+        "#hochwasser"
       ],
-      "source_name": "SocialPilot",
+      "source_name": "Mastodon trends",
       "source_count": 1,
-      "record": "spreading 84 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
+      "kinds": [
+        "social"
+      ],
+      "confirmed": false,
+      "record": "spreading 47 of 100 · last seen Oct 24 · 1 source",
+      "last_seen": "2026-10-24T13:37:06.132096+00:00",
       "movement": "steady",
       "splash": false,
       "spark_svg": null
@@ -291,226 +1145,109 @@
   "news_watch": [
     {
       "rank": 1,
-      "id": "trump-rally-nobel",
-      "title": "Trump roasts rally protester; Nobel Prize outrage",
+      "id": "premier-league-standings",
+      "title": "premier league standings",
       "aka": [],
       "merged_from": [],
-      "url": "topics/trump-rally-nobel.html",
+      "url": "topics/premier-league-standings.html",
       "kind": "news",
       "category": "news",
-      "opportunity_score": 90,
-      "velocity": 90,
-      "saturation": "low",
+      "opportunity_score": 38,
+      "velocity": 95,
+      "saturation": "high",
       "platforms": [
-        "x",
-        "youtube",
-        "tiktok"
+        "google"
       ],
-      "hashtags": [
-        "#trump",
-        "#nobelprize"
-      ],
+      "hashtags": [],
       "format": "news",
-      "angle": "The 30-second clip, zero commentary (let comments cook)",
+      "angle": null,
       "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#trump",
-        "#nobelprize"
+        "The lane is crowded.",
+        "We have seen it in 1 checks so far."
       ],
-      "source_name": "RedWaveFeed",
-      "source_count": 1,
-      "record": "spreading 90 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": "steady",
+      "source_name": "google-trends",
+      "source_count": 4,
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "confirmed": true,
+      "record": "spreading 95 of 100 · last seen Oct 24 · 4 sources",
+      "last_seen": "2026-10-24T13:33:25.428277+00:00",
+      "movement": null,
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 2,
-      "id": "houthi-riyadh-strike",
-      "title": "Houthi missile strike on Riyadh airport",
+      "id": "erling-haaland",
+      "title": "erling haaland",
       "aka": [],
       "merged_from": [],
-      "url": "topics/houthi-riyadh-strike.html",
+      "url": "topics/erling-haaland.html",
       "kind": "news",
       "category": "news",
-      "opportunity_score": 88,
-      "velocity": 88,
-      "saturation": "low",
+      "opportunity_score": 38,
+      "velocity": 95,
+      "saturation": "high",
       "platforms": [
-        "youtube",
-        "x"
+        "google"
       ],
-      "hashtags": [
-        "#riyadh",
-        "#middleeast",
-        "#breaking"
-      ],
+      "hashtags": [],
       "format": "news",
-      "angle": "What happened in 3 minutes (map + timeline)",
+      "angle": null,
       "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#riyadh",
-        "#middleeast"
+        "The lane is crowded.",
+        "We have seen it in 1 checks so far."
       ],
-      "source_name": "NewsWatchmen",
-      "source_count": 1,
-      "record": "spreading 88 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": "steady",
+      "source_name": "google-trends",
+      "source_count": 4,
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "confirmed": true,
+      "record": "spreading 95 of 100 · last seen Oct 24 · 4 sources",
+      "last_seen": "2026-10-24T13:33:25.435498+00:00",
+      "movement": null,
       "splash": false,
       "spark_svg": null
     },
     {
       "rank": 3,
-      "id": "nana-patekar-tributes",
-      "title": "Nana Patekar dies at 75, meme legend tributes",
+      "id": "premier-league-table",
+      "title": "premier league table",
       "aka": [],
       "merged_from": [],
-      "url": "topics/nana-patekar-tributes.html",
+      "url": "topics/premier-league-table.html",
       "kind": "news",
-      "category": "meme",
-      "opportunity_score": 85,
-      "velocity": 85,
-      "saturation": "low",
+      "category": "news",
+      "opportunity_score": 38,
+      "velocity": 95,
+      "saturation": "high",
       "platforms": [
-        "x",
-        "instagram",
-        "youtube"
+        "google"
       ],
-      "hashtags": [
-        "#nanapatekar",
-        "#riplegend"
-      ],
-      "format": "meme",
-      "angle": "A respectful supercut: his 10 most-memed moments",
+      "hashtags": [],
+      "format": "news",
+      "angle": null,
       "evidence": [
-        "The lane is still uncrowded.",
-        "We have seen it in 21 checks so far.",
-        "#nanapatekar",
-        "#riplegend"
+        "The lane is crowded.",
+        "We have seen it in 1 checks so far."
       ],
-      "source_name": "Face of Malawi",
-      "source_count": 1,
-      "record": "spreading 85 of 100 · last seen Oct 11 · 1 source",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": "steady",
+      "source_name": "google-trends",
+      "source_count": 4,
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "confirmed": true,
+      "record": "spreading 95 of 100 · last seen Oct 24 · 4 sources",
+      "last_seen": "2026-10-24T13:33:25.435575+00:00",
+      "movement": null,
       "splash": false,
       "spark_svg": null
     }
   ],
-  "catchup": [
-    {
-      "rank": 0,
-      "id": "be-ok",
-      "title": "\"Be OK\": happy dance over chaos",
-      "aka": [],
-      "merged_from": [],
-      "url": "topics/be-ok.html",
-      "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 38,
-      "velocity": 58,
-      "saturation": "medium",
-      "platforms": [
-        "tiktok"
-      ],
-      "hashtags": [
-        "#beok",
-        "#ingridmichaelson"
-      ],
-      "format": "dance",
-      "angle": "Dance through your Monday chaos, caption the mess",
-      "evidence": [
-        "The lane is filling up.",
-        "We have seen it in 20 checks so far.",
-        "#beok",
-        "#ingridmichaelson",
-        "It is not yet verified, so confirm it is still live before building on it."
-      ],
-      "source_name": "New Engen",
-      "source_count": 2,
-      "record": "spreading 58 of 100, peaked at 74 · last seen Oct 11 · 2 sources",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": null,
-      "splash": false,
-      "spark_svg": null,
-      "peak": 74
-    },
-    {
-      "rank": 0,
-      "id": "text-from-a",
-      "title": "Text From \"-A\": the Pretty Little Liars call-out",
-      "aka": [],
-      "merged_from": [],
-      "url": "topics/text-from-a.html",
-      "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 38,
-      "velocity": 58,
-      "saturation": "medium",
-      "platforms": [
-        "tiktok"
-      ],
-      "hashtags": [
-        "#textfroma",
-        "#prettylittleliars"
-      ],
-      "format": "meme",
-      "angle": "Confess your niche's guilty habit as -A watches",
-      "evidence": [
-        "The lane is filling up.",
-        "We have seen it in 20 checks so far.",
-        "#textfroma",
-        "#prettylittleliars",
-        "It is not yet verified, so confirm it is still live before building on it."
-      ],
-      "source_name": "MediaNug",
-      "source_count": 2,
-      "record": "spreading 58 of 100, peaked at 72 · last seen Oct 11 · 2 sources",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": null,
-      "splash": false,
-      "spark_svg": null,
-      "peak": 72
-    },
-    {
-      "rank": 0,
-      "id": "there-she-goes",
-      "title": "\"There She Goes\" shimmy dance",
-      "aka": [],
-      "merged_from": [],
-      "url": "topics/there-she-goes.html",
-      "kind": "makeable",
-      "category": "meme",
-      "opportunity_score": 38,
-      "velocity": 58,
-      "saturation": "medium",
-      "platforms": [
-        "tiktok"
-      ],
-      "hashtags": [
-        "#thereshegoes",
-        "#shimmydance"
-      ],
-      "format": "dance",
-      "angle": "Shimmy into your niche's hot take",
-      "evidence": [
-        "The lane is filling up.",
-        "We have seen it in 20 checks so far.",
-        "#thereshegoes",
-        "#shimmydance"
-      ],
-      "source_name": "SocialBee",
-      "source_count": 2,
-      "record": "spreading 58 of 100, peaked at 66 · last seen Oct 11 · 2 sources",
-      "last_seen": "2026-10-11T19:30:00-07:00",
-      "movement": null,
-      "splash": false,
-      "spark_svg": null,
-      "peak": 66
-    }
-  ]
+  "catchup": []
 }

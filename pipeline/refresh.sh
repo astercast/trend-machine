@@ -4,7 +4,11 @@
 # Or via the included GitHub Actions workflow (.github/workflows/refresh.yml).
 set -u
 cd "$(dirname "$0")/.." || exit 1
-echo "=== refresh $(date -u +%FT%TZ) ==="
+RUN_START="$(date -u +%FT%TZ)"
+echo "=== refresh $RUN_START ==="
+# state comes from the live site; a source that fails this run must contribute nothing
+python3 pipeline/restore_state.py || true
+rm -f pipeline/out/*.json
 # Wave 31 (DATAOPS-001): fetch_youtube is RETIRED and out of this loop —
 # every no-key path is dead (see the fetcher's header for the evidence).
 # YouTube coverage rides fetch_youtube_rss. Revival: set YT_API_KEY and
@@ -13,7 +17,7 @@ echo "=== refresh $(date -u +%FT%TZ) ==="
 # nothing is NAMED in a closing summary instead of passing silently
 # (the refresh still exits 0 — a dark lane is data, not a crash).
 DARK_LANES=""
-for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_bluesky fetch_charts fetch_wiki fetch_netflix fetch_youtube_rss fetch_streamers fetch_steam fetch_tiktok fetch_x; do
+for f in fetch_gtrends fetch_news fetch_news_search fetch_reddit fetch_reddit_rss fetch_hn fetch_mastodon fetch_bluesky fetch_lemmy fetch_charts fetch_wiki fetch_netflix fetch_youtube_rss fetch_streamers fetch_steam fetch_tiktok fetch_x; do
   out="$(python3 "pipeline/$f.py" 2>&1)"
   printf '%s\n' "$out"
   if [ "$f" != fetch_tiktok ] && [ "$f" != fetch_x ]; then
@@ -26,6 +30,8 @@ if [ -n "$DARK_LANES" ]; then
   echo "=== LANES DARK THIS RUN:$DARK_LANES — refresh continues; the Live Wire labels them, nothing is faked ==="
 fi
 python3 pipeline/normalize.py
+# the gate: if this run collected too little, fail the build so the last good deploy stays up
+python3 pipeline/health.py --run-start "$RUN_START" --gate || exit 1
 python3 scripts/build_site.py
 python3 pipeline/aggregate.py
 # node-built payloads (Live Wire + Streamer Desk). The forecast and

@@ -294,6 +294,19 @@ def snapshot_platform_history(topics, phist):
     print(f"[normalize] platform history: {len(phist)} topics, {n_pts} points "
           f"(window {HIST_MAX_DAYS}d) -> {PHIST}")
 
+def _utc_key(s):
+    """Sort key that compares real instants. last_seen strings carry different
+    UTC offsets depending on where a fetcher ran, so comparing the text drops
+    the wrong topics. TZ=UTC runners hid this; a local run exposes it."""
+    try:
+        t = parse_ts(s)
+        if t.tzinfo is None:
+            t = t.replace(tzinfo=datetime.timezone.utc)
+        return t.timestamp()
+    except Exception:
+        return 0.0
+
+
 def main():
     with open(DATA) as f:
         data = json.load(f)
@@ -317,13 +330,25 @@ def main():
             s = jaccard(ht, tokens(t["title"]))
             if s > best_score:
                 best, best_score = tid, s
-        src = {"name": h.get("source", "?"), "url": h.get("url", "")}
+        src = {"name": h.get("source", "?"), "url": h.get("url", ""), "seen": h.get("fetched_at", now.isoformat())}
         if best and best_score >= 0.55:
             t = topics[best]
             t["last_seen"] = h.get("fetched_at", now.isoformat())
             urls = {s["url"] for s in t.get("sources", [])}
             if src["url"] not in urls:
                 t.setdefault("sources", []).append(src)
+            else:
+                for old in t["sources"]:
+                    if old.get("url") == src["url"]: old["seen"] = src["seen"]
+            for ex in h.get("also", []):
+                if not ex.get("url"):
+                    continue
+                if ex["url"] not in urls:
+                    t["sources"].append({"name": ex["name"], "url": ex["url"], "seen": h.get("fetched_at", now.isoformat())})
+                    urls.add(ex["url"])
+                else:
+                    for old in t["sources"]:
+                        if old.get("url") == ex["url"]: old["seen"] = h.get("fetched_at", now.isoformat())
             for p in h.get("platforms", []):
                 if p not in t["platforms"]:
                     t["platforms"].append(p)
@@ -359,7 +384,8 @@ def main():
                                   for p in hit_plats},
                 "format_tags": detect_format(h.get("title", ""), h.get("summary", ""),
                                              h.get("hashtags", [])),
-                "sources": [src], "angles": [], "hooks": [],
+                "sources": [src] + [{"name": e["name"], "url": e["url"], "seen": h.get("fetched_at", now.isoformat())} for e in h.get("also", []) if e.get("url")],
+                "angles": [], "hooks": [],
                 "who_to_watch": [], "guide_links": [],
             }
 
@@ -390,15 +416,22 @@ def main():
         t["format_family"] = match_family(t.get("title", ""), t.get("summary", ""),
                                         t.get("hashtags", []))
 
+    # strength (rank.py) orders the store: how real a trend is, from observed
+    # support. opportunity_score stays as "room", how crowded it is.
+    import rank
+    rank.apply(topics, load_history(), now)
     data["topics"] = sorted(topics.values(),
-                            key=lambda t: t["opportunity_score"], reverse=True)
+                            key=lambda t: (t.get("strength", 0), t.get("outlets", 0), t["opportunity_score"]), reverse=True)
     # prune: keep all seeded/editorial topics, cap auto-added ones so the
-    # store stays bounded across refreshes (drop oldest single-source first)
+    # store stays bounded across refreshes. Drop the WEAKEST first (lowest
+    # strength, then oldest). The old rule dropped the oldest sighting, which
+    # in one run is simply whichever lane was fetched first: Google Trends and
+    # Google News always lost to the lanes fetched after them.
     MAX_AUTO = 300
     auto = [t for t in data["topics"] if not t.get("seeded")]
     if len(auto) > MAX_AUTO:
         drop_ids = {t["id"] for t in
-                    sorted(auto, key=lambda t: t.get("last_seen", ""))[:len(auto) - MAX_AUTO]}
+                    sorted(auto, key=lambda t: (t.get("strength", 0), _utc_key(t.get("last_seen", ""))))[:len(auto) - MAX_AUTO]}
         data["topics"] = [t for t in data["topics"] if t["id"] not in drop_ids]
         print(f"[normalize] pruned {len(drop_ids)} old auto topics (cap {MAX_AUTO})")
     data["generated_at"] = now.isoformat()

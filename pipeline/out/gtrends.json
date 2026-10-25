@@ -1,30 +1,35 @@
 [
   {
-    "title": "nasa",
+    "title": "premier league standings",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
-    "summary": "~100+ searches.",
+    "summary": "~20000+ searches.",
     "hashtags": [],
     "category": "news",
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T10:12:40.560543+00:00"
+    "fetched_at": "2026-10-24T13:33:25.428277+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/live/cmn0628p5rkyt",
+        "title": "Ipswich Town vs Nottingham Forest: Premier League preview, team news, stats & head-to-head"
+      },
+      {
+        "name": "gtrends-news:The Guardian",
+        "url": "https://www.theguardian.com/football/2026/oct/23/ipswich-nottingham-forest-premier-league-match-report",
+        "title": "Enciso rescues point in storm for Ipswich to deny Nottingham Forest"
+      },
+      {
+        "name": "gtrends-news:Sky Sports",
+        "url": "https://www.skysports.com/football/live-blog/13602310/ipswich-vs-n-forest-live-premier-league-score-updates-news-prediction-lineups-and-how-to-watch-or-stream",
+        "title": "Ipswich vs N Forest LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream"
+      }
+    ]
   },
   {
-    "title": "matthew rhys",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T10:12:40.560619+00:00"
-  },
-  {
-    "title": "rocket launch today",
+    "title": "erling haaland",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~500+ searches.",
@@ -33,10 +38,56 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T10:12:40.560644+00:00"
+    "fetched_at": "2026-10-24T13:33:25.435498+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:OneFootball",
+        "url": "https://onefootball.com/en/news/aston-villa-among-erling-haalands-premier-league-bogey-teams-43663974",
+        "title": "Aston Villa among Erling Haaland’s Premier League bogey teams"
+      },
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/live/cj62ynzwg4pet",
+        "title": "Aston Villa vs Manchester City: Premier League preview, team news, stats & head-to-head"
+      },
+      {
+        "name": "gtrends-news:ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/50220422/premier-league-live-updates-aston-villa-manchester-city-arsenal-everton-chelsea-tottenham-hotspur",
+        "title": "Premier League live updates: Aston Villa host league leaders Man City"
+      }
+    ]
   },
   {
-    "title": "snow forecast",
+    "title": "premier league table",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-24T13:33:25.435575+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/articles/cw3djpg15045o",
+        "title": "Nottingham Forest: Oliver Glasner upbeat before Ipswich game"
+      },
+      {
+        "name": "gtrends-news:The Guardian",
+        "url": "https://www.theguardian.com/football/2026/oct/22/nottingham-forest-oliver-glasner-time-evangelos-marinakis",
+        "title": "Nottingham Forest’s false start places early focus on Glasner and Delap"
+      },
+      {
+        "name": "gtrends-news:The New York Times",
+        "url": "https://www.nytimes.com/athletic/7710163/2026/10/22/oliver-glasners-false-starts-what-can-he-learn-at-forest-from-palace-and-frankfurt-struggles/",
+        "title": "Oliver Glasner’s false starts — lessons for Forest from his Palace and Frankfurt struggles"
+      }
+    ]
+  },
+  {
+    "title": "west ham vs southampton",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -45,70 +96,27 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T10:12:40.560661+00:00"
+    "fetched_at": "2026-10-24T13:33:25.435649+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/live/cked35y808jjt",
+        "title": "West Ham United vs Southampton: Championship stats & head-to-head"
+      },
+      {
+        "name": "gtrends-news:West Ham United",
+        "url": "https://www.whufc.com/en/news/starting-xi-or-taty-and-walker-peters-return-for-southampton",
+        "title": "Starting XI | Taty and Walker-Peters return for Southampton"
+      },
+      {
+        "name": "gtrends-news:Daily Echo",
+        "url": "https://www.dailyecho.co.uk/sport/26658555.southamptons-azaz-opens-performances-ahead-west-ham-trip/",
+        "title": "'You want to be appreciated' – Azaz opens up on his performances ahead of West Ham"
+      }
+    ]
   },
   {
-    "title": "week 6 defense rankings",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T10:12:40.560678+00:00"
-  },
-  {
-    "title": "spacex launch",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~1000+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T10:12:40.560694+00:00"
-  },
-  {
-    "title": "charley hull",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T10:12:40.560709+00:00"
-  },
-  {
-    "title": "patriots news",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T10:12:40.560723+00:00"
-  },
-  {
-    "title": "raw results",
-    "url": "https://trends.google.com/trending/rss?geo=US",
-    "source": "google-trends",
-    "summary": "~100+ searches.",
-    "hashtags": [],
-    "category": "news",
-    "platforms": [
-      "google"
-    ],
-    "fetched_at": "2026-10-13T10:12:40.560738+00:00"
-  },
-  {
-    "title": "nvidia stock price",
+    "title": "como vs",
     "url": "https://trends.google.com/trending/rss?geo=US",
     "source": "google-trends",
     "summary": "~200+ searches.",
@@ -117,6 +125,168 @@
     "platforms": [
       "google"
     ],
-    "fetched_at": "2026-10-13T10:12:40.575849+00:00"
+    "fetched_at": "2026-10-24T13:33:25.435719+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/nico-paz-ll-never-forget-194000202.html",
+        "title": "Nico Paz: ‘I’ll never forget Man United, We have to play every game as if it’s our last’"
+      },
+      {
+        "name": "gtrends-news:The New York Times",
+        "url": "https://www.nytimes.com/athletic/7712341/2026/10/22/fernandes-carrick-man-utd-pressing/",
+        "title": "Bruno Fernandes criticised Michael Carrick’s tactical setup. Here is why he was right"
+      },
+      {
+        "name": "gtrends-news:CBS Sports",
+        "url": "https://www.cbssports.com/soccer/news/bruno-fernandes-rebellion-underlines-manchester-uniteds-problem/",
+        "title": "Bruno Fernandes' rebellion in Como underlines Manchester United's never-ending problem"
+      }
+    ]
+  },
+  {
+    "title": "blackburn rovers vs wrexham",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-24T13:33:25.435784+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/live/cj1dwqr35pxwt",
+        "title": "Blackburn Rovers v Wrexham: Championship stats & head-to-head"
+      },
+      {
+        "name": "gtrends-news:Wrexham and Flintshire News, Sport, Events | The Leader",
+        "url": "https://www.leaderlive.co.uk/news/26664354.blackburn-v-wrexham-afc--storms-spark-travel-warnings/",
+        "title": "Wrexham AFC fans urged to check travel plans as storms hit Blackburn away trip"
+      },
+      {
+        "name": "gtrends-news:Forza Football",
+        "url": "https://forzafootball.com/news/wrexham-handed-major-fitness-boost-ahead-of-blackburn-rovers-fixture-159469459",
+        "title": "Wrexham Handed Major Fitness Boost Ahead of Blackburn Rovers Fixture"
+      }
+    ]
+  },
+  {
+    "title": "coventry vs fulham",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~500+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-24T13:33:25.443388+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/live/cq398rj0l38mt",
+        "title": "Coventry City vs Fulham: Premier League preview, team news, stats & head-to-head"
+      },
+      {
+        "name": "gtrends-news:Fulham Football Club",
+        "url": "https://www.fulhamfc.com/news/2026/october/23/pre-coventry-press-conference/",
+        "title": "Pre-Coventry Press Conference"
+      },
+      {
+        "name": "gtrends-news:Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/lampard-says-no-drama-squad-082820841.html",
+        "title": "Lampard says there is 'no drama' in squad"
+      }
+    ]
+  },
+  {
+    "title": "cancer",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-24T13:33:25.443709+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:NBC News",
+        "url": "https://www.nbcnews.com/politics/politics-news/vanessa-trump-cancer-free-breast-cancer-diagnosis-surgery-treatment-rcna605339",
+        "title": "Vanessa Trump says she is ‘cancer-free’ six months after diagnosis"
+      },
+      {
+        "name": "gtrends-news:New York Post",
+        "url": "https://nypost.com/2026/10/23/us-news/vanessa-trump-reveals-shes-cancer-free-six-months-after-receiving-devastating-diagnosis/",
+        "title": "Vanessa Trump reveals she’s cancer-free — six months after receiving devastating diagnosis"
+      },
+      {
+        "name": "gtrends-news:People.com",
+        "url": "https://people.com/vanessa-trump-reveals-she-s-cancer-free-after-announcing-diagnosis-in-may-12190830",
+        "title": "Vanessa Trump Reveals She’s Cancer-Free After Announcing Diagnosis in May"
+      }
+    ]
+  },
+  {
+    "title": "matt leinart",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~200+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-24T13:33:25.446821+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:Detroit Free Press",
+        "url": "https://www.freep.com/story/sports/college/university-michigan/wolverines/2026/10/24/tommy-carr-grandpa-lloyd-cj-jason-notre-dame-michigan/92380105007/",
+        "title": "Who is Tommy Carr? Get to know new Michigan QB a little better"
+      },
+      {
+        "name": "gtrends-news:Maize n Brew",
+        "url": "https://www.maizenbrew.com/football/126065/michigan-football-tommy-carr-indiana-hoosiers-big-ten",
+        "title": "Fans predict Michigan Football win total with Tommy Carr as QB1"
+      },
+      {
+        "name": "gtrends-news:MLive.com",
+        "url": "https://www.mlive.com/wolverines/football/2026/10/you-see-the-upside-with-michigan-qb-tommy-carr-foxs-matt-leinart-says.html",
+        "title": "‘You see the upside’ with Michigan QB Tommy Carr, FOX’s Matt Leinart says"
+      }
+    ]
+  },
+  {
+    "title": "arsenal - everton",
+    "url": "https://trends.google.com/trending/rss?geo=US",
+    "source": "google-trends",
+    "summary": "~2000+ searches.",
+    "hashtags": [],
+    "category": "news",
+    "platforms": [
+      "google"
+    ],
+    "fetched_at": "2026-10-24T13:33:25.446949+00:00",
+    "also": [
+      {
+        "name": "gtrends-news:BBC",
+        "url": "https://www.bbc.com/sport/football/live/cj62ynzwg4pet",
+        "title": "Aston Villa vs Manchester City: Premier League preview, team news, stats & head-to-head"
+      },
+      {
+        "name": "gtrends-news:ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/50220422/premier-league-live-updates-aston-villa-manchester-city-arsenal-everton-chelsea-tottenham-hotspur",
+        "title": "Premier League live updates: Aston Villa host league leaders Man City"
+      },
+      {
+        "name": "gtrends-news:Al Jazeera",
+        "url": "https://www.aljazeera.com/sports/liveblog/2026/10/24/aston-villa-vs-manchester-city-live-premier-league",
+        "title": "Aston Villa vs Manchester City LIVE: Premier League"
+      }
+    ]
   }
 ]

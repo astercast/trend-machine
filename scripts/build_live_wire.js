@@ -99,6 +99,8 @@ const LANES = [
     file: "mastodon.json", detail: "Mastodon fediverse trending hashtags (/api/v1/trends/tags, repaired wave 20)." },
   { id: "bluesky", label: "Bluesky", fetcher: "pipeline/fetch_bluesky.py",
     file: "bluesky.json", detail: "Bluesky trending topics (keyless public API)." },
+  { id: "lemmy", label: "Lemmy", fetcher: "pipeline/fetch_lemmy.py",
+    file: "lemmy.json", detail: "Lemmy fediverse hot posts (lemmy.world public API, keyless). Added 2026-10-24 freshness widening: a second fediverse lane alongside Mastodon/Bluesky." },
   { id: "charts", label: "Apple Charts", fetcher: "pipeline/fetch_charts.py",
     file: "charts.json",
     detail: "Completeness build B1 (2026-10-15): the board's first chart lane. Apple Marketing Tools keyless JSON feeds: US most-played songs, top free apps, top podcasts, 10 rows each. Evidence type: makeable (categories music / tech / culture), a chart row is something to make, never straight news. The fetcher saves an empty file on total failure, so the lane reads degraded rather than posing as live." },
@@ -279,7 +281,7 @@ function buildLiveWire(now, refreshStamp, laneFiles, mergedHistory, store) {
     generated_at: now.toISOString(),
     refresh_at: refreshStamp || null,
     method: "Lanes: one row per fetcher wired into pipeline/refresh.sh. " +
-      "The 15 file-writing lanes read pipeline/out/<lane>.json. Hit count " +
+      "The 16 file-writing lanes read pipeline/out/<lane>.json. Hit count " +
       "is that file's array length, source labels are the hits' own " +
       "recorded `source` values, and freshness compares the file's newest " +
       "fetched_at (or, for an empty file, its write time) with " +

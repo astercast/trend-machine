@@ -1,378 +1,397 @@
-/* ============ 1. TOKENS: The News Bill ============ */
+/* ==========================================================================
+   TREND MACHINE · THE FIELD LOG  (Round 3 redesign)
+   A naturalist's notebook. Trends are sightings. Sources are observers.
+   A sighting counts as seen when two observers saw it. Everything on the
+   page is dated, because a field log is a dated thing.
+   File name stays bill.css so every page and the generator keep working.
+   ========================================================================== */
+
+/* ============ 1. TOKENS ============ */
 :root {
   color-scheme: light;
 
-  --hivis:     #FFE01B;
-  --ink:       #0B0B0A;
-  --newsprint: #F7F5EF;
-  --grey:      #5E5C57;
-  --hair:      #D8D5CC;
-  --bar-track: color-mix(in oklab, var(--ink) 14%, var(--hivis));
-  --bill-bg:   var(--hivis);
+  /* paper and ink: warm, never pure white, never pure black */
+  --paper:   #F3ECDC;  /* manila notebook page. Warm ground, easy on long reads */
+  --panel:   #FBF7EC;  /* a loose sheet laid on the page (inputs, table head) */
+  --rule:    #D8CCAF;  /* the printed blue-grey line of a notebook, in tan */
+  --ink:     #1F1B15;  /* ballpoint on paper. 14.6 : 1 on --paper */
+  --pencil:  #665F50;  /* notes and labels. 5.4 : 1 on --paper */
 
-  --font-bill: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
-  --font-read: "Libre Franklin", "Franklin Gothic Medium", Arial, sans-serif;
+  /* two signals, each with exactly one meaning */
+  --seen:    #2C6B44;  /* field green: two sources saw it, or the log is today's. 5.4 : 1 */
+  --stamp:   #A8391F;  /* rubber-stamp rust: heard once, or the log is old. 5.5 : 1 */
+  --cloth:   #1F3A2B;  /* the cloth spine of the book. Frame only, never a signal */
 
-  --fs-h1:   clamp(1.4rem, 1rem + 1.6vw, 2.25rem);
-  --fs-rank: clamp(1.8rem, 1.2rem + 2vw, 3rem);
-  --fs-row:  clamp(1.1rem, .95rem + .7vw, 1.55rem);
-  --fs-body: clamp(.98rem, .95rem + .15vw, 1.06rem);
-  --fs-meta: .8rem;
+  /* type: Fraunces for what people read as names, Public Sans for
+     sentences, Courier Prime for anything typed onto the page: dates,
+     stamps, ranks, numbers */
+  --font-name:  "Fraunces", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+  --font-read:  "Public Sans", "Public Sans Fallback", "Helvetica Neue", Arial, sans-serif;
+  --font-typed: "Courier Prime", "Courier Prime Fallback", "Courier New", ui-monospace, monospace;
 
-  /* space: 4px unit, steps 1 2 4 6 10 16 24 */
-  --s-1: .25rem;
-  --s-2: .5rem;
-  --s-3: 1rem;
-  --s-4: 1.5rem;
-  --s-5: 2.5rem;
-  --s-6: 4rem;
-  --s-7: 6rem;
-  --gutter: clamp(1rem, .3rem + 3vw, 3rem);
-  --page: 84rem;
+  /* fluid scale: each step is about 1.25 x the last, tuned for 390 to 1440 px */
+  --fs-typed: clamp(.76rem, .73rem + .12vw, .84rem);
+  --fs-body:  clamp(1rem, .95rem + .2vw, 1.125rem);
+  --fs-entry: clamp(1.3rem, 1.05rem + 1vw, 1.85rem);
+  --fs-h1:    clamp(2.5rem, 1.7rem + 3.2vw, 3.5rem);
+  --fs-lead:  clamp(2.4rem, 1.5rem + 3.6vw, 3.1rem);   /* phones: two ruled lines per line of type */
+  --fs-num:   clamp(2rem, 1.4rem + 2vw, 3rem);
 
-  --ease-snap: cubic-bezier(.2, 1.4, .4, 1);
-  --ease-out: cubic-bezier(.16, 1, .3, 1);
-  --dur-slap: 160ms;
-  --dur-fill: 650ms;
+  /* rhythm: one ruled line is the unit. Every line of text sits on one,
+     every gap is a whole number of them. */
+  --unit: 1.75rem;
+  --s-1: calc(var(--unit) / 2);
+  --s-2: var(--unit);
+  --s-3: calc(var(--unit) * 2);
+  --s-4: calc(var(--unit) * 3);
+  --s-5: calc(var(--unit) * 4);
+  --s-6: calc(var(--unit) * 6);
 
-  /* old names, so the other pages follow */
-  --bg-0: var(--newsprint); --bg: var(--newsprint); --bg-soft: var(--newsprint);
-  --panel: #FFFFFF; --panel-2: #FFFFFF; --panel-3: var(--hair);
-  /* Round 2 (design consult fix C): the Wire summary plate and the
-     squared card corners the inner pages ask for by name */
-  --plate: #FFFFFF;
-  --r: 0;
-  --r-lg: 0;
-  --line: var(--hair); --line-soft: var(--hair); --line-bright: var(--grey);
-  --ink-dim: var(--grey); --ink-faint: var(--grey); --ink-ghost: var(--hair);
-  --hot: var(--ink); --hot-deep: var(--ink); --live: var(--ink);
-  --warm: var(--grey); --dead: var(--grey); --signal: var(--grey);
+  --spine:  clamp(10px, 1.5vw, 20px);
+  --gutter: clamp(1rem, .4rem + 3vw, 3rem);
+  --margin: clamp(2.4rem, 1.6rem + 3vw, 4.5rem);  /* the notebook margin: ranks live here */
+  --page:   72rem;
+
+  --ease-ink: cubic-bezier(.2, .7, .2, 1);
+
+  /* old names, so inner pages that still ask for them follow the new look */
+  --bg-0: var(--paper); --bg: var(--paper); --bg-soft: var(--paper);
+  --panel-2: var(--panel); --panel-3: var(--rule); --plate: var(--panel);
+  --line-soft: var(--rule); --line-bright: var(--pencil);
+  --ink-dim: var(--pencil); --ink-faint: var(--pencil); --ink-ghost: var(--rule);
+  --hot: var(--stamp); --hot-deep: var(--stamp); --live: var(--seen);
+  --warm: var(--pencil); --dead: var(--pencil); --signal: var(--pencil);
+  --grey: var(--pencil); --hair: var(--rule); --newsprint: var(--paper);
+  --r: 2px; --r-lg: 2px;
+  --font-display: var(--font-name); --font-body: var(--font-read); --font-data: var(--font-typed);
 }
-
-/* stale data: the bill stops being yellow, and says so */
-html[data-age="stale"] { --bill-bg: var(--newsprint); --bar-track: var(--hair); }
 
 /* ============ 2. BASE ============ */
-html, body { background: var(--newsprint); color: var(--ink); }
-body { margin: 0; font-family: var(--font-read); font-size: var(--fs-body); line-height: 1.5; }
-a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: .18em; }
-:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
-.skip {
-  position: absolute; left: var(--gutter); top: -4rem; z-index: 50;
-  background: var(--hivis); color: var(--ink);
-  padding: var(--s-2) var(--s-3); font-weight: 700;
+html, body { background: var(--paper); color: var(--ink); }
+body {
+  margin: 0;
+  padding-inline-start: var(--spine);
+  font: 400 var(--fs-body)/var(--unit) var(--font-read);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
 }
-.skip:focus { top: var(--s-2); }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .22em; text-decoration-color: var(--pencil); }
+a:hover { text-decoration-color: var(--ink); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--cloth); outline-offset: 3px; }
+::selection { background: color-mix(in oklab, var(--seen) 28%, var(--paper)); }
 
-/* ============ 3. HEADER: the black masthead ============ */
+/* the cloth spine with its stitching: the one picture on the page */
+body::before {
+  content: "";
+  position: fixed; inset: 0 auto 0 0; z-index: 30;
+  inline-size: var(--spine);
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 .9rem, color-mix(in oklab, var(--paper) 62%, transparent) .9rem 1.5rem) center / 2px 100% no-repeat,
+    var(--cloth);
+}
+
+.skip {
+  position: absolute; left: var(--gutter); top: -5rem; z-index: 50;
+  background: var(--cloth); color: var(--paper);
+  padding: .5rem 1rem; font: 700 var(--fs-typed)/1.5 var(--font-typed);
+}
+.skip:focus { top: .5rem; }
+
+/* ============ 3. HEADER: name, then the ways in, on a double rule ============ */
 .tm-head {
-  display: flex; flex-wrap: wrap; align-items: center;
-  gap: var(--s-2) var(--s-6);
-  padding: var(--s-3) var(--gutter);
-  background: var(--ink);
-  color: var(--newsprint);
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0 var(--s-4);
+  padding: var(--s-2) var(--gutter) 0 calc(var(--gutter) + var(--margin) - 1rem);
+  border-block-end: 3px double var(--ink);
 }
 .tm-brand {
-  font: 900 1.4rem/1 var(--font-bill);
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: var(--hivis);
+  padding-block-end: var(--s-1);
+  font: 600 1.55rem/var(--unit) var(--font-name);
+  letter-spacing: -.01em;
+  color: var(--ink);
   text-decoration: none;
 }
-.tm-nav { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); margin-inline-start: auto; }
+.tm-nav { display: flex; flex-wrap: wrap; gap: 0 var(--s-3); margin-inline-start: auto; }
 .tm-nav a {
-  padding-block: .55rem;
-  font: 600 .875rem/1 var(--font-read);
-  color: var(--newsprint);
-  text-decoration: none;
+  padding: .7rem 0 calc(.7rem - 3px);
+  border-block-end: 3px solid transparent;
+  font: 400 var(--fs-typed)/var(--unit) var(--font-typed);
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--pencil); text-decoration: none;
 }
-.tm-nav a:hover { color: var(--hivis); }
-.tm-nav a[aria-current="page"] { box-shadow: inset 0 -2px var(--hivis); }
+.tm-nav a:hover { color: var(--ink); border-block-end-color: var(--rule); }
+.tm-nav a[aria-current="page"] { color: var(--ink); font-weight: 700; border-block-end-color: var(--stamp); }
 
-/* ============ 4. THE BILL ============ */
-.bill { background: var(--bill-bg); padding: var(--s-4) var(--gutter) var(--s-6); }
-.bill > * { max-inline-size: var(--page); margin-inline: auto; }
-
-.bill-flag {
-  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
-  gap: var(--s-2) var(--s-5);
-  padding-bottom: var(--s-2);
-  border-bottom: 4px solid var(--ink);
+/* ============ 4. THE LOG PAGE: ruled paper, a red margin, a lead entry ============ */
+.log {
+  position: relative;
+  padding: var(--s-4) var(--gutter) var(--s-5) var(--gutter);
+  /* ruled lines, one per --unit, set a little under the baseline */
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 calc(var(--unit) - 1px), color-mix(in oklab, var(--rule) 70%, transparent) calc(var(--unit) - 1px) var(--unit))
+    0 -.4rem / 100% var(--unit) repeat-y;
 }
-.bill-flag h1 {
-  margin: 0;
-  font: 800 var(--fs-h1)/1 var(--font-bill);
-  text-transform: uppercase;
-  letter-spacing: .01em;
-}
-.bill-stamp {
-  display: flex; flex-wrap: wrap; align-items: center;
-  gap: var(--s-2) var(--s-4);
-  margin: 0;
-  font: 600 var(--fs-meta)/1.3 var(--font-read);
-}
-.bill-stamp::before {
+/* the margin rule */
+.log::before {
   content: "";
-  inline-size: .55rem; block-size: .55rem;
-  border-radius: 50%;
-  background: var(--ink);
+  position: absolute; inset: 0 auto 0 calc(var(--gutter) + var(--margin) - .55rem);
+  inline-size: 2px;
+  background: color-mix(in oklab, var(--stamp) 38%, transparent);
+  pointer-events: none;
 }
-html[data-age="stale"] .bill-stamp::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--grey); }
-html[data-age="stale"] #data-ts::after { content: " · not fresh, last check"; color: var(--grey); font-weight: 500; }
+.log > * { max-inline-size: var(--page); position: relative; }
 
-/* the column: ranks 2 to 7 */
-.board-list { container: board / inline-size; list-style: none; margin: 0; padding: 0; }
-.bill .board-row {
-  display: grid;
-  grid-template-columns: 3.25rem minmax(0, 1fr) minmax(6rem, 9rem);
-  gap: var(--s-2) var(--s-4);
-  align-items: start;
-  padding-block: var(--s-3);
-  border-bottom: 1px solid var(--ink);
-}
-.board-rank { font: 900 var(--fs-rank)/.85 var(--font-bill); font-variant-numeric: tabular-nums; }
-.board-title { font: 700 var(--fs-row)/1.2 var(--font-read); color: var(--ink); text-decoration: none; }
-.board-title:hover { text-decoration: underline 3px; text-underline-offset: .15em; }
-.bill .board-row:nth-child(-n+3):not(.splash) .board-title { font-size: calc(var(--fs-row) * 1.15); }
-.board-src { font-weight: 400; font-size: .8em; color: var(--grey); }
-.board-aka, .board-meta { margin: .35rem 0 0; font: 500 var(--fs-meta)/1.4 var(--font-read); color: var(--grey); }
-.board-angle { margin: .5rem 0 0; font-size: var(--fs-body); }
-.board-make {
-  margin-inline-end: .5em;
-  padding: .2em .45em .15em;
-  font: 800 .78rem/1 var(--font-bill);
-  letter-spacing: .06em; text-transform: uppercase;
-  background: var(--ink); color: var(--hivis);
-}
-.board-score { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 0 .35rem; }
-.score-num { font: 900 clamp(1.8rem, 1.2rem + 2vw, 3rem)/.85 var(--font-bill); font-variant-numeric: tabular-nums; }
-.board-unit { font: 600 .75rem/1 var(--font-read); color: var(--grey); }
-.score-bar { grid-column: 1 / -1; display: block; block-size: 6px; margin-top: .5rem; background: var(--bar-track); }
-.score-bar i { display: block; block-size: 100%; background: var(--ink); }
-
-/* rank 1: the bill itself */
-.bill .board-row.splash {
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-areas: "kick kick" "title title" "aka aka" "score make" "meta meta";
-  gap: 0;
-  padding-block: var(--s-5) var(--s-5);
-  border-bottom: 4px solid var(--ink);
-}
-.splash .board-main { display: contents; }
-.splash .board-rank {
-  grid-area: kick;
-  margin-bottom: var(--s-3);
-  font: 800 1rem/1 var(--font-bill);
-  letter-spacing: .06em; text-transform: uppercase;
-}
-.splash .board-rank::before { content: "No. "; }
-.splash .board-rank::after { content: " right now"; }
-.splash .board-title {
-  grid-area: title;
-  font: 900 clamp(2.6rem, 8.2cqi, 8rem)/.88 var(--font-bill);
-  letter-spacing: -.005em;
-  text-transform: uppercase;
+/* hero: the heading, the stamp, the key */
+.log-top { padding-inline-start: var(--margin); }
+.log-top h1 {
+  margin: 0;
+  max-inline-size: 15ch;
+  font: 600 var(--fs-h1)/calc(var(--unit) * 2) var(--font-name);
+  letter-spacing: -.015em;
   text-wrap: balance;
 }
-.splash .board-src {
-  display: block;
-  margin-top: var(--s-3);
-  font: 500 .9rem/1.3 var(--font-read);
-  text-transform: none;
-}
-.splash .board-aka { grid-area: aka; }
-.splash .board-score {
-  grid-area: score;
-  display: flex; align-items: baseline; gap: .35rem;
-  margin-top: var(--s-5);
-  padding: var(--s-3) var(--s-4);
-  background: var(--ink); color: var(--hivis);
-}
-.splash .score-num { font-size: clamp(2.6rem, 1.6rem + 3vw, 4.5rem); }
-.splash .board-unit { color: var(--hivis); }
-.splash .score-bar { display: none; }
-.splash .board-angle {
-  grid-area: make;
-  display: flex; align-items: center; gap: var(--s-3);
-  margin: var(--s-5) 0 0;
-  padding: var(--s-3) var(--s-4);
-  background: var(--ink); color: var(--newsprint);
-  border-inline-start: 1px solid color-mix(in oklab, var(--newsprint) 25%, var(--ink));
-  font: 600 clamp(1.05rem, .95rem + .6vw, 1.5rem)/1.25 var(--font-read);
-}
-.splash .board-make { background: var(--hivis); color: var(--ink); }
-.splash .board-meta { grid-area: meta; margin-top: var(--s-3); color: var(--ink); }
+.log-top h1 time { font-style: italic; font-weight: 400; }
+.log-lede { margin: var(--s-2) 0 0; max-inline-size: 31rem; }
+.log-lede b { font: 700 var(--fs-body)/var(--unit) var(--font-typed); }
 
-@container board (width < 36rem) {
-  .bill .board-row { grid-template-columns: 2.5rem minmax(0, 1fr); }
-  .bill .board-row .board-score { grid-column: 2; }
-  .bill .board-row.splash {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "kick" "title" "aka" "score" "make" "meta";
-  }
-  .splash .board-angle { margin-top: 0; border-inline-start: 0; border-top: 1px solid color-mix(in oklab, var(--newsprint) 25%, var(--ink)); }
+/* the date stamp: green and today, or rust and old. It is the biggest
+   quiet thing on the page, on purpose. */
+.stamp {
+  display: inline-grid; gap: 0;
+  margin: var(--s-2) 0 0;
+  padding: .45rem .9rem .35rem;
+  border: 2px solid currentColor; outline: 1px solid currentColor; outline-offset: 3px;
+  border-radius: 2px;
+  font: 700 var(--fs-typed)/var(--unit) var(--font-typed);
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--seen);
+  rotate: -1.4deg;
+  mix-blend-mode: multiply;
 }
+.stamp::before { content: "Logged today"; font-size: 1.12em; }
+.stamp #data-ts { letter-spacing: .06em; font-weight: 400; }
+.stamp .num { font: inherit; }
+html[data-age="stale"] .stamp { color: var(--stamp); }
+html[data-age="stale"] .stamp::before { content: "Old log. Not today."; }
 
-.bill-how { margin-top: var(--s-4); font-size: var(--fs-meta); color: var(--grey); }
-.bill-how a { color: var(--ink); }
-
-/* ============ 5. STOP PRESS: news and cooling, on newsprint ============ */
-.stop-press { max-inline-size: var(--page); margin-inline: auto; padding: var(--s-6) var(--gutter); }
-.board-news-h, .catchup-h {
-  margin: 0 0 var(--s-3);
-  font: 800 1.1rem/1 var(--font-bill);
-  letter-spacing: .04em; text-transform: uppercase;
+/* the key: the two-source rule, shown rather than explained */
+.key { display: flex; flex-wrap: wrap; gap: 0 var(--s-3); margin: var(--s-2) 0 0; padding: 0; list-style: none;
+  font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
+.key li { display: flex; align-items: baseline; gap: .55em; }
+.key li::before, .board-row[data-sources] .board-meta::before {
+  font-size: 1.05em; letter-spacing: .12em; font-family: var(--font-typed);
 }
-.stop-press .board-row, .catchup-row {
+.key .k-seen::before { content: "\25CF\25CF"; color: var(--seen); }
+.key .k-once::before { content: "\25CF\25CB"; color: var(--stamp); }
+.key .k-seen { color: var(--seen); font-weight: 700; }
+.key .k-once { color: var(--stamp); font-weight: 700; }
+.key .k-note { color: var(--pencil); font-weight: 400; }
+
+/* ============ 5. THE ENTRIES ============ */
+.board-list { container: board / inline-size; list-style: none; margin: var(--s-4) 0 0; padding: 0; }
+.log .board-row {
   display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr) minmax(5rem, 8rem);
-  gap: var(--s-2) var(--s-4);
-  padding-block: var(--s-3);
-  border-bottom: 1px solid var(--hair);
+  grid-template-columns: var(--margin) minmax(0, 1fr) minmax(5.5rem, 9rem);
+  column-gap: var(--s-2);
+  align-items: start;
+  padding-block: var(--s-1) var(--s-1);
+  margin-block-end: var(--s-2);
 }
-.catchup-row { grid-template-columns: minmax(0, 1fr) minmax(5rem, 8rem); }
-.stop-press .board-title { font-size: var(--fs-body); }
-.stop-press .board-rank { font-size: 1.4rem; color: var(--grey); }
-.board-newsbadge { font: 600 var(--fs-meta)/1 var(--font-read); color: var(--grey); font-style: italic; }
-.stop-press .score-bar { background: var(--hair); }
-.catchup { margin-top: var(--s-6); }
+.board-rank {
+  padding-inline-end: .8rem; text-align: end;
+  font: 700 1.05rem/var(--unit) var(--font-typed);
+  color: var(--pencil);
+  font-variant-numeric: tabular-nums;
+}
+.board-title {
+  font: 600 var(--fs-entry)/calc(var(--unit) * 1.25) var(--font-name);
+  letter-spacing: -.008em;
+  color: var(--ink); text-decoration: none;
+  text-wrap: balance;
+}
+.board-title:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .18em; }
+.board-src { letter-spacing: 0; font: 400 .8rem/var(--unit) var(--font-read); color: var(--pencil); margin-inline-start: .35em; white-space: nowrap; }
+.board-aka, .board-meta { margin: 0; font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
+.board-aka { font-family: var(--font-name); font-style: italic; font-size: .98rem; }
+/* seen twice, or heard once: from the row's own source count */
+.board-row[data-sources] .board-meta::before {
+  display: block; margin-block-end: 0; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+}
+.board-row[data-sources="1"] .board-meta::before { content: "\25CF\25CB  Heard once"; color: var(--pencil); }
+.board-row[data-sources="2"] .board-meta::before { content: "\25CF\25CF  Seen by 2 sources"; color: var(--seen); }
+.board-row[data-sources="1"] .board-meta { --dot: var(--stamp); }
+.board-row[data-sources="3"] .board-meta::before { content: "\25CF\25CF  Seen by 3 sources"; color: var(--seen); }
+.board-row[data-sources="4"] .board-meta::before { content: "\25CF\25CF  Seen by 4 sources"; color: var(--seen); }
+.board-angle { margin: 0; font: 400 var(--fs-body)/var(--unit) var(--font-read); }
+.board-make {
+  margin-inline-end: .6em;
+  font: 700 var(--fs-typed)/var(--unit) var(--font-typed);
+  letter-spacing: .1em; text-transform: uppercase; color: var(--cloth);
+}
+.board-make::after { content: ":"; }
 
-/* ============ 6. MOTION: slap, fill, beat ============ */
+/* the number: typed, with a pencil line under it */
+.board-score { display: grid; justify-items: end; align-content: start; }
+.score-num { font: 700 var(--fs-num)/calc(var(--unit) * 1.5) var(--font-typed); font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+.board-unit { font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
+.score-bar { display: block; inline-size: 100%; block-size: 0; margin-top: .25rem; border-block-end: 1px dotted var(--pencil); position: relative; }
+.score-bar i { position: absolute; inset-inline-start: 0; bottom: -2px; display: block; block-size: 3px; background: var(--ink); }
+
+/* the lead entry: set big, the score circled in pen */
+.log .board-row.splash {
+  grid-template-columns: var(--margin) minmax(0, 1fr);
+  grid-template-areas: ". kick" ". title" ". aka" ". meta" ". make" ". score";
+  column-gap: 0;
+  margin-block: 0 var(--s-4);
+  padding-block: var(--s-1) 0;
+}
+.splash .board-rank { grid-area: kick; }
+.splash .board-main { display: contents; }
+.splash .board-title {
+  grid-area: title;
+  font-size: var(--fs-lead);
+  line-height: calc(var(--unit) * 2);
+  letter-spacing: -.02em;
+  max-inline-size: 16ch;
+}
+.splash .board-src { display: block; font-size: .9rem; white-space: normal; margin: 0; margin-block-start: var(--s-1); }
+.splash .board-aka { grid-area: aka; margin-block-start: var(--s-1); }
+.splash .board-meta { grid-area: meta; margin-block-start: var(--s-1); }
+.splash .board-angle {
+  grid-area: make; margin-block-start: var(--s-2);
+  max-inline-size: 34rem;
+  font: italic 400 clamp(1.2rem, 1rem + .9vw, 1.65rem)/calc(var(--unit) * 1.25) var(--font-name);
+}
+.splash .board-make { font-style: normal; display: block; }
+.splash .board-score {
+  grid-area: score; justify-items: start; margin-block-start: var(--s-3);
+  position: relative; inline-size: max-content; padding: .55rem 1.8rem .35rem;
+}
+.splash .score-num { font-size: clamp(3rem, 2rem + 4vw, 5rem); line-height: calc(var(--unit) * 2); }
+.splash .board-unit { padding-inline-end: 0; }
+.splash .score-bar { display: none; }
+/* the pen circle: a lopsided ellipse, drawn in with a wipe */
+.splash .board-score::after {
+  content: "";
+  position: absolute; inset: 0;
+  border: 3px solid var(--ink);
+  border-radius: 52% 48% 55% 45% / 58% 50% 50% 42%;
+  rotate: -3deg;
+  pointer-events: none;
+}
+.splash .board-rank::after { content: " today"; font-weight: 400; }
+html[data-age="stale"] .splash .board-rank::after { content: " as of " var(--asof, "the last check"); }
+.splash .board-rank { text-align: start; white-space: nowrap; padding: 0; }
+.splash .board-rank::before { content: "No. "; font-weight: 400; }
+
+@container board (width < 38rem) {
+  .log .board-row { grid-template-columns: var(--margin) minmax(0, 1fr); }
+  .log .board-row .board-score { grid-column: 2; justify-items: start; grid-template-columns: auto 1fr; align-items: baseline; column-gap: .5rem; max-inline-size: 14rem; }
+  .log .board-row .score-bar { grid-column: 1 / -1; }
+  .log .board-row .score-num { font-size: 2rem; }
+}
+
+.log-how { margin: var(--s-2) 0 0; padding-inline-start: var(--margin); font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
+
+/* ============ 6. NEWS AND COOLING: the back pages of the log ============ */
+.stop-press { max-inline-size: var(--page); margin-inline: auto; padding: var(--s-5) var(--gutter) var(--s-4) calc(var(--gutter) + var(--margin)); }
+.board-news-h, .catchup-h {
+  margin: 0 0 var(--s-2);
+  font: 600 1.35rem/var(--unit) var(--font-name); font-style: normal;
+}
+.board-news-h { font-weight: 400; font-style: italic; }
+.stop-press .board-row, .catchup-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(5rem, 8rem);
+  column-gap: var(--s-2);
+  padding-block: var(--s-1); margin: 0;
+  border-block-end: 1px solid var(--rule);
+}
+.stop-press .board-row .board-rank { display: none; }
+.stop-press .board-title { font-size: 1.15rem; line-height: var(--unit); }
+.stop-press .score-num { font-size: 1.6rem; line-height: var(--unit); }
+.board-newsbadge { font: 700 var(--fs-typed)/var(--unit) var(--font-typed); letter-spacing: .08em; text-transform: uppercase; color: var(--pencil); }
+.catchup { margin-top: var(--s-4); }
+.board-note { margin: var(--s-2) 0 0; font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); max-inline-size: 60ch; }
+
+/* ============ 7. MOTION: ink on paper ============
+   One stamp that lands, one pen circle that draws, a nav rule that
+   inks in. All of it only when motion is welcome; with reduced motion the
+   page simply is. */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
-  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 160ms; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 220ms; animation-timing-function: var(--ease-ink); }
 
-  .splash .board-title { animation: slap var(--dur-slap) var(--ease-snap) both; }
-
-  .score-bar i { transition: width var(--dur-fill) var(--ease-out); }
-  @starting-style { .score-bar i { width: 0 !important; } } /* beats the inline width, refills on every live render */
-
-  html[data-age="live"] .bill-stamp::before { animation: beat 1.6s ease-in-out infinite; }
+  .stamp { animation: land 340ms var(--ease-ink) 120ms both; }
+  .splash .board-score::after { animation: draw 700ms var(--ease-ink) 380ms both; }
+  .score-bar i { transition: width 600ms var(--ease-ink); }
+  @starting-style { .score-bar i { width: 0 !important; } }
+  .tm-nav a { transition: border-color 160ms ease-out, color 160ms ease-out; }
 
   @supports (animation-timeline: view()) {
-    .bill .board-row:not(.splash), .stop-press li {
-      animation: rise linear both;
+    .log .board-row:not(.splash) {
+      animation: settle linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 40%;
+      animation-range: entry 0% entry 30%;
     }
   }
 }
-@keyframes slap { from { opacity: 0; scale: 1.06; } }
-@keyframes beat { 50% { opacity: .25; } }
-@keyframes rise { from { opacity: 0; translate: 0 .6rem; } }
+@keyframes land { from { opacity: 0; scale: 1.14; rotate: -4deg; } }
+@keyframes draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes settle { from { opacity: 0; translate: 0 .5rem; } }
 
-/* ============ 7. BUILD FIX (R136, named on its face) ============
-   The extraction keeps the directory, the full table and the
-   how-it-works list below the stop press "on newsprint", but its
-   bill.css carries no rules for them and the homepage no longer
-   loads the sheets that styled them. This section gives those
-   kept sections the bill's own vocabulary (newsprint ground, hair
-   rules, ink type, the bill's two faces) so they stay readable.
-   It changes no extracted rule above. */
-.wrap { max-inline-size: var(--page); margin-inline: auto; padding-inline: var(--gutter); }
-.wrap > section { padding-block: var(--s-6); }
-.section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); margin-bottom: var(--s-3); }
-.section-head h2 {
-  margin: 0;
-  font: 800 1.1rem/1 var(--font-bill);
-  letter-spacing: .04em; text-transform: uppercase;
-}
-.kicker { font: 500 var(--fs-meta)/1.4 var(--font-read); color: var(--grey); }
+/* ============ 8. THE REST OF THE PAGE: directory, table, how it works ============ */
+.wrap { max-inline-size: var(--page); margin-inline: auto; padding-inline: var(--gutter) var(--gutter); padding-inline-start: calc(var(--gutter) + var(--margin)); }
+.wrap > section { padding-block: var(--s-4); }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--s-2); margin-bottom: var(--s-2); }
+.section-head h2 { margin: 0; font: 600 1.6rem/calc(var(--unit) * 1.25) var(--font-name); }
+.kicker { font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
 .dir-list { list-style: none; margin: 0; padding: 0; }
-.dir-list li {
-  display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-4); align-items: baseline;
-  padding-block: var(--s-3); border-bottom: 1px solid var(--hair);
-}
-.dir-list a { font: 700 var(--fs-row)/1.2 var(--font-read); text-decoration: none; }
-.dir-list a:hover { text-decoration: underline 3px; text-underline-offset: .15em; }
-.dir-list span { font: 500 var(--fs-meta)/1.4 var(--font-read); color: var(--grey); }
-.controls { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-3); align-items: center; margin-bottom: var(--s-3); }
-.controls label { font: 600 var(--fs-meta)/1 var(--font-read); }
+.dir-list li { display: flex; flex-wrap: wrap; gap: 0 var(--s-2); align-items: baseline; padding-block: var(--s-1); border-block-end: 1px solid var(--rule); }
+.dir-list a { font: 600 1.2rem/var(--unit) var(--font-name); text-decoration: none; }
+.dir-list a:hover { text-decoration: underline; }
+.dir-list span { font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
+.controls { display: flex; flex-wrap: wrap; gap: .5rem var(--s-1); align-items: center; margin-bottom: var(--s-2); }
+.controls label { font: 700 var(--fs-typed)/var(--unit) var(--font-typed); letter-spacing: .08em; text-transform: uppercase; }
 .controls input, .controls select {
-  font: 500 var(--fs-body)/1.3 var(--font-read); color: var(--ink);
-  background: var(--panel); border: 1px solid var(--grey); padding: var(--s-2);
+  font: 400 1rem/1.4 var(--font-read); color: var(--ink);
+  background: var(--panel); border: 1px solid var(--pencil); border-radius: 2px; padding: .5rem .65rem; min-block-size: 44px;
 }
 .table-shell { overflow-x: auto; }
-.dtable { border-collapse: collapse; inline-size: 100%; font-size: var(--fs-body); }
-.dtable th, .dtable td { padding: var(--s-2) var(--s-3); border-bottom: 1px solid var(--hair); text-align: left; vertical-align: top; }
-.dtable th { font: 800 .85rem/1.2 var(--font-bill); letter-spacing: .04em; text-transform: uppercase; }
-.sortbtn { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
-.topic-link { font-weight: 700; text-decoration: none; }
-.topic-link:hover { text-decoration: underline 3px; text-underline-offset: .15em; }
-.topic-cat, .topic-aka { font: 500 var(--fs-meta)/1.4 var(--font-read); color: var(--grey); }
-.chip { display: inline-block; margin-inline-end: .35em; font: 500 var(--fs-meta)/1.4 var(--font-read); color: var(--grey); }
-.score-bar { display: inline-block; inline-size: 4rem; block-size: 6px; background: var(--hair); }
-.score-bar i { display: block; block-size: 100%; background: var(--ink); }
-.fresh .dot { display: inline-block; inline-size: .5rem; block-size: .5rem; border-radius: 50%; background: var(--ink); margin-inline-end: .35em; }
-.fresh-legend { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); margin-top: var(--s-3); font: 500 var(--fs-meta)/1.4 var(--font-read); color: var(--grey); }
-.how-list { list-style: none; margin: 0; padding: 0; }
-.how-row { display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); gap: var(--s-2) var(--s-4); padding-block: var(--s-3); border-bottom: 1px solid var(--hair); }
-.how-row h4 { margin: 0 0 var(--s-1); font: 800 1rem/1.2 var(--font-bill); letter-spacing: .04em; text-transform: uppercase; }
+.dtable { border-collapse: collapse; inline-size: 100%; font-size: .98rem; }
+.dtable th, .dtable td { padding: .5rem .75rem .5rem 0; border-block-end: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.dtable th { font: 700 var(--fs-typed)/1.3 var(--font-typed); letter-spacing: .08em; text-transform: uppercase; color: var(--pencil); }
+.sortbtn { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.sortbtn:hover { color: var(--ink); text-decoration: underline; }
+.topic-link { font: 600 1.05rem/1.3 var(--font-name); text-decoration: none; }
+.topic-link:hover { text-decoration: underline; }
+.topic-cat, .topic-aka { font: 400 var(--fs-typed)/1.4 var(--font-typed); color: var(--pencil); }
+.chip { display: inline-block; margin-inline-end: .35em; font: 400 var(--fs-typed)/1.4 var(--font-typed); color: var(--pencil); }
+.fresh .dot { display: inline-block; inline-size: .5rem; block-size: .5rem; border-radius: 50%; background: var(--seen); margin-inline-end: .35em; }
+.fresh.f-dead .dot { background: transparent; box-shadow: inset 0 0 0 1.5px var(--stamp); }
+.fresh-legend { display: flex; flex-wrap: wrap; gap: 0 var(--s-2); margin-top: var(--s-2); font: 400 var(--fs-typed)/var(--unit) var(--font-typed); color: var(--pencil); }
+.how-list { list-style: none; margin: 0; padding: 0; counter-reset: how; }
+.how-row { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 0 var(--s-1); padding-block: var(--s-1); border-block-end: 1px solid var(--rule); }
+.how-row .board-rank { padding: 0; text-align: start; }
+.how-row h4 { margin: 0; font: 600 1.15rem/var(--unit) var(--font-name); }
 .how-row p { margin: 0; }
-#load-error {
-  max-inline-size: var(--page); margin-inline: auto;
-  padding: var(--s-3) var(--gutter);
-  font: 500 var(--fs-body)/1.4 var(--font-read);
-}
-.tm-retry {
-  font: 800 .78rem/1 var(--font-bill); letter-spacing: .06em; text-transform: uppercase;
-  background: var(--ink); color: var(--hivis); border: 0; padding: .6em 1em; cursor: pointer;
-}
-.site-foot { border-top: 4px solid var(--ink); padding-block: var(--s-5); }
-.foot-nav { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); }
-.foot-nav a { font: 600 .875rem/1 var(--font-read); text-decoration: none; }
+#load-error { max-inline-size: var(--page); margin-inline: auto; padding: var(--s-1) var(--gutter); font: 400 var(--fs-body)/var(--unit) var(--font-read); color: var(--stamp); }
+.tm-retry { font: 700 var(--fs-typed)/1 var(--font-typed); letter-spacing: .08em; text-transform: uppercase; background: var(--cloth); color: var(--paper); border: 0; border-radius: 2px; padding: .8em 1.1em; cursor: pointer; }
+.site-foot { border-block-start: 3px double var(--ink); padding-block: var(--s-3); margin-block-start: var(--s-4); }
+.foot-nav { display: flex; flex-wrap: wrap; gap: 0 var(--s-3); }
+.foot-nav a { font: 400 var(--fs-typed)/var(--unit) var(--font-typed); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding-block: .6rem; }
 
-/* ============ 8. ROUND 2 (2026-10-24, design consult fixes A + B) ====
-   A. The top pick on phones: the splash score and Make bar must sit
-   in the splash's own single column. The paste-ready snippet named
-   ".bill .board-row .splash", which matches nothing in the real
-   markup (the splash IS the board row); this is the same rule on the
-   real selector, plus grid-column guards, because the generic row
-   rule above (.board-row .board-score) outranks the splash area at
-   narrow widths and pushed the score into an implicit second column.
-   B. A stale board must look stale: the rank line names the snapshot
-   date (the --asof custom property is set by the inline script in
-   index.html from the same data-generated stamp), the stamp becomes
-   a black bar with yellow text, and the headline dims. */
 @media (max-width: 40rem) {
-  .bill .board-row.splash {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "kick" "title" "aka" "score" "make" "meta";
-  }
-  /* the four-class form is load-bearing: the @container rule in
-     section 4 (.bill .board-row .board-score, three classes) pins
-     every row's score to grid-column 2, and at this width that
-     forced the splash score into an implicit second column that
-     squeezed the Make bar beside it. Verified in Chromium at 390 px:
-     before, score x=247 w=127 and Make w=230; after, both full row. */
-  .bill .board-row.splash .board-score {
-    justify-self: start;
-    grid-column: 1;
-    margin-top: var(--s-4);
-    max-inline-size: 100%;
-    box-sizing: border-box;
-  }
-  .bill .board-row.splash .board-angle {
-    grid-column: 1;
-    margin-top: 0;
-    min-inline-size: 0;
-    overflow-wrap: anywhere;
-    border-inline-start: 0;
-  }
+  .tm-head { padding-inline-start: var(--gutter); }
+  .tm-nav { gap: 0 var(--s-2); margin-inline-start: 0; }
+  .log-top h1 { max-inline-size: 11ch; }
+  .stamp { rotate: -1deg; }
 }
-html[data-age="stale"] .splash .board-rank::after {
-  content: " as of " var(--asof, "the last check");
+@media print { body::before { display: none; } .stamp { mix-blend-mode: normal; } }
+
+/* desktop: bigger type, three ruled lines per line of display type */
+@media (min-width: 48rem) {
+  :root { --fs-h1: 4rem; --fs-lead: 4.5rem; }
+  .log-top h1 { line-height: calc(var(--unit) * 3); max-inline-size: 14ch; }
+  .splash .board-title { line-height: calc(var(--unit) * 3); }
 }
-html[data-age="stale"] .bill-flag {
-  border-block-end: 4px solid var(--ink);
-}
-html[data-age="stale"] .bill-stamp {
-  background: var(--ink);
-  color: var(--hivis);
-  padding: .35rem .6rem;
-  font-weight: 700;
-}
-html[data-age="stale"] .splash .board-title {
-  opacity: .72;
-}
-html[data-age="stale"] #data-ts::after { color: var(--hivis); }

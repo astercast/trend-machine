@@ -62,7 +62,7 @@
       make = '<p class="board-angle"><span class="board-make">Make</span> ' + esc(normT(e.angle)) + "</p>";
     }
     var meta = e.record ? '<p class="board-meta">' + esc(metaLine(e)) + "</p>" : "";
-    return '<li class="board-row' + (e.kind === "news" ? " news" : "") + (e.splash ? " splash" : "") + '">' +
+    return '<li class="board-row' + (e.kind === "news" ? " news" : "") + (e.splash ? " splash" : "") + '" data-sources="' + (e.source_count || 0) + '">' +
       '<span class="board-rank">' + e.rank + "</span>" +
       '<div class="board-main">' + badge + titleHTML(e) + aka + meta + make + "</div>" +
       '<div class="board-score"><span class="score-num">' + e.opportunity_score + "</span>" +

@@ -48,12 +48,6 @@
       renderTable();
     }).catch(function () { loadVelocity(i + 1); });
   }
-  function trendCell(t) {
-    if (typeof TM_Sparkline === "undefined") { return ""; }
-    var pts = state.velocity[t.id] || [];
-    return TM_Sparkline.cellHTML(pts, t.id);
-  }
-
   function minsSince(iso) {
     var t = Date.parse(iso);
     if (isNaN(t)) return Infinity;
@@ -299,12 +293,6 @@
     var el = document.getElementById("dtable-body");
     if (!el) return;
     var list = filtered();
-    /* Round 2 (fix F): movement over the full filtered set, before
-       the default-view cap trims the rows on screen. */
-    var hasMove = list.some(function (t) {
-      var pts = state.velocity[t.id] || [];
-      return pts.length >= 2 && (pts[pts.length - 1][1] - pts[0][1]) !== 0;
-    });
     var meta = document.getElementById("table-meta");
     if (meta) meta.textContent = list.length + " of " + mergedTopics().length + " trends shown · " + state.topics.length + " tracked in all";
     /* CRITIC-001 fix 2: the homepage routes, it does not dump. The
@@ -327,18 +315,12 @@
         '<td data-label="Platforms">' + chips(t.platforms, "plat") + "</td>" +
         '<td data-label="Score">' + scoreHTML(t.opportunity_score) + "</td>" +
         '<td data-label="Spreading">' + scoreHTML(t.velocity) + "</td>" +
-        '<td data-label="Movement">' + trendCell(t) + "</td>" +
         '<td data-label="Last seen">' + freshHTML(t.last_seen) + "</td></tr>";
     }).join("") + (capped ?
-      '<tr class="show-all-row"><td colspan="6"><button type="button" id="show-all-trends" class="show-all-btn">Show all ' +
+      '<tr class="show-all-row"><td colspan="5"><button type="button" id="show-all-trends" class="show-all-btn">Show all ' +
       totalShown + ' trends</button></td></tr>' : "");
-    /* Round 2 (design consult fix F): retire the Movement column
-       when no series in the view actually moved. */
-    var thTrend = document.getElementById("th-trend");
-    if (thTrend) thTrend.hidden = !hasMove;
-    el.querySelectorAll("td[data-label='Movement']").forEach(function (td) {
-      td.hidden = !hasMove;
-    });
+    /* Round 3: no Movement column in this table (see build_site.py);
+       real per-trend movement lives on the board and topic pages. */
     var sab = document.getElementById("show-all-trends");
     if (sab) sab.addEventListener("click", function () { state.showAll = true; renderTable(); });
     var tbl = document.getElementById("dtable");
@@ -451,7 +433,7 @@
            The old rewrite printed a bare locale date and dropped
            the words "static snapshot", dressing a snapshot up as a
            live feed. */
-        gen.innerHTML = 'Snapshot <span class="num">' + tmStampUTC(d) + "</span>";
+        gen.innerHTML = 'As of <span class="num">' + tmStampUTC(d) + "</span>";
       }
       lampTest(false); /* V35E complete — board is live */
       clearAlarm(wasAlarmed); wasAlarmed = false; /* GO only after an alarm */

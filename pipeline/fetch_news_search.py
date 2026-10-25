@@ -22,6 +22,11 @@ QUERIES = [
     ("movies", "entertainment", ["google"]),
     ("new music", "music", ["google"]),
     ("TikTok viral", "meme", ["google"]),
+    # widened 2026-10-24 (freshness pass): world, health and streaming
+    # lanes — categories already in the store's taxonomy.
+    ("world news", "news", ["google"]),
+    ("health", "health", ["google"]),
+    ("streaming", "streaming", ["google"]),
 ]
 
 BASE = "https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"

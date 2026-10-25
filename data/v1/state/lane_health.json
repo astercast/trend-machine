@@ -1,0 +1,87 @@
+{
+ "gtrends": {
+  "lastGoodAt": "2026-10-24T13:33:25Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "news": {
+  "lastGoodAt": "2026-10-24T13:33:34Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "news_search": {
+  "lastGoodAt": "2026-10-24T13:34:09Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "reddit": {
+  "lastGoodAt": null,
+  "misses": 1,
+  "recent": "m"
+ },
+ "reddit_rss": {
+  "lastGoodAt": "2026-10-24T13:34:52Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "hn": {
+  "lastGoodAt": "2026-10-24T13:37:01Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "mastodon": {
+  "lastGoodAt": "2026-10-24T13:37:06Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "bluesky": {
+  "lastGoodAt": "2026-10-24T13:37:09Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "charts": {
+  "lastGoodAt": null,
+  "misses": 1,
+  "recent": "m"
+ },
+ "wiki": {
+  "lastGoodAt": "2026-10-24T13:38:05Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "netflix": {
+  "lastGoodAt": "2026-10-24T13:38:12Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "youtube_rss": {
+  "lastGoodAt": "2026-10-24T13:39:04Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "streamers": {
+  "lastGoodAt": "2026-10-24T13:39:31Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "steam": {
+  "lastGoodAt": "2026-10-24T13:40:50Z",
+  "misses": 0,
+  "recent": "o"
+ },
+ "tiktok": {
+  "lastGoodAt": null,
+  "misses": 0,
+  "recent": "-"
+ },
+ "x": {
+  "lastGoodAt": null,
+  "misses": 0,
+  "recent": "-"
+ },
+ "youtube": {
+  "lastGoodAt": null,
+  "misses": 0,
+  "recent": "-"
+ }
+}

@@ -20,13 +20,17 @@ def uid(*parts):
 def now_iso():
     return datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat()
 
-def hit(title, url, source, summary="", hashtags=None, category=None, platforms=None):
-    return {
+def hit(title, url, source, summary="", hashtags=None, category=None, platforms=None, also=None):
+    h = {
         "title": clean(title)[:180], "url": url, "source": source,
         "summary": clean(summary)[:400], "hashtags": hashtags or [],
         "category": category, "platforms": platforms or [],
         "fetched_at": now_iso(),
     }
+    if also:
+        # other real pages that corroborate this signal: [{"name","url","title"}]
+        h["also"] = also[:4]
+    return h
 
 def save_hits(name, hits, outdir="pipeline/out"):
     import os

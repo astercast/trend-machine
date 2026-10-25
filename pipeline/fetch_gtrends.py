@@ -24,11 +24,21 @@ def main():
         traffic = ""
         m = re.search(r"<ht:approx_traffic>(.*?)</ht:approx_traffic>", it)
         if m: traffic = m.group(1)
+        # Each trending search ships with the news stories behind it, from
+        # named outlets. They are the independent second voice for this signal.
+        also = []
+        for ni in re.findall(r"<ht:news_item>(.*?)</ht:news_item>", it, re.S)[:3]:
+            nt = re.search(r"<ht:news_item_title>(.*?)</ht:news_item_title>", ni, re.S)
+            nu = re.search(r"<ht:news_item_url>(.*?)</ht:news_item_url>", ni, re.S)
+            ns = re.search(r"<ht:news_item_source>(.*?)</ht:news_item_source>", ni, re.S)
+            if nt and nu:
+                also.append({"name": "gtrends-news:" + clean(ns.group(1) if ns else "outlet"),
+                             "url": nu.group(1).strip(), "title": clean(nt.group(1))[:160]})
         hits.append(hit(
             title, link, "google-trends",
             summary=f"~{traffic} searches. {desc}" if traffic else desc,
             hashtags=extract_hashtags(title + " " + desc),
-            category="news", platforms=["google"]))
+            category="news", platforms=["google"], also=also))
     save_hits("gtrends", hits)
 
 if __name__ == "__main__":

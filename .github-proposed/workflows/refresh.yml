@@ -1,0 +1,36 @@
+# Triggers a rebuild every 3 hours. The build itself (on Vercel) fetches the sources,
+# ranks the trends, checks its own health, and refuses to deploy if the run was bad.
+# Nothing is committed to the repo by this job.
+# One-time setup: Vercel project > Settings > Git > Deploy Hooks > create "refresh" on the
+# production branch, then add its URL as a repository secret named VERCEL_DEPLOY_HOOK.
+# Add this file through the GitHub web page (Add file > Create new file), because the
+# bot token does not have the workflow scope.
+name: refresh
+on:
+  schedule:
+    - cron: "23 */3 * * *"      # every 3 hours, at minute 23 (not on the hour)
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ask Vercel to rebuild
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          test -n "$HOOK" || { echo "VERCEL_DEPLOY_HOOK is not set"; exit 1; }
+          curl --fail --silent --show-error --retry 3 --retry-delay 10 -X POST "$HOOK"
+      - name: Check the site really moved (runs 12 minutes later)
+        env:
+          SITE: https://trend-machine-live.vercel.app
+        run: |
+          sleep 720
+          gen=$(curl -fsS "$SITE/data/v1/freshness.json" | python3 -c "import json,sys,datetime as d; j=json.load(sys.stdin); print(int((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(j['generatedAt'].replace('Z','+00:00'))).total_seconds()//60))")
+          echo "board is $gen minutes old"
+          test "$gen" -le 40 || { echo "::error::the board did not refresh (build refused or failed). See the Vercel deployments list."; exit 1; }

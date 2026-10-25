@@ -145,3 +145,28 @@
   descent-override: 21.3%;
   line-gap-override: 0%;
 }
+
+/* ===== ROUND 3: the Field Log faces. Same hardening rules as above:
+   one static file per weight, font-display swap, a metric-matched
+   fallback per face (measured with fontTools against the Liberation
+   faces: size-adjust aligns x-height, ascent and descent are the shipped
+   face's own ratios divided by size-adjust). ===== */
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/fraunces-600-latin.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/fraunces-400-italic-latin.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/public-sans-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/public-sans-600-latin.woff2") format("woff2"); }
+@font-face { font-family: "Courier Prime"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/courier-prime-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Courier Prime"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/courier-prime-700-latin.woff2") format("woff2"); }
+
+@font-face { font-family: "Fraunces Fallback"; src: local("Liberation Serif"), local("Times New Roman"), local("Georgia");
+  size-adjust: 105%; ascent-override: 93.1%; descent-override: 24.3%; line-gap-override: 0%; }
+@font-face { font-family: "Public Sans Fallback"; src: local("Liberation Sans"), local("Arial"), local("Helvetica Neue");
+  size-adjust: 97.9%; ascent-override: 97%; descent-override: 23%; line-gap-override: 0%; }
+@font-face { font-family: "Courier Prime Fallback"; src: local("Liberation Mono"), local("Courier New"), local("Menlo");
+  size-adjust: 85.4%; ascent-override: 91.5%; descent-override: 40%; line-gap-override: 0%; }

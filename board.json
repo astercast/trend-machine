@@ -1,0 +1,857 @@
+{
+  "generated_at": "2026-10-24T13:40:52.653670+00:00",
+  "topics": [
+    {
+      "rank": 1,
+      "id": "premier-league-standings",
+      "title": "premier league standings",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.428277+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cmn0628p5rkyt",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        },
+        {
+          "name": "gtrends-news:The Guardian",
+          "url": "https://www.theguardian.com/football/2026/oct/23/ipswich-nottingham-forest-premier-league-match-report",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        },
+        {
+          "name": "gtrends-news:Sky Sports",
+          "url": "https://www.skysports.com/football/live-blog/13602310/ipswich-vs-n-forest-live-premier-league-score-updates-news-prediction-lineups-and-how-to-watch-or-stream",
+          "seen": "2026-10-24T13:33:25.428277+00:00"
+        }
+      ],
+      "url": "topics/premier-league-standings.html"
+    },
+    {
+      "rank": 2,
+      "id": "erling-haaland",
+      "title": "erling haaland",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435498+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        },
+        {
+          "name": "gtrends-news:OneFootball",
+          "url": "https://onefootball.com/en/news/aston-villa-among-erling-haalands-premier-league-bogey-teams-43663974",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cj62ynzwg4pet",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        },
+        {
+          "name": "gtrends-news:ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50220422/premier-league-live-updates-aston-villa-manchester-city-arsenal-everton-chelsea-tottenham-hotspur",
+          "seen": "2026-10-24T13:33:25.435498+00:00"
+        }
+      ],
+      "url": "topics/erling-haaland.html"
+    },
+    {
+      "rank": 3,
+      "id": "premier-league-table",
+      "title": "premier league table",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435575+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/articles/cw3djpg15045o",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        },
+        {
+          "name": "gtrends-news:The Guardian",
+          "url": "https://www.theguardian.com/football/2026/oct/22/nottingham-forest-oliver-glasner-time-evangelos-marinakis",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        },
+        {
+          "name": "gtrends-news:The New York Times",
+          "url": "https://www.nytimes.com/athletic/7710163/2026/10/22/oliver-glasners-false-starts-what-can-he-learn-at-forest-from-palace-and-frankfurt-struggles/",
+          "seen": "2026-10-24T13:33:25.435575+00:00"
+        }
+      ],
+      "url": "topics/premier-league-table.html"
+    },
+    {
+      "rank": 4,
+      "id": "west-ham-vs-southampton",
+      "title": "west ham vs southampton",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435649+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cked35y808jjt",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        },
+        {
+          "name": "gtrends-news:West Ham United",
+          "url": "https://www.whufc.com/en/news/starting-xi-or-taty-and-walker-peters-return-for-southampton",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        },
+        {
+          "name": "gtrends-news:Daily Echo",
+          "url": "https://www.dailyecho.co.uk/sport/26658555.southamptons-azaz-opens-performances-ahead-west-ham-trip/",
+          "seen": "2026-10-24T13:33:25.435649+00:00"
+        }
+      ],
+      "url": "topics/west-ham-vs-southampton.html"
+    },
+    {
+      "rank": 5,
+      "id": "como-vs",
+      "title": "como vs",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435719+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        },
+        {
+          "name": "gtrends-news:Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/nico-paz-ll-never-forget-194000202.html",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        },
+        {
+          "name": "gtrends-news:The New York Times",
+          "url": "https://www.nytimes.com/athletic/7712341/2026/10/22/fernandes-carrick-man-utd-pressing/",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        },
+        {
+          "name": "gtrends-news:CBS Sports",
+          "url": "https://www.cbssports.com/soccer/news/bruno-fernandes-rebellion-underlines-manchester-uniteds-problem/",
+          "seen": "2026-10-24T13:33:25.435719+00:00"
+        }
+      ],
+      "url": "topics/como-vs.html"
+    },
+    {
+      "rank": 6,
+      "id": "blackburn-rovers-vs-wrexham",
+      "title": "blackburn rovers vs wrexham",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.435784+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cj1dwqr35pxwt",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        },
+        {
+          "name": "gtrends-news:Wrexham and Flintshire News, Sport, Events | The Leader",
+          "url": "https://www.leaderlive.co.uk/news/26664354.blackburn-v-wrexham-afc--storms-spark-travel-warnings/",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        },
+        {
+          "name": "gtrends-news:Forza Football",
+          "url": "https://forzafootball.com/news/wrexham-handed-major-fitness-boost-ahead-of-blackburn-rovers-fixture-159469459",
+          "seen": "2026-10-24T13:33:25.435784+00:00"
+        }
+      ],
+      "url": "topics/blackburn-rovers-vs-wrexham.html"
+    },
+    {
+      "rank": 7,
+      "id": "coventry-vs-fulham",
+      "title": "coventry vs fulham",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.443388+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cq398rj0l38mt",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        },
+        {
+          "name": "gtrends-news:Fulham Football Club",
+          "url": "https://www.fulhamfc.com/news/2026/october/23/pre-coventry-press-conference/",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        },
+        {
+          "name": "gtrends-news:Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/lampard-says-no-drama-squad-082820841.html",
+          "seen": "2026-10-24T13:33:25.443388+00:00"
+        }
+      ],
+      "url": "topics/coventry-vs-fulham.html"
+    },
+    {
+      "rank": 8,
+      "id": "cancer",
+      "title": "cancer",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.443709+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        },
+        {
+          "name": "gtrends-news:NBC News",
+          "url": "https://www.nbcnews.com/politics/politics-news/vanessa-trump-cancer-free-breast-cancer-diagnosis-surgery-treatment-rcna605339",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        },
+        {
+          "name": "gtrends-news:New York Post",
+          "url": "https://nypost.com/2026/10/23/us-news/vanessa-trump-reveals-shes-cancer-free-six-months-after-receiving-devastating-diagnosis/",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        },
+        {
+          "name": "gtrends-news:People.com",
+          "url": "https://people.com/vanessa-trump-reveals-she-s-cancer-free-after-announcing-diagnosis-in-may-12190830",
+          "seen": "2026-10-24T13:33:25.443709+00:00"
+        }
+      ],
+      "url": "topics/cancer.html"
+    },
+    {
+      "rank": 9,
+      "id": "matt-leinart",
+      "title": "matt leinart",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.446821+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        },
+        {
+          "name": "gtrends-news:Detroit Free Press",
+          "url": "https://www.freep.com/story/sports/college/university-michigan/wolverines/2026/10/24/tommy-carr-grandpa-lloyd-cj-jason-notre-dame-michigan/92380105007/",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        },
+        {
+          "name": "gtrends-news:Maize n Brew",
+          "url": "https://www.maizenbrew.com/football/126065/michigan-football-tommy-carr-indiana-hoosiers-big-ten",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        },
+        {
+          "name": "gtrends-news:MLive.com",
+          "url": "https://www.mlive.com/wolverines/football/2026/10/you-see-the-upside-with-michigan-qb-tommy-carr-foxs-matt-leinart-says.html",
+          "seen": "2026-10-24T13:33:25.446821+00:00"
+        }
+      ],
+      "url": "topics/matt-leinart.html"
+    },
+    {
+      "rank": 10,
+      "id": "arsenal-everton",
+      "title": "arsenal - everton",
+      "category": "news",
+      "platforms": [
+        "google"
+      ],
+      "opportunity_score": 38,
+      "strength": 78,
+      "velocity": 95,
+      "last_seen": "2026-10-24T13:33:25.446949+00:00",
+      "kinds": [
+        "news",
+        "search"
+      ],
+      "outlets": 4,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "google-trends",
+          "url": "https://trends.google.com/trending/rss?geo=US",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        },
+        {
+          "name": "gtrends-news:BBC",
+          "url": "https://www.bbc.com/sport/football/live/cj62ynzwg4pet",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        },
+        {
+          "name": "gtrends-news:ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50220422/premier-league-live-updates-aston-villa-manchester-city-arsenal-everton-chelsea-tottenham-hotspur",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        },
+        {
+          "name": "gtrends-news:Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/liveblog/2026/10/24/aston-villa-vs-manchester-city-live-premier-league",
+          "seen": "2026-10-24T13:33:25.446949+00:00"
+        }
+      ],
+      "url": "topics/arsenal-everton.html"
+    },
+    {
+      "rank": 11,
+      "id": "new-alien-movie-in-the-works-with-writer-aaron-guz",
+      "title": "New ‘Alien’ Movie in the Works With Writer Aaron Guzikowski (Exclusive)",
+      "category": "entertainment",
+      "platforms": [
+        "google",
+        "reddit"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:34:46.925543+00:00",
+      "kinds": [
+        "news",
+        "social"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "gnews-q:movies",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPa1RRbTdzRmYwVk1pLVUyMHRPYlBIVHp4eC1KbDB4WUFTY24wc1FaclgtRHRIYVBFT0FfaTA2NEF0T2kzM0lEVEM5N2VNWC1BTWVUem8wVThHc1I5LVN4c0t0NU95aEhEd2hETVVIaGpvX25SS2JWYWNpTVB1NlU5RFVpZXJWMVF5NUNOeUFoWklQUktLMHVn?oc=5",
+          "seen": "2026-10-24T13:33:53.514605+00:00"
+        },
+        {
+          "name": "reddit-rss:r/movies",
+          "url": "https://www.reddit.com/r/movies/comments/1xdqn4h/new_alien_movie_in_the_works_with_writer_aaron/",
+          "seen": "2026-10-24T13:34:46.925543+00:00"
+        }
+      ],
+      "url": "topics/new-alien-movie-in-the-works-with-writer-aaron-guz.html"
+    },
+    {
+      "rank": 12,
+      "id": "chatgpt",
+      "title": "ChatGPT",
+      "category": "tech",
+      "platforms": [
+        "apple",
+        "wikipedia"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:38:05.304096+00:00",
+      "kinds": [
+        "chart",
+        "reference"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "apple-appstore-chart",
+          "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+          "seen": null
+        },
+        {
+          "name": "wikipedia-most-read",
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "seen": "2026-10-24T13:38:05.304096+00:00"
+        }
+      ],
+      "url": "topics/chatgpt.html"
+    },
+    {
+      "rank": 13,
+      "id": "ryan-gosling-s-goth-folk-band-dead-man-s-bones-is-",
+      "title": "Ryan Gosling's goth folk band Dead Man's Bones is officially returning after 17 years",
+      "category": "music",
+      "platforms": [
+        "reddit",
+        "google"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:34:41.711817+00:00",
+      "kinds": [
+        "news",
+        "social"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/Music",
+          "url": "https://www.reddit.com/r/Music/comments/1xdabqr/ryan_goslings_goth_folk_band_dead_mans_bones_is/",
+          "seen": "2026-10-24T13:34:41.711817+00:00"
+        },
+        {
+          "name": "gnews-q:new music",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYzlLdjE2amEtMTFqNGZrX1VPbXRIQmNSQzVndW9Yb2pneXBSb1hDYmdjdDd1bjJtTTJ4OWdXcVVkUTZKSENjRUlnUmcwLWo0U3VvVllrRDNTV1pkeXkyeTJfTHc0YkJuZXZzUlkxVE9IOFdFc3F1SHBhQ014S05ZM2hBbEw0YU9CM0NEVzJRblFUQlRhQm53QzFLQ2dyWVRWQzVJdFpBYm5vVlB2XzNj?oc=5",
+          "seen": "2026-10-24T13:33:58.112652+00:00"
+        }
+      ],
+      "url": "topics/ryan-gosling-s-goth-folk-band-dead-man-s-bones-is-.html"
+    },
+    {
+      "rank": 14,
+      "id": "you-can-see-everything",
+      "title": "You Can See Everything",
+      "category": "news",
+      "platforms": [
+        "wikipedia",
+        "bluesky"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:38:05.304116+00:00",
+      "kinds": [
+        "reference",
+        "social"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "wikipedia-most-read",
+          "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
+          "seen": "2026-10-24T13:38:05.304116+00:00"
+        },
+        {
+          "name": "bluesky-trending",
+          "url": "https://bsky.app/search?q=%27You+Can+See+Everything%27+premieres",
+          "seen": "2026-10-24T13:37:09.871426+00:00"
+        }
+      ],
+      "url": "topics/you-can-see-everything.html"
+    },
+    {
+      "rank": 15,
+      "id": "bbc-edits-out-pride-pins-on-university-challenge-i",
+      "title": "BBC edits out pride pins on University Challenge in ‘Orwellian’ move",
+      "category": "news",
+      "platforms": [
+        "lemmy",
+        "bluesky"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:37:15.070151+00:00",
+      "kinds": [
+        "social",
+        "web"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "lemmy-hot",
+          "url": "https://www.leicester.news/bbc-edits-out-pride-pins-on-university-challenge-in-orwellian-move/",
+          "seen": "2026-10-24T13:37:15.070151+00:00"
+        },
+        {
+          "name": "bluesky-trending",
+          "url": "https://bsky.app/search?q=BBC+edits+out+University+Challenge+pride+pins",
+          "seen": "2026-10-24T13:37:09.871362+00:00"
+        }
+      ],
+      "url": "topics/bbc-edits-out-pride-pins-on-university-challenge-i.html"
+    },
+    {
+      "rank": 16,
+      "id": "canadian-woman-living-in-u-s-dies-after-fears-of-d",
+      "title": "Canadian woman living in U.S. dies after fears of detention prevented her from seeking medical care",
+      "category": "news",
+      "platforms": [
+        "reddit",
+        "lemmy"
+      ],
+      "opportunity_score": 46,
+      "strength": 78,
+      "velocity": 70,
+      "last_seen": "2026-10-24T13:37:15.070228+00:00",
+      "kinds": [
+        "social",
+        "web"
+      ],
+      "outlets": 2,
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "reddit-rss:r/news",
+          "url": "https://www.reddit.com/r/news/comments/1xdxc6t/canadian_woman_living_in_us_dies_after_fears_of/",
+          "seen": "2026-10-24T13:34:27.641663+00:00"
+        },
+        {
+          "name": "lemmy-hot",
+          "url": "https://www.cbc.ca/news/canada/british-columbia/paige-adamson-death-fear-immigration-deportation-9.7392450",
+          "seen": "2026-10-24T13:37:15.070228+00:00"
+        }
+      ],
+      "url": "topics/canadian-woman-living-in-u-s-dies-after-fears-of-d.html"
+    },
+    {
+      "rank": 17,
+      "id": "how-are-drones-hunting-hidden-fires-cairngorms-bbc",
+      "title": "How are drones hunting hidden fires? #Cairngorms #BBCNews",
+      "category": "news",
+      "platforms": [
+        "youtube"
+      ],
+      "opportunity_score": 49,
+      "strength": 33,
+      "velocity": 49,
+      "last_seen": "2026-10-24T13:38:36.603640+00:00",
+      "kinds": [
+        "video"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "yt-rss:BBCNews",
+          "url": "https://www.youtube.com/shorts/aFtDtCSvSz0",
+          "seen": "2026-10-24T13:38:36.603640+00:00"
+        }
+      ],
+      "url": "topics/how-are-drones-hunting-hidden-fires-cairngorms-bbc.html"
+    },
+    {
+      "rank": 18,
+      "id": "when-do-the-clocks-go-back-in-the-uk-winter-bbcnew",
+      "title": "When do the clocks go back in the UK? #Winter #BBCNews",
+      "category": "news",
+      "platforms": [
+        "youtube"
+      ],
+      "opportunity_score": 49,
+      "strength": 33,
+      "velocity": 49,
+      "last_seen": "2026-10-24T13:38:36.603660+00:00",
+      "kinds": [
+        "video"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "yt-rss:BBCNews",
+          "url": "https://www.youtube.com/shorts/QNb4aREBajI",
+          "seen": "2026-10-24T13:38:36.603660+00:00"
+        }
+      ],
+      "url": "topics/when-do-the-clocks-go-back-in-the-uk-winter-bbcnew.html"
+    },
+    {
+      "rank": 19,
+      "id": "lhp3",
+      "title": "#lhp3",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132054+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/lhp3",
+          "seen": "2026-10-24T13:37:06.132054+00:00"
+        }
+      ],
+      "url": "topics/lhp3.html"
+    },
+    {
+      "rank": 20,
+      "id": "vendredilecture",
+      "title": "#VendrediLecture",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132105+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/vendredilecture",
+          "seen": "2026-10-24T13:37:06.132105+00:00"
+        }
+      ],
+      "url": "topics/vendredilecture.html"
+    },
+    {
+      "rank": 21,
+      "id": "1980sbucketlist",
+      "title": "#1980sBucketList",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132122+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/1980sbucketlist",
+          "seen": "2026-10-24T13:37:06.132122+00:00"
+        }
+      ],
+      "url": "topics/1980sbucketlist.html"
+    },
+    {
+      "rank": 22,
+      "id": "hochwasser",
+      "title": "#hochwasser",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132096+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/hochwasser",
+          "seen": "2026-10-24T13:37:06.132096+00:00"
+        }
+      ],
+      "url": "topics/hochwasser.html"
+    },
+    {
+      "rank": 23,
+      "id": "playtime",
+      "title": "#playtime",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132170+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/playtime",
+          "seen": "2026-10-24T13:37:06.132170+00:00"
+        }
+      ],
+      "url": "topics/playtime.html"
+    },
+    {
+      "rank": 24,
+      "id": "trappes",
+      "title": "#trappes",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132186+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/trappes",
+          "seen": "2026-10-24T13:37:06.132186+00:00"
+        }
+      ],
+      "url": "topics/trappes.html"
+    },
+    {
+      "rank": 25,
+      "id": "totp",
+      "title": "#totp",
+      "category": "culture",
+      "platforms": [
+        "mastodon"
+      ],
+      "opportunity_score": 47,
+      "strength": 33,
+      "velocity": 47,
+      "last_seen": "2026-10-24T13:37:06.132194+00:00",
+      "kinds": [
+        "social"
+      ],
+      "outlets": 1,
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "mastodon-trends",
+          "url": "https://mastodon.social/tags/totp",
+          "seen": "2026-10-24T13:37:06.132194+00:00"
+        }
+      ],
+      "url": "topics/totp.html"
+    }
+  ]
+}

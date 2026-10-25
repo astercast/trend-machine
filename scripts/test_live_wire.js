@@ -33,7 +33,7 @@ function laneFiles(over) {
   G.LANES.forEach(d => { base[d.id] = null; });
   // file lanes default: fresh file, 5 hits at 06:25Z
   ["gtrends", "news", "news_search", "reddit_rss", "hn", "mastodon",
-   "bluesky", "charts", "wiki", "netflix", "youtube_rss", "streamers", "steam"].forEach(id => {
+   "bluesky", "lemmy", "charts", "wiki", "netflix", "youtube_rss", "streamers", "steam"].forEach(id => {
     base[id] = { hits: 5, sources: ["src-" + id],
                  newest_fetched_at: "2026-10-13T06:25:00.000Z",
                  mtime: "2026-10-13T06:25:30.000Z" };
@@ -67,11 +67,11 @@ var wire = G.buildLiveWire(new Date(REFRESH), REFRESH, laneFiles(), hist, store)
 var byId = {};
 wire.lanes.forEach(l => { byId[l.id] = l; });
 
-check("registry covers every refresh.sh fetcher (17 lanes)",
-      wire.lanes.length === 17 &&
+check("registry covers every refresh.sh fetcher (18 lanes)",
+      wire.lanes.length === 18 &&
       byId.gtrends && byId.news_search && byId.reddit_rss &&
       byId.charts && byId.wiki && byId.netflix && byId.steam &&
-      byId.youtube_rss && byId.tiktok && byId.x);
+      byId.lemmy && byId.youtube_rss && byId.tiktok && byId.x);
 check("fresh lane with hits is live and counts its hits as current",
       byId.gtrends.status === "live" && byId.gtrends.current_hits === 5);
 check("rewritten empty lane is degraded with 0 current",
@@ -90,7 +90,7 @@ check("lane totals reconcile",
       wire.counts.lanes_retired === wire.counts.lanes &&
       wire.counts.lanes_retired === 1);
 check("retired lane contributes nothing: no current, no stale",
-      wire.counts.current_hits === 13 * 5 &&
+      wire.counts.current_hits === 14 * 5 &&
       wire.counts.stale_hits_excluded === 0);
 
 // old-but-present file for a normally-live lane also goes stale-skip
@@ -133,7 +133,7 @@ check("movers: off-board topic renders its id as title, not live",
 // --- rendering (lib) ----------------------------------------------------------
 var sum = L.summaryHTML(wire);
 check("summary names current finds and the retired lane",
-      sum.indexOf("65 finds") >= 0 && sum.indexOf("1 retired") >= 0 &&
+      sum.indexOf("70 finds") >= 0 && sum.indexOf("1 retired") >= 0 &&
       sum.indexOf("Retired") >= 0);
 var ytRow = L.laneRowHTML(byId.youtube);
 check("retired row says Retired, claims none, shows the reason",

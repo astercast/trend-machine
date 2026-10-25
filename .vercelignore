@@ -15,8 +15,15 @@ tests/
 skills/
 # the published copies live under data/v1/ (app.js tries v1 first);
 # the working store and its history stay unpublished
-data/trends.json
-data/velocity_history.json
 # NOT ignored on purpose: static/v1/trends.flat.js is the destination
 # of the /api/v1/trends.flat.js rewrite in vercel.json and a public
 # API contract, so it stays published.
+data/trends.json
+data/velocity_history.json
+data/velocity_archive.json
+data/platform_velocity_history.json
+data/lane_health.json
+# Live Board (2026-10-24 §11.5): the forecast ledger is a recorded
+# history file, not a deploy asset; launch-plan reads recorded
+# history and already treats a missing ledger as an empty one.
+data/forecast_ledger.json
