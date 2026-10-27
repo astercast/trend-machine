@@ -129,3 +129,23 @@
 @media (prefers-reduced-motion: reduce) {
   .lw-row, .lw-mover { transition: none; }
 }
+
+/* ---------- R303 (review-trend-1 item 4): badge contrast + CLS ---------- */
+/* "Working" was near-black text on the green fill (3.0:1); the badge
+   takes paper text on the same fill. "Found nothing" was the raw alarm
+   amber on cream (2.1:1); badge text and border take --alarm-deep. */
+.lw-badge.is-live { color: #FBF7EC; }
+.lw-badge.is-degraded { color: var(--alarm-deep); border-color: var(--alarm-deep); }
+.lw-badge.is-stale-skip { color: var(--alarm-deep); border-color: var(--alarm-deep); }
+/* CLS reserves: the summary, lanes and movers render from the wire
+   payload after first paint. Settled heights measured on the built
+   page at R303 (1440 / 390), rounded up; re-measure when the lane
+   count changes. */
+#lw-summary { min-block-size: 560px; }
+#lw-lanes-wrap { min-block-size: 3860px; }
+#lw-movers { min-block-size: 384px; }
+@media (max-width: 640px) {
+  #lw-summary { min-block-size: 1104px; }
+  #lw-lanes-wrap { min-block-size: 8873px; }
+  #lw-movers { min-block-size: 667px; }
+}

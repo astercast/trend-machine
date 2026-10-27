@@ -1,5 +1,6 @@
 {
   "generated_at": "2026-10-24T13:40:52.653670+00:00",
+  "rule": "Unfiltered feed: every board row is listed, single-source rows included and marked with confirmed=false. A topic is listed as a trend on the site only when two sources on two different sites back it.",
   "topics": [
     {
       "rank": 1,

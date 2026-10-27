@@ -395,3 +395,28 @@ html[data-age="stale"] .splash .board-rank::after { content: " as of " var(--aso
   .log-top h1 { line-height: calc(var(--unit) * 3); max-inline-size: 14ch; }
   .splash .board-title { line-height: calc(var(--unit) * 3); }
 }
+
+/* ---------- R303 (review-trend-1 items 2 + 4) ---------- */
+/* Step numerals: bill.css aliases --ink-ghost to the pale rule tan,
+   which put the section numerals at 1.35:1 on paper. On this sheet
+   they take --pencil (5.9:1), like the other quiet text. */
+.section-head h2 .sec-no { color: var(--pencil); }
+/* Heard-once banner (topic pages whose topic has no two witnesses). */
+.heard-once {
+  border: 1px solid var(--stamp); color: var(--stamp);
+  padding: .6rem .8rem; margin: 1rem 0 0; max-inline-size: 68ch;
+  font: 700 var(--fs-typed)/1.4 var(--font-typed); letter-spacing: .02em;
+}
+/* Formats CLS reserve: #fmt-main renders from its payload after first
+   paint. Settled heights measured at R303 (1440 / 390), rounded up. */
+#fmt-main { min-block-size: 4180px; }
+@media (max-width: 640px) { #fmt-main { min-block-size: 7610px; } }
+/* Phone header, deterministic (R303): at 390 the brand row fits the
+   kicker only in the fallback font; when the real faces land the
+   kicker wraps to its own row and the whole page drops a line
+   (How we check CLS 0.24 at 390). Under 640px the kicker takes its
+   own row from first paint, so the swap moves nothing. */
+@media (max-width: 640px) {
+  .site-head .kicker { order: 3; flex-basis: 100%; margin-left: 0; }
+  .head-nav { order: 4; }
+}

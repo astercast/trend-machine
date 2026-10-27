@@ -138,7 +138,7 @@ TOPIC_TMPL = """<!doctype html>
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="https://trend-machine-live.vercel.app/assets/og-card.png">
 <link rel="canonical" href="https://trend-machine-live.vercel.app/topics/{tid}.html">
-<script type="application/ld+json">{jsonld}</script>
+{robots}<script type="application/ld+json">{jsonld}</script>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -158,17 +158,17 @@ TOPIC_TMPL = """<!doctype html>
 <header class="site-head"><div class="head-inner">
 <a class="brand" href="../index.html" aria-label="Trend Machine home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Trend&nbsp;Machine</a>
 <nav class="head-nav" aria-label="Sections"><a href="../index.html#board" aria-current="true">The board</a><a href="../live-wire.html">The Wire</a><a href="../streamer-desk.html">Streamer Desk</a><a href="../formats.html">Formats</a><a href="../algorithms.html">How it works</a></nav>
-<span class="kicker">topic dossier</span>
+<span class="kicker">{headkicker}</span>
 </div></header>
 <main id="main" class="wrap">
 <nav aria-label="Breadcrumb" style="margin:20px 0 0"><a href="../index.html#board" style="font-size:13px">&larr; The board</a> <span aria-hidden="true">&middot;</span> <span class="crumb-here" aria-current="page">{title}</span></nav>
+{banner}
 <article class="topic-hero {tier}">
 <p class="kicker">{kicker}</p>
 <h1>{title}</h1>
 <p class="lede">{summary}</p>
 <p class="topic-facts" aria-label="Signal facts">
 <span class="tf"><span class="tf-k">Last seen</span> <span class="fresh {fcls}"><span class="dot{pulse}" aria-hidden="true"></span>{age}</span></span>
-<span class="tf"><span class="tf-k">Worth making</span> <span class="tf-num {ocls}">{opp}</span></span>
 <span class="tf"><span class="tf-k">Spreading</span> <span class="tf-num">{vel}</span></span>
 <span class="tf"><span class="tf-k">Platforms</span> <span class="tf-num">{nplat}</span></span>
 </p>
@@ -401,10 +401,20 @@ def build_topic(t, history_pts=None, plat_hist=None, ref=None):
     if t.get("last_seen"):
         _art["dateModified"] = t["last_seen"]
     jsonld = json.dumps(_art, ensure_ascii=False).replace("</", "<\\/")
+    # R303 (review-trend-1 item 2): the two-source rule decides what a
+    # trend is, on every surface. A topic with no two witnesses on two
+    # different sites (build_pulse's strict citation rule) is heard
+    # once: its page says so in plain words and is noindexed.
+    import build_pulse as _bp
+    heard_once = _bp.two_witnesses(t) is None
     return TOPIC_TMPL.format(
         title=esc(disp_title(t["title"])), desc=esc(disp_text(t["summary"][:150])),
         tid=esc(t["id"]), jsonld=jsonld,
-        kicker=esc(t.get("category", "trend")) + " · dossier",
+        robots=('<meta name="robots" content="noindex">\n' if heard_once else ""),
+        headkicker=("heard once" if heard_once else "topic dossier"),
+        banner=('<p class="heard-once" role="note">Heard once. Not listed as a trend.</p>\n'
+                if heard_once else ""),
+        kicker=esc(t.get("category", "trend")) + (" · heard once" if heard_once else " · dossier"),
         summary=esc(disp_text(t["summary"])), tier=tier, fcls=fcls, pulse=pulse, age=age,
         ocls=ocls, opp=opp, vel=vel, nplat=nplat, plats=plats, tchip=tchip, cats=cats,
         formats=formats + famchip, spark=spark, payload=payload,
@@ -1140,6 +1150,10 @@ def write_live_feeds(board):
     repo root so they deploy as /board.json and /feed.xml."""
     import email.utils
     feed = {"generated_at": board["generated_at"],
+            "rule": ("Unfiltered feed: every board row is listed, single-source "
+                     "rows included and marked with confirmed=false. A topic is "
+                     "listed as a trend on the site only when two sources on two "
+                     "different sites back it."),
             "topics": board["topics"]}
     with open(os.path.join(ROOT, "board.json"), "w") as f:
         json.dump(feed, f, indent=2, ensure_ascii=False)
@@ -1169,6 +1183,7 @@ def write_live_feeds(board):
            "<title>Trend Machine: what is rising right now, with sources</title>"
            "<link>%s</link>"
            "<description>The top 25 rising topics, with the sources that saw them. "
+           "Unfiltered feed: single-source rows are included and marked. "
            "Data generated %s.</description>%s</channel></rss>\n"
            % (base, board["generated_at"], items))
     with open(os.path.join(ROOT, "feed.xml"), "w") as f:
@@ -1452,6 +1467,26 @@ def normalize_index_jsonld():
     for el in ld.get("itemListElement", []):
         if el.get("name"):
             el["name"] = disp_title(el["name"])
+    # R303 (review-trend-1 item 2): the ItemList is rebuilt from the
+    # same two-source filtered list the page shows (build_pulse.pick),
+    # never from the opportunity ranking: a topic enters the structured
+    # data only when two sources on two different sites back it.
+    try:
+        import build_pulse as _bp
+        _data = _read_json(os.path.join("data", "v1", "trends.json")) or {}
+        _rows, _n = _bp.pick(_data.get("topics") or [])
+        if _rows:
+            ld = {"@context": "https://schema.org", "@type": "ItemList",
+                  "name": "Trend Machine board - topics backed by two sources on two sites",
+                  "numberOfItems": len(_rows),
+                  "itemListElement": [
+                      {"@type": "ListItem", "position": i + 1,
+                       "name": disp_title(t["title"]),
+                       "url": LIVE_BASE + "/topics/" + t["id"] + ".html"}
+                      for i, (t, w) in enumerate(_rows)]}
+            print(f"[build] index JSON-LD rebuilt from the two-source list ({len(_rows)} items)")
+    except Exception as e:
+        print(f"[build] index JSON-LD rebuild skipped: {e}")
     new = m.group(1) + json.dumps(ld, ensure_ascii=False) + m.group(3)
     page = page[:m.start()] + new + page[m.end():]
     with open(path, "w") as f:
@@ -1484,6 +1519,23 @@ def main():
     for t in topics:
         if t.get("verification") == "verified" and len(t.get("sources") or []) < 2:
             t["verification"] = "single-source"
+    # R303 (review-trend-1 item 2): the data feeds are labelled for what
+    # they are. trends.json is the unfiltered collector store; the
+    # two-source rule is applied by the surfaces that list trends.
+    _note = ("Unfiltered collector output. A topic is listed as a trend on "
+             "this site only when two sources on two different sites back "
+             "it (scripts/build_pulse.py: is_citation / two_witnesses).")
+    for _rel in (DATA, os.path.join(ROOT, "data", "v1", "trends.json")):
+        try:
+            with open(_rel) as _f:
+                _d = json.load(_f)
+            if _d.get("citations_note") != _note:
+                _d["citations_note"] = _note
+                with open(_rel, "w") as _f:
+                    json.dump(_d, _f, indent=2, ensure_ascii=False)
+                print(f"[build] citations_note stamped on {_rel}")
+        except Exception as _e:
+            print(f"[build] citations_note skipped for {_rel}: {_e}")
     # wave 9: format-family display names for dossier chips
     global _FAMILY_NAMES
     try:
@@ -2642,6 +2694,23 @@ def main():
     with open(os.path.join(ROOT, "llms-full.txt"), "w") as f:
         f.write("\n".join(full))
     print("[build] data/v1 + llms.txt + llms-full.txt done")
+    # R303: the v1 export above rewrites data/v1/trends.json from the
+    # store, dropping the citations_note stamped at load; re-stamp the
+    # exported file so the published feed carries its label.
+    try:
+        _rel = os.path.join(ROOT, "data", "v1", "trends.json")
+        with open(_rel) as _f:
+            _d = json.load(_f)
+        _note = ("Unfiltered collector output. A topic is listed as a trend on "
+                 "this site only when two sources on two different sites back "
+                 "it (scripts/build_pulse.py: is_citation / two_witnesses).")
+        if _d.get("citations_note") != _note:
+            _d["citations_note"] = _note
+            with open(_rel, "w") as _f:
+                json.dump(_d, _f, indent=2, ensure_ascii=False)
+            print("[build] citations_note re-stamped on data/v1/trends.json")
+    except Exception as _e:
+        print(f"[build] citations_note re-stamp skipped: {_e}")
 
 if __name__ == "__main__":
     main()

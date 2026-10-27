@@ -182,3 +182,20 @@ html[data-age="stale"] .status .dot { background: var(--heat); animation: none; 
   .lead-t a { transition: none; }
 }
 @media print { .menu, .status .dot { display: none; } }
+
+/* ---------- R303 (review-trend-1 items 3 + 5) ---------- */
+/* item 3: the fleet notice mounts inside the status strip, in this
+   reserved slot at the strip's right end. The slot holds its height
+   from first paint, so the notice appearing moves nothing. */
+.fleet-slot { margin-inline-start: auto; flex: none; display: inline-flex; align-items: center; min-block-size: 2rem; }
+.fleet-bar { display: inline-flex; gap: calc(var(--u) * 1.5); align-items: center; }
+.fleet-bar[hidden] { display: none; }
+.fleet-show { font: inherit; background: var(--ink); color: var(--paper); border: 0; padding: .3rem .7rem; min-block-size: 2rem; cursor: pointer; }
+html[data-age="stale"] .fleet-show { background: var(--paper); color: var(--ink); }
+/* item 5: phone header. The wordmark stands 44px, and the section
+   menu wraps instead of scrolling, so all five links (How we check
+   included) are on the page at phone widths. */
+@media (max-width: 40rem) {
+  .pulse-page .mark { display: inline-flex; align-items: center; min-block-size: 44px; }
+  .pulse-page .menu { flex-wrap: wrap; overflow-x: visible; }
+}

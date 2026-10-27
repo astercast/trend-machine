@@ -77,3 +77,31 @@
 @media (max-width: 760px) {
   .sd-strip { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ---------- R303 (review-trend-1 item 4): badge contrast + CLS ---------- */
+/* "Verified · multi-source" was near-black on the green fill (3.0:1);
+   paper text on the same fill. "Unverified" was the raw alarm amber
+   on cream (1.9:1); badge text and border take --alarm-deep. */
+.sd-badge.ok { color: #FBF7EC; }
+.sd-badge.warn { color: var(--alarm-deep); border-color: var(--alarm-deep); }
+/* CLS reserves: every desk section renders from its payload after
+   first paint. Settled heights measured on the built page at R303
+   (1440 / 390), rounded up; re-measure when the desk data changes. */
+#sd-summary { min-block-size: 108px; }
+#sd-streamers { min-block-size: 3670px; }
+#sd-drama { min-block-size: 2780px; }
+#sd-events { min-block-size: 2015px; }
+#sd-houses { min-block-size: 1535px; }
+#sd-unverified { min-block-size: 548px; }
+#sd-feeds { min-block-size: 412px; }
+#sd-updates { min-block-size: 1565px; }
+@media (max-width: 640px) {
+  #sd-summary { min-block-size: 186px; }
+  #sd-streamers { min-block-size: 5075px; }
+  #sd-drama { min-block-size: 5855px; }
+  #sd-events { min-block-size: 3210px; }
+  #sd-houses { min-block-size: 2850px; }
+  #sd-unverified { min-block-size: 1170px; }
+  #sd-feeds { min-block-size: 705px; }
+  #sd-updates { min-block-size: 2770px; }
+}

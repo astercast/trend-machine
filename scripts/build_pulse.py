@@ -38,9 +38,25 @@ def site(u):
 
 
 def is_citation(s):
+    """A witness is a page that exists because the thing is rising: a story,
+    a post, a video. Pages that exist either way are not witnesses
+    (R303, review-trend-1 item 1): search-results pages, app-store
+    listings, and bare Wikipedia article pages are all rejected."""
     u = s.get("url") or ""
-    return (u.startswith("http") and "trends.google.com" not in u
-            and "/rss" not in u and not re.search(r"\.(xml|rss|json)(\?|$)", u))
+    if not u.startswith("http") or "trends.google.com" in u:
+        return False
+    if "/rss" in u or re.search(r"\.(xml|rss|json)(\?|$)", u):
+        return False
+    p = urlparse(u)
+    host = p.netloc.lower().removeprefix("www.")
+    path = p.path.lower()
+    if "/search" in path or re.search(r"[?&]q=", u):
+        return False
+    if host in ("apps.apple.com", "itunes.apple.com", "play.google.com"):
+        return False
+    if host.endswith("wikipedia.org") and path.startswith("/wiki/"):
+        return False
+    return True
 
 
 def two_witnesses(t):
@@ -119,6 +135,7 @@ def build():
   <div class="status" id="data-ts" data-generated="%s" role="status">
     <span class="dot" aria-hidden="true"></span>
     <span class="status-text"><b id="status-word">Last check</b> <time datetime="%s">%s</time><span id="status-age"></span></span>
+    <span class="fleet-slot" id="fleet-slot"></span>
   </div>
   <h1 id="board-h">Rising right now.</h1>
   <p class="deck">What people are talking about and looking up, as it happens. Each line is backed by two sources you can open. Nothing here guesses what comes next.</p>

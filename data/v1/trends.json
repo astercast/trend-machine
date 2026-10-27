@@ -23111,5 +23111,6 @@
       "outlets": 0,
       "confirmed": false
     }
-  ]
+  ],
+  "citations_note": "Unfiltered collector output. A topic is listed as a trend on this site only when two sources on two different sites back it (scripts/build_pulse.py: is_citation / two_witnesses)."
 }
