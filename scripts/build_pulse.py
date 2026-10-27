@@ -363,6 +363,14 @@ def section(w):
 def pick(topics):
     a = assignment(topics)
     rows = [(t, a[t["id"]]) for t in _rank(topics) if t["id"] in a]
+    if len(rows) <= SHOWN:
+        # R305 (review-trend-4, Claude's call on the 7-vs-5 question):
+        # the diversity caps below were built for a board of hundreds;
+        # with few qualifying lines they hide true lines and leave the
+        # stated count reading over fewer rows than it names. Apply the
+        # caps only when more than SHOWN lines qualify; otherwise show
+        # every qualifying line.
+        return list(rows), len(rows)
     out, used = [], {}
     for t, w in rows:
         k = section(w)
