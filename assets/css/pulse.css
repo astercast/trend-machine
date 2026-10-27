@@ -1,0 +1,184 @@
+/* Trend Machine · "Sighting Log"
+   A sighting counts when two witnesses signed it. Same rule as a rare-bird record.
+   Loaded after bill.css, scoped to body.pulse-page. No framework, no build step. */
+
+/* ---------- 1. TOKENS ---------- */
+@property --p { syntax: "<number>"; inherits: false; initial-value: 0; }
+
+body.pulse-page {
+  color-scheme: light;
+  /* colour: one signal, one confirmation, everything else is paper and ink */
+  --paper:  #F5F2E9;  /* newsprint, a little warm so ink never glares. ink on it 16.2:1 */
+  --band:   #EAE5D6;  /* second paper, for the rare filled strip */
+  --ink:    #191815;  /* near black, never #000 */
+  --ink-2:  #55514A;  /* secondary text. 6.9:1 on paper */
+  --rule:   #CBC4B1;  /* hairlines only */
+  --heat:   #D9461F;  /* fills and ticks only: the one hot colour on the page */
+  --heat-t: #A8300D;  /* heat as text. 6.0:1 on paper */
+  --ok:     #1E6A47;  /* two witnesses agree. 6.1:1 on paper */
+  /* legacy names, so shared footer/skip styles from bill.css still resolve */
+  --pencil: var(--ink-2); --panel: var(--paper); --seen: var(--ok); --stamp: var(--heat-t);
+
+  /* type: Fraunces names things, Public Sans explains, Space Mono counts */
+  --f-name: "Fraunces", "Fraunces Fallback", Georgia, serif;
+  --f-read: "Public Sans", "Public Sans Fallback", "Helvetica Neue", Arial, sans-serif;
+  --f-count: "Space Mono", "Space Mono Fallback", ui-monospace, monospace;
+  /* fluid scale, 390px to 1440px, ratio about 1.333 */
+  --t-s:    clamp(.8125rem, .79rem + .1vw, .875rem);
+  --t-0:    clamp(1rem, .96rem + .2vw, 1.125rem);
+  --t-1:    clamp(1.25rem, 1.1rem + .7vw, 1.625rem);
+  --t-2:    clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  --t-3:    clamp(2.5rem, 1.5rem + 4.6vw, 5rem);
+  --t-hero: clamp(3.25rem, .6rem + 11.5vw, 10rem);
+
+  /* space: a 0.5rem grid. Sections are divided by rules, not by gaps */
+  --u: .5rem;
+  --gut: clamp(1rem, .4rem + 3vw, 3rem);
+  --max: 78rem;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dur: 520ms;
+
+  background: var(--paper);
+  background-image: none;
+  color: var(--ink);
+  font: 400 var(--t-0)/1.5 var(--f-read);
+  container-type: inline-size;
+}
+body.pulse-page::before { display: none; }
+body.pulse-page :focus-visible { outline: 3px solid var(--heat); outline-offset: 3px; }
+.pulse-page .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- 2. HEADER ---------- */
+.pulse-page .bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--u) calc(var(--u) * 4); max-width: var(--max); margin-inline: auto;
+  padding: calc(var(--u) * 2) var(--gut);
+}
+.pulse-page .mark {
+  display: inline-flex; align-items: center; gap: var(--u);
+  font: 600 var(--t-1)/1 var(--f-name); color: var(--ink); text-decoration: none;
+}
+.pulse-page .mark svg { color: var(--heat); flex: none; }
+.pulse-page .menu { display: flex; gap: calc(var(--u) * 3); overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+.pulse-page .menu a {
+  font: 600 var(--t-s)/1 var(--f-read); color: var(--ink-2); text-decoration: none; white-space: nowrap;
+  padding-block: calc(var(--u) * 1.25); border-bottom: 2px solid transparent;
+}
+.pulse-page .menu a:hover { color: var(--ink); border-color: var(--rule); }
+.pulse-page .menu a[aria-current] { color: var(--ink); border-color: var(--heat); }
+
+/* ---------- 3. STATUS STRIP ---------- */
+.pulse { max-width: var(--max); margin-inline: auto; padding-inline: var(--gut); }
+.status {
+  display: flex; align-items: center; gap: var(--u);
+  border-block: 1px solid var(--ink); padding-block: calc(var(--u) * 1.25);
+  font: 700 var(--t-s)/1.3 var(--f-count); letter-spacing: .02em;
+}
+.status .dot { width: .625rem; height: .625rem; background: var(--ok); border-radius: 50%; flex: none; animation: beat 2.4s ease-in-out infinite; }
+.status b { font-weight: 700; }
+.status time { font-weight: 400; }
+/* old data: the strip turns ink, full width, and says so first */
+html[data-age="stale"] .status {
+  background: var(--ink); color: var(--paper); border-color: var(--ink);
+  box-shadow: 0 0 0 100vmax var(--ink); clip-path: inset(0 -100vmax);
+}
+html[data-age="stale"] .status .dot { background: var(--heat); animation: none; }
+@keyframes beat { 50% { opacity: .35; } }
+
+/* ---------- 4. HERO ---------- */
+.pulse h1 {
+  font: 600 var(--t-hero)/.88 var(--f-name); letter-spacing: -.035em;
+  margin: calc(var(--u) * 5) 0 calc(var(--u) * 2); text-wrap: balance; max-width: 12ch;
+}
+.pulse h1 time { font-style: italic; font-weight: 400; }
+.deck { font-size: var(--t-1); line-height: 1.35; max-width: 30ch; margin: 0 0 calc(var(--u) * 6); color: var(--ink-2); text-wrap: pretty; }
+@container (min-width: 60rem) { .deck { margin-left: auto; } }
+
+/* ---------- 5. LEAD SIGHTING ---------- */
+.lead { border-top: 6px solid var(--ink); padding-block: calc(var(--u) * 2) calc(var(--u) * 5); }
+.lead-no { margin: 0; font: 700 var(--t-s)/1 var(--f-count); letter-spacing: .08em; text-transform: uppercase; color: var(--heat-t); }
+.lead-t { font: 600 var(--t-3)/1 var(--f-name); letter-spacing: -.025em; margin: calc(var(--u) * 2) 0 calc(var(--u) * 3); max-width: 20ch; text-wrap: balance; }
+.lead-t a { color: inherit; text-decoration: none; background: linear-gradient(var(--heat), var(--heat)) 0 100% / 0 .08em no-repeat; transition: background-size var(--dur) var(--ease); }
+.lead-t a:hover { background-size: 100% .08em; }
+.lead-foot { display: grid; gap: calc(var(--u) * 2) calc(var(--u) * 4); grid-template-columns: minmax(0, 1fr); align-items: end; }
+.seen { margin: 0; font: italic 400 var(--t-1)/1.2 var(--f-name); }
+@container (min-width: 52rem) { .lead-foot { grid-template-columns: auto 1fr auto; } .lead-foot .heat { justify-self: end; } }
+
+/* ---------- 6. WITNESSES ---------- */
+.wits { display: flex; flex-wrap: wrap; gap: var(--u); }
+.wit {
+  display: inline-flex; align-items: stretch; border: 1px solid var(--ink); color: var(--ink);
+  font: 600 var(--t-s)/1.2 var(--f-read); text-decoration: none; min-height: 2.25rem;
+  transition: background-color 160ms, color 160ms;
+}
+.wit-n { display: grid; place-items: center; min-width: 1.75rem; border-right: 1px solid var(--ink); font: 700 .75rem/1 var(--f-count); background: var(--band); }
+.wit { padding-right: calc(var(--u) * 1.25); align-items: center; gap: var(--u); }
+.wit-n { align-self: stretch; margin-right: 0; }
+.wit:hover { background: var(--ink); color: var(--paper); }
+.wit:hover .wit-n { background: var(--heat); color: var(--ink); }
+@media (pointer: coarse) { .wit { min-height: 2.75rem; } }
+
+/* ---------- 7. HEAT ---------- */
+.heat { display: inline-flex; align-items: baseline; gap: var(--u); }
+.heat b { font: 700 var(--t-2)/1 var(--f-count); letter-spacing: -.04em; }
+.lead .heat b { font-size: var(--t-3); }
+.heat i {
+  --p: var(--h); display: block; width: 5.5rem; height: .75rem; align-self: center;
+  background: linear-gradient(90deg, var(--heat) calc(var(--p) * 1%), var(--rule) 0);
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 .3125rem, transparent .3125rem .4375rem);
+          mask: repeating-linear-gradient(90deg, #000 0 .3125rem, transparent .3125rem .4375rem);
+}
+.lead .heat i { width: 8rem; height: 1rem; }
+@keyframes fill { from { --p: 0; } }
+.heat i { animation: fill 900ms var(--ease) both; }
+
+/* ---------- 8. LEDGER ---------- */
+.ledger { list-style: none; margin: 0; padding: 0; counter-reset: n 1; border-top: 1px solid var(--ink); }
+.line {
+  counter-increment: n; display: grid; gap: var(--u) calc(var(--u) * 3); align-items: center;
+  padding-block: calc(var(--u) * 2); border-bottom: 1px solid var(--rule);
+  grid-template-columns: minmax(0, 1fr) auto; position: relative;
+}
+.line::before { content: counter(n); position: absolute; left: 0; top: calc(var(--u) * 2.25); font: 700 var(--t-s)/1 var(--f-count); color: var(--ink-2); }
+.line-t { grid-column: 1 / -1; font: 600 var(--t-1)/1.15 var(--f-name); margin: 0; padding-left: 2.25rem; text-wrap: balance; }
+.line-t a { color: inherit; text-decoration: none; }
+.line-t a:hover { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .15em; text-decoration-color: var(--heat); }
+.line .heat b { font-size: var(--t-1); }
+.line .heat i { width: 4rem; }
+.line .wits { padding-left: 2.25rem; grid-column: 1 / -1; }
+.line .heat { grid-column: 1 / -1; padding-left: 2.25rem; }
+@container (min-width: 56rem) {
+  .line { grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 24rem) 9.5rem; }
+  .line::before { position: static; }
+  .line-t { grid-column: auto; padding-left: 0; }
+  .line .wits { padding-left: 0; grid-column: auto; }
+  .line .heat { justify-self: end; padding-left: 0; grid-column: auto; }
+}
+
+/* ---------- 9. THE RULE ---------- */
+.rule-note { font-size: var(--t-s); line-height: 1.55; max-width: 62ch; color: var(--ink-2); margin: calc(var(--u) * 3) 0 calc(var(--u) * 8); }
+.rule-note b { color: var(--ink); }
+.rule-note a { color: var(--ink); text-underline-offset: .15em; text-decoration-color: var(--heat); }
+
+/* ---------- 10. KEEP GOING ---------- */
+.more { max-width: var(--max); margin-inline: auto; padding: 0 var(--gut) calc(var(--u) * 8); }
+.more h2 { font: 600 var(--t-2)/1 var(--f-name); margin: 0 0 calc(var(--u) * 2); }
+.doors { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.doors a { display: flex; flex-direction: column; gap: 0 calc(var(--u) * 3); justify-content: space-between; align-items: baseline; padding-block: calc(var(--u) * 2); border-bottom: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
+@container (min-width: 40rem) { .doors a { flex-direction: row; justify-content: space-between; } }
+.doors b { font: 600 var(--t-1)/1.2 var(--f-name); }
+.doors span { color: var(--ink-2); font-size: var(--t-s); }
+.doors a:hover b { text-decoration: underline; text-decoration-color: var(--heat); text-underline-offset: .15em; }
+
+/* ---------- 11. MOTION ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .line, .lead { animation: rise var(--dur) var(--ease) both; }
+  .line { animation-delay: calc(var(--i, 0) * 40ms); }
+  @keyframes rise { from { opacity: 0; transform: translateY(.5rem); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .status .dot, .heat i, .line, .lead { animation: none !important; }
+  .lead-t a { transition: none; }
+}
+@media print { .menu, .status .dot { display: none; } }

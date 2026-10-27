@@ -476,6 +476,8 @@ def _fb_score(v):
 def _fb_region(page, name, inner):
     pat = re.compile(r"(<!--TMFB:%s:BEGIN-->).*?(<!--TMFB:%s:END-->)" % (name, name), re.S)
     if not pat.search(page):
+        if "<!--PULSE:BEGIN-->" in page:
+            return page   # the pulse homepage owns this region now
         print("[build] WARN home-fallback: marker %s missing in index.html" % name)
         return page
     return pat.sub(lambda m: m.group(1) + inner + m.group(2), page, count=1)
@@ -2643,3 +2645,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    import build_pulse          # homepage top: two linked sources per line
+    build_pulse.main()
