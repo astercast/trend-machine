@@ -420,3 +420,12 @@ html[data-age="stale"] .splash .board-rank::after { content: " as of " var(--aso
   .site-head .kicker { order: 3; flex-basis: 100%; margin-left: 0; }
   .head-nav { order: 4; }
 }
+/* R304 (review-trend-2 item 3): three small-heading spots still sat
+   in the plate grey / rule tan on the paper (3.1 : 1, and 1.35 : 1
+   for the movers heading) — under the line for text. They take the
+   pencil colour: 5.4 : 1 on --paper, 5.6 : 1 on --panel. The rule
+   tan stays a rule colour; it is simply no longer a text colour. */
+.movers-h { color: var(--pencil); }
+.dtable thead th { color: var(--pencil); }
+.fmt-card h3 { color: var(--pencil); }
+.lw-head { color: var(--pencil); }

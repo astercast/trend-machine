@@ -5,7 +5,7 @@
     {
       "rank": 1,
       "id": "premier-league-standings",
-      "title": "premier league standings",
+      "title": "Premier League Standings",
       "category": "news",
       "platforms": [
         "google"
@@ -47,7 +47,7 @@
     {
       "rank": 2,
       "id": "erling-haaland",
-      "title": "erling haaland",
+      "title": "Erling Haaland",
       "category": "news",
       "platforms": [
         "google"
@@ -89,7 +89,7 @@
     {
       "rank": 3,
       "id": "premier-league-table",
-      "title": "premier league table",
+      "title": "Premier League Table",
       "category": "news",
       "platforms": [
         "google"
@@ -131,7 +131,7 @@
     {
       "rank": 4,
       "id": "west-ham-vs-southampton",
-      "title": "west ham vs southampton",
+      "title": "West Ham vs Southampton",
       "category": "news",
       "platforms": [
         "google"
@@ -173,7 +173,7 @@
     {
       "rank": 5,
       "id": "como-vs",
-      "title": "como vs",
+      "title": "Como vs",
       "category": "news",
       "platforms": [
         "google"
@@ -215,7 +215,7 @@
     {
       "rank": 6,
       "id": "blackburn-rovers-vs-wrexham",
-      "title": "blackburn rovers vs wrexham",
+      "title": "Blackburn Rovers vs Wrexham",
       "category": "news",
       "platforms": [
         "google"
@@ -257,7 +257,7 @@
     {
       "rank": 7,
       "id": "coventry-vs-fulham",
-      "title": "coventry vs fulham",
+      "title": "Coventry vs Fulham",
       "category": "news",
       "platforms": [
         "google"
@@ -299,7 +299,7 @@
     {
       "rank": 8,
       "id": "cancer",
-      "title": "cancer",
+      "title": "Cancer",
       "category": "news",
       "platforms": [
         "google"
@@ -341,7 +341,7 @@
     {
       "rank": 9,
       "id": "matt-leinart",
-      "title": "matt leinart",
+      "title": "Matt Leinart",
       "category": "news",
       "platforms": [
         "google"
@@ -383,7 +383,7 @@
     {
       "rank": 10,
       "id": "arsenal-everton",
-      "title": "arsenal - everton",
+      "title": "Arsenal - Everton",
       "category": "news",
       "platforms": [
         "google"

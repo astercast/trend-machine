@@ -45,6 +45,15 @@ def _strip_uplift(s):
     return re.sub(r"[\s\u00b7]+$", "", s)
 
 
+def _display_norm(s):
+    """The shared display core: dash grammar (rotation 21) plus the
+    uplift strip, applied to titles and text alike."""
+    s = str(s or "")
+    s = re.sub(r"\s+[\u2014\u2013]\s+", ", ", s)
+    s = s.replace("\u2014", "-").replace("\u2013", "-")
+    return _strip_uplift(s)
+
+
 def disp_title(s):
     """Display normalization (rotation 21, parent ruling): a tracked
     title is a third-party name, stored byte-true in data/ and never
@@ -52,18 +61,21 @@ def disp_title(s):
     punctuation that fits the title's own grammar: a spaced em or en
     dash becomes a comma, an unspaced dash (range or compound) becomes
     a plain hyphen. Authored copy is dash-free at the source already;
-    this function is only ever applied to title positions."""
-    s = str(s or "")
-    s = re.sub(r"\s+[\u2014\u2013]\s+", ", ", s)
-    s = s.replace("\u2014", "-").replace("\u2013", "-")
-    return _strip_uplift(s)
+    this function is only ever applied to title positions.
+    R304 (review-trend-2 item 4): title positions also take the one
+    casing rule, build_pulse.case_title, so a title stored
+    all-lowercase shows title-cased on the topic pages, the board
+    and the feed exactly as it does on the home lines."""
+    import build_pulse as _bp
+    return _bp.case_title(_display_norm(s))
 
 
 def disp_text(s):
     """Display normalization for any data-carried text (Release 188):
     descriptions, angles, hooks and names render dash-free exactly as
-    titles do. The stored record is never rewritten."""
-    return disp_title(s)
+    titles do. The stored record is never rewritten. Text positions
+    keep their stored case: casing is a title-position rule."""
+    return _display_norm(s)
 
 
 def esc(s):
@@ -176,30 +188,8 @@ TOPIC_TMPL = """<!doctype html>
 {spark}
 {stale_note}
 </article>
-<section aria-labelledby="why"><div class="section-head"><h2 id="why"><span class="sec-no">01</span>Why it's trending</h2></div>
-<p style="max-width:68ch;font-size:1.05rem">{summary_long}</p>
-<h3 style="font-size:15px;margin-top:22px">Sources</h3>
-<ul class="src-list">{sources}</ul>
-</section>
-<section aria-labelledby="angles"><div class="section-head"><h2 id="angles"><span class="sec-no">02</span>Content angles</h2>
-<div class="angles-tools"><span class="kicker">topic in &rarr; video out</span>
-<button type="button" class="btn remix-btn" id="remix-btn" aria-describedby="remix-status" aria-label="Remix this topic: copy angles, hook lines, hashtags and best platforms as plain text">⧉ Remix this</button>
-<a class="btn" href="../launch-plan.html?topic={tid}">🗓 7-day battle plan</a>
-<span class="copy-status" id="remix-status" role="status" aria-live="polite"></span>
-</div></div>
-{angles}
-</section>
-<section aria-labelledby="hooks"><div class="section-head"><h2 id="hooks"><span class="sec-no">03</span>Hook lines</h2></div>
-{hooks}
-</section>
-<section aria-labelledby="watch"><div class="section-head"><h2 id="watch"><span class="sec-no">04</span>Who to watch</h2></div>
-<p style="color:var(--ink-dim)">{watch}</p>
-</section>
-<aside class="guide-cta" aria-labelledby="gcta">
-<h3 id="gcta" style="margin-top:0">Turn this trend into a series with the Creator Growth Empire guide</h3>
-<p style="color:var(--ink-dim);font-size:14px">Playbooks for turning a trend into a content system:</p>
-<ul>{guide}</ul>
-</aside>
+{sections}
+{guide_block}
 </main>
 <footer class="site-foot"><div class="wrap foot-grid">
 <div><strong style="color:var(--ink)">Trend Machine</strong><br><span style="font-size:13px">Live trend tracking, with the evidence on every row.</span></div>
@@ -407,6 +397,44 @@ def build_topic(t, history_pts=None, plat_hist=None, ref=None):
     # once: its page says so in plain words and is noindexed.
     import build_pulse as _bp
     heard_once = _bp.two_witnesses(t) is None
+    # R304 (review-trend-2 item 2): a heard-once page must not talk as
+    # if it were a trend. Its first section is "What was heard", and
+    # the trend-treatment calls to action (the angles section with
+    # its Remix button and battle-plan link, and the series panel)
+    # are not built for it at all. Sections renumber in order.
+    _secs = []
+    _no = [0]
+    def _sec(sid, heading, inner):
+        _no[0] += 1
+        return ('<section aria-labelledby="%s"><div class="section-head">'
+                '<h2 id="%s"><span class="sec-no">%02d</span>%s</h2></div>\n'
+                '%s\n</section>' % (sid, sid, _no[0], heading, inner))
+    _secs.append(_sec(
+        "why", "What was heard" if heard_once else "Why it's trending",
+        '<p style="max-width:68ch;font-size:1.05rem">%s</p>\n'
+        '<h3 style="font-size:15px;margin-top:22px">Sources</h3>\n'
+        '<ul class="src-list">%s</ul>'
+        % (esc(disp_text(t["summary"])), sources)))
+    if not heard_once:
+        _secs.append(
+            '<section aria-labelledby="angles"><div class="section-head">'
+            '<h2 id="angles"><span class="sec-no">%02d</span>Content angles</h2>\n'
+            '<div class="angles-tools"><span class="kicker">topic in &rarr; video out</span>\n'
+            '<button type="button" class="btn remix-btn" id="remix-btn" aria-describedby="remix-status" aria-label="Remix this topic: copy angles, hook lines, hashtags and best platforms as plain text">⧉ Remix this</button>\n'
+            '<a class="btn" href="../launch-plan.html?topic=%s">🗓 7-day battle plan</a>\n'
+            '<span class="copy-status" id="remix-status" role="status" aria-live="polite"></span>\n'
+            '</div></div>\n%s\n</section>'
+            % (_no[0] + 1, esc(t["id"]), angles))
+        _no[0] += 1
+    _secs.append(_sec("hooks", "Hook lines", hooks))
+    _secs.append(_sec("watch", "Who to watch",
+                      '<p style="color:var(--ink-dim)">%s</p>' % watch))
+    sections = "\n".join(_secs)
+    guide_block = ("" if heard_once else
+                   '<aside class="guide-cta" aria-labelledby="gcta">\n'
+                   '<h3 id="gcta" style="margin-top:0">Turn this trend into a series with the Creator Growth Empire guide</h3>\n'
+                   '<p style="color:var(--ink-dim);font-size:14px">Playbooks for turning a trend into a content system:</p>\n'
+                   '<ul>%s</ul>\n</aside>' % guide)
     return TOPIC_TMPL.format(
         title=esc(disp_title(t["title"])), desc=esc(disp_text(t["summary"][:150])),
         tid=esc(t["id"]), jsonld=jsonld,
@@ -421,6 +449,7 @@ def build_topic(t, history_pts=None, plat_hist=None, ref=None):
         tags=tags,
         stale_note=stale_note, summary_long=esc(disp_text(t["summary"])),
         sources=sources, angles=angles, hooks=hooks, watch=watch,
+        sections=sections, guide_block=guide_block,
         guide=guide, ts=esc(t.get("last_seen", "")))
 
 # ---------------------------------------------------------------------------
@@ -966,7 +995,7 @@ def build_board(topics, merged, generated_at, history=None):
     top25 = []
     for i, t in enumerate(sorted(live, key=by_score)[:25]):
         top25.append({
-            "rank": i + 1, "id": t["id"], "title": t.get("title"),
+            "rank": i + 1, "id": t["id"], "title": disp_title(t.get("title")),
             "category": t.get("category"),
             "platforms": t.get("platforms") or [],
             "opportunity_score": t.get("opportunity_score") or 0,

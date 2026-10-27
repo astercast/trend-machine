@@ -5,16 +5,16 @@ Machine-readable: data/v1/trends.json (sort by opportunity_score desc).
 Generated: 2026-10-24T13:40:52.653670+00:00 · 408 topics.
 
 ## Hottest right now
-- [premier league standings](topics/premier-league-standings.html) (opportunity 38, velocity 95)
-- [erling haaland](topics/erling-haaland.html) (opportunity 38, velocity 95)
-- [premier league table](topics/premier-league-table.html) (opportunity 38, velocity 95)
-- [west ham vs southampton](topics/west-ham-vs-southampton.html) (opportunity 38, velocity 95)
-- [como vs](topics/como-vs.html) (opportunity 38, velocity 95)
-- [blackburn rovers vs wrexham](topics/blackburn-rovers-vs-wrexham.html) (opportunity 38, velocity 95)
-- [coventry vs fulham](topics/coventry-vs-fulham.html) (opportunity 38, velocity 95)
-- [cancer](topics/cancer.html) (opportunity 38, velocity 95)
-- [matt leinart](topics/matt-leinart.html) (opportunity 38, velocity 95)
-- [arsenal - everton](topics/arsenal-everton.html) (opportunity 38, velocity 95)
+- [Premier League Standings](topics/premier-league-standings.html) (opportunity 38, velocity 95)
+- [Erling Haaland](topics/erling-haaland.html) (opportunity 38, velocity 95)
+- [Premier League Table](topics/premier-league-table.html) (opportunity 38, velocity 95)
+- [West Ham vs Southampton](topics/west-ham-vs-southampton.html) (opportunity 38, velocity 95)
+- [Como vs](topics/como-vs.html) (opportunity 38, velocity 95)
+- [Blackburn Rovers vs Wrexham](topics/blackburn-rovers-vs-wrexham.html) (opportunity 38, velocity 95)
+- [Coventry vs Fulham](topics/coventry-vs-fulham.html) (opportunity 38, velocity 95)
+- [Cancer](topics/cancer.html) (opportunity 38, velocity 95)
+- [Matt Leinart](topics/matt-leinart.html) (opportunity 38, velocity 95)
+- [Arsenal - Everton](topics/arsenal-everton.html) (opportunity 38, velocity 95)
 
 ## Categories
 beauty, culture, entertainment, food, gaming, health, meme, music, news, product, sports, streaming, tech

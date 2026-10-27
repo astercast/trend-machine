@@ -5,15 +5,21 @@ between <!--PULSE:BEGIN--> and <!--PULSE:END-->.
 Rules this file enforces, in code:
   1. A trend is shown only if TWO links on TWO different sites back it.
      Feed addresses (rss, xml, trends.google.com) are not citations.
+     A link may back at most ONE topic, evergreen roundup pages are
+     not citations, and a page only witnesses a topic when the page
+     itself names that topic and carries a date (R304, review-trend-2
+     item 1: the check is a real fetch, one attempt per candidate,
+     cached for a week in hidden_files/witness-checks.json).
   2. Nothing here forecasts. It reads what is in data/v1/trends.json now.
   3. No more than 2 stories from the same section of one site, so one
      football round cannot fill the page.
 Run after build_site.py:  python3 scripts/build_pulse.py
 """
-import json, os, re, sys
-from datetime import datetime, timezone
-from html import escape
+import json, os, re, sys, threading
+from datetime import datetime, timedelta, timezone
+from html import escape, unescape
 from urllib.parse import urlparse
+from urllib.request import Request, urlopen
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "v1", "trends.json")
@@ -37,11 +43,25 @@ def site(u):
     return ".".join(p[-3:] if len(p) > 2 and p[-2] in ("co", "com", "org", "gov") else p[-2:])
 
 
+def is_roundup(u):
+    """Evergreen roundup pages are not witnesses (R304, review-trend-2
+    item 1): a "TikTok trends" listicle exists whether or not any one
+    thing is rising, and it cannot witness two different topics at
+    once. The rejection is by path shape, not by naming sites: any
+    segment that is a trends index (tiktok-trends, october-tiktok-
+    trends, trends, whats-trending, ...) disqualifies the page."""
+    segs = [q for q in urlparse(u).path.lower().split("/") if q]
+    return any(re.search(r"(?:^|-)trends(?:-|$)", q) or "whats-trending" in q
+               or "what-is-trending" in q or q.startswith("trending-")
+               for q in segs)
+
+
 def is_citation(s):
     """A witness is a page that exists because the thing is rising: a story,
     a post, a video. Pages that exist either way are not witnesses
     (R303, review-trend-1 item 1): search-results pages, app-store
-    listings, and bare Wikipedia article pages are all rejected."""
+    listings, and bare Wikipedia article pages are all rejected.
+    R304 adds evergreen roundup pages (see is_roundup)."""
     u = s.get("url") or ""
     if not u.startswith("http") or "trends.google.com" in u:
         return False
@@ -56,15 +76,206 @@ def is_citation(s):
         return False
     if host.endswith("wikipedia.org") and path.startswith("/wiki/"):
         return False
+    if is_roundup(u):
+        return False
     return True
 
 
-def two_witnesses(t):
+# --- R304 (review-trend-2 item 1): a witness must be specific. -------
+# Opening the page is the only honest way to know it names the topic,
+# so the builder fetches each candidate once and caches what it found
+# (title, opening text, whether a date is carried) for a week. A page
+# that cannot be opened cannot witness: the home page promises two
+# sources that open.
+
+CACHE = os.path.join(ROOT, "hidden_files", "witness-checks.json")
+CACHE_DAYS = 7
+_cache = None
+_cache_dirty = False
+_cache_lock = threading.Lock()
+
+_MONTHS = ("January|February|March|April|May|June|July|August|"
+           "September|October|November|December")
+_ABBR = "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec"
+_DATE_RES = [re.compile(p) for p in (
+    r'"datePublished"\s*:\s*"\d{4}-\d{2}-\d{2}',
+    r'article:published_time"\s+content="\d{4}-\d{2}-\d{2}',
+    r'<time[^>]+datetime="\d{4}-\d{2}-\d{2}',
+    r"\b(?:%s)\s+\d{1,2},?\s+\d{4}\b" % _MONTHS,
+    r"\b\d{1,2}\s+(?:%s)\s+\d{4}\b" % _MONTHS,
+    r"\b(?:%s)\.?\s+\d{1,2},?\s+\d{4}\b" % _ABBR,
+    r"\b\d{4}-\d{2}-\d{2}\b")]
+
+_STOP = frozenset(
+    "the a an and or of to in on for with vs v is are was were as at by "
+    "from after over under about into its it this that these those you "
+    "your how why what when who will can could has have had not no but "
+    "if then than so such more most new".split())
+
+
+def _tokens(text):
+    return [w for w in (x.strip("'") for x in
+                        re.findall(r"[a-z0-9][a-z0-9']*", (text or "").lower()))
+            if len(w) > 2 and w not in _STOP]
+
+
+def _load_cache():
+    global _cache
+    if _cache is None:
+        try:
+            _cache = json.load(open(CACHE))
+        except Exception:
+            _cache = {}
+    return _cache
+
+
+def _save_cache():
+    global _cache_dirty
+    if _cache_dirty and _cache is not None:
+        try:
+            os.makedirs(os.path.dirname(CACHE), exist_ok=True)
+            with open(CACHE, "w") as f:
+                json.dump(_cache, f, ensure_ascii=False)
+            _cache_dirty = False
+        except Exception:
+            pass
+
+
+def _fresh(rec):
+    try:
+        age = datetime.now(timezone.utc) - datetime.fromisoformat(rec["at"])
+        return age < timedelta(days=CACHE_DAYS)
+    except Exception:
+        return False
+
+
+def _fetch_record(url):
+    """One standard attempt at opening a candidate witness page.
+    Returns {ok, title, text, has_date}; every failure is ok=False,
+    recorded as such, and never retried inside a build."""
+    cache = _load_cache()
+    rec = cache.get(url)
+    if rec and _fresh(rec):
+        return rec
+    rec = {"at": datetime.now(timezone.utc).isoformat(), "ok": False,
+           "title": "", "text": "", "has_date": False}
+    try:
+        req = Request(url, headers={
+            "User-Agent": ("Mozilla/5.0 (X11; Linux x86_64) "
+                           "AppleWebKit/537.36 (KHTML, like Gecko) "
+                           "Chrome/124.0 Safari/537.36"),
+            "Accept": "text/html,application/xhtml+xml"})
+        with urlopen(req, timeout=10) as r:
+            raw = r.read(400_000).decode("utf-8", "ignore")
+        m = re.search(r"<title[^>]*>(.*?)</title>", raw, re.S | re.I)
+        title = unescape(re.sub(r"\s+", " ", m.group(1))).strip() if m else ""
+        metas = " ".join(unescape(x) for x in re.findall(
+            r'<meta[^>]+(?:property="og:(?:title|description)"'
+            r'|name="description")[^>]+content="([^"]*)"', raw, re.I))
+        body = re.sub(r"<(script|style|noscript)[^>]*>.*?</\1>", " ", raw,
+                      flags=re.S | re.I)
+        body = re.sub(r"<[^>]+>", " ", body)
+        text = unescape(re.sub(r"\s+", " ", body)).strip()
+        rec = {"at": rec["at"], "ok": True, "title": title,
+               "text": (metas + " " + text)[:4000],
+               "has_date": any(p.search(raw) or p.search(text)
+                               for p in _DATE_RES)}
+    except Exception:
+        pass
+    global _cache_dirty
+    with _cache_lock:
+        cache[url] = rec
+        _cache_dirty = True
+    return rec
+
+
+def _warm_cache(topics):
+    """Open every candidate witness page once, in parallel, before
+    the assignment pass, so the pass itself is local arithmetic and
+    a build never waits on the network topic by topic. One attempt
+    per URL, exactly as the rule states; the results are cached."""
+    from concurrent.futures import ThreadPoolExecutor
+    cache = _load_cache()
+    urls = {s["url"] for t in topics for s in (t.get("sources") or [])
+            if is_citation(s)}
+    todo = [u for u in urls if not (cache.get(u) and _fresh(cache[u]))]
+    if todo:
+        with ThreadPoolExecutor(max_workers=10) as ex:
+            list(ex.map(_fetch_record, todo))
+        _save_cache()
+    return len(urls), len(todo)
+
+
+def witness_specific(t, s):
+    """The page itself must name the topic and carry a date. Naming:
+    at least three fifths of the topic title's real words (and at
+    least one) appear in the page's title or opening text."""
+    rec = _fetch_record(s.get("url") or "")
+    if not rec.get("ok") or not rec.get("has_date"):
+        return False
+    need = _tokens(t.get("title"))
+    if not need:
+        return False
+    have = set(_tokens(rec.get("title") + " " + rec.get("text")))
+    hit = sum(1 for w in need if w in have)
+    return hit >= max(1, -(-len(need) * 3 // 5))
+
+
+def _rank(topics):
+    return sorted(topics, key=lambda t: (-(t.get("strength") or 0),
+                                         -(t.get("velocity") or 0),
+                                         t.get("last_seen") or ""))
+
+
+def _candidates(t, used_urls):
+    """A topic's witnesses under the full rule: citations only, no
+    roundups, specific to this topic, on two different sites, and no
+    URL that already backs another topic (R304: one URL, one topic)."""
     seen = {}
-    for s in sorted(t.get("sources") or [], key=lambda s: s.get("seen") or "", reverse=True):
-        if is_citation(s):
-            seen.setdefault(site(s["url"]), s)
-    return list(seen.items())[:2] if len(seen) >= 2 else None
+    for s in sorted(t.get("sources") or [], key=lambda s: s.get("seen") or "",
+                    reverse=True):
+        if not is_citation(s) or s["url"] in used_urls:
+            continue
+        h = site(s["url"])
+        if h in seen:
+            continue
+        if not witness_specific(t, s):
+            continue
+        seen[h] = s
+        if len(seen) == 2:
+            break
+    return list(seen.items()) if len(seen) == 2 else None
+
+
+_ASSIGN = None
+
+
+def assignment(topics=None):
+    """{topic id: witnesses} for the whole board, computed once per
+    build in board order so URL uniqueness holds across topics, and
+    shared by the home page, the topic pages and the structured data:
+    every surface applies the same rule to the same assignment."""
+    global _ASSIGN
+    if _ASSIGN is None:
+        if topics is None:
+            topics = json.load(open(DATA))["topics"]
+        _warm_cache(topics)
+        used, out = set(), {}
+        for t in _rank(topics):
+            w = _candidates(t, used)
+            if w:
+                out[t["id"]] = w
+                used.update(s["url"] for _, s in w)
+        _ASSIGN = out
+        _save_cache()
+    return _ASSIGN
+
+
+def two_witnesses(t):
+    a = assignment()
+    if t.get("id") in a:
+        return a[t["id"]]
+    return _candidates(t, set())
 
 
 def label(host):
@@ -77,13 +288,8 @@ def section(w):
 
 
 def pick(topics):
-    rows = []
-    for t in topics:
-        w = two_witnesses(t)
-        if w:
-            rows.append((t, w))
-    rows.sort(key=lambda r: (-(r[0].get("strength") or 0), -(r[0].get("velocity") or 0),
-                             r[0].get("last_seen") or ""), reverse=False)
+    a = assignment(topics)
+    rows = [(t, a[t["id"]]) for t in _rank(topics) if t["id"] in a]
     out, used = [], {}
     for t, w in rows:
         k = section(w)
@@ -115,12 +321,22 @@ def heat(v):
             '<b>%d</b><i aria-hidden="true"></i></span>' % (v, v, v))
 
 
-def title_of(t):
-    x = re.sub(r"\s*\((Exclusive|Video|Opinion)\)\s*$", "", t["title"]).strip()
+def case_title(x):
+    """The one title-casing rule for every surface (R304,
+    review-trend-2 item 4): a title stored all-lowercase is shown
+    title-cased, the same on the home lines, the topic pages, the
+    board and the feed. build_site.py's disp_title calls this too,
+    so no surface can drift from another."""
     if x == x.lower():                      # "premier league table" -> "Premier League Table"
         x = " ".join(w if w in ("vs", "v", "of", "the", "and") else w.capitalize() for w in x.split())
-        x = x[0].upper() + x[1:]
-    return escape(x)
+        if x:
+            x = x[0].upper() + x[1:]
+    return x
+
+
+def title_of(t):
+    x = re.sub(r"\s*\((Exclusive|Video|Opinion)\)\s*$", "", t["title"]).strip()
+    return escape(case_title(x))
 
 
 def build():
@@ -152,13 +368,13 @@ def build():
 ''' % (escape(data["generated_at"], True), escape(data["generated_at"], True), gen_txt,
        escape(lt["id"]), title_of(lt), escape(label(lw[0][0])), escape(label(lw[1][0])),
        wit(1, *lw[0]), wit(2, *lw[1]), heat(lt.get("velocity"))))
-    out.append('  <ol class="ledger" start="2" aria-label="Next nine, same rule">')
+    out.append('  <ol class="ledger" start="2" aria-label="The rest of the board, same rule">')
     for i, (t, w) in enumerate(rest):
         out.append('''    <li class="line" style="--i:%d"><h3 class="line-t"><a href="topics/%s.html">%s</a></h3>
       <div class="wits">%s%s</div>%s</li>''' % (i, escape(t["id"]), title_of(t), wit(1, *w[0]), wit(2, *w[1]), heat(t.get("velocity"))))
     out.append('  </ol>')
     out.append('''  <p class="rule-note"><b>Heat</b> is how fast people are picking something up, out of 100. It is not a prediction.
-    <b>%d</b> of %d topics we track have two sources that open. The other %d are heard once, so we do not list them.
+    <b>%d</b> of %d topics we track have two sources on two different sites that open, name the topic and carry a date. The other %d are heard once, so we do not list them.
     <a href="algorithms.html">How we check</a></p>
 </section>''' % (n_ok, n_all, n_all - n_ok))
     return "\n".join(out)
