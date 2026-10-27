@@ -402,6 +402,10 @@ def build_topic(t, history_pts=None, plat_hist=None, ref=None):
     # the trend-treatment calls to action (the angles section with
     # its Remix button and battle-plan link, and the series panel)
     # are not built for it at all. Sections renumber in order.
+    # R305 (review-trend-3 item 2): the same rule covers the "Hook
+    # lines" and "Who to watch" sections — hook lines are content-
+    # making suggestions, which is the trend treatment too — so they
+    # are built for listed topics only, exactly like the angles.
     _secs = []
     _no = [0]
     def _sec(sid, heading, inner):
@@ -426,9 +430,10 @@ def build_topic(t, history_pts=None, plat_hist=None, ref=None):
             '</div></div>\n%s\n</section>'
             % (_no[0] + 1, esc(t["id"]), angles))
         _no[0] += 1
-    _secs.append(_sec("hooks", "Hook lines", hooks))
-    _secs.append(_sec("watch", "Who to watch",
-                      '<p style="color:var(--ink-dim)">%s</p>' % watch))
+    if not heard_once:
+        _secs.append(_sec("hooks", "Hook lines", hooks))
+        _secs.append(_sec("watch", "Who to watch",
+                          '<p style="color:var(--ink-dim)">%s</p>' % watch))
     sections = "\n".join(_secs)
     guide_block = ("" if heard_once else
                    '<aside class="guide-cta" aria-labelledby="gcta">\n'

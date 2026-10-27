@@ -7,16 +7,21 @@ Rules this file enforces, in code:
      Feed addresses (rss, xml, trends.google.com) are not citations.
      A link may back at most ONE topic, evergreen roundup pages are
      not citations, and a page only witnesses a topic when the page
-     itself names that topic and carries a date (R304, review-trend-2
-     item 1: the check is a real fetch, one attempt per candidate,
-     cached for a week in hidden_files/witness-checks.json).
+     itself names that topic and is fresh (R304, review-trend-2 item 1:
+     the check is a real fetch, one attempt per candidate, cached for
+     a week in hidden_files/witness-checks.json; R305, review-trend-3
+     item 1: freshness means a parsed publication date within 14 days
+     of the board's generated_at, or the source's own seen stamp
+     within 48 hours of it — a page that merely carries some date
+     somewhere no longer witnesses, and a statistics or market-size
+     roundup title never does).
   2. Nothing here forecasts. It reads what is in data/v1/trends.json now.
   3. No more than 2 stories from the same section of one site, so one
      football round cannot fill the page.
 Run after build_site.py:  python3 scripts/build_pulse.py
 """
 import json, os, re, sys, threading
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from html import escape, unescape
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
@@ -84,7 +89,8 @@ def is_citation(s):
 # --- R304 (review-trend-2 item 1): a witness must be specific. -------
 # Opening the page is the only honest way to know it names the topic,
 # so the builder fetches each candidate once and caches what it found
-# (title, opening text, whether a date is carried) for a week. A page
+# (title, opening text, and — R305 — the parsed publication date, so
+# the freshness rule is auditable from the cache) for a week. A page
 # that cannot be opened cannot witness: the home page promises two
 # sources that open.
 
@@ -94,17 +100,50 @@ _cache = None
 _cache_dirty = False
 _cache_lock = threading.Lock()
 
-_MONTHS = ("January|February|March|April|May|June|July|August|"
-           "September|October|November|December")
-_ABBR = "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec"
-_DATE_RES = [re.compile(p) for p in (
-    r'"datePublished"\s*:\s*"\d{4}-\d{2}-\d{2}',
-    r'article:published_time"\s+content="\d{4}-\d{2}-\d{2}',
-    r'<time[^>]+datetime="\d{4}-\d{2}-\d{2}',
-    r"\b(?:%s)\s+\d{1,2},?\s+\d{4}\b" % _MONTHS,
-    r"\b\d{1,2}\s+(?:%s)\s+\d{4}\b" % _MONTHS,
-    r"\b(?:%s)\.?\s+\d{1,2},?\s+\d{4}\b" % _ABBR,
-    r"\b\d{4}-\d{2}-\d{2}\b")]
+# R305 (review-trend-3 item 1): the witness check needs the page's
+# publication date itself, parsed and stored, not a boolean "some
+# date exists somewhere". Only structured metadata counts — JSON-LD
+# datePublished, the article:published_time meta, an itemprop
+# datePublished meta, or a <time datetime> stamp. Visible-text dates
+# are never used: page chrome carries today's date, which would make
+# every stale page look fresh.
+_PUBDATE_RES = [re.compile(p) for p in (
+    r'"datePublished"\s*:\s*"(\d{4})-(\d{2})-(\d{2})',
+    r'article:published_time"\s+content="(\d{4})-(\d{2})-(\d{2})',
+    r'itemprop="datePublished"[^>]+content="(\d{4})-(\d{2})-(\d{2})',
+    r'<time[^>]+datetime="(\d{4})-(\d{2})-(\d{2})')]
+
+FRESH_DAYS = 14        # published within 14 days of the board
+SEEN_HOURS = 48        # or the heartbeat saw the source within 48 hours
+_BAD_TITLE = ("statistics", "market size")
+
+
+def _parse_pub_date(raw):
+    """The page's stated publication date (ISO date or None), from
+    its structured metadata only, first match in priority order."""
+    for p in _PUBDATE_RES:
+        m = p.search(raw)
+        if m:
+            try:
+                return date(int(m.group(1)), int(m.group(2)),
+                            int(m.group(3))).isoformat()
+            except ValueError:
+                continue
+    return None
+
+
+_GEN = None
+
+
+def _generated_at():
+    """The board's own timestamp from data/v1/trends.json: freshness
+    is measured against the board, not against whenever a build
+    happens to run."""
+    global _GEN
+    if _GEN is None:
+        raw = json.load(open(DATA))["generated_at"]
+        _GEN = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    return _GEN
 
 _STOP = frozenset(
     "the a an and or of to in on for with vs v is are was were as at by "
@@ -142,6 +181,11 @@ def _save_cache():
 
 
 def _fresh(rec):
+    # Records written before R305 carry no parsed publication date,
+    # so they cannot answer the freshness question: they count as
+    # stale once and are re-fetched under the new parser.
+    if "pub_date" not in rec:
+        return False
     try:
         age = datetime.now(timezone.utc) - datetime.fromisoformat(rec["at"])
         return age < timedelta(days=CACHE_DAYS)
@@ -151,14 +195,16 @@ def _fresh(rec):
 
 def _fetch_record(url):
     """One standard attempt at opening a candidate witness page.
-    Returns {ok, title, text, has_date}; every failure is ok=False,
-    recorded as such, and never retried inside a build."""
+    Returns {ok, title, text, has_date, pub_date}; pub_date is the
+    parsed publication date (ISO date or None) and has_date mirrors
+    it. Every failure is ok=False, recorded as such, and never
+    retried inside a build."""
     cache = _load_cache()
     rec = cache.get(url)
     if rec and _fresh(rec):
         return rec
     rec = {"at": datetime.now(timezone.utc).isoformat(), "ok": False,
-           "title": "", "text": "", "has_date": False}
+           "title": "", "text": "", "has_date": False, "pub_date": None}
     try:
         req = Request(url, headers={
             "User-Agent": ("Mozilla/5.0 (X11; Linux x86_64) "
@@ -176,10 +222,10 @@ def _fetch_record(url):
                       flags=re.S | re.I)
         body = re.sub(r"<[^>]+>", " ", body)
         text = unescape(re.sub(r"\s+", " ", body)).strip()
+        pub = _parse_pub_date(raw)
         rec = {"at": rec["at"], "ok": True, "title": title,
                "text": (metas + " " + text)[:4000],
-               "has_date": any(p.search(raw) or p.search(text)
-                               for p in _DATE_RES)}
+               "has_date": pub is not None, "pub_date": pub}
     except Exception:
         pass
     global _cache_dirty
@@ -207,18 +253,45 @@ def _warm_cache(topics):
 
 
 def witness_specific(t, s):
-    """The page itself must name the topic and carry a date. Naming:
-    at least three fifths of the topic title's real words (and at
-    least one) appear in the page's title or opening text."""
+    """The page itself must name the topic and be fresh. Naming: at
+    least three fifths of the topic title's real words (and at least
+    one) appear in the page's title or opening text. Freshness
+    (R305, review-trend-3 item 1): the page's parsed publication
+    date falls within FRESH_DAYS of the board's generated_at (one
+    day of slack for time zones), or the heartbeat's own seen stamp
+    for this source falls within SEEN_HOURS of it. A statistics or
+    market-size roundup title never witnesses, however fresh: those
+    pages exist whether or not anything is rising."""
     rec = _fetch_record(s.get("url") or "")
-    if not rec.get("ok") or not rec.get("has_date"):
+    if not rec.get("ok"):
+        return False
+    if any(b in (rec.get("title") or "").lower() for b in _BAD_TITLE):
         return False
     need = _tokens(t.get("title"))
     if not need:
         return False
     have = set(_tokens(rec.get("title") + " " + rec.get("text")))
-    hit = sum(1 for w in need if w in have)
-    return hit >= max(1, -(-len(need) * 3 // 5))
+    if sum(1 for w in need if w in have) < max(1, -(-len(need) * 3 // 5)):
+        return False
+    gen = _generated_at()
+    pub = rec.get("pub_date")
+    if pub:
+        try:
+            age = (gen.date() - date.fromisoformat(pub)).days
+            if -1 <= age <= FRESH_DAYS:
+                return True
+        except ValueError:
+            pass
+    seen = s.get("seen")
+    if seen:
+        try:
+            delta = gen - datetime.fromisoformat(
+                seen.replace("Z", "+00:00"))
+            if timedelta(0) <= delta <= timedelta(hours=SEEN_HOURS):
+                return True
+        except ValueError:
+            pass
+    return False
 
 
 def _rank(topics):
@@ -374,7 +447,7 @@ def build():
       <div class="wits">%s%s</div>%s</li>''' % (i, escape(t["id"]), title_of(t), wit(1, *w[0]), wit(2, *w[1]), heat(t.get("velocity"))))
     out.append('  </ol>')
     out.append('''  <p class="rule-note"><b>Heat</b> is how fast people are picking something up, out of 100. It is not a prediction.
-    <b>%d</b> of %d topics we track have two sources on two different sites that open, name the topic and carry a date. The other %d are heard once, so we do not list them.
+    <b>%d</b> of %d topics we track have two sources on two different sites that open, name the topic and are fresh: published in the 14 days before this board, or seen by our heartbeat in the 48 hours before it. The other %d are heard once, so we do not list them.
     <a href="algorithms.html">How we check</a></p>
 </section>''' % (n_ok, n_all, n_all - n_ok))
     return "\n".join(out)
